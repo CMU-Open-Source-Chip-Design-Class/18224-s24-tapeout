@@ -1,4 +1,4 @@
-<p align="center"><img src="bobATC_logo.png" alt="drawing" width="300"/></p>
+<p align="center"><img src="misc/bobATC_logo.png" alt="drawing" width="300"/></p>
 
 ## Jaehyun Lim 18-224 Spring 2024 Final Tapeout Project
 
