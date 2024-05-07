@@ -17,7 +17,7 @@ This is an implementation of the SPI interface required to program parameters in
 
 This then creates a pair of address and data lines which will interface with the SRAM which stores the parameters.
 
-![](misc/mcp3202.png)
+![](misc/mcp3202.PNG)
 
 This SPI interface reads position data and position request data from the MCP3202 ADC. The FSM will be responsible for selecting what command sequence to clock out to the ADC as well as clocking in data for the shift register. A similar oversampling technique is used to synchronize the MISO data with the system clock. 
 
