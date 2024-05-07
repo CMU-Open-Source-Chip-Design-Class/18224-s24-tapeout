@@ -5,19 +5,19 @@ Varun Rajesh
 
 ## Overview
 
-![](highlevel.png)
+![](misc/highlevel.png)
 
 This ASIC implements a hardware P controller. There are two SPI interfaces that are responsible for programming the P controller with the P gain and the setpoint of the controller. Another SPI interface reads the feedback of the potentiometer through a MCP3202 ADC. Finally, an PWM interface connects up to a motor driver to actually control the motor.
 
 ## How it Works
 
-![](spi.png)
+![](misc/spi.png)
 
 This is an implementation of the SPI interface required to program parameters into the ASIC. Because of the limited amount of FFs that the design can have, rather than implementing an asynchronous FIFO to move data between the SPI clock domain and the ASIC, I’ve opted to just sample the SPI lines at a frequency much higher than the actual SPI frequency to determine where CLK transitions happen and when to shift in data. 
 
 This then creates a pair of address and data lines which will interface with the SRAM which stores the parameters.
 
-![](mcp3202.png)
+![](misc/mcp3202.png)
 
 This SPI interface reads position data and position request data from the MCP3202 ADC. The FSM will be responsible for selecting what command sequence to clock out to the ADC as well as clocking in data for the shift register. A similar oversampling technique is used to synchronize the MISO data with the system clock. 
 
