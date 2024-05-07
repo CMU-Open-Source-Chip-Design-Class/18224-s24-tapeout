@@ -14,6 +14,9 @@ def yosys_script(name, files):
 def run_yosys(name, files):
     out = subprocess.check_output(["yosys", "-p", yosys_script(name, files)]).decode()
     out = out.split("Printing statistics.")[-1].split("End of script")[0].split("Warnings")[0].strip()
+    cells = [x for x in out.splitlines() if "Number of cells:" in x][0]
+    cells = cells.split(":")[-1].strip()
+    print(f"cell count: {cells}")
     with open(f"{name}/flattened_stats.txt", "w+") as f:
         f.write(out+"\n")
 
@@ -26,7 +29,7 @@ for des in sorted(list(glob.glob(g))):
     with open(f"{des}/info.yaml") as f:
         data = yaml.load(f, Loader=yaml.Loader)
 
-    print("Processing design (standard format)", des)
+    print(f"Processing design (standard format) {des}... ", end="", flush=True)
     assert data["project"]["top_module"] == "toplevel_chip"
     sources = data["project"]["source_files"]
 
