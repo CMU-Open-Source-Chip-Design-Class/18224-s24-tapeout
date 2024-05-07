@@ -18,7 +18,7 @@ Once 2 input numbers are ready, the combinational calculation starts based on th
 
 A few special cases (such as NaN, 0, inf) will quickly lead to an answer. A table for these cases is shown below.
 
-![](special_case.png)
+![](misc/images/special_case.png)
 
 #### Addition/Subtraction
 
@@ -31,7 +31,7 @@ There are 5 major steps for addition/subtraction:
 
 A datapath for addition/subtraction is shown below.
 
-![](add.png)
+![](misc/images/add.png)
 
 ### multiplication
 
@@ -44,7 +44,7 @@ There are 5 major steps for multiplication:
 
 A datapath for multiplication is shown below.
 
-![](mul.png)
+![](misc/images/mul.png)
 
 
 ## Inputs/Outputs
@@ -98,7 +98,7 @@ FPGA and Arduino will be used for testing after tape-out.
 
 Below is the result for CoCoTB verification.
 
-![](verif.png)
+![](misc/images/verif.png)
 
 ## Reference
 

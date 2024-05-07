@@ -1,0 +1,40 @@
+--- 
+project:
+  source_files:
+    - toplevel_chip.v
+    - chip.sv
+  top_module:  "toplevel_chip"
+
+# As everyone will have access to all designs, try to make it easy for someone new to your design to know what
+# it does and how to operate it.
+#
+# Here is an example: https://github.com/mattvenn/tinytapeout_m_segments/blob/main/info.yaml
+#
+# This info will be automatically collected and used to make a datasheet for the chip.
+documentation: 
+  author:       "Christopher Porco"      # Your name
+  discord:      ""      # Your discord handle
+  title:        "ClockBox"      # Project title
+  description:  "Clock and chronograph on 5x17 LED display"      # Short description of what your project does
+  how_it_works: "Mode toggles between modes, power controls the brightness of the LED display, and start/stop control the display depending on the mode"      # Longer description of how the project works
+  how_to_test:  "Try reseting the design, changing modes, setting the clock, start, stop, and reset the chronograph"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "Oscillator, LED array, decoder"      # Describe any external hardware needed
+  language:     "SystemVerilog" # other examples include Verilog, Amaranth, VHDL, etc
+  doc_link:     "README.md"      # URL to longer form documentation, eg the README.md in your repository
+  clock_hz:     10000000       # Clock frequency in Hz (if required)
+  picture:      ""      # relative path to a picture in your repository
+  inputs:               # a description of what the inputs do
+    - Power
+    - Mode (Mode/set)
+    - Start (Start/next)
+    - Stop (Stop/reset/+)
+  outputs:
+    - col_sel[0]
+    - col_sel[1]
+    - col_sel[2]
+    - col_sel[3]
+    - row[0]
+    - row[1]
+    - row[2]
+    - row[3]
+    - row[4]

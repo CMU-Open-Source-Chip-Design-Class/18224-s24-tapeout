@@ -1,0 +1,5 @@
+builds/
+__pycache__/
+dump.vcd
+results.xml
+sim_build/
