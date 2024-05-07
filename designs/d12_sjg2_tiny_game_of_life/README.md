@@ -75,5 +75,5 @@ runs through pixel values and checks what the state of each should be.
 
 ## Media
 
-There is a demo video in Demo_Video.mov
+There is a demo video in Sebastian's GitHub repo at https://github.com/sebgar1011/18224-tapeout-template.git called Demo_Video.mov
 
