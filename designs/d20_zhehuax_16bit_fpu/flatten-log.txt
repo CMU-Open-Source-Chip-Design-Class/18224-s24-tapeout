@@ -5931,7 +5931,7 @@ Found and reported 0 problems.
      $_XOR_                        254
 
 Warnings: 2 unique messages, 2 total
-End of script. Logfile hash: ac90d20a0c, CPU: user 2.41s system 0.08s
+End of script. Logfile hash: ac90d20a0c, CPU: user 2.52s system 0.11s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
 Time spent: 26% 73x opt_expr (0 sec), 14% 57x opt_clean (0 sec), ...
 

@@ -1616,7 +1616,7 @@ Found and reported 0 problems.
      $_SDFF_PN1_                     2
      $_XOR_                          5
 
-End of script. Logfile hash: 2b1f0d60a8, CPU: user 0.24s system 0.01s
+End of script. Logfile hash: 2b1f0d60a8, CPU: user 0.25s system 0.01s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
 Time spent: 32% 2x abc (0 sec), 19% 36x opt_expr (0 sec), ...
 

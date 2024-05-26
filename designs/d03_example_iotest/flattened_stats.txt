@@ -1,0 +1,20 @@
+=== d03_example_iotest ===
+
+   Number of wires:                101
+   Number of wire bits:            169
+   Number of public wires:           8
+   Number of public wire bits:      70
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                111
+     $_ANDNOT_                      18
+     $_AND_                          1
+     $_NAND_                         1
+     $_NOR_                          2
+     $_NOT_                          4
+     $_ORNOT_                       10
+     $_OR_                          27
+     $_SDFF_PP0_                     4
+     $_XNOR_                         4
+     $_XOR_                         40
