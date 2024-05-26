@@ -19,8 +19,8 @@ always_comb begin
   else rs2_data = reg_file[rs2];
 
   //forwarding
-  if(rd == rs1 & rs1 != 0) rs1_data = rd_data;
-  if(rd == rs2 & rs2 != 0) rs2_data = rd_data;
+  //if(rd == rs1 & rs1 != 0) rs1_data = rd_data;
+  //if(rd == rs2 & rs2 != 0) rs2_data = rd_data;
 end
 
 always_ff @(posedge clk) begin
