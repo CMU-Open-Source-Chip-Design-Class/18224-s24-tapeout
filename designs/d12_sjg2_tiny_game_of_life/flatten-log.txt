@@ -4602,7 +4602,7 @@ Found and reported 0 problems.
      $_XOR_                        289
 
 Warnings: 1 unique messages, 1 total
-End of script. Logfile hash: e9b43c5796, CPU: user 2.39s system 0.11s
+End of script. Logfile hash: e9b43c5796, CPU: user 2.33s system 0.10s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
 Time spent: 26% 54x opt_expr (0 sec), 20% 41x opt_clean (0 sec), ...
 

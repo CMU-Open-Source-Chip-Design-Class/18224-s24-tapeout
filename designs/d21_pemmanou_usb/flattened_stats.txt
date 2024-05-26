@@ -1,4 +1,4 @@
-=== d07_pemmanou_usb ===
+=== d21_pemmanou_usb ===
 
    Number of wires:               2920
    Number of wire bits:           4637

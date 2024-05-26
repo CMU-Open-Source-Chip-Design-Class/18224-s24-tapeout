@@ -4403,7 +4403,7 @@ Found and reported 0 problems.
      $_XOR_                        346
 
 Warnings: 10 unique messages, 10 total
-End of script. Logfile hash: 7aa361fee1, CPU: user 4.04s system 0.18s
+End of script. Logfile hash: 7aa361fee1, CPU: user 4.11s system 0.18s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 28% 83x opt_expr (1 sec), 14% 51x opt_merge (0 sec), ...
+Time spent: 29% 83x opt_expr (1 sec), 13% 51x opt_merge (0 sec), ...
 
