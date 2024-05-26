@@ -1951,7 +1951,7 @@ Found and reported 0 problems.
      $_XNOR_                        24
      $_XOR_                         90
 
-End of script. Logfile hash: 14a107fa22, CPU: user 1.04s system 0.03s
+End of script. Logfile hash: 14a107fa22, CPU: user 1.03s system 0.03s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 26% 45x opt_expr (0 sec), 18% 2x abc (0 sec), ...
+Time spent: 26% 45x opt_expr (0 sec), 17% 2x abc (0 sec), ...
 

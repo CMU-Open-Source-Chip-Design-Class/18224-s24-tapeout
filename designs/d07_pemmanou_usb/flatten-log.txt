@@ -4839,7 +4839,7 @@ Found and reported 4 problems.
      $_XOR_                         44
 
 Warnings: 19 unique messages, 22 total
-End of script. Logfile hash: 504c2033ca, CPU: user 2.27s system 0.05s
+End of script. Logfile hash: 504c2033ca, CPU: user 2.38s system 0.08s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
 Time spent: 30% 69x opt_expr (0 sec), 18% 51x opt_clean (0 sec), ...
 

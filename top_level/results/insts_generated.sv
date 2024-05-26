@@ -62,8 +62,11 @@ assign des_io_out[6] = 12'h000;
 
 
 // Design #7
-// Unpopulated design slot
-assign des_io_out[7] = 12'h000;
+// Design name d07_pemmanou_usb
+d07_pemmanou_usb inst7 (
+    .io_in({des_reset[7], clock, des_io_in[7]}),
+    .io_out(des_io_out[7])
+);
 
 
 // Design #8
@@ -77,58 +80,91 @@ assign des_io_out[9] = 12'h000;
 
 
 // Design #10
-// Unpopulated design slot
-assign des_io_out[10] = 12'h000;
+// Design name d10_jjalacce_connect4
+d10_jjalacce_connect4 inst10 (
+    .io_in({des_reset[10], clock, des_io_in[10]}),
+    .io_out(des_io_out[10])
+);
 
 
 // Design #11
-// Unpopulated design slot
-assign des_io_out[11] = 12'h000;
+// Design name d11_zhexic_i2cdriver
+d11_zhexic_i2cdriver inst11 (
+    .io_in({des_reset[11], clock, des_io_in[11]}),
+    .io_out(des_io_out[11])
+);
 
 
 // Design #12
-// Unpopulated design slot
-assign des_io_out[12] = 12'h000;
+// Design name d12_sjg2_tiny_game_of_life
+d12_sjg2_tiny_game_of_life inst12 (
+    .io_in({des_reset[12], clock, des_io_in[12]}),
+    .io_out(des_io_out[12])
+);
 
 
 // Design #13
-// Unpopulated design slot
-assign des_io_out[13] = 12'h000;
+// Design name d13_thomaska_cordic
+d13_thomaska_cordic inst13 (
+    .io_in({des_reset[13], clock, des_io_in[13]}),
+    .io_out(des_io_out[13])
+);
 
 
 // Design #14
-// Unpopulated design slot
-assign des_io_out[14] = 12'h000;
+// Design name d14_siyuanl4_matrixcalc
+d14_siyuanl4_matrixcalc inst14 (
+    .io_in({des_reset[14], clock, des_io_in[14]}),
+    .io_out(des_io_out[14])
+);
 
 
 // Design #15
-// Unpopulated design slot
-assign des_io_out[15] = 12'h000;
+// Design name d15_spencer2_pianotiles
+d15_spencer2_pianotiles inst15 (
+    .io_in({des_reset[15], clock, des_io_in[15]}),
+    .io_out(des_io_out[15])
+);
 
 
 // Design #16
-// Unpopulated design slot
-assign des_io_out[16] = 12'h000;
+// Design name d16_jaehyun3_bobatc
+d16_jaehyun3_bobatc inst16 (
+    .io_in({des_reset[16], clock, des_io_in[16]}),
+    .io_out(des_io_out[16])
+);
 
 
 // Design #17
-// Unpopulated design slot
-assign des_io_out[17] = 12'h000;
+// Design name d17_cporco_clockbox
+d17_cporco_clockbox inst17 (
+    .io_in({des_reset[17], clock, des_io_in[17]}),
+    .io_out(des_io_out[17])
+);
 
 
 // Design #18
-// Unpopulated design slot
-assign des_io_out[18] = 12'h000;
+// Design name d18_vrajesh_motorcontroller
+d18_vrajesh_motorcontroller inst18 (
+    .io_in({des_reset[18], clock, des_io_in[18]}),
+    .io_out(des_io_out[18])
+);
 
 
 // Design #19
-// Unpopulated design slot
-assign des_io_out[19] = 12'h000;
+// Design name d19_gsavant_16bit_serial_cpu
+d19_gsavant_16bit_serial_cpu inst19 (
+    .io_in({des_reset[19], clock, des_io_in[19]}),
+    .io_out(des_io_out[19])
+);
 
 
 // Design #20
-// Unpopulated design slot
-assign des_io_out[20] = 12'h000;
+// Design name d20_zhehuax_16bit_fpu
+d20_zhehuax_16bit_fpu inst20 (
+    .io_in({des_reset[20], clock, des_io_in[20]}),
+    .io_out(des_io_out[20])
+);
 
 
 // Design #21

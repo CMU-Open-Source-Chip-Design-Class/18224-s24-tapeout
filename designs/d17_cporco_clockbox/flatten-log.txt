@@ -2455,7 +2455,7 @@ Found and reported 0 problems.
      $_XOR_                        148
 
 Warnings: 3 unique messages, 3 total
-End of script. Logfile hash: 485abe1d47, CPU: user 1.01s system 0.03s
+End of script. Logfile hash: 485abe1d47, CPU: user 0.98s system 0.02s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 25% 56x opt_expr (0 sec), 16% 45x opt_clean (0 sec), ...
+Time spent: 25% 56x opt_expr (0 sec), 15% 45x opt_clean (0 sec), ...
 
