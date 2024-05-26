@@ -56,8 +56,8 @@ module standard_tb (
         while (!ready) @(negedge clock);
 
         // Pins based on README.md. 
-        $monitor("[%d] SCL/SDA_in=%b, data_incoming=%b, wr_up/SDA_out=%b, wr_down/writeOK=%b, data_in=%b, data_out=%b", 
-                 $time, {SCL, SDA_in}, data_incoming, {wr_up, SDA_out}, {wr_down, writeOK}, data_in, data_out);
+        $monitor("[%d] SCL/SDA_in=%b%b, data_incoming=%b, wr_up/SDA_out=%b%b, wr_down/writeOK=%b%b, data_in=%b, data_out=%b", 
+                 $time, SCL, SDA_in, data_incoming, wr_up, SDA_out, wr_down, writeOK, data_in, data_out);
 
         // Begin transaction
         SDA_in  = '1;

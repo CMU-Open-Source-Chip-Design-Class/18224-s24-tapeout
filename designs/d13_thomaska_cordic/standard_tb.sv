@@ -41,7 +41,7 @@ module standard_tb (
  
         // Wait until calculation has finished.
         while (!done) @(negedge clock);
-        ASSERT(out_val == expected_out_val);
+        `ASSERT(out_val == expected_out_val);
 
 
         $finish(0); // Pass
