@@ -1,17 +1,17 @@
 === d05_meta_info ===
 
-   Number of wires:               2699
-   Number of wire bits:           2765
+   Number of wires:               2716
+   Number of wire bits:           2782
    Number of public wires:           8
    Number of public wire bits:      74
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               2717
-     $_ANDNOT_                     646
+   Number of cells:               2734
+     $_ANDNOT_                     654
      $_DFF_P_                       19
-     $_MUX_                          1
-     $_NAND_                        16
+     $_NAND_                        17
+     $_NOR_                          1
      $_NOT_                         10
-     $_ORNOT_                       19
-     $_OR_                        2006
+     $_ORNOT_                       22
+     $_OR_                        2011

@@ -3929,7 +3929,7 @@ Found and reported 0 problems.
      $_XOR_                         97
 
 Warnings: 4 unique messages, 4 total
-End of script. Logfile hash: bad51d17bd, CPU: user 5.50s system 0.25s
+End of script. Logfile hash: bad51d17bd, CPU: user 5.51s system 0.21s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
 Time spent: 31% 82x opt_expr (1 sec), 13% 57x opt_clean (0 sec), ...
 

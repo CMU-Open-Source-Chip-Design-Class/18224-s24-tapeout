@@ -73,9 +73,9 @@ Creating decoders for process `\my_chip.$proc$d05_meta_info/src/chip.sv:13$1'.
 
 3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
 Creating register for signal `\my_chip.\io_out' using process `\my_chip.$proc$d05_meta_info/src/chip.sv:13$1'.
-  created $dff cell `$procdff$6963' with positive edge clock.
+  created $dff cell `$procdff$6908' with positive edge clock.
 Creating register for signal `\my_chip.\index' using process `\my_chip.$proc$d05_meta_info/src/chip.sv:13$1'.
-  created $dff cell `$procdff$6964' with positive edge clock.
+  created $dff cell `$procdff$6909' with positive edge clock.
 
 3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
@@ -110,8 +110,8 @@ Optimizing module toplevel_chip.
 
 3.7.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\toplevel_chip'.
-<suppressed ~12780 debug messages>
-Removed a total of 4260 cells.
+<suppressed ~12567 debug messages>
+Removed a total of 4189 cells.
 
 3.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
 Running muxtree optimizer on module \toplevel_chip..
@@ -128,15 +128,15 @@ Finding identical cells in module `\toplevel_chip'.
 Removed a total of 0 cells.
 
 3.7.6. Executing OPT_DFF pass (perform DFF optimizations).
-Setting constant 0-bit at position 7 on $flatten\mchip.$procdff$6963 ($dff) from module toplevel_chip.
-Setting constant 0-bit at position 8 on $flatten\mchip.$procdff$6963 ($dff) from module toplevel_chip.
-Setting constant 0-bit at position 9 on $flatten\mchip.$procdff$6963 ($dff) from module toplevel_chip.
-Setting constant 0-bit at position 10 on $flatten\mchip.$procdff$6963 ($dff) from module toplevel_chip.
-Setting constant 0-bit at position 11 on $flatten\mchip.$procdff$6963 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 7 on $flatten\mchip.$procdff$6908 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 8 on $flatten\mchip.$procdff$6908 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 9 on $flatten\mchip.$procdff$6908 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 10 on $flatten\mchip.$procdff$6908 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 11 on $flatten\mchip.$procdff$6908 ($dff) from module toplevel_chip.
 
 3.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \toplevel_chip..
-Removed 0 unused cells and 4260 unused wires.
+Removed 0 unused cells and 4189 unused wires.
 <suppressed ~1 debug messages>
 
 3.7.8. Executing OPT_EXPR pass (perform const folding).
@@ -385,7 +385,7 @@ Using extmapper simplemap for cells of type $or.
 Using extmapper simplemap for cells of type $and.
 Using extmapper simplemap for cells of type $not.
 No more expansions possible.
-<suppressed ~2776 debug messages>
+<suppressed ~2792 debug messages>
 
 3.22. Executing OPT pass (performing simple optimizations).
 
@@ -406,7 +406,7 @@ Finding unused cells or wires in module \toplevel_chip..
 3.23. Executing ABC pass (technology mapping using ABC).
 
 3.23.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
-Extracted 2701 gates and 2713 wires to a netlist network with 12 inputs and 7 outputs.
+Extracted 2717 gates and 2729 wires to a netlist network with 12 inputs and 7 outputs.
 
 3.23.1.1. Executing ABC.
 Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
@@ -422,12 +422,12 @@ ABC: + write_blif <abc-temp-dir>/output.blif
 
 3.23.1.2. Re-integrating ABC results.
 ABC RESULTS:               NOT cells:       10
-ABC RESULTS:               MUX cells:        1
-ABC RESULTS:              NAND cells:       16
-ABC RESULTS:             ORNOT cells:       19
-ABC RESULTS:            ANDNOT cells:      646
-ABC RESULTS:                OR cells:     2006
-ABC RESULTS:        internal signals:     2694
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:              NAND cells:       17
+ABC RESULTS:             ORNOT cells:       22
+ABC RESULTS:            ANDNOT cells:      654
+ABC RESULTS:                OR cells:     2011
+ABC RESULTS:        internal signals:     2710
 ABC RESULTS:           input signals:       12
 ABC RESULTS:          output signals:        7
 Removing temp directory.
@@ -445,7 +445,7 @@ Removed a total of 0 cells.
 
 3.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \toplevel_chip..
-Removed 0 unused cells and 2713 unused wires.
+Removed 0 unused cells and 2729 unused wires.
 <suppressed ~1 debug messages>
 
 3.24.5. Finished fast OPT passes.
@@ -463,21 +463,21 @@ Removed 0 unused modules.
 
 === toplevel_chip ===
 
-   Number of wires:               2699
-   Number of wire bits:           2765
+   Number of wires:               2716
+   Number of wire bits:           2782
    Number of public wires:           8
    Number of public wire bits:      74
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               2717
-     $_ANDNOT_                     646
+   Number of cells:               2734
+     $_ANDNOT_                     654
      $_DFF_P_                       19
-     $_MUX_                          1
-     $_NAND_                        16
+     $_NAND_                        17
+     $_NOR_                          1
      $_NOT_                         10
-     $_ORNOT_                       19
-     $_OR_                        2006
+     $_ORNOT_                       22
+     $_OR_                        2011
 
 3.27. Executing CHECK pass (checking for obvious problems).
 Checking module toplevel_chip...
@@ -810,7 +810,7 @@ Finding unused cells or wires in module \toplevel_chip..
 7.22. Executing ABC pass (technology mapping using ABC).
 
 7.22.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
-Extracted 2698 gates and 2710 wires to a netlist network with 12 inputs and 7 outputs.
+Extracted 2715 gates and 2727 wires to a netlist network with 12 inputs and 7 outputs.
 
 7.22.1.1. Executing ABC.
 Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
@@ -826,12 +826,12 @@ ABC: + write_blif <abc-temp-dir>/output.blif
 
 7.22.1.2. Re-integrating ABC results.
 ABC RESULTS:               NOT cells:       10
-ABC RESULTS:             ORNOT cells:       19
-ABC RESULTS:              NAND cells:       16
-ABC RESULTS:            ANDNOT cells:      646
-ABC RESULTS:               MUX cells:        1
-ABC RESULTS:                OR cells:     2006
-ABC RESULTS:        internal signals:     2691
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:              NAND cells:       17
+ABC RESULTS:             ORNOT cells:       22
+ABC RESULTS:            ANDNOT cells:      654
+ABC RESULTS:                OR cells:     2011
+ABC RESULTS:        internal signals:     2708
 ABC RESULTS:           input signals:       12
 ABC RESULTS:          output signals:        7
 Removing temp directory.
@@ -849,7 +849,7 @@ Removed a total of 0 cells.
 
 7.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \toplevel_chip..
-Removed 0 unused cells and 2710 unused wires.
+Removed 0 unused cells and 2727 unused wires.
 <suppressed ~1 debug messages>
 
 7.23.5. Finished fast OPT passes.
@@ -867,21 +867,21 @@ Removed 0 unused modules.
 
 === toplevel_chip ===
 
-   Number of wires:               2699
-   Number of wire bits:           2765
+   Number of wires:               2716
+   Number of wire bits:           2782
    Number of public wires:           8
    Number of public wire bits:      74
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               2717
-     $_ANDNOT_                     646
+   Number of cells:               2734
+     $_ANDNOT_                     654
      $_DFF_P_                       19
-     $_MUX_                          1
-     $_NAND_                        16
+     $_NAND_                        17
+     $_NOR_                          1
      $_NOT_                         10
-     $_ORNOT_                       19
-     $_OR_                        2006
+     $_ORNOT_                       22
+     $_OR_                        2011
 
 7.26. Executing CHECK pass (checking for obvious problems).
 Checking module toplevel_chip...
@@ -903,23 +903,23 @@ Found and reported 0 problems.
 
 === d05_meta_info ===
 
-   Number of wires:               2699
-   Number of wire bits:           2765
+   Number of wires:               2716
+   Number of wire bits:           2782
    Number of public wires:           8
    Number of public wire bits:      74
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               2717
-     $_ANDNOT_                     646
+   Number of cells:               2734
+     $_ANDNOT_                     654
      $_DFF_P_                       19
-     $_MUX_                          1
-     $_NAND_                        16
+     $_NAND_                        17
+     $_NOR_                          1
      $_NOT_                         10
-     $_ORNOT_                       19
-     $_OR_                        2006
+     $_ORNOT_                       22
+     $_OR_                        2011
 
-End of script. Logfile hash: 5848064eeb, CPU: user 1.79s system 0.04s
+End of script. Logfile hash: d5bc621e18, CPU: user 1.77s system 0.05s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 25% 27x opt_expr (0 sec), 14% 5x read_verilog (0 sec), ...
+Time spent: 26% 27x opt_expr (0 sec), 14% 5x read_verilog (0 sec), ...
 
