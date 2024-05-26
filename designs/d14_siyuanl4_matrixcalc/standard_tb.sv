@@ -2,7 +2,7 @@
 
 `define ASSERT(x) if (!(x)) begin \
     $display("Assert failed at line %d", `__LINE__); \
-    $finish(1); 
+    $finish(1); \
 end
 
 

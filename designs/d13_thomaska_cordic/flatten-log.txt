@@ -1,0 +1,1513 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Running command `read_verilog -sv d13_thomaska_cordic/src/toplevel_chip.v d13_thomaska_cordic/src/chip.sv d13_thomaska_cordic/src/tt_um_cordic.sv; synth -flatten -top toplevel_chip; setundef -undriven -zero; setundef -zero; async2sync; synth -top toplevel_chip; rename toplevel_chip d13_thomaska_cordic; write_verilog -attr2comment d13_thomaska_cordic/flattened.v; check; stat;' --
+
+1. Executing Verilog-2005 frontend: d13_thomaska_cordic/src/toplevel_chip.v
+Parsing SystemVerilog input from `d13_thomaska_cordic/src/toplevel_chip.v' to AST representation.
+Generating RTLIL representation for module `\toplevel_chip'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: d13_thomaska_cordic/src/chip.sv
+Parsing SystemVerilog input from `d13_thomaska_cordic/src/chip.sv' to AST representation.
+Generating RTLIL representation for module `\my_chip'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: d13_thomaska_cordic/src/tt_um_cordic.sv
+Parsing SystemVerilog input from `d13_thomaska_cordic/src/tt_um_cordic.sv' to AST representation.
+Generating RTLIL representation for module `\tt_um_cordic'.
+Warning: Replacing memory \z_coeff_group with list of registers. See d13_thomaska_cordic/src/tt_um_cordic.sv:80
+Warning: Replacing memory \z_coeff with list of registers. See d13_thomaska_cordic/src/tt_um_cordic.sv:43
+Generating RTLIL representation for module `\four_stages'.
+Generating RTLIL representation for module `\stage'.
+Generating RTLIL representation for module `\subtractor_ripple'.
+Generating RTLIL representation for module `\adder_ripple'.
+Successfully finished Verilog frontend.
+
+4. Executing SYNTH pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \tt_um_cordic
+Used module:             \four_stages
+Used module:                 \stage
+Used module:                     \subtractor_ripple
+Used module:                         \adder_ripple
+Reprocessing module tt_um_cordic because instantiated module four_stages has become available.
+Generating RTLIL representation for module `\tt_um_cordic'.
+Warning: Replacing memory \z_coeff_group with list of registers. See d13_thomaska_cordic/src/tt_um_cordic.sv:80
+Warning: Replacing memory \z_coeff with list of registers. See d13_thomaska_cordic/src/tt_um_cordic.sv:43
+Reprocessing module four_stages because instantiated module stage has become available.
+Generating RTLIL representation for module `\four_stages'.
+Warning: Replacing memory \int_out_z with list of registers. See d13_thomaska_cordic/src/tt_um_cordic.sv:0
+Warning: Replacing memory \int_out_y with list of registers. See d13_thomaska_cordic/src/tt_um_cordic.sv:0
+Warning: Replacing memory \int_out_x with list of registers. See d13_thomaska_cordic/src/tt_um_cordic.sv:0
+Parameter 1 (\WIDTH) = 17
+
+4.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\subtractor_ripple'.
+Parameter 1 (\WIDTH) = 17
+Generating RTLIL representation for module `$paramod\subtractor_ripple\WIDTH=s32'00000000000000000000000000010001'.
+Parameter 1 (\WIDTH) = 17
+Found cached RTLIL representation for module `$paramod\subtractor_ripple\WIDTH=s32'00000000000000000000000000010001'.
+Parameter 1 (\WIDTH) = 17
+Found cached RTLIL representation for module `$paramod\subtractor_ripple\WIDTH=s32'00000000000000000000000000010001'.
+Parameter 1 (\WIDTH) = 16
+
+4.1.3. Executing AST frontend in derive mode using pre-parsed AST for module `\adder_ripple'.
+Parameter 1 (\WIDTH) = 16
+Generating RTLIL representation for module `$paramod\adder_ripple\WIDTH=s32'00000000000000000000000000010000'.
+
+4.1.4. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \tt_um_cordic
+Used module:             \four_stages
+Used module:                 \stage
+Used module:                     $paramod\subtractor_ripple\WIDTH=s32'00000000000000000000000000010001
+Used module:                         \adder_ripple
+Parameter 1 (\WIDTH) = 17
+
+4.1.5. Executing AST frontend in derive mode using pre-parsed AST for module `\adder_ripple'.
+Parameter 1 (\WIDTH) = 17
+Generating RTLIL representation for module `$paramod\adder_ripple\WIDTH=s32'00000000000000000000000000010001'.
+
+4.1.6. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \tt_um_cordic
+Used module:             \four_stages
+Used module:                 \stage
+Used module:                     $paramod\subtractor_ripple\WIDTH=s32'00000000000000000000000000010001
+Used module:                         $paramod\adder_ripple\WIDTH=s32'00000000000000000000000000010001
+
+4.1.7. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \tt_um_cordic
+Used module:             \four_stages
+Used module:                 \stage
+Used module:                     $paramod\subtractor_ripple\WIDTH=s32'00000000000000000000000000010001
+Used module:                         $paramod\adder_ripple\WIDTH=s32'00000000000000000000000000010001
+Removing unused module `$paramod\adder_ripple\WIDTH=s32'00000000000000000000000000010000'.
+Removing unused module `\subtractor_ripple'.
+Removing unused module `\adder_ripple'.
+Removed 3 unused modules.
+
+4.2. Executing PROC pass (convert processes to netlists).
+
+4.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60 in module tt_um_cordic.
+Marked 1 switch rules as full_case in process $proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$57 in module tt_um_cordic.
+Removed a total of 0 dead cases.
+
+4.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 30 assignments to connections.
+
+4.2.4. Executing PROC_INIT pass (extract init attributes).
+
+4.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+
+4.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~4 debug messages>
+
+4.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+Creating decoders for process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+Creating decoders for process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+     1/7: $0\curr_z[16:0]
+     2/7: $0\curr_y[16:0]
+     3/7: $0\curr_x[16:0]
+     4/7: $0\out2[16:0]
+     5/7: $0\out1[16:0]
+     6/7: $0\step_ctr[2:0]
+     7/7: $0\done[0:0]
+Creating decoders for process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$57'.
+     1/4: $1\z_coeff_group[3][16:0]
+     2/4: $1\z_coeff_group[2][16:0]
+     3/4: $1\z_coeff_group[1][16:0]
+     4/4: $1\z_coeff_group[0][16:0]
+
+4.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\four_stages.\int_out_x[0]' from process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+No latch inferred for signal `\four_stages.\int_out_x[1]' from process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+No latch inferred for signal `\four_stages.\int_out_x[2]' from process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+No latch inferred for signal `\four_stages.\int_out_y[0]' from process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+No latch inferred for signal `\four_stages.\int_out_y[1]' from process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+No latch inferred for signal `\four_stages.\int_out_y[2]' from process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+No latch inferred for signal `\four_stages.\int_out_z[0]' from process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+No latch inferred for signal `\four_stages.\int_out_z[1]' from process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+No latch inferred for signal `\four_stages.\int_out_z[2]' from process `\four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[0]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[1]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[2]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[3]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[4]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[5]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[6]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[7]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[8]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[9]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[10]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[11]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[12]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[13]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[14]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff[15]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+No latch inferred for signal `\tt_um_cordic.\step_ctr_4' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$57'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff_group[0]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$57'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff_group[1]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$57'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff_group[2]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$57'.
+No latch inferred for signal `\tt_um_cordic.\z_coeff_group[3]' from process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$57'.
+
+4.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\tt_um_cordic.\done' using process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+  created $adff cell `$procdff$150' with positive edge clock and positive level reset.
+Creating register for signal `\tt_um_cordic.\step_ctr' using process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+  created $adff cell `$procdff$151' with positive edge clock and positive level reset.
+Creating register for signal `\tt_um_cordic.\out1' using process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+  created $dff cell `$procdff$154' with positive edge clock.
+Creating register for signal `\tt_um_cordic.\out2' using process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+  created $dff cell `$procdff$157' with positive edge clock.
+Creating register for signal `\tt_um_cordic.\curr_x' using process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+  created $adff cell `$procdff$158' with positive edge clock and positive level reset.
+Creating register for signal `\tt_um_cordic.\curr_y' using process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+  created $adff cell `$procdff$159' with positive edge clock and positive level reset.
+Creating register for signal `\tt_um_cordic.\curr_z' using process `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+  created $adff cell `$procdff$160' with positive edge clock and positive level reset.
+
+4.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `four_stages.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$91'.
+Removing empty process `tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$66'.
+Found and cleaned up 3 empty switches in `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+Removing empty process `tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:111$60'.
+Found and cleaned up 1 empty switch in `\tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$57'.
+Removing empty process `tt_um_cordic.$proc$d13_thomaska_cordic/src/tt_um_cordic.sv:0$57'.
+Cleaned up 4 empty switches.
+
+4.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\subtractor_ripple\WIDTH=s32'00000000000000000000000000010001.
+Optimizing module four_stages.
+Optimizing module stage.
+Optimizing module tt_um_cordic.
+<suppressed ~3 debug messages>
+Optimizing module $paramod\adder_ripple\WIDTH=s32'00000000000000000000000000010001.
+Optimizing module my_chip.
+Optimizing module toplevel_chip.
+
+4.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\subtractor_ripple\WIDTH=s32'00000000000000000000000000010001.
+Deleting now unused module four_stages.
+Deleting now unused module stage.
+Deleting now unused module tt_um_cordic.
+Deleting now unused module $paramod\adder_ripple\WIDTH=s32'00000000000000000000000000010001.
+Deleting now unused module my_chip.
+<suppressed ~11 debug messages>
+
+4.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 1 unused cells and 169 unused wires.
+<suppressed ~46 debug messages>
+
+4.6. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+
+4.7. Executing OPT pass (performing simple optimizations).
+
+4.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~51 debug messages>
+Removed a total of 17 cells.
+
+4.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+4.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+4.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 13 unused wires.
+<suppressed ~1 debug messages>
+
+4.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+4.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+4.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+4.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.7.16. Finished OPT passes. (There is nothing left to do.)
+
+4.8. Executing FSM pass (extract and optimize FSM).
+
+4.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+4.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+4.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+4.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+4.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+4.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+4.9. Executing OPT pass (performing simple optimizations).
+
+4.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+4.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+4.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\mchip.\cordic_module.$procdff$160 ($adff) from module toplevel_chip (D = $flatten\mchip.\cordic_module.$procmux$98_Y, Q = \mchip.cordic_module.curr_z).
+Adding EN signal on $flatten\mchip.\cordic_module.$procdff$159 ($adff) from module toplevel_chip (D = $flatten\mchip.\cordic_module.$procmux$104_Y, Q = \mchip.cordic_module.curr_y).
+Adding EN signal on $flatten\mchip.\cordic_module.$procdff$158 ($adff) from module toplevel_chip (D = $flatten\mchip.\cordic_module.$procmux$110_Y, Q = \mchip.cordic_module.curr_x).
+Adding EN signal on $flatten\mchip.\cordic_module.$procdff$157 ($dff) from module toplevel_chip (D = \mchip.cordic_module.next_x, Q = \mchip.cordic_module.out2).
+Adding EN signal on $flatten\mchip.\cordic_module.$procdff$154 ($dff) from module toplevel_chip (D = $flatten\mchip.\cordic_module.$ternary$d13_thomaska_cordic/src/tt_um_cordic.sv:122$64_Y, Q = \mchip.cordic_module.out1).
+Adding EN signal on $flatten\mchip.\cordic_module.$procdff$151 ($adff) from module toplevel_chip (D = $flatten\mchip.\cordic_module.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:120$62_Y, Q = \mchip.cordic_module.step_ctr).
+Adding EN signal on $flatten\mchip.\cordic_module.$procdff$150 ($adff) from module toplevel_chip (D = 1'1, Q = \mchip.cordic_module.done).
+
+4.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 9 unused cells and 9 unused wires.
+<suppressed ~10 debug messages>
+
+4.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+4.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+4.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+4.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+4.9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+4.9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.9.23. Finished OPT passes. (There is nothing left to do.)
+
+4.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 15 bits (of 32) from mux cell toplevel_chip.$flatten\mchip.\cordic_module.$ternary$d13_thomaska_cordic/src/tt_um_cordic.sv:66$53 ($mux).
+Removed top 17 bits (of 32) from mux cell toplevel_chip.$flatten\mchip.\cordic_module.$ternary$d13_thomaska_cordic/src/tt_um_cordic.sv:67$55 ($mux).
+Removed top 2 bits (of 17) from mux cell toplevel_chip.$flatten\mchip.\cordic_module.$ternary$d13_thomaska_cordic/src/tt_um_cordic.sv:68$56 ($mux).
+Removed top 2 bits (of 3) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.$sub$d13_thomaska_cordic/src/tt_um_cordic.sv:79$58 ($sub).
+Removed top 2 bits (of 5) from port Y of cell toplevel_chip.$flatten\mchip.\cordic_module.$sub$d13_thomaska_cordic/src/tt_um_cordic.sv:79$58 ($sub).
+Removed top 2 bits (of 3) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:120$62 ($add).
+Removed top 5 bits (of 17) from mux cell toplevel_chip.$flatten\mchip.\cordic_module.$procmux$127 ($pmux).
+Removed top 1 bits (of 3) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.$procmux$129_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.$procmux$130_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.$procmux$131_CMP0 ($eq).
+Removed top 4 bits (of 17) from mux cell toplevel_chip.$flatten\mchip.\cordic_module.$procmux$133 ($pmux).
+Removed top 3 bits (of 17) from mux cell toplevel_chip.$flatten\mchip.\cordic_module.$procmux$139 ($pmux).
+Removed top 2 bits (of 17) from mux cell toplevel_chip.$flatten\mchip.\cordic_module.$procmux$145 ($pmux).
+Removed top 5 bits (of 17) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subz.$xor$d13_thomaska_cordic/src/tt_um_cordic.sv:216$92 ($xor).
+Removed top 4 bits (of 17) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subz.$xor$d13_thomaska_cordic/src/tt_um_cordic.sv:216$92 ($xor).
+Removed top 3 bits (of 17) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subz.$xor$d13_thomaska_cordic/src/tt_um_cordic.sv:216$92 ($xor).
+Removed top 2 bits (of 17) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subz.$xor$d13_thomaska_cordic/src/tt_um_cordic.sv:216$92 ($xor).
+Removed top 3 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:171$90 ($add).
+Removed top 3 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:167$89 ($add).
+Removed top 4 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:163$88 ($add).
+Removed top 2 bits (of 5) from wire toplevel_chip.$flatten\mchip.\cordic_module.$sub$d13_thomaska_cordic/src/tt_um_cordic.sv:79$58_Y.
+Removed top 17 bits (of 32) from wire toplevel_chip.$flatten\mchip.\cordic_module.$ternary$d13_thomaska_cordic/src/tt_um_cordic.sv:67$55_Y.
+
+4.11. Executing PEEPOPT pass (run peephole optimizers).
+
+4.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+4.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module toplevel_chip:
+  creating $macc model for $flatten\mchip.\cordic_module.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:120$62 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.$sub$d13_thomaska_cordic/src/tt_um_cordic.sv:79$58 ($sub).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:163$88 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:167$89 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:171$90 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 ($add).
+  creating $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96 ($add).
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  merging $macc model for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$95 into $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:171$90.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:167$89.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:163$88.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.$sub$d13_thomaska_cordic/src/tt_um_cordic.sv:79$58.
+  creating $alu model for $macc $flatten\mchip.\cordic_module.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:120$62.
+  creating $alu cell for $flatten\mchip.\cordic_module.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:120$62: $auto$alumacc.cc:485:replace_alu$178
+  creating $alu cell for $flatten\mchip.\cordic_module.$sub$d13_thomaska_cordic/src/tt_um_cordic.sv:79$58: $auto$alumacc.cc:485:replace_alu$181
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:163$88: $auto$alumacc.cc:485:replace_alu$184
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:167$89: $auto$alumacc.cc:485:replace_alu$187
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:171$90: $auto$alumacc.cc:485:replace_alu$190
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$193
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$196
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$199
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$202
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$205
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_0.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$208
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$211
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$214
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_3.\subx.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$217
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$220
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_2.\suby.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$223
+  creating $alu cell for $flatten\mchip.\cordic_module.\fstage_0.\stage_1.\subz.\inside_add.$add$d13_thomaska_cordic/src/tt_um_cordic.sv:230$96: $auto$alumacc.cc:485:replace_alu$226
+  created 17 $alu and 0 $macc cells.
+
+4.14. Executing SHARE pass (SAT-based resource sharing).
+
+4.15. Executing OPT pass (performing simple optimizations).
+
+4.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+4.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 12 unused cells and 12 unused wires.
+<suppressed ~13 debug messages>
+
+4.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+4.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+4.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.15.16. Finished OPT passes. (There is nothing left to do.)
+
+4.16. Executing MEMORY pass.
+
+4.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+4.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+4.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+4.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+4.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+4.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+4.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+4.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+4.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+4.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+4.18. Executing OPT pass (performing simple optimizations).
+
+4.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~32 debug messages>
+
+4.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 15 unused wires.
+<suppressed ~2 debug messages>
+
+4.18.5. Finished fast OPT passes.
+
+4.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+4.20. Executing OPT pass (performing simple optimizations).
+
+4.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+    Consolidated identical input bits for $pmux cell $flatten\mchip.\cordic_module.$procmux$127:
+      Old ports: A=12'000000000000, B=48'111111101011000100000000000000010000000000000001, Y=\mchip.cordic_module.fstage_0.stage_3.subz.in_b [11:0]
+      New ports: A=4'0000, B=16'1011100001000001, Y={ \mchip.cordic_module.fstage_0.stage_3.subz.in_b [8] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [4] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [1:0] }
+      New connections: { \mchip.cordic_module.fstage_0.stage_3.subz.in_b [11:9] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [7:5] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [3:2] } = { \mchip.cordic_module.fstage_0.stage_3.subz.in_b [1] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [1] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [1] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [1] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [1] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [1] \mchip.cordic_module.fstage_0.stage_3.subz.in_b [1] 1'0 }
+    Consolidated identical input bits for $pmux cell $flatten\mchip.\cordic_module.$procmux$133:
+      Old ports: A=13'0000000000000, B=52'1111101011011000100000000000000001000000000000000010, Y=\mchip.cordic_module.fstage_0.stage_2.subz.in_b [12:0]
+      New ports: A=4'0000, B=16'1011100001000010, Y={ \mchip.cordic_module.fstage_0.stage_2.subz.in_b [9] \mchip.cordic_module.fstage_0.stage_2.subz.in_b [5] \mchip.cordic_module.fstage_0.stage_2.subz.in_b [1:0] }
+      New connections: { \mchip.cordic_module.fstage_0.stage_2.subz.in_b [12:10] \mchip.cordic_module.fstage_0.stage_2.subz.in_b [8:6] \mchip.cordic_module.fstage_0.stage_2.subz.in_b [4:2] } = { \mchip.cordic_module.fstage_0.stage_2.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_2.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_2.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_2.subz.in_b [0] 1'0 \mchip.cordic_module.fstage_0.stage_2.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_2.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_2.subz.in_b [0] 1'0 }
+    Consolidated identical input bits for $pmux cell $flatten\mchip.\cordic_module.$procmux$139:
+      Old ports: A=14'00000000000000, B=56'11101101011001000100000000000000000100000000000000000100, Y=\mchip.cordic_module.fstage_0.stage_1.subz.in_b [13:0]
+      New ports: A=4'0000, B=16'0101100001000010, Y={ \mchip.cordic_module.fstage_0.stage_1.subz.in_b [10] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [6] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [2] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [0] }
+      New connections: { \mchip.cordic_module.fstage_0.stage_1.subz.in_b [13:11] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [9:7] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [5:3] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [1] } = { \mchip.cordic_module.fstage_0.stage_1.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [0] 2'00 \mchip.cordic_module.fstage_0.stage_1.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_1.subz.in_b [0] 1'0 }
+    Consolidated identical input bits for $pmux cell $flatten\mchip.\cordic_module.$procmux$145:
+      Old ports: A=15'000000000000000, B=60'110010010001000000011111111101000000010000000000000000001000, Y=\mchip.cordic_module.fstage_0.stage_0.subz.in_b [14:0]
+      New ports: A=5'00000, B=20'11110011110010000010, Y={ \mchip.cordic_module.fstage_0.stage_0.subz.in_b [13] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [10] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [7] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [3] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [0] }
+      New connections: { \mchip.cordic_module.fstage_0.stage_0.subz.in_b [14] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [12:11] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [9:8] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [6:4] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [2:1] } = { \mchip.cordic_module.fstage_0.stage_0.subz.in_b [13] 2'00 \mchip.cordic_module.fstage_0.stage_0.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [0] \mchip.cordic_module.fstage_0.stage_0.subz.in_b [0] 1'0 }
+    Consolidated identical input bits for $mux cell $flatten\mchip.\cordic_module.$ternary$d13_thomaska_cordic/src/tt_um_cordic.sv:66$53:
+      Old ports: A={ \io_in [8:0] 8'00000000 }, B=17'00000000000000000, Y=\mchip.cordic_module.init_z
+      New ports: A=\io_in [8:0], B=9'000000000, Y=\mchip.cordic_module.init_z [16:8]
+      New connections: \mchip.cordic_module.init_z [7:0] = 8'00000000
+    Consolidated identical input bits for $mux cell $flatten\mchip.\cordic_module.$ternary$d13_thomaska_cordic/src/tt_um_cordic.sv:67$55:
+      Old ports: A=15'000000000000000, B={ \io_in [4:0] 10'0000000000 }, Y=\mchip.cordic_module.init_y [14:0]
+      New ports: A=5'00000, B=\io_in [4:0], Y=\mchip.cordic_module.init_y [14:10]
+      New connections: \mchip.cordic_module.init_y [9:0] = 10'0000000000
+    Consolidated identical input bits for $mux cell $flatten\mchip.\cordic_module.$ternary$d13_thomaska_cordic/src/tt_um_cordic.sv:68$56:
+      Old ports: A=15'100110110111010, B={ \io_in [9:5] 10'0000000000 }, Y=\mchip.cordic_module.init_x [14:0]
+      New ports: A=6'100111, B={ \io_in [9:5] 1'0 }, Y={ \mchip.cordic_module.init_x [14:10] \mchip.cordic_module.init_x [1] }
+      New connections: { \mchip.cordic_module.init_x [9:2] \mchip.cordic_module.init_x [0] } = { 1'0 \mchip.cordic_module.init_x [1] \mchip.cordic_module.init_x [1] 1'0 \mchip.cordic_module.init_x [1] \mchip.cordic_module.init_x [1] \mchip.cordic_module.init_x [1] 2'00 }
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 7 changes.
+
+4.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.20.6. Executing OPT_SHARE pass.
+
+4.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+4.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~20 debug messages>
+
+4.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+4.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.20.14. Executing OPT_SHARE pass.
+
+4.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+4.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+4.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+4.20.22. Executing OPT_SHARE pass.
+
+4.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+4.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+4.20.26. Finished OPT passes. (There is nothing left to do.)
+
+4.21. Executing TECHMAP pass (map to technology primitives).
+
+4.21.1. Executing Verilog-2005 frontend: /Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+4.21.2. Continuing TECHMAP pass.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$b8c0a997bce700f23568a5ada79cc6781d1f5ca0\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod$20d3ee62d72123142eb855d7ddafd835e31ba009\_90_pmux for cells of type $pmux.
+Using template $paramod$24fb226dd75c9d3f6955ec2ad61d794776778cf6\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $dffe.
+Using template $paramod$3bb72ad0665cdca279bbc49ed6a39f403f16497f\_90_alu for cells of type $alu.
+Using template $paramod$constmap:92310152ae1bd17e5ec1df57683a6126f3f2f2ea$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'1
+Creating constmapped module `$paramod$constmap:6baecd3302d5af5f08eb72b648e5c0dfef6ba679$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr'.
+
+4.21.18. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:6baecd3302d5af5f08eb72b648e5c0dfef6ba679$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~559 debug messages>
+
+4.21.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:6baecd3302d5af5f08eb72b648e5c0dfef6ba679$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr.
+<suppressed ~213 debug messages>
+Removed 0 unused cells and 16 unused wires.
+Using template $paramod$constmap:6baecd3302d5af5f08eb72b648e5c0dfef6ba679$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port B: 1'1
+  Constant input on bit 1 of port B: 1'0
+Creating constmapped module `$paramod$constmap:024ebd849af01d679f0ca8381cf69f0225d5f8eb$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr'.
+
+4.21.20. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:024ebd849af01d679f0ca8381cf69f0225d5f8eb$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+4.21.21. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:024ebd849af01d679f0ca8381cf69f0225d5f8eb$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr.
+<suppressed ~210 debug messages>
+Removed 0 unused cells and 16 unused wires.
+Using template $paramod$constmap:024ebd849af01d679f0ca8381cf69f0225d5f8eb$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+Creating constmapped module `$paramod$constmap:24e683d0ab3c50d2277d217963d39eeba4427bf1$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr'.
+
+4.21.22. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:24e683d0ab3c50d2277d217963d39eeba4427bf1$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+4.21.23. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:24e683d0ab3c50d2277d217963d39eeba4427bf1$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr.
+<suppressed ~207 debug messages>
+Removed 0 unused cells and 16 unused wires.
+Using template $paramod$constmap:24e683d0ab3c50d2277d217963d39eeba4427bf1$paramod$bb1cb126e445c357d45bea99d43cb3b1208cc556\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010001 for cells of type $lcu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~1210 debug messages>
+
+4.22. Executing OPT pass (performing simple optimizations).
+
+4.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~592 debug messages>
+
+4.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~183 debug messages>
+Removed a total of 61 cells.
+
+4.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 241 unused cells and 538 unused wires.
+<suppressed ~242 debug messages>
+
+4.22.5. Finished fast OPT passes.
+
+4.23. Executing ABC pass (technology mapping using ABC).
+
+4.23.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
+Extracted 2015 gates and 2106 wires to a netlist network with 89 inputs and 89 outputs.
+
+4.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+4.23.1.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:        6
+ABC RESULTS:               AND cells:       29
+ABC RESULTS:               MUX cells:      413
+ABC RESULTS:               NOR cells:      121
+ABC RESULTS:                OR cells:      194
+ABC RESULTS:              XNOR cells:      172
+ABC RESULTS:               NOT cells:      103
+ABC RESULTS:            ANDNOT cells:      590
+ABC RESULTS:             ORNOT cells:       67
+ABC RESULTS:               XOR cells:      380
+ABC RESULTS:        internal signals:     1928
+ABC RESULTS:           input signals:       89
+ABC RESULTS:          output signals:       89
+Removing temp directory.
+
+4.24. Executing OPT pass (performing simple optimizations).
+
+4.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~105 debug messages>
+
+4.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 1 unused cells and 922 unused wires.
+<suppressed ~131 debug messages>
+
+4.24.5. Finished fast OPT passes.
+
+4.25. Executing HIERARCHY pass (managing design hierarchy).
+
+4.25.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+4.25.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+4.26. Printing statistics.
+
+=== toplevel_chip ===
+
+   Number of wires:               2168
+   Number of wire bits:           3607
+   Number of public wires:         119
+   Number of public wire bits:    1556
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2150
+     $_ANDNOT_                     590
+     $_AND_                         29
+     $_DFFE_PP0N_                    4
+     $_DFFE_PP0P_                   51
+     $_DFFE_PP_                     22
+     $_MUX_                        413
+     $_NAND_                         6
+     $_NOR_                        121
+     $_NOT_                        102
+     $_ORNOT_                       67
+     $_OR_                         193
+     $_XNOR_                       172
+     $_XOR_                        380
+
+4.27. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing SETUNDEF pass (replace undef values with defined constants).
+
+7. Executing ASYNC2SYNC pass.
+Replacing toplevel_chip.$auto$ff.cc:266:slice$338 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[0], Q=\mchip.cordic_module.curr_z [0]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$339 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[1], Q=\mchip.cordic_module.curr_z [1]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$340 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[2], Q=\mchip.cordic_module.curr_z [2]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$341 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[3], Q=\mchip.cordic_module.curr_z [3]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$342 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[4], Q=\mchip.cordic_module.curr_z [4]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$343 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[5], Q=\mchip.cordic_module.curr_z [5]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$344 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[6], Q=\mchip.cordic_module.curr_z [6]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$345 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[7], Q=\mchip.cordic_module.curr_z [7]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$346 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[8], Q=\mchip.cordic_module.curr_z [8]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$347 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[9], Q=\mchip.cordic_module.curr_z [9]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$348 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[10], Q=\mchip.cordic_module.curr_z [10]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$349 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[11], Q=\mchip.cordic_module.curr_z [11]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$350 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[12], Q=\mchip.cordic_module.curr_z [12]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$351 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[13], Q=\mchip.cordic_module.curr_z [13]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$352 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[14], Q=\mchip.cordic_module.curr_z [14]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$353 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[15], Q=\mchip.cordic_module.curr_z [15]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$354 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$98_Y[16], Q=\mchip.cordic_module.curr_z [16]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$383 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[0], Q=\mchip.cordic_module.curr_y [0]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$384 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[1], Q=\mchip.cordic_module.curr_y [1]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$385 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[2], Q=\mchip.cordic_module.curr_y [2]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$386 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[3], Q=\mchip.cordic_module.curr_y [3]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$387 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[4], Q=\mchip.cordic_module.curr_y [4]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$388 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[5], Q=\mchip.cordic_module.curr_y [5]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$389 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[6], Q=\mchip.cordic_module.curr_y [6]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$390 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[7], Q=\mchip.cordic_module.curr_y [7]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$391 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[8], Q=\mchip.cordic_module.curr_y [8]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$392 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[9], Q=\mchip.cordic_module.curr_y [9]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$393 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[10], Q=\mchip.cordic_module.curr_y [10]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$394 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[11], Q=\mchip.cordic_module.curr_y [11]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$395 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[12], Q=\mchip.cordic_module.curr_y [12]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$396 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[13], Q=\mchip.cordic_module.curr_y [13]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$397 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[14], Q=\mchip.cordic_module.curr_y [14]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$398 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[15], Q=\mchip.cordic_module.curr_y [15]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$399 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$104_Y[16], Q=\mchip.cordic_module.curr_y [16]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$551 ($_DFFE_PP0N_): ARST=\io_in [13], D=1'1, Q=\mchip.cordic_module.done
+Replacing toplevel_chip.$auto$ff.cc:266:slice$552 ($_DFFE_PP0N_): ARST=\io_in [13], D=\mchip.cordic_module.fstage_0.stage_0.step_ctr [2], Q=\mchip.cordic_module.step_ctr [0]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$553 ($_DFFE_PP0N_): ARST=\io_in [13], D=$auto$alumacc.cc:485:replace_alu$178.Y [1], Q=\mchip.cordic_module.step_ctr [1]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$554 ($_DFFE_PP0N_): ARST=\io_in [13], D=$auto$alumacc.cc:485:replace_alu$178.Y [2], Q=\mchip.cordic_module.step_ctr [2]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$589 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[0], Q=\mchip.cordic_module.curr_x [0]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$590 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[1], Q=\mchip.cordic_module.curr_x [1]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$591 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[2], Q=\mchip.cordic_module.curr_x [2]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$592 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[3], Q=\mchip.cordic_module.curr_x [3]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$593 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[4], Q=\mchip.cordic_module.curr_x [4]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$594 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[5], Q=\mchip.cordic_module.curr_x [5]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$595 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[6], Q=\mchip.cordic_module.curr_x [6]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$596 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[7], Q=\mchip.cordic_module.curr_x [7]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$597 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[8], Q=\mchip.cordic_module.curr_x [8]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$598 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[9], Q=\mchip.cordic_module.curr_x [9]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$599 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[10], Q=\mchip.cordic_module.curr_x [10]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$600 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[11], Q=\mchip.cordic_module.curr_x [11]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$601 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[12], Q=\mchip.cordic_module.curr_x [12]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$602 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[13], Q=\mchip.cordic_module.curr_x [13]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$603 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[14], Q=\mchip.cordic_module.curr_x [14]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$604 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[15], Q=\mchip.cordic_module.curr_x [15]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$605 ($_DFFE_PP0P_): ARST=\io_in [13], D=$abc$3272$flatten\mchip.\cordic_module.$procmux$110_Y[16], Q=\mchip.cordic_module.curr_x [16]
+
+8. Executing SYNTH pass.
+
+8.1. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+8.1.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+8.2. Executing PROC pass (convert processes to netlists).
+
+8.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+8.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+8.2.4. Executing PROC_INIT pass (extract init attributes).
+
+8.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+8.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+8.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+8.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+8.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+8.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+8.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.5. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+
+8.6. Executing OPT pass (performing simple optimizations).
+
+8.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.6.9. Finished OPT passes. (There is nothing left to do.)
+
+8.7. Executing FSM pass (extract and optimize FSM).
+
+8.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+8.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+8.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+8.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+8.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+8.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+8.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+8.8. Executing OPT pass (performing simple optimizations).
+
+8.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.8.9. Finished OPT passes. (There is nothing left to do.)
+
+8.9. Executing WREDUCE pass (reducing word size of cells).
+
+8.10. Executing PEEPOPT pass (run peephole optimizers).
+
+8.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module toplevel_chip:
+  created 0 $alu and 0 $macc cells.
+
+8.13. Executing SHARE pass (SAT-based resource sharing).
+
+8.14. Executing OPT pass (performing simple optimizations).
+
+8.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.14.9. Finished OPT passes. (There is nothing left to do.)
+
+8.15. Executing MEMORY pass.
+
+8.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+8.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+8.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.17. Executing OPT pass (performing simple optimizations).
+
+8.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.17.5. Finished fast OPT passes.
+
+8.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+8.19. Executing OPT pass (performing simple optimizations).
+
+8.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.19.6. Executing OPT_SHARE pass.
+
+8.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.19.10. Finished OPT passes. (There is nothing left to do.)
+
+8.20. Executing TECHMAP pass (map to technology primitives).
+
+8.20.1. Executing Verilog-2005 frontend: /Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+8.20.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~73 debug messages>
+
+8.21. Executing OPT pass (performing simple optimizations).
+
+8.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.21.5. Finished fast OPT passes.
+
+8.22. Executing ABC pass (technology mapping using ABC).
+
+8.22.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
+Extracted 2128 gates and 2219 wires to a netlist network with 90 inputs and 90 outputs.
+
+8.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+8.22.1.2. Re-integrating ABC results.
+ABC RESULTS:              XNOR cells:      182
+ABC RESULTS:             ORNOT cells:      110
+ABC RESULTS:               MUX cells:      411
+ABC RESULTS:               AND cells:      108
+ABC RESULTS:               NOR cells:       88
+ABC RESULTS:                OR cells:      132
+ABC RESULTS:               NOT cells:       72
+ABC RESULTS:              NAND cells:       72
+ABC RESULTS:               XOR cells:      372
+ABC RESULTS:            ANDNOT cells:      559
+ABC RESULTS:        internal signals:     2039
+ABC RESULTS:           input signals:       90
+ABC RESULTS:          output signals:       90
+Removing temp directory.
+
+8.23. Executing OPT pass (performing simple optimizations).
+
+8.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~44 debug messages>
+
+8.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 1 unused cells and 2181 unused wires.
+<suppressed ~18 debug messages>
+
+8.23.5. Finished fast OPT passes.
+
+8.24. Executing HIERARCHY pass (managing design hierarchy).
+
+8.24.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+8.24.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+8.25. Printing statistics.
+
+=== toplevel_chip ===
+
+   Number of wires:               2238
+   Number of wire bits:           3435
+   Number of public wires:         103
+   Number of public wire bits:    1298
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2182
+     $_ANDNOT_                     559
+     $_AND_                        108
+     $_DFFE_PP_                     22
+     $_MUX_                        411
+     $_NAND_                        72
+     $_NOR_                         88
+     $_NOT_                         71
+     $_ORNOT_                      110
+     $_OR_                         132
+     $_SDFFE_PP0N_                   4
+     $_SDFFE_PP0P_                  51
+     $_XNOR_                       182
+     $_XOR_                        372
+
+8.26. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+Renaming module \toplevel_chip to \d13_thomaska_cordic.
+
+9. Executing Verilog backend.
+
+9.1. Executing BMUXMAP pass.
+
+9.2. Executing DEMUXMAP pass.
+Dumping module `\d13_thomaska_cordic'.
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module d13_thomaska_cordic...
+Found and reported 0 problems.
+
+11. Printing statistics.
+
+=== d13_thomaska_cordic ===
+
+   Number of wires:               2238
+   Number of wire bits:           3435
+   Number of public wires:         103
+   Number of public wire bits:    1298
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2182
+     $_ANDNOT_                     559
+     $_AND_                        108
+     $_DFFE_PP_                     22
+     $_MUX_                        411
+     $_NAND_                        72
+     $_NOR_                         88
+     $_NOT_                         71
+     $_ORNOT_                      110
+     $_OR_                         132
+     $_SDFFE_PP0N_                   4
+     $_SDFFE_PP0P_                  51
+     $_XNOR_                       182
+     $_XOR_                        372
+
+Warnings: 5 unique messages, 7 total
+End of script. Logfile hash: 390ae5a3b6, CPU: user 0.88s system 0.03s
+Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 25% 2x abc (0 sec), 22% 41x opt_expr (0 sec), ...
+

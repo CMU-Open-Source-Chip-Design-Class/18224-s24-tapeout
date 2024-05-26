@@ -50,7 +50,7 @@ module my_chip (
 	wire vsync;
 	wire valid;
 	wire refresh;
-	reg state;
+	//reg state;
 	assign {gn21, gn22, gn23, gn24} = (valid ? {red[2:0], 1'b0} : {4 {1'sb0}});
 	assign {gp21, gp22, gp23, gp24} = (valid ? {blue[2:0], 1'b0} : {4 {1'sb0}});
 	assign {gn14, gn15, gn16, gn17} = (valid ? {green[2:0], 1'b0} : {4 {1'sb0}});
@@ -192,8 +192,7 @@ module my_chip (
 		green = 0;
 		blue = 0;
 		if (in_arena_col) begin
-			state = tile_states[(row_idx * 8) + col_idx];
-			if (state == 1)
+			if (tile_states[(row_idx * 8) + col_idx] == 1)
 				green = 1;
 			else
 				blue = 1;
@@ -295,6 +294,7 @@ module one_hot_to_idx (
 	output reg in_arena;
 	always @(*)
 		if (^one_hot) begin
+            idx = 3'd0;
 			if (one_hot == 8'b00000001)
 				idx = 3'd0;
 			else if (one_hot == 8'b00000010)
