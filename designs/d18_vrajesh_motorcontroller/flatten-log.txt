@@ -1870,7 +1870,7 @@ Found and reported 0 problems.
      $_XOR_                        182
 
 Warnings: 7 unique messages, 7 total
-End of script. Logfile hash: f549c4f5be, CPU: user 0.59s system 0.02s
+End of script. Logfile hash: f549c4f5be, CPU: user 0.63s system 0.03s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 23% 43x opt_expr (0 sec), 21% 2x abc (0 sec), ...
+Time spent: 23% 43x opt_expr (0 sec), 20% 2x abc (0 sec), ...
 

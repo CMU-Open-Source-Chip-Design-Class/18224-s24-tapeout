@@ -901,5 +901,5 @@ Found and reported 0 problems.
 
 End of script. Logfile hash: 9a34575401, CPU: user 0.06s system 0.01s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 51% 2x abc (0 sec), 11% 28x opt_expr (0 sec), ...
+Time spent: 50% 2x abc (0 sec), 11% 28x opt_expr (0 sec), ...
 
