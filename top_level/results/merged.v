@@ -283,6 +283,247 @@ module d02_example_counter (
 	assign \mchip.reset  = io_in[13];
 	assign \mchip.updown  = io_in[1];
 endmodule
+module d03_example_iotest (
+	io_in,
+	io_out
+);
+	wire _000_;
+	wire _001_;
+	wire _002_;
+	wire _003_;
+	wire _004_;
+	wire _005_;
+	wire _006_;
+	wire _007_;
+	wire _008_;
+	wire _009_;
+	wire _010_;
+	wire _011_;
+	wire _012_;
+	wire _013_;
+	wire _014_;
+	wire _015_;
+	wire _016_;
+	wire _017_;
+	wire _018_;
+	wire _019_;
+	wire _020_;
+	wire _021_;
+	wire _022_;
+	wire _023_;
+	wire _024_;
+	wire _025_;
+	wire _026_;
+	wire _027_;
+	wire _028_;
+	wire _029_;
+	wire _030_;
+	wire _031_;
+	wire _032_;
+	wire _033_;
+	wire _034_;
+	wire _035_;
+	wire _036_;
+	wire _037_;
+	wire _038_;
+	wire _039_;
+	wire _040_;
+	wire _041_;
+	wire _042_;
+	wire _043_;
+	wire _044_;
+	wire _045_;
+	wire _046_;
+	wire _047_;
+	wire _048_;
+	wire _049_;
+	wire _050_;
+	wire _051_;
+	wire _052_;
+	wire _053_;
+	wire _054_;
+	wire _055_;
+	wire _056_;
+	wire _057_;
+	wire _058_;
+	wire _059_;
+	wire _060_;
+	wire _061_;
+	wire _062_;
+	wire _063_;
+	wire _064_;
+	wire _065_;
+	wire _066_;
+	wire _067_;
+	wire _068_;
+	wire _069_;
+	wire _070_;
+	wire _071_;
+	wire _072_;
+	wire _073_;
+	wire _074_;
+	wire _075_;
+	wire _076_;
+	wire _077_;
+	wire _078_;
+	wire _079_;
+	wire _080_;
+	wire _081_;
+	wire _082_;
+	wire _083_;
+	wire _084_;
+	wire _085_;
+	wire _086_;
+	wire _087_;
+	wire _088_;
+	wire _089_;
+	wire _090_;
+	wire [3:0] _091_;
+	wire [3:0] _092_;
+	input wire [13:0] io_in;
+	output wire [13:0] io_out;
+	wire \mchip.clock ;
+	reg [3:0] \mchip.idx ;
+	wire [11:0] \mchip.io_in ;
+	wire [11:0] \mchip.io_out ;
+	wire \mchip.reset ;
+	wire [11:0] \mchip.shift_bit ;
+	assign _091_[0] = ~\mchip.idx [0];
+	assign _035_ = \mchip.idx [1] & \mchip.idx [0];
+	assign _036_ = \mchip.idx [2] | ~\mchip.idx [3];
+	assign _037_ = _035_ & ~_036_;
+	assign _000_ = _037_ | io_in[13];
+	assign _038_ = ~(\mchip.idx [3] | \mchip.idx [2]);
+	assign _039_ = \mchip.idx [1] | \mchip.idx [0];
+	assign _040_ = _038_ & ~_039_;
+	assign _041_ = ~\mchip.idx [2];
+	assign _042_ = _041_ & ~_039_;
+	assign _043_ = _042_ ^ \mchip.idx [3];
+	assign _044_ = _039_ ^ _041_;
+	assign _045_ = \mchip.idx [1] | ~\mchip.idx [0];
+	assign _046_ = _045_ | _044_;
+	assign _047_ = ~(_046_ | _043_);
+	assign _048_ = _047_ & ~_040_;
+	assign io_out[0] = _048_ & ~_040_;
+	assign _049_ = io_in[6] ^ io_in[7];
+	assign _050_ = io_in[4] ^ io_in[5];
+	assign _051_ = _050_ ^ _049_;
+	assign _052_ = ~_040_;
+	assign _053_ = ~_044_;
+	assign _054_ = _039_ & ~_035_;
+	assign _055_ = _040_ | \mchip.idx [0];
+	assign _056_ = _055_ | _054_;
+	assign _057_ = _056_ | _053_;
+	assign _058_ = _057_ | _043_;
+	assign _059_ = _058_ | _040_;
+	assign _060_ = _052_ & ~_059_;
+	assign io_out[7] = _060_ ^ _051_;
+	assign _061_ = io_in[2] ^ io_in[3];
+	assign _062_ = io_in[0] ^ io_in[1];
+	assign _063_ = _062_ ^ _061_;
+	assign _064_ = _063_ ^ _050_;
+	assign _065_ = \mchip.idx [0] | ~\mchip.idx [1];
+	assign _066_ = _065_ | _044_;
+	assign _067_ = _066_ | ~_043_;
+	assign _068_ = _067_ | _040_;
+	assign _069_ = _052_ & ~_068_;
+	assign io_out[9] = _069_ ^ _064_;
+	assign _070_ = io_in[10] ^ io_in[11];
+	assign _071_ = io_in[8] ^ io_in[9];
+	assign _072_ = _071_ ^ _070_;
+	assign _073_ = _072_ ^ _063_;
+	assign _074_ = ~(\mchip.idx [1] & \mchip.idx [0]);
+	assign _075_ = _074_ | ~_044_;
+	assign _076_ = _075_ | _043_;
+	assign _077_ = _076_ | _040_;
+	assign _078_ = _052_ & ~_077_;
+	assign io_out[6] = _078_ ^ _073_;
+	assign _079_ = _072_ ^ _049_;
+	assign _080_ = _046_ | ~_043_;
+	assign _081_ = _080_ | _040_;
+	assign _082_ = _052_ & ~_081_;
+	assign io_out[8] = _082_ ^ _079_;
+	assign _083_ = _062_ ^ _050_;
+	assign _084_ = _083_ ^ _071_;
+	assign _085_ = _065_ | ~_044_;
+	assign _086_ = _085_ | _043_;
+	assign _087_ = _086_ | _040_;
+	assign _088_ = _052_ & ~_087_;
+	assign io_out[5] = _088_ ^ _084_;
+	assign _089_ = _061_ ^ _049_;
+	assign _090_ = _089_ ^ _070_;
+	assign _001_ = _045_ | ~_044_;
+	assign _002_ = _001_ | _043_;
+	assign _003_ = _002_ | _040_;
+	assign _004_ = _052_ & ~_003_;
+	assign io_out[4] = _004_ ^ _090_;
+	assign _005_ = _074_ | _044_;
+	assign _006_ = _005_ | ~_043_;
+	assign _007_ = _006_ | _040_;
+	assign _008_ = _052_ & ~_007_;
+	assign io_out[10] = _008_ ^ _072_;
+	assign _009_ = ~(io_in[10] ^ io_in[8]);
+	assign _010_ = ~(io_in[6] ^ io_in[4]);
+	assign _011_ = io_in[2] ^ io_in[0];
+	assign _012_ = _011_ ^ _010_;
+	assign _013_ = _012_ ^ _009_;
+	assign _014_ = _056_ | _044_;
+	assign _015_ = _014_ | _043_;
+	assign _016_ = _015_ | _040_;
+	assign _017_ = _052_ & ~_016_;
+	assign io_out[3] = _017_ ^ _013_;
+	assign _018_ = ~(io_in[11] ^ io_in[9]);
+	assign _019_ = ~(io_in[7] ^ io_in[5]);
+	assign _020_ = io_in[3] ^ io_in[1];
+	assign _021_ = _020_ ^ _019_;
+	assign _022_ = _021_ ^ _018_;
+	assign _023_ = _005_ | _043_;
+	assign _024_ = _023_ | _040_;
+	assign _025_ = _052_ & ~_024_;
+	assign io_out[2] = _025_ ^ _022_;
+	assign _026_ = _063_ ^ _051_;
+	assign _027_ = _026_ ^ _072_;
+	assign _028_ = _066_ | _043_;
+	assign _029_ = _028_ | _040_;
+	assign _030_ = _052_ & ~_029_;
+	assign io_out[1] = _030_ ^ _027_;
+	assign _031_ = _014_ | ~_043_;
+	assign _032_ = _031_ | _040_;
+	assign _033_ = _052_ & ~_032_;
+	assign io_out[11] = _033_ ^ _051_;
+	assign _092_[1] = \mchip.idx [1] ^ \mchip.idx [0];
+	assign _092_[2] = _035_ ^ \mchip.idx [2];
+	assign _034_ = _035_ & ~_041_;
+	assign _092_[3] = _034_ ^ \mchip.idx [3];
+	always @(posedge io_in[12])
+		if (_000_)
+			\mchip.idx [0] <= 1'h0;
+		else
+			\mchip.idx [0] <= _091_[0];
+	always @(posedge io_in[12])
+		if (_000_)
+			\mchip.idx [1] <= 1'h0;
+		else
+			\mchip.idx [1] <= _092_[1];
+	always @(posedge io_in[12])
+		if (_000_)
+			\mchip.idx [2] <= 1'h0;
+		else
+			\mchip.idx [2] <= _092_[2];
+	always @(posedge io_in[12])
+		if (_000_)
+			\mchip.idx [3] <= 1'h0;
+		else
+			\mchip.idx [3] <= _092_[3];
+	assign _091_[3:1] = \mchip.idx [3:1];
+	assign _092_[0] = _091_[0];
+	assign io_out[13:12] = 2'h0;
+	assign \mchip.clock  = io_in[12];
+	assign \mchip.io_in  = io_in[11:0];
+	assign \mchip.io_out  = io_out[11:0];
+	assign \mchip.reset  = io_in[13];
+	assign \mchip.shift_bit  = {11'h000, io_out[0]};
+endmodule
 module d05_meta_info (
 	io_in,
 	io_out
@@ -5740,7 +5981,7 @@ module d05_meta_info (
 	assign \mchip.reset  = io_in[13];
 	assign \mchip.val [7] = 1'h0;
 endmodule
-module d07_pemmanou_usb (
+module d06_demo_vgapong (
 	io_in,
 	io_out
 );
@@ -5813,419 +6054,419 @@ module d07_pemmanou_usb (
 	wire _0066_;
 	wire _0067_;
 	wire _0068_;
-	reg _0069_;
-	reg _0070_;
-	reg _0071_;
-	reg _0072_;
-	reg _0073_;
-	reg _0074_;
-	reg _0075_;
-	reg _0076_;
-	reg _0077_;
-	reg _0078_;
-	reg _0079_;
-	reg _0080_;
-	reg _0081_;
-	reg _0082_;
-	reg _0083_;
-	reg _0084_;
-	reg _0085_;
-	reg _0086_;
-	reg _0087_;
-	reg _0088_;
-	reg _0089_;
-	reg _0090_;
-	reg _0091_;
-	reg _0092_;
-	reg _0093_;
-	reg _0094_;
-	reg _0095_;
-	reg _0096_;
-	reg _0097_;
-	reg _0098_;
-	reg _0099_;
-	reg _0100_;
-	reg _0101_;
-	reg _0102_;
-	reg _0103_;
-	reg _0104_;
-	reg _0105_;
-	reg _0106_;
-	reg _0107_;
-	reg _0108_;
-	reg _0109_;
-	reg _0110_;
-	reg _0111_;
-	reg _0112_;
-	reg _0113_;
-	reg _0114_;
-	reg _0115_;
-	reg _0116_;
-	reg _0117_;
-	reg _0118_;
-	reg _0119_;
-	reg _0120_;
-	reg _0121_;
-	reg _0122_;
-	reg _0123_;
-	reg _0124_;
-	reg _0125_;
-	reg _0126_;
-	reg _0127_;
-	reg _0128_;
-	reg _0129_;
-	reg _0130_;
-	reg _0131_;
-	reg _0132_;
-	reg _0133_;
-	reg _0134_;
-	reg _0135_;
-	reg _0136_;
-	reg _0137_;
-	reg _0138_;
-	reg _0139_;
-	reg _0140_;
-	reg _0141_;
-	reg _0142_;
-	reg _0143_;
-	reg _0144_;
-	reg _0145_;
-	reg _0146_;
-	reg _0147_;
-	reg _0148_;
-	reg _0149_;
-	reg _0150_;
-	reg _0151_;
-	reg _0152_;
-	reg _0153_;
-	reg _0154_;
-	reg _0155_;
-	reg _0156_;
-	reg _0157_;
-	reg _0158_;
-	reg _0159_;
-	reg _0160_;
-	reg _0161_;
-	reg _0162_;
-	reg _0163_;
-	reg _0164_;
-	reg _0165_;
-	reg _0166_;
-	reg _0167_;
-	reg _0168_;
-	reg _0169_;
-	reg _0170_;
-	reg _0171_;
-	reg _0172_;
-	reg _0173_;
-	reg _0174_;
-	reg _0175_;
-	reg _0176_;
-	reg _0177_;
-	reg _0178_;
-	reg _0179_;
-	reg _0180_;
-	reg _0181_;
-	reg _0182_;
-	reg _0183_;
-	reg _0184_;
-	reg _0185_;
-	reg _0186_;
-	reg _0187_;
-	reg _0188_;
-	reg _0189_;
-	reg _0190_;
-	reg _0191_;
-	reg _0192_;
-	reg _0193_;
-	reg _0194_;
-	reg _0195_;
-	reg _0196_;
-	reg _0197_;
-	reg _0198_;
-	reg _0199_;
-	reg _0200_;
-	reg _0201_;
-	reg _0202_;
-	reg _0203_;
-	reg _0204_;
-	reg _0205_;
-	reg _0206_;
-	reg _0207_;
-	reg _0208_;
-	reg _0209_;
-	reg _0210_;
-	reg _0211_;
-	reg _0212_;
-	reg _0213_;
-	reg _0214_;
-	reg _0215_;
-	reg _0216_;
-	reg _0217_;
-	reg _0218_;
-	reg _0219_;
-	reg _0220_;
-	reg _0221_;
-	reg _0222_;
-	reg _0223_;
-	reg _0224_;
-	reg _0225_;
-	reg _0226_;
-	reg _0227_;
-	reg _0228_;
-	reg _0229_;
-	reg _0230_;
-	reg _0231_;
-	reg _0232_;
-	reg _0233_;
-	reg _0234_;
-	reg _0235_;
-	reg _0236_;
-	reg _0237_;
-	reg _0238_;
-	reg _0239_;
-	reg _0240_;
-	reg _0241_;
-	reg _0242_;
-	reg _0243_;
-	reg _0244_;
-	reg _0245_;
-	reg _0246_;
-	reg _0247_;
-	reg _0248_;
-	reg _0249_;
-	reg _0250_;
-	reg _0251_;
-	reg _0252_;
-	reg _0253_;
-	reg _0254_;
-	reg _0255_;
-	reg _0256_;
-	reg _0257_;
-	reg _0258_;
-	reg _0259_;
-	reg _0260_;
-	reg _0261_;
-	reg _0262_;
-	reg _0263_;
-	reg _0264_;
-	reg _0265_;
-	reg _0266_;
-	reg _0267_;
-	reg _0268_;
-	reg _0269_;
-	reg _0270_;
-	reg _0271_;
-	reg _0272_;
-	reg _0273_;
-	reg _0274_;
-	reg _0275_;
-	reg _0276_;
-	reg _0277_;
-	reg _0278_;
-	reg _0279_;
-	reg _0280_;
-	reg _0281_;
-	reg _0282_;
-	reg _0283_;
-	reg _0284_;
-	reg _0285_;
-	reg _0286_;
-	reg _0287_;
-	reg _0288_;
-	reg _0289_;
-	reg _0290_;
-	reg _0291_;
-	reg _0292_;
-	reg _0293_;
-	reg _0294_;
-	reg _0295_;
-	reg _0296_;
-	reg _0297_;
-	reg _0298_;
-	reg _0299_;
-	reg _0300_;
-	reg _0301_;
-	reg _0302_;
-	reg _0303_;
-	reg _0304_;
-	reg _0305_;
-	reg _0306_;
-	reg _0307_;
-	reg _0308_;
-	reg _0309_;
-	reg _0310_;
-	reg _0311_;
-	reg _0312_;
-	reg _0313_;
-	reg _0314_;
-	reg _0315_;
-	reg _0316_;
-	reg _0317_;
-	reg _0318_;
-	reg _0319_;
-	reg _0320_;
-	reg _0321_;
-	reg _0322_;
-	reg _0323_;
-	reg _0324_;
-	reg _0325_;
-	reg _0326_;
-	reg _0327_;
-	reg _0328_;
-	reg _0329_;
-	reg _0330_;
-	reg _0331_;
-	reg _0332_;
-	reg _0333_;
-	reg _0334_;
-	reg _0335_;
-	reg _0336_;
-	reg _0337_;
-	reg _0338_;
-	reg _0339_;
-	reg _0340_;
-	reg _0341_;
-	reg _0342_;
-	reg _0343_;
-	reg _0344_;
-	reg _0345_;
-	reg _0346_;
-	reg _0347_;
-	reg _0348_;
-	reg _0349_;
-	reg _0350_;
-	reg _0351_;
-	reg _0352_;
-	reg _0353_;
-	reg _0354_;
-	reg _0355_;
-	reg _0356_;
-	reg _0357_;
-	reg _0358_;
-	reg _0359_;
-	reg _0360_;
-	reg _0361_;
-	reg _0362_;
-	reg _0363_;
-	reg _0364_;
-	reg _0365_;
-	reg _0366_;
-	reg _0367_;
-	reg _0368_;
-	reg _0369_;
-	reg _0370_;
-	reg _0371_;
-	reg _0372_;
-	reg _0373_;
-	reg _0374_;
-	reg _0375_;
-	reg _0376_;
-	reg _0377_;
-	reg _0378_;
-	reg _0379_;
-	reg _0380_;
-	reg _0381_;
-	reg _0382_;
-	reg _0383_;
-	reg _0384_;
-	reg _0385_;
-	reg _0386_;
-	reg _0387_;
-	reg _0388_;
-	reg _0389_;
-	reg _0390_;
-	reg _0391_;
-	reg _0392_;
-	reg _0393_;
-	reg _0394_;
-	reg _0395_;
-	reg _0396_;
-	reg _0397_;
-	reg _0398_;
-	reg _0399_;
-	reg _0400_;
-	reg _0401_;
-	reg _0402_;
-	reg _0403_;
-	reg _0404_;
-	reg _0405_;
-	reg _0406_;
-	reg _0407_;
-	reg _0408_;
-	reg _0409_;
-	reg _0410_;
-	reg _0411_;
-	reg _0412_;
-	reg _0413_;
-	reg _0414_;
-	reg _0415_;
-	reg _0416_;
-	reg _0417_;
-	reg _0418_;
-	reg _0419_;
-	reg _0420_;
-	reg _0421_;
-	reg _0422_;
-	reg _0423_;
-	reg _0424_;
-	reg _0425_;
-	reg _0426_;
-	reg _0427_;
-	reg _0428_;
-	reg _0429_;
-	reg _0430_;
-	reg _0431_;
-	reg _0432_;
-	reg _0433_;
-	reg _0434_;
-	reg _0435_;
-	reg _0436_;
-	reg _0437_;
-	reg _0438_;
-	reg _0439_;
-	reg _0440_;
-	reg _0441_;
-	reg _0442_;
-	reg _0443_;
-	reg _0444_;
-	reg _0445_;
-	reg _0446_;
-	reg _0447_;
-	reg _0448_;
-	reg _0449_;
-	reg _0450_;
-	reg _0451_;
-	reg _0452_;
-	reg _0453_;
-	reg _0454_;
-	reg _0455_;
-	reg _0456_;
-	reg _0457_;
-	reg _0458_;
-	reg _0459_;
-	reg _0460_;
-	reg _0461_;
-	reg _0462_;
-	reg _0463_;
-	reg _0464_;
-	reg _0465_;
-	reg _0466_;
-	reg _0467_;
-	reg _0468_;
-	reg _0469_;
-	reg _0470_;
-	reg _0471_;
-	reg _0472_;
-	reg _0473_;
-	reg _0474_;
-	reg _0475_;
-	reg _0476_;
-	reg _0477_;
-	reg _0478_;
-	reg _0479_;
-	reg _0480_;
-	reg _0481_;
+	wire _0069_;
+	wire _0070_;
+	wire _0071_;
+	wire _0072_;
+	wire _0073_;
+	wire _0074_;
+	wire _0075_;
+	wire _0076_;
+	wire _0077_;
+	wire _0078_;
+	wire _0079_;
+	wire _0080_;
+	wire _0081_;
+	wire _0082_;
+	wire _0083_;
+	wire _0084_;
+	wire _0085_;
+	wire _0086_;
+	wire _0087_;
+	wire _0088_;
+	wire _0089_;
+	wire _0090_;
+	wire _0091_;
+	wire _0092_;
+	wire _0093_;
+	wire _0094_;
+	wire _0095_;
+	wire _0096_;
+	wire _0097_;
+	wire _0098_;
+	wire _0099_;
+	wire _0100_;
+	wire _0101_;
+	wire _0102_;
+	wire _0103_;
+	wire _0104_;
+	wire _0105_;
+	wire _0106_;
+	wire _0107_;
+	wire _0108_;
+	wire _0109_;
+	wire _0110_;
+	wire _0111_;
+	wire _0112_;
+	wire _0113_;
+	wire _0114_;
+	wire _0115_;
+	wire _0116_;
+	wire _0117_;
+	wire _0118_;
+	wire _0119_;
+	wire _0120_;
+	wire _0121_;
+	wire _0122_;
+	wire _0123_;
+	wire _0124_;
+	wire _0125_;
+	wire _0126_;
+	wire _0127_;
+	wire _0128_;
+	wire _0129_;
+	wire _0130_;
+	wire _0131_;
+	wire _0132_;
+	wire _0133_;
+	wire _0134_;
+	wire _0135_;
+	wire _0136_;
+	wire _0137_;
+	wire _0138_;
+	wire _0139_;
+	wire _0140_;
+	wire _0141_;
+	wire _0142_;
+	wire _0143_;
+	wire _0144_;
+	wire _0145_;
+	wire _0146_;
+	wire _0147_;
+	wire _0148_;
+	wire _0149_;
+	wire _0150_;
+	wire _0151_;
+	wire _0152_;
+	wire _0153_;
+	wire _0154_;
+	wire _0155_;
+	wire _0156_;
+	wire _0157_;
+	wire _0158_;
+	wire _0159_;
+	wire _0160_;
+	wire _0161_;
+	wire _0162_;
+	wire _0163_;
+	wire _0164_;
+	wire _0165_;
+	wire _0166_;
+	wire _0167_;
+	wire _0168_;
+	wire _0169_;
+	wire _0170_;
+	wire _0171_;
+	wire _0172_;
+	wire _0173_;
+	wire _0174_;
+	wire _0175_;
+	wire _0176_;
+	wire _0177_;
+	wire _0178_;
+	wire _0179_;
+	wire _0180_;
+	wire _0181_;
+	wire _0182_;
+	wire _0183_;
+	wire _0184_;
+	wire _0185_;
+	wire _0186_;
+	wire _0187_;
+	wire _0188_;
+	wire _0189_;
+	wire _0190_;
+	wire _0191_;
+	wire _0192_;
+	wire _0193_;
+	wire _0194_;
+	wire _0195_;
+	wire _0196_;
+	wire _0197_;
+	wire _0198_;
+	wire _0199_;
+	wire _0200_;
+	wire _0201_;
+	wire _0202_;
+	wire _0203_;
+	wire _0204_;
+	wire _0205_;
+	wire _0206_;
+	wire _0207_;
+	wire _0208_;
+	wire _0209_;
+	wire _0210_;
+	wire _0211_;
+	wire _0212_;
+	wire _0213_;
+	wire _0214_;
+	wire _0215_;
+	wire _0216_;
+	wire _0217_;
+	wire _0218_;
+	wire _0219_;
+	wire _0220_;
+	wire _0221_;
+	wire _0222_;
+	wire _0223_;
+	wire _0224_;
+	wire _0225_;
+	wire _0226_;
+	wire _0227_;
+	wire _0228_;
+	wire _0229_;
+	wire _0230_;
+	wire _0231_;
+	wire _0232_;
+	wire _0233_;
+	wire _0234_;
+	wire _0235_;
+	wire _0236_;
+	wire _0237_;
+	wire _0238_;
+	wire _0239_;
+	wire _0240_;
+	wire _0241_;
+	wire _0242_;
+	wire _0243_;
+	wire _0244_;
+	wire _0245_;
+	wire _0246_;
+	wire _0247_;
+	wire _0248_;
+	wire _0249_;
+	wire _0250_;
+	wire _0251_;
+	wire _0252_;
+	wire _0253_;
+	wire _0254_;
+	wire _0255_;
+	wire _0256_;
+	wire _0257_;
+	wire _0258_;
+	wire _0259_;
+	wire _0260_;
+	wire _0261_;
+	wire _0262_;
+	wire _0263_;
+	wire _0264_;
+	wire _0265_;
+	wire _0266_;
+	wire _0267_;
+	wire _0268_;
+	wire _0269_;
+	wire _0270_;
+	wire _0271_;
+	wire _0272_;
+	wire _0273_;
+	wire _0274_;
+	wire _0275_;
+	wire _0276_;
+	wire _0277_;
+	wire _0278_;
+	wire _0279_;
+	wire _0280_;
+	wire _0281_;
+	wire _0282_;
+	wire _0283_;
+	wire _0284_;
+	wire _0285_;
+	wire _0286_;
+	wire _0287_;
+	wire _0288_;
+	wire _0289_;
+	wire _0290_;
+	wire _0291_;
+	wire _0292_;
+	wire _0293_;
+	wire _0294_;
+	wire _0295_;
+	wire _0296_;
+	wire _0297_;
+	wire _0298_;
+	wire _0299_;
+	wire _0300_;
+	wire _0301_;
+	wire _0302_;
+	wire _0303_;
+	wire _0304_;
+	wire _0305_;
+	wire _0306_;
+	wire _0307_;
+	wire _0308_;
+	wire _0309_;
+	wire _0310_;
+	wire _0311_;
+	wire _0312_;
+	wire _0313_;
+	wire _0314_;
+	wire _0315_;
+	wire _0316_;
+	wire _0317_;
+	wire _0318_;
+	wire _0319_;
+	wire _0320_;
+	wire _0321_;
+	wire _0322_;
+	wire _0323_;
+	wire _0324_;
+	wire _0325_;
+	wire _0326_;
+	wire _0327_;
+	wire _0328_;
+	wire _0329_;
+	wire _0330_;
+	wire _0331_;
+	wire _0332_;
+	wire _0333_;
+	wire _0334_;
+	wire _0335_;
+	wire _0336_;
+	wire _0337_;
+	wire _0338_;
+	wire _0339_;
+	wire _0340_;
+	wire _0341_;
+	wire _0342_;
+	wire _0343_;
+	wire _0344_;
+	wire _0345_;
+	wire _0346_;
+	wire _0347_;
+	wire _0348_;
+	wire _0349_;
+	wire _0350_;
+	wire _0351_;
+	wire _0352_;
+	wire _0353_;
+	wire _0354_;
+	wire _0355_;
+	wire _0356_;
+	wire _0357_;
+	wire _0358_;
+	wire _0359_;
+	wire _0360_;
+	wire _0361_;
+	wire _0362_;
+	wire _0363_;
+	wire _0364_;
+	wire _0365_;
+	wire _0366_;
+	wire _0367_;
+	wire _0368_;
+	wire _0369_;
+	wire _0370_;
+	wire _0371_;
+	wire _0372_;
+	wire _0373_;
+	wire _0374_;
+	wire _0375_;
+	wire _0376_;
+	wire _0377_;
+	wire _0378_;
+	wire _0379_;
+	wire _0380_;
+	wire _0381_;
+	wire _0382_;
+	wire _0383_;
+	wire _0384_;
+	wire _0385_;
+	wire _0386_;
+	wire _0387_;
+	wire _0388_;
+	wire _0389_;
+	wire _0390_;
+	wire _0391_;
+	wire _0392_;
+	wire _0393_;
+	wire _0394_;
+	wire _0395_;
+	wire _0396_;
+	wire _0397_;
+	wire _0398_;
+	wire _0399_;
+	wire _0400_;
+	wire _0401_;
+	wire _0402_;
+	wire _0403_;
+	wire _0404_;
+	wire _0405_;
+	wire _0406_;
+	wire _0407_;
+	wire _0408_;
+	wire _0409_;
+	wire _0410_;
+	wire _0411_;
+	wire _0412_;
+	wire _0413_;
+	wire _0414_;
+	wire _0415_;
+	wire _0416_;
+	wire _0417_;
+	wire _0418_;
+	wire _0419_;
+	wire _0420_;
+	wire _0421_;
+	wire _0422_;
+	wire _0423_;
+	wire _0424_;
+	wire _0425_;
+	wire _0426_;
+	wire _0427_;
+	wire _0428_;
+	wire _0429_;
+	wire _0430_;
+	wire _0431_;
+	wire _0432_;
+	wire _0433_;
+	wire _0434_;
+	wire _0435_;
+	wire _0436_;
+	wire _0437_;
+	wire _0438_;
+	wire _0439_;
+	wire _0440_;
+	wire _0441_;
+	wire _0442_;
+	wire _0443_;
+	wire _0444_;
+	wire _0445_;
+	wire _0446_;
+	wire _0447_;
+	wire _0448_;
+	wire _0449_;
+	wire _0450_;
+	wire _0451_;
+	wire _0452_;
+	wire _0453_;
+	wire _0454_;
+	wire _0455_;
+	wire _0456_;
+	wire _0457_;
+	wire _0458_;
+	wire _0459_;
+	wire _0460_;
+	wire _0461_;
+	wire _0462_;
+	wire _0463_;
+	wire _0464_;
+	wire _0465_;
+	wire _0466_;
+	wire _0467_;
+	wire _0468_;
+	wire _0469_;
+	wire _0470_;
+	wire _0471_;
+	wire _0472_;
+	wire _0473_;
+	wire _0474_;
+	wire _0475_;
+	wire _0476_;
+	wire _0477_;
+	wire _0478_;
+	wire _0479_;
+	wire _0480_;
+	wire _0481_;
 	wire _0482_;
 	wire _0483_;
 	wire _0484_;
@@ -8518,4993 +8759,15566 @@ module d07_pemmanou_usb (
 	wire _2771_;
 	wire _2772_;
 	wire _2773_;
+	wire _2774_;
+	wire _2775_;
+	wire _2776_;
+	wire _2777_;
+	wire _2778_;
+	wire _2779_;
+	wire _2780_;
+	wire _2781_;
+	wire _2782_;
+	wire _2783_;
+	wire _2784_;
+	wire _2785_;
+	wire _2786_;
+	wire _2787_;
+	wire _2788_;
+	wire _2789_;
+	wire _2790_;
+	wire _2791_;
+	wire _2792_;
+	wire _2793_;
+	wire _2794_;
+	wire _2795_;
+	wire _2796_;
+	wire _2797_;
+	wire _2798_;
+	wire _2799_;
+	wire _2800_;
+	wire _2801_;
+	wire _2802_;
+	wire _2803_;
+	wire _2804_;
+	wire _2805_;
+	wire _2806_;
+	wire _2807_;
+	wire _2808_;
+	wire _2809_;
+	wire _2810_;
+	wire _2811_;
+	wire _2812_;
+	wire _2813_;
+	wire _2814_;
+	wire _2815_;
+	wire _2816_;
+	wire _2817_;
+	wire _2818_;
+	wire _2819_;
+	wire _2820_;
+	wire _2821_;
+	wire _2822_;
+	wire _2823_;
+	wire _2824_;
+	wire _2825_;
+	wire _2826_;
+	wire _2827_;
+	wire _2828_;
+	wire _2829_;
+	wire _2830_;
+	wire _2831_;
+	wire _2832_;
+	wire _2833_;
+	wire _2834_;
+	wire _2835_;
+	wire _2836_;
+	wire _2837_;
+	wire _2838_;
+	wire _2839_;
+	wire _2840_;
+	wire _2841_;
+	wire _2842_;
+	wire _2843_;
+	wire _2844_;
+	wire _2845_;
+	wire _2846_;
+	wire _2847_;
+	wire _2848_;
+	wire _2849_;
+	wire _2850_;
+	wire _2851_;
+	wire _2852_;
+	wire _2853_;
+	wire _2854_;
+	wire _2855_;
+	wire _2856_;
+	wire _2857_;
+	wire _2858_;
+	wire _2859_;
+	wire _2860_;
+	wire _2861_;
+	wire _2862_;
+	wire _2863_;
+	wire _2864_;
+	wire _2865_;
+	wire _2866_;
+	wire _2867_;
+	wire _2868_;
+	wire _2869_;
+	wire _2870_;
+	wire _2871_;
+	wire _2872_;
+	wire _2873_;
+	wire _2874_;
+	wire _2875_;
+	wire _2876_;
+	wire _2877_;
+	wire _2878_;
+	wire _2879_;
+	wire _2880_;
+	wire _2881_;
+	wire _2882_;
+	wire _2883_;
+	wire _2884_;
+	wire _2885_;
+	wire _2886_;
+	wire _2887_;
+	wire _2888_;
+	wire _2889_;
+	wire _2890_;
+	wire _2891_;
+	wire _2892_;
+	wire _2893_;
+	wire _2894_;
+	wire _2895_;
+	wire _2896_;
+	wire _2897_;
+	wire _2898_;
+	wire _2899_;
+	wire _2900_;
+	wire _2901_;
+	wire _2902_;
+	wire _2903_;
+	wire _2904_;
+	wire _2905_;
+	wire _2906_;
+	wire _2907_;
+	wire _2908_;
+	wire _2909_;
+	wire _2910_;
+	wire _2911_;
+	wire _2912_;
+	wire _2913_;
+	wire _2914_;
+	wire _2915_;
+	wire _2916_;
+	wire _2917_;
+	wire _2918_;
+	wire _2919_;
+	wire _2920_;
+	wire _2921_;
+	wire _2922_;
+	wire _2923_;
+	wire _2924_;
+	wire _2925_;
+	wire _2926_;
+	wire _2927_;
+	wire _2928_;
+	wire _2929_;
+	wire _2930_;
+	wire _2931_;
+	wire _2932_;
+	wire _2933_;
+	wire _2934_;
+	wire _2935_;
+	wire _2936_;
+	wire _2937_;
+	wire _2938_;
+	wire _2939_;
+	wire _2940_;
+	wire _2941_;
+	wire _2942_;
+	wire _2943_;
+	wire _2944_;
+	wire _2945_;
+	wire _2946_;
+	wire _2947_;
+	wire _2948_;
+	wire _2949_;
+	wire _2950_;
+	wire _2951_;
+	wire _2952_;
+	wire _2953_;
+	wire _2954_;
+	wire _2955_;
+	wire _2956_;
+	wire _2957_;
+	wire _2958_;
+	wire _2959_;
+	wire _2960_;
+	wire _2961_;
+	wire _2962_;
+	wire _2963_;
+	wire _2964_;
+	wire _2965_;
+	wire _2966_;
+	wire _2967_;
+	wire _2968_;
+	wire _2969_;
+	wire _2970_;
+	wire _2971_;
+	wire _2972_;
+	wire _2973_;
+	wire _2974_;
+	wire _2975_;
+	wire _2976_;
+	wire _2977_;
+	wire _2978_;
+	wire _2979_;
+	wire _2980_;
+	wire _2981_;
+	wire _2982_;
+	wire _2983_;
+	wire _2984_;
+	wire _2985_;
+	wire _2986_;
+	wire _2987_;
+	wire _2988_;
+	wire _2989_;
+	wire _2990_;
+	wire _2991_;
+	wire _2992_;
+	wire _2993_;
+	wire _2994_;
+	wire _2995_;
+	wire _2996_;
+	wire _2997_;
+	wire _2998_;
+	wire _2999_;
+	wire _3000_;
+	wire _3001_;
+	wire _3002_;
+	wire _3003_;
+	wire _3004_;
+	wire _3005_;
+	wire _3006_;
+	wire _3007_;
+	wire _3008_;
+	wire _3009_;
+	wire _3010_;
+	wire _3011_;
+	wire _3012_;
+	wire _3013_;
+	wire _3014_;
+	wire _3015_;
+	wire _3016_;
+	wire _3017_;
+	wire _3018_;
+	wire _3019_;
+	wire _3020_;
+	wire _3021_;
+	wire _3022_;
+	wire _3023_;
+	wire _3024_;
+	wire _3025_;
+	wire _3026_;
+	wire _3027_;
+	wire _3028_;
+	wire _3029_;
+	wire _3030_;
+	wire _3031_;
+	wire _3032_;
+	wire _3033_;
+	wire _3034_;
+	wire _3035_;
+	wire _3036_;
+	wire _3037_;
+	wire _3038_;
+	wire _3039_;
+	wire _3040_;
+	wire _3041_;
+	wire _3042_;
+	wire _3043_;
+	wire _3044_;
+	wire _3045_;
+	wire _3046_;
+	wire _3047_;
+	wire _3048_;
+	wire _3049_;
+	wire _3050_;
+	wire _3051_;
+	wire _3052_;
+	wire _3053_;
+	wire _3054_;
+	wire _3055_;
+	wire _3056_;
+	wire _3057_;
+	wire _3058_;
+	wire _3059_;
+	wire _3060_;
+	wire _3061_;
+	wire _3062_;
+	wire _3063_;
+	wire _3064_;
+	wire _3065_;
+	wire _3066_;
+	wire _3067_;
+	wire _3068_;
+	wire _3069_;
+	wire _3070_;
+	wire _3071_;
+	wire _3072_;
+	wire _3073_;
+	wire _3074_;
+	wire _3075_;
+	wire _3076_;
+	wire _3077_;
+	wire _3078_;
+	wire _3079_;
+	wire _3080_;
+	wire _3081_;
+	wire _3082_;
+	wire _3083_;
+	wire _3084_;
+	wire _3085_;
+	wire _3086_;
+	wire _3087_;
+	wire _3088_;
+	wire _3089_;
+	wire _3090_;
+	wire _3091_;
+	wire _3092_;
+	wire _3093_;
+	wire _3094_;
+	wire _3095_;
+	wire _3096_;
+	wire _3097_;
+	wire _3098_;
+	wire _3099_;
+	wire _3100_;
+	wire _3101_;
+	wire _3102_;
+	wire _3103_;
+	wire _3104_;
+	wire _3105_;
+	wire _3106_;
+	wire _3107_;
+	wire _3108_;
+	wire _3109_;
+	wire _3110_;
+	wire _3111_;
+	wire _3112_;
+	wire _3113_;
+	wire _3114_;
+	wire _3115_;
+	wire _3116_;
+	wire _3117_;
+	wire _3118_;
+	wire _3119_;
+	wire _3120_;
+	wire _3121_;
+	wire _3122_;
+	wire _3123_;
+	wire _3124_;
+	wire _3125_;
+	wire _3126_;
+	wire _3127_;
+	wire _3128_;
+	wire _3129_;
+	wire _3130_;
+	wire _3131_;
+	wire _3132_;
+	wire _3133_;
+	wire _3134_;
+	wire _3135_;
+	wire _3136_;
+	wire _3137_;
+	wire _3138_;
+	wire _3139_;
+	wire _3140_;
+	wire _3141_;
+	wire _3142_;
+	wire _3143_;
+	wire _3144_;
+	wire _3145_;
+	wire _3146_;
+	wire _3147_;
+	wire _3148_;
+	wire _3149_;
+	wire _3150_;
+	wire _3151_;
+	wire _3152_;
+	wire _3153_;
+	wire _3154_;
+	wire _3155_;
+	wire _3156_;
+	wire _3157_;
+	wire _3158_;
+	wire _3159_;
+	wire _3160_;
+	wire _3161_;
+	wire _3162_;
+	wire _3163_;
+	wire _3164_;
+	wire _3165_;
+	wire _3166_;
+	wire _3167_;
+	wire _3168_;
+	wire _3169_;
+	wire _3170_;
+	wire _3171_;
+	wire _3172_;
+	wire _3173_;
+	wire _3174_;
+	wire _3175_;
+	wire _3176_;
+	wire _3177_;
+	wire _3178_;
+	wire _3179_;
+	wire _3180_;
+	wire _3181_;
+	wire _3182_;
+	wire _3183_;
+	wire _3184_;
+	wire _3185_;
+	wire _3186_;
+	wire _3187_;
+	wire _3188_;
+	wire _3189_;
+	wire _3190_;
+	wire _3191_;
+	wire _3192_;
+	wire _3193_;
+	wire _3194_;
+	wire _3195_;
+	wire _3196_;
+	wire _3197_;
+	wire _3198_;
+	wire _3199_;
+	wire _3200_;
+	wire _3201_;
+	wire _3202_;
+	wire _3203_;
+	wire _3204_;
+	wire _3205_;
+	wire _3206_;
+	wire _3207_;
+	wire _3208_;
+	wire _3209_;
+	wire _3210_;
+	wire _3211_;
+	wire _3212_;
+	wire _3213_;
+	wire _3214_;
+	wire _3215_;
+	wire _3216_;
+	wire _3217_;
+	wire _3218_;
+	wire _3219_;
+	wire _3220_;
+	wire _3221_;
+	wire _3222_;
+	wire _3223_;
+	wire _3224_;
+	wire _3225_;
+	wire _3226_;
+	wire _3227_;
+	wire _3228_;
+	wire _3229_;
+	wire _3230_;
+	wire _3231_;
+	wire _3232_;
+	wire _3233_;
+	wire _3234_;
+	wire _3235_;
+	wire _3236_;
+	wire _3237_;
+	wire _3238_;
+	wire _3239_;
+	wire _3240_;
+	wire _3241_;
+	wire _3242_;
+	wire _3243_;
+	wire _3244_;
+	wire _3245_;
+	wire _3246_;
+	wire _3247_;
+	wire _3248_;
+	wire _3249_;
+	wire _3250_;
+	wire _3251_;
+	wire _3252_;
+	wire _3253_;
+	wire _3254_;
+	wire _3255_;
+	wire _3256_;
+	wire _3257_;
+	wire _3258_;
+	wire _3259_;
+	wire _3260_;
+	wire _3261_;
+	wire _3262_;
+	wire _3263_;
+	wire _3264_;
+	wire _3265_;
+	wire _3266_;
+	wire _3267_;
+	wire _3268_;
+	wire _3269_;
+	wire _3270_;
+	wire _3271_;
+	wire _3272_;
+	wire _3273_;
+	wire _3274_;
+	wire _3275_;
+	wire _3276_;
+	wire _3277_;
+	wire _3278_;
+	wire _3279_;
+	wire _3280_;
+	wire _3281_;
+	wire _3282_;
+	wire _3283_;
+	wire _3284_;
+	wire _3285_;
+	wire _3286_;
+	wire _3287_;
+	wire _3288_;
+	wire _3289_;
+	wire _3290_;
+	wire _3291_;
+	wire _3292_;
+	wire _3293_;
+	wire _3294_;
+	wire _3295_;
+	wire _3296_;
+	wire _3297_;
+	wire _3298_;
+	wire _3299_;
+	wire _3300_;
+	wire _3301_;
+	wire _3302_;
+	wire _3303_;
+	wire _3304_;
+	wire _3305_;
+	wire _3306_;
+	wire _3307_;
+	wire _3308_;
+	wire _3309_;
+	wire _3310_;
+	wire _3311_;
+	wire _3312_;
+	wire _3313_;
+	wire _3314_;
+	wire _3315_;
+	wire _3316_;
+	wire _3317_;
+	wire _3318_;
+	wire _3319_;
+	wire _3320_;
+	wire _3321_;
+	wire _3322_;
+	wire _3323_;
+	wire _3324_;
+	wire _3325_;
+	wire _3326_;
+	wire _3327_;
+	wire _3328_;
+	wire _3329_;
+	wire _3330_;
+	wire _3331_;
+	wire _3332_;
+	wire _3333_;
+	wire _3334_;
+	wire _3335_;
+	wire _3336_;
+	wire _3337_;
+	wire _3338_;
+	wire _3339_;
+	wire _3340_;
+	wire _3341_;
+	wire _3342_;
+	wire _3343_;
+	wire _3344_;
+	wire _3345_;
+	wire _3346_;
+	wire _3347_;
+	wire _3348_;
+	wire _3349_;
+	wire _3350_;
+	wire _3351_;
+	wire _3352_;
+	wire _3353_;
+	wire _3354_;
+	wire _3355_;
+	wire _3356_;
+	wire _3357_;
+	wire _3358_;
+	wire _3359_;
+	wire _3360_;
+	wire _3361_;
+	wire _3362_;
+	wire _3363_;
+	wire _3364_;
+	wire _3365_;
+	wire _3366_;
+	wire _3367_;
+	wire _3368_;
+	wire _3369_;
+	wire _3370_;
+	wire _3371_;
+	wire _3372_;
+	wire _3373_;
+	wire _3374_;
+	wire _3375_;
+	wire _3376_;
+	wire _3377_;
+	wire _3378_;
+	wire _3379_;
+	wire _3380_;
+	wire _3381_;
+	wire _3382_;
+	wire _3383_;
+	wire _3384_;
+	wire _3385_;
+	wire _3386_;
+	wire _3387_;
+	wire _3388_;
+	wire _3389_;
+	wire _3390_;
+	wire _3391_;
+	wire _3392_;
+	wire _3393_;
+	wire _3394_;
+	wire _3395_;
+	wire _3396_;
+	wire _3397_;
+	wire _3398_;
+	wire _3399_;
+	wire _3400_;
+	wire _3401_;
+	wire _3402_;
+	wire _3403_;
+	wire _3404_;
+	wire _3405_;
+	wire _3406_;
+	wire _3407_;
+	wire _3408_;
+	wire _3409_;
+	wire _3410_;
+	wire _3411_;
+	wire _3412_;
+	wire _3413_;
+	wire _3414_;
+	wire _3415_;
+	wire _3416_;
+	wire _3417_;
+	wire _3418_;
+	wire _3419_;
+	wire _3420_;
+	wire _3421_;
+	wire _3422_;
+	wire _3423_;
+	wire _3424_;
+	wire _3425_;
+	wire _3426_;
+	wire _3427_;
+	wire _3428_;
+	wire _3429_;
+	wire _3430_;
+	wire _3431_;
+	wire _3432_;
+	wire _3433_;
+	wire _3434_;
+	wire _3435_;
+	wire _3436_;
+	wire _3437_;
+	wire _3438_;
+	wire _3439_;
+	wire _3440_;
+	wire _3441_;
+	wire _3442_;
+	wire _3443_;
+	wire _3444_;
+	wire _3445_;
+	wire _3446_;
+	wire _3447_;
+	wire _3448_;
+	wire _3449_;
+	wire _3450_;
+	wire _3451_;
+	wire _3452_;
+	wire _3453_;
+	wire _3454_;
+	wire _3455_;
+	wire _3456_;
+	wire _3457_;
+	wire _3458_;
+	wire _3459_;
+	wire _3460_;
+	wire _3461_;
+	wire _3462_;
+	wire _3463_;
+	wire _3464_;
+	wire _3465_;
+	wire _3466_;
+	wire _3467_;
+	wire _3468_;
+	wire _3469_;
+	wire _3470_;
+	wire _3471_;
+	wire _3472_;
+	wire _3473_;
+	wire _3474_;
+	wire _3475_;
+	wire _3476_;
+	wire _3477_;
+	wire _3478_;
+	wire _3479_;
+	wire _3480_;
+	wire _3481_;
+	wire _3482_;
+	wire _3483_;
+	wire _3484_;
+	wire _3485_;
+	wire _3486_;
+	wire _3487_;
+	wire _3488_;
+	wire _3489_;
+	wire _3490_;
+	wire _3491_;
+	wire _3492_;
+	wire _3493_;
+	wire _3494_;
+	wire _3495_;
+	wire _3496_;
+	wire _3497_;
+	wire _3498_;
+	wire _3499_;
+	wire _3500_;
+	wire _3501_;
+	wire _3502_;
+	wire _3503_;
+	wire _3504_;
+	wire _3505_;
+	wire _3506_;
+	wire _3507_;
+	wire _3508_;
+	wire _3509_;
+	wire _3510_;
+	wire _3511_;
+	wire _3512_;
+	wire _3513_;
+	wire _3514_;
+	wire _3515_;
+	wire _3516_;
+	wire _3517_;
+	wire _3518_;
+	wire _3519_;
+	wire _3520_;
+	wire _3521_;
+	wire _3522_;
+	wire _3523_;
+	wire _3524_;
+	wire _3525_;
+	wire _3526_;
+	wire _3527_;
+	wire _3528_;
+	wire _3529_;
+	wire _3530_;
+	wire _3531_;
+	wire _3532_;
+	wire _3533_;
+	wire _3534_;
+	wire _3535_;
+	wire _3536_;
+	wire _3537_;
+	wire _3538_;
+	wire _3539_;
+	wire _3540_;
+	wire _3541_;
+	wire _3542_;
+	wire _3543_;
+	wire _3544_;
+	wire _3545_;
+	wire _3546_;
+	wire _3547_;
+	wire _3548_;
+	wire _3549_;
+	wire _3550_;
+	wire _3551_;
+	wire _3552_;
+	wire _3553_;
+	wire _3554_;
+	wire _3555_;
+	wire _3556_;
+	wire _3557_;
+	wire _3558_;
+	wire _3559_;
+	wire _3560_;
+	wire _3561_;
+	wire _3562_;
+	wire _3563_;
+	wire _3564_;
+	wire _3565_;
+	wire _3566_;
+	wire _3567_;
+	wire _3568_;
+	wire _3569_;
+	wire _3570_;
+	wire _3571_;
+	wire _3572_;
+	wire _3573_;
+	wire _3574_;
+	wire _3575_;
+	wire _3576_;
+	wire _3577_;
+	wire _3578_;
+	wire _3579_;
+	wire _3580_;
+	wire _3581_;
+	wire _3582_;
+	wire _3583_;
+	wire _3584_;
+	wire _3585_;
+	wire _3586_;
+	wire _3587_;
+	wire _3588_;
+	wire _3589_;
+	wire _3590_;
+	wire _3591_;
+	wire _3592_;
+	wire _3593_;
+	wire _3594_;
+	wire _3595_;
+	wire _3596_;
+	wire _3597_;
+	wire _3598_;
+	wire _3599_;
+	wire _3600_;
+	wire _3601_;
+	wire _3602_;
+	wire _3603_;
+	wire _3604_;
+	wire _3605_;
+	wire _3606_;
+	wire _3607_;
+	wire _3608_;
+	wire _3609_;
+	wire _3610_;
+	wire _3611_;
+	wire _3612_;
+	wire _3613_;
+	wire _3614_;
+	wire _3615_;
+	wire _3616_;
+	wire _3617_;
+	wire _3618_;
+	wire _3619_;
+	wire _3620_;
+	wire _3621_;
+	wire _3622_;
+	wire _3623_;
+	wire _3624_;
+	wire _3625_;
+	wire _3626_;
+	wire _3627_;
+	wire _3628_;
+	wire _3629_;
+	wire _3630_;
+	wire _3631_;
+	wire _3632_;
+	wire _3633_;
+	wire _3634_;
+	wire _3635_;
+	wire _3636_;
+	wire _3637_;
+	wire _3638_;
+	wire _3639_;
+	wire _3640_;
+	wire _3641_;
+	wire _3642_;
+	wire _3643_;
+	wire _3644_;
+	wire _3645_;
+	wire _3646_;
+	wire _3647_;
+	wire _3648_;
+	wire _3649_;
+	wire _3650_;
+	wire _3651_;
+	wire _3652_;
+	wire _3653_;
+	wire _3654_;
+	wire _3655_;
+	wire _3656_;
+	wire _3657_;
+	wire _3658_;
+	wire _3659_;
+	wire _3660_;
+	wire _3661_;
+	wire _3662_;
+	wire _3663_;
+	wire _3664_;
+	wire _3665_;
+	wire _3666_;
+	wire _3667_;
+	wire _3668_;
+	wire _3669_;
+	wire _3670_;
+	wire _3671_;
+	wire _3672_;
+	wire _3673_;
+	wire _3674_;
+	wire _3675_;
+	wire _3676_;
+	wire _3677_;
+	wire _3678_;
+	wire _3679_;
+	wire _3680_;
+	wire _3681_;
+	wire _3682_;
+	wire _3683_;
+	wire _3684_;
+	wire _3685_;
+	wire _3686_;
+	wire _3687_;
+	wire _3688_;
+	wire _3689_;
+	wire _3690_;
+	wire _3691_;
+	wire _3692_;
+	wire _3693_;
+	wire _3694_;
+	wire _3695_;
+	wire _3696_;
+	wire _3697_;
+	wire _3698_;
+	wire _3699_;
+	wire _3700_;
+	wire _3701_;
+	wire _3702_;
+	wire _3703_;
+	wire _3704_;
+	wire _3705_;
+	wire _3706_;
+	wire _3707_;
+	wire _3708_;
+	wire _3709_;
+	wire _3710_;
+	wire _3711_;
+	wire _3712_;
+	wire _3713_;
+	wire _3714_;
+	wire _3715_;
+	wire _3716_;
+	wire _3717_;
+	wire _3718_;
+	wire _3719_;
+	wire _3720_;
+	wire _3721_;
+	wire _3722_;
+	wire _3723_;
+	wire _3724_;
+	wire _3725_;
+	wire _3726_;
+	wire _3727_;
+	wire _3728_;
+	wire _3729_;
+	wire _3730_;
+	wire _3731_;
+	wire _3732_;
+	wire _3733_;
+	wire _3734_;
+	wire _3735_;
+	wire _3736_;
+	wire _3737_;
+	wire _3738_;
+	wire _3739_;
+	wire _3740_;
+	wire _3741_;
+	wire _3742_;
+	wire _3743_;
+	wire _3744_;
+	wire _3745_;
+	wire _3746_;
+	wire _3747_;
+	wire _3748_;
+	wire _3749_;
+	wire _3750_;
+	wire _3751_;
+	wire _3752_;
+	wire _3753_;
+	wire _3754_;
+	wire _3755_;
+	wire _3756_;
+	wire _3757_;
+	wire _3758_;
+	wire _3759_;
+	wire _3760_;
+	wire _3761_;
+	wire _3762_;
+	wire _3763_;
+	wire _3764_;
+	wire _3765_;
+	wire _3766_;
+	wire _3767_;
+	wire _3768_;
+	wire _3769_;
+	wire _3770_;
+	wire _3771_;
+	wire _3772_;
+	wire _3773_;
+	wire _3774_;
+	wire _3775_;
+	wire _3776_;
+	wire _3777_;
+	wire _3778_;
+	wire _3779_;
+	wire _3780_;
+	wire _3781_;
+	wire _3782_;
+	wire _3783_;
+	wire _3784_;
+	wire _3785_;
+	wire _3786_;
+	wire _3787_;
+	wire _3788_;
+	wire _3789_;
+	wire _3790_;
+	wire _3791_;
+	wire _3792_;
+	wire _3793_;
+	wire _3794_;
+	wire _3795_;
+	wire _3796_;
+	wire _3797_;
+	wire _3798_;
+	wire _3799_;
+	wire _3800_;
+	wire _3801_;
+	wire _3802_;
+	wire _3803_;
+	wire _3804_;
+	wire _3805_;
+	wire _3806_;
+	wire _3807_;
+	wire _3808_;
+	wire _3809_;
+	wire _3810_;
+	wire _3811_;
+	wire _3812_;
+	wire _3813_;
+	wire _3814_;
+	wire _3815_;
+	wire _3816_;
+	wire _3817_;
+	wire _3818_;
+	wire _3819_;
+	wire _3820_;
+	wire _3821_;
+	wire _3822_;
+	wire _3823_;
+	wire _3824_;
+	wire _3825_;
+	wire _3826_;
+	wire _3827_;
+	wire _3828_;
+	wire _3829_;
+	wire _3830_;
+	wire _3831_;
+	wire _3832_;
+	wire _3833_;
+	wire _3834_;
+	wire _3835_;
+	wire _3836_;
+	wire _3837_;
+	wire _3838_;
+	wire _3839_;
+	wire _3840_;
+	wire _3841_;
+	wire _3842_;
+	wire _3843_;
+	wire _3844_;
+	wire _3845_;
+	wire _3846_;
+	wire _3847_;
+	wire _3848_;
+	wire _3849_;
+	wire _3850_;
+	wire _3851_;
+	wire _3852_;
+	wire _3853_;
+	wire _3854_;
+	wire _3855_;
+	wire _3856_;
+	wire _3857_;
+	wire _3858_;
+	wire _3859_;
+	wire _3860_;
+	wire _3861_;
+	wire _3862_;
+	wire _3863_;
+	wire _3864_;
+	wire _3865_;
+	wire _3866_;
+	wire _3867_;
+	wire _3868_;
+	wire _3869_;
+	wire _3870_;
+	wire _3871_;
+	wire _3872_;
+	wire _3873_;
+	wire _3874_;
+	wire _3875_;
+	wire _3876_;
+	wire _3877_;
+	wire _3878_;
+	wire _3879_;
+	wire _3880_;
+	wire _3881_;
+	wire _3882_;
+	wire _3883_;
+	wire _3884_;
+	wire _3885_;
+	wire _3886_;
+	wire _3887_;
+	wire _3888_;
+	wire _3889_;
+	wire _3890_;
+	wire _3891_;
+	wire _3892_;
+	wire _3893_;
+	wire _3894_;
+	wire _3895_;
+	wire _3896_;
+	wire _3897_;
+	wire _3898_;
+	wire _3899_;
+	wire _3900_;
+	wire _3901_;
+	wire _3902_;
+	wire _3903_;
+	wire _3904_;
+	wire _3905_;
+	wire _3906_;
+	wire _3907_;
+	wire _3908_;
+	wire _3909_;
+	wire _3910_;
+	wire _3911_;
+	wire _3912_;
+	wire _3913_;
+	wire _3914_;
+	wire _3915_;
+	wire _3916_;
+	wire _3917_;
+	wire _3918_;
+	wire _3919_;
+	wire _3920_;
+	wire _3921_;
+	wire _3922_;
+	wire _3923_;
+	wire _3924_;
+	wire _3925_;
+	wire _3926_;
+	wire _3927_;
+	wire _3928_;
+	wire _3929_;
+	wire _3930_;
+	wire _3931_;
+	wire _3932_;
+	wire _3933_;
+	wire _3934_;
+	wire _3935_;
+	wire _3936_;
+	wire _3937_;
+	wire _3938_;
+	wire _3939_;
+	wire _3940_;
+	wire _3941_;
+	wire _3942_;
+	wire _3943_;
+	wire _3944_;
+	wire _3945_;
+	wire _3946_;
+	wire _3947_;
+	wire _3948_;
+	wire _3949_;
+	wire _3950_;
+	wire _3951_;
+	wire _3952_;
+	wire _3953_;
+	wire _3954_;
+	wire _3955_;
+	wire _3956_;
+	wire _3957_;
+	wire _3958_;
+	wire _3959_;
+	wire _3960_;
+	wire _3961_;
+	wire _3962_;
+	wire _3963_;
+	wire _3964_;
+	wire _3965_;
+	wire _3966_;
+	wire _3967_;
+	wire _3968_;
+	wire _3969_;
+	wire _3970_;
+	wire _3971_;
+	wire _3972_;
+	wire _3973_;
+	wire _3974_;
+	wire _3975_;
+	wire _3976_;
+	wire _3977_;
+	wire _3978_;
+	wire _3979_;
+	wire _3980_;
+	wire _3981_;
+	wire _3982_;
+	wire _3983_;
+	wire _3984_;
+	wire _3985_;
+	wire _3986_;
+	wire _3987_;
+	wire _3988_;
+	wire _3989_;
+	wire _3990_;
+	wire _3991_;
+	wire _3992_;
+	wire _3993_;
+	wire _3994_;
+	wire _3995_;
+	wire _3996_;
+	wire _3997_;
+	wire _3998_;
+	wire _3999_;
+	wire _4000_;
+	wire _4001_;
+	wire _4002_;
+	wire _4003_;
+	wire _4004_;
+	wire _4005_;
+	wire _4006_;
+	wire _4007_;
+	wire _4008_;
+	wire _4009_;
+	wire _4010_;
+	wire _4011_;
+	wire _4012_;
+	wire _4013_;
+	wire _4014_;
+	wire _4015_;
+	wire _4016_;
+	wire _4017_;
+	wire _4018_;
+	wire _4019_;
+	wire _4020_;
+	wire _4021_;
+	wire _4022_;
+	wire _4023_;
+	wire _4024_;
+	wire _4025_;
+	wire _4026_;
+	wire _4027_;
+	wire _4028_;
+	wire _4029_;
+	wire _4030_;
+	wire _4031_;
+	wire _4032_;
+	wire _4033_;
+	wire _4034_;
+	wire _4035_;
+	wire _4036_;
+	wire _4037_;
+	wire _4038_;
+	wire _4039_;
+	wire _4040_;
+	wire _4041_;
+	wire _4042_;
+	wire _4043_;
+	wire _4044_;
+	wire _4045_;
+	wire _4046_;
+	wire _4047_;
+	wire _4048_;
+	wire _4049_;
+	wire _4050_;
+	wire _4051_;
+	wire _4052_;
+	wire _4053_;
+	wire _4054_;
+	wire _4055_;
+	wire _4056_;
+	wire _4057_;
+	wire _4058_;
+	wire _4059_;
+	wire _4060_;
+	wire _4061_;
+	wire _4062_;
+	wire _4063_;
+	wire _4064_;
+	wire _4065_;
+	wire _4066_;
+	wire _4067_;
+	wire _4068_;
+	wire _4069_;
+	wire _4070_;
+	wire _4071_;
+	wire _4072_;
+	wire _4073_;
+	wire _4074_;
+	wire _4075_;
+	wire _4076_;
+	wire _4077_;
+	wire _4078_;
+	wire _4079_;
+	wire _4080_;
+	wire _4081_;
+	wire _4082_;
+	wire _4083_;
+	wire _4084_;
+	wire _4085_;
+	wire _4086_;
+	wire _4087_;
+	wire _4088_;
+	wire _4089_;
+	wire _4090_;
+	wire _4091_;
+	wire _4092_;
+	wire _4093_;
+	wire _4094_;
+	wire _4095_;
+	wire _4096_;
+	wire _4097_;
+	wire _4098_;
+	wire _4099_;
+	wire _4100_;
+	wire _4101_;
+	wire _4102_;
+	wire _4103_;
+	wire _4104_;
+	wire _4105_;
+	wire _4106_;
+	wire _4107_;
+	wire _4108_;
+	wire _4109_;
+	wire _4110_;
+	wire _4111_;
+	wire _4112_;
+	wire _4113_;
+	wire _4114_;
+	wire _4115_;
+	wire _4116_;
+	wire _4117_;
+	wire _4118_;
+	wire _4119_;
+	wire _4120_;
+	wire _4121_;
+	wire _4122_;
+	wire _4123_;
+	wire _4124_;
+	wire _4125_;
+	wire _4126_;
+	wire _4127_;
+	wire _4128_;
+	wire _4129_;
+	wire _4130_;
+	wire _4131_;
+	wire _4132_;
+	wire _4133_;
+	wire _4134_;
+	wire _4135_;
+	wire _4136_;
+	wire _4137_;
+	wire _4138_;
+	wire _4139_;
+	wire _4140_;
+	wire _4141_;
+	wire _4142_;
+	wire _4143_;
+	wire _4144_;
+	wire _4145_;
+	wire _4146_;
+	wire _4147_;
+	wire _4148_;
+	wire _4149_;
+	wire _4150_;
+	wire _4151_;
+	wire _4152_;
+	wire _4153_;
+	wire _4154_;
+	wire _4155_;
+	wire _4156_;
+	wire _4157_;
+	wire _4158_;
+	wire _4159_;
+	wire _4160_;
+	wire _4161_;
+	wire _4162_;
+	wire _4163_;
+	wire _4164_;
+	wire _4165_;
+	wire _4166_;
+	wire _4167_;
+	wire _4168_;
+	wire _4169_;
+	wire _4170_;
+	wire _4171_;
+	wire _4172_;
+	wire _4173_;
+	wire _4174_;
+	wire _4175_;
+	wire _4176_;
+	wire _4177_;
+	wire _4178_;
+	wire _4179_;
+	wire _4180_;
+	wire _4181_;
+	wire _4182_;
+	wire _4183_;
+	wire _4184_;
+	wire _4185_;
+	wire _4186_;
+	wire _4187_;
+	wire _4188_;
+	wire _4189_;
+	wire _4190_;
+	wire _4191_;
+	wire _4192_;
+	wire _4193_;
+	wire _4194_;
+	wire _4195_;
+	wire _4196_;
+	wire _4197_;
+	wire _4198_;
+	wire _4199_;
+	wire _4200_;
+	wire _4201_;
+	wire _4202_;
+	wire _4203_;
+	wire _4204_;
+	wire _4205_;
+	wire _4206_;
+	wire _4207_;
+	wire _4208_;
+	wire _4209_;
+	wire _4210_;
+	wire _4211_;
+	wire _4212_;
+	wire _4213_;
+	wire _4214_;
+	wire _4215_;
+	wire _4216_;
+	wire _4217_;
+	wire _4218_;
+	wire _4219_;
+	wire _4220_;
+	wire _4221_;
+	wire _4222_;
+	wire _4223_;
+	wire _4224_;
+	wire _4225_;
+	wire _4226_;
+	wire _4227_;
+	wire _4228_;
+	wire _4229_;
+	wire _4230_;
+	wire _4231_;
+	wire _4232_;
+	wire _4233_;
+	wire _4234_;
+	wire _4235_;
+	wire _4236_;
+	wire _4237_;
+	wire _4238_;
+	wire _4239_;
+	wire _4240_;
+	wire _4241_;
+	wire _4242_;
+	wire _4243_;
+	wire _4244_;
+	wire _4245_;
+	wire _4246_;
+	wire _4247_;
+	wire _4248_;
+	wire _4249_;
+	wire _4250_;
+	wire _4251_;
+	wire _4252_;
+	wire _4253_;
+	wire _4254_;
+	wire _4255_;
+	wire _4256_;
+	wire _4257_;
+	wire _4258_;
+	wire _4259_;
+	wire _4260_;
+	wire _4261_;
+	wire _4262_;
+	wire _4263_;
+	wire _4264_;
+	wire _4265_;
+	wire _4266_;
+	wire _4267_;
+	wire _4268_;
+	wire _4269_;
+	wire _4270_;
+	wire _4271_;
+	wire _4272_;
+	wire _4273_;
+	wire _4274_;
+	wire _4275_;
+	wire _4276_;
+	wire _4277_;
+	wire _4278_;
+	wire _4279_;
+	wire _4280_;
+	wire _4281_;
+	wire _4282_;
+	wire _4283_;
+	wire _4284_;
+	wire _4285_;
+	wire _4286_;
+	wire _4287_;
+	wire _4288_;
+	wire _4289_;
+	wire _4290_;
+	wire _4291_;
+	wire _4292_;
+	wire _4293_;
+	wire _4294_;
+	wire _4295_;
+	wire _4296_;
+	wire _4297_;
+	wire _4298_;
+	wire _4299_;
+	wire _4300_;
+	wire _4301_;
+	wire _4302_;
+	wire _4303_;
+	wire _4304_;
+	wire _4305_;
+	wire _4306_;
+	wire _4307_;
+	wire _4308_;
+	wire _4309_;
+	wire _4310_;
+	wire _4311_;
+	wire _4312_;
+	wire _4313_;
+	wire _4314_;
+	wire _4315_;
+	wire _4316_;
+	wire _4317_;
+	wire _4318_;
+	wire _4319_;
+	wire _4320_;
+	wire _4321_;
+	wire _4322_;
+	wire _4323_;
+	wire _4324_;
+	wire _4325_;
+	wire _4326_;
+	wire _4327_;
+	wire _4328_;
+	wire _4329_;
+	wire _4330_;
+	wire _4331_;
+	wire _4332_;
+	wire _4333_;
+	wire _4334_;
+	wire _4335_;
+	wire _4336_;
+	wire _4337_;
+	wire _4338_;
+	wire _4339_;
+	wire _4340_;
+	wire _4341_;
+	wire _4342_;
+	wire _4343_;
+	wire _4344_;
+	wire _4345_;
+	wire _4346_;
+	wire _4347_;
+	wire _4348_;
+	wire _4349_;
+	wire _4350_;
+	wire _4351_;
+	wire _4352_;
+	wire _4353_;
+	wire _4354_;
+	wire _4355_;
+	wire _4356_;
+	wire _4357_;
+	wire _4358_;
+	wire _4359_;
+	wire _4360_;
+	wire _4361_;
+	wire _4362_;
+	wire _4363_;
+	wire _4364_;
+	wire _4365_;
+	wire _4366_;
+	wire _4367_;
+	wire _4368_;
+	wire _4369_;
+	wire _4370_;
+	wire _4371_;
+	wire _4372_;
+	wire _4373_;
+	wire _4374_;
+	wire _4375_;
+	wire _4376_;
+	wire _4377_;
+	wire _4378_;
+	wire _4379_;
+	wire _4380_;
+	wire _4381_;
+	wire _4382_;
+	wire _4383_;
+	wire _4384_;
+	wire _4385_;
+	wire _4386_;
+	wire _4387_;
+	wire _4388_;
+	wire _4389_;
+	wire _4390_;
+	wire _4391_;
+	wire _4392_;
+	wire _4393_;
+	wire _4394_;
+	wire _4395_;
+	wire _4396_;
+	wire _4397_;
+	wire _4398_;
+	wire _4399_;
+	wire _4400_;
+	wire _4401_;
+	wire _4402_;
+	wire _4403_;
+	wire _4404_;
+	wire _4405_;
+	wire _4406_;
+	wire _4407_;
+	wire _4408_;
+	wire _4409_;
+	wire _4410_;
+	wire _4411_;
+	wire _4412_;
+	wire _4413_;
+	wire _4414_;
+	wire _4415_;
+	wire _4416_;
+	wire _4417_;
+	wire _4418_;
+	wire _4419_;
+	wire _4420_;
+	wire _4421_;
+	wire _4422_;
+	wire _4423_;
+	wire _4424_;
+	wire _4425_;
+	wire _4426_;
+	wire _4427_;
+	wire _4428_;
+	wire _4429_;
+	wire _4430_;
+	wire _4431_;
+	wire _4432_;
+	wire _4433_;
+	wire _4434_;
+	wire _4435_;
+	wire _4436_;
+	wire _4437_;
+	wire _4438_;
+	wire _4439_;
+	wire _4440_;
+	wire _4441_;
+	wire _4442_;
+	wire _4443_;
+	wire _4444_;
+	wire _4445_;
+	wire _4446_;
 	input wire [13:0] io_in;
 	output wire [13:0] io_out;
 	wire \mchip.clock ;
-	wire \mchip.design.clock ;
-	wire [3:0] \mchip.design.data_ENDP ;
-	wire [3:0] \mchip.design.data_in ;
-	wire [3:0] \mchip.design.data_indx ;
-	wire [3:0] \mchip.design.data_out ;
-	wire \mchip.design.data_received ;
-	wire [63:0] \mchip.design.final_data ;
-	wire \mchip.design.finished ;
-	wire [63:0] \mchip.design.in_data ;
-	wire [7:0] \mchip.design.inter.Addr_reg ;
-	wire [7:0] \mchip.design.inter.ENDP_reg ;
-	wire \mchip.design.inter.clock ;
-	wire [3:0] \mchip.design.inter.count_next ;
-	wire [3:0] \mchip.design.inter.cur_state ;
-	wire [3:0] \mchip.design.inter.data_ENDP ;
-	wire [3:0] \mchip.design.inter.data_in ;
-	wire [3:0] \mchip.design.inter.data_indx ;
-	wire [3:0] \mchip.design.inter.data_out ;
-	wire [63:0] \mchip.design.inter.data_out_reg ;
-	wire \mchip.design.inter.data_received ;
-	wire [63:0] \mchip.design.inter.final_data ;
-	wire [63:0] \mchip.design.inter.memdata ;
-	wire [15:0] \mchip.design.inter.mempage ;
-	wire [15:0] \mchip.design.inter.mempage_reg ;
-	wire [3:0] \mchip.design.inter.mode ;
-	wire [31:0] \mchip.design.inter.msc_hb.in_reg ;
-	wire [3:0] \mchip.design.inter.next_state ;
-	wire [63:0] \mchip.design.inter.out_hb.in_reg ;
-	wire [6:0] \mchip.design.inter.send_Addr ;
-	wire [3:0] \mchip.design.io_fsm.PID_to_sender ;
-	wire \mchip.design.io_fsm.clock ;
-	wire \mchip.design.io_fsm.completed_transaction ;
-	wire [3:0] \mchip.design.io_fsm.cur_state ;
-	wire [3:0] \mchip.design.io_fsm.data_ENDP ;
-	wire [3:0] \mchip.design.io_fsm.error_counter_nxt ;
-	wire [63:0] \mchip.design.io_fsm.final_data ;
-	wire [3:0] \mchip.design.io_fsm.next_state ;
-	wire [3:0] \mchip.design.io_fsm.received_PID ;
-	wire [63:0] \mchip.design.io_fsm.received_data ;
-	wire [3:0] \mchip.design.io_fsm.timeout_counter_nxt ;
-	wire [8:0] \mchip.design.io_fsm.timer_nxt ;
-	wire [15:0] \mchip.design.memory_address ;
-	wire [63:0] \mchip.design.memory_data ;
-	wire [3:0] \mchip.design.mode ;
-	wire \mchip.design.read ;
-	wire [3:0] \mchip.design.received_PID ;
-	wire [63:0] \mchip.design.received_payload ;
-	wire [3:0] \mchip.design.receiver.PID ;
-	wire [63:0] \mchip.design.receiver.Payload ;
-	wire \mchip.design.receiver.bit_unstuff.bit_out ;
-	wire \mchip.design.receiver.bit_unstuff.clock ;
-	wire \mchip.design.receiver.clock ;
-	wire \mchip.design.receiver.crc.bit_in ;
-	wire \mchip.design.receiver.crc.clock ;
-	wire \mchip.design.receiver.crc.crc16.bit_in ;
-	wire \mchip.design.receiver.crc.crc16.clock ;
-	wire \mchip.design.receiver.crc.crc5.bit_in ;
-	wire \mchip.design.receiver.crc.crc5.clock ;
-	wire [6:0] \mchip.design.receiver.crc.index ;
-	wire [31:0] \mchip.design.receiver.crc.sv2v_autoblock_1.i ;
-	wire [31:0] \mchip.design.receiver.crc.sv2v_autoblock_2.j ;
-	wire \mchip.design.receiver.find_sync.bit_in ;
-	wire \mchip.design.receiver.find_sync.clock ;
-	wire [7:0] \mchip.design.receiver.find_sync.log ;
-	wire [3:0] \mchip.design.receiver.fsm.PID ;
-	wire \mchip.design.receiver.fsm.clock ;
-	wire [6:0] \mchip.design.receiver.fsm.count_next ;
-	wire [2:0] \mchip.design.receiver.fsm.next_state ;
-	wire \mchip.design.receiver.fsm.nrzi_en ;
-	wire \mchip.design.receiver.nrzi.bit_in ;
-	wire \mchip.design.receiver.nrzi.clock ;
-	wire \mchip.design.receiver.nrzi.cur_value_next ;
-	wire \mchip.design.receiver.nrzi.en ;
-	wire \mchip.design.receiver.nrzi_en ;
-	wire [63:0] \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
-	wire [7:0] \mchip.design.receiver.packet_decode.PID_accum ;
-	wire \mchip.design.receiver.packet_decode.bit_in ;
-	wire \mchip.design.receiver.packet_decode.clock ;
-	wire [63:0] \mchip.design.receiver.packet_decode.payload ;
-	wire [3:0] \mchip.design.receiver.packet_decode.pid ;
-	wire [3:0] \mchip.design.receiver.packet_decode.pid_inv ;
-	wire [3:0] \mchip.design.receiver.packet_decode.pid_to_fsm ;
-	wire [63:0] \mchip.design.receiver.payload ;
-	wire [3:0] \mchip.design.receiver.pid ;
-	wire [3:0] \mchip.design.receiver.pid_to_fsm ;
-	wire \mchip.design.receiver.stuff_out ;
-	wire \mchip.design.receiver.wire_in.bit_out ;
-	wire \mchip.design.receiver.wire_in.clock ;
-	wire \mchip.design.receiver.wire_in.dm ;
-	wire [2:0] \mchip.design.receiver.wire_in.dm_log ;
-	wire \mchip.design.receiver.wire_in.dp ;
-	wire [2:0] \mchip.design.receiver.wire_in.dp_log ;
-	wire [1:0] \mchip.design.receiver.wire_in.wires_in ;
-	wire \mchip.design.receiver.wire_out ;
-	wire [1:0] \mchip.design.receiver.wires_in ;
-	wire \mchip.design.rw_fsm.clock ;
-	wire [63:0] \mchip.design.rw_fsm.final_data ;
-	wire \mchip.design.rw_fsm.finished ;
-	wire [63:0] \mchip.design.rw_fsm.in_data ;
-	wire [63:0] \mchip.design.rw_fsm.memdata ;
-	wire [15:0] \mchip.design.rw_fsm.mempage ;
-	wire [2:0] \mchip.design.rw_fsm.next_state ;
-	wire [63:0] \mchip.design.rw_fsm.page_data ;
-	wire \mchip.design.rw_fsm.txn_done ;
-	wire [6:0] \mchip.design.send_Addr ;
-	wire [3:0] \mchip.design.send_PID ;
-	wire [1:0] \mchip.design.status ;
-	wire [6:0] \mchip.design.transmitter.Addr ;
-	wire [3:0] \mchip.design.transmitter.PID ;
-	wire \mchip.design.transmitter.bit_stuff.clock ;
-	wire \mchip.design.transmitter.clock ;
-	wire \mchip.design.transmitter.crc.clock ;
-	wire \mchip.design.transmitter.crc.crc16.clock ;
-	wire \mchip.design.transmitter.crc.crc5.clock ;
-	wire [31:0] \mchip.design.transmitter.crc.sv2v_autoblock_1.i ;
-	wire [31:0] \mchip.design.transmitter.crc.sv2v_autoblock_2.j ;
-	wire [6:0] \mchip.design.transmitter.encoder.Addr ;
-	wire [10:0] \mchip.design.transmitter.encoder.Addr_Endp_register ;
-	wire [6:0] \mchip.design.transmitter.encoder.Addr_lsb ;
-	wire [3:0] \mchip.design.transmitter.encoder.PID ;
-	wire [7:0] \mchip.design.transmitter.encoder.PID_full ;
-	wire [3:0] \mchip.design.transmitter.encoder.PID_lsb ;
-	wire [3:0] \mchip.design.transmitter.encoder.PID_lsb_inv ;
-	wire [7:0] \mchip.design.transmitter.encoder.SYNC ;
-	wire \mchip.design.transmitter.encoder.clock ;
-	wire [31:0] \mchip.design.transmitter.encoder.sv2v_autoblock_1.i ;
-	wire [31:0] \mchip.design.transmitter.encoder.sv2v_autoblock_2.j ;
-	wire [31:0] \mchip.design.transmitter.encoder.sv2v_autoblock_3.k ;
-	wire [3:0] \mchip.design.transmitter.fsm.PID ;
-	wire \mchip.design.transmitter.fsm.clock ;
-	wire [6:0] \mchip.design.transmitter.fsm.count_next ;
-	wire [2:0] \mchip.design.transmitter.fsm.next_state ;
-	wire \mchip.design.transmitter.nrzi.clock ;
-	wire \mchip.design.transmitter.out_wire.clock ;
-	wire [1:0] \mchip.design.transmitter.out_wire.wires_out ;
-	wire [1:0] \mchip.design.transmitter.wires_out ;
-	wire \mchip.design.txn_done ;
-	wire [1:0] \mchip.design.wires_in ;
-	wire [1:0] \mchip.design.wires_out ;
-	wire \mchip.design.write ;
+	wire [11:0] \mchip.io_in ;
+	wire [11:0] \mchip.io_out ;
+	wire [7:0] \mchip.pong.VGA_B ;
+	wire \mchip.pong.VGA_B0 ;
+	wire \mchip.pong.VGA_B1 ;
+	wire \mchip.pong.VGA_B2 ;
+	wire \mchip.pong.VGA_B3 ;
+	wire [7:0] \mchip.pong.VGA_G ;
+	wire \mchip.pong.VGA_G0 ;
+	wire \mchip.pong.VGA_G1 ;
+	wire \mchip.pong.VGA_G2 ;
+	wire \mchip.pong.VGA_G3 ;
+	wire \mchip.pong.VGA_HS ;
+	wire [7:0] \mchip.pong.VGA_R ;
+	wire \mchip.pong.VGA_R0 ;
+	wire \mchip.pong.VGA_R1 ;
+	wire \mchip.pong.VGA_R2 ;
+	wire \mchip.pong.VGA_R3 ;
+	wire \mchip.pong.VGA_VS ;
+	wire \mchip.pong.btn_rst ;
+	wire \mchip.pong.btn_serve ;
+	wire \mchip.pong.cfg1 ;
+	wire \mchip.pong.cfg1_o ;
+	wire \mchip.pong.cfg2 ;
+	wire \mchip.pong.cfg2_o ;
+	wire \mchip.pong.clk_25mhz ;
+	wire \mchip.pong.game.Cnewgame ;
+	wire [7:0] \mchip.pong.game.VGA_B ;
+	wire [7:0] \mchip.pong.game.VGA_G ;
+	wire \mchip.pong.game.VGA_HS ;
+	wire [7:0] \mchip.pong.game.VGA_R ;
+	wire \mchip.pong.game.VGA_VS ;
+	wire \mchip.pong.game.ball.Cnewgame ;
+	wire [9:0] \mchip.pong.game.ball.ballX ;
+	wire [8:0] \mchip.pong.game.ball.ballY ;
+	wire \mchip.pong.game.ball.clock ;
+	wire \mchip.pong.game.ball.cpath.Cnewgame ;
+	wire \mchip.pong.game.ball.cpath.clock ;
+	wire \mchip.pong.game.ball.cpath.reset ;
+	wire \mchip.pong.game.ball.cpath.serve_input ;
+	reg [8:0] \mchip.pong.game.ball.cpath.state ;
+	wire \mchip.pong.game.ball.dpath.Cnewgame ;
+	wire [9:0] \mchip.pong.game.ball.dpath.ballX ;
+	reg [8:0] \mchip.pong.game.ball.dpath.ballY ;
+	wire \mchip.pong.game.ball.dpath.clock ;
+	wire \mchip.pong.game.ball.dpath.en_pos_reg ;
+	wire [9:0] \mchip.pong.game.ball.dpath.nextX ;
+	wire [8:0] \mchip.pong.game.ball.dpath.nextY ;
+	wire [8:0] \mchip.pong.game.ball.dpath.paddleLY ;
+	wire [8:0] \mchip.pong.game.ball.dpath.paddleRY ;
+	wire [8:0] \mchip.pong.game.ball.paddleLY ;
+	wire [8:0] \mchip.pong.game.ball.paddleRY ;
+	wire \mchip.pong.game.ball.reset ;
+	wire \mchip.pong.game.ball.serve_input ;
+	wire [9:0] \mchip.pong.game.ballX ;
+	wire [8:0] \mchip.pong.game.ballY ;
+	wire \mchip.pong.game.cfg1 ;
+	wire \mchip.pong.game.cfg2 ;
+	wire \mchip.pong.game.clock ;
+	wire \mchip.pong.game.left_movedir ;
+	wire \mchip.pong.game.left_paddle.Cnewgame ;
+	wire \mchip.pong.game.left_paddle.clock ;
+	reg [8:0] \mchip.pong.game.left_paddle.coord ;
+	wire \mchip.pong.game.left_paddle.movedir_input ;
+	wire [8:0] \mchip.pong.game.left_paddle.next_coord ;
+	wire [8:0] \mchip.pong.game.paddleLY ;
+	wire [8:0] \mchip.pong.game.paddleRY ;
+	wire [23:0] \mchip.pong.game.renderer.ball.color ;
+	wire [23:0] \mchip.pong.game.renderer.ball1.color ;
+	wire [23:0] \mchip.pong.game.renderer.ball2.color ;
+	wire [9:0] \mchip.pong.game.renderer.ballX ;
+	wire [8:0] \mchip.pong.game.renderer.ballY ;
+	wire [23:0] \mchip.pong.game.renderer.ballrom_out ;
+	wire [23:0] \mchip.pong.game.renderer.ballrom_out0 ;
+	wire [23:0] \mchip.pong.game.renderer.ballrom_out1 ;
+	wire [23:0] \mchip.pong.game.renderer.ballrom_out2 ;
+	wire \mchip.pong.game.renderer.cfg1 ;
+	wire \mchip.pong.game.renderer.cfg2 ;
+	wire [8:0] \mchip.pong.game.renderer.paddleLY ;
+	wire [8:0] \mchip.pong.game.renderer.paddleRY ;
+	wire [7:0] \mchip.pong.game.renderer.vga_b ;
+	wire [9:0] \mchip.pong.game.renderer.vga_col ;
+	wire [7:0] \mchip.pong.game.renderer.vga_g ;
+	wire [7:0] \mchip.pong.game.renderer.vga_r ;
+	wire \mchip.pong.game.reset ;
+	wire \mchip.pong.game.right_movedir ;
+	wire \mchip.pong.game.right_paddle.Cnewgame ;
+	wire \mchip.pong.game.right_paddle.clock ;
+	reg [8:0] \mchip.pong.game.right_paddle.coord ;
+	wire \mchip.pong.game.right_paddle.movedir_input ;
+	wire [8:0] \mchip.pong.game.right_paddle.next_coord ;
+	wire \mchip.pong.game.score.Cnewgame ;
+	wire \mchip.pong.game.score.clock ;
+	wire [15:0] \mchip.pong.game.score.lscore_adder.B ;
+	wire [3:0] \mchip.pong.game.score.lscore_adder.add0.B ;
+	wire \mchip.pong.game.score.lscore_adder.add0.Cin ;
+	wire [3:0] \mchip.pong.game.score.lscore_adder.add1.B ;
+	wire [3:0] \mchip.pong.game.score.lscore_adder.add2.B ;
+	wire [3:0] \mchip.pong.game.score.lscore_adder.add3.B ;
+	wire [15:0] \mchip.pong.game.score.rscore_adder.B ;
+	wire [3:0] \mchip.pong.game.score.rscore_adder.add0.B ;
+	wire \mchip.pong.game.score.rscore_adder.add0.Cin ;
+	wire [3:0] \mchip.pong.game.score.rscore_adder.add1.B ;
+	wire [3:0] \mchip.pong.game.score.rscore_adder.add2.B ;
+	wire [3:0] \mchip.pong.game.score.rscore_adder.add3.B ;
+	wire \mchip.pong.game.serve_input ;
+	wire \mchip.pong.game.tick.clock ;
+	wire [9:0] \mchip.pong.game.tick.col ;
+	wire \mchip.pong.game.vga.HS ;
+	wire \mchip.pong.game.vga.VS ;
+	wire \mchip.pong.game.vga.clock ;
+	wire [9:0] \mchip.pong.game.vga.col ;
+	reg [9:0] \mchip.pong.game.vga.line_ind ;
+	reg \mchip.pong.game.vga.pclk_ctr ;
+	reg [9:0] \mchip.pong.game.vga.pix_ind ;
+	wire \mchip.pong.game.vga.reset ;
+	wire [9:0] \mchip.pong.game.vga_col ;
+	wire \mchip.pong.left_down ;
+	wire \mchip.pong.left_up ;
+	wire \mchip.pong.right_down ;
+	wire \mchip.pong.right_up ;
+	wire \mchip.pong.rst ;
+	wire \mchip.pong.serve ;
+	wire \mchip.pong.sync.i_clk ;
+	wire [7:0] \mchip.pong.sync.i_in ;
+	wire \mchip.pong.sync.i_rst ;
+	reg [7:0] \mchip.pong.sync.o_out  = 8'h00;
+	reg [7:0] \mchip.pong.sync.sync  = 8'h00;
+	wire \mchip.reset ;
+	assign \mchip.pong.game.left_paddle.next_coord [0] = ~\mchip.pong.game.left_paddle.coord [0];
+	assign _0589_ = \mchip.pong.game.left_paddle.coord [3] & \mchip.pong.sync.o_out [7];
+	assign _0600_ = \mchip.pong.game.left_paddle.coord [2] & ~\mchip.pong.sync.o_out [7];
+	assign _0611_ = \mchip.pong.game.left_paddle.coord [3] ^ \mchip.pong.sync.o_out [7];
+	assign _0622_ = _0611_ & _0600_;
+	assign _0633_ = _0622_ | _0589_;
+	assign _0644_ = ~(\mchip.pong.game.left_paddle.coord [2] ^ \mchip.pong.sync.o_out [7]);
+	assign _0655_ = _0644_ & _0611_;
+	assign _0666_ = ~(\mchip.pong.game.left_paddle.coord [1] & \mchip.pong.sync.o_out [7]);
+	assign _0677_ = \mchip.pong.game.left_paddle.coord [1] ^ \mchip.pong.sync.o_out [7];
+	assign _0688_ = _0677_ & ~\mchip.pong.game.left_paddle.next_coord [0];
+	assign _0699_ = _0666_ & ~_0688_;
+	assign _0710_ = _0655_ & ~_0699_;
+	assign _0721_ = _0710_ | _0633_;
+	assign _0732_ = \mchip.pong.game.left_paddle.coord [4] ^ \mchip.pong.sync.o_out [7];
+	assign \mchip.pong.game.left_paddle.next_coord [4] = _0732_ ^ _0721_;
+	assign _0753_ = \mchip.pong.game.left_paddle.coord [4] & \mchip.pong.sync.o_out [7];
+	assign _0764_ = _0732_ & _0721_;
+	assign _0775_ = ~(_0764_ | _0753_);
+	assign _0786_ = \mchip.pong.game.left_paddle.coord [5] ^ \mchip.pong.sync.o_out [7];
+	assign \mchip.pong.game.left_paddle.next_coord [5] = ~(_0786_ ^ _0775_);
+	assign _0807_ = \mchip.pong.game.right_paddle.coord [4] & \mchip.pong.sync.o_out [5];
+	assign _0818_ = \mchip.pong.game.right_paddle.coord [4] ^ \mchip.pong.sync.o_out [5];
+	assign _0829_ = ~(\mchip.pong.game.right_paddle.coord [3] & \mchip.pong.sync.o_out [5]);
+	assign _0840_ = \mchip.pong.game.right_paddle.coord [2] & ~\mchip.pong.sync.o_out [5];
+	assign _0851_ = \mchip.pong.game.right_paddle.coord [3] ^ \mchip.pong.sync.o_out [5];
+	assign _0862_ = _0851_ & _0840_;
+	assign _0873_ = _0829_ & ~_0862_;
+	assign _0884_ = ~(\mchip.pong.game.right_paddle.coord [2] ^ \mchip.pong.sync.o_out [5]);
+	assign _0895_ = _0884_ & _0851_;
+	assign _0906_ = ~(\mchip.pong.game.right_paddle.coord [1] & \mchip.pong.sync.o_out [5]);
+	assign \mchip.pong.game.right_paddle.next_coord [0] = ~\mchip.pong.game.right_paddle.coord [0];
+	assign _0927_ = \mchip.pong.game.right_paddle.coord [1] ^ \mchip.pong.sync.o_out [5];
+	assign _0938_ = _0927_ & ~\mchip.pong.game.right_paddle.next_coord [0];
+	assign _0949_ = _0906_ & ~_0938_;
+	assign _0960_ = _0895_ & ~_0949_;
+	assign _0971_ = _0873_ & ~_0960_;
+	assign _0982_ = _0818_ & ~_0971_;
+	assign _0993_ = ~(_0982_ | _0807_);
+	assign _1004_ = \mchip.pong.sync.o_out [5] ^ \mchip.pong.game.right_paddle.coord [5];
+	assign \mchip.pong.game.right_paddle.next_coord [5] = ~(_1004_ ^ _0993_);
+	assign \mchip.pong.game.right_paddle.next_coord [4] = ~(_0971_ ^ _0818_);
+	assign _4446_ = ~\mchip.pong.game.vga.pclk_ctr ;
+	assign _1045_ = \mchip.pong.game.vga.line_ind [0] & \mchip.pong.game.vga.line_ind [1];
+	assign _1056_ = \mchip.pong.game.vga.line_ind [2] | \mchip.pong.game.vga.line_ind [3];
+	assign _1067_ = _1056_ | _1045_;
+	assign _1078_ = \mchip.pong.game.vga.line_ind [4] | \mchip.pong.game.vga.line_ind [5];
+	assign _1089_ = \mchip.pong.game.vga.line_ind [6] | \mchip.pong.game.vga.line_ind [7];
+	assign _1100_ = _1089_ | _1078_;
+	assign _1111_ = ~(_1100_ | _1067_);
+	assign _1122_ = ~(\mchip.pong.game.vga.line_ind [9] | \mchip.pong.game.vga.line_ind [8]);
+	assign _1133_ = ~(_1122_ & _1111_);
+	assign _1144_ = \mchip.pong.game.vga.line_ind [1] & ~\mchip.pong.game.vga.line_ind [0];
+	assign _1155_ = _1056_ | ~_1144_;
+	assign _1166_ = _1155_ | _1100_;
+	assign _1177_ = _1122_ & ~_1166_;
+	assign \mchip.pong.VGA_VS  = _1177_ | _1133_;
+	assign \mchip.pong.game.ball.dpath.nextY [0] = ~\mchip.pong.game.ball.dpath.ballY [0];
+	assign _1208_ = ~\mchip.pong.sync.o_out [2];
+	assign _1219_ = \mchip.pong.game.ball.dpath.ballX [9] & ~\mchip.pong.game.ball.dpath.ballX [8];
+	assign _1230_ = ~(\mchip.pong.game.ball.dpath.ballX [7] | \mchip.pong.game.ball.dpath.ballX [6]);
+	assign _1241_ = ~(\mchip.pong.game.ball.dpath.ballX [5] | \mchip.pong.game.ball.dpath.ballX [4]);
+	assign _1252_ = _1241_ & _1230_;
+	assign \mchip.pong.game.ball.dpath.nextX [1] = ~\mchip.pong.game.ball.dpath.ballX [1];
+	assign _1283_ = \mchip.pong.game.ball.dpath.ballX [2] | \mchip.pong.game.ball.dpath.ballX [3];
+	assign _1294_ = \mchip.pong.game.ball.dpath.nextX [1] & ~_1283_;
+	assign _1305_ = _1252_ & ~_1294_;
+	assign _1316_ = _1252_ & ~_1305_;
+	assign _1327_ = _1219_ & ~_1316_;
+	assign _1338_ = \mchip.pong.game.ball.dpath.ballX [8] & \mchip.pong.game.ball.dpath.ballX [9];
+	assign _1349_ = _1338_ | _1327_;
+	assign _1360_ = \mchip.pong.game.ball.dpath.ballX [1] | ~\mchip.pong.game.ball.dpath.ballX [9];
+	assign _1371_ = \mchip.pong.game.ball.dpath.ballX [5] | ~\mchip.pong.game.ball.dpath.ballX [6];
+	assign _1382_ = \mchip.pong.game.ball.dpath.ballX [8] | \mchip.pong.game.ball.dpath.ballX [7];
+	assign _1393_ = _1382_ | _1371_;
+	assign _1404_ = \mchip.pong.game.ball.dpath.ballX [4] | \mchip.pong.game.ball.dpath.ballX [3];
+	assign _1415_ = _1404_ | \mchip.pong.game.ball.dpath.ballX [2];
+	assign _1426_ = _1415_ | _1393_;
+	assign _1437_ = _1426_ | _1360_;
+	assign _1448_ = _1230_ | ~_1219_;
+	assign _1459_ = _1448_ & ~_1338_;
+	assign _1470_ = _1437_ & ~_1459_;
+	assign _1481_ = _1349_ & ~_1470_;
+	assign _1492_ = \mchip.pong.game.ball.dpath.ballY [7] & \mchip.pong.game.ball.dpath.ballY [6];
+	assign _1503_ = ~(\mchip.pong.game.ball.dpath.ballY [5] | \mchip.pong.game.ball.dpath.ballY [4]);
+	assign _1514_ = _1503_ | ~_1492_;
+	assign _1523_ = _1503_ & _1492_;
+	assign _1534_ = ~(\mchip.pong.game.ball.dpath.ballY [3] | \mchip.pong.game.ball.dpath.ballY [2]);
+	assign _1545_ = ~(\mchip.pong.game.ball.dpath.ballY [1] | \mchip.pong.game.ball.dpath.ballY [0]);
+	assign _1556_ = _1545_ & _1534_;
+	assign _1567_ = _1523_ & ~_1556_;
+	assign _1578_ = _1514_ & ~_1567_;
+	assign _1589_ = \mchip.pong.game.ball.dpath.ballY [8] & ~_1578_;
+	assign _1600_ = ~_1589_;
+	assign _1611_ = ~\mchip.pong.game.ball.dpath.ballY [8];
+	assign _1622_ = _1578_ ^ _1611_;
+	assign _1633_ = _1622_ ^ \mchip.pong.game.right_paddle.coord [8];
+	assign _1643_ = _1600_ & ~_1633_;
+	assign _1654_ = ~\mchip.pong.game.right_paddle.coord [5];
+	assign _1665_ = _1556_ & ~\mchip.pong.game.ball.dpath.ballY [4];
+	assign _1675_ = _1665_ ^ \mchip.pong.game.ball.dpath.ballY [5];
+	assign _1686_ = _1675_ ^ _1654_;
+	assign _1697_ = _1556_ ^ \mchip.pong.game.ball.dpath.ballY [4];
+	assign _1707_ = _1697_ ^ \mchip.pong.game.right_paddle.coord [4];
+	assign _1718_ = _1686_ & ~_1707_;
+	assign _1728_ = ~\mchip.pong.game.right_paddle.coord [6];
+	assign _1739_ = ~\mchip.pong.game.ball.dpath.ballY [6];
+	assign _1750_ = _1556_ & _1503_;
+	assign _1761_ = _1750_ ^ _1739_;
+	assign _1772_ = _1761_ ^ _1728_;
+	assign _1783_ = ~\mchip.pong.game.right_paddle.coord [7];
+	assign _1794_ = \mchip.pong.game.ball.dpath.ballY [6] & ~_1750_;
+	assign _1805_ = _1794_ ^ \mchip.pong.game.ball.dpath.ballY [7];
+	assign _1816_ = _1805_ ^ _1783_;
+	assign _1827_ = _1816_ & _1772_;
+	assign _1838_ = _1827_ & _1718_;
+	assign _1849_ = ~\mchip.pong.game.right_paddle.coord [3];
+	assign _1860_ = _1545_ & ~\mchip.pong.game.ball.dpath.ballY [2];
+	assign _1871_ = _1860_ ^ \mchip.pong.game.ball.dpath.ballY [3];
+	assign _1882_ = _1871_ ^ _1849_;
+	assign _1893_ = _1545_ ^ \mchip.pong.game.ball.dpath.ballY [2];
+	assign _1904_ = _1893_ ^ \mchip.pong.game.right_paddle.coord [2];
+	assign _1915_ = _1882_ & ~_1904_;
+	assign _1926_ = ~\mchip.pong.game.right_paddle.coord [1];
+	assign _1937_ = ~(\mchip.pong.game.ball.dpath.ballY [1] ^ \mchip.pong.game.ball.dpath.ballY [0]);
+	assign _1948_ = _1937_ ^ _1926_;
+	assign _1958_ = ~(\mchip.pong.game.ball.dpath.ballY [0] ^ \mchip.pong.game.right_paddle.coord [0]);
+	assign _1969_ = _1948_ & ~_1958_;
+	assign _1980_ = _1969_ & _1915_;
+	assign _1991_ = _1980_ & _1838_;
+	assign _2002_ = ~(_1991_ & _1643_);
+	assign _2013_ = ~\mchip.pong.game.right_paddle.coord [8];
+	assign _2024_ = _1622_ | _2013_;
+	assign _2035_ = _2024_ | _1589_;
+	assign _2046_ = _1805_ | _1783_;
+	assign _2067_ = _1761_ | _1728_;
+	assign _2078_ = _1816_ & ~_2067_;
+	assign _2089_ = _2046_ & ~_2078_;
+	assign _2100_ = _1675_ | _1654_;
+	assign _2111_ = ~\mchip.pong.game.right_paddle.coord [4];
+	assign _2122_ = _1697_ | _2111_;
+	assign _2133_ = _1686_ & ~_2122_;
+	assign _2144_ = _2100_ & ~_2133_;
+	assign _2155_ = _1827_ & ~_2144_;
+	assign _2166_ = _2089_ & ~_2155_;
+	assign _2177_ = _1871_ | _1849_;
+	assign _2188_ = ~\mchip.pong.game.right_paddle.coord [2];
+	assign _2199_ = _1893_ | _2188_;
+	assign _2210_ = _1882_ & ~_2199_;
+	assign _2221_ = _2177_ & ~_2210_;
+	assign _2232_ = _1937_ | _1926_;
+	assign _2243_ = ~(\mchip.pong.game.ball.dpath.ballY [0] | \mchip.pong.game.right_paddle.coord [0]);
+	assign _2253_ = _1948_ & ~_2243_;
+	assign _2264_ = _2232_ & ~_2253_;
+	assign _2275_ = _1915_ & ~_2264_;
+	assign _2286_ = _2221_ & ~_2275_;
+	assign _2297_ = _1838_ & ~_2286_;
+	assign _2308_ = _2166_ & ~_2297_;
+	assign _2319_ = _1643_ & ~_2308_;
+	assign _2330_ = _2035_ & ~_2319_;
+	assign _2341_ = _2002_ & ~_2330_;
+	assign _2352_ = \mchip.pong.game.right_paddle.coord [7] & \mchip.pong.game.right_paddle.coord [6];
+	assign _2363_ = ~(\mchip.pong.game.right_paddle.coord [4] & \mchip.pong.game.right_paddle.coord [5]);
+	assign _2374_ = _2363_ | ~_2352_;
+	assign _2384_ = \mchip.pong.game.right_paddle.coord [5] & ~\mchip.pong.game.right_paddle.coord [4];
+	assign _2395_ = _2384_ & _2352_;
+	assign _2405_ = ~(\mchip.pong.game.right_paddle.coord [2] & \mchip.pong.game.right_paddle.coord [3]);
+	assign _2416_ = \mchip.pong.game.right_paddle.coord [0] | \mchip.pong.game.right_paddle.coord [1];
+	assign _2427_ = \mchip.pong.game.right_paddle.coord [2] | ~\mchip.pong.game.right_paddle.coord [3];
+	assign _2438_ = _2416_ & ~_2427_;
+	assign _2449_ = _2405_ & ~_2438_;
+	assign _2460_ = _2395_ & ~_2449_;
+	assign _2471_ = _2374_ & ~_2460_;
+	assign _2482_ = \mchip.pong.game.right_paddle.coord [8] & ~_2471_;
+	assign _2493_ = ~_2482_;
+	assign _2504_ = _2471_ ^ _2013_;
+	assign _2515_ = _2504_ ^ \mchip.pong.game.ball.dpath.ballY [8];
+	assign _2526_ = _2493_ & ~_2515_;
+	assign _2537_ = _2384_ & ~_2449_;
+	assign _2548_ = _2363_ & ~_2537_;
+	assign _2559_ = \mchip.pong.game.right_paddle.coord [6] & ~_2548_;
+	assign _2570_ = _2559_ ^ _1783_;
+	assign _2581_ = _2570_ ^ \mchip.pong.game.ball.dpath.ballY [7];
+	assign _2592_ = _2548_ ^ _1728_;
+	assign _2603_ = _2592_ ^ \mchip.pong.game.ball.dpath.ballY [6];
+	assign _2614_ = _2581_ & ~_2603_;
+	assign _2625_ = ~\mchip.pong.game.ball.dpath.ballY [4];
+	assign _2636_ = _2449_ ^ \mchip.pong.game.right_paddle.coord [4];
+	assign _2647_ = _2636_ ^ _2625_;
+	assign _2658_ = ~\mchip.pong.game.ball.dpath.ballY [5];
+	assign _2669_ = _2449_ & ~\mchip.pong.game.right_paddle.coord [4];
+	assign _2680_ = _2669_ ^ _1654_;
+	assign _2691_ = _2680_ ^ _2658_;
+	assign _2701_ = ~(_2691_ & _2647_);
+	assign _2712_ = _2614_ & ~_2701_;
+	assign _2723_ = _2188_ & ~_2416_;
+	assign _2734_ = _2723_ ^ \mchip.pong.game.right_paddle.coord [3];
+	assign _2745_ = _2734_ ^ \mchip.pong.game.ball.dpath.ballY [3];
+	assign _2756_ = _2416_ ^ _2188_;
+	assign _2767_ = _2756_ ^ \mchip.pong.game.ball.dpath.ballY [2];
+	assign _2778_ = _2745_ & ~_2767_;
+	assign _2789_ = ~(\mchip.pong.game.right_paddle.coord [0] ^ \mchip.pong.game.right_paddle.coord [1]);
+	assign _2800_ = _2789_ ^ \mchip.pong.game.ball.dpath.ballY [1];
+	assign _2811_ = ~(_2800_ | _1958_);
+	assign _2822_ = _2811_ & _2778_;
+	assign _2833_ = _2822_ & _2712_;
+	assign _2844_ = ~(_2833_ & _2526_);
+	assign _2855_ = _2504_ | _1611_;
+	assign _2866_ = _2855_ | _2482_;
+	assign _2877_ = ~\mchip.pong.game.ball.dpath.ballY [7];
+	assign _2888_ = _2559_ ^ \mchip.pong.game.right_paddle.coord [7];
+	assign _2899_ = _2888_ | _2877_;
+	assign _2920_ = _2592_ | _1739_;
+	assign _2931_ = _2581_ & ~_2920_;
+	assign _2942_ = _2899_ & ~_2931_;
+	assign _2953_ = _2680_ | _2658_;
+	assign _2963_ = _2636_ | _2625_;
+	assign _2974_ = _2691_ & ~_2963_;
+	assign _2985_ = _2953_ & ~_2974_;
+	assign _2996_ = _2614_ & ~_2985_;
+	assign _3007_ = _2942_ & ~_2996_;
+	assign _3018_ = ~(_2734_ & \mchip.pong.game.ball.dpath.ballY [3]);
+	assign _3029_ = ~\mchip.pong.game.ball.dpath.ballY [2];
+	assign _3040_ = _2756_ | _3029_;
+	assign _3051_ = _2745_ & ~_3040_;
+	assign _3062_ = _3018_ & ~_3051_;
+	assign _3073_ = ~\mchip.pong.game.ball.dpath.ballY [1];
+	assign _3084_ = _2789_ | _3073_;
+	assign _3095_ = ~(_2800_ | _2243_);
+	assign _3106_ = _3084_ & ~_3095_;
+	assign _3117_ = _2778_ & ~_3106_;
+	assign _3128_ = _3062_ & ~_3117_;
+	assign _3139_ = _2712_ & ~_3128_;
+	assign _3150_ = _3007_ & ~_3139_;
+	assign _3161_ = _2526_ & ~_3150_;
+	assign _3172_ = _2866_ & ~_3161_;
+	assign _3183_ = _2844_ & ~_3172_;
+	assign _3194_ = _3183_ | _2341_;
+	assign _3205_ = _1481_ & ~_3194_;
+	assign _3216_ = ~(_3205_ & _1208_);
+	assign _3227_ = \mchip.pong.game.ball.cpath.state [5] & ~_3216_;
+	assign _3238_ = \mchip.pong.sync.o_out [3] & ~\mchip.pong.sync.o_out [2];
+	assign _3249_ = _3238_ & \mchip.pong.game.ball.cpath.state [4];
+	assign _3260_ = _3249_ | _3227_;
+	assign _3271_ = ~\mchip.pong.game.ball.dpath.ballX [7];
+	assign _3282_ = \mchip.pong.game.ball.dpath.ballX [6] & ~\mchip.pong.game.ball.dpath.ballX [7];
+	assign _3293_ = \mchip.pong.game.ball.dpath.ballX [5] & \mchip.pong.game.ball.dpath.ballX [4];
+	assign _3304_ = _3293_ & _3282_;
+	assign _3315_ = ~(\mchip.pong.game.ball.dpath.ballX [2] & \mchip.pong.game.ball.dpath.ballX [3]);
+	assign _3326_ = _3304_ & ~_3315_;
+	assign _3337_ = _3271_ & ~_3326_;
+	assign _3348_ = _1219_ & ~_3337_;
+	assign _3359_ = ~(_3348_ | _1338_);
+	assign _3370_ = ~\mchip.pong.game.ball.dpath.ballX [9];
+	assign _3381_ = ~(\mchip.pong.game.ball.dpath.ballX [1] | \mchip.pong.game.ball.dpath.ballX [2]);
+	assign _3392_ = _1404_ | ~_3381_;
+	assign _3403_ = \mchip.pong.game.ball.dpath.ballX [5] | \mchip.pong.game.ball.dpath.ballX [6];
+	assign _3414_ = _3403_ | _1382_;
+	assign _3425_ = _3414_ | _3392_;
+	assign _3436_ = _3370_ & ~_3425_;
+	assign _3447_ = _3359_ & ~_3436_;
+	assign _3458_ = ~_3447_;
+	assign _3469_ = _3293_ | ~_1230_;
+	assign _3480_ = _3315_ | \mchip.pong.game.ball.dpath.nextX [1];
+	assign _3491_ = ~(_3293_ & _1230_);
+	assign _3501_ = _3480_ & ~_3491_;
+	assign _3512_ = _3501_ | ~_3469_;
+	assign _3523_ = ~(\mchip.pong.game.ball.dpath.ballX [8] | \mchip.pong.game.ball.dpath.ballX [9]);
+	assign _3534_ = ~(_3523_ & _3512_);
+	assign _3545_ = _3315_ | \mchip.pong.game.ball.dpath.ballX [1];
+	assign _3556_ = _3491_ | _3545_;
+	assign _3567_ = _3523_ & ~_3556_;
+	assign _3578_ = _3567_ | _3534_;
+	assign _3588_ = ~(_3523_ & _1230_);
+	assign _3599_ = _3523_ & _3282_;
+	assign _3610_ = _1283_ | ~_1241_;
+	assign _3621_ = _3599_ & ~_3610_;
+	assign _3632_ = _3588_ & ~_3621_;
+	assign _3643_ = _3578_ & ~_3632_;
+	assign _3654_ = _1622_ ^ \mchip.pong.game.left_paddle.coord [8];
+	assign _3665_ = _1600_ & ~_3654_;
+	assign _3676_ = ~\mchip.pong.game.left_paddle.coord [7];
+	assign _3687_ = _1805_ ^ _3676_;
+	assign _3698_ = _1761_ ^ \mchip.pong.game.left_paddle.coord [6];
+	assign _3709_ = _3687_ & ~_3698_;
+	assign _3720_ = ~\mchip.pong.game.left_paddle.coord [4];
+	assign _3731_ = _1697_ ^ _3720_;
+	assign _3742_ = ~\mchip.pong.game.left_paddle.coord [5];
+	assign _3753_ = _1675_ ^ _3742_;
+	assign _3764_ = ~(_3753_ & _3731_);
+	assign _3775_ = _3709_ & ~_3764_;
+	assign _3786_ = ~\mchip.pong.game.left_paddle.coord [3];
+	assign _3797_ = _1871_ ^ _3786_;
+	assign _3808_ = _1893_ ^ \mchip.pong.game.left_paddle.coord [2];
+	assign _3819_ = _3797_ & ~_3808_;
+	assign _3830_ = ~\mchip.pong.game.left_paddle.coord [1];
+	assign _3841_ = _1937_ ^ _3830_;
+	assign _3852_ = ~(\mchip.pong.game.ball.dpath.ballY [0] ^ \mchip.pong.game.left_paddle.coord [0]);
+	assign _3863_ = _3841_ & ~_3852_;
+	assign _3873_ = _3863_ & _3819_;
+	assign _3880_ = _3873_ & _3775_;
+	assign _3890_ = ~(_3880_ & _3665_);
+	assign _3899_ = ~\mchip.pong.game.left_paddle.coord [8];
+	assign _3909_ = _1622_ | _3899_;
+	assign _3919_ = _3909_ | _1589_;
+	assign _3936_ = _1805_ | _3676_;
+	assign _3945_ = ~\mchip.pong.game.left_paddle.coord [6];
+	assign _3954_ = _1761_ | _3945_;
+	assign _3965_ = _3687_ & ~_3954_;
+	assign _3966_ = _3936_ & ~_3965_;
+	assign _3967_ = _1675_ | _3742_;
+	assign _3968_ = _1697_ | _3720_;
+	assign _3969_ = _3753_ & ~_3968_;
+	assign _3970_ = _3967_ & ~_3969_;
+	assign _3971_ = _3709_ & ~_3970_;
+	assign _3972_ = _3966_ & ~_3971_;
+	assign _3973_ = _1871_ | _3786_;
+	assign _3974_ = ~\mchip.pong.game.left_paddle.coord [2];
+	assign _3975_ = _1893_ | _3974_;
+	assign _3976_ = _3797_ & ~_3975_;
+	assign _3977_ = _3973_ & ~_3976_;
+	assign _3978_ = _1937_ | _3830_;
+	assign _3979_ = ~(\mchip.pong.game.ball.dpath.ballY [0] | \mchip.pong.game.left_paddle.coord [0]);
+	assign _3980_ = _3841_ & ~_3979_;
+	assign _3981_ = _3978_ & ~_3980_;
+	assign _3982_ = _3819_ & ~_3981_;
+	assign _3983_ = _3977_ & ~_3982_;
+	assign _3984_ = _3775_ & ~_3983_;
+	assign _3985_ = _3972_ & ~_3984_;
+	assign _3986_ = _3665_ & ~_3985_;
+	assign _3987_ = _3919_ & ~_3986_;
+	assign _3988_ = _3890_ & ~_3987_;
+	assign _3989_ = \mchip.pong.game.left_paddle.coord [7] & \mchip.pong.game.left_paddle.coord [6];
+	assign _3990_ = ~(\mchip.pong.game.left_paddle.coord [5] & \mchip.pong.game.left_paddle.coord [4]);
+	assign _3991_ = _3990_ | ~_3989_;
+	assign _3992_ = \mchip.pong.game.left_paddle.coord [5] & ~\mchip.pong.game.left_paddle.coord [4];
+	assign _3993_ = _3992_ & _3989_;
+	assign _3994_ = ~(\mchip.pong.game.left_paddle.coord [2] & \mchip.pong.game.left_paddle.coord [3]);
+	assign _3995_ = \mchip.pong.game.left_paddle.coord [1] | \mchip.pong.game.left_paddle.coord [0];
+	assign _3996_ = \mchip.pong.game.left_paddle.coord [2] | ~\mchip.pong.game.left_paddle.coord [3];
+	assign _3997_ = _3995_ & ~_3996_;
+	assign _3998_ = _3994_ & ~_3997_;
+	assign _3999_ = _3993_ & ~_3998_;
+	assign _4000_ = _3991_ & ~_3999_;
+	assign _4001_ = \mchip.pong.game.left_paddle.coord [8] & ~_4000_;
+	assign _4002_ = ~_4001_;
+	assign _4003_ = _4000_ ^ _3899_;
+	assign _4004_ = _4003_ ^ \mchip.pong.game.ball.dpath.ballY [8];
+	assign _4005_ = _4002_ & ~_4004_;
+	assign _4006_ = _3992_ & ~_3998_;
+	assign _4007_ = _3990_ & ~_4006_;
+	assign _4008_ = \mchip.pong.game.left_paddle.coord [6] & ~_4007_;
+	assign _4009_ = _4008_ ^ _3676_;
+	assign _4010_ = _4009_ ^ \mchip.pong.game.ball.dpath.ballY [7];
+	assign _4011_ = _4007_ ^ _3945_;
+	assign _4012_ = _4011_ ^ \mchip.pong.game.ball.dpath.ballY [6];
+	assign _4013_ = _4010_ & ~_4012_;
+	assign _4014_ = _3998_ ^ \mchip.pong.game.left_paddle.coord [4];
+	assign _4015_ = _4014_ ^ _2625_;
+	assign _4016_ = _3998_ & ~\mchip.pong.game.left_paddle.coord [4];
+	assign _4017_ = _4016_ ^ _3742_;
+	assign _4018_ = _4017_ ^ _2658_;
+	assign _4019_ = ~(_4018_ & _4015_);
+	assign _4020_ = _4013_ & ~_4019_;
+	assign _4021_ = _3974_ & ~_3995_;
+	assign _4022_ = _4021_ ^ \mchip.pong.game.left_paddle.coord [3];
+	assign _4023_ = _4022_ ^ \mchip.pong.game.ball.dpath.ballY [3];
+	assign _4024_ = _3995_ ^ _3974_;
+	assign _4025_ = _4024_ ^ \mchip.pong.game.ball.dpath.ballY [2];
+	assign _4026_ = _4023_ & ~_4025_;
+	assign _4027_ = ~(\mchip.pong.game.left_paddle.coord [1] ^ \mchip.pong.game.left_paddle.coord [0]);
+	assign _4028_ = _4027_ ^ \mchip.pong.game.ball.dpath.ballY [1];
+	assign _4029_ = ~(_4028_ | _3852_);
+	assign _4030_ = _4029_ & _4026_;
+	assign _4031_ = _4030_ & _4020_;
+	assign _4032_ = ~(_4031_ & _4005_);
+	assign _4033_ = _4003_ | _1611_;
+	assign _4034_ = _4033_ | _4001_;
+	assign _4035_ = _4008_ ^ \mchip.pong.game.left_paddle.coord [7];
+	assign _4036_ = _4035_ | _2877_;
+	assign _4037_ = _4011_ | _1739_;
+	assign _4038_ = _4010_ & ~_4037_;
+	assign _4039_ = _4036_ & ~_4038_;
+	assign _4040_ = _4017_ | _2658_;
+	assign _4041_ = _4014_ | _2625_;
+	assign _4042_ = _4018_ & ~_4041_;
+	assign _4043_ = _4040_ & ~_4042_;
+	assign _4044_ = _4013_ & ~_4043_;
+	assign _4045_ = _4039_ & ~_4044_;
+	assign _4046_ = ~(_4022_ & \mchip.pong.game.ball.dpath.ballY [3]);
+	assign _4047_ = _4024_ | _3029_;
+	assign _4048_ = _4023_ & ~_4047_;
+	assign _4049_ = _4046_ & ~_4048_;
+	assign _4050_ = _4027_ | _3073_;
+	assign _4051_ = ~(_4028_ | _3979_);
+	assign _4052_ = _4050_ & ~_4051_;
+	assign _4053_ = _4026_ & ~_4052_;
+	assign _4054_ = _4049_ & ~_4053_;
+	assign _4055_ = _4020_ & ~_4054_;
+	assign _4056_ = _4045_ & ~_4055_;
+	assign _4057_ = _4005_ & ~_4056_;
+	assign _4058_ = _4034_ & ~_4057_;
+	assign _4059_ = _4032_ & ~_4058_;
+	assign _4060_ = _4059_ | _3988_;
+	assign _4061_ = _3643_ & ~_4060_;
+	assign _4062_ = _4061_ | _3458_;
+	assign _4063_ = \mchip.pong.game.ball.dpath.ballY [6] | ~\mchip.pong.game.ball.dpath.ballY [7];
+	assign _4064_ = _4063_ | _2658_;
+	assign _4065_ = _4064_ & ~_1492_;
+	assign _4066_ = \mchip.pong.game.ball.dpath.ballY [5] | ~\mchip.pong.game.ball.dpath.ballY [4];
+	assign _4067_ = ~(_4066_ | _4063_);
+	assign _4068_ = ~(\mchip.pong.game.ball.dpath.ballY [3] & \mchip.pong.game.ball.dpath.ballY [2]);
+	assign _4069_ = ~(\mchip.pong.game.ball.dpath.ballY [1] & \mchip.pong.game.ball.dpath.ballY [0]);
+	assign _4070_ = _4069_ | _4068_;
+	assign _4071_ = _4067_ & ~_4070_;
+	assign _4072_ = _4065_ & ~_4071_;
+	assign _4073_ = \mchip.pong.game.ball.dpath.ballY [8] & ~_4072_;
+	assign _4074_ = _4071_ & ~_1611_;
+	assign _4075_ = _4073_ & ~_4074_;
+	assign _4076_ = _4075_ | \mchip.pong.sync.o_out [2];
+	assign _4077_ = _4076_ | _4062_;
+	assign _4078_ = \mchip.pong.game.ball.cpath.state [7] & ~_4077_;
+	assign _4079_ = \mchip.pong.game.ball.dpath.ballY [8] | \mchip.pong.game.ball.dpath.ballY [7];
+	assign _4080_ = \mchip.pong.game.ball.dpath.ballY [5] | \mchip.pong.game.ball.dpath.ballY [6];
+	assign _4081_ = _4080_ | _4079_;
+	assign _4082_ = \mchip.pong.game.ball.dpath.ballY [3] | \mchip.pong.game.ball.dpath.ballY [4];
+	assign _4083_ = \mchip.pong.game.ball.dpath.ballY [1] | \mchip.pong.game.ball.dpath.ballY [2];
+	assign _4084_ = _4083_ | _4082_;
+	assign _4085_ = _4084_ | _4081_;
+	assign _4086_ = \mchip.pong.game.ball.dpath.nextY [0] & ~_4085_;
+	assign _4087_ = ~(_4086_ & _1208_);
+	assign _4088_ = _4087_ | _4061_;
+	assign _4089_ = \mchip.pong.game.ball.cpath.state [2] & ~_4088_;
+	assign _4090_ = _4089_ | _4078_;
+	assign _0007_ = _4090_ | _3260_;
+	assign _4091_ = _4086_ | \mchip.pong.sync.o_out [2];
+	assign _4092_ = _3447_ | _3205_;
+	assign _4093_ = _4092_ | _4091_;
+	assign _4094_ = \mchip.pong.game.ball.cpath.state [3] & ~_4093_;
+	assign _4095_ = _4092_ | _4076_;
+	assign _4096_ = \mchip.pong.game.ball.cpath.state [5] & ~_4095_;
+	assign _0008_ = _4096_ | _4094_;
+	assign _4097_ = \mchip.pong.game.vga.pix_ind [9] & \mchip.pong.game.vga.pix_ind [8];
+	assign _4098_ = ~(\mchip.pong.game.vga.pix_ind [6] | \mchip.pong.game.vga.pix_ind [7]);
+	assign _4099_ = \mchip.pong.game.vga.pix_ind [4] & ~\mchip.pong.game.vga.pix_ind [5];
+	assign _4100_ = _4099_ & _4098_;
+	assign _4101_ = \mchip.pong.game.vga.pix_ind [3] & \mchip.pong.game.vga.pix_ind [2];
+	assign _4102_ = \mchip.pong.game.vga.pix_ind [0] & \mchip.pong.game.vga.pix_ind [1];
+	assign _4103_ = _4102_ & _4101_;
+	assign _4104_ = ~(_4103_ & _4100_);
+	assign _4105_ = _4104_ | ~_4097_;
+	assign _0009_ = _4446_ & ~_4105_;
+	assign _4106_ = _4061_ | _3447_;
+	assign _4107_ = _4106_ | _4076_;
+	assign _4108_ = \mchip.pong.game.ball.cpath.state [7] & ~_4107_;
+	assign _4109_ = _4106_ | _4091_;
+	assign _4110_ = \mchip.pong.game.ball.cpath.state [2] & ~_4109_;
+	assign _0006_ = _4110_ | _4108_;
+	assign _4111_ = ~(\mchip.pong.game.ball.cpath.state [0] | \mchip.pong.game.ball.cpath.state [1]);
+	assign _4112_ = _3238_ & ~_4111_;
+	assign _4113_ = _3458_ | _3205_;
+	assign _4114_ = _4113_ | _4076_;
+	assign _4115_ = \mchip.pong.game.ball.cpath.state [5] & ~_4114_;
+	assign _4116_ = _4115_ | _4112_;
+	assign _4117_ = _4087_ | _3205_;
+	assign _4118_ = \mchip.pong.game.ball.cpath.state [3] & ~_4117_;
+	assign _4119_ = ~(_4061_ & _1208_);
+	assign _4120_ = \mchip.pong.game.ball.cpath.state [7] & ~_4119_;
+	assign _4121_ = _4120_ | _4118_;
+	assign _0005_ = _4121_ | _4116_;
+	assign _4122_ = \mchip.pong.sync.o_out [3] | \mchip.pong.sync.o_out [2];
+	assign _4123_ = \mchip.pong.game.ball.cpath.state [4] & ~_4122_;
+	assign _4124_ = \mchip.pong.game.ball.cpath.state [6] & ~\mchip.pong.sync.o_out [2];
+	assign _0004_ = _4124_ | _4123_;
+	assign _4125_ = _0644_ & ~_0699_;
+	assign _4126_ = _4125_ | _0600_;
+	assign \mchip.pong.game.left_paddle.next_coord [3] = _4126_ ^ _0611_;
+	assign _4127_ = \mchip.pong.game.left_paddle.coord [5] & \mchip.pong.sync.o_out [7];
+	assign _4128_ = _0786_ & _0753_;
+	assign _4129_ = _4128_ | _4127_;
+	assign _4130_ = ~(_0786_ & _0732_);
+	assign _4131_ = _0721_ & ~_4130_;
+	assign _4132_ = _4131_ | _4129_;
+	assign _4133_ = \mchip.pong.game.left_paddle.coord [6] ^ \mchip.pong.sync.o_out [7];
+	assign \mchip.pong.game.left_paddle.next_coord [6] = _4133_ ^ _4132_;
+	assign _4134_ = \mchip.pong.game.left_paddle.coord [6] & \mchip.pong.sync.o_out [7];
+	assign _4135_ = _4133_ & _4132_;
+	assign _4136_ = ~(_4135_ | _4134_);
+	assign _4137_ = \mchip.pong.game.left_paddle.coord [7] ^ \mchip.pong.sync.o_out [7];
+	assign \mchip.pong.game.left_paddle.next_coord [7] = ~(_4137_ ^ _4136_);
+	assign _4138_ = \mchip.pong.game.left_paddle.coord [7] & \mchip.pong.sync.o_out [7];
+	assign _4139_ = _4137_ & _4134_;
+	assign _4140_ = ~(_4139_ | _4138_);
+	assign _4141_ = ~(_4137_ & _4133_);
+	assign _4142_ = _4129_ & ~_4141_;
+	assign _4143_ = _4140_ & ~_4142_;
+	assign _4144_ = _4141_ | _4130_;
+	assign _4145_ = _0721_ & ~_4144_;
+	assign _4146_ = _4143_ & ~_4145_;
+	assign _4147_ = \mchip.pong.game.left_paddle.coord [8] ^ \mchip.pong.sync.o_out [7];
+	assign \mchip.pong.game.left_paddle.next_coord [8] = ~(_4147_ ^ _4146_);
+	assign _4148_ = \mchip.pong.game.ball.cpath.state [0] & ~_4122_;
+	assign _0000_ = _4148_ | \mchip.pong.sync.o_out [2];
+	assign _4149_ = \mchip.pong.game.ball.cpath.state [8] & ~\mchip.pong.sync.o_out [2];
+	assign _4150_ = \mchip.pong.game.ball.cpath.state [1] & ~_4122_;
+	assign _0001_ = _4150_ | _4149_;
+	assign _4151_ = ~\mchip.pong.game.vga.pix_ind [5];
+	assign _4152_ = \mchip.pong.game.vga.pix_ind [6] & ~\mchip.pong.game.vga.pix_ind [7];
+	assign _4153_ = ~(_4152_ & _4151_);
+	assign _4154_ = _4153_ & ~_4098_;
+	assign _4155_ = \mchip.pong.game.vga.pix_ind [4] | ~\mchip.pong.game.vga.pix_ind [5];
+	assign _4156_ = _4152_ & ~_4155_;
+	assign _4157_ = ~(\mchip.pong.game.vga.pix_ind [0] | \mchip.pong.game.vga.pix_ind [1]);
+	assign _4158_ = \mchip.pong.game.vga.pix_ind [3] | \mchip.pong.game.vga.pix_ind [2];
+	assign _4159_ = _4158_ | ~_4157_;
+	assign _4160_ = _4156_ & ~_4159_;
+	assign _4161_ = _4154_ & ~_4160_;
+	assign _4162_ = \mchip.pong.game.vga.pix_ind [9] | \mchip.pong.game.vga.pix_ind [8];
+	assign _4163_ = _4162_ | _4161_;
+	assign _4164_ = _4160_ & ~_4162_;
+	assign \mchip.pong.VGA_HS  = _4164_ | _4163_;
+	assign _4165_ = ~(\mchip.pong.game.ball.cpath.state [5] | \mchip.pong.game.ball.cpath.state [7]);
+	assign _4166_ = \mchip.pong.game.ball.cpath.state [3] | \mchip.pong.game.ball.cpath.state [2];
+	assign _0033_ = _4165_ & ~_4166_;
+	assign _4167_ = _0884_ & ~_0949_;
+	assign _4168_ = _4167_ | _0840_;
+	assign \mchip.pong.game.right_paddle.next_coord [3] = _4168_ ^ _0851_;
+	assign _4169_ = \mchip.pong.sync.o_out [5] & \mchip.pong.game.right_paddle.coord [5];
+	assign _4170_ = _1004_ & _0807_;
+	assign _4171_ = _4170_ | _4169_;
+	assign _4172_ = ~(_1004_ & _0818_);
+	assign _4173_ = ~(_4172_ | _0971_);
+	assign _4174_ = _4173_ | _4171_;
+	assign _4175_ = \mchip.pong.game.right_paddle.coord [6] ^ \mchip.pong.sync.o_out [5];
+	assign \mchip.pong.game.right_paddle.next_coord [6] = _4175_ ^ _4174_;
+	assign _4176_ = \mchip.pong.game.right_paddle.coord [6] & \mchip.pong.sync.o_out [5];
+	assign _4177_ = _4175_ & _4174_;
+	assign _4178_ = _4177_ | _4176_;
+	assign _4179_ = \mchip.pong.game.right_paddle.coord [7] ^ \mchip.pong.sync.o_out [5];
+	assign \mchip.pong.game.right_paddle.next_coord [7] = _4179_ ^ _4178_;
+	assign _4180_ = \mchip.pong.game.right_paddle.coord [7] & \mchip.pong.sync.o_out [5];
+	assign _4181_ = _4179_ & _4176_;
+	assign _4182_ = _4181_ | _4180_;
+	assign _4183_ = ~(_4179_ & _4175_);
+	assign _4184_ = _4171_ & ~_4183_;
+	assign _4185_ = _4184_ | _4182_;
+	assign _4186_ = _4183_ | _4172_;
+	assign _4187_ = ~(_4186_ | _0971_);
+	assign _4188_ = _4187_ | _4185_;
+	assign _4189_ = \mchip.pong.game.right_paddle.coord [8] ^ \mchip.pong.sync.o_out [5];
+	assign \mchip.pong.game.right_paddle.next_coord [8] = _4189_ ^ _4188_;
+	assign _4190_ = ~(_4075_ & _1208_);
+	assign _4191_ = _4190_ | _3205_;
+	assign _4192_ = \mchip.pong.game.ball.cpath.state [5] & ~_4191_;
+	assign _4193_ = _4113_ | _4091_;
+	assign _4194_ = \mchip.pong.game.ball.cpath.state [3] & ~_4193_;
+	assign _4195_ = \mchip.pong.game.ball.cpath.state [2] & ~_4119_;
+	assign _4196_ = _4195_ | _4194_;
+	assign _0003_ = _4196_ | _4192_;
+	assign _0010_ = \mchip.pong.sync.o_out [2] | ~\mchip.pong.game.vga.pclk_ctr ;
+	assign _4197_ = _4091_ | _4062_;
+	assign _4198_ = \mchip.pong.game.ball.cpath.state [2] & ~_4197_;
+	assign _4199_ = \mchip.pong.game.ball.cpath.state [3] & ~_3216_;
+	assign _4200_ = _4190_ | _4061_;
+	assign _4201_ = \mchip.pong.game.ball.cpath.state [7] & ~_4200_;
+	assign _4202_ = _4201_ | _4199_;
+	assign _0002_ = _4202_ | _4198_;
+	assign \mchip.pong.game.right_paddle.next_coord [2] = ~(_0949_ ^ _0884_);
+	assign _4203_ = ~\mchip.pong.game.vga.line_ind [2];
+	assign _4204_ = _1045_ & ~_4203_;
+	assign _4205_ = ~(_4204_ ^ \mchip.pong.game.vga.line_ind [3]);
+	assign _4206_ = _1045_ ^ _4203_;
+	assign _4207_ = _4206_ | _4205_;
+	assign _4208_ = _1144_ & ~_4207_;
+	assign _4209_ = ~\mchip.pong.game.vga.line_ind [5];
+	assign _4210_ = \mchip.pong.game.vga.line_ind [4] & ~\mchip.pong.game.vga.line_ind [5];
+	assign _4211_ = ~(\mchip.pong.game.vga.line_ind [2] & \mchip.pong.game.vga.line_ind [3]);
+	assign _4212_ = _1045_ & ~_4211_;
+	assign _4213_ = _4212_ & _4210_;
+	assign _4214_ = _4209_ & ~_4213_;
+	assign _4215_ = _4214_ & ~\mchip.pong.game.vga.line_ind [6];
+	assign _4216_ = _4215_ ^ \mchip.pong.game.vga.line_ind [7];
+	assign _4217_ = _4214_ ^ \mchip.pong.game.vga.line_ind [6];
+	assign _4218_ = ~(_4217_ & _4216_);
+	assign _4219_ = _4212_ & \mchip.pong.game.vga.line_ind [4];
+	assign _4220_ = _4219_ ^ _4209_;
+	assign _4221_ = _4212_ ^ \mchip.pong.game.vga.line_ind [4];
+	assign _4222_ = ~_4221_;
+	assign _4223_ = _4222_ | _4220_;
+	assign _4224_ = _4223_ | _4218_;
+	assign _4225_ = _4224_ | ~_4208_;
+	assign _4226_ = _4209_ & ~_1089_;
+	assign _4227_ = _1089_ | ~_4210_;
+	assign _4228_ = _4212_ & ~_4227_;
+	assign _4229_ = _4226_ & ~_4228_;
+	assign _4230_ = _4229_ ^ \mchip.pong.game.vga.line_ind [8];
+	assign _4231_ = _4230_ & ~_4225_;
+	assign _4232_ = ~(\mchip.pong.game.vga.pix_ind [6] & \mchip.pong.game.vga.pix_ind [7]);
+	assign _4233_ = \mchip.pong.game.vga.pix_ind [7] & ~\mchip.pong.game.vga.pix_ind [6];
+	assign _4234_ = ~(\mchip.pong.game.vga.pix_ind [4] | \mchip.pong.game.vga.pix_ind [5]);
+	assign _4235_ = _4233_ & ~_4234_;
+	assign _4236_ = _4232_ & ~_4235_;
+	assign _4237_ = _4236_ ^ \mchip.pong.game.vga.pix_ind [8];
+	assign _4238_ = _4236_ & ~\mchip.pong.game.vga.pix_ind [8];
+	assign _4239_ = _4238_ ^ \mchip.pong.game.vga.pix_ind [9];
+	assign _4240_ = _4239_ & ~_4237_;
+	assign _4241_ = ~\mchip.pong.game.vga.pix_ind [7];
+	assign _4242_ = _4234_ & ~\mchip.pong.game.vga.pix_ind [6];
+	assign _4243_ = _4242_ ^ _4241_;
+	assign _4244_ = _4234_ ^ \mchip.pong.game.vga.pix_ind [6];
+	assign _4245_ = _4244_ & ~_4243_;
+	assign _4246_ = ~(_4245_ & _4234_);
+	assign _4247_ = _4103_ & ~_4246_;
+	assign _4248_ = ~(_4247_ & _4240_);
+	assign _4249_ = _4231_ & ~_4248_;
+	assign _4250_ = ~(\mchip.pong.game.vga.line_ind [6] & \mchip.pong.game.vga.line_ind [7]);
+	assign _4251_ = ~(\mchip.pong.game.vga.line_ind [4] & \mchip.pong.game.vga.line_ind [5]);
+	assign _4252_ = _4251_ | _4250_;
+	assign _4253_ = _4212_ & ~_4252_;
+	assign _4254_ = \mchip.pong.game.vga.line_ind [9] | ~\mchip.pong.game.vga.line_ind [8];
+	assign _4255_ = _4253_ & ~_4254_;
+	assign _4256_ = _4255_ | \mchip.pong.game.vga.line_ind [9];
+	assign _4257_ = ~(_4228_ & _1122_);
+	assign _4258_ = \mchip.pong.game.vga.line_ind [5] | \mchip.pong.game.vga.line_ind [6];
+	assign _4259_ = \mchip.pong.game.vga.line_ind [8] | \mchip.pong.game.vga.line_ind [7];
+	assign _4260_ = _4259_ | _4258_;
+	assign _4261_ = _4260_ | \mchip.pong.game.vga.line_ind [9];
+	assign _4262_ = _4257_ & ~_4261_;
+	assign _4263_ = _4262_ | _4256_;
+	assign _4264_ = _4234_ & _4098_;
+	assign _4265_ = _4097_ & ~_4264_;
+	assign _4266_ = ~(_4233_ & _4099_);
+	assign _4267_ = _4266_ | _4159_;
+	assign _4268_ = _4267_ | _4162_;
+	assign _4269_ = _4234_ & _4233_;
+	assign _4270_ = _4269_ | _4241_;
+	assign _4271_ = _4267_ & ~_4270_;
+	assign _4272_ = _4271_ | _4162_;
+	assign _4273_ = _4268_ & ~_4272_;
+	assign _4274_ = _4273_ | _4265_;
+	assign _4275_ = _4274_ | _4263_;
+	assign _4276_ = _4249_ & ~_4275_;
+	assign _4277_ = ~(\mchip.pong.sync.o_out [4] | \mchip.pong.sync.o_out [5]);
+	assign _4278_ = _4276_ & ~_4277_;
+	assign _4279_ = \mchip.pong.game.right_paddle.next_coord [8] & \mchip.pong.game.right_paddle.next_coord [7];
+	assign _4280_ = ~(\mchip.pong.game.right_paddle.next_coord [6] & \mchip.pong.game.right_paddle.next_coord [5]);
+	assign _4281_ = \mchip.pong.game.right_paddle.next_coord [6] & ~\mchip.pong.game.right_paddle.next_coord [5];
+	assign _4282_ = ~(\mchip.pong.game.right_paddle.next_coord [3] | \mchip.pong.game.right_paddle.next_coord [4]);
+	assign _4283_ = _4281_ & ~_4282_;
+	assign _4284_ = _4280_ & ~_4283_;
+	assign _4285_ = _4279_ & ~_4284_;
+	assign _4286_ = ~(\mchip.pong.game.right_paddle.next_coord [7] & \mchip.pong.game.right_paddle.next_coord [6]);
+	assign _4287_ = \mchip.pong.game.right_paddle.next_coord [4] | \mchip.pong.game.right_paddle.next_coord [5];
+	assign _4288_ = _4287_ | _4286_;
+	assign _4289_ = \mchip.pong.game.right_paddle.next_coord [3] & ~\mchip.pong.game.right_paddle.next_coord [2];
+	assign _4290_ = ~(_4289_ & _0938_);
+	assign _4291_ = _4290_ | _4288_;
+	assign _4292_ = \mchip.pong.game.right_paddle.next_coord [8] & ~_4291_;
+	assign _4293_ = _4285_ & ~_4292_;
+	assign _0012_ = _4278_ & ~_4293_;
+	assign \mchip.pong.game.left_paddle.next_coord [2] = ~(_0699_ ^ _0644_);
+	assign _4294_ = ~(\mchip.pong.sync.o_out [6] | \mchip.pong.sync.o_out [7]);
+	assign _4295_ = _4276_ & ~_4294_;
+	assign _4296_ = ~(\mchip.pong.game.left_paddle.next_coord [7] & \mchip.pong.game.left_paddle.next_coord [6]);
+	assign _4297_ = \mchip.pong.game.left_paddle.next_coord [5] | \mchip.pong.game.left_paddle.next_coord [4];
+	assign _4298_ = _4297_ | _4296_;
+	assign _4299_ = \mchip.pong.game.left_paddle.next_coord [3] & ~\mchip.pong.game.left_paddle.next_coord [2];
+	assign _4300_ = ~(_4299_ & _0688_);
+	assign _4301_ = ~(_4300_ | _4298_);
+	assign _4302_ = ~(_4301_ & \mchip.pong.game.left_paddle.next_coord [8]);
+	assign _4303_ = ~(\mchip.pong.game.left_paddle.next_coord [6] & \mchip.pong.game.left_paddle.next_coord [5]);
+	assign _4304_ = \mchip.pong.game.left_paddle.next_coord [6] & ~\mchip.pong.game.left_paddle.next_coord [5];
+	assign _4305_ = ~(\mchip.pong.game.left_paddle.next_coord [3] | \mchip.pong.game.left_paddle.next_coord [4]);
+	assign _4306_ = _4304_ & ~_4305_;
+	assign _4307_ = _4303_ & ~_4306_;
+	assign _4308_ = ~(\mchip.pong.game.left_paddle.next_coord [8] & \mchip.pong.game.left_paddle.next_coord [7]);
+	assign _4309_ = _4308_ | _4307_;
+	assign _4310_ = _4302_ & ~_4309_;
+	assign _0011_ = _4295_ & ~_4310_;
+	assign \mchip.pong.game.ball.dpath.en_pos_reg  = _4276_ | _0033_;
+	assign _4311_ = \mchip.pong.game.vga.line_ind [2] | ~\mchip.pong.game.vga.line_ind [3];
+	assign _4312_ = \mchip.pong.game.vga.line_ind [0] | \mchip.pong.game.vga.line_ind [1];
+	assign _4313_ = _4312_ | _4311_;
+	assign _4314_ = ~(_4313_ | _1100_);
+	assign _4315_ = \mchip.pong.game.vga.line_ind [8] | ~\mchip.pong.game.vga.line_ind [9];
+	assign _4316_ = _4314_ & ~_4315_;
+	assign _0013_ = ~(_4316_ | \mchip.pong.game.vga.line_ind [0]);
+	assign _4317_ = \mchip.pong.game.vga.line_ind [0] ^ \mchip.pong.game.vga.line_ind [1];
+	assign _0014_ = _4317_ & ~_4316_;
+	assign _4318_ = _1045_ ^ \mchip.pong.game.vga.line_ind [2];
+	assign _0015_ = _4318_ & ~_4316_;
+	assign _4319_ = _4204_ ^ \mchip.pong.game.vga.line_ind [3];
+	assign _0016_ = _4319_ & ~_4316_;
+	assign _0017_ = _4221_ & ~_4316_;
+	assign _0018_ = ~(_4316_ | _4220_);
+	assign _4320_ = _4212_ & ~_4251_;
+	assign _4321_ = _4320_ ^ \mchip.pong.game.vga.line_ind [6];
+	assign _0019_ = _4321_ & ~_4316_;
+	assign _4322_ = ~_4316_;
+	assign _4323_ = ~(_4320_ & \mchip.pong.game.vga.line_ind [6]);
+	assign _4324_ = _4323_ ^ \mchip.pong.game.vga.line_ind [7];
+	assign _0020_ = _4322_ & ~_4324_;
+	assign _4325_ = ~(_4253_ ^ \mchip.pong.game.vga.line_ind [8]);
+	assign _0021_ = ~(_4325_ | _4316_);
+	assign _4326_ = ~(_4253_ & \mchip.pong.game.vga.line_ind [8]);
+	assign _4327_ = _4326_ ^ \mchip.pong.game.vga.line_ind [9];
+	assign _0022_ = _4322_ & ~_4327_;
+	assign _0023_ = _4105_ & ~\mchip.pong.game.vga.pix_ind [0];
+	assign _0024_ = \mchip.pong.game.vga.pix_ind [0] ^ \mchip.pong.game.vga.pix_ind [1];
+	assign _4328_ = ~\mchip.pong.game.vga.pix_ind [2];
+	assign _4329_ = _4102_ ^ _4328_;
+	assign _0025_ = _4105_ & ~_4329_;
+	assign _4330_ = ~\mchip.pong.game.vga.pix_ind [3];
+	assign _4331_ = _4102_ & ~_4328_;
+	assign _4332_ = _4331_ ^ _4330_;
+	assign _0026_ = _4105_ & ~_4332_;
+	assign _4333_ = ~\mchip.pong.game.vga.pix_ind [4];
+	assign _4334_ = _4103_ ^ _4333_;
+	assign _0027_ = _4105_ & ~_4334_;
+	assign _4335_ = _4103_ & ~_4333_;
+	assign _4336_ = _4335_ ^ _4151_;
+	assign _0028_ = _4105_ & ~_4336_;
+	assign _4337_ = ~\mchip.pong.game.vga.pix_ind [6];
+	assign _4338_ = ~(\mchip.pong.game.vga.pix_ind [4] & \mchip.pong.game.vga.pix_ind [5]);
+	assign _4339_ = _4103_ & ~_4338_;
+	assign _4340_ = _4339_ ^ _4337_;
+	assign _0029_ = _4105_ & ~_4340_;
+	assign _4341_ = _4339_ & ~_4337_;
+	assign _4342_ = _4341_ ^ _4241_;
+	assign _0030_ = _4105_ & ~_4342_;
+	assign _4343_ = _4338_ | _4232_;
+	assign _4344_ = _4103_ & ~_4343_;
+	assign _4345_ = ~(_4344_ ^ \mchip.pong.game.vga.pix_ind [8]);
+	assign _0031_ = _4105_ & ~_4345_;
+	assign _4346_ = ~(_4344_ & \mchip.pong.game.vga.pix_ind [8]);
+	assign _4347_ = _4346_ ^ \mchip.pong.game.vga.pix_ind [9];
+	assign _0032_ = _4105_ & ~_4347_;
+	assign _4348_ = ~(\mchip.pong.game.vga.pix_ind [4] | \mchip.pong.game.ball.dpath.ballX [4]);
+	assign _4349_ = \mchip.pong.game.vga.pix_ind [3] & ~\mchip.pong.game.ball.dpath.ballX [3];
+	assign _4350_ = \mchip.pong.game.vga.pix_ind [2] & ~\mchip.pong.game.ball.dpath.ballX [2];
+	assign _4351_ = \mchip.pong.game.vga.pix_ind [3] | ~\mchip.pong.game.ball.dpath.ballX [3];
+	assign _4352_ = _4351_ & ~_4349_;
+	assign _4353_ = _4352_ & _4350_;
+	assign _4354_ = _4353_ | _4349_;
+	assign _4355_ = \mchip.pong.game.ball.dpath.ballX [1] & ~\mchip.pong.game.vga.pix_ind [1];
+	assign _4356_ = \mchip.pong.game.ball.dpath.ballX [2] & ~\mchip.pong.game.vga.pix_ind [2];
+	assign _4357_ = ~(_4350_ | _4356_);
+	assign _4358_ = _4352_ & _4357_;
+	assign _4359_ = _4358_ & ~_4355_;
+	assign _4360_ = _4359_ | _4354_;
+	assign _4361_ = \mchip.pong.game.vga.pix_ind [4] & \mchip.pong.game.ball.dpath.ballX [4];
+	assign _4362_ = ~(_4361_ | _4348_);
+	assign _4363_ = _4362_ & _4360_;
+	assign _4364_ = _4363_ | _4348_;
+	assign _4365_ = _4338_ & ~_4234_;
+	assign _4366_ = _4365_ ^ \mchip.pong.game.ball.dpath.ballX [5];
+	assign _4367_ = _4366_ ^ _4364_;
+	assign _4368_ = _4362_ ^ _4360_;
+	assign _4369_ = ~(\mchip.pong.game.ball.dpath.ballY [0] & \mchip.pong.game.vga.line_ind [0]);
+	assign _4370_ = _4317_ ^ \mchip.pong.game.ball.dpath.ballY [1];
+	assign _4371_ = ~(_4370_ ^ _4369_);
+	assign _4372_ = ~_4371_;
+	assign _4373_ = \mchip.pong.game.ball.dpath.ballY [0] | \mchip.pong.game.vga.line_ind [0];
+	assign _4374_ = ~(_4369_ & _4373_);
+	assign _4375_ = _4371_ & _4374_;
+	assign _4376_ = ~(_4317_ & _3073_);
+	assign _4377_ = _4369_ & ~_4370_;
+	assign _4378_ = _4376_ & ~_4377_;
+	assign _4379_ = _4318_ ^ \mchip.pong.game.ball.dpath.ballY [2];
+	assign _4380_ = _4379_ ^ _4378_;
+	assign _4381_ = (_4380_ ? _4372_ : _4375_);
+	assign _4382_ = _4379_ | _4378_;
+	assign _4383_ = _3029_ & ~_4206_;
+	assign _4384_ = _4383_ | ~_4382_;
+	assign _4385_ = _4319_ ^ \mchip.pong.game.ball.dpath.ballY [3];
+	assign _4386_ = ~_4385_;
+	assign _4387_ = _4386_ ^ _4384_;
+	assign _4388_ = _4377_ | ~_4376_;
+	assign _4389_ = _4379_ ^ _4388_;
+	assign _4390_ = _4374_ & ~_4389_;
+	assign _4391_ = ~_4390_;
+	assign _4392_ = (_4387_ ? _4391_ : _4381_);
+	assign _4393_ = ~\mchip.pong.game.ball.dpath.ballY [3];
+	assign _4394_ = _4393_ & ~_4205_;
+	assign _4395_ = _4383_ & ~_4385_;
+	assign _4396_ = _4395_ | _4394_;
+	assign _4397_ = _4385_ | _4379_;
+	assign _4398_ = _4388_ & ~_4397_;
+	assign _4399_ = _4398_ | _4396_;
+	assign _4400_ = ~(_4221_ & _2625_);
+	assign _4401_ = \mchip.pong.game.ball.dpath.ballY [4] & ~_4221_;
+	assign _4402_ = _4400_ & ~_4401_;
+	assign _0127_ = _4402_ ^ _4399_;
+	assign _4403_ = _4392_ & ~_0127_;
+	assign _4404_ = _4402_ & _4399_;
+	assign _4405_ = _4404_ | ~_4400_;
+	assign _4406_ = _4220_ ^ _2658_;
+	assign _0146_ = _4406_ ^ _4405_;
+	assign _4407_ = ~(_4371_ | _4374_);
+	assign _4408_ = ~_4407_;
+	assign _4409_ = _4408_ & _4389_;
+	assign _4410_ = ~_4409_;
+	assign _4411_ = _4382_ & ~_4383_;
+	assign _4412_ = _4385_ ^ _4411_;
+	assign _4413_ = _4389_ & ~_4374_;
+	assign _4414_ = (_4412_ ? _4410_ : _4413_);
+	assign _4415_ = _0127_ & ~_4414_;
+	assign _4416_ = (_0146_ ? _4403_ : _4415_);
+	assign _4417_ = _4389_ & ~_4408_;
+	assign _4418_ = _4417_ & ~_4387_;
+	assign _4419_ = _4371_ & ~_4374_;
+	assign _4420_ = (_4389_ ? _4419_ : _4375_);
+	assign _4421_ = _4387_ & ~_4420_;
+	assign _4422_ = (_0127_ ? _4418_ : _4421_);
+	assign _4423_ = _4385_ ^ _4384_;
+	assign _4424_ = _4374_ & ~_4371_;
+	assign _4425_ = (_4389_ ? _4407_ : _4424_);
+	assign _4426_ = _4423_ & ~_4425_;
+	assign _4427_ = ~_4375_;
+	assign _4428_ = ~(_4389_ | _4427_);
+	assign _4429_ = _4428_ & ~_4423_;
+	assign _4430_ = (_0127_ ? _4426_ : _4429_);
+	assign _4431_ = (_0146_ ? _4422_ : _4430_);
+	assign _4432_ = (\mchip.pong.game.vga.pix_ind [0] ? _4416_ : _4431_);
+	assign _1103_ = ~(\mchip.pong.game.vga.pix_ind [1] ^ \mchip.pong.game.ball.dpath.ballX [1]);
+	assign _4433_ = ~(_4424_ | _4419_);
+	assign _4434_ = _4389_ & ~_4433_;
+	assign _4435_ = _4387_ & ~_4434_;
+	assign _4436_ = _4435_ | _0127_;
+	assign _0056_ = ~(_4402_ ^ _4399_);
+	assign _4437_ = _4424_ & ~_4389_;
+	assign _4438_ = _4423_ & ~_4437_;
+	assign _4439_ = _4438_ | _0056_;
+	assign _4440_ = (_0146_ ? _4436_ : _4439_);
+	assign _4441_ = \mchip.pong.game.vga.pix_ind [0] & ~_4440_;
+	assign _4442_ = ~\mchip.pong.game.vga.pix_ind [0];
+	assign _4443_ = _4389_ & _4427_;
+	assign _4444_ = (_4389_ ? _4375_ : _4408_);
+	assign _4445_ = (_4387_ ? _4444_ : _4443_);
+	assign _0034_ = _4445_ | _0127_;
+	assign _0035_ = _4408_ & ~_4389_;
+	assign _0036_ = (_4380_ ? _4407_ : _4427_);
+	assign _0037_ = (_4423_ ? _0036_ : _0035_);
+	assign _0038_ = _0037_ | _0056_;
+	assign _0039_ = (_0146_ ? _0034_ : _0038_);
+	assign _0040_ = _4442_ & ~_0039_;
+	assign _0041_ = _0040_ | _4441_;
+	assign _0042_ = (_1103_ ? _4432_ : _0041_);
+	assign _0043_ = ~_4355_;
+	assign _0044_ = _4357_ ^ _0043_;
+	assign _0045_ = (_4380_ ? _4371_ : _4424_);
+	assign _0046_ = _0045_ | _4387_;
+	assign _0047_ = _0046_ | _0056_;
+	assign _0048_ = _4381_ & ~_4423_;
+	assign _0049_ = ~(_0048_ & _0056_);
+	assign _0050_ = (_0146_ ? _0047_ : _0049_);
+	assign _0051_ = _0035_ | ~_4423_;
+	assign _0052_ = ~(_4428_ & _4387_);
+	assign _0053_ = (_0127_ ? _0051_ : _0052_);
+	assign _0054_ = _4427_ & ~_4389_;
+	assign _0055_ = ~(_0054_ & _4387_);
+	assign _0057_ = _4417_ & _4423_;
+	assign _0058_ = ~_0057_;
+	assign _0059_ = (_0056_ ? _0055_ : _0058_);
+	assign _0060_ = (_0146_ ? _0053_ : _0059_);
+	assign _0061_ = (\mchip.pong.game.vga.pix_ind [0] ? _0060_ : _0050_);
+	assign _0062_ = _1103_ & ~_0061_;
+	assign _0063_ = ~_1103_;
+	assign _0064_ = _4391_ | ~_4387_;
+	assign _0065_ = ~_4419_;
+	assign _0066_ = _0065_ & _4389_;
+	assign _0067_ = ~_0066_;
+	assign _0068_ = _0067_ | _4387_;
+	assign _0069_ = (_0056_ ? _0064_ : _0068_);
+	assign _0070_ = ~_4413_;
+	assign _0071_ = _0070_ | _4412_;
+	assign _0072_ = _4389_ | ~_4387_;
+	assign _0073_ = (_0127_ ? _0071_ : _0072_);
+	assign _0074_ = (_0146_ ? _0069_ : _0073_);
+	assign _0075_ = _4387_ | ~_4417_;
+	assign _0076_ = _0036_ | ~_4387_;
+	assign _0077_ = (_0127_ ? _0075_ : _0076_);
+	assign _0078_ = _4444_ | ~_4423_;
+	assign _0079_ = (_0056_ ? _0064_ : _0078_);
+	assign _0080_ = (_0146_ ? _0077_ : _0079_);
+	assign _0081_ = (\mchip.pong.game.vga.pix_ind [0] ? _0080_ : _0074_);
+	assign _0082_ = _0063_ & ~_0081_;
+	assign _0083_ = _0082_ | _0062_;
+	assign _0084_ = (_0044_ ? _0042_ : _0083_);
+	assign _0085_ = _4357_ & ~_4355_;
+	assign _0086_ = ~(_0085_ | _4350_);
+	assign _0087_ = ~_4352_;
+	assign _0088_ = _0087_ ^ _0086_;
+	assign _0089_ = _4427_ & ~_4380_;
+	assign _0090_ = ~_0089_;
+	assign _0091_ = ~(_4423_ & _0090_);
+	assign _0092_ = _0127_ & ~_0091_;
+	assign _0093_ = _4408_ | _4389_;
+	assign _0094_ = _0093_ & ~_4409_;
+	assign _0095_ = _0094_ | _4423_;
+	assign _0096_ = _0056_ & ~_0095_;
+	assign _0097_ = (_0146_ ? _0092_ : _0096_);
+	assign _0098_ = ~(_4423_ & _4381_);
+	assign _0099_ = _0127_ & ~_0098_;
+	assign _0100_ = _4389_ & _4371_;
+	assign _0101_ = _4389_ | _4371_;
+	assign _0102_ = _0101_ & ~_0100_;
+	assign _0103_ = _0102_ | _4423_;
+	assign _0104_ = _0056_ & ~_0103_;
+	assign _0105_ = (_0146_ ? _0099_ : _0104_);
+	assign _0106_ = (\mchip.pong.game.vga.pix_ind [0] ? _0105_ : _0097_);
+	assign _0107_ = ~_4417_;
+	assign _0108_ = (_4423_ ? _4389_ : _0107_);
+	assign _0109_ = _0127_ & ~_0108_;
+	assign _0110_ = ~(_4389_ & _4387_);
+	assign _0111_ = _0056_ & ~_0110_;
+	assign _0112_ = (_0146_ ? _0109_ : _0111_);
+	assign _0113_ = ~_4443_;
+	assign _0114_ = _4389_ | ~_4371_;
+	assign _0115_ = (_4387_ ? _0113_ : _0114_);
+	assign _0116_ = _0056_ & ~_0115_;
+	assign _0117_ = ~_0035_;
+	assign _0118_ = _4389_ & ~_4371_;
+	assign _0119_ = ~_0118_;
+	assign _0120_ = (_4387_ ? _0119_ : _0117_);
+	assign _0121_ = _0127_ & ~_0120_;
+	assign _0122_ = (_0146_ ? _0121_ : _0116_);
+	assign _0123_ = (\mchip.pong.game.vga.pix_ind [0] ? _0112_ : _0122_);
+	assign _0124_ = (_1103_ ? _0123_ : _0106_);
+	assign _0125_ = ~(_0035_ & _4423_);
+	assign _0126_ = _0056_ & ~_0125_;
+	assign _0128_ = ~(_4443_ & _4387_);
+	assign _0129_ = _0127_ & ~_0128_;
+	assign _0130_ = (_0146_ ? _0129_ : _0126_);
+	assign _0131_ = ~_4428_;
+	assign _0132_ = (_4387_ ? _4380_ : _0131_);
+	assign _0133_ = _0127_ & ~_0132_;
+	assign _0134_ = ~(_0054_ & _4423_);
+	assign _0135_ = _0056_ & ~_0134_;
+	assign _0136_ = (_0146_ ? _0133_ : _0135_);
+	assign _0137_ = (\mchip.pong.game.vga.pix_ind [0] ? _0136_ : _0130_);
+	assign _0138_ = _0119_ | ~_4387_;
+	assign _0139_ = _0127_ & ~_0138_;
+	assign _0140_ = _0114_ | ~_4423_;
+	assign _0141_ = ~(_0140_ | _0127_);
+	assign _0142_ = (_0146_ ? _0139_ : _0141_);
+	assign _0143_ = (_4387_ ? _0107_ : _0131_);
+	assign _0144_ = _0127_ & ~_0143_;
+	assign _0145_ = _0056_ & ~_0120_;
+	assign _0147_ = (_0146_ ? _0144_ : _0145_);
+	assign _0148_ = (\mchip.pong.game.vga.pix_ind [0] ? _0147_ : _0142_);
+	assign _0149_ = (_1103_ ? _0137_ : _0148_);
+	assign _0150_ = (_0044_ ? _0124_ : _0149_);
+	assign _0151_ = (_0088_ ? _0084_ : _0150_);
+	assign _0152_ = ~_0088_;
+	assign _0153_ = (_4389_ ? _4371_ : _4407_);
+	assign _0154_ = _0153_ & ~_4423_;
+	assign _0155_ = _0154_ & ~_0056_;
+	assign _0156_ = _0056_ & ~_0098_;
+	assign _0157_ = (_0146_ ? _0155_ : _0156_);
+	assign _0158_ = _4400_ & ~_4404_;
+	assign _0159_ = _4406_ ^ _0158_;
+	assign _0160_ = _0153_ & ~_4387_;
+	assign _0161_ = _0160_ & ~_0127_;
+	assign _0162_ = ~(_4387_ & _4381_);
+	assign _0163_ = _0127_ & ~_0162_;
+	assign _0164_ = (_0159_ ? _0161_ : _0163_);
+	assign _0165_ = (\mchip.pong.game.vga.pix_ind [0] ? _0164_ : _0157_);
+	assign _0166_ = ~(_4409_ & _4387_);
+	assign _0167_ = _0127_ & ~_0166_;
+	assign _0168_ = (_0146_ ? _0167_ : _0135_);
+	assign _0169_ = (\mchip.pong.game.vga.pix_ind [0] ? _0157_ : _0168_);
+	assign _0170_ = (_1103_ ? _0165_ : _0169_);
+	assign _0171_ = _4423_ | ~_4437_;
+	assign _0172_ = _0127_ & ~_0171_;
+	assign _0173_ = ~(_4443_ & _4423_);
+	assign _0174_ = _0056_ & ~_0173_;
+	assign _0175_ = (_0146_ ? _0172_ : _0174_);
+	assign _0176_ = (\mchip.pong.game.vga.pix_ind [0] ? _0164_ : _0175_);
+	assign _0177_ = _0127_ & ~_0055_;
+	assign _0178_ = (_0159_ ? _0161_ : _0177_);
+	assign _0179_ = ~(_0101_ | _4423_);
+	assign _0180_ = _0179_ & ~_0056_;
+	assign _0181_ = ~(_4423_ & _4409_);
+	assign _0182_ = _0056_ & ~_0181_;
+	assign _0183_ = (_0146_ ? _0180_ : _0182_);
+	assign _0184_ = (\mchip.pong.game.vga.pix_ind [0] ? _0183_ : _0178_);
+	assign _0185_ = (_1103_ ? _0176_ : _0184_);
+	assign _0186_ = (_0044_ ? _0170_ : _0185_);
+	assign _0187_ = _0186_ & ~_0152_;
+	assign _0188_ = _0055_ | _0056_;
+	assign _0189_ = ~(_4434_ & _4423_);
+	assign _0190_ = _0189_ | _0127_;
+	assign _0191_ = (_0146_ ? _0188_ : _0190_);
+	assign _0192_ = _0181_ | _0127_;
+	assign _0193_ = _4423_ | _4389_;
+	assign _0194_ = _0193_ | _0056_;
+	assign _0195_ = (_0146_ ? _0194_ : _0192_);
+	assign _0196_ = (\mchip.pong.game.vga.pix_ind [0] ? _0195_ : _0191_);
+	assign _0197_ = ~(_4423_ & _4389_);
+	assign _0198_ = _0197_ | _0127_;
+	assign _0199_ = ~(_0035_ & _4387_);
+	assign _0200_ = _0199_ | _0056_;
+	assign _0201_ = (_0159_ ? _0198_ : _0200_);
+	assign _0202_ = (_1103_ ? _0196_ : _0201_);
+	assign _0203_ = ~(_0065_ | _4389_);
+	assign _0204_ = ~(_0203_ & _4387_);
+	assign _0205_ = _0204_ | _0056_;
+	assign _0206_ = _4424_ & _4389_;
+	assign _0207_ = ~_0206_;
+	assign _0208_ = ~(_0207_ | _4387_);
+	assign _0209_ = _0208_ & ~_0127_;
+	assign _0210_ = ~_0209_;
+	assign _0211_ = (_0146_ ? _0205_ : _0210_);
+	assign _0212_ = (_0146_ ? _0188_ : _0210_);
+	assign _0213_ = (_1103_ ? _0211_ : _0212_);
+	assign _0214_ = (_0044_ ? _0202_ : _0213_);
+	assign _0215_ = _0152_ & ~_0214_;
+	assign _0216_ = _0215_ | _0187_;
+	assign _0217_ = (_4368_ ? _0151_ : _0216_);
+	assign _0218_ = (_0146_ ? _0188_ : _0192_);
+	assign _0219_ = (\mchip.pong.game.vga.pix_ind [0] ? _0218_ : _0195_);
+	assign _0220_ = (_1103_ ? _0219_ : _0212_);
+	assign _0221_ = _0044_ & ~_0220_;
+	assign _0222_ = ~(_0189_ | _0127_);
+	assign _0223_ = (_0146_ ? _0172_ : _0222_);
+	assign _0224_ = (\mchip.pong.game.vga.pix_ind [0] ? _0223_ : _0164_);
+	assign _0225_ = _0056_ & ~_0197_;
+	assign _0226_ = _0127_ & ~_0199_;
+	assign _0227_ = (_0159_ ? _0225_ : _0226_);
+	assign _0228_ = (_0146_ ? _0226_ : _0174_);
+	assign _0229_ = (\mchip.pong.game.vga.pix_ind [0] ? _0227_ : _0228_);
+	assign _0230_ = (_1103_ ? _0224_ : _0229_);
+	assign _0231_ = _0230_ & ~_0044_;
+	assign _0232_ = _0231_ | _0221_;
+	assign _0233_ = (\mchip.pong.game.vga.pix_ind [0] ? _0157_ : _0164_);
+	assign _0234_ = _0093_ | _4423_;
+	assign _0235_ = _0127_ & ~_0234_;
+	assign _0236_ = (_0146_ ? _0235_ : _0182_);
+	assign _0237_ = _0094_ | _4387_;
+	assign _0238_ = _0056_ & ~_0237_;
+	assign _0239_ = (_0146_ ? _0177_ : _0238_);
+	assign _0240_ = (\mchip.pong.game.vga.pix_ind [0] ? _0239_ : _0236_);
+	assign _0241_ = (_1103_ ? _0233_ : _0240_);
+	assign _0242_ = _0056_ & ~_0108_;
+	assign _0243_ = (_0146_ ? _0133_ : _0242_);
+	assign _0244_ = ~(_4434_ & _4387_);
+	assign _0245_ = _0127_ & ~_0244_;
+	assign _0246_ = (_0146_ ? _0245_ : _0126_);
+	assign _0247_ = (\mchip.pong.game.vga.pix_ind [0] ? _0246_ : _0243_);
+	assign _0248_ = (\mchip.pong.game.vga.pix_ind [0] ? _0168_ : _0157_);
+	assign _0249_ = (_1103_ ? _0247_ : _0248_);
+	assign _0250_ = (_0044_ ? _0241_ : _0249_);
+	assign _0251_ = (_0088_ ? _0232_ : _0250_);
+	assign _0252_ = (_4423_ ? _0094_ : _4390_);
+	assign _0253_ = _0056_ & ~_0252_;
+	assign _0254_ = _4427_ | ~_4389_;
+	assign _0255_ = _0254_ & ~_0054_;
+	assign _0256_ = (_4423_ ? _4413_ : _0255_);
+	assign _0257_ = _0127_ & ~_0256_;
+	assign _0258_ = (_0146_ ? _0253_ : _0257_);
+	assign _0259_ = ~(_4407_ | _4375_);
+	assign _0260_ = (_4389_ ? _0259_ : _4375_);
+	assign _0261_ = _4387_ & ~_0260_;
+	assign _0262_ = (_0127_ ? _4418_ : _0261_);
+	assign _0263_ = (_4389_ ? _4407_ : _0259_);
+	assign _0264_ = ~_0263_;
+	assign _0265_ = _0264_ & _4423_;
+	assign _0266_ = (_0056_ ? _4429_ : _0265_);
+	assign _0267_ = (_0146_ ? _0262_ : _0266_);
+	assign _0268_ = (\mchip.pong.game.vga.pix_ind [0] ? _0267_ : _0258_);
+	assign _0269_ = _4387_ & ~_0036_;
+	assign _0270_ = ~(_0119_ | _4387_);
+	assign _0271_ = (_0056_ ? _0269_ : _0270_);
+	assign _0272_ = _4423_ & ~_4444_;
+	assign _0273_ = (_0056_ ? _4429_ : _0272_);
+	assign _0274_ = (_0146_ ? _0271_ : _0273_);
+	assign _0275_ = _4387_ & ~_4391_;
+	assign _0276_ = _4386_ ^ _4411_;
+	assign _0277_ = _0276_ & ~_0067_;
+	assign _0278_ = (_0056_ ? _0275_ : _0277_);
+	assign _0279_ = _4423_ & ~_0070_;
+	assign _0280_ = ~(_4424_ | _4389_);
+	assign _0281_ = ~_0280_;
+	assign _0282_ = _4387_ & ~_0281_;
+	assign _0283_ = (_0127_ ? _0279_ : _0282_);
+	assign _0284_ = (_0146_ ? _0278_ : _0283_);
+	assign _0285_ = (\mchip.pong.game.vga.pix_ind [0] ? _0284_ : _0274_);
+	assign _0286_ = (_1103_ ? _0268_ : _0285_);
+	assign _0287_ = _0134_ | _0127_;
+	assign _0288_ = _4423_ | ~_4409_;
+	assign _0289_ = _0288_ | _0056_;
+	assign _0290_ = (_0146_ ? _0287_ : _0289_);
+	assign _0291_ = \mchip.pong.game.vga.pix_ind [0] & ~_0290_;
+	assign _0292_ = _4380_ & ~_4427_;
+	assign _0293_ = (_4423_ ? _0292_ : _0207_);
+	assign _0294_ = _0056_ & ~_0293_;
+	assign _0295_ = ~_0203_;
+	assign _0296_ = (_4423_ ? _0295_ : _4417_);
+	assign _0297_ = _0127_ & ~_0296_;
+	assign _0298_ = (_0146_ ? _0294_ : _0297_);
+	assign _0299_ = (_4389_ ? _4371_ : _4408_);
+	assign _0300_ = (_4423_ ? _4417_ : _0299_);
+	assign _0301_ = _0056_ & ~_0300_;
+	assign _0302_ = (_4387_ ? _0292_ : _0036_);
+	assign _0303_ = _0127_ & ~_0302_;
+	assign _0304_ = (_0146_ ? _0301_ : _0303_);
+	assign _0305_ = (\mchip.pong.game.vga.pix_ind [0] ? _0304_ : _0298_);
+	assign _0306_ = (_1103_ ? _0291_ : _0305_);
+	assign _0307_ = (_0044_ ? _0286_ : _0306_);
+	assign _0308_ = ~_0044_;
+	assign _0309_ = _0127_ & ~_0051_;
+	assign _0310_ = _0090_ & ~_4423_;
+	assign _0311_ = (_0127_ ? _4418_ : _0310_);
+	assign _0312_ = (_0146_ ? _0309_ : _0311_);
+	assign _0313_ = _0127_ & ~_0046_;
+	assign _0314_ = (_4389_ ? _4371_ : _0065_);
+	assign _0315_ = ~(_0314_ & _4387_);
+	assign _0316_ = _0056_ & ~_0315_;
+	assign _0317_ = (_0146_ ? _0313_ : _0316_);
+	assign _0318_ = (\mchip.pong.game.vga.pix_ind [0] ? _0317_ : _0312_);
+	assign _0319_ = _0154_ & ~_0127_;
+	assign _0320_ = _0255_ | _4387_;
+	assign _0321_ = _0127_ & ~_0320_;
+	assign _0322_ = (_0159_ ? _0319_ : _0321_);
+	assign _0323_ = _4389_ | _4387_;
+	assign _0324_ = _0127_ & ~_0323_;
+	assign _0325_ = _0035_ | ~_4387_;
+	assign _0326_ = _0056_ & ~_0325_;
+	assign _0327_ = (_0146_ ? _0324_ : _0326_);
+	assign _0328_ = (\mchip.pong.game.vga.pix_ind [0] ? _0327_ : _0322_);
+	assign _0329_ = (_1103_ ? _0318_ : _0328_);
+	assign _0330_ = (_4387_ ? _0107_ : _0117_);
+	assign _0331_ = _0127_ & ~_0330_;
+	assign _0332_ = _0056_ & ~_0132_;
+	assign _0333_ = (_0146_ ? _0331_ : _0332_);
+	assign _0334_ = (_4387_ ? _0119_ : _0114_);
+	assign _0335_ = _0127_ & ~_0334_;
+	assign _0336_ = (_0146_ ? _0335_ : _0116_);
+	assign _0337_ = (\mchip.pong.game.vga.pix_ind [0] ? _0336_ : _0333_);
+	assign _0338_ = _0056_ & ~_0143_;
+	assign _0339_ = (_0146_ ? _0144_ : _0338_);
+	assign _0340_ = _0056_ & ~_0140_;
+	assign _0341_ = (_0146_ ? _0129_ : _0340_);
+	assign _0342_ = (\mchip.pong.game.vga.pix_ind [0] ? _0341_ : _0339_);
+	assign _0343_ = (_1103_ ? _0337_ : _0342_);
+	assign _0344_ = (_0044_ ? _0343_ : _0329_);
+	assign _0345_ = (_0088_ ? _0344_ : _0307_);
+	assign _0346_ = (_4368_ ? _0251_ : _0345_);
+	assign _0347_ = (_4367_ ? _0217_ : _0346_);
+	assign _0348_ = (_0127_ ? _0120_ : _0173_);
+	assign _0349_ = ~_0348_;
+	assign _0350_ = ~(_0114_ & _4423_);
+	assign _0351_ = _0127_ & ~_0350_;
+	assign _0352_ = _0116_ | _0351_;
+	assign _0353_ = (_0146_ ? _0349_ : _0352_);
+	assign _0354_ = (\mchip.pong.game.vga.pix_ind [0] ? _0112_ : _0353_);
+	assign _0355_ = (_1103_ ? _0354_ : _0106_);
+	assign _0356_ = ~_0128_;
+	assign _0357_ = (_4387_ ? _0118_ : _0114_);
+	assign _0358_ = (_0127_ ? _0356_ : _0357_);
+	assign _0359_ = (_4389_ ? _4427_ : _4374_);
+	assign _0360_ = (_4423_ ? _0090_ : _0359_);
+	assign _0361_ = ~(_4433_ | _4389_);
+	assign _0362_ = (_4423_ ? _0035_ : _0361_);
+	assign _0363_ = (_0127_ ? _0360_ : _0362_);
+	assign _0364_ = (_0146_ ? _0358_ : _0363_);
+	assign _0365_ = ~_0132_;
+	assign _0366_ = ~(_0259_ | _4389_);
+	assign _0367_ = _4389_ & _4374_;
+	assign _0368_ = _0367_ | _0366_;
+	assign _0369_ = (_4387_ ? _4417_ : _0368_);
+	assign _0370_ = (_0127_ ? _0365_ : _0369_);
+	assign _0371_ = _4380_ & ~_0065_;
+	assign _0372_ = ~_0371_;
+	assign _0373_ = (_4423_ ? _0090_ : _0372_);
+	assign _0374_ = (_4423_ ? _0054_ : _0361_);
+	assign _0375_ = (_0127_ ? _0373_ : _0374_);
+	assign _0376_ = (_0146_ ? _0370_ : _0375_);
+	assign _0377_ = (\mchip.pong.game.vga.pix_ind [0] ? _0376_ : _0364_);
+	assign _0378_ = ~_0138_;
+	assign _0379_ = _0359_ & ~_4387_;
+	assign _0380_ = (_0127_ ? _0378_ : _0379_);
+	assign _0381_ = (_4380_ ? _4371_ : _0065_);
+	assign _0382_ = (_4423_ ? _4428_ : _0381_);
+	assign _0383_ = ~(_0114_ | _4387_);
+	assign _0384_ = (_0127_ ? _0382_ : _0383_);
+	assign _0385_ = (_0146_ ? _0380_ : _0384_);
+	assign _0386_ = ~_0143_;
+	assign _0387_ = _4424_ ^ _4380_;
+	assign _0388_ = _4423_ & ~_0387_;
+	assign _0389_ = (_0127_ ? _0386_ : _0388_);
+	assign _0390_ = ~_0120_;
+	assign _0391_ = ~_4381_;
+	assign _0392_ = (_4423_ ? _4417_ : _0391_);
+	assign _0393_ = (_0056_ ? _0390_ : _0392_);
+	assign _0394_ = (_0146_ ? _0389_ : _0393_);
+	assign _0395_ = (\mchip.pong.game.vga.pix_ind [0] ? _0394_ : _0385_);
+	assign _0396_ = (_1103_ ? _0377_ : _0395_);
+	assign _0397_ = (_0044_ ? _0355_ : _0396_);
+	assign _0398_ = (_0088_ ? _0084_ : _0397_);
+	assign _0399_ = ~_0166_;
+	assign _0400_ = (_0127_ ? _0154_ : _0399_);
+	assign _0401_ = (_4380_ ? _4371_ : _4407_);
+	assign _0402_ = _0401_ | ~_4387_;
+	assign _0403_ = _4389_ & ~_4424_;
+	assign _0404_ = ~_0403_;
+	assign _0405_ = (_4423_ ? _4381_ : _0404_);
+	assign _0406_ = (_0127_ ? _0402_ : _0405_);
+	assign _0407_ = (_0146_ ? _0400_ : _0406_);
+	assign _0408_ = _4387_ & ~_0070_;
+	assign _0409_ = (_0127_ ? _0048_ : _0408_);
+	assign _0410_ = (_4389_ ? _4372_ : _4375_);
+	assign _0411_ = ~(_0410_ & _4387_);
+	assign _0412_ = _0065_ & ~_4389_;
+	assign _0413_ = (_4423_ ? _0153_ : _0412_);
+	assign _0414_ = (_0127_ ? _0411_ : _0413_);
+	assign _0415_ = (_0146_ ? _0409_ : _0414_);
+	assign _0416_ = (\mchip.pong.game.vga.pix_ind [0] ? _0415_ : _0407_);
+	assign _0417_ = ~(_4389_ | _4374_);
+	assign _0418_ = (_4423_ ? _0417_ : _4434_);
+	assign _0419_ = (_0127_ ? _0399_ : _0418_);
+	assign _0420_ = ~_0134_;
+	assign _0421_ = ~_0292_;
+	assign _0422_ = (_4387_ ? _0421_ : _4381_);
+	assign _0423_ = (_0056_ ? _0420_ : _0422_);
+	assign _0424_ = (_0146_ ? _0419_ : _0423_);
+	assign _0425_ = ~_4424_;
+	assign _0426_ = (_4389_ ? _0425_ : _0065_);
+	assign _0427_ = _4423_ & ~_0426_;
+	assign _0428_ = (_0127_ ? _0154_ : _0427_);
+	assign _0429_ = ~_0098_;
+	assign _0430_ = (_4387_ ? _0114_ : _0093_);
+	assign _0431_ = (_0056_ ? _0429_ : _0430_);
+	assign _0432_ = (_0146_ ? _0428_ : _0431_);
+	assign _0433_ = (\mchip.pong.game.vga.pix_ind [0] ? _0432_ : _0424_);
+	assign _0434_ = (_1103_ ? _0416_ : _0433_);
+	assign _0435_ = _4443_ | _4428_;
+	assign _0436_ = (_4423_ ? _0435_ : _4425_);
+	assign _0437_ = (_4387_ ? _0372_ : _0410_);
+	assign _0438_ = (_0127_ ? _0436_ : _0437_);
+	assign _0439_ = (_4387_ ? _4380_ : _4443_);
+	assign _0440_ = _0439_ | _0127_;
+	assign _0441_ = (_0146_ ? _0438_ : _0440_);
+	assign _0442_ = (_4389_ ? _4407_ : _4375_);
+	assign _0443_ = (_4380_ ? _4371_ : _4419_);
+	assign _0444_ = ~_0443_;
+	assign _0445_ = (_4387_ ? _0444_ : _0442_);
+	assign _0446_ = ~_0412_;
+	assign _0447_ = _4387_ & ~_0446_;
+	assign _0448_ = ~_0447_;
+	assign _0449_ = (_0127_ ? _0445_ : _0448_);
+	assign _0450_ = ~(_4408_ | _4380_);
+	assign _0451_ = ~_0450_;
+	assign _0452_ = _4423_ & ~_0451_;
+	assign _0453_ = ~_0452_;
+	assign _0454_ = ~_0101_;
+	assign _0455_ = (_4423_ ? _0153_ : _0454_);
+	assign _0456_ = (_0127_ ? _0453_ : _0455_);
+	assign _0457_ = (_0146_ ? _0449_ : _0456_);
+	assign _0458_ = (\mchip.pong.game.vga.pix_ind [0] ? _0457_ : _0441_);
+	assign _0459_ = _0054_ & ~_4423_;
+	assign _0460_ = (_4423_ ? _0421_ : _0417_);
+	assign _0461_ = (_0127_ ? _0459_ : _0460_);
+	assign _0462_ = (_4387_ ? _0366_ : _0153_);
+	assign _0463_ = _0462_ | _0127_;
+	assign _0464_ = (_0146_ ? _0461_ : _0463_);
+	assign _0465_ = (_0056_ ? _0154_ : _0179_);
+	assign _0466_ = (_4387_ ? _0417_ : _4409_);
+	assign _0467_ = _0466_ | _0127_;
+	assign _0468_ = (_0146_ ? _0465_ : _0467_);
+	assign _0469_ = (\mchip.pong.game.vga.pix_ind [0] ? _0468_ : _0464_);
+	assign _0470_ = (_1103_ ? _0458_ : _0469_);
+	assign _0471_ = (_0044_ ? _0434_ : _0470_);
+	assign _0472_ = (_4389_ ? _4372_ : _4427_);
+	assign _0473_ = (_4423_ ? _4417_ : _0472_);
+	assign _0474_ = _4389_ & ~_0065_;
+	assign _0475_ = ~_0474_;
+	assign _0476_ = (_4387_ ? _0107_ : _0475_);
+	assign _0477_ = (_0127_ ? _0473_ : _0476_);
+	assign _0478_ = _4380_ & ~_4424_;
+	assign _0479_ = ~_0478_;
+	assign _0480_ = _0479_ | _4423_;
+	assign _0481_ = (_4387_ ? _4380_ : _4434_);
+	assign _0482_ = (_0127_ ? _0480_ : _0481_);
+	assign _0483_ = (_0146_ ? _0477_ : _0482_);
+	assign _0484_ = _4387_ & ~_4389_;
+	assign _0485_ = (_4389_ ? _4374_ : _0065_);
+	assign _0486_ = _0485_ | _4387_;
+	assign _0487_ = (_0127_ ? _0484_ : _0486_);
+	assign _0488_ = _4423_ | ~_0035_;
+	assign _0489_ = (_4380_ ? _4427_ : _4407_);
+	assign _0490_ = ~_0489_;
+	assign _0491_ = (_4387_ ? _4380_ : _0490_);
+	assign _0492_ = (_0127_ ? _0488_ : _0491_);
+	assign _0493_ = (_0146_ ? _0487_ : _0492_);
+	assign _0494_ = (\mchip.pong.game.vga.pix_ind [0] ? _0493_ : _0483_);
+	assign _0495_ = ~_0153_;
+	assign _0496_ = (_4423_ ? _4428_ : _0495_);
+	assign _0497_ = (_4389_ ? _4408_ : _4427_);
+	assign _0498_ = (_4423_ ? _0412_ : _0497_);
+	assign _0499_ = (_0127_ ? _0496_ : _0498_);
+	assign _0500_ = _4387_ & ~_0114_;
+	assign _0501_ = ~_0500_;
+	assign _0502_ = (_4389_ ? _4412_ : _0276_);
+	assign _0503_ = ~_0502_;
+	assign _0504_ = (_0127_ ? _0501_ : _0503_);
+	assign _0505_ = (_0146_ ? _0499_ : _0504_);
+	assign _0506_ = (_4371_ ? _4380_ : _4374_);
+	assign _0507_ = (_4423_ ? _0107_ : _0506_);
+	assign _0508_ = (_4387_ ? _0114_ : _4425_);
+	assign _0509_ = (_0127_ ? _0507_ : _0508_);
+	assign _0510_ = ~(_0502_ & _0056_);
+	assign _0511_ = (_0146_ ? _0509_ : _0510_);
+	assign _0512_ = (\mchip.pong.game.vga.pix_ind [0] ? _0511_ : _0505_);
+	assign _0513_ = (_1103_ ? _0494_ : _0512_);
+	assign _0514_ = ~_0426_;
+	assign _0515_ = (_0276_ ? _0066_ : _0514_);
+	assign _0516_ = _0474_ | _0366_;
+	assign _0517_ = (_4387_ ? _0207_ : _0516_);
+	assign _0518_ = (_0127_ ? _0515_ : _0517_);
+	assign _0519_ = _4387_ & ~_4427_;
+	assign _0520_ = ~_0519_;
+	assign _0521_ = (_4389_ ? _0065_ : _4372_);
+	assign _0522_ = ~_0521_;
+	assign _0523_ = (_4423_ ? _0206_ : _0522_);
+	assign _0524_ = (_0127_ ? _0520_ : _0523_);
+	assign _0525_ = (_0146_ ? _0518_ : _0524_);
+	assign _0526_ = (_4387_ ? _0203_ : _0066_);
+	assign _0527_ = (_4423_ ? _0314_ : _0475_);
+	assign _0528_ = (_0127_ ? _0526_ : _0527_);
+	assign _0529_ = _0259_ & ~_4389_;
+	assign _0530_ = ~_0529_;
+	assign _0531_ = _4387_ & ~_0530_;
+	assign _0532_ = ~_0531_;
+	assign _0533_ = (_0056_ ? _0523_ : _0532_);
+	assign _0534_ = (_0146_ ? _0528_ : _0533_);
+	assign _0535_ = (\mchip.pong.game.vga.pix_ind [0] ? _0534_ : _0525_);
+	assign _0536_ = (_4423_ ? _4417_ : _0054_);
+	assign _0537_ = (_4387_ ? _0207_ : _0475_);
+	assign _0538_ = (_0127_ ? _0536_ : _0537_);
+	assign _0539_ = (_4389_ ? _4375_ : _0259_);
+	assign _0540_ = ~_0539_;
+	assign _0541_ = _0540_ | ~_4387_;
+	assign _0542_ = (_4374_ ? _4371_ : _4380_);
+	assign _0543_ = (_4387_ ? _0542_ : _0514_);
+	assign _0544_ = (_0127_ ? _0541_ : _0543_);
+	assign _0545_ = (_0146_ ? _0538_ : _0544_);
+	assign _0546_ = (_4380_ ? _0425_ : _0065_);
+	assign _0547_ = (_4387_ ? _0207_ : _0546_);
+	assign _0548_ = (_0127_ ? _0536_ : _0547_);
+	assign _0549_ = ~(_4443_ | _4423_);
+	assign _0550_ = ~_0549_;
+	assign _0551_ = (_4389_ ? _4419_ : _0425_);
+	assign _0552_ = (_4423_ ? _0206_ : _0551_);
+	assign _0553_ = (_0127_ ? _0550_ : _0552_);
+	assign _0554_ = (_0146_ ? _0548_ : _0553_);
+	assign _0555_ = (\mchip.pong.game.vga.pix_ind [0] ? _0554_ : _0545_);
+	assign _0556_ = (_1103_ ? _0535_ : _0555_);
+	assign _0557_ = (_0044_ ? _0513_ : _0556_);
+	assign _0558_ = (_0088_ ? _0471_ : _0557_);
+	assign _0559_ = (_4368_ ? _0398_ : _0558_);
+	assign _0560_ = (_4380_ ? _4372_ : _4427_);
+	assign _0561_ = (_4387_ ? _4380_ : _0560_);
+	assign _0562_ = (_4423_ ? _0372_ : _0093_);
+	assign _0563_ = (_0127_ ? _0561_ : _0562_);
+	assign _0564_ = (_4423_ ? _4409_ : _0067_);
+	assign _0565_ = (_0127_ ? _0162_ : _0564_);
+	assign _0566_ = (_0146_ ? _0563_ : _0565_);
+	assign _0567_ = _0459_ | _0272_;
+	assign _0568_ = ~_0417_;
+	assign _0569_ = (_4389_ ? _4374_ : _4371_);
+	assign _0570_ = (_4423_ ? _0568_ : _0569_);
+	assign _0571_ = (_0127_ ? _0567_ : _0570_);
+	assign _0572_ = _0435_ | ~_4387_;
+	assign _0573_ = (_4423_ ? _4409_ : _0404_);
+	assign _0574_ = (_0127_ ? _0572_ : _0573_);
+	assign _0575_ = (_0146_ ? _0571_ : _0574_);
+	assign _0576_ = (\mchip.pong.game.vga.pix_ind [0] ? _0575_ : _0566_);
+	assign _0577_ = ~_4374_;
+	assign _0578_ = (_4389_ ? _0577_ : _4408_);
+	assign _0579_ = (_4374_ ? _4372_ : _4389_);
+	assign _0580_ = (_4423_ ? _0579_ : _0578_);
+	assign _0581_ = (_0127_ ? _0567_ : _0580_);
+	assign _0582_ = ~_4433_;
+	assign _0583_ = (_4380_ ? _4408_ : _0582_);
+	assign _0584_ = (_4423_ ? _0206_ : _0583_);
+	assign _0585_ = (_0127_ ? _0520_ : _0584_);
+	assign _0586_ = (_0146_ ? _0581_ : _0585_);
+	assign _0587_ = (_4387_ ? _0054_ : _0066_);
+	assign _0588_ = (_4423_ ? _0583_ : _4410_);
+	assign _0590_ = (_0127_ ? _0587_ : _0588_);
+	assign _0591_ = _4387_ & ~_0093_;
+	assign _0592_ = ~_0591_;
+	assign _0593_ = (_4423_ ? _4424_ : _0583_);
+	assign _0594_ = (_0127_ ? _0592_ : _0593_);
+	assign _0595_ = (_0146_ ? _0590_ : _0594_);
+	assign _0596_ = (\mchip.pong.game.vga.pix_ind [0] ? _0595_ : _0586_);
+	assign _0597_ = (_1103_ ? _0576_ : _0596_);
+	assign _0598_ = (_4380_ ? _4371_ : _0259_);
+	assign _0599_ = ~_0598_;
+	assign _0601_ = _0361_ | _4409_;
+	assign _0602_ = (_4423_ ? _0601_ : _0599_);
+	assign _0603_ = _0361_ | _0066_;
+	assign _0604_ = (_4423_ ? _0603_ : _0446_);
+	assign _0605_ = (_0127_ ? _0602_ : _0604_);
+	assign _0606_ = (_4380_ ? _4374_ : _0425_);
+	assign _0607_ = _0606_ | _4423_;
+	assign _0608_ = (_4389_ ? _4408_ : _4375_);
+	assign _0609_ = (_4423_ ? _0153_ : _0608_);
+	assign _0610_ = (_0127_ ? _0607_ : _0609_);
+	assign _0612_ = (_0146_ ? _0605_ : _0610_);
+	assign _0613_ = (_4380_ ? _4424_ : _4408_);
+	assign _0614_ = (_4387_ ? _4437_ : _0613_);
+	assign _0615_ = (_4389_ ? _4371_ : _4419_);
+	assign _0616_ = (_4423_ ? _0119_ : _0615_);
+	assign _0617_ = (_0127_ ? _0614_ : _0616_);
+	assign _0618_ = _4387_ & ~_0472_;
+	assign _0619_ = ~_0618_;
+	assign _0620_ = (_4380_ ? _4371_ : _4375_);
+	assign _0621_ = (_4389_ ? _4433_ : _0065_);
+	assign _0623_ = ~_0621_;
+	assign _0624_ = (_4423_ ? _0623_ : _0620_);
+	assign _0625_ = (_0127_ ? _0619_ : _0624_);
+	assign _0626_ = (_0146_ ? _0617_ : _0625_);
+	assign _0627_ = (\mchip.pong.game.vga.pix_ind [0] ? _0626_ : _0612_);
+	assign _0628_ = _0361_ | _4443_;
+	assign _0629_ = (_4423_ ? _0628_ : _0506_);
+	assign _0630_ = _0361_ | _0100_;
+	assign _0631_ = (_4389_ ? _4408_ : _0065_);
+	assign _0632_ = (_4423_ ? _0631_ : _0630_);
+	assign _0634_ = (_0127_ ? _0629_ : _0632_);
+	assign _0635_ = (_4423_ ? _4443_ : _0090_);
+	assign _0636_ = (_0127_ ? _0520_ : _0635_);
+	assign _0637_ = (_0146_ ? _0634_ : _0636_);
+	assign _0638_ = (_4423_ ? _4427_ : _0506_);
+	assign _0639_ = (_4380_ ? _0065_ : _4408_);
+	assign _0640_ = (_4423_ ? _0372_ : _0639_);
+	assign _0641_ = (_0127_ ? _0638_ : _0640_);
+	assign _0642_ = (_4423_ ? _0446_ : _0207_);
+	assign _0643_ = (_0127_ ? _0193_ : _0642_);
+	assign _0645_ = (_0146_ ? _0641_ : _0643_);
+	assign _0646_ = (\mchip.pong.game.vga.pix_ind [0] ? _0645_ : _0637_);
+	assign _0647_ = (_1103_ ? _0627_ : _0646_);
+	assign _0648_ = (_0044_ ? _0597_ : _0647_);
+	assign _0649_ = (_4387_ ? _4381_ : _0446_);
+	assign _0650_ = (_4423_ ? _0421_ : _0403_);
+	assign _0651_ = (_0127_ ? _0649_ : _0650_);
+	assign _0652_ = (_0127_ ? _0048_ : _0160_);
+	assign _0653_ = (_0146_ ? _0651_ : _0652_);
+	assign _0654_ = _4433_ & ~_4389_;
+	assign _0656_ = ~_0654_;
+	assign _0657_ = (_4387_ ? _0153_ : _0656_);
+	assign _0658_ = (_4387_ ? _0403_ : _0560_);
+	assign _0659_ = (_0127_ ? _0657_ : _0658_);
+	assign _0660_ = (_4389_ ? _4374_ : _4407_);
+	assign _0661_ = (_4423_ ? _0454_ : _0660_);
+	assign _0662_ = (_0056_ ? _0429_ : _0661_);
+	assign _0663_ = (_0146_ ? _0659_ : _0662_);
+	assign _0664_ = (\mchip.pong.game.vga.pix_ind [0] ? _0663_ : _0653_);
+	assign _0665_ = ~_0093_;
+	assign _0667_ = (_4387_ ? _0665_ : _0656_);
+	assign _0668_ = (_4387_ ? _4443_ : _4391_);
+	assign _0669_ = (_0127_ ? _0667_ : _0668_);
+	assign _0670_ = ~_0181_;
+	assign _0671_ = _4389_ & ~_0259_;
+	assign _0672_ = _0671_ | _0417_;
+	assign _0673_ = (_4423_ ? _0451_ : _0672_);
+	assign _0674_ = (_0056_ ? _0670_ : _0673_);
+	assign _0675_ = (_0146_ ? _0669_ : _0674_);
+	assign _0676_ = (_4387_ ? _0054_ : _0601_);
+	assign _0678_ = (_4380_ ? _4419_ : _4427_);
+	assign _0679_ = (_4423_ ? _0678_ : _0446_);
+	assign _0680_ = (_0127_ ? _0676_ : _0679_);
+	assign _0681_ = _0572_ & _0127_;
+	assign _0682_ = _0238_ | _0681_;
+	assign _0683_ = (_0146_ ? _0680_ : _0682_);
+	assign _0684_ = (\mchip.pong.game.vga.pix_ind [0] ? _0683_ : _0675_);
+	assign _0685_ = (_1103_ ? _0664_ : _0684_);
+	assign _0686_ = (_4387_ ? _4389_ : _0435_);
+	assign _0687_ = (_4380_ ? _4375_ : _0582_);
+	assign _0689_ = (_4423_ ? _0615_ : _0687_);
+	assign _0690_ = (_0127_ ? _0686_ : _0689_);
+	assign _0691_ = (_0146_ ? _0690_ : _0242_);
+	assign _0692_ = (_4387_ ? _4434_ : _0579_);
+	assign _0693_ = (_4387_ ? _0117_ : _0107_);
+	assign _0694_ = (_0127_ ? _0692_ : _0693_);
+	assign _0695_ = (_0146_ ? _0694_ : _0126_);
+	assign _0696_ = (\mchip.pong.game.vga.pix_ind [0] ? _0695_ : _0691_);
+	assign _0697_ = (_4423_ ? _4389_ : _0153_);
+	assign _0698_ = (_4423_ ? _0101_ : _0579_);
+	assign _0700_ = (_0127_ ? _0697_ : _0698_);
+	assign _0701_ = (_0146_ ? _0700_ : _0156_);
+	assign _0702_ = (_4423_ ? _4389_ : _4409_);
+	assign _0703_ = ~_0401_;
+	assign _0704_ = (_4387_ ? _0703_ : _0093_);
+	assign _0705_ = (_0127_ ? _0702_ : _0704_);
+	assign _0706_ = (_0056_ ? _0420_ : _0399_);
+	assign _0707_ = (_0146_ ? _0705_ : _0706_);
+	assign _0708_ = (\mchip.pong.game.vga.pix_ind [0] ? _0707_ : _0701_);
+	assign _0709_ = (_1103_ ? _0696_ : _0708_);
+	assign _0711_ = (_0044_ ? _0685_ : _0709_);
+	assign _0712_ = (_0088_ ? _0648_ : _0711_);
+	assign _0713_ = (_4387_ ? _0113_ : _0404_);
+	assign _0714_ = _0127_ & ~_0713_;
+	assign _0715_ = (_0146_ ? _0714_ : _0340_);
+	assign _0716_ = (\mchip.pong.game.vga.pix_ind [0] ? _0715_ : _0339_);
+	assign _0717_ = (_1103_ ? _0337_ : _0716_);
+	assign _0718_ = (_0044_ ? _0717_ : _0329_);
+	assign _0719_ = (_0088_ ? _0718_ : _0307_);
+	assign _0720_ = (_4368_ ? _0712_ : _0719_);
+	assign _0722_ = (_4367_ ? _0559_ : _0720_);
+	assign _0723_ = \mchip.pong.sync.o_out [0] & ~\mchip.pong.sync.o_out [1];
+	assign _0724_ = _0128_ & ~_0056_;
+	assign _0725_ = ~_0724_;
+	assign _0726_ = ~(_0119_ & _4387_);
+	assign _0727_ = ~_0726_;
+	assign _0728_ = (_4387_ ? _0454_ : _0035_);
+	assign _0729_ = (_0127_ ? _0727_ : _0728_);
+	assign _0730_ = (_0146_ ? _0725_ : _0729_);
+	assign _0731_ = _0127_ & ~_0686_;
+	assign _0733_ = ~_0731_;
+	assign _0734_ = (_0127_ ? _4387_ : _0420_);
+	assign _0735_ = (_0146_ ? _0733_ : _0734_);
+	assign _0736_ = (\mchip.pong.game.vga.pix_ind [0] ? _0735_ : _0730_);
+	assign _0737_ = _0143_ | _0056_;
+	assign _0738_ = (_4387_ ? _0295_ : _0119_);
+	assign _0739_ = (_0056_ ? _0120_ : _0738_);
+	assign _0740_ = (_0146_ ? _0737_ : _0739_);
+	assign _0741_ = \mchip.pong.game.vga.pix_ind [0] & ~_0740_;
+	assign _0742_ = _4423_ | _4381_;
+	assign _0743_ = (_4387_ ? _0118_ : _4437_);
+	assign _0744_ = (_0056_ ? _0742_ : _0743_);
+	assign _0745_ = (_4387_ ? _4407_ : _0054_);
+	assign _0746_ = (_0056_ ? _0383_ : _0745_);
+	assign _0747_ = (_0146_ ? _0744_ : _0746_);
+	assign _0748_ = _0747_ & ~\mchip.pong.game.vga.pix_ind [0];
+	assign _0749_ = _0748_ | _0741_;
+	assign _0750_ = (_1103_ ? _0736_ : _0749_);
+	assign _0751_ = (_0044_ ? _0124_ : _0750_);
+	assign _0752_ = (_0088_ ? _0084_ : _0751_);
+	assign _0754_ = _4437_ & _4387_;
+	assign _0755_ = ~_0754_;
+	assign _0756_ = ~_0259_;
+	assign _0757_ = (_4380_ ? _4407_ : _0756_);
+	assign _0758_ = (_4387_ ? _0153_ : _0757_);
+	assign _0759_ = (_0056_ ? _0755_ : _0758_);
+	assign _0760_ = (_4387_ ? _4380_ : _0603_);
+	assign _0761_ = (_4387_ ? _0117_ : _0391_);
+	assign _0762_ = ~_0761_;
+	assign _0763_ = (_0127_ ? _0760_ : _0762_);
+	assign _0765_ = (_0146_ ? _0759_ : _0763_);
+	assign _0766_ = (_4423_ ? _0131_ : _0113_);
+	assign _0767_ = (_0127_ ? _0162_ : _0766_);
+	assign _0768_ = ~_0767_;
+	assign _0769_ = (_4387_ ? _4389_ : _0401_);
+	assign _0770_ = (_4387_ ? _0035_ : _0153_);
+	assign _0771_ = (_0127_ ? _0769_ : _0770_);
+	assign _0772_ = (_0146_ ? _0768_ : _0771_);
+	assign _0773_ = (\mchip.pong.game.vga.pix_ind [0] ? _0772_ : _0765_);
+	assign _0774_ = (_0127_ ? _0166_ : _0500_);
+	assign _0776_ = ~_0774_;
+	assign _0777_ = _4428_ | _4387_;
+	assign _0778_ = (_4423_ ? _0054_ : _0035_);
+	assign _0779_ = (_0127_ ? _0777_ : _0778_);
+	assign _0780_ = (_0146_ ? _0776_ : _0779_);
+	assign _0781_ = _0127_ & ~_0697_;
+	assign _0782_ = ~_0781_;
+	assign _0783_ = _4387_ & ~_4417_;
+	assign _0784_ = (_4387_ ? _0054_ : _4381_);
+	assign _0785_ = (_0127_ ? _0783_ : _0784_);
+	assign _0787_ = (_0146_ ? _0782_ : _0785_);
+	assign _0788_ = (\mchip.pong.game.vga.pix_ind [0] ? _0787_ : _0780_);
+	assign _0789_ = (_1103_ ? _0773_ : _0788_);
+	assign _0790_ = (_4389_ ? _4423_ : _4424_);
+	assign _0791_ = (_0056_ ? _4387_ : _0790_);
+	assign _0792_ = ~_0114_;
+	assign _0793_ = (_4423_ ? _4443_ : _0792_);
+	assign _0794_ = (_0127_ ? _0488_ : _0793_);
+	assign _0795_ = (_0146_ ? _0791_ : _0794_);
+	assign _0796_ = (_4423_ ? _0066_ : _4381_);
+	assign _0797_ = _0796_ | _0056_;
+	assign _0798_ = (_4423_ ? _0153_ : _0792_);
+	assign _0799_ = _0798_ | _0127_;
+	assign _0800_ = (_0146_ ? _0797_ : _0799_);
+	assign _0801_ = (\mchip.pong.game.vga.pix_ind [0] ? _0800_ : _0795_);
+	assign _0802_ = (_0056_ ? _0193_ : _0784_);
+	assign _0803_ = (_0146_ ? _0802_ : _0799_);
+	assign _0804_ = _0179_ | ~_0046_;
+	assign _0805_ = _0421_ & ~_4387_;
+	assign _0806_ = (_0127_ ? _0804_ : _0805_);
+	assign _0808_ = (_4389_ ? _4372_ : _0756_);
+	assign _0809_ = _0808_ | _4387_;
+	assign _0810_ = (_4387_ ? _0035_ : _4409_);
+	assign _0811_ = (_0127_ ? _0809_ : _0810_);
+	assign _0812_ = (_0146_ ? _0806_ : _0811_);
+	assign _0813_ = (\mchip.pong.game.vga.pix_ind [0] ? _0812_ : _0803_);
+	assign _0814_ = (_1103_ ? _0801_ : _0813_);
+	assign _0815_ = (_0044_ ? _0789_ : _0814_);
+	assign _0816_ = (_4387_ ? _0054_ : _0479_);
+	assign _0817_ = (_4423_ ? _0035_ : _0372_);
+	assign _0819_ = (_0127_ ? _0816_ : _0817_);
+	assign _0820_ = (_4380_ ? _4419_ : _4407_);
+	assign _0821_ = _0403_ | _0366_;
+	assign _0822_ = (_4423_ ? _0821_ : _0820_);
+	assign _0823_ = (_4387_ ? _0792_ : _4434_);
+	assign _0824_ = (_0127_ ? _0822_ : _0823_);
+	assign _0825_ = (_0146_ ? _0819_ : _0824_);
+	assign _0826_ = (_4389_ ? _4372_ : _4424_);
+	assign _0827_ = (_4387_ ? _4380_ : _0826_);
+	assign _0828_ = ~(_0639_ | _4423_);
+	assign _0830_ = ~_0828_;
+	assign _0831_ = (_0127_ ? _0827_ : _0830_);
+	assign _0832_ = (_4423_ ? _0474_ : _0401_);
+	assign _0833_ = ~_0832_;
+	assign _0834_ = (_4387_ ? _0792_ : _4409_);
+	assign _0835_ = (_0127_ ? _0833_ : _0834_);
+	assign _0836_ = (_0146_ ? _0831_ : _0835_);
+	assign _0837_ = (\mchip.pong.game.vga.pix_ind [0] ? _0836_ : _0825_);
+	assign _0838_ = (_4387_ ? _0035_ : _0444_);
+	assign _0839_ = (_4380_ ? _4424_ : _4407_);
+	assign _0841_ = ~_0839_;
+	assign _0842_ = (_4423_ ? _0421_ : _0841_);
+	assign _0843_ = (_0127_ ? _0838_ : _0842_);
+	assign _0844_ = (_4423_ ? _0093_ : _0560_);
+	assign _0845_ = ~_4380_;
+	assign _0846_ = (_4423_ ? _0845_ : _0203_);
+	assign _0847_ = (_0127_ ? _0844_ : _0846_);
+	assign _0848_ = (_0146_ ? _0843_ : _0847_);
+	assign _0849_ = _0035_ ^ _4423_;
+	assign _0850_ = _4380_ & _4427_;
+	assign _0852_ = ~_0850_;
+	assign _0853_ = (_4423_ ? _0852_ : _0435_);
+	assign _0854_ = (_0127_ ? _0849_ : _0853_);
+	assign _0855_ = (_4423_ ? _0421_ : _4428_);
+	assign _0856_ = (_4423_ ? _0845_ : _4428_);
+	assign _0857_ = (_0127_ ? _0855_ : _0856_);
+	assign _0858_ = (_0146_ ? _0854_ : _0857_);
+	assign _0859_ = (\mchip.pong.game.vga.pix_ind [0] ? _0858_ : _0848_);
+	assign _0860_ = (_1103_ ? _0837_ : _0859_);
+	assign _0861_ = (_4387_ ? _0203_ : _0454_);
+	assign _0863_ = (_4423_ ? _0542_ : _0472_);
+	assign _0864_ = (_0127_ ? _0861_ : _0863_);
+	assign _0865_ = (_4389_ ? _0065_ : _0577_);
+	assign _0866_ = _0865_ | _4423_;
+	assign _0867_ = (_4423_ ? _0206_ : _0792_);
+	assign _0868_ = (_0127_ ? _0866_ : _0867_);
+	assign _0869_ = (_0146_ ? _0864_ : _0868_);
+	assign _0870_ = (_4387_ ? _0203_ : _4407_);
+	assign _0871_ = ~(_4389_ & _4371_);
+	assign _0872_ = _0871_ | _4387_;
+	assign _0874_ = (_0127_ ? _0870_ : _0872_);
+	assign _0875_ = _4387_ & ~_0421_;
+	assign _0876_ = ~_0875_;
+	assign _0877_ = (_0127_ ? _0876_ : _0867_);
+	assign _0878_ = (_0146_ ? _0874_ : _0877_);
+	assign _0879_ = (\mchip.pong.game.vga.pix_ind [0] ? _0878_ : _0869_);
+	assign _0880_ = (_4374_ ? _4389_ : _4372_);
+	assign _0881_ = (_4387_ ? _0054_ : _0880_);
+	assign _0882_ = _0259_ & ~_4380_;
+	assign _0883_ = ~_0882_;
+	assign _0885_ = _0883_ | _4387_;
+	assign _0886_ = (_0127_ ? _0881_ : _0885_);
+	assign _0887_ = (_0127_ ? _0501_ : _0867_);
+	assign _0888_ = (_0146_ ? _0886_ : _0887_);
+	assign _0889_ = (_4387_ ? _0054_ : _0671_);
+	assign _0890_ = (_4380_ ? _0425_ : _0756_);
+	assign _0891_ = _0890_ | _4387_;
+	assign _0892_ = (_0127_ ? _0889_ : _0891_);
+	assign _0893_ = (_4423_ ? _0107_ : _0114_);
+	assign _0894_ = (_0056_ ? _0867_ : _0893_);
+	assign _0896_ = (_0146_ ? _0892_ : _0894_);
+	assign _0897_ = (\mchip.pong.game.vga.pix_ind [0] ? _0896_ : _0888_);
+	assign _0898_ = (_1103_ ? _0879_ : _0897_);
+	assign _0899_ = (_0044_ ? _0860_ : _0898_);
+	assign _0900_ = (_0088_ ? _0815_ : _0899_);
+	assign _0901_ = (_4368_ ? _0752_ : _0900_);
+	assign _0902_ = _0203_ | _4423_;
+	assign _0903_ = ~_0254_;
+	assign _0904_ = (_4387_ ? _4380_ : _0903_);
+	assign _0905_ = (_0056_ ? _0902_ : _0904_);
+	assign _0907_ = (_0127_ ? _0726_ : _0834_);
+	assign _0908_ = (_0146_ ? _0905_ : _0907_);
+	assign _0909_ = (_0127_ ? _0459_ : _0902_);
+	assign _0910_ = (_0127_ ? _0572_ : _0834_);
+	assign _0911_ = (_0146_ ? _0909_ : _0910_);
+	assign _0912_ = (\mchip.pong.game.vga.pix_ind [0] ? _0911_ : _0908_);
+	assign _0913_ = (_4387_ ? _0054_ : _4437_);
+	assign _0914_ = _0361_ | _4423_;
+	assign _0915_ = (_0127_ ? _0913_ : _0914_);
+	assign _0916_ = (_4387_ ? _0451_ : _0114_);
+	assign _0917_ = (_0056_ ? _0867_ : _0916_);
+	assign _0918_ = (_0146_ ? _0915_ : _0917_);
+	assign _0919_ = (_4423_ ? _0421_ : _0299_);
+	assign _0920_ = (_0056_ ? _0867_ : _0919_);
+	assign _0921_ = (_0146_ ? _0915_ : _0920_);
+	assign _0922_ = (\mchip.pong.game.vga.pix_ind [0] ? _0921_ : _0918_);
+	assign _0923_ = (_1103_ ? _0912_ : _0922_);
+	assign _0924_ = (_4387_ ? _4381_ : _0479_);
+	assign _0925_ = (_4423_ ? _4391_ : _0035_);
+	assign _0926_ = (_0127_ ? _0924_ : _0925_);
+	assign _0928_ = _0678_ | _4423_;
+	assign _0929_ = (_4387_ ? _4390_ : _0153_);
+	assign _0930_ = (_0127_ ? _0928_ : _0929_);
+	assign _0931_ = (_0146_ ? _0926_ : _0930_);
+	assign _0932_ = (_4387_ ? _4437_ : _0114_);
+	assign _0933_ = (_4423_ ? _4391_ : _0792_);
+	assign _0934_ = (_0127_ ? _0932_ : _0933_);
+	assign _0935_ = (_0127_ ? _0550_ : _0823_);
+	assign _0936_ = (_0146_ ? _0934_ : _0935_);
+	assign _0937_ = (\mchip.pong.game.vga.pix_ind [0] ? _0936_ : _0931_);
+	assign _0939_ = (_4423_ ? _0066_ : _0035_);
+	assign _0940_ = (_4423_ ? _0421_ : _0792_);
+	assign _0941_ = (_0127_ ? _0939_ : _0940_);
+	assign _0942_ = (_4387_ ? _4428_ : _4443_);
+	assign _0943_ = _0056_ & ~_0942_;
+	assign _0944_ = ~_0943_;
+	assign _0945_ = (_0146_ ? _0941_ : _0944_);
+	assign _0946_ = (_4423_ ? _0671_ : _0035_);
+	assign _0947_ = (_0056_ ? _0940_ : _0946_);
+	assign _0948_ = (_4423_ ? _4389_ : _0792_);
+	assign _0950_ = _0056_ & ~_0948_;
+	assign _0951_ = ~_0950_;
+	assign _0952_ = (_0146_ ? _0947_ : _0951_);
+	assign _0953_ = (\mchip.pong.game.vga.pix_ind [0] ? _0952_ : _0945_);
+	assign _0954_ = (_1103_ ? _0937_ : _0953_);
+	assign _0955_ = (_0044_ ? _0923_ : _0954_);
+	assign _0956_ = (_4387_ ? _4381_ : _0114_);
+	assign _0957_ = (_4371_ ? _4374_ : _4380_);
+	assign _0958_ = (_4387_ ? _4407_ : _0957_);
+	assign _0959_ = (_0127_ ? _0956_ : _0958_);
+	assign _0961_ = ~_4437_;
+	assign _0962_ = (_4423_ ? _0070_ : _0961_);
+	assign _0963_ = (_4423_ ? _0153_ : _0090_);
+	assign _0964_ = (_0127_ ? _0962_ : _0963_);
+	assign _0965_ = (_0146_ ? _0959_ : _0964_);
+	assign _0966_ = (_4423_ ? _0100_ : _0153_);
+	assign _0967_ = _4423_ | ~_0101_;
+	assign _0968_ = (_0127_ ? _0966_ : _0967_);
+	assign _0969_ = (_4423_ ? _0119_ : _0107_);
+	assign _0970_ = ~_4389_;
+	assign _0972_ = (_4387_ ? _0970_ : _4381_);
+	assign _0973_ = (_0127_ ? _0969_ : _0972_);
+	assign _0974_ = (_0146_ ? _0968_ : _0973_);
+	assign _0975_ = (\mchip.pong.game.vga.pix_ind [0] ? _0974_ : _0965_);
+	assign _0976_ = (_4387_ ? _0665_ : _0114_);
+	assign _0977_ = (_4423_ ? _0421_ : _4390_);
+	assign _0978_ = (_0127_ ? _0976_ : _0977_);
+	assign _0979_ = (_4389_ ? _4372_ : _0065_);
+	assign _0980_ = _0979_ | _4423_;
+	assign _0981_ = (_4423_ ? _4409_ : _0035_);
+	assign _0983_ = (_0127_ ? _0980_ : _0981_);
+	assign _0984_ = (_0146_ ? _0978_ : _0983_);
+	assign _0985_ = (_4387_ ? _0054_ : _0560_);
+	assign _0986_ = _4391_ ^ _4387_;
+	assign _0987_ = (_0127_ ? _0985_ : _0986_);
+	assign _0988_ = (_4387_ ? _0090_ : _0582_);
+	assign _0989_ = _4409_ | ~_0093_;
+	assign _0990_ = (_4387_ ? _0361_ : _0989_);
+	assign _0991_ = (_0127_ ? _0988_ : _0990_);
+	assign _0992_ = (_0146_ ? _0987_ : _0991_);
+	assign _0994_ = (\mchip.pong.game.vga.pix_ind [0] ? _0992_ : _0984_);
+	assign _0995_ = (_1103_ ? _0975_ : _0994_);
+	assign _0996_ = (_4387_ ? _0845_ : _4390_);
+	assign _0997_ = (_0056_ ? _0193_ : _0996_);
+	assign _0998_ = ~_0108_;
+	assign _0999_ = (_4423_ ? _0035_ : _0578_);
+	assign _1000_ = (_0056_ ? _0998_ : _0999_);
+	assign _1001_ = (_0146_ ? _0997_ : _1000_);
+	assign _1002_ = ~_4434_;
+	assign _1003_ = (_4387_ ? _1002_ : _0506_);
+	assign _1005_ = ~_1003_;
+	assign _1006_ = (_4423_ ? _0451_ : _0852_);
+	assign _1007_ = (_0127_ ? _1005_ : _1006_);
+	assign _1008_ = _0065_ ^ _4380_;
+	assign _1009_ = (_4389_ ? _4427_ : _4407_);
+	assign _1010_ = ~_1009_;
+	assign _1011_ = (_4423_ ? _1010_ : _1008_);
+	assign _1012_ = (_4387_ ? _0903_ : _0035_);
+	assign _1013_ = (_0127_ ? _1011_ : _1012_);
+	assign _1014_ = (_0146_ ? _1007_ : _1013_);
+	assign _1015_ = (\mchip.pong.game.vga.pix_ind [0] ? _1014_ : _1001_);
+	assign _1016_ = (_4387_ ? _4389_ : _0067_);
+	assign _1017_ = (_0127_ ? _0154_ : _1016_);
+	assign _1018_ = (_4389_ ? _0425_ : _4408_);
+	assign _1019_ = (_4423_ ? _4371_ : _1018_);
+	assign _1020_ = (_4380_ ? _4407_ : _4375_);
+	assign _1021_ = (_4423_ ? _4381_ : _1020_);
+	assign _1022_ = (_0127_ ? _1019_ : _1021_);
+	assign _1023_ = (_0146_ ? _1017_ : _1022_);
+	assign _1024_ = ~(_0101_ & _0871_);
+	assign _1025_ = (_4387_ ? _4409_ : _1024_);
+	assign _1026_ = (_4387_ ? _1024_ : _0451_);
+	assign _1027_ = (_0127_ ? _1025_ : _1026_);
+	assign _1028_ = (_4374_ ? _4389_ : _4371_);
+	assign _1029_ = (_4423_ ? _0391_ : _1028_);
+	assign _1030_ = (_4389_ ? _4375_ : _0577_);
+	assign _1031_ = (_4423_ ? _0054_ : _1030_);
+	assign _1032_ = (_0127_ ? _1029_ : _1031_);
+	assign _1033_ = (_0146_ ? _1027_ : _1032_);
+	assign _1034_ = (\mchip.pong.game.vga.pix_ind [0] ? _1033_ : _1023_);
+	assign _1035_ = (_1103_ ? _1015_ : _1034_);
+	assign _1036_ = (_0044_ ? _0995_ : _1035_);
+	assign _1037_ = (_0088_ ? _0955_ : _1036_);
+	assign _1038_ = (_4387_ ? _4417_ : _0540_);
+	assign _1039_ = (_4423_ ? _0093_ : _0404_);
+	assign _1040_ = (_0127_ ? _1038_ : _1039_);
+	assign _1041_ = ~(_4423_ | _4427_);
+	assign _1042_ = (_0056_ ? _0386_ : _1041_);
+	assign _1043_ = (_0146_ ? _1040_ : _1042_);
+	assign _1044_ = (_4387_ ? _4443_ : _1024_);
+	assign _1046_ = (_4423_ ? _0451_ : _0880_);
+	assign _1047_ = (_0127_ ? _1044_ : _1046_);
+	assign _1048_ = (_4423_ ? _0314_ : _0871_);
+	assign _1049_ = (_0056_ ? _0383_ : _1048_);
+	assign _1050_ = (_0146_ ? _1047_ : _1049_);
+	assign _1051_ = (\mchip.pong.game.vga.pix_ind [0] ? _1050_ : _1043_);
+	assign _1052_ = (_1103_ ? _0337_ : _1051_);
+	assign _1053_ = (_0044_ ? _1052_ : _0329_);
+	assign _1054_ = (_0088_ ? _1053_ : _0307_);
+	assign _1055_ = (_4368_ ? _1037_ : _1054_);
+	assign _1057_ = (_4367_ ? _0901_ : _1055_);
+	assign _1058_ = \mchip.pong.sync.o_out [1] & ~\mchip.pong.sync.o_out [0];
+	assign _1059_ = (_1058_ ? _1057_ : _0347_);
+	assign _1060_ = (_0723_ ? _0722_ : _1059_);
+	assign _1061_ = ~(\mchip.pong.sync.o_out [1] | \mchip.pong.sync.o_out [0]);
+	assign _1062_ = (_1061_ ? _0347_ : _1060_);
+	assign _1063_ = ~(\mchip.pong.game.ball.dpath.ballX [7] & \mchip.pong.game.ball.dpath.ballX [6]);
+	assign _1064_ = _1063_ | _1241_;
+	assign _1065_ = _1241_ & ~_1063_;
+	assign _1066_ = _1065_ & ~_1294_;
+	assign _1068_ = _1064_ & ~_1066_;
+	assign _1069_ = _1338_ & ~_1068_;
+	assign _1070_ = ~_4239_;
+	assign _1071_ = \mchip.pong.game.ball.dpath.ballX [8] & ~_1068_;
+	assign _1072_ = _1071_ ^ \mchip.pong.game.ball.dpath.ballX [9];
+	assign _1073_ = _1072_ ^ _1070_;
+	assign _1074_ = ~\mchip.pong.game.ball.dpath.ballX [8];
+	assign _1075_ = _1068_ ^ _1074_;
+	assign _1076_ = _1075_ ^ _4237_;
+	assign _1077_ = _1076_ | ~_1073_;
+	assign _1079_ = ~(_1077_ | _1069_);
+	assign _1080_ = ~_4243_;
+	assign _1081_ = _1294_ & _1241_;
+	assign _1082_ = \mchip.pong.game.ball.dpath.ballX [6] & ~_1081_;
+	assign _1083_ = _1082_ ^ \mchip.pong.game.ball.dpath.ballX [7];
+	assign _1084_ = _1083_ ^ _1080_;
+	assign _1085_ = ~\mchip.pong.game.ball.dpath.ballX [6];
+	assign _1086_ = _1081_ ^ _1085_;
+	assign _1087_ = _1086_ ^ _4244_;
+	assign _1088_ = _1084_ & ~_1087_;
+	assign _1090_ = _1294_ ^ \mchip.pong.game.ball.dpath.ballX [4];
+	assign _1091_ = _1090_ ^ _4333_;
+	assign _1092_ = _1294_ & ~\mchip.pong.game.ball.dpath.ballX [4];
+	assign _1093_ = _1092_ ^ \mchip.pong.game.ball.dpath.ballX [5];
+	assign _1094_ = ~(_1093_ ^ _4365_);
+	assign _1095_ = _1094_ | _1091_;
+	assign _1096_ = _1088_ & ~_1095_;
+	assign _1097_ = _3381_ ^ \mchip.pong.game.ball.dpath.ballX [3];
+	assign _1098_ = _1097_ ^ _4330_;
+	assign _1099_ = ~(\mchip.pong.game.ball.dpath.ballX [1] ^ \mchip.pong.game.ball.dpath.ballX [2]);
+	assign _1101_ = _1099_ ^ \mchip.pong.game.vga.pix_ind [2];
+	assign _1102_ = _1098_ & ~_1101_;
+	assign _1104_ = \mchip.pong.game.vga.pix_ind [0] & ~_1103_;
+	assign _1105_ = _1104_ & _1102_;
+	assign _1106_ = ~(_1105_ & _1096_);
+	assign _1107_ = _1079_ & ~_1106_;
+	assign _1108_ = _1072_ | _1070_;
+	assign _1109_ = _1075_ | ~_4237_;
+	assign _1110_ = _1073_ & ~_1109_;
+	assign _1112_ = _1108_ & ~_1110_;
+	assign _1113_ = _1083_ | _1080_;
+	assign _1114_ = _1086_ | ~_4244_;
+	assign _1115_ = _1084_ & ~_1114_;
+	assign _1116_ = _1113_ & ~_1115_;
+	assign _1117_ = _1093_ | _4365_;
+	assign _1118_ = _4333_ & ~_1090_;
+	assign _1119_ = _1118_ & ~_1094_;
+	assign _1120_ = _1117_ & ~_1119_;
+	assign _1121_ = _1088_ & ~_1120_;
+	assign _1123_ = _1116_ & ~_1121_;
+	assign _1124_ = _1097_ | _4330_;
+	assign _1125_ = _1099_ | _4328_;
+	assign _1126_ = _1098_ & ~_1125_;
+	assign _1127_ = _1124_ & ~_1126_;
+	assign _1128_ = ~(\mchip.pong.game.vga.pix_ind [1] & \mchip.pong.game.ball.dpath.ballX [1]);
+	assign _1129_ = _1128_ & ~_1104_;
+	assign _1130_ = _1102_ & ~_1129_;
+	assign _1131_ = _1127_ & ~_1130_;
+	assign _1132_ = _1096_ & ~_1131_;
+	assign _1134_ = _1123_ & ~_1132_;
+	assign _1135_ = ~(_1134_ | _1077_);
+	assign _1136_ = _1112_ & ~_1135_;
+	assign _1137_ = _1136_ | _1069_;
+	assign _1138_ = ~(_1137_ | _1107_);
+	assign _1139_ = _4239_ ^ _3370_;
+	assign _1140_ = _4237_ ^ \mchip.pong.game.ball.dpath.ballX [8];
+	assign _1141_ = _1139_ & ~_1140_;
+	assign _1142_ = _4243_ ^ _3271_;
+	assign _1143_ = _4244_ ^ \mchip.pong.game.ball.dpath.ballX [6];
+	assign _1145_ = _1142_ & ~_1143_;
+	assign _1146_ = ~(_4366_ & _4362_);
+	assign _1147_ = _1145_ & ~_1146_;
+	assign _1148_ = _1103_ & ~\mchip.pong.game.vga.pix_ind [0];
+	assign _1149_ = _1148_ & _4358_;
+	assign _1150_ = _1149_ & _1147_;
+	assign _1151_ = ~(_1150_ & _1141_);
+	assign _1152_ = _4239_ | _3370_;
+	assign _1153_ = _4237_ | _1074_;
+	assign _1154_ = _1139_ & ~_1153_;
+	assign _1156_ = _1152_ & ~_1154_;
+	assign _1157_ = _4243_ | _3271_;
+	assign _1158_ = _4244_ | _1085_;
+	assign _1159_ = _1142_ & ~_1158_;
+	assign _1160_ = _1157_ & ~_1159_;
+	assign _1161_ = ~(_4365_ & \mchip.pong.game.ball.dpath.ballX [5]);
+	assign _1162_ = _4366_ & _4361_;
+	assign _1163_ = _1161_ & ~_1162_;
+	assign _1164_ = _1145_ & ~_1163_;
+	assign _1165_ = _1160_ & ~_1164_;
+	assign _1167_ = _4352_ & _4356_;
+	assign _1168_ = _4351_ & ~_1167_;
+	assign _1169_ = _0043_ & ~_1148_;
+	assign _1170_ = _4358_ & ~_1169_;
+	assign _1171_ = _1168_ & ~_1170_;
+	assign _1172_ = _1147_ & ~_1171_;
+	assign _1173_ = _1165_ & ~_1172_;
+	assign _1174_ = _1141_ & ~_1173_;
+	assign _1175_ = _1156_ & ~_1174_;
+	assign _1176_ = _1151_ & ~_1175_;
+	assign _1178_ = _4230_ ^ _1622_;
+	assign _1179_ = _1600_ & ~_1178_;
+	assign _1180_ = _1805_ | ~_4216_;
+	assign _1181_ = ~(_4216_ ^ _1805_);
+	assign _1182_ = _1761_ | ~_4217_;
+	assign _1183_ = _1181_ & ~_1182_;
+	assign _1184_ = _1180_ & ~_1183_;
+	assign _1185_ = _4217_ ^ _1761_;
+	assign _1186_ = _1181_ & ~_1185_;
+	assign _1187_ = _1675_ | ~_4220_;
+	assign _1188_ = _4220_ ^ _1675_;
+	assign _1189_ = _4221_ & ~_1697_;
+	assign _1190_ = _1189_ & ~_1188_;
+	assign _1191_ = _1187_ & ~_1190_;
+	assign _1192_ = _1186_ & ~_1191_;
+	assign _1193_ = _1184_ & ~_1192_;
+	assign _1194_ = _4221_ ^ _1697_;
+	assign _1195_ = _1194_ | _1188_;
+	assign _1196_ = _1186_ & ~_1195_;
+	assign _1197_ = _4205_ | _1871_;
+	assign _1198_ = _4205_ ^ _1871_;
+	assign _1199_ = _4206_ | _1893_;
+	assign _1200_ = _1198_ & ~_1199_;
+	assign _1201_ = _1197_ & ~_1200_;
+	assign _1202_ = _4318_ ^ _1893_;
+	assign _1203_ = _1198_ & ~_1202_;
+	assign _1204_ = _1937_ | ~_4317_;
+	assign _1205_ = \mchip.pong.game.ball.dpath.ballY [0] | ~\mchip.pong.game.vga.line_ind [0];
+	assign _1206_ = _4317_ ^ _1937_;
+	assign _1207_ = _1205_ & ~_1206_;
+	assign _1209_ = _1204_ & ~_1207_;
+	assign _1210_ = _1203_ & ~_1209_;
+	assign _1211_ = _1201_ & ~_1210_;
+	assign _1212_ = _1196_ & ~_1211_;
+	assign _1213_ = _1193_ & ~_1212_;
+	assign _1214_ = _1179_ & ~_1213_;
+	assign _1215_ = _1622_ | ~_4230_;
+	assign _1216_ = _1600_ & ~_1215_;
+	assign _1217_ = _1216_ | _1214_;
+	assign _1218_ = \mchip.pong.game.ball.dpath.ballY [0] ^ \mchip.pong.game.vga.line_ind [0];
+	assign _1220_ = ~(_1218_ | _1206_);
+	assign _1221_ = _1220_ & _1203_;
+	assign _1222_ = ~(_1221_ & _1196_);
+	assign _1223_ = _1179_ & ~_1222_;
+	assign _1224_ = _1217_ & ~_1223_;
+	assign _1225_ = _4230_ ^ _1611_;
+	assign _1226_ = _4406_ & _4402_;
+	assign _1227_ = _4216_ ^ _2877_;
+	assign _1228_ = _4217_ ^ \mchip.pong.game.ball.dpath.ballY [6];
+	assign _1229_ = _1228_ | ~_1227_;
+	assign _1231_ = _1226_ & ~_1229_;
+	assign _1232_ = _4370_ | _4374_;
+	assign _1233_ = ~(_1232_ | _4397_);
+	assign _1234_ = _1233_ & _1231_;
+	assign _1235_ = ~(_1234_ & _1225_);
+	assign _1236_ = _4230_ | _1611_;
+	assign _1237_ = _4216_ | _2877_;
+	assign _1238_ = _4217_ | _1739_;
+	assign _1239_ = _1227_ & ~_1238_;
+	assign _1240_ = _1237_ & ~_1239_;
+	assign _1242_ = _4220_ | _2658_;
+	assign _1243_ = _4406_ & _4401_;
+	assign _1244_ = _1242_ & ~_1243_;
+	assign _1245_ = ~(_1244_ | _1229_);
+	assign _1246_ = _1240_ & ~_1245_;
+	assign _1247_ = _4319_ | _4393_;
+	assign _1248_ = \mchip.pong.game.ball.dpath.ballY [2] & ~_4318_;
+	assign _1249_ = _1248_ & ~_4385_;
+	assign _1250_ = _1247_ & ~_1249_;
+	assign _1251_ = _4317_ | _3073_;
+	assign _1253_ = _4373_ & ~_4370_;
+	assign _1254_ = _1253_ | ~_1251_;
+	assign _1255_ = _1254_ & ~_4397_;
+	assign _1256_ = _1250_ & ~_1255_;
+	assign _1257_ = _1231_ & ~_1256_;
+	assign _1258_ = _1246_ & ~_1257_;
+	assign _1259_ = _1225_ & ~_1258_;
+	assign _1260_ = _1236_ & ~_1259_;
+	assign _1261_ = _1235_ & ~_1260_;
+	assign _1262_ = _1261_ | _1224_;
+	assign _1263_ = _1262_ | _1176_;
+	assign _1264_ = ~(_1263_ | _1138_);
+	assign _1265_ = _4230_ | _3899_;
+	assign _1266_ = _4220_ ^ _3742_;
+	assign _1267_ = _4221_ ^ \mchip.pong.game.left_paddle.coord [4];
+	assign _1268_ = _1266_ & ~_1267_;
+	assign _1269_ = _4217_ ^ \mchip.pong.game.left_paddle.coord [6];
+	assign _1270_ = _4216_ ^ \mchip.pong.game.left_paddle.coord [7];
+	assign _1271_ = _1270_ | _1269_;
+	assign _1272_ = _1268_ & ~_1271_;
+	assign _1273_ = _4319_ | _3786_;
+	assign _1274_ = \mchip.pong.game.left_paddle.coord [2] & ~_4318_;
+	assign _1275_ = _4319_ ^ \mchip.pong.game.left_paddle.coord [3];
+	assign _1276_ = _1274_ & ~_1275_;
+	assign _1277_ = _1273_ & ~_1276_;
+	assign _1278_ = _4318_ ^ \mchip.pong.game.left_paddle.coord [2];
+	assign _1279_ = ~(_1278_ | _1275_);
+	assign _1280_ = _4317_ | _3830_;
+	assign _1281_ = \mchip.pong.game.vga.line_ind [0] | \mchip.pong.game.left_paddle.coord [0];
+	assign _1282_ = _4317_ ^ \mchip.pong.game.left_paddle.coord [1];
+	assign _1284_ = _1281_ & ~_1282_;
+	assign _1285_ = _1280_ & ~_1284_;
+	assign _1286_ = _1279_ & ~_1285_;
+	assign _1287_ = _1277_ & ~_1286_;
+	assign _1288_ = _1272_ & ~_1287_;
+	assign _1289_ = \mchip.pong.game.left_paddle.coord [7] & ~_4216_;
+	assign _1290_ = \mchip.pong.game.left_paddle.coord [6] & ~_4217_;
+	assign _1291_ = _1290_ & ~_1270_;
+	assign _1292_ = _1291_ | _1289_;
+	assign _1293_ = _4220_ | _3742_;
+	assign _1295_ = _4221_ | _3720_;
+	assign _1296_ = _1266_ & ~_1295_;
+	assign _1297_ = _1293_ & ~_1296_;
+	assign _1298_ = ~(_1297_ | _1271_);
+	assign _1299_ = _1298_ | _1292_;
+	assign _1300_ = ~(_1299_ | _1288_);
+	assign _1301_ = _4230_ ^ _3899_;
+	assign _1302_ = _1301_ & ~_1300_;
+	assign _1303_ = _1265_ & ~_1302_;
+	assign _1304_ = ~(\mchip.pong.game.vga.line_ind [0] ^ \mchip.pong.game.left_paddle.coord [0]);
+	assign _1306_ = ~(_1304_ | _1282_);
+	assign _1307_ = _1306_ & _1279_;
+	assign _1308_ = ~(_1307_ & _1272_);
+	assign _1309_ = _1301_ & ~_1308_;
+	assign _1310_ = _1309_ | _1303_;
+	assign _1311_ = _4230_ ^ _4003_;
+	assign _1312_ = _4002_ & ~_1311_;
+	assign _1313_ = ~_4216_;
+	assign _1314_ = _1313_ | _4035_;
+	assign _1315_ = _4216_ ^ _4009_;
+	assign _1317_ = ~_4217_;
+	assign _1318_ = _1317_ | _4011_;
+	assign _1319_ = _1315_ & ~_1318_;
+	assign _1320_ = _1314_ & ~_1319_;
+	assign _1321_ = _4217_ ^ _4011_;
+	assign _1322_ = _1321_ | ~_1315_;
+	assign _1323_ = ~_4220_;
+	assign _1324_ = _1323_ | _4017_;
+	assign _1325_ = _4221_ & ~_4014_;
+	assign _1326_ = _4220_ ^ _4017_;
+	assign _1328_ = _1325_ & ~_1326_;
+	assign _1329_ = _1328_ | ~_1324_;
+	assign _1330_ = _1329_ & ~_1322_;
+	assign _1331_ = _1320_ & ~_1330_;
+	assign _1332_ = _4319_ ^ _4022_;
+	assign _1333_ = _4318_ ^ _4024_;
+	assign _1334_ = _1332_ & ~_1333_;
+	assign _1335_ = _4027_ | ~_4317_;
+	assign _1336_ = \mchip.pong.game.left_paddle.coord [0] | ~\mchip.pong.game.vga.line_ind [0];
+	assign _1337_ = _4317_ ^ _4027_;
+	assign _1339_ = _1336_ & ~_1337_;
+	assign _1340_ = _1335_ & ~_1339_;
+	assign _1341_ = _1334_ & ~_1340_;
+	assign _1342_ = _4022_ & ~_4205_;
+	assign _1343_ = _4206_ | _4024_;
+	assign _1344_ = _1332_ & ~_1343_;
+	assign _1345_ = _1344_ | _1342_;
+	assign _1346_ = _1345_ | _1341_;
+	assign _1347_ = _4221_ ^ _4014_;
+	assign _1348_ = _1347_ | _1326_;
+	assign _1350_ = _1348_ | _1322_;
+	assign _1351_ = _1346_ & ~_1350_;
+	assign _1352_ = _1331_ & ~_1351_;
+	assign _1353_ = _1312_ & ~_1352_;
+	assign _1354_ = _4003_ | ~_4230_;
+	assign _1355_ = _4002_ & ~_1354_;
+	assign _1356_ = _1355_ | _1353_;
+	assign _1357_ = _1304_ & ~_1337_;
+	assign _1358_ = ~(_1357_ & _1334_);
+	assign _1359_ = _1358_ | _1350_;
+	assign _1361_ = _1312_ & ~_1359_;
+	assign _1362_ = _1356_ & ~_1361_;
+	assign _1363_ = _1310_ & ~_1362_;
+	assign _1364_ = _4239_ | _4237_;
+	assign _1365_ = _4157_ & _4101_;
+	assign _1366_ = _4244_ | _4243_;
+	assign _1367_ = _4234_ & ~_1366_;
+	assign _1368_ = ~(_1367_ & _1365_);
+	assign _1369_ = _1368_ | _1364_;
+	assign _1370_ = _1366_ | _4234_;
+	assign _1372_ = _4101_ & ~_4157_;
+	assign _1373_ = _1367_ & ~_1372_;
+	assign _1374_ = _1370_ & ~_1373_;
+	assign _1375_ = _1374_ | _1364_;
+	assign _1376_ = _1369_ & ~_1375_;
+	assign _1377_ = _1363_ & ~_1376_;
+	assign _1378_ = _4102_ & ~_4158_;
+	assign _1379_ = _4245_ & _4099_;
+	assign _1380_ = ~(_1379_ & _1378_);
+	assign _1381_ = _1380_ | _1364_;
+	assign _1383_ = _4245_ & ~_1364_;
+	assign _1384_ = _4158_ | ~_4099_;
+	assign _1385_ = _1383_ & ~_1384_;
+	assign _1386_ = ~(_1366_ | _1364_);
+	assign _1387_ = _1386_ | _1385_;
+	assign _1388_ = _1381_ & ~_1387_;
+	assign _1389_ = _1377_ & ~_1388_;
+	assign _1390_ = _4230_ ^ _2013_;
+	assign _1391_ = ~(_4216_ & _1783_);
+	assign _1392_ = _4216_ ^ _1783_;
+	assign _1394_ = ~(_4217_ & _1728_);
+	assign _1395_ = _1392_ & ~_1394_;
+	assign _1396_ = _1391_ & ~_1395_;
+	assign _1397_ = _4217_ ^ \mchip.pong.game.right_paddle.coord [6];
+	assign _1398_ = _1392_ & ~_1397_;
+	assign _1399_ = ~(_4220_ & _1654_);
+	assign _1400_ = _4220_ ^ _1654_;
+	assign _1401_ = ~(_4221_ & _2111_);
+	assign _1402_ = _1400_ & ~_1401_;
+	assign _1403_ = _1399_ & ~_1402_;
+	assign _1405_ = _1398_ & ~_1403_;
+	assign _1406_ = _1396_ & ~_1405_;
+	assign _1407_ = _4221_ ^ _2111_;
+	assign _1408_ = ~(_1407_ & _1400_);
+	assign _1409_ = _1398_ & ~_1408_;
+	assign _1410_ = _4205_ | \mchip.pong.game.right_paddle.coord [3];
+	assign _1411_ = _4319_ ^ _1849_;
+	assign _1412_ = _4206_ | \mchip.pong.game.right_paddle.coord [2];
+	assign _1413_ = _1411_ & ~_1412_;
+	assign _1414_ = _1410_ & ~_1413_;
+	assign _1416_ = _4318_ ^ \mchip.pong.game.right_paddle.coord [2];
+	assign _1417_ = _1411_ & ~_1416_;
+	assign _1418_ = ~(_4317_ & _1926_);
+	assign _1419_ = ~(\mchip.pong.game.vga.line_ind [0] & \mchip.pong.game.right_paddle.coord [0]);
+	assign _1420_ = _4317_ ^ \mchip.pong.game.right_paddle.coord [1];
+	assign _1421_ = _1419_ & ~_1420_;
+	assign _1422_ = _1418_ & ~_1421_;
+	assign _1423_ = _1417_ & ~_1422_;
+	assign _1424_ = _1414_ & ~_1423_;
+	assign _1425_ = _1409_ & ~_1424_;
+	assign _1427_ = _1406_ & ~_1425_;
+	assign _1428_ = _1390_ & ~_1427_;
+	assign _1429_ = _4230_ & ~\mchip.pong.game.right_paddle.coord [8];
+	assign _1430_ = _1429_ | _1428_;
+	assign _1431_ = ~(\mchip.pong.game.vga.line_ind [0] ^ \mchip.pong.game.right_paddle.coord [0]);
+	assign _1432_ = ~(_1431_ | _1420_);
+	assign _1433_ = _1432_ & _1417_;
+	assign _1434_ = ~(_1433_ & _1409_);
+	assign _1435_ = _1390_ & ~_1434_;
+	assign _1436_ = _1435_ | _1430_;
+	assign _1438_ = _4230_ ^ _2504_;
+	assign _1439_ = _2493_ & ~_1438_;
+	assign _1440_ = _1313_ | _2888_;
+	assign _1441_ = _4216_ ^ _2570_;
+	assign _1442_ = _1317_ | _2592_;
+	assign _1443_ = _1441_ & ~_1442_;
+	assign _1444_ = _1440_ & ~_1443_;
+	assign _1445_ = _4217_ ^ _2592_;
+	assign _1446_ = _1445_ | ~_1441_;
+	assign _1447_ = _1323_ | _2680_;
+	assign _1449_ = _4221_ & ~_2636_;
+	assign _1450_ = _4220_ ^ _2680_;
+	assign _1451_ = _1449_ & ~_1450_;
+	assign _1452_ = _1451_ | ~_1447_;
+	assign _1453_ = _1452_ & ~_1446_;
+	assign _1454_ = _1444_ & ~_1453_;
+	assign _1455_ = _4319_ ^ _2734_;
+	assign _1456_ = _4318_ ^ _2756_;
+	assign _1457_ = _1455_ & ~_1456_;
+	assign _1458_ = _2789_ | ~_4317_;
+	assign _1460_ = \mchip.pong.game.right_paddle.coord [0] | ~\mchip.pong.game.vga.line_ind [0];
+	assign _1461_ = _4317_ ^ _2789_;
+	assign _1462_ = _1460_ & ~_1461_;
+	assign _1463_ = _1458_ & ~_1462_;
+	assign _1464_ = _1457_ & ~_1463_;
+	assign _1465_ = _2734_ & ~_4205_;
+	assign _1466_ = _4206_ | _2756_;
+	assign _1467_ = _1455_ & ~_1466_;
+	assign _1468_ = _1467_ | _1465_;
+	assign _1469_ = _1468_ | _1464_;
+	assign _1471_ = _4221_ ^ _2636_;
+	assign _1472_ = _1471_ | _1450_;
+	assign _1473_ = _1472_ | _1446_;
+	assign _1474_ = _1469_ & ~_1473_;
+	assign _1475_ = _1454_ & ~_1474_;
+	assign _1476_ = _1439_ & ~_1475_;
+	assign _1477_ = _2504_ | ~_4230_;
+	assign _1478_ = _2493_ & ~_1477_;
+	assign _1479_ = _1478_ | _1476_;
+	assign _1480_ = \mchip.pong.game.vga.line_ind [0] ^ \mchip.pong.game.right_paddle.coord [0];
+	assign _1482_ = ~(_1480_ | _1461_);
+	assign _1483_ = ~(_1482_ & _1457_);
+	assign _1484_ = _1483_ | _1473_;
+	assign _1485_ = _1439_ & ~_1484_;
+	assign _1486_ = _1479_ & ~_1485_;
+	assign _1487_ = _1436_ & ~_1486_;
+	assign _1488_ = \mchip.pong.game.vga.pix_ind [1] | ~\mchip.pong.game.vga.pix_ind [0];
+	assign _1489_ = ~(_1488_ | _4158_);
+	assign _1490_ = _1489_ & _1379_;
+	assign _1491_ = ~(_1490_ & _4240_);
+	assign _1493_ = _4245_ & ~_4099_;
+	assign _1494_ = _1080_ & ~_1493_;
+	assign _1495_ = _4157_ & ~_4158_;
+	assign _1496_ = _1379_ & ~_1495_;
+	assign _1497_ = _1494_ & ~_1496_;
+	assign _1498_ = _4240_ & ~_1497_;
+	assign _1499_ = _4239_ & _4237_;
+	assign _1500_ = _1499_ | _1498_;
+	assign _1501_ = _1491_ & ~_1500_;
+	assign _1502_ = _1487_ & ~_1501_;
+	assign _1504_ = \mchip.pong.game.vga.pix_ind [3] & ~\mchip.pong.game.vga.pix_ind [2];
+	assign _1505_ = _1504_ & _4157_;
+	assign _1506_ = _1505_ & _1379_;
+	assign _1507_ = ~(_1506_ & _4240_);
+	assign _1508_ = _1080_ & ~_4237_;
+	assign _1509_ = _4244_ & ~_4365_;
+	assign _1510_ = _4365_ & _4244_;
+	assign _1511_ = \mchip.pong.game.vga.pix_ind [4] & ~\mchip.pong.game.vga.pix_ind [3];
+	assign _1512_ = _1510_ & ~_1511_;
+	assign _1513_ = _1512_ | _1509_;
+	assign _1515_ = _1508_ & ~_1513_;
+	assign _1516_ = _1515_ | _1070_;
+	assign _1517_ = _1507_ & ~_1516_;
+	assign _1518_ = _1502_ & ~_1517_;
+	assign _1519_ = _1518_ | _1389_;
+	assign \mchip.pong.VGA_G2  = (_1264_ ? _1062_ : _1519_);
+	assign _1520_ = _0056_ & ~_0726_;
+	assign _1521_ = (_0159_ ? _0351_ : _1520_);
+	assign _1522_ = _0114_ & _4423_;
+	assign _1524_ = ~(_0114_ | _4423_);
+	assign _1525_ = _1524_ | _1522_;
+	assign _1526_ = _0056_ & ~_1525_;
+	assign _1527_ = (_4387_ ? _0107_ : _0118_);
+	assign _1528_ = _0127_ & ~_1527_;
+	assign _1529_ = (_0146_ ? _1526_ : _1528_);
+	assign _1530_ = (\mchip.pong.game.vga.pix_ind [0] ? _1529_ : _1521_);
+	assign _1531_ = _0193_ & ~_0127_;
+	assign _1532_ = _4389_ & ~_4387_;
+	assign _1533_ = _0127_ & ~_1532_;
+	assign _1535_ = (_0146_ ? _1531_ : _1533_);
+	assign _1536_ = _0056_ & ~_0783_;
+	assign _1537_ = _0127_ & ~_1522_;
+	assign _1538_ = (_0146_ ? _1536_ : _1537_);
+	assign _1539_ = (\mchip.pong.game.vga.pix_ind [0] ? _1538_ : _1535_);
+	assign _1540_ = (_1103_ ? _1530_ : _1539_);
+	assign _1541_ = _0237_ | _0056_;
+	assign _1542_ = _0410_ | _4423_;
+	assign _1543_ = _1542_ | _0127_;
+	assign _1544_ = (_0146_ ? _1541_ : _1543_);
+	assign _1546_ = _1544_ & ~\mchip.pong.game.vga.pix_ind [0];
+	assign _1547_ = _0127_ & ~_0197_;
+	assign _1548_ = ~(_4387_ & _0090_);
+	assign _1549_ = _0056_ & ~_1548_;
+	assign _1550_ = (_0146_ ? _1547_ : _1549_);
+	assign _1551_ = \mchip.pong.game.vga.pix_ind [0] & ~_1550_;
+	assign _1552_ = ~(_1551_ | _1546_);
+	assign _1553_ = _4443_ & _4423_;
+	assign _1554_ = (_0127_ ? _1553_ : _0500_);
+	assign _1555_ = _0035_ & ~_4423_;
+	assign _1557_ = _4423_ & ~_0119_;
+	assign _1558_ = (_0056_ ? _1555_ : _1557_);
+	assign _1559_ = (_0146_ ? _1554_ : _1558_);
+	assign _1560_ = ~(_4423_ | _4389_);
+	assign _1561_ = (_0056_ ? _1560_ : _1557_);
+	assign _1562_ = _4423_ & _4389_;
+	assign _1563_ = (_0127_ ? _1562_ : _0500_);
+	assign _1564_ = (_0146_ ? _1561_ : _1563_);
+	assign _1565_ = (\mchip.pong.game.vga.pix_ind [0] ? _1564_ : _1559_);
+	assign _1566_ = (_1103_ ? _1552_ : _1565_);
+	assign _1568_ = (_0044_ ? _1540_ : _1566_);
+	assign _1569_ = (_4387_ ? _0107_ : _0114_);
+	assign _1570_ = _0127_ & ~_1569_;
+	assign _1571_ = (_4387_ ? _0119_ : _0131_);
+	assign _1572_ = _0056_ & ~_1571_;
+	assign _1573_ = (_0146_ ? _1570_ : _1572_);
+	assign _1574_ = _4387_ | ~_0035_;
+	assign _1575_ = _0127_ & ~_1574_;
+	assign _1576_ = _0056_ & ~_0766_;
+	assign _1577_ = (_0146_ ? _1575_ : _1576_);
+	assign _1579_ = (\mchip.pong.game.vga.pix_ind [0] ? _1577_ : _1573_);
+	assign _1580_ = _0127_ & ~_0134_;
+	assign _1581_ = (_0159_ ? _0111_ : _1580_);
+	assign _1582_ = _0410_ | _4387_;
+	assign _1583_ = _0127_ & ~_1582_;
+	assign _1584_ = (_0146_ ? _1583_ : _0096_);
+	assign _1585_ = (\mchip.pong.game.vga.pix_ind [0] ? _1584_ : _1581_);
+	assign _1586_ = (_1103_ ? _1579_ : _1585_);
+	assign _1587_ = (\mchip.pong.game.vga.pix_ind [0] ? _0130_ : _0168_);
+	assign _1588_ = _0056_ & ~_0330_;
+	assign _1590_ = _0127_ & ~_0766_;
+	assign _1591_ = (_0159_ ? _1588_ : _1590_);
+	assign _1592_ = _0056_ & ~_1569_;
+	assign _1593_ = (_0146_ ? _0335_ : _1592_);
+	assign _1594_ = (\mchip.pong.game.vga.pix_ind [0] ? _1593_ : _1591_);
+	assign _1595_ = (_1103_ ? _1587_ : _1594_);
+	assign _1596_ = (_0044_ ? _1586_ : _1595_);
+	assign _1597_ = (_0088_ ? _1568_ : _1596_);
+	assign _1598_ = (_1103_ ? _0233_ : _0248_);
+	assign _1599_ = ~(_0160_ & _0056_);
+	assign _1601_ = _0162_ | _0056_;
+	assign _1602_ = (_0159_ ? _1599_ : _1601_);
+	assign _1603_ = (_0146_ ? _1601_ : _0192_);
+	assign _1604_ = (\mchip.pong.game.vga.pix_ind [0] ? _1602_ : _1603_);
+	assign _1605_ = _1604_ | _1103_;
+	assign _1606_ = _0218_ | _0063_;
+	assign _1607_ = ~(_1606_ & _1605_);
+	assign _1608_ = (_0044_ ? _1598_ : _1607_);
+	assign _1609_ = _0173_ | _0127_;
+	assign _1610_ = (_0146_ ? _0200_ : _1609_);
+	assign _1612_ = ~(_0361_ & _4387_);
+	assign _1613_ = _1612_ | _0056_;
+	assign _1614_ = (_0146_ ? _1613_ : _1609_);
+	assign _1615_ = (\mchip.pong.game.vga.pix_ind [0] ? _1614_ : _1610_);
+	assign _1616_ = (_1103_ ? _1615_ : _0191_);
+	assign _1617_ = _0044_ & ~_1616_;
+	assign _1618_ = _0228_ & ~_0044_;
+	assign _1619_ = _1618_ | _1617_;
+	assign _1620_ = (_0088_ ? _1608_ : _1619_);
+	assign _1621_ = (_4368_ ? _1597_ : _1620_);
+	assign _1623_ = (\mchip.pong.game.vga.pix_ind [0] ? _0191_ : _0218_);
+	assign _1624_ = (_1103_ ? _0218_ : _1623_);
+	assign _1625_ = _0308_ & ~_1624_;
+	assign _1626_ = (\mchip.pong.game.vga.pix_ind [0] ? _1610_ : _1614_);
+	assign _1627_ = (_1103_ ? _1626_ : _1610_);
+	assign _1628_ = _0044_ & ~_1627_;
+	assign _1629_ = _1628_ | _1625_;
+	assign _1630_ = ~(_0872_ | _0127_);
+	assign _1631_ = (_0146_ ? _0163_ : _1630_);
+	assign _1632_ = (\mchip.pong.game.vga.pix_ind [0] ? _1631_ : _0164_);
+	assign _1634_ = (_1103_ ? _0165_ : _1632_);
+	assign _1635_ = _0056_ & ~_1574_;
+	assign _1636_ = (_0146_ ? _0129_ : _1635_);
+	assign _1637_ = _0127_ & ~_0110_;
+	assign _1638_ = (_0146_ ? _1637_ : _0135_);
+	assign _1639_ = (\mchip.pong.game.vga.pix_ind [0] ? _1638_ : _1636_);
+	assign _1640_ = (_1103_ ? _1639_ : _0169_);
+	assign _1641_ = (_0044_ ? _1634_ : _1640_);
+	assign _1642_ = (_0088_ ? _1629_ : _1641_);
+	assign _1644_ = (_4423_ ? _0117_ : _0792_);
+	assign _1645_ = _0056_ & ~_1644_;
+	assign _1646_ = (_4387_ ? _0113_ : _0118_);
+	assign _1647_ = _0127_ & ~_1646_;
+	assign _1648_ = (_0146_ ? _1645_ : _1647_);
+	assign _1649_ = ~(_0451_ & _4387_);
+	assign _1650_ = _0056_ & ~_1649_;
+	assign _1651_ = ~(_0421_ & _4423_);
+	assign _1652_ = _0127_ & ~_1651_;
+	assign _1653_ = (_0146_ ? _1650_ : _1652_);
+	assign _1655_ = (\mchip.pong.game.vga.pix_ind [0] ? _1653_ : _1648_);
+	assign _1656_ = (_0127_ ? _4418_ : _0484_);
+	assign _1657_ = (_0127_ ? _1532_ : _1524_);
+	assign _1658_ = (_0146_ ? _1656_ : _1657_);
+	assign _1659_ = _4443_ & ~_4387_;
+	assign _1660_ = (_0127_ ? _1659_ : _1524_);
+	assign _1661_ = (_0056_ ? _1555_ : _0270_);
+	assign _1662_ = (_0146_ ? _1660_ : _1661_);
+	assign _1663_ = (\mchip.pong.game.vga.pix_ind [0] ? _1662_ : _1658_);
+	assign _1664_ = (_1103_ ? _1655_ : _1663_);
+	assign _1666_ = (_0159_ ? _0194_ : _0198_);
+	assign _1667_ = \mchip.pong.game.vga.pix_ind [0] & ~_1666_;
+	assign _1668_ = _4423_ & ~_4428_;
+	assign _1669_ = _0127_ & ~_1668_;
+	assign _1670_ = (_0146_ ? _1536_ : _1669_);
+	assign _1671_ = (\mchip.pong.game.vga.pix_ind [0] ? _1535_ : _1670_);
+	assign _1672_ = (_1103_ ? _1667_ : _1671_);
+	assign _1673_ = (_0044_ ? _1664_ : _1672_);
+	assign _1674_ = (_0056_ ? _4429_ : _1532_);
+	assign _1676_ = _0056_ & ~_0193_;
+	assign _1677_ = (_0146_ ? _1674_ : _1676_);
+	assign _1678_ = _0127_ & ~_0237_;
+	assign _1679_ = _0255_ | _4423_;
+	assign _1680_ = _0056_ & ~_1679_;
+	assign _1681_ = (_0146_ ? _1678_ : _1680_);
+	assign _1682_ = (\mchip.pong.game.vga.pix_ind [0] ? _1681_ : _1677_);
+	assign _1683_ = _0102_ | _4387_;
+	assign _1684_ = _0127_ & ~_1683_;
+	assign _1685_ = _0056_ & ~_0402_;
+	assign _1687_ = (_0146_ ? _1684_ : _1685_);
+	assign _1688_ = _0056_ & ~_0288_;
+	assign _1689_ = (_0146_ ? _0321_ : _1688_);
+	assign _1690_ = (\mchip.pong.game.vga.pix_ind [0] ? _1689_ : _1687_);
+	assign _1691_ = (_1103_ ? _1682_ : _1690_);
+	assign _1692_ = _0056_ & ~_0128_;
+	assign _1693_ = (_0146_ ? _0324_ : _1692_);
+	assign _1694_ = (_0146_ ? _0331_ : _1572_);
+	assign _1695_ = (\mchip.pong.game.vga.pix_ind [0] ? _1694_ : _1693_);
+	assign _1696_ = _0056_ & ~_0334_;
+	assign _1698_ = (_0146_ ? _0335_ : _1696_);
+	assign _1699_ = _0127_ & ~_1571_;
+	assign _1700_ = (_0146_ ? _1699_ : _1588_);
+	assign _1701_ = (\mchip.pong.game.vga.pix_ind [0] ? _1700_ : _1698_);
+	assign _1702_ = (_1103_ ? _1695_ : _1701_);
+	assign _1703_ = (_0044_ ? _1702_ : _1691_);
+	assign _1704_ = (_0088_ ? _1703_ : _1673_);
+	assign _1705_ = (_4368_ ? _1642_ : _1704_);
+	assign _1706_ = (_4367_ ? _1621_ : _1705_);
+	assign _1708_ = _1592_ | _0167_;
+	assign _1709_ = (_4423_ ? _0054_ : _4428_);
+	assign _1710_ = (_0127_ ? _0793_ : _1709_);
+	assign _1711_ = (_0146_ ? _1708_ : _1710_);
+	assign _1712_ = _4423_ & ~_0880_;
+	assign _1713_ = (_0127_ ? _0356_ : _1712_);
+	assign _1714_ = (_4387_ ? _0792_ : _0035_);
+	assign _1715_ = (_0127_ ? _0793_ : _1714_);
+	assign _1716_ = (_0146_ ? _1713_ : _1715_);
+	assign _1717_ = (\mchip.pong.game.vga.pix_ind [0] ? _1716_ : _1711_);
+	assign _1719_ = ~_0320_;
+	assign _1720_ = ~_0766_;
+	assign _1721_ = (_0056_ ? _1719_ : _1720_);
+	assign _1722_ = (_4423_ ? _0421_ : _0522_);
+	assign _1723_ = (_4423_ ? _0035_ : _0401_);
+	assign _1724_ = (_0127_ ? _1722_ : _1723_);
+	assign _1725_ = (_0146_ ? _1721_ : _1724_);
+	assign _1726_ = (_0056_ ? _0051_ : _0334_);
+	assign _1727_ = ~_1726_;
+	assign _1729_ = ~_1569_;
+	assign _1730_ = (_4387_ ? _4428_ : _0451_);
+	assign _1731_ = (_0056_ ? _1729_ : _1730_);
+	assign _1732_ = (_0146_ ? _1727_ : _1731_);
+	assign _1733_ = (\mchip.pong.game.vga.pix_ind [0] ? _1732_ : _1725_);
+	assign _1734_ = (_1103_ ? _1717_ : _1733_);
+	assign _1735_ = (_0044_ ? _1586_ : _1734_);
+	assign _1736_ = (_0088_ ? _1568_ : _1735_);
+	assign _1737_ = ~_0783_;
+	assign _1738_ = ~_0162_;
+	assign _1740_ = (_0056_ ? _1737_ : _1738_);
+	assign _1741_ = (_4389_ ? _4371_ : _4375_);
+	assign _1742_ = (_4423_ ? _0153_ : _1741_);
+	assign _1743_ = _1742_ | _0127_;
+	assign _1744_ = (_0146_ ? _1740_ : _1743_);
+	assign _1745_ = _4423_ | ~_0207_;
+	assign _1746_ = (_0127_ ? _0154_ : _1745_);
+	assign _1747_ = _4387_ & ~_0410_;
+	assign _1748_ = ~_1747_;
+	assign _1749_ = (_4387_ ? _4371_ : _4381_);
+	assign _1751_ = (_0127_ ? _1748_ : _1749_);
+	assign _1752_ = (_0146_ ? _1746_ : _1751_);
+	assign _1753_ = (\mchip.pong.game.vga.pix_ind [0] ? _1752_ : _1744_);
+	assign _1754_ = (_4387_ ? _0118_ : _0852_);
+	assign _1755_ = (_0127_ ? _0154_ : _1754_);
+	assign _1756_ = _1548_ & _0098_;
+	assign _1757_ = ~_1756_;
+	assign _1758_ = (_0127_ ? _4423_ : _1757_);
+	assign _1759_ = (_0146_ ? _1755_ : _1758_);
+	assign _1760_ = (_4387_ ? _0118_ : _0442_);
+	assign _1762_ = (_0127_ ? _0399_ : _1760_);
+	assign _1763_ = (_4423_ ? _0665_ : _0792_);
+	assign _1764_ = (_4387_ ? _0970_ : _0054_);
+	assign _1765_ = (_0127_ ? _1763_ : _1764_);
+	assign _1766_ = (_0146_ ? _1762_ : _1765_);
+	assign _1767_ = (\mchip.pong.game.vga.pix_ind [0] ? _1766_ : _1759_);
+	assign _1768_ = (_1103_ ? _1753_ : _1767_);
+	assign _1769_ = (_4423_ ? _0114_ : _0472_);
+	assign _1770_ = _0127_ & ~_1769_;
+	assign _1771_ = ~_1770_;
+	assign _1773_ = (_4423_ ? _4409_ : _0101_);
+	assign _1774_ = _1773_ | _0127_;
+	assign _1775_ = (_0146_ ? _1771_ : _1774_);
+	assign _1776_ = _0472_ & ~_4423_;
+	assign _1777_ = _0127_ & ~_1776_;
+	assign _1778_ = ~_1777_;
+	assign _1779_ = (_0146_ ? _1778_ : _1774_);
+	assign _1780_ = (\mchip.pong.game.vga.pix_ind [0] ? _1779_ : _1775_);
+	assign _1781_ = (_4389_ ? _4374_ : _4372_);
+	assign _1782_ = ~_1781_;
+	assign _1784_ = ~(_1782_ | _4423_);
+	assign _1785_ = (_0056_ ? _0480_ : _1784_);
+	assign _1786_ = (_4423_ ? _4409_ : _0656_);
+	assign _1787_ = _1786_ | _0127_;
+	assign _1788_ = (_0146_ ? _1785_ : _1787_);
+	assign _1789_ = (_0127_ ? _0048_ : _0726_);
+	assign _1790_ = (_4389_ ? _4408_ : _4374_);
+	assign _1791_ = (_4423_ ? _0153_ : _1790_);
+	assign _1792_ = _1791_ | _0127_;
+	assign _1793_ = (_0146_ ? _1789_ : _1792_);
+	assign _1795_ = (\mchip.pong.game.vga.pix_ind [0] ? _1793_ : _1788_);
+	assign _1796_ = (_1103_ ? _1780_ : _1795_);
+	assign _1797_ = (_0044_ ? _1768_ : _1796_);
+	assign _1798_ = ~_0154_;
+	assign _1799_ = _1024_ | _4387_;
+	assign _1800_ = (_0127_ ? _1798_ : _1799_);
+	assign _1801_ = (_4423_ ? _0435_ : _0101_);
+	assign _1802_ = (_0127_ ? _0755_ : _1801_);
+	assign _1803_ = (_0146_ ? _1800_ : _1802_);
+	assign _1804_ = (_4389_ ? _4372_ : _0582_);
+	assign _1806_ = _4387_ & ~_1804_;
+	assign _1807_ = ~_1806_;
+	assign _1808_ = (_4389_ ? _4424_ : _4375_);
+	assign _1809_ = ~_1808_;
+	assign _1810_ = (_4387_ ? _0451_ : _1809_);
+	assign _1811_ = (_0127_ ? _1807_ : _1810_);
+	assign _1812_ = (_4423_ ? _4443_ : _0101_);
+	assign _1813_ = _1812_ | _0127_;
+	assign _1814_ = (_0146_ ? _1811_ : _1813_);
+	assign _1815_ = (\mchip.pong.game.vga.pix_ind [0] ? _1814_ : _1803_);
+	assign _1817_ = _4423_ & ~_0421_;
+	assign _1818_ = ~_1817_;
+	assign _1819_ = (_0127_ ? _0619_ : _1818_);
+	assign _1820_ = (_4423_ ? _4434_ : _0101_);
+	assign _1821_ = _1820_ | _0127_;
+	assign _1822_ = (_0146_ ? _1819_ : _1821_);
+	assign _1823_ = _0618_ & ~_0056_;
+	assign _1824_ = ~_1823_;
+	assign _1825_ = (_0146_ ? _1824_ : _1821_);
+	assign _1826_ = (\mchip.pong.game.vga.pix_ind [0] ? _1825_ : _1822_);
+	assign _1828_ = (_1103_ ? _1815_ : _1826_);
+	assign _1829_ = (_4387_ ? _0495_ : _0254_);
+	assign _1830_ = (_4423_ ? _0093_ : _0475_);
+	assign _1831_ = (_0127_ ? _1829_ : _1830_);
+	assign _1832_ = (_4389_ ? _4375_ : _4372_);
+	assign _1833_ = (_4423_ ? _1832_ : _0474_);
+	assign _1834_ = _0056_ & ~_1833_;
+	assign _1835_ = _1834_ | _0681_;
+	assign _1836_ = (_0146_ ? _1831_ : _1835_);
+	assign _1837_ = (_4423_ ? _0454_ : _0206_);
+	assign _1839_ = ~_1837_;
+	assign _1840_ = (_0127_ ? _1829_ : _1839_);
+	assign _1841_ = _4387_ & ~_0628_;
+	assign _1842_ = _0127_ & ~_1841_;
+	assign _1843_ = _1842_ | _1834_;
+	assign _1844_ = (_0146_ ? _1840_ : _1843_);
+	assign _1845_ = (\mchip.pong.game.vga.pix_ind [0] ? _1844_ : _1836_);
+	assign _1846_ = _0366_ | _0100_;
+	assign _1847_ = (_4387_ ? _0451_ : _1846_);
+	assign _1848_ = (_0127_ ? _1798_ : _1847_);
+	assign _1850_ = _4387_ & ~_0656_;
+	assign _1851_ = ~_1850_;
+	assign _1852_ = (_4389_ ? _4375_ : _4407_);
+	assign _1853_ = ~_1852_;
+	assign _1854_ = (_4423_ ? _0435_ : _1853_);
+	assign _1855_ = (_0127_ ? _1851_ : _1854_);
+	assign _1856_ = (_0146_ ? _1848_ : _1855_);
+	assign _1857_ = (_4423_ ? _1024_ : _0451_);
+	assign _1858_ = (_0127_ ? _1798_ : _1857_);
+	assign _1859_ = (_4389_ ? _0065_ : _4408_);
+	assign _1861_ = (_4423_ ? _0435_ : _1859_);
+	assign _1862_ = (_0127_ ? _0592_ : _1861_);
+	assign _1863_ = (_0146_ ? _1858_ : _1862_);
+	assign _1864_ = (\mchip.pong.game.vga.pix_ind [0] ? _1863_ : _1856_);
+	assign _1865_ = (_1103_ ? _1845_ : _1864_);
+	assign _1866_ = (_0044_ ? _1828_ : _1865_);
+	assign _1867_ = (_0088_ ? _1797_ : _1866_);
+	assign _1868_ = (_4368_ ? _1736_ : _1867_);
+	assign _1869_ = (_4423_ ? _0101_ : _1804_);
+	assign _1870_ = (_4389_ ? _4371_ : _0425_);
+	assign _1872_ = (_4423_ ? _0117_ : _1870_);
+	assign _1873_ = (_0127_ ? _1869_ : _1872_);
+	assign _1874_ = (_4387_ ? _0475_ : _1853_);
+	assign _1875_ = _1874_ | _0127_;
+	assign _1876_ = (_0146_ ? _1873_ : _1875_);
+	assign _1877_ = (_4423_ ? _0665_ : _0153_);
+	assign _1878_ = ~_1877_;
+	assign _1879_ = (_4423_ ? _0117_ : _0207_);
+	assign _1880_ = (_0127_ ? _1878_ : _1879_);
+	assign _1881_ = (_4387_ ? _0207_ : _1853_);
+	assign _1883_ = _1881_ | _0127_;
+	assign _1884_ = (_0146_ ? _1880_ : _1883_);
+	assign _1885_ = (\mchip.pong.game.vga.pix_ind [0] ? _1884_ : _1876_);
+	assign _1886_ = (_4387_ ? _0475_ : _0530_);
+	assign _1887_ = (_0127_ ? _1878_ : _1886_);
+	assign _1888_ = _0852_ | _4423_;
+	assign _1889_ = (_4380_ ? _4408_ : _4427_);
+	assign _1890_ = (_4387_ ? _0883_ : _1889_);
+	assign _1891_ = (_0127_ ? _1888_ : _1890_);
+	assign _1892_ = (_0146_ ? _1887_ : _1891_);
+	assign _1894_ = (_0127_ ? _1829_ : _1886_);
+	assign _1895_ = (_4423_ ? _0391_ : _0883_);
+	assign _1896_ = (_0127_ ? _0550_ : _1895_);
+	assign _1897_ = (_0146_ ? _1894_ : _1896_);
+	assign _1898_ = (\mchip.pong.game.vga.pix_ind [0] ? _1897_ : _1892_);
+	assign _1899_ = (_1103_ ? _1885_ : _1898_);
+	assign _1900_ = (_4387_ ? _0054_ : _0530_);
+	assign _1901_ = (_4387_ ? _0631_ : _0530_);
+	assign _1902_ = (_0127_ ? _1900_ : _1901_);
+	assign _1903_ = (_4389_ ? _4371_ : _4424_);
+	assign _1905_ = ~(_1903_ & _4387_);
+	assign _1906_ = (_0056_ ? _0834_ : _1905_);
+	assign _1907_ = (_0146_ ? _1902_ : _1906_);
+	assign _1908_ = ~_0608_;
+	assign _1909_ = (_4423_ ? _0961_ : _1908_);
+	assign _1910_ = (_4423_ ? _0117_ : _0639_);
+	assign _1911_ = (_0127_ ? _1909_ : _1910_);
+	assign _1912_ = (_4423_ ? _4409_ : _1853_);
+	assign _1913_ = (_0127_ ? _0572_ : _1912_);
+	assign _1914_ = (_0146_ ? _1911_ : _1913_);
+	assign _1916_ = (\mchip.pong.game.vga.pix_ind [0] ? _1914_ : _1907_);
+	assign _1917_ = (_4423_ ? _0530_ : _1908_);
+	assign _1918_ = (_4423_ ? _0117_ : _0264_);
+	assign _1919_ = (_0127_ ? _1917_ : _1918_);
+	assign _1920_ = (_4423_ ? _4408_ : _0254_);
+	assign _1921_ = (_0127_ ? _1888_ : _1920_);
+	assign _1922_ = (_0146_ ? _1919_ : _1921_);
+	assign _1923_ = (_4423_ ? _0852_ : _0472_);
+	assign _1924_ = (_4387_ ? _4371_ : _0117_);
+	assign _1925_ = (_0127_ ? _1923_ : _1924_);
+	assign _1927_ = (_4380_ ? _4374_ : _0582_);
+	assign _1928_ = (_4387_ ? _0070_ : _1927_);
+	assign _1929_ = _1928_ | _0127_;
+	assign _1930_ = (_0146_ ? _1925_ : _1929_);
+	assign _1931_ = (\mchip.pong.game.vga.pix_ind [0] ? _1930_ : _1922_);
+	assign _1932_ = (_1103_ ? _1916_ : _1931_);
+	assign _1933_ = (_0044_ ? _1899_ : _1932_);
+	assign _1934_ = (_4387_ ? _0495_ : _0792_);
+	assign _1935_ = ~_1934_;
+	assign _1936_ = (_4387_ ? _0451_ : _0852_);
+	assign _1938_ = (_0127_ ? _1935_ : _1936_);
+	assign _1939_ = (_0056_ ? _0098_ : _1649_);
+	assign _1940_ = ~_1939_;
+	assign _1941_ = (_0146_ ? _1938_ : _1940_);
+	assign _1942_ = (_4423_ ? _0117_ : _4381_);
+	assign _1943_ = (_4387_ ? _0451_ : _0101_);
+	assign _1944_ = (_0127_ ? _1942_ : _1943_);
+	assign _1945_ = (_4423_ ? _0792_ : _0207_);
+	assign _1946_ = (_0056_ ? _0160_ : _1945_);
+	assign _1947_ = (_0146_ ? _1944_ : _1946_);
+	assign _1949_ = (\mchip.pong.game.vga.pix_ind [0] ? _1947_ : _1941_);
+	assign _1950_ = (_4387_ ? _0451_ : _1853_);
+	assign _1951_ = (_0127_ ? _1942_ : _1950_);
+	assign _1952_ = (_4423_ ? _0119_ : _0426_);
+	assign _1953_ = (_0056_ ? _0160_ : _1952_);
+	assign _1954_ = (_0146_ ? _1951_ : _1953_);
+	assign _1955_ = (_4387_ ? _4381_ : _0530_);
+	assign _1956_ = _0631_ | _4423_;
+	assign _1957_ = (_0127_ ? _1955_ : _1956_);
+	assign _1959_ = ~_0872_;
+	assign _1960_ = _0883_ | _4423_;
+	assign _1961_ = (_0056_ ? _1959_ : _1960_);
+	assign _1962_ = (_0146_ ? _1957_ : _1961_);
+	assign _1963_ = (\mchip.pong.game.vga.pix_ind [0] ? _1962_ : _1954_);
+	assign _1964_ = (_1103_ ? _1949_ : _1963_);
+	assign _1965_ = (_4387_ ? _4443_ : _0117_);
+	assign _1966_ = (_4387_ ? _4389_ : _0639_);
+	assign _1967_ = (_0127_ ? _1965_ : _1966_);
+	assign _1968_ = (_0146_ ? _1967_ : _1635_);
+	assign _1970_ = (_4387_ ? _4389_ : _0117_);
+	assign _1971_ = _4387_ & ~_0372_;
+	assign _1972_ = ~_1971_;
+	assign _1973_ = (_0127_ ? _1970_ : _1972_);
+	assign _1974_ = (_0146_ ? _1973_ : _0135_);
+	assign _1975_ = (\mchip.pong.game.vga.pix_ind [0] ? _1974_ : _1968_);
+	assign _1976_ = (_4387_ ? _4409_ : _0114_);
+	assign _1977_ = (_0127_ ? _1976_ : _0140_);
+	assign _1978_ = (_0146_ ? _1977_ : _0135_);
+	assign _1979_ = (_0056_ ? _1574_ : _1935_);
+	assign _1981_ = _1846_ & ~_4423_;
+	assign _1982_ = ~_1981_;
+	assign _1983_ = (_0056_ ? _0098_ : _1982_);
+	assign _1984_ = ~_1983_;
+	assign _1985_ = (_0146_ ? _1979_ : _1984_);
+	assign _1986_ = (\mchip.pong.game.vga.pix_ind [0] ? _1985_ : _1978_);
+	assign _1987_ = (_1103_ ? _1975_ : _1986_);
+	assign _1988_ = (_0044_ ? _1964_ : _1987_);
+	assign _1989_ = (_0088_ ? _1933_ : _1988_);
+	assign _1990_ = (_4387_ ? _0119_ : _0489_);
+	assign _1992_ = _0127_ & ~_1990_;
+	assign _1993_ = (_0146_ ? _1992_ : _1588_);
+	assign _1994_ = (\mchip.pong.game.vga.pix_ind [0] ? _1993_ : _1698_);
+	assign _1995_ = (_1103_ ? _1695_ : _1994_);
+	assign _1996_ = (_0044_ ? _1995_ : _1691_);
+	assign _1997_ = (_0088_ ? _1996_ : _1673_);
+	assign _1998_ = (_4368_ ? _1989_ : _1997_);
+	assign _1999_ = (_4367_ ? _1868_ : _1998_);
+	assign _2000_ = _0127_ & ~_1965_;
+	assign _2001_ = (_4387_ ? _4380_ : _0035_);
+	assign _2003_ = _0056_ & ~_2001_;
+	assign _2004_ = (_0146_ ? _2000_ : _2003_);
+	assign _2005_ = \mchip.pong.game.vga.pix_ind [0] & ~_2004_;
+	assign _2006_ = _0127_ & ~_1976_;
+	assign _2007_ = (_4423_ ? _0054_ : _0280_);
+	assign _2008_ = _0056_ & ~_2007_;
+	assign _2009_ = (_0146_ ? _2006_ : _2008_);
+	assign _2010_ = _4442_ & ~_2009_;
+	assign _2011_ = _2010_ | _2005_;
+	assign _2012_ = (_0056_ ? _0549_ : _0766_);
+	assign _2014_ = _4387_ & ~_0035_;
+	assign _2015_ = (_4407_ ? _4423_ : _4389_);
+	assign _2016_ = (_0127_ ? _2014_ : _2015_);
+	assign _2017_ = (_0146_ ? _2012_ : _2016_);
+	assign _2018_ = _4442_ & ~_2017_;
+	assign _2019_ = (_4423_ ? _0114_ : _4409_);
+	assign _2020_ = _0056_ & ~_2019_;
+	assign _2021_ = (_0146_ ? _0335_ : _2020_);
+	assign _2022_ = _2021_ & ~_4442_;
+	assign _2023_ = _2022_ | _2018_;
+	assign _2025_ = (_1103_ ? _2011_ : _2023_);
+	assign _2026_ = (_0044_ ? _1586_ : _2025_);
+	assign _2027_ = (_0088_ ? _1568_ : _2026_);
+	assign _2028_ = (_4380_ ? _4424_ : _0582_);
+	assign _2029_ = (_4387_ ? _4381_ : _2028_);
+	assign _2030_ = (_0056_ ? _0501_ : _2029_);
+	assign _2031_ = ~_0367_;
+	assign _2032_ = _2031_ | _4387_;
+	assign _2033_ = (_0056_ ? _0770_ : _2032_);
+	assign _2034_ = (_0146_ ? _2030_ : _2033_);
+	assign _2036_ = (_4423_ ? _0292_ : _0089_);
+	assign _2037_ = (_0127_ ? _1934_ : _2036_);
+	assign _2038_ = ~_2037_;
+	assign _2039_ = (_0127_ ? _0453_ : _0762_);
+	assign _2040_ = (_0146_ ? _2038_ : _2039_);
+	assign _2041_ = (\mchip.pong.game.vga.pix_ind [0] ? _2040_ : _2034_);
+	assign _2042_ = _1934_ & ~_0056_;
+	assign _2043_ = ~_2042_;
+	assign _2044_ = _0784_ | _0127_;
+	assign _2045_ = (_0146_ ? _2043_ : _2044_);
+	assign _2047_ = ~_2006_;
+	assign _2048_ = (_4423_ ? _0054_ : _0412_);
+	assign _2049_ = _2048_ | _0127_;
+	assign _2050_ = (_0146_ ? _2047_ : _2049_);
+	assign _2051_ = (\mchip.pong.game.vga.pix_ind [0] ? _2050_ : _2045_);
+	assign _2052_ = (_1103_ ? _2041_ : _2051_);
+	assign _2053_ = ~_0054_;
+	assign _2054_ = (_4387_ ? _2053_ : _0035_);
+	assign _2055_ = ~(_2054_ & _0127_);
+	assign _2056_ = (_4387_ ? _4428_ : _4409_);
+	assign _2057_ = _2056_ | _0127_;
+	assign _2058_ = (_0146_ ? _2055_ : _2057_);
+	assign _2059_ = _0567_ | _0056_;
+	assign _2060_ = _0834_ | _0127_;
+	assign _2061_ = (_0146_ ? _2059_ : _2060_);
+	assign _2062_ = (\mchip.pong.game.vga.pix_ind [0] ? _2061_ : _2058_);
+	assign _2063_ = ~(_2062_ & _1103_);
+	assign _2064_ = (_4423_ ? _4443_ : _4381_);
+	assign _2065_ = _0127_ & ~_2064_;
+	assign _2066_ = _0056_ & ~_0834_;
+	assign _2068_ = (_0146_ ? _2065_ : _2066_);
+	assign _2069_ = (_4423_ ? _0118_ : _4381_);
+	assign _2070_ = _0127_ & ~_2069_;
+	assign _2071_ = _0056_ & ~_0770_;
+	assign _2072_ = (_0146_ ? _2070_ : _2071_);
+	assign _2073_ = (\mchip.pong.game.vga.pix_ind [0] ? _2072_ : _2068_);
+	assign _2074_ = ~(_2073_ | _1103_);
+	assign _2075_ = _2074_ | ~_2063_;
+	assign _2076_ = (_0044_ ? _2052_ : _2075_);
+	assign _2077_ = (_4387_ ? _0421_ : _0107_);
+	assign _2079_ = (_0127_ ? _1555_ : _2077_);
+	assign _2080_ = (_4423_ ? _0113_ : _0114_);
+	assign _2081_ = (_0127_ ? _0500_ : _2080_);
+	assign _2082_ = ~_2081_;
+	assign _2083_ = (_0146_ ? _2079_ : _2082_);
+	assign _2084_ = (_4423_ ? _0454_ : _0361_);
+	assign _2085_ = _0421_ | _4423_;
+	assign _2086_ = (_0127_ ? _2084_ : _2085_);
+	assign _2087_ = _0820_ | _4423_;
+	assign _2088_ = (_0056_ ? _0793_ : _2087_);
+	assign _2090_ = (_0146_ ? _2086_ : _2088_);
+	assign _2091_ = (\mchip.pong.game.vga.pix_ind [0] ? _2090_ : _2083_);
+	assign _2092_ = (_4387_ ? _0054_ : _1024_);
+	assign _2093_ = (_0056_ ? _0501_ : _2092_);
+	assign _2094_ = (_4387_ ? _4428_ : _4434_);
+	assign _2095_ = (_0127_ ? _0448_ : _2094_);
+	assign _2096_ = (_0146_ ? _2093_ : _2095_);
+	assign _2097_ = ~_2036_;
+	assign _2098_ = (_4387_ ? _0054_ : _0114_);
+	assign _2099_ = (_0056_ ? _2097_ : _2098_);
+	assign _2101_ = (_0127_ ? _2085_ : _2094_);
+	assign _2102_ = (_0146_ ? _2099_ : _2101_);
+	assign _2103_ = (\mchip.pong.game.vga.pix_ind [0] ? _2102_ : _2096_);
+	assign _2104_ = (_1103_ ? _2091_ : _2103_);
+	assign _2105_ = (_4423_ ? _4443_ : _0035_);
+	assign _2106_ = (_0056_ ? _0453_ : _2105_);
+	assign _2107_ = (_0146_ ? _2106_ : _2082_);
+	assign _2108_ = (_4423_ ? _0206_ : _0035_);
+	assign _2109_ = (_4387_ ? _0421_ : _0451_);
+	assign _2110_ = (_0127_ ? _2108_ : _2109_);
+	assign _2112_ = (_0127_ ? _0875_ : _2080_);
+	assign _2113_ = ~_2112_;
+	assign _2114_ = (_0146_ ? _2110_ : _2113_);
+	assign _2115_ = (\mchip.pong.game.vga.pix_ind [0] ? _2114_ : _2107_);
+	assign _2116_ = (_0127_ ? _1555_ : _2109_);
+	assign _2117_ = (_0146_ ? _2116_ : _2113_);
+	assign _2118_ = (_1103_ ? _2115_ : _2117_);
+	assign _2119_ = (_0044_ ? _2104_ : _2118_);
+	assign _2120_ = (_0088_ ? _2076_ : _2119_);
+	assign _2121_ = (_4368_ ? _2027_ : _2120_);
+	assign _2123_ = (_4423_ ? _0117_ : _0361_);
+	assign _2124_ = (_0056_ ? _0140_ : _2123_);
+	assign _2125_ = _0056_ & ~_0793_;
+	assign _2126_ = ~_2125_;
+	assign _2127_ = (_0146_ ? _2124_ : _2126_);
+	assign _2128_ = (_4423_ ? _4389_ : _0035_);
+	assign _2129_ = (_0056_ ? _1818_ : _2128_);
+	assign _2130_ = (_0146_ ? _2129_ : _2113_);
+	assign _2131_ = (\mchip.pong.game.vga.pix_ind [0] ? _2130_ : _2127_);
+	assign _2132_ = _0127_ & ~_2128_;
+	assign _2134_ = ~_2132_;
+	assign _2135_ = (_0127_ ? _1737_ : _0793_);
+	assign _2136_ = (_0146_ ? _2134_ : _2135_);
+	assign _2137_ = _4387_ & ~_0871_;
+	assign _2138_ = (_0056_ ? _2080_ : _2137_);
+	assign _2139_ = ~_2138_;
+	assign _2140_ = (_0146_ ? _2134_ : _2139_);
+	assign _2141_ = (\mchip.pong.game.vga.pix_ind [0] ? _2140_ : _2136_);
+	assign _2142_ = (_1103_ ? _2131_ : _2141_);
+	assign _2143_ = (_4387_ ? _0054_ : _0903_);
+	assign _2145_ = (_4387_ ? _0421_ : _0372_);
+	assign _2146_ = (_0127_ ? _2143_ : _2145_);
+	assign _2147_ = (_0056_ ? _0834_ : _1972_);
+	assign _2148_ = (_0146_ ? _2146_ : _2147_);
+	assign _2149_ = (_4387_ ? _0054_ : _0100_);
+	assign _2150_ = (_0056_ ? _2145_ : _2149_);
+	assign _2151_ = (_0146_ ? _2150_ : _2057_);
+	assign _2152_ = (\mchip.pong.game.vga.pix_ind [0] ? _2151_ : _2148_);
+	assign _2153_ = (_4387_ ? _0054_ : _0153_);
+	assign _2154_ = (_0056_ ? _2145_ : _2153_);
+	assign _2156_ = (_0146_ ? _2154_ : _2060_);
+	assign _2157_ = (_4387_ ? _0054_ : _0989_);
+	assign _2158_ = (_0056_ ? _2145_ : _2157_);
+	assign _2159_ = _0056_ & ~_0823_;
+	assign _2160_ = ~_2159_;
+	assign _2161_ = (_0146_ ? _2158_ : _2160_);
+	assign _2162_ = (\mchip.pong.game.vga.pix_ind [0] ? _2161_ : _2156_);
+	assign _2163_ = (_1103_ ? _2152_ : _2162_);
+	assign _2164_ = (_0044_ ? _2142_ : _2163_);
+	assign _2165_ = (_4423_ ? _0421_ : _0451_);
+	assign _2167_ = (_0127_ ? _0154_ : _2165_);
+	assign _2168_ = ~(_0094_ & _4387_);
+	assign _2169_ = (_0056_ ? _0972_ : _2168_);
+	assign _2170_ = (_0146_ ? _2167_ : _2169_);
+	assign _2171_ = (_0056_ ? _0140_ : _2069_);
+	assign _2172_ = (_4423_ ? _0421_ : _0372_);
+	assign _2173_ = (_4387_ ? _4380_ : _0153_);
+	assign _2174_ = (_0127_ ? _2172_ : _2173_);
+	assign _2175_ = (_0146_ ? _2171_ : _2174_);
+	assign _2176_ = (\mchip.pong.game.vga.pix_ind [0] ? _2175_ : _2170_);
+	assign _2178_ = (_4387_ ? _0114_ : _0372_);
+	assign _2179_ = (_0127_ ? _0048_ : _2178_);
+	assign _2180_ = (_0127_ ? _1924_ : _2153_);
+	assign _2181_ = (_0146_ ? _2179_ : _2180_);
+	assign _2182_ = (_0127_ ? _0048_ : _2145_);
+	assign _2183_ = (_4423_ ? _0100_ : _0035_);
+	assign _2184_ = (_0127_ ? _0572_ : _2183_);
+	assign _2185_ = (_0146_ ? _2182_ : _2184_);
+	assign _2186_ = (\mchip.pong.game.vga.pix_ind [0] ? _2185_ : _2181_);
+	assign _2187_ = (_1103_ ? _2176_ : _2186_);
+	assign _2189_ = _4387_ & ~_0254_;
+	assign _2190_ = ~_2189_;
+	assign _2191_ = (_4387_ ? _4443_ : _0114_);
+	assign _2192_ = (_0056_ ? _2190_ : _2191_);
+	assign _2193_ = (_4380_ ? _4408_ : _0065_);
+	assign _2194_ = (_4423_ ? _0961_ : _2193_);
+	assign _2195_ = (_0056_ ? _2001_ : _2194_);
+	assign _2196_ = (_0146_ ? _2192_ : _2195_);
+	assign _2197_ = (_4387_ ? _0845_ : _4437_);
+	assign _2198_ = (_0056_ ? _2085_ : _2197_);
+	assign _2200_ = (_4374_ ? _4372_ : _4380_);
+	assign _2201_ = ~_2200_;
+	assign _2202_ = (_4389_ ? _4375_ : _4419_);
+	assign _2203_ = ~_2202_;
+	assign _2204_ = (_4412_ ? _2201_ : _2203_);
+	assign _2205_ = (_0056_ ? _1764_ : _2204_);
+	assign _2206_ = (_0146_ ? _2198_ : _2205_);
+	assign _2207_ = (\mchip.pong.game.vga.pix_ind [0] ? _2206_ : _2196_);
+	assign _2208_ = (_4423_ ? _0444_ : _0490_);
+	assign _2209_ = (_4423_ ? _0054_ : _1010_);
+	assign _2211_ = (_0127_ ? _2208_ : _2209_);
+	assign _2212_ = (_0146_ ? _2047_ : _2211_);
+	assign _2213_ = (_4423_ ? _0118_ : _0153_);
+	assign _2214_ = (_0056_ ? _0755_ : _2213_);
+	assign _2215_ = (_4423_ ? _0119_ : _0530_);
+	assign _2216_ = (_4423_ ? _4381_ : _0957_);
+	assign _2217_ = (_0127_ ? _2215_ : _2216_);
+	assign _2218_ = (_0146_ ? _2214_ : _2217_);
+	assign _2219_ = (\mchip.pong.game.vga.pix_ind [0] ? _2218_ : _2212_);
+	assign _2220_ = (_1103_ ? _2207_ : _2219_);
+	assign _2222_ = (_0044_ ? _2187_ : _2220_);
+	assign _2223_ = (_0088_ ? _2164_ : _2222_);
+	assign _2224_ = _0254_ | _4387_;
+	assign _2225_ = (_4371_ ? _4423_ : _4389_);
+	assign _2226_ = (_0056_ ? _2224_ : _2225_);
+	assign _2227_ = _4423_ | _4409_;
+	assign _2228_ = (_0127_ ? _2227_ : _0334_);
+	assign _2229_ = ~_2228_;
+	assign _2230_ = (_0146_ ? _2226_ : _2229_);
+	assign _2231_ = (_4387_ ? _0118_ : _0372_);
+	assign _2233_ = _0127_ & ~_2231_;
+	assign _2234_ = ~_2233_;
+	assign _2235_ = ~_0330_;
+	assign _2236_ = (_4423_ ? _4428_ : _0403_);
+	assign _2237_ = (_0056_ ? _2235_ : _2236_);
+	assign _2238_ = (_0146_ ? _2234_ : _2237_);
+	assign _2239_ = (\mchip.pong.game.vga.pix_ind [0] ? _2238_ : _2230_);
+	assign _2240_ = (_1103_ ? _1695_ : _2239_);
+	assign _2241_ = (_0044_ ? _2240_ : _1691_);
+	assign _2242_ = (_0088_ ? _2241_ : _1673_);
+	assign _2244_ = (_4368_ ? _2223_ : _2242_);
+	assign _2245_ = (_4367_ ? _2121_ : _2244_);
+	assign _2246_ = (_1058_ ? _2245_ : _1706_);
+	assign _2247_ = (_0723_ ? _1999_ : _2246_);
+	assign _2248_ = (_1061_ ? _1706_ : _2247_);
+	assign \mchip.pong.VGA_G3  = (_1264_ ? _2248_ : _1519_);
+	assign _2249_ = ~_0115_;
+	assign _2250_ = _0660_ & ~_4387_;
+	assign _2251_ = (_0056_ ? _2249_ : _2250_);
+	assign _2252_ = (_0146_ ? _0349_ : _2251_);
+	assign _2254_ = (\mchip.pong.game.vga.pix_ind [0] ? _0112_ : _2252_);
+	assign _2255_ = (_1103_ ? _2254_ : _0106_);
+	assign _2256_ = ~(_0035_ | _4417_);
+	assign _2257_ = ~_2256_;
+	assign _2258_ = (_4387_ ? _0206_ : _2257_);
+	assign _2259_ = (_0127_ ? _0356_ : _2258_);
+	assign _2260_ = (_4423_ ? _0118_ : _0361_);
+	assign _2261_ = (_0056_ ? _0035_ : _2260_);
+	assign _2262_ = (_0146_ ? _2259_ : _2261_);
+	assign _2263_ = (_4380_ ? _4427_ : _4408_);
+	assign _2265_ = (_4387_ ? _4417_ : _2263_);
+	assign _2266_ = (_0127_ ? _0365_ : _2265_);
+	assign _2267_ = (_4423_ ? _4443_ : _0366_);
+	assign _2268_ = (_4423_ ? _0054_ : _4390_);
+	assign _2269_ = (_0127_ ? _2267_ : _2268_);
+	assign _2270_ = (_0146_ ? _2266_ : _2269_);
+	assign _2271_ = (\mchip.pong.game.vga.pix_ind [0] ? _2270_ : _2262_);
+	assign _2272_ = ~(_4387_ | _4427_);
+	assign _2273_ = (_0127_ ? _0378_ : _2272_);
+	assign _2274_ = (_4423_ ? _0421_ : _0101_);
+	assign _2276_ = (_0056_ ? _0792_ : _2274_);
+	assign _2277_ = (_0146_ ? _2273_ : _2276_);
+	assign _2278_ = (_4380_ ? _4424_ : _4375_);
+	assign _2279_ = _2278_ & ~_4387_;
+	assign _2280_ = (_0127_ ? _0386_ : _2279_);
+	assign _2281_ = (_0056_ ? _0390_ : _0402_);
+	assign _2282_ = (_0146_ ? _2280_ : _2281_);
+	assign _2283_ = (\mchip.pong.game.vga.pix_ind [0] ? _2282_ : _2277_);
+	assign _2284_ = (_1103_ ? _2271_ : _2283_);
+	assign _2285_ = (_0044_ ? _2255_ : _2284_);
+	assign _2287_ = (_0088_ ? _0084_ : _2285_);
+	assign _2288_ = (_4387_ ? _0671_ : _0792_);
+	assign _2289_ = (_0127_ ? _0154_ : _2288_);
+	assign _2290_ = (_4380_ ? _0577_ : _0582_);
+	assign _2291_ = (_4423_ ? _4381_ : _2290_);
+	assign _2292_ = _2291_ & ~_0127_;
+	assign _2293_ = (_0146_ ? _2289_ : _2292_);
+	assign _2294_ = (_4423_ ? _4380_ : _4443_);
+	assign _2295_ = (_0127_ ? _0048_ : _2294_);
+	assign _2296_ = _4387_ & ~_0426_;
+	assign _2298_ = (_4387_ ? _0100_ : _0153_);
+	assign _2299_ = (_0127_ ? _2296_ : _2298_);
+	assign _2300_ = (_0146_ ? _2295_ : _2299_);
+	assign _2301_ = (\mchip.pong.game.vga.pix_ind [0] ? _2300_ : _2293_);
+	assign _2302_ = (_4387_ ? _4413_ : _0961_);
+	assign _2303_ = (_0127_ ? _0399_ : _2302_);
+	assign _2304_ = (_4423_ ? _0054_ : _0542_);
+	assign _2305_ = (_0127_ ? _0386_ : _2304_);
+	assign _2306_ = (_0146_ ? _2303_ : _2305_);
+	assign _2307_ = _0118_ | ~_0114_;
+	assign _2309_ = (_4387_ ? _4417_ : _2307_);
+	assign _2310_ = (_0127_ ? _0154_ : _2309_);
+	assign _2311_ = (_4423_ ? _4381_ : _0035_);
+	assign _2312_ = (_4387_ ? _0280_ : _4381_);
+	assign _2313_ = (_0127_ ? _2311_ : _2312_);
+	assign _2314_ = (_0146_ ? _2310_ : _2313_);
+	assign _2315_ = (\mchip.pong.game.vga.pix_ind [0] ? _2314_ : _2306_);
+	assign _2316_ = (_1103_ ? _2301_ : _2315_);
+	assign _2317_ = (_4387_ ? _0425_ : _4391_);
+	assign _2318_ = _0127_ & ~_2317_;
+	assign _2320_ = (_4423_ ? _0113_ : _0478_);
+	assign _2321_ = _0056_ & ~_2320_;
+	assign _2322_ = (_0146_ ? _2318_ : _2321_);
+	assign _2323_ = (_4387_ ? _0599_ : _0442_);
+	assign _2324_ = _2323_ & ~_0056_;
+	assign _2325_ = (_4423_ ? _0153_ : _0613_);
+	assign _2326_ = (_0127_ ? _0208_ : _2325_);
+	assign _2327_ = (_0146_ ? _2324_ : _2326_);
+	assign _2328_ = (\mchip.pong.game.vga.pix_ind [0] ? _2327_ : _2322_);
+	assign _2329_ = _1908_ & ~_4423_;
+	assign _2331_ = ~_1679_;
+	assign _2332_ = (_0127_ ? _2329_ : _2331_);
+	assign _2333_ = (_4423_ ? _0153_ : _0568_);
+	assign _2334_ = (_0127_ ? _0208_ : _2333_);
+	assign _2335_ = (_0146_ ? _2332_ : _2334_);
+	assign _2336_ = ~(_0207_ | _4423_);
+	assign _2337_ = (_0127_ ? _0179_ : _2336_);
+	assign _2338_ = (_4389_ ? _4408_ : _4433_);
+	assign _2339_ = _4423_ & ~_2338_;
+	assign _2340_ = (_4387_ ? _4408_ : _4409_);
+	assign _2342_ = (_0127_ ? _2339_ : _2340_);
+	assign _2343_ = (_0146_ ? _2337_ : _2342_);
+	assign _2344_ = (\mchip.pong.game.vga.pix_ind [0] ? _2343_ : _2335_);
+	assign _2345_ = (_1103_ ? _2328_ : _2344_);
+	assign _2346_ = (_0044_ ? _2316_ : _2345_);
+	assign _2347_ = _2263_ & ~_4387_;
+	assign _2348_ = (_0127_ ? _2092_ : _2347_);
+	assign _2349_ = _4408_ & ~_4423_;
+	assign _2350_ = (_4387_ ? _0852_ : _0687_);
+	assign _2351_ = (_0127_ ? _2349_ : _2350_);
+	assign _2353_ = (_0146_ ? _2348_ : _2351_);
+	assign _2354_ = (_4387_ ? _4417_ : _4427_);
+	assign _2355_ = (_0127_ ? _0484_ : _2354_);
+	assign _2356_ = _1870_ & ~_4423_;
+	assign _2357_ = (_4387_ ? _0852_ : _0490_);
+	assign _2358_ = (_0127_ ? _2356_ : _2357_);
+	assign _2359_ = (_0146_ ? _2355_ : _2358_);
+	assign _2360_ = (\mchip.pong.game.vga.pix_ind [0] ? _2359_ : _2353_);
+	assign _2361_ = (_4380_ ? _4371_ : _4408_);
+	assign _2362_ = _2361_ & ~_4387_;
+	assign _2364_ = (_0127_ ? _1555_ : _2362_);
+	assign _2365_ = _1020_ & ~_4423_;
+	assign _2366_ = (_0056_ ? _4389_ : _2365_);
+	assign _2367_ = (_0146_ ? _2364_ : _2366_);
+	assign _2368_ = _1630_ | _0226_;
+	assign _2369_ = (_4423_ ? _4380_ : _0478_);
+	assign _2370_ = _0056_ & ~_2369_;
+	assign _2371_ = (_0146_ ? _2368_ : _2370_);
+	assign _2372_ = (\mchip.pong.game.vga.pix_ind [0] ? _2371_ : _2367_);
+	assign _2373_ = (_1103_ ? _2360_ : _2372_);
+	assign _2375_ = (_4387_ ? _0203_ : _0067_);
+	assign _2376_ = (_4380_ ? _4372_ : _4424_);
+	assign _2377_ = (_4387_ ? _4413_ : _2376_);
+	assign _2378_ = (_0127_ ? _2375_ : _2377_);
+	assign _2379_ = (_4412_ ? _4437_ : _0100_);
+	assign _2380_ = (_4387_ ? _4389_ : _0045_);
+	assign _2381_ = (_0127_ ? _2379_ : _2380_);
+	assign _2382_ = (_0146_ ? _2378_ : _2381_);
+	assign _2383_ = (_4387_ ? _0203_ : _0119_);
+	assign _2385_ = (_4423_ ? _4372_ : _0206_);
+	assign _2386_ = (_0127_ ? _2383_ : _2385_);
+	assign _2387_ = _4387_ & ~_0100_;
+	assign _2388_ = (_4387_ ? _0568_ : _0045_);
+	assign _2389_ = (_0127_ ? _2387_ : _2388_);
+	assign _2390_ = (_0146_ ? _2386_ : _2389_);
+	assign _2391_ = (\mchip.pong.game.vga.pix_ind [0] ? _2390_ : _2382_);
+	assign _2392_ = (_4423_ ? _0119_ : _0472_);
+	assign _2393_ = (_4380_ ? _4424_ : _0756_);
+	assign _2394_ = (_4387_ ? _0118_ : _2393_);
+	assign _2396_ = (_0127_ ? _2392_ : _2394_);
+	assign _2397_ = (_0127_ ? _4387_ : _2388_);
+	assign _2398_ = (_0146_ ? _2396_ : _2397_);
+	assign _2399_ = (_4387_ ? _0054_ : _0451_);
+	assign _2400_ = _0366_ | _0066_;
+	assign _2401_ = (_4387_ ? _4417_ : _2400_);
+	assign _2402_ = (_0127_ ? _2399_ : _2401_);
+	assign _2403_ = (_4389_ ? _4433_ : _4407_);
+	assign _2404_ = _4387_ & ~_2403_;
+	assign _2406_ = (_4387_ ? _0568_ : _1808_);
+	assign _2407_ = (_0127_ ? _2404_ : _2406_);
+	assign _2408_ = (_0146_ ? _2402_ : _2407_);
+	assign _2409_ = (\mchip.pong.game.vga.pix_ind [0] ? _2408_ : _2398_);
+	assign _2410_ = (_1103_ ? _2391_ : _2409_);
+	assign _2411_ = (_0044_ ? _2373_ : _2410_);
+	assign _2412_ = (_0088_ ? _2346_ : _2411_);
+	assign _2413_ = (_4368_ ? _2287_ : _2412_);
+	assign _2414_ = (_4423_ ? _4380_ : _0871_);
+	assign _2415_ = (_4423_ ? _0066_ : _0314_);
+	assign _2417_ = (_0127_ ? _2414_ : _2415_);
+	assign _2418_ = (_4387_ ? _4428_ : _0114_);
+	assign _2419_ = (_4423_ ? _4408_ : _1889_);
+	assign _2420_ = (_0127_ ? _2418_ : _2419_);
+	assign _2421_ = (_0146_ ? _2417_ : _2420_);
+	assign _2422_ = (_4423_ ? _1010_ : _0472_);
+	assign _2423_ = (_4389_ ? _4374_ : _4419_);
+	assign _2424_ = (_4423_ ? _4425_ : _2423_);
+	assign _2425_ = (_0127_ ? _2422_ : _2424_);
+	assign _2426_ = (_4387_ ? _4428_ : _1809_);
+	assign _2428_ = (_4387_ ? _0568_ : _1790_);
+	assign _2429_ = (_0127_ ? _2426_ : _2428_);
+	assign _2430_ = (_0146_ ? _2425_ : _2429_);
+	assign _2431_ = (\mchip.pong.game.vga.pix_ind [0] ? _2430_ : _2421_);
+	assign _2432_ = (_4389_ ? _4374_ : _4408_);
+	assign _2433_ = (_4387_ ? _0472_ : _2432_);
+	assign _2434_ = (_4389_ ? _0577_ : _4419_);
+	assign _2435_ = (_4423_ ? _4390_ : _2434_);
+	assign _2436_ = (_0127_ ? _2433_ : _2435_);
+	assign _2437_ = (_4387_ ? _4380_ : _0454_);
+	assign _2439_ = (_4387_ ? _0961_ : _0506_);
+	assign _2440_ = (_0127_ ? _2437_ : _2439_);
+	assign _2441_ = (_0146_ ? _2436_ : _2440_);
+	assign _2442_ = (_4423_ ? _4380_ : _1908_);
+	assign _2443_ = (_4387_ ? _4417_ : _0054_);
+	assign _2444_ = (_0127_ ? _2442_ : _2443_);
+	assign _2445_ = (_4387_ ? _4375_ : _1020_);
+	assign _2446_ = (_4387_ ? _4391_ : _0506_);
+	assign _2447_ = (_0127_ ? _2445_ : _2446_);
+	assign _2448_ = (_0146_ ? _2444_ : _2447_);
+	assign _2450_ = (\mchip.pong.game.vga.pix_ind [0] ? _2448_ : _2441_);
+	assign _2451_ = (_1103_ ? _2431_ : _2450_);
+	assign _2452_ = (_4423_ ? _0417_ : _0599_);
+	assign _2453_ = (_4423_ ? _0280_ : _0101_);
+	assign _2454_ = (_0127_ ? _2452_ : _2453_);
+	assign _2455_ = (_4423_ ? _0852_ : _0599_);
+	assign _2456_ = (_4389_ ? _4374_ : _4375_);
+	assign _2457_ = (_4423_ ? _0153_ : _2456_);
+	assign _2458_ = (_0127_ ? _2455_ : _2457_);
+	assign _2459_ = (_0146_ ? _2454_ : _2458_);
+	assign _2461_ = (_0276_ ? _0067_ : _4437_);
+	assign _2462_ = (_4389_ ? _4371_ : _4387_);
+	assign _2463_ = (_0127_ ? _2461_ : _2462_);
+	assign _2464_ = (_4387_ ? _0678_ : _0444_);
+	assign _2465_ = (_4380_ ? _4371_ : _0756_);
+	assign _2466_ = (_4423_ ? _0623_ : _2465_);
+	assign _2467_ = (_0127_ ? _2464_ : _2466_);
+	assign _2468_ = (_0146_ ? _2463_ : _2467_);
+	assign _2469_ = (\mchip.pong.game.vga.pix_ind [0] ? _2468_ : _2459_);
+	assign _2470_ = (_4423_ ? _4380_ : _0506_);
+	assign _2472_ = (_4371_ ? _4389_ : _4374_);
+	assign _2473_ = (_4387_ ? _1870_ : _2472_);
+	assign _2474_ = (_0127_ ? _2470_ : _2473_);
+	assign _2475_ = (_4389_ ? _4408_ : _0577_);
+	assign _2476_ = (_4423_ ? _2475_ : _2456_);
+	assign _2477_ = _0359_ | _4387_;
+	assign _2478_ = (_0127_ ? _2476_ : _2477_);
+	assign _2479_ = (_0146_ ? _2474_ : _2478_);
+	assign _2480_ = (_4423_ ? _0404_ : _2257_);
+	assign _2481_ = (_4387_ ? _0989_ : _0479_);
+	assign _2483_ = (_0127_ ? _2480_ : _2481_);
+	assign _2484_ = (_4374_ ? _4372_ : _0970_);
+	assign _2485_ = _2484_ | _4423_;
+	assign _2486_ = (_4380_ ? _4427_ : _0582_);
+	assign _2487_ = (_4423_ ? _0093_ : _2486_);
+	assign _2488_ = (_0127_ ? _2485_ : _2487_);
+	assign _2489_ = (_0146_ ? _2483_ : _2488_);
+	assign _2490_ = (\mchip.pong.game.vga.pix_ind [0] ? _2489_ : _2479_);
+	assign _2491_ = (_1103_ ? _2469_ : _2490_);
+	assign _2492_ = (_0044_ ? _2451_ : _2491_);
+	assign _2494_ = (_4387_ ? _4381_ : _0560_);
+	assign _2495_ = (_4380_ ? _0577_ : _4427_);
+	assign _2496_ = (_4387_ ? _0820_ : _2495_);
+	assign _2497_ = (_0127_ ? _2494_ : _2496_);
+	assign _2498_ = _0235_ | _0161_;
+	assign _2499_ = (_0146_ ? _2497_ : _2498_);
+	assign _2500_ = (_4423_ ? _0421_ : _0153_);
+	assign _2501_ = (_4389_ ? _4374_ : _4424_);
+	assign _2502_ = (_4387_ ? _2031_ : _2501_);
+	assign _2503_ = (_0127_ ? _2500_ : _2502_);
+	assign _2505_ = (_0056_ ? _0429_ : _0861_);
+	assign _2506_ = (_0146_ ? _2503_ : _2505_);
+	assign _2507_ = (\mchip.pong.game.vga.pix_ind [0] ? _2506_ : _2499_);
+	assign _2508_ = (_4387_ ? _0665_ : _2475_);
+	assign _2509_ = (_4423_ ? _0660_ : _1853_);
+	assign _2510_ = (_0127_ ? _2508_ : _2509_);
+	assign _2511_ = (_4387_ ? _4419_ : _1781_);
+	assign _2512_ = (_0056_ ? _0670_ : _2511_);
+	assign _2513_ = (_0146_ ? _2510_ : _2512_);
+	assign _2514_ = (_4387_ ? _0054_ : _2290_);
+	assign _2516_ = (_4387_ ? _0101_ : _2376_);
+	assign _2517_ = (_0127_ ? _2514_ : _2516_);
+	assign _2518_ = ~_0237_;
+	assign _2519_ = (_4423_ ? _0372_ : _0613_);
+	assign _2520_ = (_0056_ ? _2518_ : _2519_);
+	assign _2521_ = (_0146_ ? _2517_ : _2520_);
+	assign _2522_ = (\mchip.pong.game.vga.pix_ind [0] ? _2521_ : _2513_);
+	assign _2523_ = (_1103_ ? _2507_ : _2522_);
+	assign _2524_ = (_4387_ ? _4389_ : _0442_);
+	assign _2525_ = (_4389_ ? _4419_ : _0582_);
+	assign _2527_ = (_4387_ ? _0687_ : _2525_);
+	assign _2528_ = (_0127_ ? _2524_ : _2527_);
+	assign _2529_ = (_0146_ ? _2528_ : _0242_);
+	assign _2530_ = (_4423_ ? _0454_ : _4434_);
+	assign _2531_ = (_4423_ ? _4389_ : _0117_);
+	assign _2532_ = (_0127_ ? _2530_ : _2531_);
+	assign _2533_ = (_0146_ ? _2532_ : _0126_);
+	assign _2534_ = (\mchip.pong.game.vga.pix_ind [0] ? _2533_ : _2529_);
+	assign _2535_ = (_4380_ ? _4372_ : _0582_);
+	assign _2536_ = (_4387_ ? _0153_ : _2535_);
+	assign _2538_ = (_4387_ ? _0206_ : _0093_);
+	assign _2539_ = (_0127_ ? _2536_ : _2538_);
+	assign _2540_ = (_0146_ ? _2539_ : _0156_);
+	assign _2541_ = (_4387_ ? _4409_ : _2535_);
+	assign _2542_ = (_4387_ ? _0206_ : _0372_);
+	assign _2543_ = (_0127_ ? _2541_ : _2542_);
+	assign _2544_ = (_0146_ ? _2543_ : _0706_);
+	assign _2545_ = (\mchip.pong.game.vga.pix_ind [0] ? _2544_ : _2540_);
+	assign _2546_ = (_1103_ ? _2534_ : _2545_);
+	assign _2547_ = (_0044_ ? _2523_ : _2546_);
+	assign _2549_ = (_0088_ ? _2492_ : _2547_);
+	assign _2550_ = (_4423_ ? _0107_ : _0113_);
+	assign _2551_ = _0127_ & ~_2550_;
+	assign _2552_ = (_0146_ ? _2551_ : _0340_);
+	assign _2553_ = (\mchip.pong.game.vga.pix_ind [0] ? _2552_ : _0339_);
+	assign _2554_ = (_1103_ ? _0337_ : _2553_);
+	assign _2555_ = (_0044_ ? _2554_ : _0329_);
+	assign _2556_ = (_0088_ ? _2555_ : _0307_);
+	assign _2557_ = (_4368_ ? _2549_ : _2556_);
+	assign _2558_ = (_4367_ ? _2413_ : _2557_);
+	assign _2560_ = (_4423_ ? _4417_ : _0153_);
+	assign _2561_ = (_0056_ ? _0755_ : _2560_);
+	assign _2562_ = (_0146_ ? _2561_ : _0763_);
+	assign _2563_ = (\mchip.pong.game.vga.pix_ind [0] ? _0772_ : _2562_);
+	assign _2564_ = (_1103_ ? _2563_ : _0788_);
+	assign _2565_ = (_4380_ ? _4424_ : _0065_);
+	assign _2566_ = (_4387_ ? _4381_ : _2565_);
+	assign _2567_ = _2566_ | _0056_;
+	assign _2568_ = (_0146_ ? _2567_ : _0799_);
+	assign _2569_ = (\mchip.pong.game.vga.pix_ind [0] ? _2568_ : _0795_);
+	assign _2571_ = (_4387_ ? _0054_ : _0454_);
+	assign _2572_ = (_0056_ ? _0193_ : _2571_);
+	assign _2573_ = (_0146_ ? _2572_ : _0799_);
+	assign _2574_ = (\mchip.pong.game.vga.pix_ind [0] ? _0812_ : _2573_);
+	assign _2575_ = (_1103_ ? _2569_ : _2574_);
+	assign _2576_ = (_0044_ ? _2564_ : _2575_);
+	assign _2577_ = (_4423_ ? _4437_ : _0957_);
+	assign _2578_ = (_0127_ ? _0816_ : _2577_);
+	assign _2579_ = (_0146_ ? _2578_ : _0824_);
+	assign _2580_ = (_4387_ ? _4380_ : _0579_);
+	assign _2582_ = (_4423_ ? _0114_ : _0957_);
+	assign _2583_ = (_0127_ ? _2580_ : _2582_);
+	assign _2584_ = (_0146_ ? _2583_ : _0835_);
+	assign _2585_ = (\mchip.pong.game.vga.pix_ind [0] ? _2584_ : _2579_);
+	assign _2586_ = (_4423_ ? _0114_ : _0542_);
+	assign _2587_ = (_0127_ ? _0838_ : _2586_);
+	assign _2588_ = (_0146_ ? _2587_ : _0847_);
+	assign _2589_ = (\mchip.pong.game.vga.pix_ind [0] ? _0858_ : _2588_);
+	assign _2590_ = (_1103_ ? _2585_ : _2589_);
+	assign _2591_ = (_4423_ ? _0890_ : _0603_);
+	assign _2593_ = (_0127_ ? _0861_ : _2591_);
+	assign _2594_ = (_0146_ ? _2593_ : _0868_);
+	assign _2595_ = (_4387_ ? _0203_ : _0757_);
+	assign _2596_ = (_0056_ ? _0872_ : _2595_);
+	assign _2597_ = (_0146_ ? _2596_ : _0877_);
+	assign _2598_ = (\mchip.pong.game.vga.pix_ind [0] ? _2597_ : _2594_);
+	assign _2599_ = (_4387_ ? _0119_ : _0883_);
+	assign _2600_ = (_0127_ ? _0881_ : _2599_);
+	assign _2601_ = (_0146_ ? _2600_ : _0887_);
+	assign _2602_ = (_4387_ ? _0054_ : _0403_);
+	assign _2604_ = (_4387_ ? _0090_ : _0672_);
+	assign _2605_ = (_0127_ ? _2602_ : _2604_);
+	assign _2606_ = (_0146_ ? _2605_ : _0894_);
+	assign _2607_ = (\mchip.pong.game.vga.pix_ind [0] ? _2606_ : _2601_);
+	assign _2608_ = (_1103_ ? _2598_ : _2607_);
+	assign _2609_ = (_0044_ ? _2590_ : _2608_);
+	assign _2610_ = (_0088_ ? _2576_ : _2609_);
+	assign _2611_ = (_4368_ ? _0752_ : _2610_);
+	assign _2612_ = (_0127_ ? _0484_ : _0902_);
+	assign _2613_ = (_0127_ ? _0550_ : _0834_);
+	assign _2615_ = (_0146_ ? _2612_ : _2613_);
+	assign _2616_ = (\mchip.pong.game.vga.pix_ind [0] ? _0911_ : _2615_);
+	assign _2617_ = (_0056_ ? _0902_ : _0913_);
+	assign _2618_ = (_0146_ ? _2617_ : _0917_);
+	assign _2619_ = (_0056_ ? _0914_ : _2143_);
+	assign _2620_ = (_4387_ ? _4371_ : _0421_);
+	assign _2621_ = (_0056_ ? _0867_ : _2620_);
+	assign _2622_ = (_0146_ ? _2619_ : _2621_);
+	assign _2623_ = (\mchip.pong.game.vga.pix_ind [0] ? _2622_ : _2618_);
+	assign _2624_ = (_1103_ ? _2616_ : _2623_);
+	assign _2626_ = (_4423_ ? _4389_ : _4381_);
+	assign _2627_ = (_0056_ ? _0933_ : _2626_);
+	assign _2628_ = (_0146_ ? _2627_ : _0930_);
+	assign _2629_ = (_4387_ ? _4437_ : _0880_);
+	assign _2630_ = (_0056_ ? _0933_ : _2629_);
+	assign _2631_ = (_0146_ ? _2630_ : _0935_);
+	assign _2632_ = (\mchip.pong.game.vga.pix_ind [0] ? _2631_ : _2628_);
+	assign _2633_ = (_4387_ ? _0035_ : _2565_);
+	assign _2634_ = (_0056_ ? _0940_ : _2633_);
+	assign _2635_ = (_0146_ ? _2634_ : _0944_);
+	assign _2637_ = (\mchip.pong.game.vga.pix_ind [0] ? _0952_ : _2635_);
+	assign _2638_ = (_1103_ ? _2632_ : _2637_);
+	assign _2639_ = (_0044_ ? _2624_ : _2638_);
+	assign _2640_ = (_4423_ ? _0957_ : _0757_);
+	assign _2641_ = (_0127_ ? _0956_ : _2640_);
+	assign _2642_ = (_4380_ ? _0577_ : _0425_);
+	assign _2643_ = (_4423_ ? _0070_ : _2642_);
+	assign _2644_ = (_4387_ ? _0255_ : _0495_);
+	assign _2645_ = ~_2644_;
+	assign _2646_ = (_0127_ ? _2643_ : _2645_);
+	assign _2648_ = (_0146_ ? _2641_ : _2646_);
+	assign _2649_ = (_4423_ ? _0903_ : _0153_);
+	assign _2650_ = (_0056_ ? _0967_ : _2649_);
+	assign _2651_ = (_0146_ ? _2650_ : _0973_);
+	assign _2652_ = (\mchip.pong.game.vga.pix_ind [0] ? _2651_ : _2648_);
+	assign _2653_ = (_0127_ ? _0567_ : _0986_);
+	assign _2654_ = (_0146_ ? _2653_ : _0991_);
+	assign _2655_ = (\mchip.pong.game.vga.pix_ind [0] ? _2654_ : _0984_);
+	assign _2656_ = (_1103_ ? _2652_ : _2655_);
+	assign _2657_ = (_0056_ ? _4389_ : _0996_);
+	assign _2659_ = (_0146_ ? _2657_ : _1000_);
+	assign _2660_ = (_4387_ ? _0852_ : _0530_);
+	assign _2661_ = (_0127_ ? _1005_ : _2660_);
+	assign _2662_ = (_0146_ ? _2661_ : _1013_);
+	assign _2663_ = (\mchip.pong.game.vga.pix_ind [0] ? _2662_ : _2659_);
+	assign _2664_ = (_4387_ ? _0117_ : _0119_);
+	assign _2665_ = (_0127_ ? _0154_ : _2664_);
+	assign _2666_ = (_4423_ ? _4371_ : _0606_);
+	assign _2667_ = (_0056_ ? _1021_ : _2666_);
+	assign _2668_ = (_0146_ ? _2665_ : _2667_);
+	assign _2670_ = (_4423_ ? _0391_ : _0615_);
+	assign _2671_ = (_0056_ ? _1031_ : _2670_);
+	assign _2672_ = (_0146_ ? _1027_ : _2671_);
+	assign _2673_ = (\mchip.pong.game.vga.pix_ind [0] ? _2672_ : _2668_);
+	assign _2674_ = (_1103_ ? _2663_ : _2673_);
+	assign _2675_ = (_0044_ ? _2656_ : _2674_);
+	assign _2676_ = (_0088_ ? _2639_ : _2675_);
+	assign _2677_ = (_4423_ ? _4389_ : _0070_);
+	assign _2678_ = (_0127_ ? _1038_ : _2677_);
+	assign _2679_ = (_0146_ ? _2678_ : _1042_);
+	assign _2681_ = (_4387_ ? _0880_ : _0474_);
+	assign _2682_ = (_0127_ ? _1044_ : _2681_);
+	assign _2683_ = (_0146_ ? _2682_ : _1049_);
+	assign _2684_ = (\mchip.pong.game.vga.pix_ind [0] ? _2683_ : _2679_);
+	assign _2685_ = (_1103_ ? _0337_ : _2684_);
+	assign _2686_ = (_0044_ ? _2685_ : _0329_);
+	assign _2687_ = (_0088_ ? _2686_ : _0307_);
+	assign _2688_ = (_4368_ ? _2676_ : _2687_);
+	assign _2689_ = (_4367_ ? _2611_ : _2688_);
+	assign _2690_ = (_1058_ ? _2689_ : _0347_);
+	assign _2692_ = (_0723_ ? _2558_ : _2690_);
+	assign _2693_ = (_1061_ ? _0347_ : _2692_);
+	assign \mchip.pong.VGA_B2  = (_1264_ ? _2693_ : _1519_);
+	assign _2694_ = _4417_ & _4387_;
+	assign _2695_ = (_0056_ ? _2694_ : _0399_);
+	assign _2696_ = (_0127_ ? _4429_ : _0420_);
+	assign _2697_ = (_0146_ ? _2695_ : _2696_);
+	assign _2698_ = _4428_ & ~_4387_;
+	assign _2699_ = (_0127_ ? _0356_ : _2698_);
+	assign _2700_ = (_4387_ ? _0203_ : _0035_);
+	assign _2702_ = (_0127_ ? _1524_ : _2700_);
+	assign _2703_ = (_0146_ ? _2699_ : _2702_);
+	assign _2704_ = (\mchip.pong.game.vga.pix_ind [0] ? _2703_ : _2697_);
+	assign _2705_ = _1590_ | _0135_;
+	assign _2706_ = (_0056_ ? _2235_ : _1524_);
+	assign _2707_ = (_0146_ ? _2705_ : _2706_);
+	assign _2708_ = (_0127_ ? _4429_ : _1729_);
+	assign _2709_ = (_0146_ ? _1727_ : _2708_);
+	assign _2710_ = (\mchip.pong.game.vga.pix_ind [0] ? _2709_ : _2707_);
+	assign _2711_ = (_1103_ ? _2704_ : _2710_);
+	assign _2713_ = (_0044_ ? _1586_ : _2711_);
+	assign _2714_ = (_0088_ ? _1568_ : _2713_);
+	assign _2715_ = (_0127_ ? _0048_ : _1522_);
+	assign _2716_ = (_4387_ ? _4428_ : _0153_);
+	assign _2717_ = _2716_ | _0127_;
+	assign _2718_ = (_0146_ ? _2715_ : _2717_);
+	assign _2719_ = (_0127_ ? _0154_ : _1532_);
+	assign _2720_ = _0442_ | _4423_;
+	assign _2721_ = (_4387_ ? _0792_ : _4381_);
+	assign _2722_ = (_0127_ ? _2720_ : _2721_);
+	assign _2724_ = (_0146_ ? _2719_ : _2722_);
+	assign _2725_ = (\mchip.pong.game.vga.pix_ind [0] ? _2724_ : _2718_);
+	assign _2726_ = (_0127_ ? _0154_ : _2336_);
+	assign _2727_ = _1652_ | _0156_;
+	assign _2728_ = (_0146_ ? _2726_ : _2727_);
+	assign _2729_ = (_0127_ ? _0399_ : _2336_);
+	assign _2730_ = (_4423_ ? _2053_ : _0961_);
+	assign _2731_ = _0056_ & ~_2730_;
+	assign _2732_ = (_0146_ ? _2729_ : _2731_);
+	assign _2733_ = (\mchip.pong.game.vga.pix_ind [0] ? _2732_ : _2728_);
+	assign _2735_ = (_1103_ ? _2725_ : _2733_);
+	assign _2736_ = (_4423_ ? _0117_ : _1908_);
+	assign _2737_ = _2736_ | _0056_;
+	assign _2738_ = (_0146_ ? _2737_ : _2060_);
+	assign _2739_ = (_4423_ ? _4409_ : _0401_);
+	assign _2740_ = _2739_ | _0127_;
+	assign _2741_ = (_0146_ ? _1778_ : _2740_);
+	assign _2742_ = (\mchip.pong.game.vga.pix_ind [0] ? _2741_ : _2738_);
+	assign _2743_ = (_0056_ ? _0550_ : _1784_);
+	assign _2744_ = (_4387_ ? _0203_ : _4409_);
+	assign _2746_ = _2744_ | _0127_;
+	assign _2747_ = (_0146_ ? _2743_ : _2746_);
+	assign _2748_ = _0160_ | _0127_;
+	assign _2749_ = (_0146_ ? _1740_ : _2748_);
+	assign _2750_ = (\mchip.pong.game.vga.pix_ind [0] ? _2749_ : _2747_);
+	assign _2751_ = (_1103_ ? _2742_ : _2750_);
+	assign _2752_ = (_0044_ ? _2735_ : _2751_);
+	assign _2753_ = _4387_ | _4381_;
+	assign _2754_ = (_4387_ ? _0495_ : _2307_);
+	assign _2755_ = (_0056_ ? _2753_ : _2754_);
+	assign _2757_ = (_0146_ ? _2755_ : _0794_);
+	assign _2758_ = (_4423_ ? _4381_ : _0451_);
+	assign _2759_ = (_0127_ ? _1807_ : _2758_);
+	assign _2760_ = (_0146_ ? _2759_ : _2082_);
+	assign _2761_ = (\mchip.pong.game.vga.pix_ind [0] ? _2760_ : _2757_);
+	assign _2762_ = (_4380_ ? _4372_ : _4407_);
+	assign _2763_ = _2762_ | _4387_;
+	assign _2764_ = (_0127_ ? _0619_ : _2763_);
+	assign _2765_ = (_0146_ ? _2764_ : _2160_);
+	assign _2766_ = (_0127_ ? _0619_ : _0872_);
+	assign _2768_ = (_0146_ ? _2766_ : _2160_);
+	assign _2769_ = (\mchip.pong.game.vga.pix_ind [0] ? _2768_ : _2765_);
+	assign _2770_ = (_1103_ ? _2761_ : _2769_);
+	assign _2771_ = (_4423_ ? _0118_ : _0495_);
+	assign _2772_ = (_4380_ ? _4371_ : _0425_);
+	assign _2773_ = (_4387_ ? _0475_ : _2772_);
+	assign _2774_ = (_0127_ ? _2771_ : _2773_);
+	assign _2775_ = (_0127_ ? _0572_ : _2105_);
+	assign _2776_ = (_0146_ ? _2774_ : _2775_);
+	assign _2777_ = (_4423_ ? _4371_ : _0207_);
+	assign _2779_ = (_0127_ ? _2771_ : _2777_);
+	assign _2780_ = (_0127_ ? _0550_ : _0793_);
+	assign _2781_ = (_0146_ ? _2779_ : _2780_);
+	assign _2782_ = (\mchip.pong.game.vga.pix_ind [0] ? _2781_ : _2776_);
+	assign _2783_ = (_4423_ ? _0118_ : _0035_);
+	assign _2784_ = (_4387_ ? _0119_ : _1846_);
+	assign _2785_ = (_0127_ ? _2783_ : _2784_);
+	assign _2786_ = (_0146_ ? _2785_ : _2780_);
+	assign _2787_ = (_4423_ ? _4417_ : _0495_);
+	assign _2788_ = (_0056_ ? _1857_ : _2787_);
+	assign _2790_ = (_0127_ ? _0193_ : _0793_);
+	assign _2791_ = (_0146_ ? _2788_ : _2790_);
+	assign _2792_ = (\mchip.pong.game.vga.pix_ind [0] ? _2791_ : _2786_);
+	assign _2793_ = (_1103_ ? _2782_ : _2792_);
+	assign _2794_ = (_0044_ ? _2770_ : _2793_);
+	assign _2795_ = (_0088_ ? _2752_ : _2794_);
+	assign _2796_ = (_4368_ ? _2714_ : _2795_);
+	assign _2797_ = (_4423_ ? _4389_ : _0361_);
+	assign _2798_ = (_0056_ ? _1924_ : _2797_);
+	assign _2799_ = _0635_ | _0127_;
+	assign _2801_ = (_0146_ ? _2798_ : _2799_);
+	assign _2802_ = (_0056_ ? _1879_ : _2105_);
+	assign _2803_ = (_4387_ ? _4380_ : _0678_);
+	assign _2804_ = _2803_ | _0127_;
+	assign _2805_ = (_0146_ ? _2802_ : _2804_);
+	assign _2806_ = (\mchip.pong.game.vga.pix_ind [0] ? _2805_ : _2801_);
+	assign _2807_ = (_4423_ ? _0117_ : _0475_);
+	assign _2808_ = (_0127_ ? _2105_ : _2807_);
+	assign _2809_ = (_0127_ ? _0193_ : _2105_);
+	assign _2810_ = (_0146_ ? _2808_ : _2809_);
+	assign _2812_ = (_4423_ ? _4443_ : _0506_);
+	assign _2813_ = (_4423_ ? _0852_ : _0475_);
+	assign _2814_ = (_0127_ ? _2812_ : _2813_);
+	assign _2815_ = (_0127_ ? _0550_ : _2105_);
+	assign _2816_ = (_0146_ ? _2814_ : _2815_);
+	assign _2817_ = (\mchip.pong.game.vga.pix_ind [0] ? _2816_ : _2810_);
+	assign _2818_ = (_1103_ ? _2806_ : _2817_);
+	assign _2819_ = (_4387_ ? _0054_ : _0852_);
+	assign _2820_ = (_4389_ ? _4408_ : _4372_);
+	assign _2821_ = (_4423_ ? _4389_ : _2820_);
+	assign _2823_ = (_0127_ ? _2819_ : _2821_);
+	assign _2824_ = _4387_ & ~_2307_;
+	assign _2825_ = ~_2824_;
+	assign _2826_ = (_0056_ ? _0834_ : _2825_);
+	assign _2827_ = (_0146_ ? _2823_ : _2826_);
+	assign _2828_ = (_4423_ ? _4389_ : _1908_);
+	assign _2829_ = (_0056_ ? _2015_ : _2828_);
+	assign _2830_ = (_4423_ ? _4409_ : _0583_);
+	assign _2831_ = (_0127_ ? _1748_ : _2830_);
+	assign _2832_ = (_0146_ ? _2829_ : _2831_);
+	assign _2834_ = (\mchip.pong.game.vga.pix_ind [0] ? _2832_ : _2827_);
+	assign _2835_ = (_4387_ ? _4380_ : _1028_);
+	assign _2836_ = (_0127_ ? _0550_ : _2835_);
+	assign _2837_ = (_0146_ ? _2829_ : _2836_);
+	assign _2838_ = (_4423_ ? _4389_ : _2484_);
+	assign _2839_ = (_0056_ ? _1924_ : _2838_);
+	assign _2840_ = (_4387_ ? _0090_ : _4434_);
+	assign _2841_ = (_0127_ ? _1888_ : _2840_);
+	assign _2842_ = (_0146_ ? _2839_ : _2841_);
+	assign _2843_ = (\mchip.pong.game.vga.pix_ind [0] ? _2842_ : _2837_);
+	assign _2845_ = (_1103_ ? _2834_ : _2843_);
+	assign _2846_ = (_0044_ ? _2818_ : _2845_);
+	assign _2847_ = (_4423_ ? _0852_ : _0639_);
+	assign _2848_ = (_0127_ ? _0697_ : _2847_);
+	assign _2849_ = (_0146_ ? _2848_ : _1940_);
+	assign _2850_ = (_4387_ ? _4409_ : _0391_);
+	assign _2851_ = (_0127_ ? _2626_ : _2850_);
+	assign _2852_ = (_4423_ ? _0792_ : _0426_);
+	assign _2853_ = (_0056_ ? _0160_ : _2852_);
+	assign _2854_ = (_0146_ ? _2851_ : _2853_);
+	assign _2856_ = (\mchip.pong.game.vga.pix_ind [0] ? _2854_ : _2849_);
+	assign _2857_ = _4387_ | ~_1853_;
+	assign _2858_ = ~(_2857_ & _0095_);
+	assign _2859_ = (_0127_ ? _2626_ : _2858_);
+	assign _2860_ = (_4380_ ? _0065_ : _0756_);
+	assign _2861_ = (_4423_ ? _0119_ : _2860_);
+	assign _2862_ = (_0056_ ? _0160_ : _2861_);
+	assign _2863_ = (_0146_ ? _2859_ : _2862_);
+	assign _2864_ = (_4387_ ? _4381_ : _0852_);
+	assign _2865_ = (_4423_ ? _0101_ : _2820_);
+	assign _2867_ = (_0127_ ? _2864_ : _2865_);
+	assign _2868_ = (_4371_ ? _4380_ : _0577_);
+	assign _2869_ = _2868_ | _4423_;
+	assign _2870_ = (_0056_ ? _1959_ : _2869_);
+	assign _2871_ = (_0146_ ? _2867_ : _2870_);
+	assign _2872_ = (\mchip.pong.game.vga.pix_ind [0] ? _2871_ : _2863_);
+	assign _2873_ = (_1103_ ? _2856_ : _2872_);
+	assign _2874_ = (_4387_ ? _4389_ : _0264_);
+	assign _2875_ = (_0127_ ? _1965_ : _2874_);
+	assign _2876_ = (_0146_ ? _2875_ : _1635_);
+	assign _2878_ = (_4423_ ? _0107_ : _0372_);
+	assign _2879_ = (_0127_ ? _4389_ : _2878_);
+	assign _2880_ = (_0146_ ? _2879_ : _0135_);
+	assign _2881_ = (\mchip.pong.game.vga.pix_ind [0] ? _2880_ : _2876_);
+	assign _2882_ = (_0127_ ? _0702_ : _1574_);
+	assign _2883_ = (_0146_ ? _2882_ : _0135_);
+	assign _2884_ = (_0127_ ? _0697_ : _0323_);
+	assign _2885_ = (_0146_ ? _2884_ : _1984_);
+	assign _2886_ = (\mchip.pong.game.vga.pix_ind [0] ? _2885_ : _2883_);
+	assign _2887_ = (_1103_ ? _2881_ : _2886_);
+	assign _2889_ = (_0044_ ? _2873_ : _2887_);
+	assign _2890_ = (_0088_ ? _2846_ : _2889_);
+	assign _2891_ = (_4368_ ? _2890_ : _1997_);
+	assign _2892_ = (_4367_ ? _2796_ : _2891_);
+	assign _2893_ = (_4387_ ? _4381_ : _0703_);
+	assign _2894_ = (_0056_ ? _0501_ : _2893_);
+	assign _2895_ = (_0146_ ? _2894_ : _2033_);
+	assign _2896_ = (\mchip.pong.game.vga.pix_ind [0] ? _2040_ : _2895_);
+	assign _2897_ = (_1103_ ? _2896_ : _2051_);
+	assign _2898_ = ~_2070_;
+	assign _2900_ = ~_2071_;
+	assign _2901_ = (_0146_ ? _2898_ : _2900_);
+	assign _2902_ = _2626_ | _0056_;
+	assign _2903_ = (_0146_ ? _2902_ : _2060_);
+	assign _2904_ = (\mchip.pong.game.vga.pix_ind [0] ? _2901_ : _2903_);
+	assign _2905_ = (_1103_ ? _2062_ : _2904_);
+	assign _2906_ = (_0044_ ? _2897_ : _2905_);
+	assign _2907_ = (_4423_ ? _0451_ : _0254_);
+	assign _2908_ = (_0127_ ? _2105_ : _2907_);
+	assign _2909_ = (_0146_ ? _2908_ : _2082_);
+	assign _2910_ = (\mchip.pong.game.vga.pix_ind [0] ? _2114_ : _2909_);
+	assign _2911_ = (_1103_ ? _2910_ : _2117_);
+	assign _2912_ = (_0044_ ? _2104_ : _2911_);
+	assign _2913_ = (_0088_ ? _2906_ : _2912_);
+	assign _2914_ = (_4368_ ? _2027_ : _2913_);
+	assign _2915_ = (_4387_ ? _0035_ : _0579_);
+	assign _2916_ = _2915_ | _0056_;
+	assign _2917_ = (_0146_ ? _2916_ : _2139_);
+	assign _2918_ = (\mchip.pong.game.vga.pix_ind [0] ? _2917_ : _2136_);
+	assign _2919_ = (_1103_ ? _2131_ : _2918_);
+	assign _2921_ = (_4387_ ? _0054_ : _2278_);
+	assign _2922_ = (_0056_ ? _2145_ : _2921_);
+	assign _2923_ = (_0146_ ? _2922_ : _2147_);
+	assign _2924_ = (_4387_ ? _0054_ : _1903_);
+	assign _2925_ = (_0056_ ? _2145_ : _2924_);
+	assign _2926_ = (_0146_ ? _2925_ : _2057_);
+	assign _2927_ = (\mchip.pong.game.vga.pix_ind [0] ? _2926_ : _2923_);
+	assign _2928_ = (_1103_ ? _2927_ : _2162_);
+	assign _2929_ = (_0044_ ? _2919_ : _2928_);
+	assign _2930_ = _4380_ | ~_4433_;
+	assign _2932_ = (_4423_ ? _0421_ : _2930_);
+	assign _2933_ = (_0127_ ? _0154_ : _2932_);
+	assign _2934_ = _0264_ | ~_4387_;
+	assign _2935_ = (_0056_ ? _0972_ : _2934_);
+	assign _2936_ = (_0146_ ? _2933_ : _2935_);
+	assign _2937_ = (_0056_ ? _0140_ : _2064_);
+	assign _2938_ = (_0146_ ? _2937_ : _2174_);
+	assign _2939_ = (\mchip.pong.game.vga.pix_ind [0] ? _2938_ : _2936_);
+	assign _2940_ = (_4387_ ? _4381_ : _4437_);
+	assign _2941_ = (_0056_ ? _2145_ : _2940_);
+	assign _2943_ = (_0146_ ? _2941_ : _2184_);
+	assign _2944_ = (\mchip.pong.game.vga.pix_ind [0] ? _2943_ : _2181_);
+	assign _2945_ = (_1103_ ? _2939_ : _2944_);
+	assign _2946_ = (_0056_ ? _0592_ : _1976_);
+	assign _2947_ = (_4423_ ? _0444_ : _2361_);
+	assign _2948_ = (_0056_ ? _2209_ : _2947_);
+	assign _2949_ = (_0146_ ? _2946_ : _2948_);
+	assign _2950_ = (\mchip.pong.game.vga.pix_ind [0] ? _2218_ : _2949_);
+	assign _2951_ = (_1103_ ? _2207_ : _2950_);
+	assign _2952_ = (_0044_ ? _2945_ : _2951_);
+	assign _2954_ = (_0088_ ? _2929_ : _2952_);
+	assign _2955_ = (_4368_ ? _2954_ : _2242_);
+	assign _2956_ = (_4367_ ? _2914_ : _2955_);
+	assign _2957_ = (_1058_ ? _2956_ : _1706_);
+	assign _2958_ = (_0723_ ? _2892_ : _2957_);
+	assign _2959_ = (_1061_ ? _1706_ : _2958_);
+	assign \mchip.pong.VGA_B3  = (_1264_ ? _2959_ : _1519_);
+	assign _2960_ = (_1103_ ? _0061_ : _0081_);
+	assign _2961_ = _1103_ & ~_4432_;
+	assign _2962_ = (\mchip.pong.game.vga.pix_ind [0] ? _4440_ : _0039_);
+	assign _2964_ = _2962_ & ~_1103_;
+	assign _2965_ = _2964_ | _2961_;
+	assign _2966_ = (_0044_ ? _2965_ : _2960_);
+	assign _2967_ = _0044_ & ~_0124_;
+	assign _2968_ = _0308_ & ~_0149_;
+	assign _2969_ = _2968_ | _2967_;
+	assign _2970_ = (_0088_ ? _2966_ : _2969_);
+	assign _2971_ = _0088_ & ~_0186_;
+	assign _2972_ = _0214_ & ~_0088_;
+	assign _2973_ = _2972_ | _2971_;
+	assign _2975_ = (_4368_ ? _2970_ : _2973_);
+	assign _2976_ = _0088_ | ~_0307_;
+	assign _2977_ = _0344_ & ~_0152_;
+	assign _2978_ = _2976_ & ~_2977_;
+	assign _2979_ = ~(_0241_ & _0044_);
+	assign _2980_ = _0249_ & ~_0044_;
+	assign _2981_ = _2979_ & ~_2980_;
+	assign _2982_ = _0220_ & _0044_;
+	assign _2983_ = _0308_ & ~_0230_;
+	assign _2984_ = _2983_ | _2982_;
+	assign _2986_ = (_0088_ ? _2984_ : _2981_);
+	assign _2987_ = (_4368_ ? _2986_ : _2978_);
+	assign _2988_ = (_4367_ ? _2975_ : _2987_);
+	assign _2989_ = _1103_ | ~_0106_;
+	assign _2990_ = ~(_2820_ & _4423_);
+	assign _2991_ = (_0056_ ? _0115_ : _2990_);
+	assign _2992_ = (_0146_ ? _0348_ : _2991_);
+	assign _2993_ = ~_0109_;
+	assign _2994_ = ~_0111_;
+	assign _2995_ = (_0146_ ? _2993_ : _2994_);
+	assign _2997_ = (\mchip.pong.game.vga.pix_ind [0] ? _2995_ : _2992_);
+	assign _2998_ = _1103_ & ~_2997_;
+	assign _2999_ = _2989_ & ~_2998_;
+	assign _3000_ = (_4423_ ? _0295_ : _0119_);
+	assign _3001_ = (_0127_ ? _0128_ : _3000_);
+	assign _3002_ = ~(_0530_ & _4387_);
+	assign _3003_ = (_4387_ ? _4391_ : _0117_);
+	assign _3004_ = (_0127_ ? _3002_ : _3003_);
+	assign _3005_ = (_0146_ ? _3001_ : _3004_);
+	assign _3006_ = (_4387_ ? _0107_ : _1832_);
+	assign _3008_ = (_0127_ ? _0132_ : _3006_);
+	assign _3009_ = ~_0606_;
+	assign _3010_ = (_4423_ ? _0703_ : _3009_);
+	assign _3011_ = (_4387_ ? _0295_ : _2053_);
+	assign _3012_ = (_0127_ ? _3010_ : _3011_);
+	assign _3013_ = (_0146_ ? _3008_ : _3012_);
+	assign _3014_ = (\mchip.pong.game.vga.pix_ind [0] ? _3013_ : _3005_);
+	assign _3015_ = (_0056_ ? _0091_ : _0138_);
+	assign _3016_ = (_4387_ ? _0281_ : _0792_);
+	assign _3017_ = (_0056_ ? _0140_ : _3016_);
+	assign _3019_ = (_0146_ ? _3015_ : _3017_);
+	assign _3020_ = (_0056_ ? _0350_ : _0143_);
+	assign _3021_ = (_4423_ ? _0495_ : _0521_);
+	assign _3022_ = (_0056_ ? _0120_ : _3021_);
+	assign _3023_ = (_0146_ ? _3020_ : _3022_);
+	assign _3024_ = (\mchip.pong.game.vga.pix_ind [0] ? _3023_ : _3019_);
+	assign _3025_ = (_1103_ ? _3014_ : _3024_);
+	assign _3026_ = (_0044_ ? _2999_ : _3025_);
+	assign _3027_ = (_0088_ ? _2966_ : _3026_);
+	assign _3028_ = (_0127_ ? _1798_ : _1560_);
+	assign _3030_ = (_4423_ ? _4381_ : _1927_);
+	assign _3031_ = _0056_ & ~_3030_;
+	assign _3032_ = (_0146_ ? _3028_ : _3031_);
+	assign _3033_ = (_0056_ ? _0549_ : _0162_);
+	assign _3034_ = _4387_ & ~_2860_;
+	assign _3035_ = (_4423_ ? _0495_ : _1009_);
+	assign _3036_ = (_0127_ ? _3034_ : _3035_);
+	assign _3037_ = (_0146_ ? _3033_ : _3036_);
+	assign _3038_ = (\mchip.pong.game.vga.pix_ind [0] ? _3037_ : _3032_);
+	assign _3039_ = (_4387_ ? _0113_ : _0850_);
+	assign _3041_ = (_0127_ ? _0166_ : _3039_);
+	assign _3042_ = (_4387_ ? _4389_ : _1808_);
+	assign _3043_ = (_4423_ ? _2053_ : _0281_);
+	assign _3044_ = (_0127_ ? _3042_ : _3043_);
+	assign _3045_ = (_0146_ ? _3041_ : _3044_);
+	assign _3046_ = (_4389_ ? _4374_ : _4427_);
+	assign _3047_ = (_4387_ ? _0119_ : _3046_);
+	assign _3048_ = (_0127_ ? _1798_ : _3047_);
+	assign _3049_ = (_4387_ ? _0035_ : _0521_);
+	assign _3050_ = _1612_ & _0098_;
+	assign _3052_ = (_0127_ ? _3049_ : _3050_);
+	assign _3053_ = (_0146_ ? _3048_ : _3052_);
+	assign _3054_ = (\mchip.pong.game.vga.pix_ind [0] ? _3053_ : _3045_);
+	assign _3055_ = (_1103_ ? _3038_ : _3054_);
+	assign _3056_ = (_4387_ ? _0826_ : _0530_);
+	assign _3057_ = _0127_ & ~_3056_;
+	assign _3058_ = (_4423_ ? _4443_ : _2307_);
+	assign _3059_ = _0056_ & ~_3058_;
+	assign _3060_ = (_0146_ ? _3057_ : _3059_);
+	assign _3061_ = ~_0410_;
+	assign _3063_ = (_0276_ ? _3061_ : _0443_);
+	assign _3064_ = (_0056_ ? _0875_ : _3063_);
+	assign _3065_ = (_4423_ ? _0153_ : _0391_);
+	assign _3066_ = _0056_ & ~_3065_;
+	assign _3067_ = (_0146_ ? _3064_ : _3066_);
+	assign _3068_ = (\mchip.pong.game.vga.pix_ind [0] ? _3067_ : _3060_);
+	assign _3069_ = (_0127_ ? _0055_ : _0447_);
+	assign _3070_ = (_4423_ ? _0153_ : _1028_);
+	assign _3071_ = _0056_ & ~_3070_;
+	assign _3072_ = (_0146_ ? _3069_ : _3071_);
+	assign _3074_ = ~_0179_;
+	assign _3075_ = _4387_ & ~_0880_;
+	assign _3076_ = (_0127_ ? _3074_ : _3075_);
+	assign _3077_ = (_4423_ ? _4409_ : _0623_);
+	assign _3078_ = ~(_3077_ | _0127_);
+	assign _3079_ = (_0146_ ? _3076_ : _3078_);
+	assign _3080_ = (\mchip.pong.game.vga.pix_ind [0] ? _3079_ : _3072_);
+	assign _3081_ = (_1103_ ? _3068_ : _3080_);
+	assign _3082_ = (_0044_ ? _3055_ : _3081_);
+	assign _3083_ = ~(_1809_ | _4387_);
+	assign _3085_ = (_0127_ ? _0618_ : _3083_);
+	assign _3086_ = (_4423_ ? _1002_ : _1903_);
+	assign _3087_ = (_0127_ ? _0754_ : _3086_);
+	assign _3088_ = (_0146_ ? _3085_ : _3087_);
+	assign _3089_ = (_4387_ ? _0450_ : _0410_);
+	assign _3090_ = (_0127_ ? _2137_ : _3089_);
+	assign _3091_ = (_4423_ ? _0490_ : _2307_);
+	assign _3092_ = _0056_ & ~_3091_;
+	assign _3093_ = (_0146_ ? _3090_ : _3092_);
+	assign _3094_ = (\mchip.pong.game.vga.pix_ind [0] ? _3093_ : _3088_);
+	assign _3096_ = (_4423_ ? _4389_ : _2307_);
+	assign _3097_ = _0056_ & ~_3096_;
+	assign _3098_ = (_0146_ ? _0155_ : _3097_);
+	assign _3099_ = (_1103_ ? _3094_ : _3098_);
+	assign _3100_ = (_4389_ ? _4372_ : _4419_);
+	assign _3101_ = _4387_ & ~_3100_;
+	assign _3102_ = (_4423_ ? _0454_ : _0882_);
+	assign _3103_ = (_0127_ ? _3101_ : _3102_);
+	assign _3104_ = _4387_ & ~_0579_;
+	assign _3105_ = (_4412_ ? _0367_ : _0207_);
+	assign _3107_ = (_0127_ ? _3104_ : _3105_);
+	assign _3108_ = (_0146_ ? _3103_ : _3107_);
+	assign _3109_ = (_0056_ ? _0452_ : _3101_);
+	assign _3110_ = (_4387_ ? _2256_ : _1809_);
+	assign _3111_ = (_0127_ ? _0591_ : _3110_);
+	assign _3112_ = (_0146_ ? _3109_ : _3111_);
+	assign _3113_ = (\mchip.pong.game.vga.pix_ind [0] ? _3112_ : _3108_);
+	assign _3114_ = (_4387_ ? _0450_ : _0263_);
+	assign _3115_ = (_0127_ ? _0618_ : _3114_);
+	assign _3116_ = ~_0045_;
+	assign _3118_ = (_4387_ ? _0153_ : _3116_);
+	assign _3119_ = (_0127_ ? _1841_ : _3118_);
+	assign _3120_ = (_0146_ ? _3115_ : _3119_);
+	assign _3121_ = (_0276_ ? _0371_ : _0450_);
+	assign _3122_ = (_0127_ ? _0618_ : _3121_);
+	assign _3123_ = (_4387_ ? _1903_ : _1809_);
+	assign _3124_ = _3123_ & ~_0127_;
+	assign _3125_ = (_0146_ ? _3122_ : _3124_);
+	assign _3126_ = (\mchip.pong.game.vga.pix_ind [0] ? _3125_ : _3120_);
+	assign _3127_ = (_1103_ ? _3113_ : _3126_);
+	assign _3129_ = (_0044_ ? _3099_ : _3127_);
+	assign _3130_ = (_0088_ ? _3082_ : _3129_);
+	assign _3131_ = (_4368_ ? _3027_ : _3130_);
+	assign _3132_ = (_4423_ ? _0292_ : _4424_);
+	assign _3133_ = (_0127_ ? _0399_ : _3132_);
+	assign _3134_ = (_4387_ ? _0090_ : _0613_);
+	assign _3135_ = _0056_ & ~_3134_;
+	assign _3136_ = (_0146_ ? _3133_ : _3135_);
+	assign _3137_ = ~_2807_;
+	assign _3138_ = _4387_ & ~_1908_;
+	assign _3140_ = (_0056_ ? _3137_ : _3138_);
+	assign _3141_ = _0056_ & ~_2835_;
+	assign _3142_ = (_0146_ ? _3140_ : _3141_);
+	assign _3143_ = (\mchip.pong.game.vga.pix_ind [0] ? _3142_ : _3136_);
+	assign _3144_ = (_4387_ ? _0100_ : _0529_);
+	assign _3145_ = (_0127_ ? _0618_ : _3144_);
+	assign _3146_ = _4387_ & ~_0101_;
+	assign _3147_ = (_4387_ ? _4389_ : _0207_);
+	assign _3148_ = (_0127_ ? _3146_ : _3147_);
+	assign _3149_ = (_0146_ ? _3145_ : _3148_);
+	assign _3151_ = _4423_ & ~_0530_;
+	assign _3152_ = (_0127_ ? _0618_ : _3151_);
+	assign _3153_ = (_4389_ ? _0425_ : _4433_);
+	assign _3154_ = (_4387_ ? _4389_ : _3153_);
+	assign _3155_ = (_0127_ ? _1555_ : _3154_);
+	assign _3156_ = (_0146_ ? _3152_ : _3155_);
+	assign _3157_ = (\mchip.pong.game.vga.pix_ind [0] ? _3156_ : _3149_);
+	assign _3158_ = (_1103_ ? _3143_ : _3157_);
+	assign _3159_ = (_4387_ ? _0598_ : _4437_);
+	assign _3160_ = _4437_ | _4387_;
+	assign _3162_ = _0631_ & ~_4423_;
+	assign _3163_ = _3160_ & ~_3162_;
+	assign _3164_ = (_0127_ ? _3159_ : _3163_);
+	assign _3165_ = ~_0609_;
+	assign _3166_ = _4387_ & ~_0756_;
+	assign _3167_ = (_0056_ ? _3165_ : _3166_);
+	assign _3168_ = (_0146_ ? _3164_ : _3167_);
+	assign _3169_ = (_4437_ ? _4423_ : _4387_);
+	assign _3170_ = _4423_ | ~_0639_;
+	assign _3171_ = _0530_ & ~_4387_;
+	assign _3173_ = _3170_ & ~_3171_;
+	assign _3174_ = (_0127_ ? _3169_ : _3173_);
+	assign _3175_ = (_4387_ ? _4372_ : _0621_);
+	assign _3176_ = (_0127_ ? _1747_ : _3175_);
+	assign _3177_ = (_0146_ ? _3174_ : _3176_);
+	assign _3178_ = (\mchip.pong.game.vga.pix_ind [0] ? _3177_ : _3168_);
+	assign _3179_ = (_0056_ ? _0828_ : _1877_);
+	assign _3180_ = ~_0572_;
+	assign _3181_ = (_4423_ ? _0113_ : _0882_);
+	assign _3182_ = (_0127_ ? _3180_ : _3181_);
+	assign _3184_ = (_0146_ ? _3179_ : _3182_);
+	assign _3185_ = _4387_ & ~_0314_;
+	assign _3186_ = (_0127_ ? _0154_ : _3185_);
+	assign _3187_ = (_4387_ ? _0089_ : _0654_);
+	assign _3188_ = (_0127_ ? _0531_ : _3187_);
+	assign _3189_ = (_0146_ ? _3186_ : _3188_);
+	assign _3190_ = (\mchip.pong.game.vga.pix_ind [0] ? _3189_ : _3184_);
+	assign _3191_ = (_1103_ ? _3178_ : _3190_);
+	assign _3192_ = (_0044_ ? _3158_ : _3191_);
+	assign _3193_ = (_4423_ ? _0292_ : _0391_);
+	assign _3195_ = (_0056_ ? _3151_ : _3193_);
+	assign _3196_ = ~_0160_;
+	assign _3197_ = (_0127_ ? _0103_ : _3196_);
+	assign _3198_ = (_0146_ ? _3195_ : _3197_);
+	assign _3199_ = (_0056_ ? _1837_ : _1934_);
+	assign _3200_ = (_4423_ ? _0101_ : _0371_);
+	assign _3201_ = (_0056_ ? _0098_ : _3200_);
+	assign _3202_ = (_0146_ ? _3199_ : _3201_);
+	assign _3203_ = (\mchip.pong.game.vga.pix_ind [0] ? _3202_ : _3198_);
+	assign _3204_ = ~_0976_;
+	assign _3206_ = (_4387_ ? _0839_ : _1852_);
+	assign _3207_ = (_0127_ ? _3204_ : _3206_);
+	assign _3208_ = (_4423_ ? _0450_ : _0206_);
+	assign _3209_ = (_0056_ ? _0181_ : _3208_);
+	assign _3210_ = (_0146_ ? _3207_ : _3209_);
+	assign _3211_ = ~(_0093_ & _4423_);
+	assign _3212_ = _3211_ & ~_3162_;
+	assign _3213_ = (_0127_ ? _2054_ : _3212_);
+	assign _3214_ = _4387_ & ~_0065_;
+	assign _3215_ = (_0056_ ? _0237_ : _3214_);
+	assign _3217_ = (_0146_ ? _3213_ : _3215_);
+	assign _3218_ = (\mchip.pong.game.vga.pix_ind [0] ? _3217_ : _3210_);
+	assign _3219_ = (_1103_ ? _3203_ : _3218_);
+	assign _3220_ = ~_0242_;
+	assign _3221_ = ~(_0689_ & _0056_);
+	assign _3222_ = (_4387_ ? _0970_ : _0529_);
+	assign _3223_ = _0127_ & ~_3222_;
+	assign _3224_ = _3221_ & ~_3223_;
+	assign _3225_ = (_0146_ ? _3224_ : _3220_);
+	assign _3226_ = ~_0126_;
+	assign _3228_ = (_4423_ ? _0035_ : _1002_);
+	assign _3229_ = (_4387_ ? _0529_ : _4417_);
+	assign _3230_ = (_0127_ ? _3228_ : _3229_);
+	assign _3231_ = (_0146_ ? _3230_ : _3226_);
+	assign _3232_ = (\mchip.pong.game.vga.pix_ind [0] ? _3231_ : _3225_);
+	assign _3233_ = (_0056_ ? _1817_ : _1934_);
+	assign _3234_ = (_0127_ ? _0052_ : _0098_);
+	assign _3235_ = (_0146_ ? _3233_ : _3234_);
+	assign _3236_ = ~_0706_;
+	assign _3237_ = ~_0140_;
+	assign _3239_ = (_4423_ ? _0292_ : _4410_);
+	assign _3240_ = (_0056_ ? _3237_ : _3239_);
+	assign _3241_ = (_0159_ ? _3236_ : _3240_);
+	assign _3242_ = (\mchip.pong.game.vga.pix_ind [0] ? _3241_ : _3235_);
+	assign _3243_ = (_1103_ ? _3232_ : _3242_);
+	assign _3244_ = (_0044_ ? _3219_ : _3243_);
+	assign _3245_ = (_0088_ ? _3192_ : _3244_);
+	assign _3246_ = _3245_ & _4368_;
+	assign _3247_ = ~(_0719_ | _4368_);
+	assign _3248_ = _3247_ | _3246_;
+	assign _3250_ = (_4367_ ? _3131_ : _3248_);
+	assign _3251_ = (_0146_ ? _0724_ : _2003_);
+	assign _3252_ = _0056_ & ~_0778_;
+	assign _3253_ = (_0146_ ? _0731_ : _3252_);
+	assign _3254_ = (\mchip.pong.game.vga.pix_ind [0] ? _3253_ : _3251_);
+	assign _3255_ = ~_0744_;
+	assign _3256_ = (_4387_ ? _4408_ : _0292_);
+	assign _3257_ = (_4387_ ? _0117_ : _0114_);
+	assign _3258_ = (_0127_ ? _3256_ : _3257_);
+	assign _3259_ = (_0146_ ? _3255_ : _3258_);
+	assign _3261_ = (\mchip.pong.game.vga.pix_ind [0] ? _0740_ : _3259_);
+	assign _3262_ = (_1103_ ? _3254_ : _3261_);
+	assign _3263_ = _3262_ & ~_0044_;
+	assign _3264_ = _3263_ | _2967_;
+	assign _3265_ = (_0088_ ? _2966_ : _3264_);
+	assign _3266_ = _0044_ | ~_0814_;
+	assign _3267_ = (_4387_ ? _0495_ : _0506_);
+	assign _3268_ = (_0056_ ? _0754_ : _3267_);
+	assign _3269_ = (_4387_ ? _4389_ : _2338_);
+	assign _3270_ = (_0056_ ? _0761_ : _3269_);
+	assign _3272_ = (_0146_ ? _3268_ : _3270_);
+	assign _3273_ = (_4387_ ? _4380_ : _0450_);
+	assign _3274_ = (_4387_ ? _0117_ : _0495_);
+	assign _3275_ = (_0127_ ? _3273_ : _3274_);
+	assign _3276_ = (_0146_ ? _0767_ : _3275_);
+	assign _3277_ = (\mchip.pong.game.vga.pix_ind [0] ? _3276_ : _3272_);
+	assign _3278_ = _0056_ & ~_0374_;
+	assign _3279_ = (_0146_ ? _0774_ : _3278_);
+	assign _3280_ = (_4387_ ? _0412_ : _4381_);
+	assign _3281_ = _0056_ & ~_3280_;
+	assign _3283_ = (_0146_ ? _0781_ : _3281_);
+	assign _3284_ = (\mchip.pong.game.vga.pix_ind [0] ? _3283_ : _3279_);
+	assign _3285_ = (_1103_ ? _3277_ : _3284_);
+	assign _3286_ = _0044_ & ~_3285_;
+	assign _3287_ = _3266_ & ~_3286_;
+	assign _3288_ = _0146_ | ~_0824_;
+	assign _3289_ = _4408_ | _4387_;
+	assign _3290_ = (_4387_ ? _0054_ : _0826_);
+	assign _3291_ = (_0056_ ? _3289_ : _3290_);
+	assign _3292_ = _3291_ & ~_0159_;
+	assign _3294_ = _3288_ & ~_3292_;
+	assign _3295_ = ~_0834_;
+	assign _3296_ = (_0127_ ? _0832_ : _3295_);
+	assign _3297_ = _0127_ & ~_0827_;
+	assign _3298_ = (_0146_ ? _3297_ : _3296_);
+	assign _3299_ = (\mchip.pong.game.vga.pix_ind [0] ? _3298_ : _3294_);
+	assign _3300_ = _0127_ & ~_0838_;
+	assign _3301_ = ~_0846_;
+	assign _3302_ = (_4423_ ? _0665_ : _1903_);
+	assign _3303_ = (_0056_ ? _3301_ : _3302_);
+	assign _3305_ = (_0146_ ? _3300_ : _3303_);
+	assign _3306_ = _0127_ & ~_0849_;
+	assign _3307_ = (_4387_ ? _0131_ : _0529_);
+	assign _3308_ = _3307_ & ~_0127_;
+	assign _3309_ = _3308_ | _3306_;
+	assign _3310_ = ~_0856_;
+	assign _3311_ = (_4389_ ? _0065_ : _4427_);
+	assign _3312_ = (_4423_ ? _0292_ : _3311_);
+	assign _3313_ = (_0056_ ? _3310_ : _3312_);
+	assign _3314_ = (_0146_ ? _3309_ : _3313_);
+	assign _3316_ = (\mchip.pong.game.vga.pix_ind [0] ? _3314_ : _3305_);
+	assign _3317_ = (_1103_ ? _3299_ : _3316_);
+	assign _3318_ = (_4387_ ? _0295_ : _0113_);
+	assign _3319_ = ~(_2387_ | _2362_);
+	assign _3320_ = (_0127_ ? _3318_ : _3319_);
+	assign _3321_ = ~_0867_;
+	assign _3322_ = (_0056_ ? _3321_ : _3075_);
+	assign _3323_ = (_0146_ ? _3320_ : _3322_);
+	assign _3324_ = (_0127_ ? _0875_ : _3321_);
+	assign _3325_ = _4423_ & ~_2361_;
+	assign _3327_ = (_0127_ ? _0738_ : _3325_);
+	assign _3328_ = (_0146_ ? _3327_ : _3324_);
+	assign _3329_ = (\mchip.pong.game.vga.pix_ind [0] ? _3328_ : _3323_);
+	assign _3330_ = (_0127_ ? _0500_ : _3321_);
+	assign _3331_ = (_4387_ ? _2053_ : _0119_);
+	assign _3332_ = (_0056_ ? _3325_ : _3331_);
+	assign _3333_ = (_0146_ ? _3332_ : _3330_);
+	assign _3334_ = ~_0894_;
+	assign _3335_ = ~_0536_;
+	assign _3336_ = (_0056_ ? _0452_ : _3335_);
+	assign _3338_ = (_0159_ ? _3334_ : _3336_);
+	assign _3339_ = (\mchip.pong.game.vga.pix_ind [0] ? _3338_ : _3333_);
+	assign _3340_ = (_1103_ ? _3329_ : _3339_);
+	assign _3341_ = (_0044_ ? _3317_ : _3340_);
+	assign _3342_ = (_0088_ ? _3287_ : _3341_);
+	assign _3343_ = (_4368_ ? _3265_ : _3342_);
+	assign _3344_ = _4423_ & ~_0372_;
+	assign _3345_ = (_0127_ ? _0502_ : _3344_);
+	assign _3346_ = (_0127_ ? _0727_ : _3295_);
+	assign _3347_ = (_0146_ ? _3345_ : _3346_);
+	assign _3349_ = (_0127_ ? _0549_ : _3295_);
+	assign _3350_ = (_4423_ ? _4380_ : _2053_);
+	assign _3351_ = (_0056_ ? _1817_ : _3350_);
+	assign _3352_ = (_0159_ ? _3349_ : _3351_);
+	assign _3353_ = (\mchip.pong.game.vga.pix_ind [0] ? _3352_ : _3347_);
+	assign _3354_ = _0127_ & ~_0816_;
+	assign _3355_ = _4387_ & ~_0401_;
+	assign _3356_ = _0350_ & ~_3355_;
+	assign _3357_ = (_0056_ ? _3321_ : _3356_);
+	assign _3358_ = (_0146_ ? _3354_ : _3357_);
+	assign _3360_ = (_4387_ ? _0054_ : _0579_);
+	assign _3361_ = _0127_ & ~_3360_;
+	assign _3362_ = (_4423_ ? _0292_ : _0118_);
+	assign _3363_ = (_0056_ ? _3321_ : _3362_);
+	assign _3364_ = (_0146_ ? _3361_ : _3363_);
+	assign _3365_ = (\mchip.pong.game.vga.pix_ind [0] ? _3364_ : _3358_);
+	assign _3366_ = (_1103_ ? _3353_ : _3365_);
+	assign _3367_ = ~_0924_;
+	assign _3368_ = _4437_ & _4423_;
+	assign _3369_ = (_0127_ ? _3367_ : _3368_);
+	assign _3371_ = ~_0929_;
+	assign _3372_ = (_0056_ ? _3371_ : _2824_);
+	assign _3373_ = (_0146_ ? _3369_ : _3372_);
+	assign _3374_ = ~_0823_;
+	assign _3375_ = (_0127_ ? _0549_ : _3374_);
+	assign _3376_ = _0127_ & ~_0932_;
+	assign _3377_ = (_0159_ ? _3375_ : _3376_);
+	assign _3378_ = (\mchip.pong.game.vga.pix_ind [0] ? _3377_ : _3373_);
+	assign _3379_ = (_0146_ ? _2132_ : _0943_);
+	assign _3380_ = (_0159_ ? _0950_ : _3306_);
+	assign _3382_ = (\mchip.pong.game.vga.pix_ind [0] ? _3380_ : _3379_);
+	assign _3383_ = (_1103_ ? _3378_ : _3382_);
+	assign _3384_ = (_0044_ ? _3366_ : _3383_);
+	assign _3385_ = ~_0956_;
+	assign _3386_ = (_4387_ ? _0539_ : _0474_);
+	assign _3387_ = (_0127_ ? _3385_ : _3386_);
+	assign _3388_ = (_4423_ ? _4413_ : _0094_);
+	assign _3389_ = (_0056_ ? _2644_ : _3388_);
+	assign _3390_ = (_0146_ ? _3387_ : _3389_);
+	assign _3391_ = (_4387_ ? _0792_ : _0371_);
+	assign _3393_ = (_4423_ ? _0871_ : _0495_);
+	assign _3394_ = (_0127_ ? _3393_ : _3391_);
+	assign _3395_ = ~_0972_;
+	assign _3396_ = (_0056_ ? _3395_ : _1557_);
+	assign _3397_ = (_0146_ ? _3394_ : _3396_);
+	assign _3398_ = (\mchip.pong.game.vga.pix_ind [0] ? _3397_ : _3390_);
+	assign _3399_ = (_4423_ ? _4389_ : _0665_);
+	assign _3400_ = _0127_ & ~_3399_;
+	assign _3401_ = ~_0981_;
+	assign _3402_ = (_4423_ ? _0292_ : _0281_);
+	assign _3404_ = (_0056_ ? _3401_ : _3402_);
+	assign _3405_ = (_0146_ ? _3400_ : _3404_);
+	assign _3406_ = _0146_ | ~_0991_;
+	assign _3407_ = _0146_ & ~_3361_;
+	assign _3408_ = _3406_ & ~_3407_;
+	assign _3409_ = (\mchip.pong.game.vga.pix_ind [0] ? _3408_ : _3405_);
+	assign _3410_ = (_1103_ ? _3398_ : _3409_);
+	assign _3411_ = ~_0996_;
+	assign _3412_ = (_0056_ ? _0549_ : _3411_);
+	assign _3413_ = (_4387_ ? _0206_ : _0417_);
+	assign _3415_ = (_4423_ ? _4389_ : _2256_);
+	assign _3416_ = (_0127_ ? _3413_ : _3415_);
+	assign _3417_ = (_0146_ ? _3412_ : _3416_);
+	assign _3418_ = (_0276_ ? _0474_ : _0850_);
+	assign _3419_ = (_0127_ ? _1003_ : _3418_);
+	assign _3420_ = ~_2001_;
+	assign _3421_ = _0852_ & _4387_;
+	assign _3422_ = _3211_ & ~_3421_;
+	assign _3423_ = (_0056_ ? _3420_ : _3422_);
+	assign _3424_ = (_0146_ ? _3419_ : _3423_);
+	assign _3426_ = (\mchip.pong.game.vga.pix_ind [0] ? _3424_ : _3417_);
+	assign _3427_ = (_4387_ ? _4380_ : _0474_);
+	assign _3428_ = (_0127_ ? _1798_ : _3427_);
+	assign _3429_ = (_4423_ ? _0454_ : _0412_);
+	assign _3430_ = (_0056_ ? _1756_ : _3429_);
+	assign _3431_ = (_0146_ ? _3428_ : _3430_);
+	assign _3432_ = ~_1025_;
+	assign _3433_ = (_4387_ ? _0035_ : _0100_);
+	assign _3434_ = (_0127_ ? _3432_ : _3433_);
+	assign _3435_ = (_4389_ ? _4433_ : _4372_);
+	assign _3437_ = (_4387_ ? _0489_ : _3435_);
+	assign _3438_ = (_4389_ ? _4427_ : _0259_);
+	assign _3439_ = (_4423_ ? _2053_ : _3438_);
+	assign _3440_ = (_0127_ ? _3437_ : _3439_);
+	assign _3441_ = (_0146_ ? _3434_ : _3440_);
+	assign _3442_ = (\mchip.pong.game.vga.pix_ind [0] ? _3441_ : _3431_);
+	assign _3443_ = (_1103_ ? _3426_ : _3442_);
+	assign _3444_ = (_0044_ ? _3410_ : _3443_);
+	assign _3445_ = (_0088_ ? _3384_ : _3444_);
+	assign _3446_ = _0330_ | _0056_;
+	assign _3448_ = ~_0332_;
+	assign _3449_ = (_0146_ ? _3446_ : _3448_);
+	assign _3450_ = ~_0116_;
+	assign _3451_ = ~_0335_;
+	assign _3452_ = (_0146_ ? _3451_ : _3450_);
+	assign _3453_ = (\mchip.pong.game.vga.pix_ind [0] ? _3452_ : _3449_);
+	assign _3454_ = ~_1041_;
+	assign _3455_ = (_0056_ ? _0143_ : _3454_);
+	assign _3456_ = ~_1038_;
+	assign _3457_ = (_4387_ ? _0403_ : _0903_);
+	assign _3459_ = (_0127_ ? _3456_ : _3457_);
+	assign _3460_ = (_0159_ ? _3455_ : _3459_);
+	assign _3461_ = ~_1047_;
+	assign _3462_ = ~_2484_;
+	assign _3463_ = (_4423_ ? _0102_ : _3462_);
+	assign _3464_ = (_0056_ ? _0140_ : _3463_);
+	assign _3465_ = (_0146_ ? _3461_ : _3464_);
+	assign _3466_ = (\mchip.pong.game.vga.pix_ind [0] ? _3465_ : _3460_);
+	assign _3467_ = (_1103_ ? _3453_ : _3466_);
+	assign _3468_ = ~_0309_;
+	assign _3470_ = (_0127_ ? _0058_ : _1548_);
+	assign _3471_ = (_0146_ ? _3468_ : _3470_);
+	assign _3472_ = ~_0316_;
+	assign _3473_ = (_0146_ ? _0047_ : _3472_);
+	assign _3474_ = (\mchip.pong.game.vga.pix_ind [0] ? _3473_ : _3471_);
+	assign _3475_ = ~_0319_;
+	assign _3476_ = _0320_ | _0056_;
+	assign _3477_ = (_0146_ ? _3476_ : _3475_);
+	assign _3478_ = ~_0326_;
+	assign _3479_ = _0323_ | _0056_;
+	assign _3481_ = (_0146_ ? _3479_ : _3478_);
+	assign _3482_ = (\mchip.pong.game.vga.pix_ind [0] ? _3481_ : _3477_);
+	assign _3483_ = (_1103_ ? _3474_ : _3482_);
+	assign _3484_ = (_0044_ ? _3467_ : _3483_);
+	assign _3485_ = _0088_ & ~_3484_;
+	assign _3486_ = _2976_ & ~_3485_;
+	assign _3487_ = (_4368_ ? _3445_ : _3486_);
+	assign _3488_ = (_4367_ ? _3343_ : _3487_);
+	assign _3489_ = (_1058_ ? _3488_ : _2988_);
+	assign _3490_ = (_0723_ ? _3250_ : _3489_);
+	assign _3492_ = (_1061_ ? _2988_ : _3490_);
+	assign \mchip.pong.VGA_R2  = _1264_ & ~_3492_;
+	assign _3493_ = _1103_ & ~_1530_;
+	assign _3494_ = _0063_ & ~_1539_;
+	assign _3495_ = _3494_ | _3493_;
+	assign _3496_ = _1551_ | _1546_;
+	assign _3497_ = _4442_ & ~_1559_;
+	assign _3498_ = \mchip.pong.game.vga.pix_ind [0] & ~_1564_;
+	assign _3499_ = _3498_ | _3497_;
+	assign _3500_ = (_1103_ ? _3496_ : _3499_);
+	assign _3502_ = (_0044_ ? _3495_ : _3500_);
+	assign _3503_ = ~(_1586_ & _0044_);
+	assign _3504_ = _1595_ & ~_0044_;
+	assign _3505_ = _3503_ & ~_3504_;
+	assign _3506_ = (_0088_ ? _3502_ : _3505_);
+	assign _3507_ = _0044_ & ~_1598_;
+	assign _3508_ = (_1103_ ? _0218_ : _1604_);
+	assign _3509_ = _3508_ & ~_0044_;
+	assign _3510_ = _3509_ | _3507_;
+	assign _3511_ = (_0044_ ? _1616_ : _1610_);
+	assign _3513_ = (_0088_ ? _3510_ : _3511_);
+	assign _3514_ = (_4368_ ? _3506_ : _3513_);
+	assign _3515_ = _0088_ | ~_1673_;
+	assign _3516_ = _1703_ & _0088_;
+	assign _3517_ = _3515_ & ~_3516_;
+	assign _3518_ = (_0044_ ? _1627_ : _1624_);
+	assign _3519_ = _3518_ & ~_0152_;
+	assign _3520_ = _0152_ & ~_1641_;
+	assign _3521_ = _3520_ | _3519_;
+	assign _3522_ = (_4368_ ? _3521_ : _3517_);
+	assign _3524_ = (_4367_ ? _3514_ : _3522_);
+	assign _3525_ = ~_1570_;
+	assign _3526_ = _1571_ | _0127_;
+	assign _3527_ = (_0146_ ? _3525_ : _3526_);
+	assign _3528_ = ~_1575_;
+	assign _3529_ = ~_1576_;
+	assign _3530_ = (_0146_ ? _3528_ : _3529_);
+	assign _3531_ = (\mchip.pong.game.vga.pix_ind [0] ? _3530_ : _3527_);
+	assign _3532_ = ~_1580_;
+	assign _3533_ = (_0146_ ? _3532_ : _2994_);
+	assign _3535_ = ~_0096_;
+	assign _3536_ = ~_1583_;
+	assign _3537_ = (_0146_ ? _3536_ : _3535_);
+	assign _3538_ = (\mchip.pong.game.vga.pix_ind [0] ? _3537_ : _3533_);
+	assign _3539_ = (_1103_ ? _3531_ : _3538_);
+	assign _3540_ = (_0056_ ? _0783_ : _0166_);
+	assign _3541_ = (_4423_ ? _2053_ : _0114_);
+	assign _3542_ = (_0127_ ? _2014_ : _3541_);
+	assign _3543_ = (_0146_ ? _3540_ : _3542_);
+	assign _3544_ = ~(_0451_ & _4423_);
+	assign _3546_ = (_0127_ ? _0128_ : _3544_);
+	assign _3547_ = _0403_ | _4437_;
+	assign _3548_ = (_4423_ ? _0792_ : _3547_);
+	assign _3549_ = (_0056_ ? _0117_ : _3548_);
+	assign _3550_ = (_0146_ ? _3546_ : _3549_);
+	assign _3551_ = (\mchip.pong.game.vga.pix_ind [0] ? _3550_ : _3543_);
+	assign _3552_ = (_0056_ ? _1651_ : _0766_);
+	assign _3553_ = ~_1723_;
+	assign _3554_ = (_0127_ ? _3146_ : _3553_);
+	assign _3555_ = (_0146_ ? _3552_ : _3554_);
+	assign _3557_ = (_0056_ ? _1569_ : _1747_);
+	assign _3558_ = (_0146_ ? _1726_ : _3557_);
+	assign _3559_ = (\mchip.pong.game.vga.pix_ind [0] ? _3558_ : _3555_);
+	assign _3560_ = (_1103_ ? _3551_ : _3559_);
+	assign _3561_ = (_0044_ ? _3539_ : _3560_);
+	assign _3562_ = (_0088_ ? _3502_ : _3561_);
+	assign _3563_ = ~_1740_;
+	assign _3564_ = (_4423_ ? _0153_ : _1870_);
+	assign _3565_ = _0056_ & ~_3564_;
+	assign _3566_ = (_0146_ ? _3563_ : _3565_);
+	assign _3568_ = (_0056_ ? _0727_ : _1798_);
+	assign _3569_ = _0098_ & ~_2356_;
+	assign _3570_ = (_0127_ ? _1738_ : _3569_);
+	assign _3571_ = (_0146_ ? _3568_ : _3570_);
+	assign _3572_ = (\mchip.pong.game.vga.pix_ind [0] ? _3571_ : _3566_);
+	assign _3573_ = (_0127_ ? _1560_ : _1756_);
+	assign _3574_ = (_0146_ ? _3568_ : _3573_);
+	assign _3575_ = (_4387_ ? _0119_ : _0474_);
+	assign _3576_ = (_0127_ ? _0166_ : _3575_);
+	assign _3577_ = ~(_1764_ | _0127_);
+	assign _3579_ = _3300_ | _3577_;
+	assign _3580_ = (_0146_ ? _3576_ : _3579_);
+	assign _3581_ = (\mchip.pong.game.vga.pix_ind [0] ? _3580_ : _3574_);
+	assign _3582_ = (_1103_ ? _3572_ : _3581_);
+	assign _3583_ = _4409_ | _4387_;
+	assign _3584_ = _0056_ & ~_3583_;
+	assign _3585_ = (_0146_ ? _1770_ : _3584_);
+	assign _3586_ = (_0146_ ? _1777_ : _3584_);
+	assign _3587_ = (\mchip.pong.game.vga.pix_ind [0] ? _3586_ : _3585_);
+	assign _3589_ = ~_1784_;
+	assign _3590_ = (_0056_ ? _0500_ : _3589_);
+	assign _3591_ = (_0146_ ? _3590_ : _3584_);
+	assign _3592_ = (_4423_ ? _0153_ : _0639_);
+	assign _3593_ = _0056_ & ~_3592_;
+	assign _3594_ = (_0146_ ? _3033_ : _3593_);
+	assign _3595_ = (\mchip.pong.game.vga.pix_ind [0] ? _3594_ : _3591_);
+	assign _3596_ = (_1103_ ? _3587_ : _3595_);
+	assign _3597_ = (_0044_ ? _3582_ : _3596_);
+	assign _3598_ = (_0127_ ? _0154_ : _0452_);
+	assign _3600_ = ~_0435_;
+	assign _3601_ = (_4412_ ? _0665_ : _3600_);
+	assign _3602_ = _3601_ & ~_0127_;
+	assign _3603_ = (_0146_ ? _3598_ : _3602_);
+	assign _3604_ = _1806_ & ~_0056_;
+	assign _3605_ = _4443_ | _4387_;
+	assign _3606_ = _0056_ & ~_3605_;
+	assign _3607_ = (_0146_ ? _3604_ : _3606_);
+	assign _3608_ = (\mchip.pong.game.vga.pix_ind [0] ? _3607_ : _3603_);
+	assign _3609_ = _4434_ | _4387_;
+	assign _3611_ = _0056_ & ~_3609_;
+	assign _3612_ = (_0146_ ? _1823_ : _3611_);
+	assign _3613_ = (_1103_ ? _3608_ : _3612_);
+	assign _3614_ = (_0127_ ? _2189_ : _1833_);
+	assign _3615_ = (_0146_ ? _0155_ : _3614_);
+	assign _3616_ = _4387_ & ~_0207_;
+	assign _3617_ = (_0127_ ? _0154_ : _3616_);
+	assign _3618_ = (_0056_ ? _0429_ : _0519_);
+	assign _3619_ = (_0146_ ? _3617_ : _3618_);
+	assign _3620_ = (\mchip.pong.game.vga.pix_ind [0] ? _3619_ : _3615_);
+	assign _3622_ = _0435_ | _4387_;
+	assign _3623_ = _0056_ & ~_3622_;
+	assign _3624_ = (_0146_ ? _0155_ : _3623_);
+	assign _3625_ = (_0127_ ? _0591_ : _3601_);
+	assign _3626_ = (_0146_ ? _3598_ : _3625_);
+	assign _3627_ = (\mchip.pong.game.vga.pix_ind [0] ? _3626_ : _3624_);
+	assign _3628_ = (_1103_ ? _3620_ : _3627_);
+	assign _3629_ = (_0044_ ? _3613_ : _3628_);
+	assign _3630_ = (_0088_ ? _3597_ : _3629_);
+	assign _3631_ = (_4368_ ? _3562_ : _3630_);
+	assign _3633_ = _1996_ & _0088_;
+	assign _3634_ = _3515_ & ~_3633_;
+	assign _3635_ = (_0127_ ? _1806_ : _3151_);
+	assign _3636_ = _1853_ | _4387_;
+	assign _3637_ = _0056_ & ~_3636_;
+	assign _3638_ = (_0146_ ? _3635_ : _3637_);
+	assign _3639_ = (_0146_ ? _0155_ : _3637_);
+	assign _3640_ = (\mchip.pong.game.vga.pix_ind [0] ? _3639_ : _3638_);
+	assign _3641_ = _1889_ | _4387_;
+	assign _3642_ = _0056_ & ~_3641_;
+	assign _3644_ = (_0146_ ? _0155_ : _3642_);
+	assign _3645_ = _4387_ & ~_0475_;
+	assign _3646_ = (_0127_ ? _0154_ : _3645_);
+	assign _3647_ = _4387_ & ~_1853_;
+	assign _3648_ = (_0056_ ? _0429_ : _3647_);
+	assign _3649_ = (_0146_ ? _3646_ : _3648_);
+	assign _3650_ = (\mchip.pong.game.vga.pix_ind [0] ? _3649_ : _3644_);
+	assign _3651_ = (_1103_ ? _3640_ : _3650_);
+	assign _3652_ = _0054_ | _4423_;
+	assign _3653_ = _0127_ & ~_3652_;
+	assign _3655_ = (_0146_ ? _3653_ : _2066_);
+	assign _3656_ = _3138_ & ~_0056_;
+	assign _3657_ = _0056_ & ~_1912_;
+	assign _3658_ = (_0146_ ? _3656_ : _3657_);
+	assign _3659_ = (\mchip.pong.game.vga.pix_ind [0] ? _3658_ : _3655_);
+	assign _3660_ = (_0127_ ? _3138_ : _3344_);
+	assign _3661_ = _0056_ & ~_1920_;
+	assign _3662_ = (_0146_ ? _3660_ : _3661_);
+	assign _3663_ = _1927_ | _4387_;
+	assign _3664_ = _0056_ & ~_3663_;
+	assign _3666_ = (_0146_ ? _3152_ : _3664_);
+	assign _3667_ = (\mchip.pong.game.vga.pix_ind [0] ? _3666_ : _3662_);
+	assign _3668_ = (_1103_ ? _3659_ : _3667_);
+	assign _3669_ = (_0044_ ? _3651_ : _3668_);
+	assign _3670_ = _4387_ & ~_0451_;
+	assign _3671_ = (_0127_ ? _1934_ : _3670_);
+	assign _3672_ = (_0159_ ? _1939_ : _3671_);
+	assign _3673_ = ~_1946_;
+	assign _3674_ = (_0056_ ? _3670_ : _3193_);
+	assign _3675_ = (_0146_ ? _3674_ : _3673_);
+	assign _3677_ = (\mchip.pong.game.vga.pix_ind [0] ? _3675_ : _3672_);
+	assign _3678_ = ~_1953_;
+	assign _3679_ = _3193_ & ~_0056_;
+	assign _3680_ = (_0159_ ? _3678_ : _3679_);
+	assign _3681_ = _0127_ & ~_0742_;
+	assign _3682_ = (_0056_ ? _0872_ : _3616_);
+	assign _3683_ = (_0146_ ? _3681_ : _3682_);
+	assign _3684_ = (\mchip.pong.game.vga.pix_ind [0] ? _3683_ : _3680_);
+	assign _3685_ = (_1103_ ? _3677_ : _3684_);
+	assign _3686_ = ~(_1968_ & _4442_);
+	assign _3688_ = (_4387_ ? _4380_ : _0792_);
+	assign _3689_ = (_0056_ ? _1971_ : _3688_);
+	assign _3690_ = (_0146_ ? _3689_ : _0287_);
+	assign _3691_ = \mchip.pong.game.vga.pix_ind [0] & ~_3690_;
+	assign _3692_ = _3686_ & ~_3691_;
+	assign _3693_ = (_0146_ ? _2006_ : _0287_);
+	assign _3694_ = (_0159_ ? _1983_ : _2042_);
+	assign _3695_ = (\mchip.pong.game.vga.pix_ind [0] ? _3694_ : _3693_);
+	assign _3696_ = (_1103_ ? _3692_ : _3695_);
+	assign _3697_ = (_0044_ ? _3685_ : _3696_);
+	assign _3699_ = (_0088_ ? _3669_ : _3697_);
+	assign _3700_ = (_4368_ ? _3699_ : _3634_);
+	assign _3701_ = (_4367_ ? _3631_ : _3700_);
+	assign _3702_ = (\mchip.pong.game.vga.pix_ind [0] ? _2004_ : _2009_);
+	assign _3703_ = ~_2020_;
+	assign _3704_ = (_0146_ ? _3451_ : _3703_);
+	assign _3705_ = (\mchip.pong.game.vga.pix_ind [0] ? _3704_ : _2017_);
+	assign _3706_ = (_1103_ ? _3702_ : _3705_);
+	assign _3707_ = (_0044_ ? _3539_ : _3706_);
+	assign _3708_ = (_0088_ ? _3502_ : _3707_);
+	assign _3710_ = _2063_ & ~_2074_;
+	assign _3711_ = (_4423_ ? _0425_ : _0391_);
+	assign _3712_ = (_0056_ ? _0500_ : _3711_);
+	assign _3713_ = (_0146_ ? _3712_ : _2071_);
+	assign _3714_ = _0761_ & ~_0127_;
+	assign _3715_ = (_0146_ ? _2037_ : _3714_);
+	assign _3716_ = (\mchip.pong.game.vga.pix_ind [0] ? _3715_ : _3713_);
+	assign _3717_ = ~(_0972_ | _0127_);
+	assign _3718_ = (_0146_ ? _2042_ : _3717_);
+	assign _3719_ = (_0146_ ? _2006_ : _3577_);
+	assign _3721_ = (\mchip.pong.game.vga.pix_ind [0] ? _3719_ : _3718_);
+	assign _3722_ = (_1103_ ? _3716_ : _3721_);
+	assign _3723_ = (_0044_ ? _3722_ : _3710_);
+	assign _3724_ = ~(_2090_ & \mchip.pong.game.vga.pix_ind [0]);
+	assign _3725_ = (_4423_ ? _4389_ : _0292_);
+	assign _3726_ = (_0127_ ? _0199_ : _3725_);
+	assign _3727_ = (_0146_ ? _3726_ : _2081_);
+	assign _3728_ = _4442_ & ~_3727_;
+	assign _3729_ = _3724_ & ~_3728_;
+	assign _3730_ = ~_2092_;
+	assign _3732_ = (_0056_ ? _0500_ : _3730_);
+	assign _3733_ = ~_2094_;
+	assign _3734_ = (_0127_ ? _1850_ : _3733_);
+	assign _3735_ = (_0146_ ? _3732_ : _3734_);
+	assign _3736_ = ~_2098_;
+	assign _3737_ = (_0056_ ? _1817_ : _3736_);
+	assign _3738_ = _4420_ & ~_4423_;
+	assign _3739_ = (_0056_ ? _3733_ : _3738_);
+	assign _3740_ = (_0146_ ? _3737_ : _3739_);
+	assign _3741_ = (\mchip.pong.game.vga.pix_ind [0] ? _3740_ : _3735_);
+	assign _3743_ = (_1103_ ? _3729_ : _3741_);
+	assign _3744_ = ~_2105_;
+	assign _3745_ = (_0056_ ? _1532_ : _3744_);
+	assign _3746_ = (_0146_ ? _3745_ : _2112_);
+	assign _3747_ = ~_2108_;
+	assign _3748_ = (_4387_ ? _0292_ : _0403_);
+	assign _3749_ = (_0127_ ? _3747_ : _3748_);
+	assign _3750_ = (_0146_ ? _3749_ : _2112_);
+	assign _3751_ = (\mchip.pong.game.vga.pix_ind [0] ? _3750_ : _3746_);
+	assign _3752_ = (_0159_ ? _2112_ : _3726_);
+	assign _3754_ = (_4387_ ? _0292_ : _0114_);
+	assign _3755_ = (_0127_ ? _0199_ : _3754_);
+	assign _3756_ = (_0146_ ? _3755_ : _2112_);
+	assign _3757_ = (\mchip.pong.game.vga.pix_ind [0] ? _3756_ : _3752_);
+	assign _3758_ = (_1103_ ? _3751_ : _3757_);
+	assign _3759_ = (_0044_ ? _3743_ : _3758_);
+	assign _3760_ = (_0088_ ? _3723_ : _3759_);
+	assign _3761_ = (_4368_ ? _3708_ : _3760_);
+	assign _3762_ = _0127_ & ~_2123_;
+	assign _3763_ = (_0159_ ? _2125_ : _3762_);
+	assign _3765_ = (_0159_ ? _2125_ : _2132_);
+	assign _3766_ = (\mchip.pong.game.vga.pix_ind [0] ? _3765_ : _3763_);
+	assign _3767_ = (_0127_ ? _3355_ : _2080_);
+	assign _3768_ = (_0146_ ? _2132_ : _3767_);
+	assign _3769_ = (_0146_ ? _2132_ : _2138_);
+	assign _3770_ = (\mchip.pong.game.vga.pix_ind [0] ? _3769_ : _3768_);
+	assign _3771_ = (_1103_ ? _3766_ : _3770_);
+	assign _3772_ = (_4387_ ? _2053_ : _0254_);
+	assign _3773_ = (_0056_ ? _0875_ : _3772_);
+	assign _3774_ = (_0056_ ? _3295_ : _1971_);
+	assign _3776_ = (_0146_ ? _3773_ : _3774_);
+	assign _3777_ = ~_2057_;
+	assign _3778_ = ~_2149_;
+	assign _3779_ = (_0056_ ? _0875_ : _3778_);
+	assign _3780_ = (_0146_ ? _3779_ : _3777_);
+	assign _3781_ = (\mchip.pong.game.vga.pix_ind [0] ? _3780_ : _3776_);
+	assign _3782_ = ~_2153_;
+	assign _3783_ = (_0056_ ? _0875_ : _3782_);
+	assign _3784_ = (_0146_ ? _3783_ : _2066_);
+	assign _3785_ = (_4387_ ? _2053_ : _0094_);
+	assign _3787_ = (_0056_ ? _0875_ : _3785_);
+	assign _3788_ = (_0146_ ? _3787_ : _2159_);
+	assign _3789_ = (\mchip.pong.game.vga.pix_ind [0] ? _3788_ : _3784_);
+	assign _3790_ = (_1103_ ? _3781_ : _3789_);
+	assign _3791_ = (_0044_ ? _3771_ : _3790_);
+	assign _3792_ = (_4387_ ? _0292_ : _0118_);
+	assign _3793_ = (_0127_ ? _1798_ : _3792_);
+	assign _3794_ = (_0127_ ? _1555_ : _3395_);
+	assign _3795_ = (_0146_ ? _3793_ : _3794_);
+	assign _3796_ = _0146_ | ~_2174_;
+	assign _3798_ = _0146_ & ~_2070_;
+	assign _3799_ = _3796_ & ~_3798_;
+	assign _3800_ = (\mchip.pong.game.vga.pix_ind [0] ? _3799_ : _3795_);
+	assign _3801_ = (_0056_ ? _0500_ : _0162_);
+	assign _3802_ = _4423_ | ~_0093_;
+	assign _3803_ = _3802_ & ~_3171_;
+	assign _3804_ = (_0056_ ? _3782_ : _3803_);
+	assign _3805_ = (_0146_ ? _3801_ : _3804_);
+	assign _3806_ = ~_2184_;
+	assign _3807_ = (_0127_ ? _0162_ : _0875_);
+	assign _3809_ = (_0159_ ? _3806_ : _3807_);
+	assign _3810_ = (\mchip.pong.game.vga.pix_ind [0] ? _3809_ : _3805_);
+	assign _3811_ = (_1103_ ? _3800_ : _3810_);
+	assign _3812_ = _0146_ | ~_2195_;
+	assign _3813_ = _0127_ & ~_2191_;
+	assign _3814_ = _0146_ & ~_3813_;
+	assign _3815_ = _3812_ & ~_3814_;
+	assign _3816_ = ~_2197_;
+	assign _3817_ = (_0127_ ? _3816_ : _3792_);
+	assign _3818_ = (_4387_ ? _0404_ : _2202_);
+	assign _3820_ = (_4423_ ? _2053_ : _0089_);
+	assign _3821_ = (_0127_ ? _3818_ : _3820_);
+	assign _3822_ = (_0146_ ? _3817_ : _3821_);
+	assign _3823_ = (\mchip.pong.game.vga.pix_ind [0] ? _3822_ : _3815_);
+	assign _3824_ = _0146_ | ~_2211_;
+	assign _3825_ = (_0056_ ? _0068_ : _1976_);
+	assign _3826_ = _3825_ & ~_0159_;
+	assign _3827_ = _3824_ & ~_3826_;
+	assign _3828_ = ~_2213_;
+	assign _3829_ = (_0056_ ? _1557_ : _3828_);
+	assign _3831_ = (_4387_ ? _0035_ : _0206_);
+	assign _3832_ = (_0056_ ? _1756_ : _3831_);
+	assign _3833_ = (_0146_ ? _3829_ : _3832_);
+	assign _3834_ = (\mchip.pong.game.vga.pix_ind [0] ? _3833_ : _3827_);
+	assign _3835_ = (_1103_ ? _3823_ : _3834_);
+	assign _3836_ = (_0044_ ? _3811_ : _3835_);
+	assign _3837_ = (_0088_ ? _3791_ : _3836_);
+	assign _3838_ = _0128_ | _0127_;
+	assign _3839_ = (_0146_ ? _3479_ : _3838_);
+	assign _3840_ = (_0146_ ? _3446_ : _3526_);
+	assign _3842_ = (\mchip.pong.game.vga.pix_ind [0] ? _3840_ : _3839_);
+	assign _3843_ = _0127_ & ~_2225_;
+	assign _3844_ = (_0159_ ? _2228_ : _3843_);
+	assign _3845_ = (_4423_ ? _0131_ : _2200_);
+	assign _3846_ = (_0056_ ? _0330_ : _3845_);
+	assign _3847_ = (_0146_ ? _2233_ : _3846_);
+	assign _3848_ = (\mchip.pong.game.vga.pix_ind [0] ? _3847_ : _3844_);
+	assign _3849_ = (_1103_ ? _3842_ : _3848_);
+	assign _3850_ = (_0056_ ? _0052_ : _0197_);
+	assign _3851_ = _0193_ | _0127_;
+	assign _3853_ = (_0146_ ? _3850_ : _3851_);
+	assign _3854_ = _1679_ | _0127_;
+	assign _3855_ = (_0146_ ? _1541_ : _3854_);
+	assign _3856_ = (\mchip.pong.game.vga.pix_ind [0] ? _3855_ : _3853_);
+	assign _3857_ = _1683_ | _0056_;
+	assign _3858_ = _0402_ | _0127_;
+	assign _3859_ = (_0146_ ? _3857_ : _3858_);
+	assign _3860_ = _0288_ | _0127_;
+	assign _3861_ = (_0146_ ? _3476_ : _3860_);
+	assign _3862_ = (\mchip.pong.game.vga.pix_ind [0] ? _3861_ : _3859_);
+	assign _3864_ = (_1103_ ? _3856_ : _3862_);
+	assign _3865_ = (_0044_ ? _3849_ : _3864_);
+	assign _3866_ = _0088_ & ~_3865_;
+	assign _3867_ = _3515_ & ~_3866_;
+	assign _3868_ = (_4368_ ? _3837_ : _3867_);
+	assign _3869_ = (_4367_ ? _3761_ : _3868_);
+	assign _3870_ = (_1058_ ? _3869_ : _3524_);
+	assign _3871_ = (_0723_ ? _3701_ : _3870_);
+	assign _3872_ = (_1061_ ? _3524_ : _3871_);
+	assign \mchip.pong.VGA_R3  = _1264_ & ~_3872_;
+	assign \mchip.pong.game.right_paddle.next_coord [1] = _0927_ ^ \mchip.pong.game.right_paddle.coord [0];
+	assign \mchip.pong.game.left_paddle.next_coord [1] = _0677_ ^ \mchip.pong.game.left_paddle.coord [0];
+	assign _3874_ = ~(\mchip.pong.game.ball.cpath.state [3] | \mchip.pong.game.ball.cpath.state [5]);
+	assign _3875_ = _3874_ ^ \mchip.pong.game.ball.dpath.ballX [2];
+	assign \mchip.pong.game.ball.dpath.nextX [2] = _3875_ ^ \mchip.pong.game.ball.dpath.ballX [1];
+	assign _3876_ = ~(_3874_ & \mchip.pong.game.ball.dpath.ballX [2]);
+	assign _3877_ = ~(_3875_ & \mchip.pong.game.ball.dpath.ballX [1]);
+	assign _3878_ = ~(_3877_ & _3876_);
+	assign _3879_ = _3874_ ^ \mchip.pong.game.ball.dpath.ballX [3];
+	assign \mchip.pong.game.ball.dpath.nextX [3] = _3879_ ^ _3878_;
+	assign _3881_ = _3874_ & \mchip.pong.game.ball.dpath.ballX [3];
+	assign _3882_ = _3879_ & _3878_;
+	assign _3883_ = _3882_ | _3881_;
+	assign _3884_ = _3874_ ^ \mchip.pong.game.ball.dpath.ballX [4];
+	assign \mchip.pong.game.ball.dpath.nextX [4] = _3884_ ^ _3883_;
+	assign _3885_ = ~(_3874_ & \mchip.pong.game.ball.dpath.ballX [4]);
+	assign _3886_ = ~(_3884_ & _3881_);
+	assign _3887_ = ~(_3886_ & _3885_);
+	assign _3888_ = ~(_3884_ & _3879_);
+	assign _3889_ = _3878_ & ~_3888_;
+	assign _3891_ = _3889_ | _3887_;
+	assign _3892_ = _3874_ ^ \mchip.pong.game.ball.dpath.ballX [5];
+	assign \mchip.pong.game.ball.dpath.nextX [5] = _3892_ ^ _3891_;
+	assign _3893_ = _3874_ & \mchip.pong.game.ball.dpath.ballX [5];
+	assign _3894_ = _3892_ & _3891_;
+	assign _3895_ = _3894_ | _3893_;
+	assign _3896_ = _3874_ ^ \mchip.pong.game.ball.dpath.ballX [6];
+	assign \mchip.pong.game.ball.dpath.nextX [6] = _3896_ ^ _3895_;
+	assign _3897_ = _3874_ & ~_1085_;
+	assign _3898_ = _3896_ & _3893_;
+	assign _3900_ = _3898_ | _3897_;
+	assign _3901_ = ~(_3896_ & _3892_);
+	assign _3902_ = _3891_ & ~_3901_;
+	assign _3903_ = _3902_ | _3900_;
+	assign _3904_ = _3874_ ^ \mchip.pong.game.ball.dpath.ballX [7];
+	assign \mchip.pong.game.ball.dpath.nextX [7] = _3904_ ^ _3903_;
+	assign _3905_ = _3874_ & ~_3271_;
+	assign _3906_ = _3904_ & _3903_;
+	assign _3907_ = _3906_ | _3905_;
+	assign _3908_ = _3874_ ^ \mchip.pong.game.ball.dpath.ballX [8];
+	assign \mchip.pong.game.ball.dpath.nextX [8] = _3908_ ^ _3907_;
+	assign _3910_ = _3874_ & ~_1074_;
+	assign _3911_ = _3908_ & _3905_;
+	assign _3912_ = _3911_ | _3910_;
+	assign _3913_ = ~(_3908_ & _3904_);
+	assign _3914_ = _3900_ & ~_3913_;
+	assign _3915_ = _3914_ | _3912_;
+	assign _3916_ = _3913_ | _3901_;
+	assign _3917_ = _3891_ & ~_3916_;
+	assign _3918_ = _3917_ | _3915_;
+	assign _3920_ = _3874_ ^ \mchip.pong.game.ball.dpath.ballX [9];
+	assign \mchip.pong.game.ball.dpath.nextX [9] = _3920_ ^ _3918_;
+	assign _3921_ = _4165_ ^ \mchip.pong.game.ball.dpath.ballY [1];
+	assign \mchip.pong.game.ball.dpath.nextY [1] = _3921_ ^ \mchip.pong.game.ball.dpath.ballY [0];
+	assign _3922_ = _4165_ & ~_3073_;
+	assign _3923_ = _3921_ & ~\mchip.pong.game.ball.dpath.nextY [0];
+	assign _3924_ = _3923_ | _3922_;
+	assign _3925_ = _4165_ ^ \mchip.pong.game.ball.dpath.ballY [2];
+	assign \mchip.pong.game.ball.dpath.nextY [2] = _3925_ ^ _3924_;
+	assign _3926_ = _4165_ & ~_3029_;
+	assign _3927_ = _3925_ & _3924_;
+	assign _3928_ = _3927_ | _3926_;
+	assign _3929_ = _4165_ ^ \mchip.pong.game.ball.dpath.ballY [3];
+	assign \mchip.pong.game.ball.dpath.nextY [3] = _3929_ ^ _3928_;
+	assign _3930_ = _4165_ & ~_4393_;
+	assign _3931_ = _3929_ & _3926_;
+	assign _3932_ = _3931_ | _3930_;
+	assign _3933_ = ~(_3929_ & _3925_);
+	assign _3934_ = _3924_ & ~_3933_;
+	assign _3935_ = _3934_ | _3932_;
+	assign _3937_ = _4165_ ^ \mchip.pong.game.ball.dpath.ballY [4];
+	assign \mchip.pong.game.ball.dpath.nextY [4] = _3937_ ^ _3935_;
+	assign _3938_ = _4165_ & ~_2625_;
+	assign _3939_ = _3937_ & _3935_;
+	assign _3940_ = _3939_ | _3938_;
+	assign _3941_ = _4165_ ^ \mchip.pong.game.ball.dpath.ballY [5];
+	assign \mchip.pong.game.ball.dpath.nextY [5] = _3941_ ^ _3940_;
+	assign _3942_ = _4165_ & ~_2658_;
+	assign _3943_ = _3941_ & _3938_;
+	assign _3944_ = _3943_ | _3942_;
+	assign _3946_ = ~(_3941_ & _3937_);
+	assign _3947_ = _3935_ & ~_3946_;
+	assign _3948_ = _3947_ | _3944_;
+	assign _3949_ = _4165_ ^ \mchip.pong.game.ball.dpath.ballY [6];
+	assign \mchip.pong.game.ball.dpath.nextY [6] = _3949_ ^ _3948_;
+	assign _3950_ = _4165_ & ~_1739_;
+	assign _3951_ = _3949_ & _3948_;
+	assign _3952_ = _3951_ | _3950_;
+	assign _3953_ = _4165_ ^ \mchip.pong.game.ball.dpath.ballY [7];
+	assign \mchip.pong.game.ball.dpath.nextY [7] = _3953_ ^ _3952_;
+	assign _3955_ = _4165_ & ~_2877_;
+	assign _3956_ = _3953_ & _3950_;
+	assign _3957_ = _3956_ | _3955_;
+	assign _3958_ = ~(_3953_ & _3949_);
+	assign _3959_ = _3944_ & ~_3958_;
+	assign _3960_ = _3959_ | _3957_;
+	assign _3961_ = _3958_ | _3946_;
+	assign _3962_ = _3935_ & ~_3961_;
+	assign _3963_ = _3962_ | _3960_;
+	assign _3964_ = _4165_ ^ \mchip.pong.game.ball.dpath.ballY [8];
+	assign \mchip.pong.game.ball.dpath.nextY [8] = _3964_ ^ _3963_;
+	always @(posedge io_in[12])
+		if (_0010_)
+			\mchip.pong.game.vga.pclk_ctr  <= 1'h0;
+		else
+			\mchip.pong.game.vga.pclk_ctr  <= _4446_;
+	always @(posedge io_in[12]) \mchip.pong.game.ball.cpath.state [0] <= _0000_;
+	always @(posedge io_in[12]) \mchip.pong.game.ball.cpath.state [1] <= _0001_;
+	always @(posedge io_in[12]) \mchip.pong.game.ball.cpath.state [2] <= _0002_;
+	always @(posedge io_in[12]) \mchip.pong.game.ball.cpath.state [3] <= _0003_;
+	always @(posedge io_in[12]) \mchip.pong.game.ball.cpath.state [4] <= _0004_;
+	always @(posedge io_in[12]) \mchip.pong.game.ball.cpath.state [5] <= _0005_;
+	always @(posedge io_in[12]) \mchip.pong.game.ball.cpath.state [6] <= _0006_;
+	always @(posedge io_in[12]) \mchip.pong.game.ball.cpath.state [7] <= _0007_;
+	always @(posedge io_in[12]) \mchip.pong.game.ball.cpath.state [8] <= _0008_;
+	always @(posedge io_in[12]) \mchip.pong.sync.o_out [0] <= \mchip.pong.sync.sync [0];
+	always @(posedge io_in[12]) \mchip.pong.sync.o_out [1] <= \mchip.pong.sync.sync [1];
+	always @(posedge io_in[12]) \mchip.pong.sync.o_out [2] <= \mchip.pong.sync.sync [2];
+	always @(posedge io_in[12]) \mchip.pong.sync.o_out [3] <= \mchip.pong.sync.sync [3];
+	always @(posedge io_in[12]) \mchip.pong.sync.o_out [4] <= \mchip.pong.sync.sync [4];
+	always @(posedge io_in[12]) \mchip.pong.sync.o_out [5] <= \mchip.pong.sync.sync [5];
+	always @(posedge io_in[12]) \mchip.pong.sync.o_out [6] <= \mchip.pong.sync.sync [6];
+	always @(posedge io_in[12]) \mchip.pong.sync.o_out [7] <= \mchip.pong.sync.sync [7];
+	always @(posedge io_in[12]) \mchip.pong.sync.sync [0] <= io_in[6];
+	always @(posedge io_in[12]) \mchip.pong.sync.sync [1] <= io_in[7];
+	always @(posedge io_in[12]) \mchip.pong.sync.sync [2] <= io_in[4];
+	always @(posedge io_in[12]) \mchip.pong.sync.sync [3] <= io_in[5];
+	always @(posedge io_in[12]) \mchip.pong.sync.sync [4] <= io_in[0];
+	always @(posedge io_in[12]) \mchip.pong.sync.sync [5] <= io_in[1];
+	always @(posedge io_in[12]) \mchip.pong.sync.sync [6] <= io_in[2];
+	always @(posedge io_in[12]) \mchip.pong.sync.sync [7] <= io_in[3];
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [0] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [0] <= _0023_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [1] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [1] <= _0024_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [2] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [2] <= _0025_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [3] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [3] <= _0026_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [4] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [4] <= _0027_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [5] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [5] <= _0028_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [6] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [6] <= _0029_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [7] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [7] <= _0030_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [8] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [8] <= _0031_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.pix_ind [9] <= 1'h0;
+		else if (!\mchip.pong.game.vga.pclk_ctr )
+			\mchip.pong.game.vga.pix_ind [9] <= _0032_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [0] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [0] <= _0013_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [1] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [1] <= _0014_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [2] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [2] <= _0015_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [3] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [3] <= _0016_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [4] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [4] <= _0017_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [5] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [5] <= _0018_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [6] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [6] <= _0019_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [7] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [7] <= _0020_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [8] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [8] <= _0021_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.sync.o_out [2])
+			\mchip.pong.game.vga.line_ind [9] <= 1'h0;
+		else if (_0009_)
+			\mchip.pong.game.vga.line_ind [9] <= _0022_;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.right_paddle.coord [0] <= 1'h0;
+		else if (_0012_)
+			\mchip.pong.game.right_paddle.coord [0] <= \mchip.pong.game.right_paddle.next_coord [0];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.right_paddle.coord [1] <= 1'h0;
+		else if (_0012_)
+			\mchip.pong.game.right_paddle.coord [1] <= \mchip.pong.game.right_paddle.next_coord [1];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.right_paddle.coord [2] <= 1'h0;
+		else if (_0012_)
+			\mchip.pong.game.right_paddle.coord [2] <= \mchip.pong.game.right_paddle.next_coord [2];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.right_paddle.coord [3] <= 1'h0;
+		else if (_0012_)
+			\mchip.pong.game.right_paddle.coord [3] <= \mchip.pong.game.right_paddle.next_coord [3];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.right_paddle.coord [4] <= 1'h0;
+		else if (_0012_)
+			\mchip.pong.game.right_paddle.coord [4] <= \mchip.pong.game.right_paddle.next_coord [4];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.right_paddle.coord [5] <= 1'h0;
+		else if (_0012_)
+			\mchip.pong.game.right_paddle.coord [5] <= \mchip.pong.game.right_paddle.next_coord [5];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.right_paddle.coord [6] <= 1'h0;
+		else if (_0012_)
+			\mchip.pong.game.right_paddle.coord [6] <= \mchip.pong.game.right_paddle.next_coord [6];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.right_paddle.coord [7] <= 1'h0;
+		else if (_0012_)
+			\mchip.pong.game.right_paddle.coord [7] <= \mchip.pong.game.right_paddle.next_coord [7];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.right_paddle.coord [8] <= 1'h0;
+		else if (_0012_)
+			\mchip.pong.game.right_paddle.coord [8] <= \mchip.pong.game.right_paddle.next_coord [8];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.left_paddle.coord [0] <= 1'h0;
+		else if (_0011_)
+			\mchip.pong.game.left_paddle.coord [0] <= \mchip.pong.game.left_paddle.next_coord [0];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.left_paddle.coord [1] <= 1'h0;
+		else if (_0011_)
+			\mchip.pong.game.left_paddle.coord [1] <= \mchip.pong.game.left_paddle.next_coord [1];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.left_paddle.coord [2] <= 1'h0;
+		else if (_0011_)
+			\mchip.pong.game.left_paddle.coord [2] <= \mchip.pong.game.left_paddle.next_coord [2];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.left_paddle.coord [3] <= 1'h0;
+		else if (_0011_)
+			\mchip.pong.game.left_paddle.coord [3] <= \mchip.pong.game.left_paddle.next_coord [3];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.left_paddle.coord [4] <= 1'h0;
+		else if (_0011_)
+			\mchip.pong.game.left_paddle.coord [4] <= \mchip.pong.game.left_paddle.next_coord [4];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.left_paddle.coord [5] <= 1'h0;
+		else if (_0011_)
+			\mchip.pong.game.left_paddle.coord [5] <= \mchip.pong.game.left_paddle.next_coord [5];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.left_paddle.coord [6] <= 1'h0;
+		else if (_0011_)
+			\mchip.pong.game.left_paddle.coord [6] <= \mchip.pong.game.left_paddle.next_coord [6];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.left_paddle.coord [7] <= 1'h0;
+		else if (_0011_)
+			\mchip.pong.game.left_paddle.coord [7] <= \mchip.pong.game.left_paddle.next_coord [7];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.cpath.state [0])
+			\mchip.pong.game.left_paddle.coord [8] <= 1'h0;
+		else if (_0011_)
+			\mchip.pong.game.left_paddle.coord [8] <= \mchip.pong.game.left_paddle.next_coord [8];
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballY [0] <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballY [0] <= \mchip.pong.game.ball.dpath.nextY [0];
+		end
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballY [1] <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballY [1] <= \mchip.pong.game.ball.dpath.nextY [1];
+		end
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballY [2] <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballY [2] <= \mchip.pong.game.ball.dpath.nextY [2];
+		end
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballY [3] <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballY [3] <= \mchip.pong.game.ball.dpath.nextY [3];
+		end
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballY [4] <= 1'h1;
+			else
+				\mchip.pong.game.ball.dpath.ballY [4] <= \mchip.pong.game.ball.dpath.nextY [4];
+		end
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballY [5] <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballY [5] <= \mchip.pong.game.ball.dpath.nextY [5];
+		end
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballY [6] <= 1'h1;
+			else
+				\mchip.pong.game.ball.dpath.ballY [6] <= \mchip.pong.game.ball.dpath.nextY [6];
+		end
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballY [7] <= 1'h1;
+			else
+				\mchip.pong.game.ball.dpath.ballY [7] <= \mchip.pong.game.ball.dpath.nextY [7];
+		end
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballY [8] <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballY [8] <= \mchip.pong.game.ball.dpath.nextY [8];
+		end
+	reg \mchip.pong.game.ball.dpath.ballX_reg[1] ;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballX_reg[1]  <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballX_reg[1]  <= \mchip.pong.game.ball.dpath.nextX [1];
+		end
+	assign \mchip.pong.game.ball.dpath.ballX [1] = \mchip.pong.game.ball.dpath.ballX_reg[1] ;
+	reg \mchip.pong.game.ball.dpath.ballX_reg[2] ;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballX_reg[2]  <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballX_reg[2]  <= \mchip.pong.game.ball.dpath.nextX [2];
+		end
+	assign \mchip.pong.game.ball.dpath.ballX [2] = \mchip.pong.game.ball.dpath.ballX_reg[2] ;
+	reg \mchip.pong.game.ball.dpath.ballX_reg[3] ;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballX_reg[3]  <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballX_reg[3]  <= \mchip.pong.game.ball.dpath.nextX [3];
+		end
+	assign \mchip.pong.game.ball.dpath.ballX [3] = \mchip.pong.game.ball.dpath.ballX_reg[3] ;
+	reg \mchip.pong.game.ball.dpath.ballX_reg[4] ;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballX_reg[4]  <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballX_reg[4]  <= \mchip.pong.game.ball.dpath.nextX [4];
+		end
+	assign \mchip.pong.game.ball.dpath.ballX [4] = \mchip.pong.game.ball.dpath.ballX_reg[4] ;
+	reg \mchip.pong.game.ball.dpath.ballX_reg[5] ;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballX_reg[5]  <= 1'h1;
+			else
+				\mchip.pong.game.ball.dpath.ballX_reg[5]  <= \mchip.pong.game.ball.dpath.nextX [5];
+		end
+	assign \mchip.pong.game.ball.dpath.ballX [5] = \mchip.pong.game.ball.dpath.ballX_reg[5] ;
+	reg \mchip.pong.game.ball.dpath.ballX_reg[6] ;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballX_reg[6]  <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballX_reg[6]  <= \mchip.pong.game.ball.dpath.nextX [6];
+		end
+	assign \mchip.pong.game.ball.dpath.ballX [6] = \mchip.pong.game.ball.dpath.ballX_reg[6] ;
+	reg \mchip.pong.game.ball.dpath.ballX_reg[7] ;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballX_reg[7]  <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballX_reg[7]  <= \mchip.pong.game.ball.dpath.nextX [7];
+		end
+	assign \mchip.pong.game.ball.dpath.ballX [7] = \mchip.pong.game.ball.dpath.ballX_reg[7] ;
+	reg \mchip.pong.game.ball.dpath.ballX_reg[8] ;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballX_reg[8]  <= 1'h1;
+			else
+				\mchip.pong.game.ball.dpath.ballX_reg[8]  <= \mchip.pong.game.ball.dpath.nextX [8];
+		end
+	assign \mchip.pong.game.ball.dpath.ballX [8] = \mchip.pong.game.ball.dpath.ballX_reg[8] ;
+	reg \mchip.pong.game.ball.dpath.ballX_reg[9] ;
+	always @(posedge io_in[12])
+		if (\mchip.pong.game.ball.dpath.en_pos_reg ) begin
+			if (_0033_)
+				\mchip.pong.game.ball.dpath.ballX_reg[9]  <= 1'h0;
+			else
+				\mchip.pong.game.ball.dpath.ballX_reg[9]  <= \mchip.pong.game.ball.dpath.nextX [9];
+		end
+	assign \mchip.pong.game.ball.dpath.ballX [9] = \mchip.pong.game.ball.dpath.ballX_reg[9] ;
+	assign io_out = {6'h00, \mchip.pong.VGA_R3 , \mchip.pong.VGA_R2 , \mchip.pong.VGA_G3 , \mchip.pong.VGA_G2 , \mchip.pong.VGA_B3 , \mchip.pong.VGA_B2 , \mchip.pong.VGA_VS , \mchip.pong.VGA_HS };
+	assign \mchip.clock  = io_in[12];
+	assign \mchip.io_in  = io_in[11:0];
+	assign \mchip.io_out  = {4'h0, \mchip.pong.VGA_R3 , \mchip.pong.VGA_R2 , \mchip.pong.VGA_G3 , \mchip.pong.VGA_G2 , \mchip.pong.VGA_B3 , \mchip.pong.VGA_B2 , \mchip.pong.VGA_VS , \mchip.pong.VGA_HS };
+	assign \mchip.pong.VGA_B  = {\mchip.pong.VGA_B3 , \mchip.pong.VGA_B2 , 6'h00};
+	assign \mchip.pong.VGA_B0  = 1'h0;
+	assign \mchip.pong.VGA_B1  = 1'h0;
+	assign \mchip.pong.VGA_G  = {\mchip.pong.VGA_G3 , \mchip.pong.VGA_G2 , 6'h00};
+	assign \mchip.pong.VGA_G0  = 1'h0;
+	assign \mchip.pong.VGA_G1  = 1'h0;
+	assign \mchip.pong.VGA_R  = {\mchip.pong.VGA_R3 , \mchip.pong.VGA_R2 , 6'h00};
+	assign \mchip.pong.VGA_R0  = 1'h0;
+	assign \mchip.pong.VGA_R1  = 1'h0;
+	assign \mchip.pong.btn_rst  = io_in[4];
+	assign \mchip.pong.btn_serve  = io_in[5];
+	assign \mchip.pong.cfg1  = io_in[7];
+	assign \mchip.pong.cfg1_o  = \mchip.pong.sync.o_out [1];
+	assign \mchip.pong.cfg2  = io_in[6];
+	assign \mchip.pong.cfg2_o  = \mchip.pong.sync.o_out [0];
+	assign \mchip.pong.clk_25mhz  = io_in[12];
+	assign \mchip.pong.game.Cnewgame  = \mchip.pong.game.ball.cpath.state [0];
+	assign \mchip.pong.game.VGA_B  = {\mchip.pong.VGA_B3 , \mchip.pong.VGA_B2 , 6'h00};
+	assign \mchip.pong.game.VGA_G  = {\mchip.pong.VGA_G3 , \mchip.pong.VGA_G2 , 6'h00};
+	assign \mchip.pong.game.VGA_HS  = \mchip.pong.VGA_HS ;
+	assign \mchip.pong.game.VGA_R  = {\mchip.pong.VGA_R3 , \mchip.pong.VGA_R2 , 6'h00};
+	assign \mchip.pong.game.VGA_VS  = \mchip.pong.VGA_VS ;
+	assign \mchip.pong.game.ball.Cnewgame  = \mchip.pong.game.ball.cpath.state [0];
+	assign \mchip.pong.game.ball.ballX  = {\mchip.pong.game.ball.dpath.ballX [9:1], 1'h0};
+	assign \mchip.pong.game.ball.ballY  = \mchip.pong.game.ball.dpath.ballY ;
+	assign \mchip.pong.game.ball.clock  = io_in[12];
+	assign \mchip.pong.game.ball.cpath.Cnewgame  = \mchip.pong.game.ball.cpath.state [0];
+	assign \mchip.pong.game.ball.cpath.clock  = io_in[12];
+	assign \mchip.pong.game.ball.cpath.reset  = \mchip.pong.sync.o_out [2];
+	assign \mchip.pong.game.ball.cpath.serve_input  = \mchip.pong.sync.o_out [3];
+	assign \mchip.pong.game.ball.dpath.Cnewgame  = \mchip.pong.game.ball.cpath.state [0];
+	assign \mchip.pong.game.ball.dpath.ballX [0] = 1'h0;
+	assign \mchip.pong.game.ball.dpath.clock  = io_in[12];
+	assign \mchip.pong.game.ball.dpath.nextX [0] = 1'h0;
+	assign \mchip.pong.game.ball.dpath.paddleLY  = \mchip.pong.game.left_paddle.coord ;
+	assign \mchip.pong.game.ball.dpath.paddleRY  = \mchip.pong.game.right_paddle.coord ;
+	assign \mchip.pong.game.ball.paddleLY  = \mchip.pong.game.left_paddle.coord ;
+	assign \mchip.pong.game.ball.paddleRY  = \mchip.pong.game.right_paddle.coord ;
+	assign \mchip.pong.game.ball.reset  = \mchip.pong.sync.o_out [2];
+	assign \mchip.pong.game.ball.serve_input  = \mchip.pong.sync.o_out [3];
+	assign \mchip.pong.game.ballX  = {\mchip.pong.game.ball.dpath.ballX [9:1], 1'h0};
+	assign \mchip.pong.game.ballY  = \mchip.pong.game.ball.dpath.ballY ;
+	assign \mchip.pong.game.cfg1  = \mchip.pong.sync.o_out [1];
+	assign \mchip.pong.game.cfg2  = \mchip.pong.sync.o_out [0];
+	assign \mchip.pong.game.clock  = io_in[12];
+	assign \mchip.pong.game.left_movedir  = \mchip.pong.sync.o_out [7];
+	assign \mchip.pong.game.left_paddle.Cnewgame  = \mchip.pong.game.ball.cpath.state [0];
+	assign \mchip.pong.game.left_paddle.clock  = io_in[12];
+	assign \mchip.pong.game.left_paddle.movedir_input  = \mchip.pong.sync.o_out [7];
+	assign \mchip.pong.game.paddleLY  = \mchip.pong.game.left_paddle.coord ;
+	assign \mchip.pong.game.paddleRY  = \mchip.pong.game.right_paddle.coord ;
+	assign \mchip.pong.game.renderer.ball.color  = 24'h000000;
+	assign \mchip.pong.game.renderer.ball1.color  = 24'h000000;
+	assign \mchip.pong.game.renderer.ball2.color  = 24'h000000;
+	assign \mchip.pong.game.renderer.ballX  = {\mchip.pong.game.ball.dpath.ballX [9:1], 1'h0};
+	assign \mchip.pong.game.renderer.ballY  = \mchip.pong.game.ball.dpath.ballY ;
+	assign \mchip.pong.game.renderer.ballrom_out  = 24'h000000;
+	assign \mchip.pong.game.renderer.ballrom_out0  = 24'h000000;
+	assign \mchip.pong.game.renderer.ballrom_out1  = 24'h000000;
+	assign \mchip.pong.game.renderer.ballrom_out2  = 24'h000000;
+	assign \mchip.pong.game.renderer.cfg1  = \mchip.pong.sync.o_out [1];
+	assign \mchip.pong.game.renderer.cfg2  = \mchip.pong.sync.o_out [0];
+	assign \mchip.pong.game.renderer.paddleLY  = \mchip.pong.game.left_paddle.coord ;
+	assign \mchip.pong.game.renderer.paddleRY  = \mchip.pong.game.right_paddle.coord ;
+	assign \mchip.pong.game.renderer.vga_b  = {\mchip.pong.VGA_B3 , \mchip.pong.VGA_B2 , 6'h00};
+	assign \mchip.pong.game.renderer.vga_col  = {6'h00, \mchip.pong.game.vga.pix_ind [3:0]};
+	assign \mchip.pong.game.renderer.vga_g  = {\mchip.pong.VGA_G3 , \mchip.pong.VGA_G2 , 6'h00};
+	assign \mchip.pong.game.renderer.vga_r  = {\mchip.pong.VGA_R3 , \mchip.pong.VGA_R2 , 6'h00};
+	assign \mchip.pong.game.reset  = \mchip.pong.sync.o_out [2];
+	assign \mchip.pong.game.right_movedir  = \mchip.pong.sync.o_out [5];
+	assign \mchip.pong.game.right_paddle.Cnewgame  = \mchip.pong.game.ball.cpath.state [0];
+	assign \mchip.pong.game.right_paddle.clock  = io_in[12];
+	assign \mchip.pong.game.right_paddle.movedir_input  = \mchip.pong.sync.o_out [5];
+	assign \mchip.pong.game.score.Cnewgame  = \mchip.pong.game.ball.cpath.state [0];
+	assign \mchip.pong.game.score.clock  = io_in[12];
+	assign \mchip.pong.game.score.lscore_adder.B  = 16'h0001;
+	assign \mchip.pong.game.score.lscore_adder.add0.B  = 4'h1;
+	assign \mchip.pong.game.score.lscore_adder.add0.Cin  = 1'h0;
+	assign \mchip.pong.game.score.lscore_adder.add1.B  = 4'h0;
+	assign \mchip.pong.game.score.lscore_adder.add2.B  = 4'h0;
+	assign \mchip.pong.game.score.lscore_adder.add3.B  = 4'h0;
+	assign \mchip.pong.game.score.rscore_adder.B  = 16'h0001;
+	assign \mchip.pong.game.score.rscore_adder.add0.B  = 4'h1;
+	assign \mchip.pong.game.score.rscore_adder.add0.Cin  = 1'h0;
+	assign \mchip.pong.game.score.rscore_adder.add1.B  = 4'h0;
+	assign \mchip.pong.game.score.rscore_adder.add2.B  = 4'h0;
+	assign \mchip.pong.game.score.rscore_adder.add3.B  = 4'h0;
+	assign \mchip.pong.game.serve_input  = \mchip.pong.sync.o_out [3];
+	assign \mchip.pong.game.tick.clock  = io_in[12];
+	assign \mchip.pong.game.tick.col  = {6'h00, \mchip.pong.game.vga.pix_ind [3:0]};
+	assign \mchip.pong.game.vga.HS  = \mchip.pong.VGA_HS ;
+	assign \mchip.pong.game.vga.VS  = \mchip.pong.VGA_VS ;
+	assign \mchip.pong.game.vga.clock  = io_in[12];
+	assign \mchip.pong.game.vga.col  = {6'h00, \mchip.pong.game.vga.pix_ind [3:0]};
+	assign \mchip.pong.game.vga.reset  = \mchip.pong.sync.o_out [2];
+	assign \mchip.pong.game.vga_col  = {6'h00, \mchip.pong.game.vga.pix_ind [3:0]};
+	assign \mchip.pong.left_down  = \mchip.pong.sync.o_out [6];
+	assign \mchip.pong.left_up  = \mchip.pong.sync.o_out [7];
+	assign \mchip.pong.right_down  = \mchip.pong.sync.o_out [4];
+	assign \mchip.pong.right_up  = \mchip.pong.sync.o_out [5];
+	assign \mchip.pong.rst  = \mchip.pong.sync.o_out [2];
+	assign \mchip.pong.serve  = \mchip.pong.sync.o_out [3];
+	assign \mchip.pong.sync.i_clk  = io_in[12];
+	assign \mchip.pong.sync.i_in  = {io_in[3:0], io_in[5:4], io_in[7:6]};
+	assign \mchip.pong.sync.i_rst  = 1'h0;
+	assign \mchip.reset  = io_in[13];
+endmodule
+module d07_demo_vgarunner (
+	io_in,
+	io_out
+);
+	wire [6:0] _0000_;
+	wire _0001_;
+	wire _0002_;
+	wire _0003_;
+	wire _0004_;
+	wire _0005_;
+	wire _0006_;
+	wire _0007_;
+	wire _0008_;
+	wire _0009_;
+	wire _0010_;
+	wire _0011_;
+	wire _0012_;
+	wire _0013_;
+	wire _0014_;
+	wire _0015_;
+	wire _0016_;
+	wire _0017_;
+	wire _0018_;
+	wire _0019_;
+	wire _0020_;
+	wire _0021_;
+	wire _0022_;
+	wire _0023_;
+	wire _0024_;
+	wire _0025_;
+	wire _0026_;
+	wire _0027_;
+	wire _0028_;
+	wire _0029_;
+	wire _0030_;
+	wire _0031_;
+	wire _0032_;
+	wire _0033_;
+	wire _0034_;
+	wire _0035_;
+	wire _0036_;
+	wire _0037_;
+	wire _0038_;
+	wire _0039_;
+	wire _0040_;
+	wire _0041_;
+	wire _0042_;
+	wire _0043_;
+	wire _0044_;
+	wire _0045_;
+	wire _0046_;
+	wire _0047_;
+	wire _0048_;
+	wire _0049_;
+	wire _0050_;
+	wire _0051_;
+	wire _0052_;
+	wire _0053_;
+	wire _0054_;
+	wire _0055_;
+	wire _0056_;
+	wire _0057_;
+	wire _0058_;
+	wire _0059_;
+	wire _0060_;
+	wire _0061_;
+	wire _0062_;
+	wire _0063_;
+	wire _0064_;
+	wire _0065_;
+	wire _0066_;
+	wire _0067_;
+	wire _0068_;
+	wire _0069_;
+	wire _0070_;
+	wire _0071_;
+	wire _0072_;
+	wire _0073_;
+	wire _0074_;
+	wire _0075_;
+	wire _0076_;
+	wire _0077_;
+	wire _0078_;
+	wire _0079_;
+	wire _0080_;
+	wire _0081_;
+	wire _0082_;
+	wire _0083_;
+	wire _0084_;
+	wire _0085_;
+	wire _0086_;
+	wire _0087_;
+	wire _0088_;
+	wire _0089_;
+	wire _0090_;
+	wire _0091_;
+	wire _0092_;
+	wire _0093_;
+	wire _0094_;
+	wire _0095_;
+	wire _0096_;
+	wire _0097_;
+	wire _0098_;
+	wire _0099_;
+	wire _0100_;
+	wire _0101_;
+	wire _0102_;
+	wire _0103_;
+	wire _0104_;
+	wire _0105_;
+	wire _0106_;
+	wire _0107_;
+	wire _0108_;
+	wire _0109_;
+	wire _0110_;
+	wire _0111_;
+	wire _0112_;
+	wire _0113_;
+	wire _0114_;
+	wire _0115_;
+	wire _0116_;
+	wire _0117_;
+	wire _0118_;
+	wire _0119_;
+	wire _0120_;
+	wire _0121_;
+	wire _0122_;
+	wire _0123_;
+	wire _0124_;
+	wire _0125_;
+	wire _0126_;
+	wire _0127_;
+	wire _0128_;
+	wire _0129_;
+	wire _0130_;
+	wire _0131_;
+	wire _0132_;
+	wire _0133_;
+	wire _0134_;
+	wire _0135_;
+	wire _0136_;
+	wire _0137_;
+	wire _0138_;
+	wire _0139_;
+	wire _0140_;
+	wire _0141_;
+	wire _0142_;
+	wire _0143_;
+	wire _0144_;
+	wire _0145_;
+	wire _0146_;
+	wire _0147_;
+	wire _0148_;
+	wire _0149_;
+	wire _0150_;
+	wire _0151_;
+	wire _0152_;
+	wire _0153_;
+	wire _0154_;
+	wire _0155_;
+	wire _0156_;
+	wire _0157_;
+	wire _0158_;
+	wire _0159_;
+	wire _0160_;
+	wire _0161_;
+	wire _0162_;
+	wire _0163_;
+	wire _0164_;
+	wire _0165_;
+	wire _0166_;
+	wire _0167_;
+	wire _0168_;
+	wire _0169_;
+	wire _0170_;
+	wire _0171_;
+	wire _0172_;
+	wire _0173_;
+	wire _0174_;
+	wire _0175_;
+	wire _0176_;
+	wire _0177_;
+	wire _0178_;
+	wire _0179_;
+	wire _0180_;
+	wire _0181_;
+	wire _0182_;
+	wire _0183_;
+	wire _0184_;
+	wire _0185_;
+	wire _0186_;
+	wire _0187_;
+	wire _0188_;
+	wire _0189_;
+	wire _0190_;
+	wire _0191_;
+	wire _0192_;
+	wire _0193_;
+	wire _0194_;
+	wire _0195_;
+	wire _0196_;
+	wire _0197_;
+	wire _0198_;
+	wire _0199_;
+	wire _0200_;
+	wire _0201_;
+	wire _0202_;
+	wire _0203_;
+	wire _0204_;
+	wire _0205_;
+	wire _0206_;
+	wire _0207_;
+	wire _0208_;
+	wire _0209_;
+	wire _0210_;
+	wire _0211_;
+	wire _0212_;
+	wire _0213_;
+	wire _0214_;
+	wire _0215_;
+	wire _0216_;
+	wire _0217_;
+	wire _0218_;
+	wire _0219_;
+	wire _0220_;
+	wire _0221_;
+	wire _0222_;
+	wire _0223_;
+	wire _0224_;
+	wire _0225_;
+	wire _0226_;
+	wire _0227_;
+	wire _0228_;
+	wire _0229_;
+	wire _0230_;
+	wire _0231_;
+	wire _0232_;
+	wire _0233_;
+	wire _0234_;
+	wire _0235_;
+	wire _0236_;
+	wire _0237_;
+	wire _0238_;
+	wire _0239_;
+	wire _0240_;
+	wire _0241_;
+	wire _0242_;
+	wire _0243_;
+	wire _0244_;
+	wire _0245_;
+	wire _0246_;
+	wire _0247_;
+	wire _0248_;
+	wire _0249_;
+	wire _0250_;
+	wire _0251_;
+	wire _0252_;
+	wire _0253_;
+	wire _0254_;
+	wire _0255_;
+	wire _0256_;
+	wire _0257_;
+	wire _0258_;
+	wire _0259_;
+	wire _0260_;
+	wire _0261_;
+	wire _0262_;
+	wire _0263_;
+	wire _0264_;
+	wire _0265_;
+	wire _0266_;
+	wire _0267_;
+	wire _0268_;
+	wire _0269_;
+	wire _0270_;
+	wire _0271_;
+	wire _0272_;
+	wire _0273_;
+	wire _0274_;
+	wire _0275_;
+	wire _0276_;
+	wire _0277_;
+	wire _0278_;
+	wire _0279_;
+	wire _0280_;
+	wire _0281_;
+	wire _0282_;
+	wire _0283_;
+	wire _0284_;
+	wire _0285_;
+	wire _0286_;
+	wire _0287_;
+	wire _0288_;
+	wire _0289_;
+	wire _0290_;
+	wire _0291_;
+	wire _0292_;
+	wire _0293_;
+	wire _0294_;
+	wire _0295_;
+	wire _0296_;
+	wire _0297_;
+	wire _0298_;
+	wire _0299_;
+	wire _0300_;
+	wire _0301_;
+	wire _0302_;
+	wire _0303_;
+	wire _0304_;
+	wire _0305_;
+	wire _0306_;
+	wire _0307_;
+	wire _0308_;
+	wire _0309_;
+	wire _0310_;
+	wire _0311_;
+	wire _0312_;
+	wire _0313_;
+	wire _0314_;
+	wire _0315_;
+	wire _0316_;
+	wire _0317_;
+	wire _0318_;
+	wire _0319_;
+	wire _0320_;
+	wire _0321_;
+	wire _0322_;
+	wire _0323_;
+	wire _0324_;
+	wire _0325_;
+	wire _0326_;
+	wire _0327_;
+	wire _0328_;
+	wire _0329_;
+	wire _0330_;
+	wire _0331_;
+	wire _0332_;
+	wire _0333_;
+	wire _0334_;
+	wire _0335_;
+	wire _0336_;
+	wire _0337_;
+	wire _0338_;
+	wire _0339_;
+	wire _0340_;
+	wire _0341_;
+	wire _0342_;
+	wire _0343_;
+	wire _0344_;
+	wire _0345_;
+	wire _0346_;
+	wire _0347_;
+	wire _0348_;
+	wire _0349_;
+	wire _0350_;
+	wire _0351_;
+	wire _0352_;
+	wire _0353_;
+	wire _0354_;
+	wire _0355_;
+	wire _0356_;
+	wire _0357_;
+	wire _0358_;
+	wire _0359_;
+	wire _0360_;
+	wire _0361_;
+	wire _0362_;
+	wire _0363_;
+	wire _0364_;
+	wire _0365_;
+	wire _0366_;
+	wire _0367_;
+	wire _0368_;
+	wire _0369_;
+	wire _0370_;
+	wire _0371_;
+	wire _0372_;
+	wire _0373_;
+	wire _0374_;
+	wire _0375_;
+	wire _0376_;
+	wire _0377_;
+	wire _0378_;
+	wire _0379_;
+	wire _0380_;
+	wire _0381_;
+	wire _0382_;
+	wire _0383_;
+	wire _0384_;
+	wire _0385_;
+	wire _0386_;
+	wire _0387_;
+	wire _0388_;
+	wire _0389_;
+	wire _0390_;
+	wire _0391_;
+	wire _0392_;
+	wire _0393_;
+	wire _0394_;
+	wire _0395_;
+	wire _0396_;
+	wire _0397_;
+	wire _0398_;
+	wire _0399_;
+	wire _0400_;
+	wire _0401_;
+	wire _0402_;
+	wire _0403_;
+	wire _0404_;
+	wire _0405_;
+	wire _0406_;
+	wire _0407_;
+	wire _0408_;
+	wire _0409_;
+	wire _0410_;
+	wire _0411_;
+	wire _0412_;
+	wire _0413_;
+	wire _0414_;
+	wire _0415_;
+	wire _0416_;
+	wire _0417_;
+	wire _0418_;
+	wire _0419_;
+	wire _0420_;
+	wire _0421_;
+	wire _0422_;
+	wire _0423_;
+	wire _0424_;
+	wire _0425_;
+	wire _0426_;
+	wire _0427_;
+	wire _0428_;
+	wire _0429_;
+	wire _0430_;
+	wire _0431_;
+	wire _0432_;
+	wire _0433_;
+	wire _0434_;
+	wire _0435_;
+	wire _0436_;
+	wire _0437_;
+	wire _0438_;
+	wire _0439_;
+	wire _0440_;
+	wire _0441_;
+	wire _0442_;
+	wire _0443_;
+	wire _0444_;
+	wire _0445_;
+	wire _0446_;
+	wire _0447_;
+	wire _0448_;
+	wire _0449_;
+	wire _0450_;
+	wire _0451_;
+	wire _0452_;
+	wire _0453_;
+	wire _0454_;
+	wire _0455_;
+	wire _0456_;
+	wire _0457_;
+	wire _0458_;
+	wire _0459_;
+	wire _0460_;
+	wire _0461_;
+	wire _0462_;
+	wire _0463_;
+	wire _0464_;
+	wire _0465_;
+	wire _0466_;
+	wire _0467_;
+	wire _0468_;
+	wire _0469_;
+	wire _0470_;
+	wire _0471_;
+	wire _0472_;
+	wire _0473_;
+	wire _0474_;
+	wire _0475_;
+	wire _0476_;
+	wire _0477_;
+	wire _0478_;
+	wire _0479_;
+	wire _0480_;
+	wire _0481_;
+	wire _0482_;
+	wire _0483_;
+	wire _0484_;
+	wire _0485_;
+	wire _0486_;
+	wire _0487_;
+	wire _0488_;
+	wire _0489_;
+	wire _0490_;
+	wire _0491_;
+	wire _0492_;
+	wire _0493_;
+	wire _0494_;
+	wire _0495_;
+	wire _0496_;
+	wire _0497_;
+	wire _0498_;
+	wire _0499_;
+	wire _0500_;
+	wire _0501_;
+	wire _0502_;
+	wire _0503_;
+	wire _0504_;
+	wire _0505_;
+	wire _0506_;
+	wire _0507_;
+	wire _0508_;
+	wire _0509_;
+	wire _0510_;
+	wire _0511_;
+	wire _0512_;
+	wire _0513_;
+	wire _0514_;
+	wire _0515_;
+	wire _0516_;
+	wire _0517_;
+	wire _0518_;
+	wire _0519_;
+	wire _0520_;
+	wire _0521_;
+	wire _0522_;
+	wire _0523_;
+	wire _0524_;
+	wire _0525_;
+	wire _0526_;
+	wire _0527_;
+	wire _0528_;
+	wire _0529_;
+	wire _0530_;
+	wire _0531_;
+	wire _0532_;
+	wire _0533_;
+	wire _0534_;
+	wire _0535_;
+	wire _0536_;
+	wire _0537_;
+	wire _0538_;
+	wire _0539_;
+	wire _0540_;
+	wire _0541_;
+	wire _0542_;
+	wire _0543_;
+	wire _0544_;
+	wire _0545_;
+	wire _0546_;
+	wire _0547_;
+	wire _0548_;
+	wire _0549_;
+	wire _0550_;
+	wire _0551_;
+	wire _0552_;
+	wire _0553_;
+	wire _0554_;
+	wire _0555_;
+	wire _0556_;
+	wire _0557_;
+	wire _0558_;
+	wire _0559_;
+	wire _0560_;
+	wire _0561_;
+	wire _0562_;
+	wire _0563_;
+	wire _0564_;
+	wire _0565_;
+	wire _0566_;
+	wire _0567_;
+	wire _0568_;
+	wire _0569_;
+	wire _0570_;
+	wire _0571_;
+	wire _0572_;
+	wire _0573_;
+	wire _0574_;
+	wire _0575_;
+	wire _0576_;
+	wire _0577_;
+	wire _0578_;
+	wire _0579_;
+	wire _0580_;
+	wire _0581_;
+	wire _0582_;
+	wire _0583_;
+	wire _0584_;
+	wire _0585_;
+	wire _0586_;
+	wire _0587_;
+	wire _0588_;
+	wire _0589_;
+	wire _0590_;
+	wire _0591_;
+	wire _0592_;
+	wire _0593_;
+	wire _0594_;
+	wire _0595_;
+	wire _0596_;
+	wire _0597_;
+	wire _0598_;
+	wire _0599_;
+	wire _0600_;
+	wire _0601_;
+	wire _0602_;
+	wire _0603_;
+	wire _0604_;
+	wire _0605_;
+	wire _0606_;
+	wire _0607_;
+	wire _0608_;
+	wire _0609_;
+	wire _0610_;
+	wire _0611_;
+	wire _0612_;
+	wire _0613_;
+	wire _0614_;
+	wire _0615_;
+	wire _0616_;
+	wire _0617_;
+	wire _0618_;
+	wire _0619_;
+	wire _0620_;
+	wire _0621_;
+	wire _0622_;
+	wire _0623_;
+	wire _0624_;
+	wire _0625_;
+	wire _0626_;
+	wire _0627_;
+	wire _0628_;
+	wire _0629_;
+	wire _0630_;
+	wire _0631_;
+	wire _0632_;
+	wire _0633_;
+	wire _0634_;
+	wire _0635_;
+	wire _0636_;
+	wire _0637_;
+	wire _0638_;
+	wire _0639_;
+	wire _0640_;
+	wire _0641_;
+	wire _0642_;
+	wire _0643_;
+	wire _0644_;
+	wire _0645_;
+	wire _0646_;
+	wire _0647_;
+	wire _0648_;
+	wire _0649_;
+	wire _0650_;
+	wire _0651_;
+	wire _0652_;
+	wire _0653_;
+	wire _0654_;
+	wire _0655_;
+	wire _0656_;
+	wire _0657_;
+	wire _0658_;
+	wire _0659_;
+	wire _0660_;
+	wire _0661_;
+	wire _0662_;
+	wire _0663_;
+	wire _0664_;
+	wire _0665_;
+	wire _0666_;
+	wire _0667_;
+	wire _0668_;
+	wire _0669_;
+	wire _0670_;
+	wire _0671_;
+	wire _0672_;
+	wire _0673_;
+	wire _0674_;
+	wire _0675_;
+	wire _0676_;
+	wire _0677_;
+	wire _0678_;
+	wire _0679_;
+	wire _0680_;
+	wire _0681_;
+	wire _0682_;
+	wire _0683_;
+	wire _0684_;
+	wire _0685_;
+	wire _0686_;
+	wire _0687_;
+	wire _0688_;
+	wire _0689_;
+	wire _0690_;
+	wire _0691_;
+	wire _0692_;
+	wire _0693_;
+	wire _0694_;
+	wire _0695_;
+	wire _0696_;
+	wire _0697_;
+	wire _0698_;
+	wire _0699_;
+	wire _0700_;
+	wire _0701_;
+	wire _0702_;
+	wire _0703_;
+	wire _0704_;
+	wire _0705_;
+	wire _0706_;
+	wire _0707_;
+	wire _0708_;
+	wire _0709_;
+	wire _0710_;
+	wire _0711_;
+	wire _0712_;
+	wire _0713_;
+	wire _0714_;
+	wire _0715_;
+	wire _0716_;
+	wire _0717_;
+	wire _0718_;
+	wire _0719_;
+	wire _0720_;
+	wire _0721_;
+	wire _0722_;
+	wire _0723_;
+	wire _0724_;
+	wire _0725_;
+	wire _0726_;
+	wire _0727_;
+	wire _0728_;
+	wire _0729_;
+	wire _0730_;
+	wire _0731_;
+	wire _0732_;
+	wire _0733_;
+	wire _0734_;
+	wire _0735_;
+	wire _0736_;
+	wire _0737_;
+	wire _0738_;
+	wire _0739_;
+	wire _0740_;
+	wire _0741_;
+	wire _0742_;
+	wire _0743_;
+	wire _0744_;
+	wire _0745_;
+	wire _0746_;
+	wire _0747_;
+	wire _0748_;
+	wire _0749_;
+	wire _0750_;
+	wire _0751_;
+	wire _0752_;
+	wire _0753_;
+	wire _0754_;
+	wire _0755_;
+	wire _0756_;
+	wire _0757_;
+	wire _0758_;
+	wire _0759_;
+	wire _0760_;
+	wire _0761_;
+	wire _0762_;
+	wire _0763_;
+	wire _0764_;
+	wire _0765_;
+	wire _0766_;
+	wire _0767_;
+	wire _0768_;
+	wire _0769_;
+	wire _0770_;
+	wire _0771_;
+	wire _0772_;
+	wire _0773_;
+	wire _0774_;
+	wire _0775_;
+	wire _0776_;
+	wire _0777_;
+	wire _0778_;
+	wire _0779_;
+	wire _0780_;
+	wire _0781_;
+	wire _0782_;
+	wire _0783_;
+	wire _0784_;
+	wire _0785_;
+	wire _0786_;
+	wire _0787_;
+	wire _0788_;
+	wire _0789_;
+	wire _0790_;
+	wire _0791_;
+	wire _0792_;
+	wire _0793_;
+	wire _0794_;
+	wire _0795_;
+	wire _0796_;
+	wire _0797_;
+	wire _0798_;
+	wire _0799_;
+	wire _0800_;
+	wire _0801_;
+	wire _0802_;
+	wire _0803_;
+	wire _0804_;
+	wire _0805_;
+	wire _0806_;
+	wire _0807_;
+	wire _0808_;
+	wire _0809_;
+	wire _0810_;
+	wire _0811_;
+	wire _0812_;
+	wire _0813_;
+	wire _0814_;
+	wire _0815_;
+	wire _0816_;
+	wire _0817_;
+	wire _0818_;
+	wire _0819_;
+	wire _0820_;
+	wire _0821_;
+	wire _0822_;
+	wire _0823_;
+	wire _0824_;
+	wire _0825_;
+	wire _0826_;
+	wire _0827_;
+	wire _0828_;
+	wire _0829_;
+	wire _0830_;
+	wire _0831_;
+	wire _0832_;
+	wire _0833_;
+	wire _0834_;
+	wire _0835_;
+	wire _0836_;
+	wire _0837_;
+	wire _0838_;
+	wire _0839_;
+	wire _0840_;
+	wire _0841_;
+	wire _0842_;
+	wire _0843_;
+	wire _0844_;
+	wire _0845_;
+	wire _0846_;
+	wire _0847_;
+	wire _0848_;
+	wire _0849_;
+	wire _0850_;
+	wire _0851_;
+	wire _0852_;
+	wire _0853_;
+	wire _0854_;
+	wire _0855_;
+	wire _0856_;
+	wire _0857_;
+	wire _0858_;
+	wire _0859_;
+	wire _0860_;
+	wire _0861_;
+	wire _0862_;
+	wire _0863_;
+	wire _0864_;
+	wire _0865_;
+	wire _0866_;
+	wire _0867_;
+	wire _0868_;
+	wire _0869_;
+	wire _0870_;
+	wire _0871_;
+	wire _0872_;
+	wire _0873_;
+	wire _0874_;
+	wire _0875_;
+	wire _0876_;
+	wire _0877_;
+	wire _0878_;
+	wire _0879_;
+	wire _0880_;
+	wire _0881_;
+	wire _0882_;
+	wire _0883_;
+	wire _0884_;
+	wire _0885_;
+	wire _0886_;
+	wire _0887_;
+	wire _0888_;
+	wire _0889_;
+	wire _0890_;
+	wire _0891_;
+	wire _0892_;
+	wire _0893_;
+	wire _0894_;
+	wire _0895_;
+	wire _0896_;
+	wire _0897_;
+	wire _0898_;
+	wire _0899_;
+	wire _0900_;
+	wire _0901_;
+	wire _0902_;
+	wire _0903_;
+	wire _0904_;
+	wire _0905_;
+	wire _0906_;
+	wire _0907_;
+	wire _0908_;
+	wire _0909_;
+	wire _0910_;
+	wire _0911_;
+	wire _0912_;
+	wire _0913_;
+	wire _0914_;
+	wire _0915_;
+	wire _0916_;
+	wire _0917_;
+	wire _0918_;
+	wire _0919_;
+	wire _0920_;
+	wire _0921_;
+	wire _0922_;
+	wire _0923_;
+	wire _0924_;
+	wire _0925_;
+	wire _0926_;
+	wire _0927_;
+	wire _0928_;
+	wire _0929_;
+	wire _0930_;
+	wire _0931_;
+	wire _0932_;
+	wire _0933_;
+	wire _0934_;
+	wire _0935_;
+	wire _0936_;
+	wire _0937_;
+	wire _0938_;
+	wire _0939_;
+	wire _0940_;
+	wire _0941_;
+	wire _0942_;
+	wire _0943_;
+	wire _0944_;
+	wire _0945_;
+	wire _0946_;
+	wire _0947_;
+	wire _0948_;
+	wire _0949_;
+	wire _0950_;
+	wire _0951_;
+	wire _0952_;
+	wire _0953_;
+	wire _0954_;
+	wire _0955_;
+	wire _0956_;
+	wire _0957_;
+	wire _0958_;
+	wire _0959_;
+	wire _0960_;
+	wire _0961_;
+	wire _0962_;
+	wire _0963_;
+	wire _0964_;
+	wire _0965_;
+	wire _0966_;
+	wire _0967_;
+	wire _0968_;
+	wire _0969_;
+	wire _0970_;
+	wire _0971_;
+	wire _0972_;
+	wire _0973_;
+	wire _0974_;
+	wire _0975_;
+	wire _0976_;
+	wire _0977_;
+	wire _0978_;
+	wire _0979_;
+	wire _0980_;
+	wire _0981_;
+	wire _0982_;
+	wire _0983_;
+	wire _0984_;
+	wire _0985_;
+	wire _0986_;
+	wire _0987_;
+	wire _0988_;
+	wire _0989_;
+	wire _0990_;
+	wire _0991_;
+	wire _0992_;
+	wire _0993_;
+	wire _0994_;
+	wire _0995_;
+	wire _0996_;
+	wire _0997_;
+	wire _0998_;
+	wire _0999_;
+	wire _1000_;
+	wire _1001_;
+	wire _1002_;
+	wire _1003_;
+	wire _1004_;
+	wire _1005_;
+	wire _1006_;
+	wire _1007_;
+	wire _1008_;
+	wire _1009_;
+	wire _1010_;
+	wire _1011_;
+	wire _1012_;
+	wire _1013_;
+	wire _1014_;
+	wire _1015_;
+	wire _1016_;
+	wire _1017_;
+	wire _1018_;
+	wire _1019_;
+	wire _1020_;
+	wire _1021_;
+	wire _1022_;
+	wire _1023_;
+	wire _1024_;
+	wire _1025_;
+	wire _1026_;
+	wire _1027_;
+	wire _1028_;
+	wire _1029_;
+	wire _1030_;
+	wire _1031_;
+	wire _1032_;
+	wire _1033_;
+	wire _1034_;
+	wire _1035_;
+	wire _1036_;
+	wire _1037_;
+	wire _1038_;
+	wire _1039_;
+	wire _1040_;
+	wire _1041_;
+	wire _1042_;
+	wire _1043_;
+	wire _1044_;
+	wire _1045_;
+	wire _1046_;
+	wire _1047_;
+	wire _1048_;
+	wire _1049_;
+	wire _1050_;
+	wire _1051_;
+	wire _1052_;
+	wire _1053_;
+	wire _1054_;
+	wire _1055_;
+	wire _1056_;
+	wire _1057_;
+	wire _1058_;
+	wire _1059_;
+	wire _1060_;
+	wire _1061_;
+	wire _1062_;
+	wire _1063_;
+	wire _1064_;
+	wire _1065_;
+	wire _1066_;
+	wire _1067_;
+	wire _1068_;
+	wire _1069_;
+	wire _1070_;
+	wire _1071_;
+	wire _1072_;
+	wire _1073_;
+	wire _1074_;
+	wire _1075_;
+	wire _1076_;
+	wire _1077_;
+	wire _1078_;
+	wire _1079_;
+	wire _1080_;
+	wire _1081_;
+	wire _1082_;
+	wire _1083_;
+	wire _1084_;
+	wire _1085_;
+	wire _1086_;
+	wire _1087_;
+	wire _1088_;
+	wire _1089_;
+	wire _1090_;
+	wire _1091_;
+	wire _1092_;
+	wire _1093_;
+	wire _1094_;
+	wire _1095_;
+	wire _1096_;
+	wire _1097_;
+	wire _1098_;
+	wire _1099_;
+	wire _1100_;
+	wire _1101_;
+	wire _1102_;
+	wire _1103_;
+	wire _1104_;
+	wire _1105_;
+	wire _1106_;
+	wire _1107_;
+	wire _1108_;
+	wire _1109_;
+	wire _1110_;
+	wire _1111_;
+	wire _1112_;
+	wire _1113_;
+	wire _1114_;
+	wire _1115_;
+	wire _1116_;
+	wire _1117_;
+	wire _1118_;
+	wire _1119_;
+	wire _1120_;
+	wire _1121_;
+	wire _1122_;
+	wire _1123_;
+	wire _1124_;
+	wire _1125_;
+	wire _1126_;
+	wire _1127_;
+	wire _1128_;
+	wire _1129_;
+	wire _1130_;
+	wire _1131_;
+	wire _1132_;
+	wire _1133_;
+	wire _1134_;
+	wire _1135_;
+	wire _1136_;
+	wire _1137_;
+	wire _1138_;
+	wire _1139_;
+	wire _1140_;
+	wire _1141_;
+	wire _1142_;
+	wire _1143_;
+	wire _1144_;
+	wire _1145_;
+	wire _1146_;
+	wire _1147_;
+	wire _1148_;
+	wire _1149_;
+	wire _1150_;
+	wire _1151_;
+	wire _1152_;
+	wire _1153_;
+	wire _1154_;
+	wire _1155_;
+	wire _1156_;
+	wire _1157_;
+	wire _1158_;
+	wire _1159_;
+	wire _1160_;
+	wire _1161_;
+	wire _1162_;
+	wire _1163_;
+	wire _1164_;
+	wire _1165_;
+	wire _1166_;
+	wire _1167_;
+	wire _1168_;
+	wire _1169_;
+	wire _1170_;
+	wire _1171_;
+	wire _1172_;
+	wire _1173_;
+	wire _1174_;
+	wire _1175_;
+	wire _1176_;
+	wire _1177_;
+	wire _1178_;
+	wire _1179_;
+	wire _1180_;
+	wire _1181_;
+	wire _1182_;
+	wire _1183_;
+	wire _1184_;
+	wire _1185_;
+	wire _1186_;
+	wire _1187_;
+	wire _1188_;
+	wire _1189_;
+	wire _1190_;
+	wire _1191_;
+	wire _1192_;
+	wire _1193_;
+	wire _1194_;
+	wire _1195_;
+	wire _1196_;
+	wire _1197_;
+	wire _1198_;
+	wire _1199_;
+	wire _1200_;
+	wire _1201_;
+	wire _1202_;
+	wire _1203_;
+	wire _1204_;
+	wire _1205_;
+	wire _1206_;
+	wire _1207_;
+	wire _1208_;
+	wire _1209_;
+	wire _1210_;
+	wire _1211_;
+	wire _1212_;
+	wire _1213_;
+	wire _1214_;
+	wire _1215_;
+	wire _1216_;
+	wire _1217_;
+	wire _1218_;
+	wire _1219_;
+	wire _1220_;
+	wire _1221_;
+	wire _1222_;
+	wire _1223_;
+	wire _1224_;
+	wire _1225_;
+	wire _1226_;
+	wire _1227_;
+	wire _1228_;
+	wire _1229_;
+	wire _1230_;
+	wire _1231_;
+	wire _1232_;
+	wire _1233_;
+	wire _1234_;
+	wire _1235_;
+	wire _1236_;
+	wire _1237_;
+	wire _1238_;
+	wire _1239_;
+	wire _1240_;
+	wire _1241_;
+	wire _1242_;
+	wire _1243_;
+	wire _1244_;
+	wire _1245_;
+	wire _1246_;
+	wire _1247_;
+	wire _1248_;
+	wire _1249_;
+	wire _1250_;
+	wire _1251_;
+	wire _1252_;
+	wire _1253_;
+	wire _1254_;
+	wire _1255_;
+	wire _1256_;
+	wire _1257_;
+	wire _1258_;
+	wire _1259_;
+	wire _1260_;
+	wire _1261_;
+	wire _1262_;
+	wire _1263_;
+	wire _1264_;
+	wire _1265_;
+	wire _1266_;
+	wire _1267_;
+	wire _1268_;
+	wire _1269_;
+	wire _1270_;
+	wire _1271_;
+	wire _1272_;
+	wire _1273_;
+	wire _1274_;
+	wire _1275_;
+	wire _1276_;
+	wire _1277_;
+	wire _1278_;
+	wire _1279_;
+	wire _1280_;
+	wire _1281_;
+	wire _1282_;
+	wire _1283_;
+	wire _1284_;
+	wire _1285_;
+	wire _1286_;
+	wire _1287_;
+	wire _1288_;
+	wire _1289_;
+	wire _1290_;
+	wire _1291_;
+	wire _1292_;
+	wire _1293_;
+	wire _1294_;
+	wire _1295_;
+	wire _1296_;
+	wire _1297_;
+	wire _1298_;
+	wire _1299_;
+	wire _1300_;
+	wire _1301_;
+	wire _1302_;
+	wire _1303_;
+	wire _1304_;
+	wire _1305_;
+	wire _1306_;
+	wire _1307_;
+	wire _1308_;
+	wire _1309_;
+	wire _1310_;
+	wire _1311_;
+	wire _1312_;
+	wire _1313_;
+	wire _1314_;
+	wire _1315_;
+	wire _1316_;
+	wire _1317_;
+	wire _1318_;
+	wire _1319_;
+	wire _1320_;
+	wire _1321_;
+	wire _1322_;
+	wire _1323_;
+	wire _1324_;
+	wire _1325_;
+	wire _1326_;
+	wire _1327_;
+	wire _1328_;
+	wire _1329_;
+	wire _1330_;
+	wire _1331_;
+	wire _1332_;
+	wire _1333_;
+	wire _1334_;
+	wire _1335_;
+	wire _1336_;
+	wire _1337_;
+	wire _1338_;
+	wire _1339_;
+	wire _1340_;
+	wire _1341_;
+	wire _1342_;
+	wire _1343_;
+	wire _1344_;
+	wire _1345_;
+	wire _1346_;
+	wire _1347_;
+	wire _1348_;
+	wire _1349_;
+	wire _1350_;
+	wire _1351_;
+	wire _1352_;
+	wire _1353_;
+	wire _1354_;
+	wire _1355_;
+	wire _1356_;
+	wire _1357_;
+	wire _1358_;
+	wire _1359_;
+	wire _1360_;
+	wire _1361_;
+	wire _1362_;
+	wire _1363_;
+	wire _1364_;
+	wire _1365_;
+	wire _1366_;
+	wire _1367_;
+	wire _1368_;
+	wire _1369_;
+	wire _1370_;
+	wire _1371_;
+	wire _1372_;
+	wire _1373_;
+	wire _1374_;
+	wire _1375_;
+	wire _1376_;
+	wire _1377_;
+	wire _1378_;
+	wire _1379_;
+	wire _1380_;
+	wire _1381_;
+	wire _1382_;
+	wire _1383_;
+	wire _1384_;
+	wire _1385_;
+	wire _1386_;
+	wire _1387_;
+	wire _1388_;
+	wire _1389_;
+	wire _1390_;
+	wire _1391_;
+	wire _1392_;
+	wire _1393_;
+	wire _1394_;
+	wire _1395_;
+	wire _1396_;
+	wire _1397_;
+	wire _1398_;
+	wire _1399_;
+	wire _1400_;
+	wire _1401_;
+	wire _1402_;
+	wire _1403_;
+	wire _1404_;
+	wire _1405_;
+	wire _1406_;
+	wire _1407_;
+	wire _1408_;
+	wire _1409_;
+	wire _1410_;
+	wire _1411_;
+	wire _1412_;
+	wire _1413_;
+	wire _1414_;
+	wire _1415_;
+	wire _1416_;
+	wire _1417_;
+	wire _1418_;
+	wire _1419_;
+	wire _1420_;
+	wire _1421_;
+	wire _1422_;
+	wire _1423_;
+	wire _1424_;
+	wire _1425_;
+	wire _1426_;
+	wire _1427_;
+	wire _1428_;
+	wire _1429_;
+	wire _1430_;
+	wire _1431_;
+	wire _1432_;
+	wire _1433_;
+	wire _1434_;
+	wire _1435_;
+	wire _1436_;
+	wire _1437_;
+	wire _1438_;
+	wire _1439_;
+	wire _1440_;
+	wire _1441_;
+	wire _1442_;
+	wire _1443_;
+	wire _1444_;
+	wire _1445_;
+	wire _1446_;
+	wire _1447_;
+	wire _1448_;
+	wire _1449_;
+	wire _1450_;
+	wire _1451_;
+	wire _1452_;
+	wire _1453_;
+	wire _1454_;
+	wire _1455_;
+	wire _1456_;
+	wire _1457_;
+	wire _1458_;
+	wire _1459_;
+	wire _1460_;
+	wire _1461_;
+	wire _1462_;
+	wire _1463_;
+	wire _1464_;
+	wire _1465_;
+	wire _1466_;
+	wire _1467_;
+	wire _1468_;
+	wire _1469_;
+	wire _1470_;
+	wire _1471_;
+	wire _1472_;
+	wire _1473_;
+	wire _1474_;
+	wire _1475_;
+	wire _1476_;
+	wire _1477_;
+	wire _1478_;
+	wire _1479_;
+	wire _1480_;
+	wire _1481_;
+	wire _1482_;
+	wire _1483_;
+	wire _1484_;
+	wire _1485_;
+	wire _1486_;
+	wire _1487_;
+	wire _1488_;
+	wire _1489_;
+	wire _1490_;
+	wire _1491_;
+	wire _1492_;
+	wire _1493_;
+	wire _1494_;
+	wire _1495_;
+	wire _1496_;
+	wire _1497_;
+	wire _1498_;
+	wire _1499_;
+	wire _1500_;
+	wire _1501_;
+	wire _1502_;
+	wire _1503_;
+	wire _1504_;
+	wire _1505_;
+	wire _1506_;
+	wire _1507_;
+	wire _1508_;
+	wire _1509_;
+	wire _1510_;
+	wire _1511_;
+	wire _1512_;
+	wire _1513_;
+	wire _1514_;
+	wire _1515_;
+	wire _1516_;
+	wire _1517_;
+	wire _1518_;
+	wire _1519_;
+	wire _1520_;
+	wire _1521_;
+	wire _1522_;
+	wire _1523_;
+	wire _1524_;
+	wire _1525_;
+	wire _1526_;
+	wire _1527_;
+	wire _1528_;
+	wire _1529_;
+	wire _1530_;
+	wire _1531_;
+	wire _1532_;
+	wire _1533_;
+	wire _1534_;
+	wire _1535_;
+	wire _1536_;
+	wire _1537_;
+	wire _1538_;
+	wire _1539_;
+	wire _1540_;
+	wire _1541_;
+	wire _1542_;
+	wire _1543_;
+	wire _1544_;
+	wire _1545_;
+	wire _1546_;
+	wire _1547_;
+	wire _1548_;
+	wire _1549_;
+	wire _1550_;
+	wire _1551_;
+	wire _1552_;
+	wire _1553_;
+	wire _1554_;
+	wire _1555_;
+	wire _1556_;
+	wire _1557_;
+	wire _1558_;
+	wire _1559_;
+	wire _1560_;
+	wire _1561_;
+	wire _1562_;
+	wire _1563_;
+	wire _1564_;
+	wire _1565_;
+	wire _1566_;
+	wire _1567_;
+	wire _1568_;
+	wire _1569_;
+	wire _1570_;
+	wire _1571_;
+	wire _1572_;
+	wire _1573_;
+	wire _1574_;
+	wire _1575_;
+	wire _1576_;
+	wire _1577_;
+	wire _1578_;
+	wire _1579_;
+	wire _1580_;
+	wire _1581_;
+	wire _1582_;
+	wire _1583_;
+	wire _1584_;
+	wire _1585_;
+	wire _1586_;
+	wire _1587_;
+	wire _1588_;
+	wire _1589_;
+	wire _1590_;
+	wire _1591_;
+	wire _1592_;
+	wire _1593_;
+	wire _1594_;
+	wire _1595_;
+	wire _1596_;
+	wire _1597_;
+	wire _1598_;
+	wire _1599_;
+	wire _1600_;
+	wire _1601_;
+	wire _1602_;
+	wire _1603_;
+	wire _1604_;
+	wire _1605_;
+	wire _1606_;
+	wire _1607_;
+	wire _1608_;
+	wire _1609_;
+	wire _1610_;
+	wire _1611_;
+	wire _1612_;
+	wire _1613_;
+	wire _1614_;
+	wire _1615_;
+	wire _1616_;
+	wire _1617_;
+	wire _1618_;
+	wire _1619_;
+	wire _1620_;
+	wire _1621_;
+	wire _1622_;
+	wire _1623_;
+	wire _1624_;
+	wire _1625_;
+	wire _1626_;
+	wire _1627_;
+	wire _1628_;
+	wire _1629_;
+	wire _1630_;
+	wire _1631_;
+	wire _1632_;
+	wire _1633_;
+	wire _1634_;
+	wire _1635_;
+	wire _1636_;
+	wire _1637_;
+	wire _1638_;
+	wire _1639_;
+	wire _1640_;
+	wire _1641_;
+	wire _1642_;
+	wire _1643_;
+	wire _1644_;
+	wire _1645_;
+	wire _1646_;
+	wire _1647_;
+	wire _1648_;
+	wire _1649_;
+	wire _1650_;
+	wire _1651_;
+	wire _1652_;
+	wire _1653_;
+	wire _1654_;
+	wire _1655_;
+	wire _1656_;
+	wire _1657_;
+	wire _1658_;
+	wire _1659_;
+	wire _1660_;
+	wire _1661_;
+	wire _1662_;
+	wire _1663_;
+	wire _1664_;
+	wire _1665_;
+	wire _1666_;
+	wire _1667_;
+	wire _1668_;
+	wire _1669_;
+	wire _1670_;
+	wire _1671_;
+	wire _1672_;
+	wire _1673_;
+	wire _1674_;
+	wire _1675_;
+	wire _1676_;
+	wire _1677_;
+	wire _1678_;
+	wire _1679_;
+	wire _1680_;
+	wire _1681_;
+	wire _1682_;
+	wire _1683_;
+	wire _1684_;
+	wire _1685_;
+	wire _1686_;
+	wire _1687_;
+	wire _1688_;
+	wire _1689_;
+	wire _1690_;
+	wire _1691_;
+	wire _1692_;
+	wire _1693_;
+	wire _1694_;
+	wire _1695_;
+	wire _1696_;
+	wire _1697_;
+	wire _1698_;
+	wire _1699_;
+	wire _1700_;
+	wire _1701_;
+	wire _1702_;
+	wire _1703_;
+	wire _1704_;
+	wire _1705_;
+	wire _1706_;
+	wire _1707_;
+	wire _1708_;
+	wire _1709_;
+	wire _1710_;
+	wire _1711_;
+	wire _1712_;
+	wire _1713_;
+	wire _1714_;
+	wire _1715_;
+	wire _1716_;
+	wire _1717_;
+	wire _1718_;
+	wire _1719_;
+	wire _1720_;
+	wire _1721_;
+	wire _1722_;
+	wire _1723_;
+	wire _1724_;
+	wire _1725_;
+	wire _1726_;
+	wire _1727_;
+	wire _1728_;
+	wire _1729_;
+	wire _1730_;
+	wire _1731_;
+	wire _1732_;
+	wire _1733_;
+	wire _1734_;
+	wire _1735_;
+	wire _1736_;
+	wire _1737_;
+	wire _1738_;
+	wire _1739_;
+	wire _1740_;
+	wire _1741_;
+	wire _1742_;
+	wire _1743_;
+	wire _1744_;
+	wire _1745_;
+	wire _1746_;
+	wire _1747_;
+	wire _1748_;
+	wire _1749_;
+	wire _1750_;
+	wire _1751_;
+	wire _1752_;
+	wire _1753_;
+	wire _1754_;
+	wire _1755_;
+	wire _1756_;
+	wire _1757_;
+	wire _1758_;
+	wire _1759_;
+	wire _1760_;
+	wire _1761_;
+	wire _1762_;
+	wire _1763_;
+	wire _1764_;
+	wire _1765_;
+	wire _1766_;
+	wire _1767_;
+	wire _1768_;
+	wire _1769_;
+	wire _1770_;
+	wire _1771_;
+	wire _1772_;
+	wire _1773_;
+	wire _1774_;
+	wire _1775_;
+	wire _1776_;
+	wire _1777_;
+	wire _1778_;
+	wire _1779_;
+	wire _1780_;
+	wire _1781_;
+	wire _1782_;
+	wire _1783_;
+	wire _1784_;
+	wire _1785_;
+	wire _1786_;
+	wire _1787_;
+	wire _1788_;
+	wire _1789_;
+	wire _1790_;
+	wire _1791_;
+	wire _1792_;
+	wire _1793_;
+	wire _1794_;
+	wire _1795_;
+	wire _1796_;
+	wire _1797_;
+	wire _1798_;
+	wire _1799_;
+	wire _1800_;
+	wire _1801_;
+	wire _1802_;
+	wire _1803_;
+	wire _1804_;
+	wire _1805_;
+	wire _1806_;
+	wire _1807_;
+	wire _1808_;
+	wire _1809_;
+	wire _1810_;
+	wire _1811_;
+	wire _1812_;
+	wire _1813_;
+	wire _1814_;
+	wire _1815_;
+	wire _1816_;
+	wire _1817_;
+	wire _1818_;
+	wire _1819_;
+	wire _1820_;
+	wire _1821_;
+	wire _1822_;
+	wire _1823_;
+	wire _1824_;
+	wire _1825_;
+	wire _1826_;
+	wire _1827_;
+	wire _1828_;
+	wire _1829_;
+	wire _1830_;
+	wire _1831_;
+	wire _1832_;
+	wire _1833_;
+	wire _1834_;
+	wire _1835_;
+	wire _1836_;
+	wire _1837_;
+	wire _1838_;
+	wire _1839_;
+	wire _1840_;
+	wire _1841_;
+	wire _1842_;
+	wire _1843_;
+	wire _1844_;
+	wire _1845_;
+	wire _1846_;
+	wire _1847_;
+	wire _1848_;
+	wire _1849_;
+	wire _1850_;
+	wire _1851_;
+	wire _1852_;
+	wire _1853_;
+	wire _1854_;
+	wire _1855_;
+	wire _1856_;
+	wire _1857_;
+	wire _1858_;
+	wire _1859_;
+	wire _1860_;
+	wire _1861_;
+	wire _1862_;
+	wire _1863_;
+	wire _1864_;
+	wire _1865_;
+	wire _1866_;
+	wire _1867_;
+	wire _1868_;
+	wire _1869_;
+	wire _1870_;
+	wire _1871_;
+	wire _1872_;
+	wire _1873_;
+	wire _1874_;
+	wire _1875_;
+	wire _1876_;
+	wire _1877_;
+	wire _1878_;
+	wire _1879_;
+	wire _1880_;
+	wire _1881_;
+	wire _1882_;
+	wire _1883_;
+	wire _1884_;
+	wire _1885_;
+	wire _1886_;
+	wire _1887_;
+	wire _1888_;
+	wire _1889_;
+	wire _1890_;
+	wire _1891_;
+	wire _1892_;
+	wire _1893_;
+	wire _1894_;
+	wire _1895_;
+	wire _1896_;
+	wire _1897_;
+	wire _1898_;
+	wire _1899_;
+	wire _1900_;
+	wire _1901_;
+	wire _1902_;
+	wire _1903_;
+	wire _1904_;
+	wire _1905_;
+	wire _1906_;
+	wire _1907_;
+	wire _1908_;
+	wire _1909_;
+	wire _1910_;
+	wire _1911_;
+	wire _1912_;
+	wire _1913_;
+	wire _1914_;
+	wire _1915_;
+	wire _1916_;
+	wire _1917_;
+	wire _1918_;
+	wire _1919_;
+	wire _1920_;
+	wire _1921_;
+	wire _1922_;
+	wire _1923_;
+	wire _1924_;
+	wire _1925_;
+	wire _1926_;
+	wire _1927_;
+	wire _1928_;
+	wire _1929_;
+	wire _1930_;
+	wire _1931_;
+	wire _1932_;
+	wire _1933_;
+	wire _1934_;
+	wire _1935_;
+	wire _1936_;
+	wire _1937_;
+	wire _1938_;
+	wire _1939_;
+	wire _1940_;
+	wire _1941_;
+	wire _1942_;
+	wire _1943_;
+	wire _1944_;
+	wire _1945_;
+	wire _1946_;
+	wire _1947_;
+	wire _1948_;
+	wire _1949_;
+	wire _1950_;
+	wire _1951_;
+	wire _1952_;
+	wire _1953_;
+	wire _1954_;
+	wire _1955_;
+	wire _1956_;
+	wire _1957_;
+	wire _1958_;
+	wire _1959_;
+	wire _1960_;
+	wire _1961_;
+	wire _1962_;
+	wire _1963_;
+	wire _1964_;
+	wire _1965_;
+	wire _1966_;
+	wire _1967_;
+	wire _1968_;
+	wire _1969_;
+	wire _1970_;
+	wire _1971_;
+	wire _1972_;
+	wire _1973_;
+	wire _1974_;
+	wire _1975_;
+	wire _1976_;
+	wire _1977_;
+	wire _1978_;
+	wire _1979_;
+	wire _1980_;
+	wire _1981_;
+	wire _1982_;
+	wire _1983_;
+	wire _1984_;
+	wire _1985_;
+	wire _1986_;
+	wire _1987_;
+	wire _1988_;
+	wire _1989_;
+	wire _1990_;
+	wire _1991_;
+	wire _1992_;
+	wire _1993_;
+	wire _1994_;
+	wire _1995_;
+	wire _1996_;
+	wire _1997_;
+	wire _1998_;
+	wire _1999_;
+	wire _2000_;
+	wire _2001_;
+	wire _2002_;
+	wire _2003_;
+	wire _2004_;
+	wire _2005_;
+	wire _2006_;
+	wire _2007_;
+	wire _2008_;
+	wire _2009_;
+	wire _2010_;
+	wire _2011_;
+	wire _2012_;
+	wire _2013_;
+	wire _2014_;
+	wire _2015_;
+	wire _2016_;
+	wire _2017_;
+	wire _2018_;
+	wire _2019_;
+	wire _2020_;
+	wire _2021_;
+	wire _2022_;
+	wire _2023_;
+	wire _2024_;
+	wire _2025_;
+	wire _2026_;
+	wire _2027_;
+	wire _2028_;
+	wire _2029_;
+	wire _2030_;
+	wire _2031_;
+	wire _2032_;
+	wire _2033_;
+	wire _2034_;
+	wire _2035_;
+	wire _2036_;
+	wire _2037_;
+	wire _2038_;
+	wire _2039_;
+	wire _2040_;
+	wire _2041_;
+	wire _2042_;
+	wire _2043_;
+	wire _2044_;
+	wire _2045_;
+	wire _2046_;
+	wire _2047_;
+	wire _2048_;
+	wire _2049_;
+	wire _2050_;
+	wire _2051_;
+	wire _2052_;
+	wire _2053_;
+	wire _2054_;
+	wire _2055_;
+	wire _2056_;
+	wire _2057_;
+	wire _2058_;
+	wire _2059_;
+	wire _2060_;
+	wire _2061_;
+	wire _2062_;
+	wire _2063_;
+	wire _2064_;
+	wire _2065_;
+	wire _2066_;
+	wire _2067_;
+	wire _2068_;
+	wire _2069_;
+	wire _2070_;
+	wire _2071_;
+	wire _2072_;
+	wire _2073_;
+	wire _2074_;
+	wire _2075_;
+	wire _2076_;
+	wire _2077_;
+	wire _2078_;
+	wire _2079_;
+	wire _2080_;
+	wire _2081_;
+	wire _2082_;
+	wire _2083_;
+	wire _2084_;
+	wire _2085_;
+	wire _2086_;
+	wire _2087_;
+	wire _2088_;
+	wire _2089_;
+	wire _2090_;
+	wire _2091_;
+	wire _2092_;
+	wire _2093_;
+	wire _2094_;
+	wire _2095_;
+	wire _2096_;
+	wire _2097_;
+	wire _2098_;
+	wire _2099_;
+	wire _2100_;
+	wire _2101_;
+	wire _2102_;
+	wire _2103_;
+	wire _2104_;
+	wire _2105_;
+	wire _2106_;
+	wire _2107_;
+	wire _2108_;
+	wire _2109_;
+	wire _2110_;
+	wire _2111_;
+	wire _2112_;
+	wire _2113_;
+	wire _2114_;
+	wire _2115_;
+	wire _2116_;
+	wire _2117_;
+	wire _2118_;
+	wire _2119_;
+	wire _2120_;
+	wire _2121_;
+	wire _2122_;
+	wire _2123_;
+	wire _2124_;
+	wire _2125_;
+	wire _2126_;
+	wire _2127_;
+	wire _2128_;
+	wire _2129_;
+	wire _2130_;
+	wire _2131_;
+	wire _2132_;
+	wire _2133_;
+	wire _2134_;
+	wire _2135_;
+	wire _2136_;
+	wire _2137_;
+	wire _2138_;
+	wire _2139_;
+	wire _2140_;
+	wire _2141_;
+	wire _2142_;
+	wire _2143_;
+	wire _2144_;
+	wire _2145_;
+	wire _2146_;
+	wire _2147_;
+	wire _2148_;
+	wire _2149_;
+	wire _2150_;
+	wire _2151_;
+	wire _2152_;
+	wire _2153_;
+	wire _2154_;
+	wire _2155_;
+	wire _2156_;
+	wire _2157_;
+	wire _2158_;
+	wire _2159_;
+	wire _2160_;
+	wire _2161_;
+	wire _2162_;
+	wire _2163_;
+	wire _2164_;
+	wire _2165_;
+	wire _2166_;
+	wire _2167_;
+	wire _2168_;
+	wire _2169_;
+	wire _2170_;
+	wire _2171_;
+	wire _2172_;
+	wire _2173_;
+	wire _2174_;
+	wire _2175_;
+	wire _2176_;
+	wire _2177_;
+	wire _2178_;
+	wire _2179_;
+	wire _2180_;
+	wire _2181_;
+	wire _2182_;
+	wire _2183_;
+	wire _2184_;
+	wire _2185_;
+	wire _2186_;
+	wire _2187_;
+	wire _2188_;
+	wire _2189_;
+	wire _2190_;
+	wire _2191_;
+	wire _2192_;
+	wire _2193_;
+	wire _2194_;
+	wire _2195_;
+	wire _2196_;
+	wire _2197_;
+	wire _2198_;
+	wire _2199_;
+	wire _2200_;
+	wire _2201_;
+	wire _2202_;
+	wire _2203_;
+	wire _2204_;
+	wire _2205_;
+	wire _2206_;
+	wire _2207_;
+	wire _2208_;
+	wire _2209_;
+	wire _2210_;
+	wire _2211_;
+	wire _2212_;
+	wire _2213_;
+	wire _2214_;
+	wire _2215_;
+	wire _2216_;
+	wire _2217_;
+	wire _2218_;
+	wire _2219_;
+	wire _2220_;
+	wire _2221_;
+	wire _2222_;
+	wire _2223_;
+	wire _2224_;
+	wire _2225_;
+	wire _2226_;
+	wire _2227_;
+	wire _2228_;
+	wire _2229_;
+	wire _2230_;
+	wire _2231_;
+	wire _2232_;
+	wire _2233_;
+	wire _2234_;
+	wire _2235_;
+	wire _2236_;
+	wire _2237_;
+	wire _2238_;
+	wire _2239_;
+	wire _2240_;
+	wire _2241_;
+	wire _2242_;
+	wire _2243_;
+	wire _2244_;
+	wire _2245_;
+	wire _2246_;
+	wire _2247_;
+	wire _2248_;
+	wire _2249_;
+	wire _2250_;
+	wire _2251_;
+	wire _2252_;
+	wire _2253_;
+	wire _2254_;
+	wire _2255_;
+	wire _2256_;
+	wire _2257_;
+	wire _2258_;
+	wire _2259_;
+	wire _2260_;
+	wire _2261_;
+	wire _2262_;
+	wire _2263_;
+	wire _2264_;
+	wire _2265_;
+	wire _2266_;
+	wire _2267_;
+	wire _2268_;
+	wire _2269_;
+	wire _2270_;
+	wire _2271_;
+	wire _2272_;
+	wire _2273_;
+	wire _2274_;
+	wire _2275_;
+	wire _2276_;
+	wire _2277_;
+	wire _2278_;
+	wire _2279_;
+	wire _2280_;
+	wire _2281_;
+	wire _2282_;
+	wire _2283_;
+	wire _2284_;
+	wire _2285_;
+	wire _2286_;
+	wire _2287_;
+	wire _2288_;
+	wire _2289_;
+	wire _2290_;
+	wire _2291_;
+	wire _2292_;
+	wire _2293_;
+	wire _2294_;
+	wire _2295_;
+	wire _2296_;
+	wire _2297_;
+	wire _2298_;
+	wire _2299_;
+	wire _2300_;
+	wire _2301_;
+	wire _2302_;
+	wire _2303_;
+	wire _2304_;
+	wire _2305_;
+	wire _2306_;
+	wire _2307_;
+	wire _2308_;
+	wire _2309_;
+	wire _2310_;
+	wire _2311_;
+	wire _2312_;
+	wire _2313_;
+	wire _2314_;
+	wire _2315_;
+	wire _2316_;
+	wire _2317_;
+	wire _2318_;
+	wire _2319_;
+	wire _2320_;
+	wire _2321_;
+	wire _2322_;
+	wire _2323_;
+	wire _2324_;
+	wire _2325_;
+	wire _2326_;
+	wire _2327_;
+	wire _2328_;
+	wire _2329_;
+	wire _2330_;
+	wire _2331_;
+	wire _2332_;
+	wire _2333_;
+	wire _2334_;
+	wire _2335_;
+	wire _2336_;
+	wire _2337_;
+	wire _2338_;
+	wire _2339_;
+	wire _2340_;
+	wire _2341_;
+	wire _2342_;
+	wire _2343_;
+	wire _2344_;
+	wire _2345_;
+	wire _2346_;
+	wire _2347_;
+	wire _2348_;
+	wire _2349_;
+	wire _2350_;
+	wire _2351_;
+	wire _2352_;
+	wire _2353_;
+	wire _2354_;
+	wire _2355_;
+	wire _2356_;
+	wire _2357_;
+	wire _2358_;
+	wire _2359_;
+	wire _2360_;
+	wire _2361_;
+	wire _2362_;
+	wire _2363_;
+	wire _2364_;
+	wire _2365_;
+	wire _2366_;
+	wire _2367_;
+	wire _2368_;
+	wire _2369_;
+	wire _2370_;
+	wire _2371_;
+	wire _2372_;
+	wire _2373_;
+	wire _2374_;
+	wire _2375_;
+	wire _2376_;
+	wire _2377_;
+	wire _2378_;
+	wire _2379_;
+	wire _2380_;
+	wire _2381_;
+	wire _2382_;
+	wire _2383_;
+	wire _2384_;
+	wire _2385_;
+	wire _2386_;
+	wire _2387_;
+	wire _2388_;
+	wire _2389_;
+	wire _2390_;
+	wire _2391_;
+	wire _2392_;
+	wire _2393_;
+	wire _2394_;
+	wire _2395_;
+	wire _2396_;
+	wire _2397_;
+	wire _2398_;
+	wire _2399_;
+	wire _2400_;
+	wire _2401_;
+	wire _2402_;
+	wire _2403_;
+	wire _2404_;
+	wire _2405_;
+	wire _2406_;
+	wire _2407_;
+	wire _2408_;
+	wire _2409_;
+	wire _2410_;
+	wire _2411_;
+	wire _2412_;
+	wire _2413_;
+	wire _2414_;
+	wire _2415_;
+	wire _2416_;
+	wire _2417_;
+	wire _2418_;
+	wire _2419_;
+	wire _2420_;
+	wire _2421_;
+	wire _2422_;
+	wire _2423_;
+	wire _2424_;
+	wire _2425_;
+	wire _2426_;
+	wire _2427_;
+	wire _2428_;
+	wire _2429_;
+	wire _2430_;
+	wire _2431_;
+	wire _2432_;
+	wire _2433_;
+	wire _2434_;
+	wire _2435_;
+	wire _2436_;
+	wire _2437_;
+	wire _2438_;
+	wire _2439_;
+	wire _2440_;
+	wire _2441_;
+	wire _2442_;
+	wire _2443_;
+	wire _2444_;
+	wire _2445_;
+	wire _2446_;
+	wire _2447_;
+	wire _2448_;
+	wire _2449_;
+	wire _2450_;
+	wire _2451_;
+	wire _2452_;
+	wire _2453_;
+	wire _2454_;
+	wire _2455_;
+	wire _2456_;
+	wire _2457_;
+	wire _2458_;
+	wire _2459_;
+	wire _2460_;
+	wire _2461_;
+	wire _2462_;
+	wire _2463_;
+	wire _2464_;
+	wire _2465_;
+	wire _2466_;
+	wire _2467_;
+	wire _2468_;
+	wire _2469_;
+	wire _2470_;
+	wire _2471_;
+	wire _2472_;
+	wire _2473_;
+	wire _2474_;
+	wire _2475_;
+	wire _2476_;
+	wire _2477_;
+	wire _2478_;
+	wire _2479_;
+	wire _2480_;
+	wire _2481_;
+	wire _2482_;
+	wire _2483_;
+	wire _2484_;
+	wire _2485_;
+	wire _2486_;
+	wire _2487_;
+	wire _2488_;
+	wire _2489_;
+	wire _2490_;
+	wire _2491_;
+	wire _2492_;
+	wire _2493_;
+	wire _2494_;
+	wire _2495_;
+	wire _2496_;
+	wire _2497_;
+	wire _2498_;
+	wire _2499_;
+	wire _2500_;
+	wire _2501_;
+	wire _2502_;
+	wire _2503_;
+	wire _2504_;
+	wire _2505_;
+	wire _2506_;
+	wire _2507_;
+	wire _2508_;
+	wire _2509_;
+	wire _2510_;
+	wire _2511_;
+	wire _2512_;
+	wire _2513_;
+	wire _2514_;
+	wire _2515_;
+	wire _2516_;
+	wire _2517_;
+	wire _2518_;
+	wire _2519_;
+	wire _2520_;
+	wire _2521_;
+	wire _2522_;
+	wire _2523_;
+	wire _2524_;
+	wire _2525_;
+	wire _2526_;
+	wire _2527_;
+	wire _2528_;
+	wire _2529_;
+	wire _2530_;
+	wire _2531_;
+	wire _2532_;
+	wire _2533_;
+	wire _2534_;
+	wire _2535_;
+	wire _2536_;
+	wire _2537_;
+	wire _2538_;
+	wire _2539_;
+	wire _2540_;
+	wire _2541_;
+	wire _2542_;
+	wire _2543_;
+	wire _2544_;
+	wire _2545_;
+	wire _2546_;
+	wire _2547_;
+	wire _2548_;
+	wire _2549_;
+	wire _2550_;
+	wire _2551_;
+	wire _2552_;
+	wire _2553_;
+	wire _2554_;
+	wire _2555_;
+	wire _2556_;
+	wire _2557_;
+	wire _2558_;
+	wire _2559_;
+	wire _2560_;
+	wire _2561_;
+	wire _2562_;
+	wire _2563_;
+	wire _2564_;
+	wire _2565_;
+	wire _2566_;
+	wire _2567_;
+	wire _2568_;
+	wire _2569_;
+	wire _2570_;
+	wire _2571_;
+	wire _2572_;
+	wire _2573_;
+	wire _2574_;
+	wire _2575_;
+	wire _2576_;
+	wire _2577_;
+	wire _2578_;
+	wire _2579_;
+	wire _2580_;
+	wire _2581_;
+	wire _2582_;
+	wire _2583_;
+	wire _2584_;
+	wire _2585_;
+	wire _2586_;
+	wire _2587_;
+	wire _2588_;
+	wire _2589_;
+	wire _2590_;
+	wire _2591_;
+	wire _2592_;
+	wire _2593_;
+	wire _2594_;
+	wire _2595_;
+	wire _2596_;
+	wire _2597_;
+	wire _2598_;
+	wire _2599_;
+	wire _2600_;
+	wire _2601_;
+	wire _2602_;
+	wire _2603_;
+	wire _2604_;
+	wire _2605_;
+	wire _2606_;
+	wire _2607_;
+	wire _2608_;
+	wire _2609_;
+	wire _2610_;
+	wire _2611_;
+	wire _2612_;
+	wire _2613_;
+	wire _2614_;
+	wire _2615_;
+	wire _2616_;
+	wire _2617_;
+	wire _2618_;
+	wire _2619_;
+	wire _2620_;
+	wire _2621_;
+	wire _2622_;
+	wire _2623_;
+	wire _2624_;
+	wire _2625_;
+	wire _2626_;
+	wire _2627_;
+	wire _2628_;
+	wire _2629_;
+	wire _2630_;
+	wire _2631_;
+	wire _2632_;
+	wire _2633_;
+	wire _2634_;
+	wire _2635_;
+	wire _2636_;
+	wire _2637_;
+	wire _2638_;
+	wire _2639_;
+	wire _2640_;
+	wire _2641_;
+	wire _2642_;
+	wire _2643_;
+	wire _2644_;
+	wire _2645_;
+	wire _2646_;
+	wire _2647_;
+	wire _2648_;
+	wire _2649_;
+	wire _2650_;
+	wire _2651_;
+	wire _2652_;
+	wire _2653_;
+	wire _2654_;
+	wire _2655_;
+	wire _2656_;
+	wire _2657_;
+	wire _2658_;
+	wire _2659_;
+	wire _2660_;
+	wire _2661_;
+	wire _2662_;
+	wire _2663_;
+	wire _2664_;
+	wire _2665_;
+	wire _2666_;
+	wire _2667_;
+	wire _2668_;
+	wire _2669_;
+	wire _2670_;
+	wire _2671_;
+	wire _2672_;
+	wire _2673_;
+	wire _2674_;
+	wire _2675_;
+	wire _2676_;
+	wire _2677_;
+	wire _2678_;
+	wire _2679_;
+	wire _2680_;
+	wire _2681_;
+	wire _2682_;
+	wire _2683_;
+	wire _2684_;
+	wire _2685_;
+	wire _2686_;
+	wire _2687_;
+	wire _2688_;
+	wire _2689_;
+	wire _2690_;
+	wire _2691_;
+	wire _2692_;
+	wire _2693_;
+	wire _2694_;
+	wire _2695_;
+	wire _2696_;
+	wire _2697_;
+	wire _2698_;
+	wire _2699_;
+	wire _2700_;
+	wire _2701_;
+	wire _2702_;
+	wire _2703_;
+	wire _2704_;
+	wire _2705_;
+	wire _2706_;
+	wire _2707_;
+	wire _2708_;
+	wire _2709_;
+	wire _2710_;
+	wire _2711_;
+	wire _2712_;
+	wire _2713_;
+	wire _2714_;
+	wire _2715_;
+	wire _2716_;
+	wire _2717_;
+	wire _2718_;
+	wire _2719_;
+	wire _2720_;
+	wire _2721_;
+	wire _2722_;
+	wire _2723_;
+	wire _2724_;
+	wire _2725_;
+	wire _2726_;
+	wire _2727_;
+	wire _2728_;
+	wire _2729_;
+	wire _2730_;
+	wire _2731_;
+	wire _2732_;
+	wire _2733_;
+	wire _2734_;
+	wire _2735_;
+	wire _2736_;
+	wire _2737_;
+	wire _2738_;
+	wire _2739_;
+	wire _2740_;
+	wire _2741_;
+	wire _2742_;
+	wire _2743_;
+	wire _2744_;
+	wire _2745_;
+	wire _2746_;
+	wire _2747_;
+	wire _2748_;
+	wire _2749_;
+	wire _2750_;
+	wire _2751_;
+	wire _2752_;
+	wire _2753_;
+	wire _2754_;
+	wire _2755_;
+	wire _2756_;
+	wire _2757_;
+	wire _2758_;
+	wire _2759_;
+	wire _2760_;
+	wire _2761_;
+	wire _2762_;
+	wire _2763_;
+	wire _2764_;
+	wire _2765_;
+	wire _2766_;
+	wire _2767_;
+	wire _2768_;
+	wire _2769_;
+	wire _2770_;
+	wire _2771_;
+	wire _2772_;
+	wire _2773_;
+	wire _2774_;
+	wire _2775_;
+	wire _2776_;
+	wire _2777_;
+	wire _2778_;
+	wire _2779_;
+	wire _2780_;
+	wire _2781_;
+	wire _2782_;
+	wire _2783_;
+	wire _2784_;
+	wire _2785_;
+	wire _2786_;
+	wire _2787_;
+	wire _2788_;
+	wire _2789_;
+	wire _2790_;
+	wire _2791_;
+	wire _2792_;
+	wire _2793_;
+	wire _2794_;
+	wire _2795_;
+	wire _2796_;
+	wire _2797_;
+	wire _2798_;
+	wire _2799_;
+	wire _2800_;
+	wire _2801_;
+	wire _2802_;
+	wire _2803_;
+	wire _2804_;
+	wire _2805_;
+	wire _2806_;
+	wire _2807_;
+	wire _2808_;
+	wire _2809_;
+	wire _2810_;
+	wire _2811_;
+	wire _2812_;
+	wire _2813_;
+	wire _2814_;
+	wire _2815_;
+	wire _2816_;
+	wire _2817_;
+	wire _2818_;
+	wire _2819_;
+	wire _2820_;
+	wire _2821_;
+	wire _2822_;
+	wire _2823_;
+	wire _2824_;
+	wire _2825_;
+	wire _2826_;
+	wire _2827_;
+	wire _2828_;
+	wire _2829_;
+	wire _2830_;
+	wire _2831_;
+	wire _2832_;
+	wire _2833_;
+	wire _2834_;
+	wire _2835_;
+	wire _2836_;
+	wire _2837_;
+	wire _2838_;
+	wire _2839_;
+	wire _2840_;
+	wire _2841_;
+	wire _2842_;
+	wire _2843_;
+	wire _2844_;
+	wire _2845_;
+	wire _2846_;
+	wire _2847_;
+	wire _2848_;
+	wire _2849_;
+	wire _2850_;
+	wire _2851_;
+	wire _2852_;
+	wire _2853_;
+	wire _2854_;
+	wire _2855_;
+	wire _2856_;
+	wire _2857_;
+	wire _2858_;
+	wire _2859_;
+	wire _2860_;
+	wire _2861_;
+	wire _2862_;
+	wire _2863_;
+	wire _2864_;
+	wire _2865_;
+	wire _2866_;
+	wire _2867_;
+	wire _2868_;
+	wire _2869_;
+	wire _2870_;
+	wire _2871_;
+	wire _2872_;
+	wire _2873_;
+	wire _2874_;
+	wire _2875_;
+	wire _2876_;
+	wire _2877_;
+	wire _2878_;
+	wire _2879_;
+	wire _2880_;
+	wire _2881_;
+	wire _2882_;
+	wire _2883_;
+	wire _2884_;
+	wire _2885_;
+	wire _2886_;
+	wire _2887_;
+	wire _2888_;
+	wire _2889_;
+	wire _2890_;
+	wire _2891_;
+	wire _2892_;
+	wire _2893_;
+	wire _2894_;
+	wire _2895_;
+	wire _2896_;
+	wire _2897_;
+	wire _2898_;
+	wire _2899_;
+	wire _2900_;
+	wire _2901_;
+	wire _2902_;
+	wire _2903_;
+	wire _2904_;
+	wire _2905_;
+	wire _2906_;
+	wire _2907_;
+	wire _2908_;
+	wire _2909_;
+	wire _2910_;
+	wire _2911_;
+	wire _2912_;
+	wire _2913_;
+	wire _2914_;
+	wire _2915_;
+	wire _2916_;
+	wire _2917_;
+	wire _2918_;
+	wire _2919_;
+	wire _2920_;
+	wire _2921_;
+	wire _2922_;
+	wire _2923_;
+	wire _2924_;
+	wire _2925_;
+	wire _2926_;
+	wire _2927_;
+	wire _2928_;
+	wire _2929_;
+	wire _2930_;
+	wire _2931_;
+	wire _2932_;
+	wire _2933_;
+	wire _2934_;
+	wire _2935_;
+	wire _2936_;
+	wire _2937_;
+	wire _2938_;
+	wire _2939_;
+	wire _2940_;
+	wire _2941_;
+	wire _2942_;
+	wire _2943_;
+	wire _2944_;
+	wire _2945_;
+	wire _2946_;
+	wire _2947_;
+	wire _2948_;
+	wire _2949_;
+	wire _2950_;
+	wire _2951_;
+	wire _2952_;
+	wire _2953_;
+	wire _2954_;
+	wire _2955_;
+	wire _2956_;
+	wire _2957_;
+	wire _2958_;
+	wire _2959_;
+	wire _2960_;
+	wire _2961_;
+	wire _2962_;
+	wire _2963_;
+	wire _2964_;
+	wire _2965_;
+	wire _2966_;
+	wire _2967_;
+	wire _2968_;
+	wire _2969_;
+	wire _2970_;
+	wire _2971_;
+	wire _2972_;
+	wire _2973_;
+	wire _2974_;
+	wire _2975_;
+	wire _2976_;
+	wire _2977_;
+	wire _2978_;
+	wire _2979_;
+	wire _2980_;
+	wire _2981_;
+	wire _2982_;
+	wire _2983_;
+	wire _2984_;
+	wire _2985_;
+	wire _2986_;
+	wire _2987_;
+	wire _2988_;
+	wire _2989_;
+	wire _2990_;
+	wire _2991_;
+	wire _2992_;
+	wire _2993_;
+	wire _2994_;
+	wire _2995_;
+	wire _2996_;
+	wire _2997_;
+	wire _2998_;
+	wire _2999_;
+	wire _3000_;
+	wire _3001_;
+	wire _3002_;
+	wire _3003_;
+	wire _3004_;
+	wire _3005_;
+	wire _3006_;
+	wire _3007_;
+	wire _3008_;
+	wire _3009_;
+	wire _3010_;
+	wire _3011_;
+	wire _3012_;
+	wire _3013_;
+	wire _3014_;
+	wire _3015_;
+	wire _3016_;
+	wire _3017_;
+	wire _3018_;
+	wire _3019_;
+	wire _3020_;
+	wire _3021_;
+	wire _3022_;
+	wire _3023_;
+	wire _3024_;
+	wire _3025_;
+	wire _3026_;
+	wire _3027_;
+	wire _3028_;
+	wire _3029_;
+	wire _3030_;
+	wire _3031_;
+	wire _3032_;
+	wire _3033_;
+	wire _3034_;
+	wire _3035_;
+	wire _3036_;
+	wire _3037_;
+	wire _3038_;
+	wire _3039_;
+	wire _3040_;
+	wire _3041_;
+	wire _3042_;
+	wire _3043_;
+	wire _3044_;
+	wire _3045_;
+	wire _3046_;
+	wire _3047_;
+	wire _3048_;
+	wire _3049_;
+	wire _3050_;
+	wire _3051_;
+	wire _3052_;
+	wire _3053_;
+	wire _3054_;
+	wire _3055_;
+	wire _3056_;
+	wire _3057_;
+	wire _3058_;
+	wire _3059_;
+	wire _3060_;
+	wire _3061_;
+	wire _3062_;
+	wire _3063_;
+	wire _3064_;
+	wire _3065_;
+	wire _3066_;
+	wire _3067_;
+	wire _3068_;
+	wire _3069_;
+	wire _3070_;
+	wire _3071_;
+	wire _3072_;
+	wire _3073_;
+	wire _3074_;
+	wire _3075_;
+	wire _3076_;
+	wire _3077_;
+	wire _3078_;
+	wire _3079_;
+	wire _3080_;
+	wire _3081_;
+	wire _3082_;
+	wire _3083_;
+	wire _3084_;
+	wire _3085_;
+	wire _3086_;
+	wire _3087_;
+	wire _3088_;
+	wire _3089_;
+	wire _3090_;
+	wire _3091_;
+	wire _3092_;
+	wire _3093_;
+	wire _3094_;
+	wire _3095_;
+	wire _3096_;
+	wire _3097_;
+	wire _3098_;
+	wire _3099_;
+	wire _3100_;
+	wire _3101_;
+	wire _3102_;
+	wire _3103_;
+	wire _3104_;
+	wire _3105_;
+	wire _3106_;
+	wire _3107_;
+	wire _3108_;
+	wire _3109_;
+	wire _3110_;
+	wire _3111_;
+	wire _3112_;
+	wire _3113_;
+	wire _3114_;
+	wire _3115_;
+	wire _3116_;
+	wire _3117_;
+	wire _3118_;
+	wire _3119_;
+	wire _3120_;
+	wire _3121_;
+	wire _3122_;
+	wire _3123_;
+	wire _3124_;
+	wire _3125_;
+	wire _3126_;
+	wire _3127_;
+	wire _3128_;
+	wire _3129_;
+	wire _3130_;
+	wire _3131_;
+	wire _3132_;
+	wire _3133_;
+	wire _3134_;
+	wire _3135_;
+	wire _3136_;
+	wire _3137_;
+	wire _3138_;
+	wire _3139_;
+	wire _3140_;
+	wire _3141_;
+	wire _3142_;
+	wire _3143_;
+	wire _3144_;
+	wire _3145_;
+	wire _3146_;
+	wire _3147_;
+	wire _3148_;
+	wire _3149_;
+	wire _3150_;
+	wire _3151_;
+	wire _3152_;
+	wire _3153_;
+	wire _3154_;
+	wire _3155_;
+	wire _3156_;
+	wire _3157_;
+	wire _3158_;
+	wire _3159_;
+	wire _3160_;
+	wire _3161_;
+	wire _3162_;
+	wire _3163_;
+	wire _3164_;
+	wire _3165_;
+	wire _3166_;
+	wire _3167_;
+	wire _3168_;
+	wire _3169_;
+	wire _3170_;
+	wire _3171_;
+	wire _3172_;
+	wire _3173_;
+	wire _3174_;
+	wire _3175_;
+	wire _3176_;
+	wire _3177_;
+	wire _3178_;
+	wire _3179_;
+	wire _3180_;
+	wire _3181_;
+	wire _3182_;
+	wire _3183_;
+	wire _3184_;
+	wire _3185_;
+	wire _3186_;
+	wire _3187_;
+	wire _3188_;
+	wire _3189_;
+	wire _3190_;
+	wire _3191_;
+	wire _3192_;
+	wire _3193_;
+	wire _3194_;
+	wire _3195_;
+	wire _3196_;
+	wire _3197_;
+	wire _3198_;
+	wire _3199_;
+	wire _3200_;
+	wire _3201_;
+	wire _3202_;
+	wire _3203_;
+	wire _3204_;
+	wire _3205_;
+	wire _3206_;
+	wire _3207_;
+	wire _3208_;
+	wire _3209_;
+	wire _3210_;
+	wire _3211_;
+	wire _3212_;
+	wire _3213_;
+	wire _3214_;
+	wire _3215_;
+	wire _3216_;
+	wire _3217_;
+	wire _3218_;
+	wire _3219_;
+	wire _3220_;
+	wire _3221_;
+	wire _3222_;
+	wire _3223_;
+	wire _3224_;
+	wire _3225_;
+	wire _3226_;
+	wire _3227_;
+	wire _3228_;
+	wire _3229_;
+	wire _3230_;
+	wire _3231_;
+	wire _3232_;
+	wire _3233_;
+	wire _3234_;
+	wire _3235_;
+	wire _3236_;
+	wire _3237_;
+	wire _3238_;
+	wire _3239_;
+	wire _3240_;
+	wire _3241_;
+	wire _3242_;
+	wire _3243_;
+	wire _3244_;
+	wire _3245_;
+	wire _3246_;
+	wire _3247_;
+	wire _3248_;
+	wire _3249_;
+	wire _3250_;
+	wire _3251_;
+	wire _3252_;
+	wire _3253_;
+	wire _3254_;
+	wire _3255_;
+	wire _3256_;
+	wire _3257_;
+	wire _3258_;
+	wire _3259_;
+	wire _3260_;
+	wire _3261_;
+	wire _3262_;
+	wire _3263_;
+	wire _3264_;
+	wire _3265_;
+	wire _3266_;
+	wire _3267_;
+	wire _3268_;
+	wire _3269_;
+	wire _3270_;
+	wire _3271_;
+	wire _3272_;
+	wire _3273_;
+	wire _3274_;
+	wire _3275_;
+	wire _3276_;
+	wire _3277_;
+	wire _3278_;
+	wire _3279_;
+	wire _3280_;
+	wire _3281_;
+	wire _3282_;
+	wire _3283_;
+	wire _3284_;
+	wire _3285_;
+	wire _3286_;
+	wire _3287_;
+	wire _3288_;
+	wire _3289_;
+	wire _3290_;
+	wire _3291_;
+	wire _3292_;
+	wire _3293_;
+	wire _3294_;
+	wire _3295_;
+	wire _3296_;
+	wire _3297_;
+	wire _3298_;
+	wire _3299_;
+	wire _3300_;
+	wire _3301_;
+	wire _3302_;
+	wire _3303_;
+	wire _3304_;
+	wire _3305_;
+	wire _3306_;
+	wire _3307_;
+	wire _3308_;
+	wire _3309_;
+	wire _3310_;
+	wire _3311_;
+	wire _3312_;
+	wire _3313_;
+	wire _3314_;
+	wire _3315_;
+	wire _3316_;
+	wire _3317_;
+	wire _3318_;
+	wire _3319_;
+	wire _3320_;
+	wire _3321_;
+	wire _3322_;
+	wire _3323_;
+	wire _3324_;
+	wire _3325_;
+	wire _3326_;
+	wire _3327_;
+	wire _3328_;
+	wire _3329_;
+	wire _3330_;
+	wire _3331_;
+	wire _3332_;
+	wire _3333_;
+	wire _3334_;
+	wire _3335_;
+	wire _3336_;
+	wire _3337_;
+	wire _3338_;
+	wire _3339_;
+	wire _3340_;
+	wire _3341_;
+	wire _3342_;
+	wire _3343_;
+	wire _3344_;
+	wire _3345_;
+	wire _3346_;
+	wire _3347_;
+	wire _3348_;
+	wire _3349_;
+	wire _3350_;
+	wire _3351_;
+	wire _3352_;
+	wire _3353_;
+	wire _3354_;
+	wire _3355_;
+	wire _3356_;
+	wire _3357_;
+	wire _3358_;
+	wire _3359_;
+	wire _3360_;
+	wire _3361_;
+	wire _3362_;
+	wire _3363_;
+	wire _3364_;
+	wire _3365_;
+	wire _3366_;
+	wire _3367_;
+	wire _3368_;
+	wire _3369_;
+	wire _3370_;
+	wire _3371_;
+	wire _3372_;
+	wire _3373_;
+	wire _3374_;
+	wire _3375_;
+	wire _3376_;
+	wire _3377_;
+	wire _3378_;
+	wire _3379_;
+	wire _3380_;
+	wire _3381_;
+	wire _3382_;
+	wire _3383_;
+	wire _3384_;
+	wire _3385_;
+	wire _3386_;
+	wire _3387_;
+	wire _3388_;
+	wire _3389_;
+	wire _3390_;
+	wire _3391_;
+	wire _3392_;
+	wire _3393_;
+	wire _3394_;
+	wire _3395_;
+	wire _3396_;
+	wire _3397_;
+	wire _3398_;
+	wire _3399_;
+	wire _3400_;
+	wire _3401_;
+	wire _3402_;
+	wire _3403_;
+	wire _3404_;
+	wire _3405_;
+	wire _3406_;
+	wire _3407_;
+	wire _3408_;
+	wire _3409_;
+	wire _3410_;
+	wire _3411_;
+	wire _3412_;
+	wire _3413_;
+	wire _3414_;
+	wire _3415_;
+	wire _3416_;
+	wire _3417_;
+	wire _3418_;
+	wire _3419_;
+	wire _3420_;
+	wire _3421_;
+	wire _3422_;
+	wire _3423_;
+	wire _3424_;
+	wire _3425_;
+	wire _3426_;
+	wire _3427_;
+	wire _3428_;
+	wire _3429_;
+	wire _3430_;
+	wire _3431_;
+	wire _3432_;
+	wire _3433_;
+	wire _3434_;
+	wire _3435_;
+	wire _3436_;
+	wire _3437_;
+	wire _3438_;
+	wire _3439_;
+	wire _3440_;
+	wire _3441_;
+	wire _3442_;
+	wire _3443_;
+	wire _3444_;
+	wire _3445_;
+	wire _3446_;
+	wire _3447_;
+	wire _3448_;
+	wire _3449_;
+	wire _3450_;
+	wire _3451_;
+	wire _3452_;
+	wire _3453_;
+	wire _3454_;
+	wire _3455_;
+	wire _3456_;
+	wire _3457_;
+	wire _3458_;
+	wire _3459_;
+	wire _3460_;
+	wire _3461_;
+	wire _3462_;
+	wire _3463_;
+	wire _3464_;
+	wire _3465_;
+	wire _3466_;
+	wire _3467_;
+	wire _3468_;
+	wire _3469_;
+	wire _3470_;
+	wire _3471_;
+	wire _3472_;
+	wire _3473_;
+	wire _3474_;
+	wire _3475_;
+	wire _3476_;
+	wire _3477_;
+	wire _3478_;
+	wire _3479_;
+	wire _3480_;
+	wire _3481_;
+	wire _3482_;
+	wire _3483_;
+	wire _3484_;
+	wire _3485_;
+	wire _3486_;
+	wire _3487_;
+	wire _3488_;
+	wire _3489_;
+	wire _3490_;
+	wire _3491_;
+	wire _3492_;
+	wire _3493_;
+	wire _3494_;
+	wire _3495_;
+	wire _3496_;
+	wire _3497_;
+	wire _3498_;
+	wire _3499_;
+	wire _3500_;
+	wire _3501_;
+	wire _3502_;
+	wire _3503_;
+	wire _3504_;
+	wire _3505_;
+	wire _3506_;
+	wire _3507_;
+	wire _3508_;
+	wire _3509_;
+	wire _3510_;
+	wire _3511_;
+	wire _3512_;
+	wire _3513_;
+	wire _3514_;
+	wire _3515_;
+	wire _3516_;
+	wire _3517_;
+	wire _3518_;
+	wire _3519_;
+	wire _3520_;
+	wire _3521_;
+	wire _3522_;
+	wire _3523_;
+	wire _3524_;
+	wire _3525_;
+	wire _3526_;
+	wire _3527_;
+	wire _3528_;
+	wire _3529_;
+	wire _3530_;
+	wire _3531_;
+	wire _3532_;
+	wire _3533_;
+	wire _3534_;
+	wire _3535_;
+	wire _3536_;
+	wire _3537_;
+	wire _3538_;
+	wire _3539_;
+	wire _3540_;
+	wire _3541_;
+	wire _3542_;
+	wire _3543_;
+	wire _3544_;
+	wire _3545_;
+	wire _3546_;
+	wire _3547_;
+	wire _3548_;
+	wire _3549_;
+	wire _3550_;
+	wire _3551_;
+	wire _3552_;
+	wire _3553_;
+	wire _3554_;
+	wire _3555_;
+	wire _3556_;
+	wire _3557_;
+	wire _3558_;
+	wire _3559_;
+	wire _3560_;
+	wire _3561_;
+	wire _3562_;
+	wire _3563_;
+	wire _3564_;
+	wire _3565_;
+	wire _3566_;
+	wire _3567_;
+	wire _3568_;
+	wire _3569_;
+	wire _3570_;
+	wire _3571_;
+	wire _3572_;
+	wire _3573_;
+	wire _3574_;
+	wire _3575_;
+	wire _3576_;
+	wire _3577_;
+	wire _3578_;
+	wire _3579_;
+	wire _3580_;
+	wire _3581_;
+	wire _3582_;
+	wire _3583_;
+	wire _3584_;
+	wire _3585_;
+	wire _3586_;
+	wire _3587_;
+	wire _3588_;
+	wire _3589_;
+	wire _3590_;
+	wire _3591_;
+	wire _3592_;
+	wire _3593_;
+	wire _3594_;
+	wire _3595_;
+	wire _3596_;
+	wire _3597_;
+	wire _3598_;
+	wire _3599_;
+	wire _3600_;
+	wire _3601_;
+	wire _3602_;
+	wire _3603_;
+	wire _3604_;
+	wire _3605_;
+	wire _3606_;
+	wire _3607_;
+	wire _3608_;
+	wire _3609_;
+	wire _3610_;
+	wire _3611_;
+	wire _3612_;
+	wire _3613_;
+	wire _3614_;
+	wire _3615_;
+	wire _3616_;
+	wire _3617_;
+	wire _3618_;
+	wire _3619_;
+	wire [9:0] _3620_;
+	wire [19:0] _3621_;
+	wire [31:0] _3622_;
+	wire [19:0] _3623_;
+	wire [31:0] _3624_;
+	wire [9:0] _3625_;
+	wire [10:0] _3626_;
+	wire [10:0] _3627_;
+	wire [17:0] _3628_;
+	wire _3629_;
+	wire _3630_;
+	wire _3631_;
+	input wire [13:0] io_in;
+	output wire [13:0] io_out;
+	wire \mchip.clock ;
+	wire [2:0] \mchip.game2.cactus_select ;
+	reg [2:0] \mchip.game2.cactus_select_last ;
+	reg [2:0] \mchip.game2.cactus_type ;
+	wire \mchip.game2.clk ;
+	wire \mchip.game2.dbg_pixel ;
+	wire [15:0] \mchip.game2.dbg_score ;
+	wire [10:0] \mchip.game2.dbg_scrolladdr ;
+	wire [23:0] \mchip.game2.dbg_speed ;
+	wire \mchip.game2.debug_in ;
+	wire \mchip.game2.dinosprite_inst.clk ;
+	reg [24:0] \mchip.game2.dinosprite_inst.ctr ;
+	reg \mchip.game2.dinosprite_inst.sprite ;
+	wire \mchip.game2.dinosprite_inst.sys_rst ;
+	wire \mchip.game2.dinosprite_num ;
+	reg \mchip.game2.game_over ;
+	wire [9:0] \mchip.game2.haddr ;
+	wire \mchip.game2.halt_in ;
+	wire \mchip.game2.jump_in ;
+	wire [6:0] \mchip.game2.jump_pos ;
+	wire \mchip.game2.jumping_inst.clk ;
+	reg [23:0] \mchip.game2.jumping_inst.ctr ;
+	reg [8:0] \mchip.game2.jumping_inst.frame ;
+	reg \mchip.game2.jumping_inst.in_air ;
+	wire \mchip.game2.jumping_inst.jump ;
+	reg [6:0] \mchip.game2.jumping_inst.jump_pos ;
+	wire [23:0] \mchip.game2.jumping_inst.speed ;
+	wire \mchip.game2.jumping_inst.sys_rst ;
+	reg [19:0] \mchip.game2.no_jump_ctr ;
+	wire [4:0] \mchip.game2.random ;
+	reg [2:0] \mchip.game2.rendering_inst.cactus_select ;
+	wire [2:0] \mchip.game2.rendering_inst.cactus_type ;
+	wire \mchip.game2.rendering_inst.clk ;
+	wire \mchip.game2.rendering_inst.dinosprite_num ;
+	wire \mchip.game2.rendering_inst.game_over ;
+	wire [9:0] \mchip.game2.rendering_inst.haddr ;
+	wire [6:0] \mchip.game2.rendering_inst.jump_pos ;
+	reg [4:0] \mchip.game2.rendering_inst.layers ;
+	wire \mchip.game2.rendering_inst.pixel ;
+	wire \mchip.game2.rendering_inst.score_pixel ;
+	wire [10:0] \mchip.game2.rendering_inst.scrolladdr ;
+	wire \mchip.game2.rendering_inst.sys_rst ;
+	wire [9:0] \mchip.game2.rendering_inst.vaddr ;
+	wire \mchip.game2.rng_inst.clk ;
+	wire \mchip.game2.rng_inst.entropy_in ;
+	reg [4:0] \mchip.game2.rng_inst.out ;
+	wire \mchip.game2.rng_inst.sys_rst ;
+	wire \mchip.game2.score_inst.clk ;
+	reg [21:0] \mchip.game2.score_inst.ctr ;
+	wire [9:0] \mchip.game2.score_inst.haddr ;
+	reg \mchip.game2.score_inst.pixel ;
+	reg [3:0] \mchip.game2.score_inst.score[0] ;
+	reg [3:0] \mchip.game2.score_inst.score[1] ;
+	reg [3:0] \mchip.game2.score_inst.score[2] ;
+	reg [3:0] \mchip.game2.score_inst.score[3] ;
+	wire [15:0] \mchip.game2.score_inst.score_out ;
+	reg [3:0] \mchip.game2.score_inst.score_saved[0] ;
+	reg [3:0] \mchip.game2.score_inst.score_saved[1] ;
+	reg [3:0] \mchip.game2.score_inst.score_saved[2] ;
+	reg [3:0] \mchip.game2.score_inst.score_saved[3] ;
+	wire \mchip.game2.score_inst.sys_rst ;
+	wire [9:0] \mchip.game2.score_inst.vaddr ;
+	wire [15:0] \mchip.game2.score_out ;
+	wire \mchip.game2.score_pixel ;
+	wire \mchip.game2.scroll_inst.clk ;
+	reg [17:0] \mchip.game2.scroll_inst.ctr ;
+	wire [7:0] \mchip.game2.scroll_inst.move_amt ;
+	reg [10:0] \mchip.game2.scroll_inst.pos ;
+	wire [23:0] \mchip.game2.scroll_inst.speed ;
+	wire [7:0] \mchip.game2.scroll_inst.speed_change ;
+	wire \mchip.game2.scroll_inst.sys_rst ;
+	reg [17:0] \mchip.game2.scroll_inst.tick_time ;
+	wire [10:0] \mchip.game2.scrolladdr ;
+	wire [23:0] \mchip.game2.speed ;
+	reg [31:0] \mchip.game2.start_ctr ;
+	wire \mchip.game2.sys_rst ;
+	wire [9:0] \mchip.game2.vaddr ;
+	wire [3:0] \mchip.game2.vga_blue ;
+	wire [3:0] \mchip.game2.vga_green ;
+	wire \mchip.game2.vga_hsync ;
+	wire \mchip.game2.vga_inst.clk ;
+	reg [9:0] \mchip.game2.vga_inst.haddr ;
+	reg \mchip.game2.vga_inst.hsync ;
+	wire \mchip.game2.vga_inst.sys_rst ;
+	reg [9:0] \mchip.game2.vga_inst.vaddr ;
+	reg \mchip.game2.vga_inst.vsync ;
+	wire \mchip.game2.vga_pixel ;
+	wire [3:0] \mchip.game2.vga_red ;
+	wire \mchip.game2.vga_vsync ;
 	wire [11:0] \mchip.io_in ;
 	wire [11:0] \mchip.io_out ;
 	wire \mchip.reset ;
-	assign \mchip.design.receiver.wire_in.dp_log [0] = _0392_ & ~io_in[13];
-	assign \mchip.design.receiver.wire_in.dp_log [1] = _0393_ & ~io_in[13];
-	assign \mchip.design.receiver.wire_in.dm_log [1] = _0390_ & ~io_in[13];
-	assign \mchip.design.receiver.wire_in.dm_log [0] = _0389_ & ~io_in[13];
-	assign _2573_ = _0276_ & ~io_in[13];
-	assign _2574_ = _0275_ & ~io_in[13];
-	assign _2575_ = ~(_2574_ & _2573_);
-	assign _2576_ = _0277_ & ~io_in[13];
-	assign _2577_ = _2575_ | ~_2576_;
-	assign _2578_ = _2574_ | ~_2573_;
-	assign _2579_ = _2576_ & ~_2578_;
-	assign _2580_ = _2577_ & ~_2579_;
-	assign _2581_ = \mchip.design.receiver.wire_in.dp_log [0] & ~\mchip.design.receiver.wire_in.dp_log [1];
-	assign _2582_ = _0394_ & ~io_in[13];
-	assign _2583_ = _2581_ & ~_2582_;
-	assign _2584_ = \mchip.design.receiver.wire_in.dm_log [0] | \mchip.design.receiver.wire_in.dm_log [1];
-	assign _2585_ = _0391_ & ~io_in[13];
-	assign _2586_ = _2585_ | _2584_;
-	assign _2587_ = _2583_ & ~_2586_;
-	assign _2588_ = _2577_ | ~_2587_;
-	assign _2589_ = io_in[13] | ~_0381_;
-	assign _2590_ = _0380_ & ~io_in[13];
-	assign _2591_ = _0379_ & ~io_in[13];
-	assign _2592_ = _2591_ | _2590_;
-	assign _2593_ = _2589_ & ~_2592_;
-	assign _2594_ = _0378_ & ~io_in[13];
-	assign _2595_ = _0377_ & ~io_in[13];
-	assign _2596_ = _2595_ | _2594_;
-	assign _2363_ = _0375_ & ~io_in[13];
-	assign _2597_ = io_in[13] | ~_0376_;
-	assign _2598_ = _2597_ | _2363_;
-	assign _2599_ = _2598_ | _2596_;
-	assign _2600_ = _2593_ & ~_2599_;
-	assign _2601_ = _2600_ & _2579_;
-	assign _2602_ = _2588_ & ~_2601_;
-	assign _2603_ = ~(_2602_ | _2580_);
-	assign \mchip.design.receiver.packet_decode.PID_accum [1] = _0304_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PID_accum [2] = _0305_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PID_accum [3] = _0306_ & ~io_in[13];
-	assign _2604_ = _0172_ & ~io_in[13];
-	assign _2605_ = _0170_ & ~io_in[13];
-	assign _2606_ = _0171_ & ~io_in[13];
-	assign _2607_ = _2606_ & ~_2605_;
-	assign _2608_ = _2607_ & ~_2604_;
-	assign _2609_ = io_in[13] | ~_0179_;
-	assign _2610_ = _0178_ & ~io_in[13];
-	assign _2611_ = _0177_ & ~io_in[13];
-	assign _2612_ = _2611_ | _2610_;
-	assign _2613_ = _2609_ & ~_2612_;
-	assign _2614_ = _0176_ & ~io_in[13];
-	assign _2615_ = _0175_ & ~io_in[13];
-	assign _2616_ = _2615_ | _2614_;
-	assign _2177_ = _0173_ & ~io_in[13];
-	assign _2617_ = _0174_ & ~io_in[13];
-	assign _2618_ = _2177_ | ~_2617_;
-	assign _2619_ = _2618_ | _2616_;
-	assign _2620_ = _2613_ & ~_2619_;
-	assign _2158_ = _0269_ & ~io_in[13];
-	assign _2621_ = _0268_ & ~io_in[13];
-	assign _2622_ = _0267_ & ~io_in[13];
-	assign _2623_ = ~(_2622_ & _2621_);
-	assign _2624_ = _2623_ | ~_2158_;
-	assign _2625_ = _2620_ & ~_2624_;
-	assign _2626_ = _2625_ & _2608_;
-	assign _2627_ = _2606_ & _2605_;
-	assign _2628_ = _2627_ & ~_2604_;
-	assign _2629_ = _0283_ | io_in[13];
-	assign _2630_ = _0284_ | io_in[13];
-	assign _2631_ = _2629_ & ~_2630_;
-	assign _2632_ = ~(_0286_ | io_in[13]);
-	assign _2633_ = ~(_0285_ | io_in[13]);
-	assign _2634_ = _2633_ | _2632_;
-	assign _2635_ = _2631_ & ~_2634_;
-	assign _2636_ = _0290_ | io_in[13];
-	assign _2637_ = _0289_ | io_in[13];
-	assign _2638_ = _2637_ | _2636_;
-	assign _2639_ = _0288_ | io_in[13];
-	assign _2640_ = _0287_ | io_in[13];
-	assign _2641_ = _2640_ | _2639_;
-	assign _2642_ = _2641_ | _2638_;
-	assign _2643_ = _2635_ & ~_2642_;
-	assign _2644_ = _0297_ | io_in[13];
-	assign _2645_ = ~(_0298_ | io_in[13]);
-	assign _2646_ = _2645_ | _2644_;
-	assign _2647_ = _0296_ | io_in[13];
-	assign _2648_ = _0295_ | io_in[13];
-	assign _2649_ = _2648_ | _2647_;
-	assign _2650_ = _2649_ | _2646_;
-	assign _2651_ = _0294_ | io_in[13];
-	assign _2652_ = _0293_ | io_in[13];
-	assign _2653_ = _2652_ | _2651_;
-	assign _2654_ = _0292_ | io_in[13];
-	assign _2655_ = _0291_ | io_in[13];
-	assign _2656_ = _2655_ | _2654_;
-	assign _2657_ = _2656_ | _2653_;
-	assign _2658_ = _2657_ | _2650_;
-	assign _2659_ = _2643_ & ~_2658_;
-	assign _2660_ = ~(_0282_ | io_in[13]);
-	assign _2661_ = ~(_0281_ | io_in[13]);
-	assign _2662_ = ~(_0280_ | io_in[13]);
-	assign _2663_ = _2662_ | _2661_;
-	assign _2664_ = _0279_ | io_in[13];
-	assign _2665_ = _0278_ | io_in[13];
-	assign _2666_ = _2665_ | _2664_;
-	assign _2667_ = _2666_ | _2663_;
-	assign _2668_ = _2660_ & ~_2667_;
-	assign _2669_ = _2668_ | _2659_;
-	assign _2670_ = _2603_ & ~_2669_;
-	assign _2671_ = ~_2670_;
-	assign _2672_ = _0411_ & ~io_in[13];
-	assign _2673_ = _0410_ & ~io_in[13];
-	assign _2674_ = _2672_ | ~_2673_;
-	assign _2675_ = _0408_ & ~io_in[13];
-	assign _2676_ = _0409_ & ~io_in[13];
-	assign _2677_ = _2675_ | ~_2676_;
-	assign _2678_ = _2677_ | _2674_;
-	assign _2679_ = _2670_ & ~_2678_;
-	assign _2680_ = _0406_ & ~io_in[13];
-	assign _2681_ = io_in[13] | ~_0405_;
-	assign _2682_ = _2680_ & ~_2681_;
-	assign _2683_ = io_in[13] | ~_0404_;
-	assign _2684_ = io_in[13] | ~_0403_;
-	assign _2685_ = _2684_ | _2683_;
-	assign _2686_ = _2682_ & ~_2685_;
-	assign _2687_ = io_in[13] | ~_0402_;
-	assign _2688_ = io_in[13] | ~_0401_;
-	assign _2689_ = _2688_ | _2687_;
-	assign _2690_ = io_in[13] | ~_0400_;
-	assign _2691_ = io_in[13] | ~_0399_;
-	assign _2692_ = _2691_ | _2690_;
-	assign _2693_ = _2692_ | _2689_;
-	assign _2694_ = _2686_ & ~_2693_;
-	assign _2695_ = _0407_ & ~io_in[13];
-	assign _2696_ = _2694_ & ~_2695_;
-	assign _2697_ = _0398_ & ~io_in[13];
-	assign _2698_ = _0397_ & ~io_in[13];
-	assign _2699_ = _2697_ | ~_2698_;
-	assign _2700_ = _0395_ & ~io_in[13];
-	assign _2701_ = _0396_ & ~io_in[13];
-	assign _2702_ = _2700_ | ~_2701_;
-	assign _2703_ = _2702_ | _2699_;
-	assign _2704_ = _2696_ & ~_2703_;
-	assign _2705_ = _2704_ | _2679_;
-	assign _2706_ = _2705_ & ~_2671_;
-	assign _2707_ = _2705_ | ~_2696_;
-	assign _2708_ = (_2603_ ? _2706_ : _2707_);
-	assign _2709_ = _2628_ & ~_2708_;
-	assign _2710_ = ~(_2709_ | _2626_);
-	assign _2711_ = ~_2604_;
-	assign _2712_ = ~(_2606_ | _2605_);
-	assign _2713_ = _2712_ & ~_2711_;
-	assign _2714_ = _2606_ | ~_2605_;
-	assign _2715_ = _2604_ & ~_2714_;
-	assign _2716_ = _2715_ & ~_2625_;
-	assign _2717_ = _2716_ | _2713_;
-	assign _2718_ = _2607_ & ~_2711_;
-	assign _2719_ = _2718_ & ~_2625_;
-	assign _2720_ = _2627_ & ~_2711_;
-	assign _2721_ = ~_2720_;
-	assign _2722_ = \mchip.design.receiver.packet_decode.PID_accum [2] | ~\mchip.design.receiver.packet_decode.PID_accum [3];
-	assign _2723_ = io_in[13] | ~_0303_;
-	assign _2724_ = ~(_2723_ & \mchip.design.receiver.packet_decode.PID_accum [1]);
-	assign _2725_ = ~(_2724_ | _2722_);
-	assign _2726_ = \mchip.design.receiver.packet_decode.PID_accum [3] | \mchip.design.receiver.packet_decode.PID_accum [2];
-	assign _2727_ = ~(_2726_ | _2724_);
-	assign _2728_ = _2727_ & ~_2725_;
-	assign _2729_ = _2728_ | _2705_;
-	assign _2730_ = _2705_ & _2696_;
-	assign _2731_ = (_2603_ ? _2729_ : _2730_);
-	assign _2732_ = ~(_2731_ | _2721_);
-	assign _2733_ = _2732_ | _2719_;
-	assign _2734_ = _2733_ | _2717_;
-	assign _2735_ = _2710_ & ~_2734_;
-	assign _2736_ = io_in[13] | ~_0172_;
-	assign _2737_ = _2736_ & ~_2736_;
-	assign \mchip.design.io_fsm.next_state [2] = ~(_2737_ | _2735_);
-	assign _2738_ = ~\mchip.design.io_fsm.next_state [2];
-	assign _2739_ = ~(_2713_ & _2625_);
-	assign _2740_ = _2696_ | _2603_;
-	assign _2741_ = ~(_2740_ | _2721_);
-	assign _2742_ = _2741_ | _2718_;
-	assign _2743_ = _2739_ & ~_2742_;
-	assign _2744_ = _2712_ & ~_2604_;
-	assign _2745_ = _0477_ & ~io_in[13];
-	assign _2746_ = _0476_ & ~io_in[13];
-	assign _2747_ = _0478_ & ~io_in[13];
-	assign _2748_ = (_2746_ ? _2747_ : _2745_);
-	assign _2749_ = _2746_ | _2745_;
-	assign _2750_ = ~(_2746_ | _2745_);
-	assign _2751_ = _2750_ & ~_2747_;
-	assign _2752_ = _2745_ | ~_2746_;
-	assign _2753_ = ~(_2752_ | _2747_);
-	assign _2754_ = _2745_ & ~_2746_;
-	assign _2755_ = _2754_ & ~_2747_;
-	assign _2756_ = _2755_ | _2753_;
-	assign _2757_ = ~_2747_;
-	assign _2758_ = _2750_ & ~_2757_;
-	assign _2759_ = ~(_2746_ & _2745_);
-	assign _2760_ = ~(_2759_ | _2747_);
-	assign _2761_ = _2760_ | _2758_;
-	assign _2762_ = _2761_ | _2756_;
-	assign _2763_ = _2762_ | _2751_;
-	assign _2764_ = ~\mchip.design.io_fsm.completed_transaction ;
-	assign _2765_ = _2670_ & ~_2727_;
-	assign _2766_ = ~(_2765_ | _2696_);
-	assign _2767_ = ~(_2760_ & _2764_);
-	assign _2768_ = ~(_2766_ & \mchip.design.io_fsm.completed_transaction );
-	assign _2769_ = _2753_ & ~_2768_;
-	assign _2770_ = _2755_ & ~\mchip.design.io_fsm.completed_transaction ;
-	assign _2771_ = _2770_ | _2769_;
-	assign _2772_ = _2767_ & ~_2771_;
-	assign _0651_ = _0481_ & ~io_in[13];
-	assign _2773_ = _0480_ & ~io_in[13];
-	assign _0482_ = _0479_ & ~io_in[13];
-	assign _0483_ = _0482_ | _2773_;
-	assign _0484_ = ~(_0483_ | _0651_);
-	assign _0485_ = ~(_0484_ & _2751_);
-	assign _0486_ = io_in[11] & ~_0485_;
-	assign _0487_ = io_in[10] & ~_0485_;
-	assign _0488_ = _0486_ | ~_0487_;
-	assign _0489_ = _2751_ & ~_0488_;
-	assign _0490_ = _2772_ & ~_0489_;
-	assign \mchip.design.rw_fsm.next_state [1] = _2763_ & ~_0490_;
-	assign _0491_ = _0487_ | _0486_;
-	assign _0492_ = ~(_0491_ & _2751_);
-	assign _0493_ = _2753_ & ~\mchip.design.io_fsm.completed_transaction ;
-	assign _0494_ = _0493_ | ~_2767_;
-	assign _0495_ = _0492_ & ~_0494_;
-	assign \mchip.design.rw_fsm.next_state [0] = _2763_ & ~_0495_;
-	assign _0496_ = ~(\mchip.design.rw_fsm.next_state [0] | \mchip.design.rw_fsm.next_state [1]);
-	assign _0497_ = ~(_2758_ & _2764_);
-	assign _0498_ = _2760_ & ~_2768_;
-	assign _0499_ = _0497_ & ~_0498_;
-	assign \mchip.design.rw_fsm.next_state [2] = _2763_ & ~_0499_;
-	assign _0500_ = _0496_ & ~\mchip.design.rw_fsm.next_state [2];
-	assign _0501_ = _0500_ | _2749_;
-	assign _0502_ = _2746_ & ~_2747_;
-	assign _0503_ = _0502_ & ~_2768_;
-	assign _0504_ = _0501_ & ~_0503_;
-	assign _0505_ = ~(_0504_ | _2748_);
-	assign _0506_ = _0500_ | ~_2755_;
-	assign _0507_ = ~(_0506_ & _0505_);
-	assign _0508_ = _2744_ & ~_0507_;
-	assign _0509_ = ~(_2714_ | _2604_);
-	assign _0510_ = _0509_ & _2625_;
-	assign _0511_ = _0510_ | _0508_;
-	assign _0512_ = _2608_ & ~_2625_;
-	assign _0513_ = _2705_ | _2671_;
-	assign _0514_ = (_2603_ ? _0513_ : _2730_);
-	assign _0515_ = _2628_ & ~_0514_;
-	assign _0516_ = _0515_ | _0512_;
-	assign _0517_ = _0516_ | _0511_;
-	assign _0518_ = _2743_ & ~_0517_;
-	assign \mchip.design.io_fsm.next_state [1] = ~(_0518_ | _2737_);
-	assign _0519_ = ~(_2718_ & _2625_);
-	assign _0520_ = _0519_ & ~_2741_;
-	assign _0521_ = (_2625_ ? _2713_ : _2715_);
-	assign _0522_ = _0520_ & ~_0521_;
-	assign _0523_ = _2744_ & ~_0506_;
-	assign _0524_ = _0523_ | _0509_;
-	assign _0525_ = (_2603_ ? _2670_ : _2696_);
-	assign _0526_ = _2628_ & ~_0525_;
-	assign _0527_ = _0526_ | _0524_;
-	assign _0528_ = _0522_ & ~_0527_;
-	assign \mchip.design.io_fsm.next_state [0] = ~(_0528_ | _2737_);
-	assign _0529_ = \mchip.design.io_fsm.next_state [0] | \mchip.design.io_fsm.next_state [1];
-	assign _0530_ = _2738_ & ~_0529_;
-	assign _0531_ = ~(_2720_ | _2628_);
-	assign _0532_ = _0531_ & ~_2715_;
-	assign \mchip.design.io_fsm.completed_transaction  = _0530_ & ~_0532_;
-	assign _0533_ = io_in[13] | ~_0269_;
-	assign _0534_ = _2621_ | ~_2622_;
-	assign _0535_ = ~(_0534_ | _2158_);
-	assign _0536_ = _2621_ & ~_2158_;
-	assign _0537_ = _0536_ | _0535_;
-	assign _0538_ = _0533_ & ~_0537_;
-	assign _0539_ = _2622_ | _2621_;
-	assign _0540_ = (_2158_ ? _2623_ : _0539_);
-	assign _0004_ = _0540_ | _0538_;
-	assign _0541_ = _2621_ | _2158_;
-	assign _0542_ = _2622_ | ~_2621_;
-	assign _0543_ = (_2158_ ? _2623_ : _0542_);
-	assign _0544_ = ~(_0543_ & _0541_);
-	assign _0545_ = ~(_2623_ | _2158_);
-	assign _0546_ = ~(_0539_ | _2158_);
-	assign _0547_ = _0546_ | _0545_;
-	assign _0548_ = _2622_ & _2158_;
-	assign _0549_ = _0548_ | _0547_;
-	assign _0550_ = io_in[13] | ~_0262_;
-	assign _0551_ = _0260_ & ~io_in[13];
-	assign _0552_ = _0261_ & ~io_in[13];
-	assign _0553_ = _0551_ | ~_0552_;
-	assign _0554_ = ~(_0553_ | _0550_);
-	assign _0555_ = _0549_ & ~_0554_;
-	assign _0005_ = _0555_ | _0544_;
-	assign _0556_ = _2605_ | ~_2604_;
-	assign _0557_ = _0556_ & ~_2715_;
-	assign _0558_ = ~_0531_;
-	assign _0559_ = _0558_ & ~_2670_;
-	assign _0012_ = _0557_ & ~_0559_;
-	assign _0560_ = _0558_ & ~_2696_;
-	assign _0011_ = _0557_ & ~_0560_;
-	assign _0561_ = _2574_ | _2573_;
-	assign _0562_ = ~(_0561_ | _2576_);
-	assign _0563_ = _2573_ | ~_2574_;
-	assign _0564_ = ~(_0563_ | _2576_);
-	assign _0565_ = _0564_ | _0562_;
-	assign _0566_ = _2580_ & ~_0565_;
-	assign _0567_ = ~(_2578_ | _2576_);
-	assign _0568_ = _0567_ | _0564_;
-	assign _0569_ = (_2573_ ? _2574_ : _2576_);
-	assign _0570_ = _0569_ | _0568_;
-	assign _0008_ = _0566_ | ~_0570_;
-	assign _0571_ = io_in[13] | ~_0277_;
-	assign _0572_ = ~(_2576_ | _2575_);
-	assign _0573_ = _0572_ | _0567_;
-	assign _0574_ = _0571_ & ~_0573_;
-	assign _0575_ = io_in[13] | ~_0301_;
-	assign _0576_ = _0299_ & ~io_in[13];
-	assign _0577_ = _0300_ & ~io_in[13];
-	assign _0578_ = _0576_ | ~_0577_;
-	assign _0579_ = ~(_0578_ | _0575_);
-	assign _0580_ = _2580_ & ~_0579_;
-	assign _0007_ = _0580_ | _0574_;
-	assign _0581_ = ~(_0579_ & _2579_);
-	assign _0582_ = _0579_ & _0567_;
-	assign _0583_ = _0581_ & ~_0582_;
-	assign _0584_ = _2576_ & ~_0561_;
-	assign _0585_ = _0579_ & _0584_;
-	assign _0586_ = _0579_ & _0572_;
-	assign _0587_ = _0586_ | _0585_;
-	assign _0588_ = _0583_ & ~_0587_;
-	assign _0589_ = _2576_ & ~_0563_;
-	assign _0590_ = _0579_ & _0589_;
-	assign _0010_ = _0588_ & ~_0590_;
-	assign _0591_ = _2158_ & ~_0534_;
-	assign _0592_ = _0545_ | _0591_;
-	assign _0593_ = _2622_ | ~_2158_;
-	assign _0594_ = _0592_ | ~_0593_;
-	assign _0595_ = _2617_ | _2177_;
-	assign _0596_ = _0595_ | _2616_;
-	assign _0597_ = _0596_ | ~_2613_;
-	assign _0598_ = ~(_0597_ | _2624_);
-	assign _0599_ = _0598_ | _0594_;
-	assign _0600_ = _2624_ & ~_0594_;
-	assign _0601_ = _0599_ & ~_0600_;
-	assign _0006_ = _0601_ | ~_0540_;
-	assign _0602_ = _0265_ & ~io_in[13];
-	assign _0603_ = ~_0602_;
-	assign _0604_ = _0538_ & ~_0603_;
-	assign _0605_ = ~(_0554_ | _2624_);
-	assign _0606_ = _0605_ | _0538_;
-	assign _0607_ = _0602_ & ~_0606_;
-	assign _0608_ = ~(_0263_ | io_in[13]);
-	assign _0609_ = ~_0608_;
-	assign _0610_ = _0609_ & ~_0538_;
-	assign _0611_ = _0610_ | _0607_;
-	assign _0002_ = _0611_ | _0604_;
-	assign _0612_ = ~_0605_;
-	assign _0613_ = _0612_ | _0538_;
-	assign _0614_ = _0602_ & ~_0613_;
-	assign _0615_ = _0264_ & ~io_in[13];
-	assign _0616_ = _0615_ & _0538_;
-	assign _0001_ = _0616_ | _0614_;
-	assign _0617_ = _0482_ | ~_2773_;
-	assign _0065_ = ~(_0617_ | _0651_);
-	assign _0618_ = _2773_ | ~_0482_;
-	assign _0066_ = ~(_0618_ | _0651_);
-	assign _0619_ = ~(_0482_ & _2773_);
-	assign _0067_ = ~(_0619_ | _0651_);
-	assign _0068_ = _0651_ & ~_0483_;
-	assign _0620_ = _2158_ & ~_0542_;
-	assign _0621_ = ~(_0554_ & _0620_);
-	assign _0622_ = _0554_ & ~_2624_;
-	assign _0623_ = _0621_ & ~_0622_;
-	assign _0624_ = _0554_ & _0545_;
-	assign _0625_ = _2158_ & ~_0539_;
-	assign _0626_ = _0554_ & _0625_;
-	assign _0627_ = _0626_ | _0624_;
-	assign _0628_ = _0623_ & ~_0627_;
-	assign _0629_ = _0554_ & _0591_;
-	assign _0009_ = _0628_ & ~_0629_;
-	assign _0630_ = io_in[1] & ~io_in[0];
-	assign _0631_ = io_in[0] & io_in[1];
-	assign _0632_ = ~(_0631_ | _0630_);
-	assign \mchip.design.receiver.find_sync.bit_in  = ~_0632_;
-	assign _0633_ = _0579_ | ~_0572_;
-	assign _0634_ = _0567_ & ~_0579_;
-	assign _0635_ = _0633_ & ~_0634_;
-	assign _0636_ = ~_0571_;
-	assign _0637_ = _0636_ | _0562_;
-	assign _0638_ = _0637_ | _0572_;
-	assign _0639_ = ~(_0638_ | _0567_);
-	assign _0640_ = ~(_0639_ | _0635_);
-	assign _0641_ = (_0639_ ? _0579_ : _0633_);
-	assign _0014_ = _0641_ | _0640_;
-	assign _0013_ = _0641_ | ~_0640_;
-	assign _0642_ = _0266_ & ~io_in[13];
-	assign _0000_ = (_0538_ ? _0609_ : _0642_);
-	assign _0003_ = (_0538_ ? _0642_ : _0615_);
-	assign _0643_ = _0502_ & _0500_;
-	assign _0644_ = (_2747_ ? _2750_ : _2754_);
-	assign _0645_ = _0644_ & ~_2764_;
-	assign _0646_ = _0645_ | _0643_;
-	assign _0647_ = ~_0502_;
-	assign _0648_ = _0647_ & ~_0644_;
-	assign \mchip.design.finished  = _0646_ & ~_0648_;
-	assign _0649_ = _0066_ | _0065_;
-	assign _0650_ = _0649_ | _0067_;
-	assign _0652_ = _0651_ | _0650_;
-	assign _0653_ = _0070_ & ~io_in[13];
-	assign _0654_ = _0072_ & ~io_in[13];
-	assign _0655_ = _0073_ & ~io_in[13];
-	assign _0656_ = _0071_ & ~io_in[13];
-	assign _0657_ = _0653_ | ~_0649_;
-	assign _0658_ = _0067_ & ~_0653_;
-	assign _0659_ = _0657_ & ~_0658_;
-	assign _0660_ = _0651_ & ~_0617_;
-	assign _0661_ = _0651_ & ~_2773_;
-	assign _0662_ = _0661_ | _0660_;
-	assign _0663_ = _0662_ & ~_0653_;
-	assign _0664_ = _0651_ & ~_0619_;
-	assign _0665_ = _0664_ & ~_0653_;
-	assign _0666_ = _0665_ | _0663_;
-	assign _0667_ = _0659_ & ~_0666_;
-	assign \mchip.design.inter.count_next [0] = _0652_ & ~_0667_;
-	assign _0668_ = ~_0664_;
-	assign _0669_ = ~(_0656_ & _0653_);
-	assign _0670_ = _0655_ | ~_0654_;
-	assign _0671_ = ~(_0670_ | _0669_);
-	assign _0672_ = _0656_ | ~_0653_;
-	assign _0673_ = _0653_ | ~_0656_;
+	assign _3171_ = io_in[11] & io_in[7];
+	assign _3628_[0] = _3171_ ^ \mchip.game2.scroll_inst.tick_time [0];
+	assign _3620_[0] = ~\mchip.game2.vga_inst.haddr [0];
+	assign _3172_ = ~(\mchip.game2.vga_inst.haddr [8] & \mchip.game2.vga_inst.haddr [7]);
+	assign _3173_ = \mchip.game2.vga_inst.haddr [8] & ~\mchip.game2.vga_inst.haddr [7];
+	assign _3174_ = ~(\mchip.game2.vga_inst.haddr [6] | \mchip.game2.vga_inst.haddr [5]);
+	assign _3175_ = _3173_ & ~_3174_;
+	assign _3176_ = _3172_ & ~_3175_;
+	assign _3177_ = \mchip.game2.vga_inst.haddr [9] & ~_3176_;
+	assign _3178_ = \mchip.game2.vga_inst.haddr [5] & ~\mchip.game2.vga_inst.haddr [4];
+	assign _3179_ = \mchip.game2.vga_inst.haddr [1] | \mchip.game2.vga_inst.haddr [0];
+	assign _3180_ = _3178_ & ~_3179_;
+	assign _3181_ = \mchip.game2.vga_inst.haddr [9] & \mchip.game2.vga_inst.haddr [8];
+	assign _3182_ = ~(\mchip.game2.vga_inst.haddr [6] | \mchip.game2.vga_inst.haddr [7]);
+	assign _3183_ = ~(_3182_ & _3181_);
+	assign _3184_ = _3180_ & ~_3183_;
+	assign _3185_ = ~(\mchip.game2.vga_inst.haddr [2] | \mchip.game2.vga_inst.haddr [3]);
+	assign _3186_ = ~_3185_;
+	assign _3187_ = _3184_ & ~_3186_;
+	assign _0023_ = _3187_ | _3177_;
+	assign _3188_ = ~(\mchip.game2.vga_inst.vaddr [8] | \mchip.game2.vga_inst.vaddr [9]);
+	assign _3189_ = \mchip.game2.vga_inst.vaddr [1] & ~\mchip.game2.vga_inst.vaddr [0];
+	assign _3190_ = \mchip.game2.vga_inst.vaddr [3] & ~\mchip.game2.vga_inst.vaddr [2];
+	assign _3191_ = ~(_3190_ & _3189_);
+	assign _3192_ = \mchip.game2.vga_inst.vaddr [6] & \mchip.game2.vga_inst.vaddr [7];
+	assign _3193_ = \mchip.game2.vga_inst.vaddr [4] & \mchip.game2.vga_inst.vaddr [5];
+	assign _3194_ = _3193_ & _3192_;
+	assign _3195_ = _3191_ | ~_3194_;
+	assign _3196_ = _3188_ & ~_3195_;
+	assign _3197_ = ~_3188_;
+	assign _3198_ = \mchip.game2.vga_inst.vaddr [0] & \mchip.game2.vga_inst.vaddr [1];
+	assign _3199_ = _3190_ & ~_3198_;
+	assign _3200_ = \mchip.game2.vga_inst.vaddr [3] & ~_3199_;
+	assign _3201_ = _3194_ & ~_3200_;
+	assign _3202_ = _3194_ & ~_3201_;
+	assign _3203_ = _3202_ | _3197_;
+	assign _3204_ = _3203_ | _3196_;
+	assign _3205_ = _3192_ & _3188_;
+	assign _3206_ = \mchip.game2.vga_inst.vaddr [2] & \mchip.game2.vga_inst.vaddr [3];
+	assign _3207_ = ~(\mchip.game2.vga_inst.vaddr [4] | \mchip.game2.vga_inst.vaddr [5]);
+	assign _3208_ = _3206_ | ~_3207_;
+	assign _3209_ = _3205_ & ~_3208_;
+	assign _3210_ = _3188_ & ~_3192_;
+	assign _3211_ = _3210_ | _3209_;
+	assign _3212_ = _3211_ | _3204_;
+	assign _3213_ = \mchip.game2.vga_inst.vaddr [8] & ~\mchip.game2.vga_inst.vaddr [9];
+	assign _3214_ = ~\mchip.game2.vga_inst.vaddr [5];
+	assign _3215_ = _3192_ & ~_3214_;
+	assign _3216_ = \mchip.game2.vga_inst.vaddr [4] | ~\mchip.game2.vga_inst.vaddr [5];
+	assign _3217_ = _3216_ | ~_3192_;
+	assign _3218_ = \mchip.game2.vga_inst.vaddr [2] | \mchip.game2.vga_inst.vaddr [3];
+	assign _3219_ = ~(\mchip.game2.vga_inst.vaddr [0] | \mchip.game2.vga_inst.vaddr [1]);
+	assign _3220_ = _3218_ | ~_3219_;
+	assign _3221_ = ~(_3220_ | _3217_);
+	assign _3222_ = _3215_ & ~_3221_;
+	assign _3223_ = _3213_ & ~_3222_;
+	assign _3224_ = _3223_ | _3188_;
+	assign _3225_ = _3221_ & _3213_;
+	assign _3226_ = _3224_ & ~_3225_;
+	assign _3227_ = ~(\mchip.game2.vga_inst.haddr [8] | \mchip.game2.vga_inst.haddr [7]);
+	assign _3228_ = \mchip.game2.vga_inst.haddr [9] & ~_3227_;
+	assign _3229_ = _3226_ & ~_3228_;
+	assign _3230_ = _3212_ | ~_3229_;
+	assign _3231_ = io_in[13] | ~\mchip.game2.rendering_inst.cactus_select [0];
+	assign _0015_ = _3231_ | _3230_;
+	assign _3232_ = _3177_ & ~_3187_;
+	assign _3233_ = _3232_ | io_in[13];
+	assign _0013_ = _3233_ | _3187_;
+	assign _3234_ = ~(\mchip.game2.start_ctr [24] | \mchip.game2.start_ctr [25]);
+	assign _3235_ = \mchip.game2.start_ctr [26] | \mchip.game2.start_ctr [27];
+	assign _3236_ = _3234_ & ~_3235_;
+	assign _3237_ = \mchip.game2.start_ctr [29] | \mchip.game2.start_ctr [28];
+	assign _3238_ = \mchip.game2.start_ctr [30] | \mchip.game2.start_ctr [31];
+	assign _3239_ = _3238_ | _3237_;
+	assign _3240_ = _3236_ & ~_3239_;
+	assign _3241_ = \mchip.game2.start_ctr [25] | ~\mchip.game2.start_ctr [24];
+	assign _3242_ = _3241_ | _3235_;
+	assign _3243_ = ~(_3242_ | _3239_);
+	assign _3244_ = \mchip.game2.start_ctr [22] & \mchip.game2.start_ctr [23];
+	assign _3245_ = \mchip.game2.start_ctr [20] | \mchip.game2.start_ctr [21];
+	assign _3246_ = _3244_ & ~_3245_;
+	assign _3247_ = \mchip.game2.start_ctr [19] & ~\mchip.game2.start_ctr [18];
+	assign _3248_ = \mchip.game2.start_ctr [17] | \mchip.game2.start_ctr [16];
+	assign _3249_ = _3247_ & ~_3248_;
+	assign _3250_ = \mchip.game2.start_ctr [19] & ~_3249_;
+	assign _3251_ = _3246_ & ~_3250_;
+	assign _3252_ = _3244_ & ~_3251_;
+	assign _3253_ = _3243_ & ~_3252_;
+	assign _3254_ = ~(_3253_ | _3240_);
+	assign _3255_ = ~(\mchip.game2.start_ctr [15] & \mchip.game2.start_ctr [14]);
+	assign _3256_ = \mchip.game2.start_ctr [12] | \mchip.game2.start_ctr [13];
+	assign _3257_ = ~(_3256_ | _3255_);
+	assign _3258_ = \mchip.game2.start_ctr [9] & \mchip.game2.start_ctr [8];
+	assign _3259_ = \mchip.game2.start_ctr [10] | \mchip.game2.start_ctr [11];
+	assign _3260_ = _3259_ | _3258_;
+	assign _3261_ = _3257_ & ~_3260_;
+	assign _3262_ = _3261_ | _3255_;
+	assign _3263_ = \mchip.game2.start_ctr [7] & ~\mchip.game2.start_ctr [6];
+	assign _3264_ = \mchip.game2.start_ctr [5] | \mchip.game2.start_ctr [4];
+	assign _3265_ = _3263_ & ~_3264_;
+	assign _3266_ = \mchip.game2.start_ctr [0] | \mchip.game2.start_ctr [1];
+	assign _3267_ = \mchip.game2.start_ctr [2] | \mchip.game2.start_ctr [3];
+	assign _3268_ = _3267_ | _3266_;
+	assign _3269_ = _3265_ & ~_3268_;
+	assign _3270_ = _3269_ | ~\mchip.game2.start_ctr [7];
+	assign _3271_ = _3258_ & ~_3259_;
+	assign _3272_ = ~(_3271_ & _3257_);
+	assign _3273_ = _3270_ & ~_3272_;
+	assign _3274_ = ~(_3273_ | _3262_);
+	assign _3275_ = \mchip.game2.start_ctr [16] & ~\mchip.game2.start_ctr [17];
+	assign _3276_ = _3275_ & _3247_;
+	assign _3277_ = ~(_3276_ & _3246_);
+	assign _3278_ = _3243_ & ~_3277_;
+	assign _3279_ = _3278_ & ~_3274_;
+	assign _3280_ = _3254_ & ~_3279_;
+	assign _3281_ = _3272_ | ~_3269_;
+	assign _3282_ = _3278_ & ~_3281_;
+	assign _0162_ = ~(_3282_ | _3280_);
+	assign _3283_ = ~(\mchip.game2.game_over  | io_in[1]);
+	assign _0163_ = _3283_ & ~_0162_;
+	assign _3284_ = \mchip.game2.score_inst.ctr [17] & ~\mchip.game2.score_inst.ctr [16];
+	assign _3285_ = \mchip.game2.score_inst.ctr [19] | ~\mchip.game2.score_inst.ctr [18];
+	assign _3286_ = _3285_ | ~_3284_;
+	assign _3287_ = \mchip.game2.score_inst.ctr [20] | ~\mchip.game2.score_inst.ctr [21];
+	assign _3288_ = _3287_ | _3286_;
+	assign _3289_ = \mchip.game2.score_inst.ctr [13] & ~\mchip.game2.score_inst.ctr [12];
+	assign _3290_ = \mchip.game2.score_inst.ctr [15] | ~\mchip.game2.score_inst.ctr [14];
+	assign _3291_ = _3290_ | ~_3289_;
+	assign _3292_ = \mchip.game2.score_inst.ctr [8] & ~\mchip.game2.score_inst.ctr [9];
+	assign _3293_ = \mchip.game2.score_inst.ctr [10] | ~\mchip.game2.score_inst.ctr [11];
+	assign _3294_ = _3293_ | ~_3292_;
+	assign _3295_ = _3294_ | _3291_;
+	assign _3296_ = ~(\mchip.game2.score_inst.ctr [4] & \mchip.game2.score_inst.ctr [5]);
+	assign _3297_ = ~(\mchip.game2.score_inst.ctr [6] & \mchip.game2.score_inst.ctr [7]);
+	assign _3298_ = _3297_ | _3296_;
+	assign _3299_ = \mchip.game2.score_inst.ctr [0] | \mchip.game2.score_inst.ctr [1];
+	assign _3300_ = ~(\mchip.game2.score_inst.ctr [2] & \mchip.game2.score_inst.ctr [3]);
+	assign _3301_ = _3300_ | _3299_;
+	assign _3302_ = _3301_ | _3298_;
+	assign _3303_ = _3302_ | _3295_;
+	assign _3304_ = _3303_ | _3288_;
+	assign _3305_ = ~(_3287_ | _3285_);
+	assign _3306_ = ~(\mchip.game2.score_inst.ctr [17] & \mchip.game2.score_inst.ctr [16]);
+	assign _3307_ = ~\mchip.game2.score_inst.ctr [15];
+	assign _3308_ = _3284_ & ~_3307_;
+	assign _3309_ = _3306_ & ~_3308_;
+	assign _3310_ = _3284_ & ~_3290_;
+	assign _3311_ = ~(\mchip.game2.score_inst.ctr [12] & \mchip.game2.score_inst.ctr [13]);
+	assign _3312_ = ~(\mchip.game2.score_inst.ctr [11] & \mchip.game2.score_inst.ctr [10]);
+	assign _3313_ = _3289_ & ~_3312_;
+	assign _3314_ = _3311_ & ~_3313_;
+	assign _3315_ = _3310_ & ~_3314_;
+	assign _3316_ = _3309_ & ~_3315_;
+	assign _3317_ = _3293_ | ~_3289_;
+	assign _3318_ = _3310_ & ~_3317_;
+	assign _3319_ = ~\mchip.game2.score_inst.ctr [9];
+	assign _3320_ = _3292_ & ~_3297_;
+	assign _3321_ = _3300_ | _3296_;
+	assign _3322_ = _3320_ & ~_3321_;
+	assign _3323_ = _3319_ & ~_3322_;
+	assign _3324_ = _3318_ & ~_3323_;
+	assign _3325_ = _3316_ & ~_3324_;
+	assign _3326_ = _3305_ & ~_3325_;
+	assign _3327_ = \mchip.game2.score_inst.ctr [19] & ~_3287_;
+	assign _3328_ = \mchip.game2.score_inst.ctr [20] & \mchip.game2.score_inst.ctr [21];
+	assign _3329_ = _3328_ | _3327_;
+	assign _3330_ = _3329_ | _3326_;
+	assign _3331_ = _3304_ & ~_3330_;
+	assign _0006_ = _0163_ & ~_3331_;
+	assign _3332_ = \mchip.game2.score_inst.score[1] [1] & \mchip.game2.score_inst.score[1] [0];
+	assign _3333_ = _3332_ & \mchip.game2.score_inst.score[1] [2];
+	assign _3334_ = ~(_3333_ ^ \mchip.game2.score_inst.score[1] [3]);
+	assign _3335_ = ~_3334_;
+	assign _3336_ = \mchip.game2.score_inst.score[1] [0] | ~\mchip.game2.score_inst.score[1] [1];
+	assign _3337_ = _3332_ ^ \mchip.game2.score_inst.score[1] [2];
+	assign _3338_ = _3337_ | _3334_;
+	assign _3339_ = _3336_ & ~_3338_;
+	assign _3340_ = _3335_ & ~_3339_;
+	assign _3341_ = ~(\mchip.game2.score_inst.score[1] [3] & \mchip.game2.score_inst.score[1] [2]);
+	assign _3342_ = _3332_ & ~_3341_;
+	assign _3343_ = _3342_ | _3340_;
+	assign _3344_ = \mchip.game2.score_inst.score[1] [1] | ~\mchip.game2.score_inst.score[1] [0];
+	assign _3345_ = _3344_ | _3338_;
+	assign _3346_ = ~(_3345_ | _3342_);
+	assign _3347_ = _3346_ | _3343_;
+	assign _3348_ = \mchip.game2.score_inst.score[0] [1] & \mchip.game2.score_inst.score[0] [0];
+	assign _3349_ = _3348_ & \mchip.game2.score_inst.score[0] [2];
+	assign _3350_ = ~(_3349_ ^ \mchip.game2.score_inst.score[0] [3]);
+	assign _3351_ = \mchip.game2.score_inst.score[0] [0] | ~\mchip.game2.score_inst.score[0] [1];
+	assign _3352_ = _3348_ ^ \mchip.game2.score_inst.score[0] [2];
+	assign _3353_ = _3352_ | _3350_;
+	assign _3354_ = _3353_ | ~_3351_;
+	assign _3355_ = _3354_ & ~_3350_;
+	assign _3356_ = ~(\mchip.game2.score_inst.score[0] [3] & \mchip.game2.score_inst.score[0] [2]);
+	assign _3357_ = _3348_ & ~_3356_;
+	assign _3358_ = ~(_3357_ | _3355_);
+	assign _3359_ = \mchip.game2.score_inst.score[0] [1] | ~\mchip.game2.score_inst.score[0] [0];
+	assign _3360_ = _3359_ | _3353_;
+	assign _3361_ = ~(_3360_ | _3357_);
+	assign _3362_ = _3358_ & ~_3361_;
+	assign _3363_ = _3362_ | ~_3347_;
+	assign _0004_ = _0006_ & ~_3363_;
+	assign _3364_ = \mchip.game2.score_inst.score[2] [1] & \mchip.game2.score_inst.score[2] [0];
+	assign _3365_ = _3364_ & \mchip.game2.score_inst.score[2] [2];
+	assign _3366_ = ~(_3365_ ^ \mchip.game2.score_inst.score[2] [3]);
+	assign _3367_ = ~_3366_;
+	assign _3368_ = \mchip.game2.score_inst.score[2] [0] | ~\mchip.game2.score_inst.score[2] [1];
+	assign _3369_ = _3364_ ^ \mchip.game2.score_inst.score[2] [2];
+	assign _3370_ = _3369_ | _3366_;
+	assign _3371_ = _3368_ & ~_3370_;
+	assign _3372_ = _3367_ & ~_3371_;
+	assign _3373_ = ~(\mchip.game2.score_inst.score[2] [3] & \mchip.game2.score_inst.score[2] [2]);
+	assign _3374_ = _3364_ & ~_3373_;
+	assign _3375_ = _3374_ | _3372_;
+	assign _3376_ = \mchip.game2.score_inst.score[2] [1] | ~\mchip.game2.score_inst.score[2] [0];
+	assign _3377_ = _3376_ | _3370_;
+	assign _3378_ = ~(_3377_ | _3374_);
+	assign _3379_ = _3378_ | _3375_;
+	assign _0003_ = _3379_ & _0004_;
+	assign _3380_ = ~(\mchip.game2.rendering_inst.cactus_select [1] & \mchip.game2.cactus_type [1]);
+	assign _3381_ = \mchip.game2.scroll_inst.pos [8] & \mchip.game2.vga_inst.haddr [8];
+	assign _3382_ = \mchip.game2.scroll_inst.pos [7] & \mchip.game2.vga_inst.haddr [7];
+	assign _3383_ = \mchip.game2.scroll_inst.pos [6] & \mchip.game2.vga_inst.haddr [6];
+	assign _3384_ = \mchip.game2.scroll_inst.pos [7] ^ \mchip.game2.vga_inst.haddr [7];
+	assign _3385_ = _3384_ & _3383_;
+	assign _3386_ = _3385_ | _3382_;
+	assign _3387_ = \mchip.game2.scroll_inst.pos [5] & \mchip.game2.vga_inst.haddr [5];
+	assign _3388_ = \mchip.game2.scroll_inst.pos [4] & \mchip.game2.vga_inst.haddr [4];
+	assign _3389_ = \mchip.game2.scroll_inst.pos [5] | \mchip.game2.vga_inst.haddr [5];
+	assign _3390_ = _3389_ & ~_3387_;
+	assign _3391_ = _3390_ & _3388_;
+	assign _3392_ = ~(_3391_ | _3387_);
+	assign _3393_ = \mchip.game2.scroll_inst.pos [6] ^ \mchip.game2.vga_inst.haddr [6];
+	assign _3394_ = ~(_3393_ & _3384_);
+	assign _3395_ = ~(_3394_ | _3392_);
+	assign _3396_ = _3395_ | _3386_;
+	assign _3397_ = \mchip.game2.scroll_inst.pos [3] & \mchip.game2.vga_inst.haddr [3];
+	assign _3398_ = \mchip.game2.scroll_inst.pos [2] & \mchip.game2.vga_inst.haddr [2];
+	assign _3399_ = ~_3398_;
+	assign _3400_ = ~(\mchip.game2.scroll_inst.pos [3] | \mchip.game2.vga_inst.haddr [3]);
+	assign _3401_ = ~(_3400_ | _3397_);
+	assign _3402_ = _3401_ & ~_3399_;
+	assign _3403_ = _3402_ | _3397_;
+	assign _3404_ = \mchip.game2.scroll_inst.pos [1] & \mchip.game2.vga_inst.haddr [1];
+	assign _3405_ = \mchip.game2.scroll_inst.pos [0] & \mchip.game2.vga_inst.haddr [0];
+	assign _3406_ = ~(\mchip.game2.scroll_inst.pos [1] | \mchip.game2.vga_inst.haddr [1]);
+	assign _3407_ = _3406_ | _3404_;
+	assign _3408_ = _3405_ & ~_3407_;
+	assign _3409_ = _3408_ | _3404_;
+	assign _3410_ = ~(\mchip.game2.scroll_inst.pos [2] | \mchip.game2.vga_inst.haddr [2]);
+	assign _3411_ = ~(_3410_ | _3398_);
+	assign _3412_ = ~(_3411_ & _3401_);
+	assign _3413_ = _3409_ & ~_3412_;
+	assign _3414_ = _3413_ | _3403_;
+	assign _3415_ = ~(\mchip.game2.scroll_inst.pos [4] | \mchip.game2.vga_inst.haddr [4]);
+	assign _3416_ = ~(_3415_ | _3388_);
+	assign _3417_ = ~(_3416_ & _3390_);
+	assign _3418_ = _3417_ | _3394_;
+	assign _3419_ = _3414_ & ~_3418_;
+	assign _3420_ = _3419_ | _3396_;
+	assign _3421_ = \mchip.game2.scroll_inst.pos [8] ^ \mchip.game2.vga_inst.haddr [8];
+	assign _3422_ = _3421_ & _3420_;
+	assign _3423_ = ~(_3422_ | _3381_);
+	assign _3424_ = \mchip.game2.scroll_inst.pos [9] ^ \mchip.game2.vga_inst.haddr [9];
+	assign _3425_ = ~_3424_;
+	assign _3426_ = _3425_ ^ _3423_;
+	assign _3427_ = \mchip.game2.scroll_inst.pos [9] & \mchip.game2.vga_inst.haddr [9];
+	assign _3428_ = _3424_ & _3381_;
+	assign _3429_ = _3428_ | _3427_;
+	assign _3430_ = ~(_3424_ & _3421_);
+	assign _3431_ = _3420_ & ~_3430_;
+	assign _3432_ = _3431_ | _3429_;
+	assign _3433_ = _3432_ | _3426_;
+	assign _3434_ = _3421_ ^ _3420_;
+	assign _3435_ = _3411_ ^ _3409_;
+	assign _3436_ = ~(_3407_ ^ _3405_);
+	assign _3437_ = ~_3436_;
+	assign _3438_ = _3437_ & ~_3435_;
+	assign _3439_ = _3411_ & _3409_;
+	assign _3440_ = _3399_ & ~_3439_;
+	assign _3441_ = ~(_3440_ ^ _3401_);
+	assign _3442_ = _3416_ ^ _3414_;
+	assign _3443_ = ~(_3442_ & _3441_);
+	assign _3444_ = ~(_3443_ | _3438_);
+	assign _3445_ = ~(_3416_ & _3414_);
+	assign _3446_ = _3445_ & ~_3388_;
+	assign _3447_ = ~(_3446_ ^ _3390_);
+	assign _3448_ = _3414_ & ~_3417_;
+	assign _3449_ = _3392_ & ~_3448_;
+	assign _3450_ = ~(_3449_ ^ _3393_);
+	assign _3451_ = ~(_3450_ & _3447_);
+	assign _3452_ = _3449_ | ~_3393_;
+	assign _3453_ = _3452_ & ~_3383_;
+	assign _3454_ = _3453_ ^ _3384_;
+	assign _3455_ = _3454_ | _3434_;
+	assign _3456_ = _3455_ | _3451_;
+	assign _3457_ = _3444_ & ~_3456_;
+	assign _3458_ = _3457_ | _3434_;
+	assign _3459_ = ~(_3458_ | _3433_);
+	assign _3460_ = _3447_ ^ _3444_;
+	assign _3461_ = _3441_ & ~_3438_;
+	assign _3462_ = _3461_ ^ _3442_;
+	assign _3463_ = _3462_ & ~_3460_;
+	assign _3464_ = _3444_ & ~_3451_;
+	assign _3465_ = _3464_ ^ _3454_;
+	assign _3466_ = _3447_ & _3444_;
+	assign _3467_ = _3466_ ^ _3450_;
+	assign _3468_ = ~(_3467_ | _3465_);
+	assign _3469_ = ~(_3468_ & _3463_);
+	assign _3470_ = \mchip.game2.scroll_inst.pos [0] ^ \mchip.game2.vga_inst.haddr [0];
+	assign _3471_ = ~_3470_;
+	assign _3472_ = _3471_ | _3436_;
+	assign _3473_ = _3437_ ^ _3435_;
+	assign _3474_ = _3438_ & ~_3441_;
+	assign _3475_ = ~(_3474_ | _3461_);
+	assign _3476_ = _3473_ | ~_3475_;
+	assign _3477_ = _3476_ | _3472_;
+	assign _3478_ = ~(_3477_ | _3469_);
+	assign _3479_ = ~_3426_;
+	assign _3480_ = _3479_ & ~_3458_;
+	assign _3481_ = _3480_ ^ _3432_;
+	assign _3482_ = _3481_ | _3459_;
+	assign _3483_ = ~(_3458_ ^ _3479_);
+	assign _3484_ = ~_3434_;
+	assign _3485_ = _3464_ & ~_3454_;
+	assign _3486_ = _3485_ ^ _3484_;
+	assign _3487_ = _3486_ | _3483_;
+	assign _3488_ = _3487_ | _3482_;
+	assign _3489_ = ~(_3488_ | _3459_);
+	assign _3490_ = ~(_3489_ & _3478_);
+	assign _3491_ = ~(_3490_ | _3459_);
+	assign _3492_ = ~_3483_;
+	assign _3493_ = _3465_ & ~_3487_;
+	assign _3494_ = _3492_ & ~_3493_;
+	assign _3495_ = _3468_ & ~_3487_;
+	assign _3496_ = _3462_ | _3460_;
+	assign _3497_ = _3475_ & _3473_;
+	assign _3498_ = _3463_ & ~_3497_;
+	assign _3499_ = _3496_ & ~_3498_;
+	assign _3500_ = _3495_ & ~_3499_;
+	assign _3501_ = _3494_ & ~_3500_;
+	assign _3502_ = _3501_ | _3482_;
+	assign _3503_ = _3502_ | _3459_;
+	assign _3504_ = _3503_ | _3491_;
+	assign _3505_ = _3492_ | _3482_;
+	assign _3506_ = _3505_ | _3459_;
+	assign _3507_ = _3468_ & ~_3496_;
+	assign _3508_ = ~(_3471_ & _3436_);
+	assign _3509_ = _3475_ | _3473_;
+	assign _3510_ = _3509_ | _3508_;
+	assign _3511_ = _3510_ | ~_3507_;
+	assign _3512_ = _3511_ & ~_3465_;
+	assign _3513_ = _3489_ & ~_3512_;
+	assign _3514_ = _3506_ & ~_3513_;
+	assign _3515_ = ~(_3514_ | _3459_);
+	assign _3516_ = _3515_ | _3504_;
+	assign _3517_ = _3516_ | io_in[13];
+	assign _3518_ = _3517_ | _3380_;
+	assign _0014_ = _3518_ | _3230_;
+	assign _0005_ = _0006_ & ~_3362_;
+	assign _3519_ = ~(\mchip.game2.scroll_inst.tick_time [16] ^ \mchip.game2.scroll_inst.ctr [16]);
+	assign _3520_ = \mchip.game2.scroll_inst.tick_time [17] ^ \mchip.game2.scroll_inst.ctr [17];
+	assign _3521_ = _3519_ & ~_3520_;
+	assign _3522_ = ~(\mchip.game2.scroll_inst.tick_time [8] ^ \mchip.game2.scroll_inst.ctr [8]);
+	assign _3523_ = \mchip.game2.scroll_inst.tick_time [9] ^ \mchip.game2.scroll_inst.ctr [9];
+	assign _3524_ = _3522_ & ~_3523_;
+	assign _3525_ = ~(\mchip.game2.scroll_inst.tick_time [11] ^ \mchip.game2.scroll_inst.ctr [11]);
+	assign _3526_ = \mchip.game2.scroll_inst.tick_time [10] ^ \mchip.game2.scroll_inst.ctr [10];
+	assign _3527_ = _3526_ | ~_3525_;
+	assign _3528_ = _3524_ & ~_3527_;
+	assign _3529_ = ~(\mchip.game2.scroll_inst.tick_time [15] ^ \mchip.game2.scroll_inst.ctr [15]);
+	assign _3530_ = \mchip.game2.scroll_inst.tick_time [14] ^ \mchip.game2.scroll_inst.ctr [14];
+	assign _3531_ = _3529_ & ~_3530_;
+	assign _3532_ = \mchip.game2.scroll_inst.tick_time [12] ^ \mchip.game2.scroll_inst.ctr [12];
+	assign _3533_ = \mchip.game2.scroll_inst.tick_time [13] ^ \mchip.game2.scroll_inst.ctr [13];
+	assign _3534_ = _3533_ | _3532_;
+	assign _3535_ = _3534_ | ~_3531_;
+	assign _3536_ = _3528_ & ~_3535_;
+	assign _3537_ = ~(\mchip.game2.scroll_inst.tick_time [4] ^ \mchip.game2.scroll_inst.ctr [4]);
+	assign _3538_ = \mchip.game2.scroll_inst.tick_time [5] ^ \mchip.game2.scroll_inst.ctr [5];
+	assign _3539_ = _3537_ & ~_3538_;
+	assign _3540_ = ~(\mchip.game2.scroll_inst.tick_time [7] ^ \mchip.game2.scroll_inst.ctr [7]);
+	assign _3541_ = \mchip.game2.scroll_inst.tick_time [6] ^ \mchip.game2.scroll_inst.ctr [6];
+	assign _3542_ = _3541_ | ~_3540_;
+	assign _3543_ = _3539_ & ~_3542_;
+	assign _3544_ = ~(\mchip.game2.scroll_inst.ctr [2] ^ \mchip.game2.scroll_inst.tick_time [2]);
+	assign _3545_ = \mchip.game2.scroll_inst.ctr [3] ^ \mchip.game2.scroll_inst.tick_time [3];
+	assign _3546_ = _3544_ & ~_3545_;
+	assign _3547_ = ~(\mchip.game2.scroll_inst.ctr [1] ^ \mchip.game2.scroll_inst.tick_time [1]);
+	assign _3548_ = ~(\mchip.game2.scroll_inst.ctr [0] ^ \mchip.game2.scroll_inst.tick_time [0]);
+	assign _3549_ = _3548_ & _3547_;
+	assign _3550_ = _3549_ & _3546_;
+	assign _3551_ = _3550_ & _3543_;
+	assign _3552_ = ~(_3551_ & _3536_);
+	assign _3553_ = _3552_ | ~_3521_;
+	assign _3554_ = \mchip.game2.scroll_inst.ctr [17] | ~\mchip.game2.scroll_inst.tick_time [17];
+	assign _3555_ = \mchip.game2.scroll_inst.tick_time [16] & ~\mchip.game2.scroll_inst.ctr [16];
+	assign _3556_ = _3555_ & ~_3520_;
+	assign _3557_ = _3554_ & ~_3556_;
+	assign _3558_ = \mchip.game2.scroll_inst.ctr [15] | ~\mchip.game2.scroll_inst.tick_time [15];
+	assign _3559_ = \mchip.game2.scroll_inst.ctr [14] | ~\mchip.game2.scroll_inst.tick_time [14];
+	assign _3560_ = _3529_ & ~_3559_;
+	assign _3561_ = _3558_ & ~_3560_;
+	assign _3562_ = \mchip.game2.scroll_inst.ctr [13] | ~\mchip.game2.scroll_inst.tick_time [13];
+	assign _3563_ = \mchip.game2.scroll_inst.tick_time [12] & ~\mchip.game2.scroll_inst.ctr [12];
+	assign _3564_ = _3563_ & ~_3533_;
+	assign _3565_ = _3562_ & ~_3564_;
+	assign _3566_ = _3531_ & ~_3565_;
+	assign _3567_ = _3561_ & ~_3566_;
+	assign _3568_ = \mchip.game2.scroll_inst.ctr [11] | ~\mchip.game2.scroll_inst.tick_time [11];
+	assign _3569_ = \mchip.game2.scroll_inst.ctr [10] | ~\mchip.game2.scroll_inst.tick_time [10];
+	assign _3570_ = _3525_ & ~_3569_;
+	assign _3571_ = _3568_ & ~_3570_;
+	assign _3572_ = \mchip.game2.scroll_inst.ctr [9] | ~\mchip.game2.scroll_inst.tick_time [9];
+	assign _3573_ = \mchip.game2.scroll_inst.tick_time [8] & ~\mchip.game2.scroll_inst.ctr [8];
+	assign _3574_ = _3573_ & ~_3523_;
+	assign _3575_ = _3572_ & ~_3574_;
+	assign _3576_ = ~(_3575_ | _3527_);
+	assign _3577_ = _3571_ & ~_3576_;
+	assign _3578_ = ~(_3577_ | _3535_);
+	assign _3579_ = _3567_ & ~_3578_;
+	assign _3580_ = \mchip.game2.scroll_inst.ctr [7] | ~\mchip.game2.scroll_inst.tick_time [7];
+	assign _3581_ = \mchip.game2.scroll_inst.ctr [6] | ~\mchip.game2.scroll_inst.tick_time [6];
+	assign _3582_ = _3540_ & ~_3581_;
+	assign _3583_ = _3580_ & ~_3582_;
+	assign _3584_ = \mchip.game2.scroll_inst.ctr [5] | ~\mchip.game2.scroll_inst.tick_time [5];
+	assign _3585_ = \mchip.game2.scroll_inst.tick_time [4] & ~\mchip.game2.scroll_inst.ctr [4];
+	assign _3586_ = _3585_ & ~_3538_;
+	assign _3587_ = _3584_ & ~_3586_;
+	assign _3588_ = ~(_3587_ | _3542_);
+	assign _3589_ = _3583_ & ~_3588_;
+	assign _3590_ = \mchip.game2.scroll_inst.ctr [3] | ~\mchip.game2.scroll_inst.tick_time [3];
+	assign _3591_ = \mchip.game2.scroll_inst.tick_time [2] & ~\mchip.game2.scroll_inst.ctr [2];
+	assign _3592_ = _3591_ & ~_3545_;
+	assign _3593_ = _3590_ & ~_3592_;
+	assign _3594_ = \mchip.game2.scroll_inst.ctr [1] | ~\mchip.game2.scroll_inst.tick_time [1];
+	assign _3595_ = \mchip.game2.scroll_inst.ctr [0] & ~\mchip.game2.scroll_inst.tick_time [0];
+	assign _3596_ = _3547_ & ~_3595_;
+	assign _3597_ = _3594_ & ~_3596_;
+	assign _3598_ = _3546_ & ~_3597_;
+	assign _3599_ = _3593_ & ~_3598_;
+	assign _3600_ = _3543_ & ~_3599_;
+	assign _3601_ = _3589_ & ~_3600_;
+	assign _3602_ = _3536_ & ~_3601_;
+	assign _3603_ = _3579_ & ~_3602_;
+	assign _3604_ = _3521_ & ~_3603_;
+	assign _3605_ = _3557_ & ~_3604_;
+	assign _3606_ = _3553_ & ~_3605_;
+	assign _0002_ = _0163_ & ~_3606_;
+	assign _3607_ = ~\mchip.game2.game_over ;
+	assign _3608_ = \mchip.game2.start_ctr [22] | ~_0162_;
+	assign _3609_ = _3607_ & ~_3608_;
+	assign _3610_ = ~\mchip.game2.vga_inst.vaddr [7];
+	assign _3611_ = ~(\mchip.game2.jumping_inst.jump_pos [6] & \mchip.game2.vga_inst.vaddr [6]);
+	assign _3612_ = _3611_ | _3610_;
+	assign _3613_ = \mchip.game2.jumping_inst.jump_pos [6] ^ \mchip.game2.vga_inst.vaddr [6];
+	assign _3614_ = _3613_ & ~_3610_;
+	assign _3615_ = ~(\mchip.game2.jumping_inst.jump_pos [5] & \mchip.game2.vga_inst.vaddr [5]);
+	assign _3616_ = \mchip.game2.jumping_inst.jump_pos [4] & \mchip.game2.vga_inst.vaddr [4];
+	assign _3617_ = ~_3616_;
+	assign _3618_ = \mchip.game2.jumping_inst.jump_pos [5] | \mchip.game2.vga_inst.vaddr [5];
+	assign _3619_ = _3618_ & _3615_;
+	assign _0164_ = _3619_ & ~_3617_;
+	assign _0165_ = _3615_ & ~_0164_;
+	assign _0166_ = _3614_ & ~_0165_;
+	assign _0167_ = _3612_ & ~_0166_;
+	assign _0168_ = \mchip.game2.jumping_inst.jump_pos [4] ^ \mchip.game2.vga_inst.vaddr [4];
+	assign _0169_ = ~_0168_;
+	assign _0170_ = _3619_ & ~_0169_;
+	assign _0171_ = _0170_ & _3614_;
+	assign _0172_ = \mchip.game2.jumping_inst.jump_pos [3] & \mchip.game2.vga_inst.vaddr [3];
+	assign _0173_ = \mchip.game2.jumping_inst.jump_pos [2] & \mchip.game2.vga_inst.vaddr [2];
+	assign _0174_ = \mchip.game2.jumping_inst.jump_pos [3] ^ \mchip.game2.vga_inst.vaddr [3];
+	assign _0175_ = ~(_0174_ & _0173_);
+	assign _0176_ = _0175_ & ~_0172_;
+	assign _0177_ = ~(\mchip.game2.jumping_inst.jump_pos [2] | \mchip.game2.vga_inst.vaddr [2]);
+	assign _0178_ = ~(_0177_ | _0173_);
+	assign _0179_ = _0178_ & _0174_;
+	assign _0180_ = ~(\mchip.game2.jumping_inst.jump_pos [0] & \mchip.game2.vga_inst.vaddr [0]);
+	assign _0181_ = ~(\mchip.game2.jumping_inst.jump_pos [1] ^ \mchip.game2.vga_inst.vaddr [1]);
+	assign _0182_ = _0181_ | _0180_;
+	assign _0183_ = \mchip.game2.jumping_inst.jump_pos [1] & \mchip.game2.vga_inst.vaddr [1];
+	assign _0184_ = _0182_ & ~_0183_;
+	assign _0185_ = _0179_ & ~_0184_;
+	assign _0186_ = _0176_ & ~_0185_;
+	assign _0187_ = _0171_ & ~_0186_;
+	assign _0188_ = _0167_ & ~_0187_;
+	assign _0189_ = \mchip.game2.vga_inst.vaddr [8] & \mchip.game2.vga_inst.vaddr [9];
+	assign _0190_ = _0188_ | ~_0189_;
+	assign _0191_ = ~\mchip.game2.vga_inst.vaddr [8];
+	assign _0192_ = _0188_ ^ _0191_;
+	assign _0193_ = \mchip.game2.vga_inst.vaddr [8] & ~_0188_;
+	assign _0194_ = _0193_ ^ \mchip.game2.vga_inst.vaddr [9];
+	assign _0195_ = _0194_ | _0192_;
+	assign _0196_ = _0190_ & ~_0195_;
+	assign _0197_ = _0184_ | ~_0178_;
+	assign _0198_ = _0197_ & ~_0173_;
+	assign _0199_ = _0198_ ^ _0174_;
+	assign _0200_ = _0184_ ^ _0178_;
+	assign _0201_ = _0200_ & ~_0199_;
+	assign _0202_ = \mchip.game2.jumping_inst.jump_pos [0] ^ \mchip.game2.vga_inst.vaddr [0];
+	assign _0203_ = _0181_ ^ _0180_;
+	assign _0204_ = _0203_ | _0202_;
+	assign _0205_ = _0201_ & ~_0204_;
+	assign _0206_ = _0170_ & ~_0186_;
+	assign _0207_ = _0165_ & ~_0206_;
+	assign _0208_ = _3613_ & ~_0207_;
+	assign _0209_ = _3611_ & ~_0208_;
+	assign _0210_ = _0209_ ^ \mchip.game2.vga_inst.vaddr [7];
+	assign _0211_ = ~(_0207_ ^ _3613_);
+	assign _0212_ = _0210_ | ~_0211_;
+	assign _0213_ = _0186_ ^ _0169_;
+	assign _0214_ = ~(_0186_ | _0169_);
+	assign _0215_ = _3617_ & ~_0214_;
+	assign _0216_ = ~(_0215_ ^ _3619_);
+	assign _0217_ = ~(_0216_ & _0213_);
+	assign _0218_ = _0217_ | _0212_;
+	assign _0219_ = _0218_ | ~_0205_;
+	assign _0220_ = _0196_ & ~_0219_;
+	assign _0221_ = ~(_0205_ | _0199_);
+	assign _0222_ = _0221_ | _0218_;
+	assign _0223_ = _0218_ | ~_0222_;
+	assign _0224_ = ~(_0223_ & _0196_);
+	assign _0225_ = _0224_ | _0220_;
+	assign _0226_ = _0195_ | ~_0210_;
+	assign _0227_ = _0211_ | _0210_;
+	assign _0228_ = ~(_0227_ | _0195_);
+	assign _0229_ = _0216_ | _0213_;
+	assign _0230_ = _0213_ & ~_0216_;
+	assign _0231_ = ~(_0200_ | _0199_);
+	assign _0232_ = _0230_ & ~_0231_;
+	assign _0233_ = _0229_ & ~_0232_;
+	assign _0234_ = _0228_ & ~_0233_;
+	assign _0235_ = _0226_ & ~_0234_;
+	assign _0236_ = _0190_ & ~_0235_;
+	assign _0237_ = ~(\mchip.game2.vga_inst.haddr [9] | \mchip.game2.vga_inst.haddr [8]);
+	assign _0238_ = \mchip.game2.vga_inst.haddr [7] | ~\mchip.game2.vga_inst.haddr [6];
+	assign _0239_ = ~(\mchip.game2.vga_inst.haddr [4] | \mchip.game2.vga_inst.haddr [5]);
+	assign _0240_ = _0238_ | ~_0239_;
+	assign _0241_ = \mchip.game2.vga_inst.haddr [1] & \mchip.game2.vga_inst.haddr [0];
+	assign _0242_ = \mchip.game2.vga_inst.haddr [2] | ~\mchip.game2.vga_inst.haddr [3];
+	assign _0243_ = _0242_ | ~_0241_;
+	assign _0244_ = _0243_ | _0240_;
+	assign _0245_ = _0237_ & ~_0244_;
+	assign _0246_ = ~(_0237_ & _3182_);
+	assign _0247_ = _0237_ & ~_0238_;
+	assign _0248_ = ~(\mchip.game2.vga_inst.haddr [2] & \mchip.game2.vga_inst.haddr [3]);
+	assign _0249_ = ~(_0248_ & _0239_);
+	assign _0250_ = _0247_ & ~_0249_;
+	assign _0251_ = _0246_ & ~_0250_;
+	assign _0252_ = _0251_ | _0245_;
+	assign _0253_ = _0241_ & ~_0248_;
+	assign _0254_ = \mchip.game2.vga_inst.haddr [5] | ~\mchip.game2.vga_inst.haddr [4];
+	assign _0255_ = _0254_ | ~_3182_;
+	assign _0256_ = _0255_ | _0253_;
+	assign _0257_ = _0239_ & _3182_;
+	assign _0258_ = _0256_ & ~_0257_;
+	assign _0259_ = _0237_ & ~_0258_;
+	assign _0260_ = _0259_ | _0252_;
+	assign _0261_ = _0260_ | _0236_;
+	assign _0262_ = _0261_ | _0225_;
+	assign _0263_ = _0262_ | _3609_;
+	assign _0264_ = io_in[13] | ~_3229_;
+	assign _0018_ = _0264_ | _0263_;
+	assign _0265_ = ~(\mchip.game2.scroll_inst.pos [8] | \mchip.game2.scroll_inst.pos [9]);
+	assign _0266_ = \mchip.game2.scroll_inst.pos [8] & ~\mchip.game2.scroll_inst.pos [9];
+	assign _0267_ = \mchip.game2.scroll_inst.pos [6] & \mchip.game2.scroll_inst.pos [7];
+	assign _0268_ = \mchip.game2.scroll_inst.pos [4] | \mchip.game2.scroll_inst.pos [5];
+	assign _0269_ = _0267_ & ~_0268_;
+	assign _0270_ = \mchip.game2.scroll_inst.pos [0] & \mchip.game2.scroll_inst.pos [1];
+	assign _0271_ = \mchip.game2.scroll_inst.pos [2] | \mchip.game2.scroll_inst.pos [3];
+	assign _0272_ = _0271_ | _0270_;
+	assign _0273_ = _0269_ & ~_0272_;
+	assign _0274_ = _0267_ & ~_0273_;
+	assign _0275_ = _0266_ & ~_0274_;
+	assign _0276_ = ~(_0275_ | _0265_);
+	assign _0277_ = \mchip.game2.scroll_inst.pos [0] | ~\mchip.game2.scroll_inst.pos [1];
+	assign _0278_ = ~(_0277_ | _0271_);
+	assign _0279_ = ~(_0278_ & _0269_);
+	assign _0280_ = _0266_ & ~_0279_;
+	assign _0281_ = ~(_0280_ | _0276_);
+	assign _0282_ = ~(\mchip.game2.scroll_inst.pos [0] | \mchip.game2.scroll_inst.pos [1]);
+	assign _0283_ = ~(\mchip.game2.scroll_inst.pos [2] & \mchip.game2.scroll_inst.pos [3]);
+	assign _0284_ = _0282_ & ~_0283_;
+	assign _0285_ = ~(_0284_ & _0269_);
+	assign _0286_ = _0266_ & ~_0285_;
+	assign _0287_ = ~(_0283_ | _0282_);
+	assign _0288_ = _0269_ & ~_0287_;
+	assign _0289_ = _0267_ & ~_0288_;
+	assign _0290_ = _0289_ | ~_0266_;
+	assign _0291_ = _0290_ & ~_0265_;
+	assign _0292_ = _0291_ | _0286_;
+	assign _0090_ = ~(_0292_ | _0281_);
+	assign _0293_ = \mchip.game2.scroll_inst.pos [4] & ~\mchip.game2.scroll_inst.pos [5];
+	assign _0294_ = \mchip.game2.scroll_inst.pos [7] | ~\mchip.game2.scroll_inst.pos [6];
+	assign _0295_ = _0293_ & ~_0294_;
+	assign _0296_ = \mchip.game2.scroll_inst.pos [1] | ~\mchip.game2.scroll_inst.pos [0];
+	assign _0297_ = ~(_0296_ | _0283_);
+	assign _0298_ = ~(_0297_ & _0295_);
+	assign _0299_ = ~(_0265_ & \mchip.game2.scroll_inst.pos [10]);
+	assign _0300_ = _0299_ | _0298_;
+	assign _0301_ = ~\mchip.game2.scroll_inst.pos [10];
+	assign _0302_ = \mchip.game2.scroll_inst.pos [5] & ~_0294_;
+	assign _0303_ = _0302_ | \mchip.game2.scroll_inst.pos [7];
+	assign _0304_ = _0283_ | _0282_;
+	assign _0305_ = _0295_ & ~_0304_;
+	assign _0306_ = _0305_ | _0303_;
+	assign _0307_ = _0265_ & ~_0306_;
+	assign _0308_ = _0307_ | _0301_;
+	assign _0309_ = _0308_ | ~_0300_;
+	assign _0310_ = _0309_ & ~_0090_;
+	assign _0007_ = _3229_ & ~_0310_;
+	assign _0311_ = \mchip.game2.rendering_inst.layers [3] | \mchip.game2.rendering_inst.layers [4];
+	assign _0312_ = \mchip.game2.rendering_inst.layers [1] | \mchip.game2.rendering_inst.layers [2];
+	assign _0313_ = \mchip.game2.score_inst.pixel  | \mchip.game2.rendering_inst.layers [0];
+	assign _0314_ = _0313_ | _0312_;
+	assign \mchip.game2.dbg_pixel  = _0314_ | _0311_;
+	assign _0315_ = io_in[13] | ~\mchip.game2.rendering_inst.cactus_select [2];
+	assign _0016_ = _0315_ | _3230_;
+	assign _0316_ = \mchip.game2.scroll_inst.pos [6] | \mchip.game2.scroll_inst.pos [7];
+	assign _0317_ = _0316_ | _0268_;
+	assign _0318_ = \mchip.game2.scroll_inst.pos [3] | ~\mchip.game2.scroll_inst.pos [2];
+	assign _0319_ = _0282_ & ~_0318_;
+	assign _0320_ = _0317_ | ~_0319_;
+	assign _0321_ = _0266_ & ~_0320_;
+	assign _0322_ = _0271_ & ~_0319_;
+	assign _0323_ = _0322_ | _0317_;
+	assign _0324_ = _0266_ & ~_0323_;
+	assign _0325_ = ~(_0324_ | _0265_);
+	assign _0326_ = ~(_0325_ | _0321_);
+	assign _0327_ = ~(\mchip.game2.scroll_inst.pos [4] & \mchip.game2.scroll_inst.pos [5]);
+	assign _0328_ = _0267_ & ~_0327_;
+	assign _0329_ = \mchip.game2.scroll_inst.pos [2] | ~\mchip.game2.scroll_inst.pos [3];
+	assign _0330_ = ~(_0329_ | _0270_);
+	assign _0331_ = \mchip.game2.scroll_inst.pos [3] & ~_0330_;
+	assign _0332_ = _0328_ & ~_0331_;
+	assign _0333_ = _0328_ & ~_0332_;
+	assign _0334_ = _0265_ & ~_0333_;
+	assign _0335_ = _0329_ | _0277_;
+	assign _0336_ = _0335_ | ~_0328_;
+	assign _0337_ = _0265_ & ~_0336_;
+	assign _0338_ = _0334_ & ~_0337_;
+	assign _0089_ = _0326_ & ~_0338_;
+	assign _0339_ = ~\mchip.game2.jumping_inst.in_air ;
+	assign _0011_ = _0163_ & ~_0339_;
+	assign _0340_ = io_in[0] & \mchip.game2.game_over ;
+	assign _0341_ = ~(\mchip.game2.no_jump_ctr [19] | \mchip.game2.no_jump_ctr [18]);
+	assign _0342_ = \mchip.game2.no_jump_ctr [17] | ~\mchip.game2.no_jump_ctr [16];
+	assign _0343_ = _0341_ & ~_0342_;
+	assign _0344_ = \mchip.game2.no_jump_ctr [15] & ~\mchip.game2.no_jump_ctr [14];
+	assign _0345_ = \mchip.game2.no_jump_ctr [12] | \mchip.game2.no_jump_ctr [13];
+	assign _0346_ = _0344_ & ~_0345_;
+	assign _0347_ = \mchip.game2.no_jump_ctr [10] | \mchip.game2.no_jump_ctr [11];
+	assign _0348_ = \mchip.game2.no_jump_ctr [11] | ~\mchip.game2.no_jump_ctr [10];
+	assign _0349_ = ~(_0348_ | \mchip.game2.no_jump_ctr [9]);
+	assign _0350_ = _0347_ & ~_0349_;
+	assign _0351_ = _0346_ & ~_0350_;
+	assign _0352_ = \mchip.game2.no_jump_ctr [15] & ~_0351_;
+	assign _0353_ = \mchip.game2.no_jump_ctr [8] | ~\mchip.game2.no_jump_ctr [9];
+	assign _0354_ = _0353_ | _0348_;
+	assign _0355_ = _0346_ & ~_0354_;
+	assign _0356_ = \mchip.game2.no_jump_ctr [7] & ~\mchip.game2.no_jump_ctr [6];
+	assign _0357_ = _0356_ & ~\mchip.game2.no_jump_ctr [5];
+	assign _0358_ = \mchip.game2.no_jump_ctr [7] & ~_0357_;
+	assign _0359_ = \mchip.game2.no_jump_ctr [4] | ~\mchip.game2.no_jump_ctr [5];
+	assign _0360_ = _0356_ & ~_0359_;
+	assign _0361_ = \mchip.game2.no_jump_ctr [0] | \mchip.game2.no_jump_ctr [1];
+	assign _0362_ = \mchip.game2.no_jump_ctr [2] | \mchip.game2.no_jump_ctr [3];
+	assign _0363_ = _0362_ | _0361_;
+	assign _0364_ = _0360_ & ~_0363_;
+	assign _0365_ = _0358_ & ~_0364_;
+	assign _0366_ = _0355_ & ~_0365_;
+	assign _0367_ = _0352_ & ~_0366_;
+	assign _0368_ = _0343_ & ~_0367_;
+	assign _0369_ = \mchip.game2.no_jump_ctr [16] | \mchip.game2.no_jump_ctr [17];
+	assign _0370_ = _0341_ & ~_0369_;
+	assign _0371_ = _0370_ | _0368_;
+	assign _0372_ = _0340_ & ~_0371_;
+	assign _0373_ = \mchip.game2.rendering_inst.layers [3] | \mchip.game2.rendering_inst.layers [1];
+	assign _0374_ = _0373_ | \mchip.game2.rendering_inst.layers [4];
+	assign _0375_ = _0374_ & \mchip.game2.rendering_inst.layers [0];
+	assign _0376_ = _0375_ & ~io_in[2];
+	assign _0001_ = _0376_ | _0372_;
+	assign _0377_ = \mchip.game2.scroll_inst.pos [8] & \mchip.game2.scroll_inst.pos [9];
+	assign _0378_ = ~_0377_;
+	assign _0379_ = ~(_0318_ | _0296_);
+	assign _0380_ = \mchip.game2.scroll_inst.pos [6] | ~\mchip.game2.scroll_inst.pos [7];
+	assign _0381_ = _0293_ & ~_0380_;
+	assign _0382_ = ~(_0381_ & _0379_);
+	assign _0383_ = _0382_ | _0378_;
+	assign _0384_ = \mchip.game2.scroll_inst.pos [5] & ~_0380_;
+	assign _0385_ = ~(_0384_ | _0267_);
+	assign _0386_ = _0318_ | _0282_;
+	assign _0387_ = _0386_ & ~\mchip.game2.scroll_inst.pos [3];
+	assign _0388_ = _0381_ & ~_0387_;
+	assign _0389_ = _0385_ & ~_0388_;
+	assign _0390_ = _0389_ | _0378_;
+	assign _0391_ = _0390_ | ~_0383_;
+	assign _0392_ = _0391_ & ~_0089_;
+	assign _0008_ = _3229_ & ~_0392_;
+	assign _0019_ = io_in[0] | io_in[13];
+	assign _0393_ = _0331_ | _0317_;
+	assign _0394_ = _0265_ & ~_0393_;
+	assign _0395_ = _0335_ | _0317_;
+	assign _0396_ = _0265_ & ~_0395_;
+	assign _0088_ = _0394_ & ~_0396_;
+	assign _0397_ = _3198_ & _3190_;
+	assign _0398_ = ~(_0397_ & _3194_);
+	assign _0399_ = _3188_ & ~_0398_;
+	assign _0400_ = _3206_ & _3193_;
+	assign _0401_ = _0400_ | ~_3205_;
+	assign _0402_ = _0401_ & ~_3210_;
+	assign _0403_ = _0402_ | _0399_;
+	assign _0404_ = \mchip.game2.vga_inst.vaddr [3] | ~\mchip.game2.vga_inst.vaddr [2];
+	assign _0405_ = _3219_ & ~_0404_;
+	assign _0406_ = _3218_ & ~_0405_;
+	assign _0407_ = _3194_ & ~_0406_;
+	assign _0408_ = _3194_ & ~_0407_;
+	assign _0409_ = _3188_ & ~_0408_;
+	assign _0410_ = _0409_ | _0403_;
+	assign _0017_ = _0410_ | _0264_;
+	assign _0411_ = \mchip.game2.dinosprite_inst.ctr [21] & ~\mchip.game2.dinosprite_inst.ctr [20];
+	assign _0412_ = \mchip.game2.dinosprite_inst.ctr [22] | \mchip.game2.dinosprite_inst.ctr [23];
+	assign _0413_ = _0411_ & ~_0412_;
+	assign _0414_ = \mchip.game2.dinosprite_inst.ctr [16] & ~\mchip.game2.dinosprite_inst.ctr [17];
+	assign _0415_ = \mchip.game2.dinosprite_inst.ctr [18] & \mchip.game2.dinosprite_inst.ctr [19];
+	assign _0416_ = ~(_0415_ & _0414_);
+	assign _0417_ = _0416_ | ~_0413_;
+	assign _0418_ = _0417_ | \mchip.game2.dinosprite_inst.ctr [24];
+	assign _0419_ = \mchip.game2.dinosprite_inst.ctr [9] & ~\mchip.game2.dinosprite_inst.ctr [8];
+	assign _0420_ = \mchip.game2.dinosprite_inst.ctr [11] | ~\mchip.game2.dinosprite_inst.ctr [10];
+	assign _0421_ = _0419_ & ~_0420_;
+	assign _0422_ = \mchip.game2.dinosprite_inst.ctr [12] | \mchip.game2.dinosprite_inst.ctr [13];
+	assign _0423_ = ~(\mchip.game2.dinosprite_inst.ctr [14] & \mchip.game2.dinosprite_inst.ctr [15]);
+	assign _0424_ = _0423_ | _0422_;
+	assign _0425_ = _0421_ & ~_0424_;
+	assign _0426_ = ~(\mchip.game2.dinosprite_inst.ctr [0] | \mchip.game2.dinosprite_inst.ctr [1]);
+	assign _0427_ = \mchip.game2.dinosprite_inst.ctr [2] | \mchip.game2.dinosprite_inst.ctr [3];
+	assign _0428_ = _0426_ & ~_0427_;
+	assign _0429_ = ~(\mchip.game2.dinosprite_inst.ctr [4] | \mchip.game2.dinosprite_inst.ctr [5]);
+	assign _0430_ = \mchip.game2.dinosprite_inst.ctr [6] & \mchip.game2.dinosprite_inst.ctr [7];
+	assign _0431_ = ~(_0430_ & _0429_);
+	assign _0432_ = _0428_ & ~_0431_;
+	assign _0433_ = ~(_0432_ & _0425_);
+	assign _0434_ = _0433_ | _0418_;
+	assign _0435_ = _0412_ | \mchip.game2.dinosprite_inst.ctr [21];
+	assign _0436_ = ~(\mchip.game2.dinosprite_inst.ctr [17] | \mchip.game2.dinosprite_inst.ctr [16]);
+	assign _0437_ = _0415_ & ~_0436_;
+	assign _0438_ = _0413_ & ~_0437_;
+	assign _0439_ = _0435_ & ~_0438_;
+	assign _0440_ = \mchip.game2.dinosprite_inst.ctr [10] | \mchip.game2.dinosprite_inst.ctr [11];
+	assign _0441_ = ~\mchip.game2.dinosprite_inst.ctr [9];
+	assign _0442_ = _0441_ & ~_0420_;
+	assign _0443_ = _0440_ & ~_0442_;
+	assign _0444_ = ~(_0443_ | _0424_);
+	assign _0445_ = ~(_0444_ | _0423_);
+	assign _0446_ = _0430_ & ~_0432_;
+	assign _0447_ = _0425_ & ~_0446_;
+	assign _0448_ = _0445_ & ~_0447_;
+	assign _0449_ = ~(_0448_ | _0417_);
+	assign _0450_ = _0439_ & ~_0449_;
+	assign _0451_ = _0450_ | \mchip.game2.dinosprite_inst.ctr [24];
+	assign _0452_ = _0434_ & ~_0451_;
+	assign _0012_ = _0163_ & ~_0452_;
+	assign _0020_ = _0372_ | io_in[13];
+	assign _0453_ = \mchip.game2.scroll_inst.pos [9] & ~\mchip.game2.scroll_inst.pos [8];
+	assign _0454_ = _0270_ & ~_0329_;
+	assign _0455_ = _0454_ & _0381_;
+	assign _0456_ = ~(_0455_ & _0453_);
+	assign _0457_ = _0283_ & ~_0454_;
+	assign _0458_ = _0381_ & ~_0457_;
+	assign _0459_ = _0385_ & ~_0458_;
+	assign _0460_ = _0453_ & ~_0459_;
+	assign _0461_ = _0378_ & ~_0460_;
+	assign _0462_ = _0461_ | ~_0456_;
+	assign _0463_ = _0462_ & ~_0088_;
+	assign _0009_ = _3229_ & ~_0463_;
+	assign _0464_ = \mchip.game2.jumping_inst.ctr [22] | \mchip.game2.jumping_inst.ctr [23];
+	assign _0465_ = \mchip.game2.jumping_inst.ctr [20] | \mchip.game2.jumping_inst.ctr [21];
+	assign _0466_ = _0465_ | _0464_;
+	assign _0467_ = \mchip.game2.jumping_inst.ctr [18] | \mchip.game2.jumping_inst.ctr [19];
+	assign _0468_ = ~(\mchip.game2.jumping_inst.ctr [16] & \mchip.game2.jumping_inst.ctr [17]);
+	assign _0469_ = _0468_ | _0467_;
+	assign _0470_ = _0469_ | _0466_;
+	assign _0471_ = ~(\mchip.game2.jumping_inst.ctr [14] & \mchip.game2.jumping_inst.ctr [15]);
+	assign _0472_ = \mchip.game2.jumping_inst.ctr [13] | ~\mchip.game2.jumping_inst.ctr [12];
+	assign _0473_ = _0472_ | _0471_;
+	assign _0474_ = \mchip.game2.jumping_inst.ctr [10] | \mchip.game2.jumping_inst.ctr [11];
+	assign _0475_ = \mchip.game2.jumping_inst.ctr [8] | \mchip.game2.jumping_inst.ctr [9];
+	assign _0476_ = _0475_ | _0474_;
+	assign _0477_ = _0476_ | _0473_;
+	assign _0478_ = \mchip.game2.jumping_inst.ctr [6] | ~\mchip.game2.jumping_inst.ctr [7];
+	assign _0479_ = \mchip.game2.jumping_inst.ctr [5] | ~\mchip.game2.jumping_inst.ctr [4];
+	assign _0480_ = _0479_ | _0478_;
+	assign _0481_ = \mchip.game2.jumping_inst.ctr [2] | \mchip.game2.jumping_inst.ctr [3];
+	assign _0482_ = \mchip.game2.jumping_inst.ctr [0] | \mchip.game2.jumping_inst.ctr [1];
+	assign _0483_ = _0482_ | _0481_;
+	assign _0484_ = _0483_ | _0480_;
+	assign _0485_ = _0484_ | _0477_;
+	assign _0486_ = _0485_ | _0470_;
+	assign _0487_ = _0486_ | _0339_;
+	assign _0010_ = _0163_ & ~_0487_;
+	assign _0024_ = \mchip.game2.rendering_inst.cactus_select [2] & ~\mchip.game2.cactus_select_last [2];
+	assign _0025_ = \mchip.game2.rendering_inst.cactus_select [1] & ~\mchip.game2.cactus_select_last [1];
+	assign _0026_ = \mchip.game2.rendering_inst.cactus_select [0] & ~\mchip.game2.cactus_select_last [0];
+	assign _0488_ = \mchip.game2.vga_inst.vaddr [5] | ~\mchip.game2.vga_inst.vaddr [4];
+	assign _0489_ = \mchip.game2.vga_inst.vaddr [6] | \mchip.game2.vga_inst.vaddr [7];
+	assign _0490_ = _0489_ | _0488_;
+	assign _0491_ = _0490_ | _0406_;
+	assign _0492_ = _3207_ & ~_0489_;
+	assign _0493_ = _0491_ & ~_0492_;
+	assign _0494_ = _0493_ | _3197_;
+	assign _0495_ = \mchip.game2.vga_inst.vaddr [6] & ~\mchip.game2.vga_inst.vaddr [7];
+	assign _0496_ = ~(_0495_ & _3207_);
+	assign _0497_ = \mchip.game2.vga_inst.vaddr [0] & ~\mchip.game2.vga_inst.vaddr [1];
+	assign _0498_ = ~(_0497_ & _3190_);
+	assign _0499_ = _0498_ | _0496_;
+	assign _0500_ = _3188_ & ~_0499_;
+	assign _0501_ = ~\mchip.game2.vga_inst.vaddr [6];
+	assign _0502_ = ~(\mchip.game2.vga_inst.vaddr [7] | \mchip.game2.vga_inst.vaddr [8]);
+	assign _0503_ = ~(_0502_ & _0501_);
+	assign _0504_ = \mchip.game2.vga_inst.vaddr [5] | ~\mchip.game2.vga_inst.vaddr [6];
+	assign _0505_ = _0502_ & ~_0504_;
+	assign _0506_ = \mchip.game2.vga_inst.vaddr [3] | \mchip.game2.vga_inst.vaddr [4];
+	assign _0507_ = \mchip.game2.vga_inst.vaddr [3] & ~\mchip.game2.vga_inst.vaddr [4];
+	assign _0508_ = \mchip.game2.vga_inst.vaddr [1] | \mchip.game2.vga_inst.vaddr [2];
+	assign _0509_ = _0507_ & ~_0508_;
+	assign _0510_ = _0506_ & ~_0509_;
+	assign _0511_ = _0505_ & ~_0510_;
+	assign _0512_ = _0503_ & ~_0511_;
+	assign _0513_ = _0512_ | \mchip.game2.vga_inst.vaddr [9];
+	assign _0514_ = _0513_ | _0500_;
+	assign _0092_ = _0494_ & ~_0514_;
+	assign _0515_ = ~(_0497_ | _3189_);
+	assign _0516_ = ~\mchip.game2.vga_inst.vaddr [2];
+	assign _0517_ = _3198_ ^ _0516_;
+	assign _0518_ = _0517_ | ~_0515_;
+	assign _0519_ = ~\mchip.game2.vga_inst.vaddr [3];
+	assign _0520_ = _0516_ & ~_3198_;
+	assign _0521_ = _0520_ ^ _0519_;
+	assign _0522_ = _3198_ | \mchip.game2.vga_inst.vaddr [2];
+	assign _0523_ = (_0521_ ? _0518_ : _0522_);
+	assign _0524_ = ~(_0397_ | _3206_);
+	assign _0525_ = _0524_ ^ \mchip.game2.vga_inst.vaddr [4];
+	assign _0526_ = _0523_ | ~_0525_;
+	assign _0527_ = _0524_ & ~\mchip.game2.vga_inst.vaddr [4];
+	assign _0528_ = _0527_ ^ \mchip.game2.vga_inst.vaddr [5];
+	assign _0529_ = _0528_ | _0526_;
+	assign _0530_ = _0517_ & ~_0515_;
+	assign _0531_ = _0530_ & _0521_;
+	assign _0532_ = ~_0531_;
+	assign _0533_ = (_0528_ ? _0532_ : _0526_);
+	assign _0534_ = (_3470_ ? _0529_ : _0533_);
+	assign _0535_ = ~_3189_;
+	assign _0536_ = _0517_ & ~_0535_;
+	assign _0537_ = ~(_0536_ | _0521_);
+	assign _0538_ = _0530_ | _0521_;
+	assign _0539_ = (_0525_ ? _0537_ : _0538_);
+	assign _0540_ = _0528_ | ~_0539_;
+	assign _0541_ = _3198_ & ~\mchip.game2.vga_inst.vaddr [2];
+	assign _0542_ = _0521_ & ~_0541_;
+	assign _0543_ = (_0525_ ? _0542_ : _0537_);
+	assign _0544_ = _0543_ | _0528_;
+	assign _0545_ = (_3470_ ? _0540_ : _0544_);
+	assign _0546_ = (_3436_ ? _0534_ : _0545_);
+	assign _0547_ = _0546_ | _3467_;
+	assign _0548_ = _0547_ | _3473_;
+	assign _0549_ = _0521_ | _0518_;
+	assign _0550_ = _0549_ | _0525_;
+	assign _0551_ = ~(_0550_ | _0528_);
+	assign _0552_ = _0551_ | _3467_;
+	assign _0553_ = ~_0525_;
+	assign _0554_ = ~_0521_;
+	assign _0555_ = _0535_ & ~_0517_;
+	assign _0556_ = _0555_ | _0536_;
+	assign _0557_ = _0556_ | _0554_;
+	assign _0558_ = _0557_ | _0553_;
+	assign _0559_ = _0558_ | _0528_;
+	assign _0560_ = _0559_ | _3467_;
+	assign _0561_ = (_3470_ ? _0552_ : _0560_);
+	assign _0562_ = _0521_ | ~_0541_;
+	assign _0563_ = ~(_0562_ | _0525_);
+	assign _0564_ = _0563_ & ~_0528_;
+	assign _0565_ = _0564_ | _3467_;
+	assign _0566_ = (_3470_ ? _0552_ : _0565_);
+	assign _0567_ = (_3436_ ? _0561_ : _0566_);
+	assign _0568_ = ~_0528_;
+	assign _0569_ = _0521_ & ~_0555_;
+	assign _0570_ = ~_0569_;
+	assign _0571_ = ~_0517_;
+	assign _0572_ = _0521_ & ~_0571_;
+	assign _0573_ = (_0525_ ? _0570_ : _0572_);
+	assign _0574_ = ~(_0573_ & _0568_);
+	assign _0575_ = _0574_ | _3467_;
+	assign _0576_ = _0575_ | ~_3470_;
+	assign _0577_ = _0521_ & ~_0522_;
+	assign _0578_ = (_0525_ ? _0577_ : _0570_);
+	assign _0579_ = _0578_ | _0528_;
+	assign _0580_ = _0579_ | _3467_;
+	assign _0581_ = (_3470_ ? _0560_ : _0580_);
+	assign _0582_ = (_3436_ ? _0576_ : _0581_);
+	assign _0583_ = (_3473_ ? _0567_ : _0582_);
+	assign _0584_ = (_3475_ ? _0548_ : _0583_);
+	assign _0585_ = ~(_0584_ | _3462_);
+	assign _3631_ = _0585_ & ~_3460_;
+	assign _0586_ = _3219_ ^ _0516_;
+	assign _0587_ = _3189_ & ~_0586_;
+	assign _0588_ = _0587_ & ~_3470_;
+	assign _0589_ = (_0586_ ? \mchip.game2.vga_inst.vaddr [0] : _3189_);
+	assign _0590_ = ~\mchip.game2.vga_inst.vaddr [0];
+	assign _0591_ = (_0586_ ? _0590_ : _3189_);
+	assign _0592_ = (_3470_ ? _0589_ : _0591_);
+	assign _0593_ = (_3436_ ? _0588_ : _0592_);
+	assign _0594_ = (_3470_ ? _0591_ : _0587_);
+	assign _0595_ = (_3436_ ? _0594_ : _0587_);
+	assign _0596_ = (_3435_ ? _0593_ : _0595_);
+	assign _0597_ = _0590_ & ~_0586_;
+	assign _0598_ = (_3470_ ? _0587_ : _0597_);
+	assign _0599_ = (_3436_ ? _0598_ : _0587_);
+	assign _0600_ = (_3470_ ? _0587_ : _0589_);
+	assign _0601_ = (_3436_ ? _0587_ : _0600_);
+	assign _0602_ = (_3435_ ? _0599_ : _0601_);
+	assign _0603_ = (_3441_ ? _0596_ : _0602_);
+	assign _0604_ = (_3436_ ? _0587_ : _0598_);
+	assign _0605_ = (_3435_ ? _0587_ : _0604_);
+	assign _0606_ = (_3470_ ? _0589_ : _0587_);
+	assign _0607_ = (_3436_ ? _0606_ : _0594_);
+	assign _0608_ = (_3435_ ? _0587_ : _0607_);
+	assign _0609_ = (_3441_ ? _0605_ : _0608_);
+	assign _0610_ = (_3442_ ? _0603_ : _0609_);
+	assign _0611_ = (_3470_ ? _0597_ : _0587_);
+	assign _0612_ = (_3436_ ? _0611_ : _0597_);
+	assign _0613_ = (_3435_ ? _0612_ : _0587_);
+	assign _0614_ = (_3441_ ? _0605_ : _0613_);
+	assign _0615_ = (_3470_ ? _0587_ : _0591_);
+	assign _0616_ = (_3436_ ? _0615_ : _0611_);
+	assign _0617_ = (_3435_ ? _0616_ : _0595_);
+	assign _0618_ = (_3436_ ? _0591_ : _0611_);
+	assign _0619_ = (_3435_ ? _0587_ : _0618_);
+	assign _0620_ = (_3441_ ? _0617_ : _0619_);
+	assign _0621_ = (_3442_ ? _0614_ : _0620_);
+	assign _0622_ = (_3447_ ? _0610_ : _0621_);
+	assign _0623_ = (_3436_ ? _0587_ : _0606_);
+	assign _0624_ = (_3435_ ? _0623_ : _0601_);
+	assign _0625_ = (_3441_ ? _0624_ : _0587_);
+	assign _0626_ = _0497_ & ~_0586_;
+	assign _0627_ = (_3470_ ? _0587_ : _0626_);
+	assign _0628_ = (_0586_ ? \mchip.game2.vga_inst.vaddr [0] : _0497_);
+	assign _0629_ = _3219_ | _3198_;
+	assign _0630_ = ~(_0629_ | _0586_);
+	assign _0631_ = (_3470_ ? _0628_ : _0630_);
+	assign _0632_ = (_3436_ ? _0627_ : _0631_);
+	assign _0633_ = \mchip.game2.vga_inst.vaddr [1] & \mchip.game2.vga_inst.vaddr [2];
+	assign _0634_ = (_3470_ ? _0597_ : _0633_);
+	assign _0635_ = (_3436_ ? _0587_ : _0634_);
+	assign _0636_ = (_3435_ ? _0632_ : _0635_);
+	assign _0637_ = _3198_ & ~_0586_;
+	assign _0638_ = (_3470_ ? _0637_ : _0633_);
+	assign _0639_ = (_3436_ ? _0637_ : _0638_);
+	assign _0640_ = (_3436_ ? _0598_ : _0600_);
+	assign _0641_ = (_3435_ ? _0639_ : _0640_);
+	assign _0642_ = (_3441_ ? _0636_ : _0641_);
+	assign _0643_ = (_3442_ ? _0625_ : _0642_);
+	assign _0644_ = (_3470_ ? _0597_ : _0589_);
+	assign _0645_ = (_3436_ ? _0644_ : _0587_);
+	assign _0646_ = (_3435_ ? _0645_ : _0587_);
+	assign _0647_ = (_3441_ ? _0587_ : _0646_);
+	assign _0648_ = _0623_ & _3435_;
+	assign _0649_ = _0623_ & ~_3435_;
+	assign _0650_ = _0649_ | _0648_;
+	assign _0651_ = (_3435_ ? _0623_ : _0604_);
+	assign _0652_ = (_3441_ ? _0650_ : _0651_);
+	assign _0653_ = (_3442_ ? _0647_ : _0652_);
+	assign _0654_ = (_3447_ ? _0643_ : _0653_);
+	assign _0655_ = (_3450_ ? _0622_ : _0654_);
+	assign _0656_ = (_3436_ ? _0587_ : _0592_);
+	assign _0657_ = (_3435_ ? _0656_ : _0595_);
+	assign _0658_ = (_3441_ ? _0657_ : _0602_);
+	assign _0659_ = (_3442_ ? _0658_ : _0609_);
+	assign _0660_ = (_3447_ ? _0659_ : _0621_);
+	assign _0661_ = (_3450_ ? _0660_ : _0654_);
+	assign _3630_ = (_3454_ ? _0661_ : _0655_);
+	assign _0028_ = ~\mchip.game2.dinosprite_inst.sprite ;
+	assign _0662_ = ~\mchip.game2.vga_inst.haddr [3];
+	assign _0663_ = \mchip.game2.vga_inst.haddr [2] & \mchip.game2.vga_inst.haddr [1];
+	assign _0664_ = _0663_ & ~_0662_;
+	assign _0665_ = _0664_ ^ \mchip.game2.vga_inst.haddr [4];
+	assign _0666_ = ~\mchip.game2.vga_inst.haddr [1];
+	assign _0667_ = _0172_ & _0168_;
+	assign _0668_ = _0172_ ^ _0168_;
+	assign _0669_ = ~_0668_;
+	assign _0670_ = _0177_ | ~_0174_;
+	assign _0671_ = ~(\mchip.game2.jumping_inst.jump_pos [2] ^ \mchip.game2.vga_inst.vaddr [2]);
+	assign _0672_ = _0671_ & _0183_;
+	assign _0673_ = ~(_0177_ ^ _0174_);
 	assign _0674_ = _0673_ & _0672_;
-	assign _0675_ = _0674_ | _0671_;
-	assign _0676_ = _0675_ | _0668_;
-	assign _0677_ = ~(_0655_ & _0654_);
-	assign _0678_ = ~(_0677_ | _0669_);
-	assign _0679_ = _0674_ | _0678_;
-	assign _0680_ = _0662_ & ~_0679_;
-	assign _0681_ = _0676_ & ~_0680_;
-	assign _0682_ = ~(_0655_ | _0654_);
-	assign _0683_ = (_0672_ ? _0673_ : _0682_);
-	assign _0684_ = _0649_ & ~_0683_;
-	assign _0685_ = _0682_ & ~_0669_;
-	assign _0686_ = _0674_ | _0685_;
-	assign _0687_ = _0067_ & ~_0686_;
-	assign _0688_ = _0687_ | _0684_;
-	assign _0689_ = _0681_ & ~_0688_;
-	assign \mchip.design.inter.count_next [1] = _0652_ & ~_0689_;
-	assign _0690_ = _0669_ ^ _0654_;
-	assign _0691_ = _0690_ | _0671_;
-	assign _0692_ = _0691_ | _0668_;
-	assign _0693_ = _0690_ | _0678_;
-	assign _0694_ = _0662_ & ~_0693_;
-	assign _0695_ = _0692_ & ~_0694_;
-	assign _0696_ = _0682_ & ~_0672_;
-	assign _0697_ = _0690_ | _0696_;
-	assign _0698_ = _0649_ & ~_0697_;
-	assign _0699_ = _0690_ | _0685_;
-	assign _0700_ = _0067_ & ~_0699_;
-	assign _0701_ = _0700_ | _0698_;
-	assign _0702_ = _0695_ & ~_0701_;
-	assign \mchip.design.inter.count_next [2] = _0652_ & ~_0702_;
-	assign _0703_ = _0669_ | ~_0654_;
-	assign _0704_ = _0703_ ^ _0655_;
-	assign _0705_ = _0704_ | _0671_;
-	assign _0706_ = _0705_ | _0668_;
-	assign _0707_ = _0704_ | _0678_;
-	assign _0708_ = _0662_ & ~_0707_;
-	assign _0709_ = _0706_ & ~_0708_;
-	assign _0710_ = _0704_ | _0696_;
-	assign _0711_ = _0649_ & ~_0710_;
-	assign _0712_ = _0704_ | _0685_;
-	assign _0713_ = _0067_ & ~_0712_;
-	assign _0714_ = _0713_ | _0711_;
-	assign _0715_ = _0709_ & ~_0714_;
-	assign \mchip.design.inter.count_next [3] = _0652_ & ~_0715_;
-	assign \mchip.design.inter.Addr_reg [0] = _0146_ & ~io_in[13];
-	assign \mchip.design.inter.ENDP_reg [0] = _0138_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [8] = _0162_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [4] = _0158_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [0] = _0154_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [56] = _0468_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [52] = _0464_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [48] = _0460_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [44] = _0456_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [40] = _0452_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [36] = _0448_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [32] = _0444_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [28] = _0440_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [24] = _0436_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [20] = _0432_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [16] = _0428_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [12] = _0424_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [8] = _0420_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [4] = _0416_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [0] = _0412_ & ~io_in[13];
-	assign _0716_ = _0651_ & ~_0618_;
-	assign _0717_ = _2773_ & _0651_;
-	assign _0718_ = _0717_ | _0716_;
-	assign _0719_ = _0078_ & ~io_in[13];
-	assign _0720_ = ~(_0719_ & _0696_);
-	assign _0721_ = _0682_ & ~_0673_;
-	assign _0722_ = io_in[13] | ~_0082_;
-	assign _0723_ = _0721_ & ~_0722_;
-	assign _0724_ = io_in[13] | ~_0086_;
-	assign _0725_ = _0685_ & ~_0724_;
+	assign _0675_ = _0670_ & ~_0674_;
+	assign _0676_ = ~(\mchip.game2.jumping_inst.jump_pos [0] | \mchip.game2.vga_inst.vaddr [0]);
+	assign _0677_ = ~(_0676_ | _0181_);
+	assign _0678_ = _0671_ ^ _0183_;
+	assign _0679_ = ~(_0678_ & _0673_);
+	assign _0680_ = _0677_ & ~_0679_;
+	assign _0681_ = _0675_ & ~_0680_;
+	assign _0682_ = _0681_ | _0669_;
+	assign _0683_ = _0682_ & ~_0667_;
+	assign _0684_ = ~(\mchip.game2.jumping_inst.jump_pos [5] ^ \mchip.game2.vga_inst.vaddr [5]);
+	assign _0685_ = _0684_ ^ _3616_;
+	assign _0686_ = _0685_ ^ _0683_;
+	assign _0687_ = _0678_ ^ _0677_;
+	assign _0688_ = _0676_ ^ _0181_;
+	assign _0689_ = ~_0688_;
+	assign _0690_ = _0689_ & ~_0687_;
+	assign _0691_ = ~(_0678_ & _0677_);
+	assign _0692_ = _0691_ & ~_0672_;
+	assign _0693_ = ~(_0692_ ^ _0673_);
+	assign _0694_ = _0693_ & ~_0690_;
+	assign _0695_ = _0681_ ^ _0669_;
+	assign _0696_ = _0694_ | ~_0695_;
+	assign _0697_ = _0696_ | _0686_;
+	assign _0698_ = _0684_ & _3616_;
+	assign _0699_ = _0685_ & _0667_;
+	assign _0700_ = ~(_0699_ | _0698_);
+	assign _0701_ = ~(_0685_ & _0668_);
+	assign _0702_ = ~(_0701_ | _0681_);
+	assign _0703_ = _0700_ & ~_0702_;
+	assign _0704_ = ~(\mchip.game2.jumping_inst.jump_pos [6] ^ \mchip.game2.vga_inst.vaddr [6]);
+	assign _0705_ = _0704_ ^ _3618_;
+	assign _0706_ = ~(_0705_ ^ _0703_);
+	assign _0707_ = ~_0706_;
+	assign _0708_ = _0697_ | ~_0707_;
+	assign _0709_ = _0708_ | _0028_;
+	assign _0710_ = _0028_ & ~_0708_;
+	assign _0711_ = _0709_ & ~_0710_;
+	assign _0712_ = ~_0687_;
+	assign _0713_ = _0693_ & ~_0712_;
+	assign _0714_ = _0713_ | ~_0695_;
+	assign _0715_ = _0714_ | _0686_;
+	assign _0716_ = _0715_ | _0706_;
+	assign _0717_ = (\mchip.game2.game_over  ? _0716_ : _0711_);
+	assign _0718_ = ~(\mchip.game2.vga_inst.haddr [3] & \mchip.game2.vga_inst.haddr [4]);
+	assign _0719_ = _0663_ & ~_0718_;
+	assign _0720_ = _3174_ & ~_0719_;
+	assign _0721_ = _0720_ ^ \mchip.game2.vga_inst.haddr [7];
+	assign _0722_ = _0721_ | _0717_;
+	assign _0723_ = _0722_ | _0666_;
+	assign _0724_ = ~(\mchip.game2.vga_inst.haddr [2] | \mchip.game2.vga_inst.haddr [1]);
+	assign _0725_ = ~(_0724_ | _0663_);
 	assign _0726_ = _0725_ | _0723_;
-	assign _0727_ = _0720_ & ~_0726_;
-	assign _0728_ = _0090_ & ~io_in[13];
-	assign _0729_ = _0656_ | _0653_;
-	assign _0730_ = ~(_0729_ | _0670_);
-	assign _0731_ = _0730_ & _0728_;
-	assign _0732_ = io_in[13] | ~_0094_;
-	assign _0733_ = ~(_0670_ | _0672_);
-	assign _0734_ = _0733_ & ~_0732_;
-	assign _0735_ = _0734_ | _0731_;
-	assign _0736_ = ~(_0673_ | _0670_);
-	assign _0737_ = io_in[13] | ~_0098_;
-	assign _0738_ = _0736_ & ~_0737_;
-	assign _0739_ = io_in[13] | ~_0102_;
-	assign _0740_ = _0671_ & ~_0739_;
-	assign _0741_ = _0740_ | _0738_;
-	assign _0742_ = _0741_ | _0735_;
-	assign _0743_ = _0727_ & ~_0742_;
-	assign _0744_ = io_in[13] | ~_0134_;
-	assign _0745_ = _0678_ & ~_0744_;
-	assign _0746_ = ~(_0673_ | _0677_);
-	assign _0747_ = io_in[13] | ~_0130_;
+	assign _0727_ = _0663_ ^ \mchip.game2.vga_inst.haddr [3];
+	assign _0728_ = _0687_ & ~_0689_;
+	assign _0729_ = ~(_0728_ & _0693_);
+	assign _0730_ = (_0695_ ? _0694_ : _0729_);
+	assign _0731_ = _0730_ | _0686_;
+	assign _0732_ = _0731_ | ~_0707_;
+	assign _0733_ = _0732_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0734_ = \mchip.game2.dinosprite_inst.sprite  & ~_0732_;
+	assign _0735_ = _0733_ & ~_0734_;
+	assign _0736_ = (_0695_ ? _0713_ : _0729_);
+	assign _0737_ = _0736_ | _0686_;
+	assign _0738_ = _0737_ | ~_0707_;
+	assign _0739_ = (\mchip.game2.game_over  ? _0738_ : _0735_);
+	assign _0740_ = _0739_ | _0721_;
+	assign _0741_ = ~(_0676_ ^ _0181_);
+	assign _0742_ = _0693_ & ~_0741_;
+	assign _0743_ = (_0695_ ? _0742_ : _0729_);
+	assign _0744_ = _0743_ | _0686_;
+	assign _0745_ = _0744_ | ~_0707_;
+	assign _0746_ = _0745_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0747_ = \mchip.game2.dinosprite_inst.sprite  & ~_0745_;
 	assign _0748_ = _0746_ & ~_0747_;
-	assign _0749_ = _0748_ | _0745_;
-	assign _0750_ = io_in[13] | ~_0122_;
-	assign _0751_ = ~(_0729_ | _0677_);
-	assign _0752_ = _0751_ & ~_0750_;
-	assign _0753_ = io_in[13] | ~_0126_;
-	assign _0754_ = ~(_0677_ | _0672_);
-	assign _0755_ = _0754_ & ~_0753_;
-	assign _0756_ = _0755_ | _0752_;
-	assign _0757_ = _0756_ | _0749_;
-	assign _0758_ = io_in[13] | ~_0106_;
-	assign _0759_ = _0654_ | ~_0655_;
-	assign _0760_ = ~(_0759_ | _0729_);
-	assign _0761_ = _0760_ & ~_0758_;
-	assign _0762_ = io_in[13] | ~_0110_;
-	assign _0763_ = ~(_0759_ | _0672_);
-	assign _0764_ = _0763_ & ~_0762_;
-	assign _0765_ = _0764_ | _0761_;
-	assign _0766_ = io_in[13] | ~_0114_;
-	assign _0767_ = ~(_0759_ | _0673_);
-	assign _0768_ = _0767_ & ~_0766_;
-	assign _0769_ = io_in[13] | ~_0118_;
-	assign _0770_ = ~(_0759_ | _0669_);
-	assign _0771_ = _0770_ & ~_0769_;
-	assign _0772_ = _0771_ | _0768_;
-	assign _0773_ = _0772_ | _0765_;
-	assign _0774_ = _0773_ | _0757_;
-	assign _0775_ = _0774_ | ~_0743_;
-	assign _0776_ = io_in[13] | ~_0073_;
-	assign _0777_ = _0721_ | _0685_;
-	assign _0778_ = _0777_ | _0696_;
-	assign _0779_ = _0736_ | _0671_;
-	assign _0780_ = _0733_ | _0730_;
-	assign _0781_ = _0780_ | _0779_;
-	assign _0782_ = _0781_ | _0778_;
-	assign _0783_ = _0776_ & ~_0782_;
-	assign _0784_ = _0074_ & ~io_in[13];
-	assign _0785_ = (_0783_ ? _0784_ : _0775_);
-	assign _0786_ = ~(_0785_ & _0716_);
-	assign _0787_ = ~\mchip.design.inter.data_out_reg [0];
-	assign _0788_ = ~(\mchip.design.inter.data_out_reg [4] & _0696_);
-	assign _0789_ = _0721_ & \mchip.design.inter.data_out_reg [8];
-	assign _0790_ = \mchip.design.inter.data_out_reg [12] & _0685_;
-	assign _0791_ = _0790_ | _0789_;
-	assign _0792_ = _0788_ & ~_0791_;
-	assign _0793_ = _0730_ & \mchip.design.inter.data_out_reg [16];
-	assign _0794_ = _0733_ & \mchip.design.inter.data_out_reg [20];
-	assign _0795_ = _0794_ | _0793_;
-	assign _0796_ = _0736_ & \mchip.design.inter.data_out_reg [24];
-	assign _0797_ = \mchip.design.inter.data_out_reg [28] & _0671_;
-	assign _0798_ = _0797_ | _0796_;
-	assign _0799_ = _0798_ | _0795_;
-	assign _0800_ = _0792_ & ~_0799_;
-	assign _0801_ = io_in[13] | ~_0472_;
-	assign _0802_ = _0678_ & ~_0801_;
-	assign _0803_ = _0746_ & \mchip.design.inter.data_out_reg [56];
-	assign _0804_ = _0803_ | _0802_;
-	assign _0805_ = _0751_ & \mchip.design.inter.data_out_reg [48];
-	assign _0806_ = _0754_ & \mchip.design.inter.data_out_reg [52];
-	assign _0807_ = _0806_ | _0805_;
-	assign _0808_ = _0807_ | _0804_;
-	assign _0809_ = ~\mchip.design.inter.data_out_reg [32];
-	assign _0810_ = _0760_ & ~_0809_;
-	assign _0811_ = _0763_ & \mchip.design.inter.data_out_reg [36];
-	assign _0812_ = _0811_ | _0810_;
-	assign _0813_ = _0767_ & \mchip.design.inter.data_out_reg [40];
-	assign _0814_ = _0770_ & \mchip.design.inter.data_out_reg [44];
-	assign _0815_ = _0814_ | _0813_;
-	assign _0816_ = _0815_ | _0812_;
-	assign _0817_ = _0816_ | _0808_;
-	assign _0818_ = _0800_ & ~_0817_;
-	assign _0819_ = (_0783_ ? _0787_ : _0818_);
-	assign _0820_ = _0660_ & ~_0819_;
-	assign _0821_ = io_in[13] | ~_0150_;
-	assign _0822_ = _0821_ | ~_0671_;
-	assign _0823_ = _0736_ & \mchip.design.inter.Addr_reg [0];
-	assign _0824_ = _0822_ & ~_0823_;
-	assign _0825_ = _0730_ & \mchip.design.inter.ENDP_reg [0];
-	assign _0826_ = io_in[13] | ~_0142_;
-	assign _0827_ = _0733_ & ~_0826_;
-	assign _0828_ = _0827_ | _0825_;
-	assign _0829_ = _0824_ & ~_0828_;
-	assign _0830_ = ~\mchip.design.inter.mempage_reg [0];
-	assign _0831_ = _0682_ & ~_0729_;
-	assign _0832_ = _0831_ & ~_0830_;
-	assign _0833_ = ~\mchip.design.inter.mempage_reg [4];
-	assign _0834_ = _0696_ & ~_0833_;
-	assign _0835_ = _0834_ | _0832_;
-	assign _0836_ = ~\mchip.design.inter.mempage_reg [8];
-	assign _0837_ = _0721_ & ~_0836_;
-	assign _0838_ = io_in[13] | ~_0166_;
-	assign _0839_ = _0685_ & ~_0838_;
-	assign _0840_ = _0839_ | _0837_;
-	assign _0841_ = _0840_ | _0835_;
-	assign _0842_ = _0829_ & ~_0841_;
-	assign _0843_ = _0842_ | _0655_;
-	assign _0844_ = ~(_0843_ | _0668_);
-	assign _0845_ = _0844_ | _0820_;
-	assign _0846_ = _0786_ & ~_0845_;
-	assign io_out[2] = _0718_ & ~_0846_;
-	assign \mchip.design.inter.Addr_reg [1] = _0147_ & ~io_in[13];
-	assign \mchip.design.inter.ENDP_reg [1] = _0139_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [9] = _0163_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [5] = _0159_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [1] = _0155_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [1] = _0413_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [57] = _0469_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [53] = _0465_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [49] = _0461_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [45] = _0457_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [41] = _0453_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [37] = _0449_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [33] = _0445_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [29] = _0441_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [25] = _0437_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [21] = _0433_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [17] = _0429_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [13] = _0425_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [9] = _0421_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [5] = _0417_ & ~io_in[13];
-	assign _0847_ = io_in[13] | ~_0151_;
-	assign _0848_ = _0847_ | ~_0671_;
-	assign _0849_ = ~\mchip.design.inter.Addr_reg [1];
-	assign _0850_ = _0736_ & ~_0849_;
-	assign _0851_ = _0848_ & ~_0850_;
-	assign _0852_ = ~\mchip.design.inter.ENDP_reg [1];
-	assign _0853_ = _0730_ & ~_0852_;
-	assign _0854_ = io_in[13] | ~_0143_;
-	assign _0855_ = _0733_ & ~_0854_;
-	assign _0856_ = _0855_ | _0853_;
-	assign _0857_ = _0851_ & ~_0856_;
-	assign _0858_ = ~\mchip.design.inter.mempage_reg [1];
-	assign _0859_ = _0831_ & ~_0858_;
-	assign _0860_ = ~\mchip.design.inter.mempage_reg [5];
-	assign _0861_ = _0696_ & ~_0860_;
-	assign _0862_ = _0861_ | _0859_;
-	assign _0863_ = ~\mchip.design.inter.mempage_reg [9];
-	assign _0864_ = _0721_ & ~_0863_;
-	assign _0865_ = io_in[13] | ~_0167_;
-	assign _0866_ = _0685_ & ~_0865_;
-	assign _0867_ = _0866_ | _0864_;
-	assign _0868_ = _0867_ | _0862_;
-	assign _0869_ = _0857_ & ~_0868_;
-	assign _0870_ = _0869_ | _0655_;
-	assign _0871_ = _0870_ | _0668_;
-	assign _0872_ = io_in[13] | ~_0473_;
-	assign _0873_ = _0872_ | ~_0678_;
-	assign _0874_ = \mchip.design.inter.data_out_reg [57] & _0746_;
+	assign _0749_ = _0729_ & ~_0695_;
+	assign _0750_ = _0729_ | ~_0695_;
+	assign _0751_ = _0749_ | ~_0750_;
+	assign _0752_ = _0751_ | _0686_;
+	assign _0753_ = _0752_ | ~_0707_;
+	assign _0754_ = (\mchip.game2.game_over  ? _0753_ : _0748_);
+	assign _0755_ = _0754_ | _0721_;
+	assign _0756_ = (\mchip.game2.vga_inst.haddr [1] ? _0755_ : _0740_);
+	assign _0757_ = _0689_ ^ _0687_;
+	assign _0758_ = _0757_ | _0693_;
+	assign _0759_ = _0758_ | _0695_;
+	assign _0760_ = (_0706_ ? _0759_ : _0744_);
+	assign _0761_ = _0760_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0762_ = \mchip.game2.dinosprite_inst.sprite  & ~_0760_;
+	assign _0763_ = _0761_ & ~_0762_;
+	assign _0764_ = (_0706_ ? _0759_ : _0752_);
+	assign _0765_ = (\mchip.game2.game_over  ? _0764_ : _0763_);
+	assign _0766_ = _0765_ | _0721_;
+	assign _0767_ = (\mchip.game2.vga_inst.haddr [1] ? _0766_ : _0755_);
+	assign _0768_ = (_0725_ ? _0756_ : _0767_);
+	assign _0769_ = (_0727_ ? _0726_ : _0768_);
+	assign _0770_ = ~(_0769_ | _0665_);
+	assign _0771_ = ~\mchip.game2.vga_inst.haddr [5];
+	assign _0772_ = _0719_ ^ _0771_;
+	assign _0773_ = _0689_ | _0687_;
+	assign _0774_ = ~(_0773_ | _0693_);
+	assign _0775_ = _0695_ | ~_0774_;
+	assign _0776_ = (_0706_ ? _0775_ : _0752_);
+	assign _0777_ = _0776_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0778_ = \mchip.game2.dinosprite_inst.sprite  & ~_0776_;
+	assign _0779_ = _0777_ & ~_0778_;
+	assign _0780_ = (\mchip.game2.game_over  ? _0776_ : _0779_);
+	assign _0781_ = _0695_ | _0694_;
+	assign _0782_ = _0749_ | _0686_;
+	assign _0783_ = (_0706_ ? _0781_ : _0782_);
+	assign _0784_ = _0783_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0785_ = \mchip.game2.dinosprite_inst.sprite  & ~_0783_;
+	assign _0786_ = _0784_ & ~_0785_;
+	assign _0787_ = (\mchip.game2.game_over  ? _0783_ : _0786_);
+	assign _0788_ = (\mchip.game2.vga_inst.haddr [1] ? _0787_ : _0780_);
+	assign _0789_ = ~_0749_;
+	assign _0790_ = (_0695_ ? _0774_ : _0729_);
+	assign _0791_ = _0790_ | _0686_;
+	assign _0792_ = (_0706_ ? _0789_ : _0791_);
+	assign _0793_ = _0792_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0794_ = \mchip.game2.dinosprite_inst.sprite  & ~_0792_;
+	assign _0795_ = _0793_ & ~_0794_;
+	assign _0796_ = (\mchip.game2.game_over  ? _0792_ : _0795_);
+	assign _0797_ = ~_0690_;
+	assign _0798_ = _0693_ & ~_0797_;
+	assign _0799_ = _0695_ & ~_0798_;
+	assign _0800_ = (_0706_ ? _0799_ : _0782_);
+	assign _0801_ = _0695_ & ~_0774_;
+	assign _0802_ = (_0706_ ? _0801_ : _0782_);
+	assign _0803_ = (\mchip.game2.dinosprite_inst.sprite  ? _0800_ : _0802_);
+	assign _0804_ = (\mchip.game2.game_over  ? _0800_ : _0803_);
+	assign _0805_ = (\mchip.game2.vga_inst.haddr [1] ? _0804_ : _0796_);
+	assign _0806_ = (_0725_ ? _0788_ : _0805_);
+	assign _0807_ = _0695_ & _0694_;
+	assign _0808_ = ~_0695_;
+	assign _0809_ = _0808_ | _0686_;
+	assign _0810_ = (_0706_ ? _0807_ : _0809_);
+	assign _0811_ = _0712_ & ~_0693_;
+	assign _0812_ = _0695_ & ~_0811_;
+	assign _0813_ = (_0706_ ? _0812_ : _0809_);
+	assign _0814_ = (\mchip.game2.dinosprite_inst.sprite  ? _0810_ : _0813_);
+	assign _0815_ = (\mchip.game2.game_over  ? _0810_ : _0814_);
+	assign _0816_ = _0750_ | _0686_;
+	assign _0817_ = (_0706_ ? _0812_ : _0816_);
+	assign _0818_ = _0690_ & ~_0693_;
+	assign _0819_ = _0695_ & ~_0818_;
+	assign _0820_ = (_0706_ ? _0819_ : _0816_);
+	assign _0821_ = (\mchip.game2.dinosprite_inst.sprite  ? _0817_ : _0820_);
+	assign _0822_ = (\mchip.game2.game_over  ? _0817_ : _0821_);
+	assign _0823_ = (\mchip.game2.vga_inst.haddr [1] ? _0822_ : _0815_);
+	assign _0824_ = _0819_ | ~_0706_;
+	assign _0825_ = _0824_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0826_ = \mchip.game2.dinosprite_inst.sprite  & ~_0824_;
+	assign _0827_ = _0825_ & ~_0826_;
+	assign _0828_ = (\mchip.game2.game_over  ? _0824_ : _0827_);
+	assign _0829_ = _0812_ | ~_0706_;
+	assign _0830_ = _0689_ & ~_0693_;
+	assign _0831_ = _0830_ | ~_0695_;
+	assign _0832_ = ~(_0831_ & _0706_);
+	assign _0833_ = (\mchip.game2.dinosprite_inst.sprite  ? _0832_ : _0829_);
+	assign _0834_ = (\mchip.game2.game_over  ? _0829_ : _0833_);
+	assign _0835_ = (\mchip.game2.vga_inst.haddr [1] ? _0834_ : _0828_);
+	assign _0836_ = (_0725_ ? _0823_ : _0835_);
+	assign _0837_ = (_0727_ ? _0806_ : _0836_);
+	assign _0838_ = ~(_0837_ | _0721_);
+	assign _0839_ = (_0695_ ? _0694_ : _0818_);
+	assign _0840_ = ~(_0728_ | _0693_);
+	assign _0841_ = ~_0840_;
+	assign _0842_ = (_0695_ ? _0841_ : _0818_);
+	assign _0843_ = (\mchip.game2.dinosprite_inst.sprite  ? _0842_ : _0839_);
+	assign _0844_ = (_0693_ ? _0797_ : _0728_);
+	assign _0845_ = (_0695_ ? _0844_ : _0818_);
+	assign _0846_ = (\mchip.game2.game_over  ? _0845_ : _0843_);
+	assign _0847_ = _0846_ | _0707_;
+	assign _0848_ = (_0695_ ? _0694_ : _0811_);
+	assign _0849_ = _0848_ | ~_0706_;
+	assign _0850_ = ~(_0811_ ^ _0695_);
+	assign _0851_ = ~(_0850_ & _0706_);
+	assign _0852_ = (\mchip.game2.dinosprite_inst.sprite  ? _0851_ : _0849_);
+	assign _0853_ = (\mchip.game2.game_over  ? _0849_ : _0852_);
+	assign _0854_ = (\mchip.game2.vga_inst.haddr [1] ? _0853_ : _0847_);
+	assign _0855_ = (_0695_ ? _0818_ : _0841_);
+	assign _0856_ = ~(_0855_ & _0706_);
+	assign _0857_ = _0856_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0858_ = \mchip.game2.dinosprite_inst.sprite  & ~_0856_;
+	assign _0859_ = _0857_ & ~_0858_;
+	assign _0860_ = (\mchip.game2.game_over  ? _0856_ : _0859_);
+	assign _0861_ = ~(_0840_ | _0695_);
+	assign _0862_ = ~(_0861_ & _0706_);
+	assign _0863_ = _0862_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0864_ = \mchip.game2.dinosprite_inst.sprite  & ~_0862_;
+	assign _0865_ = _0863_ & ~_0864_;
+	assign _0866_ = (\mchip.game2.game_over  ? _0862_ : _0865_);
+	assign _0867_ = (\mchip.game2.vga_inst.haddr [1] ? _0866_ : _0860_);
+	assign _0868_ = (_0725_ ? _0854_ : _0867_);
+	assign _0869_ = ~(_0868_ | _0721_);
+	assign _0870_ = (_0693_ ? _0728_ : _0712_);
+	assign _0871_ = ~(_0870_ | _0695_);
+	assign _0872_ = ~(_0871_ & _0706_);
+	assign _0873_ = _0872_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0874_ = \mchip.game2.dinosprite_inst.sprite  & ~_0872_;
 	assign _0875_ = _0873_ & ~_0874_;
-	assign _0876_ = \mchip.design.inter.data_out_reg [49] & _0751_;
-	assign _0877_ = \mchip.design.inter.data_out_reg [53] & _0754_;
-	assign _0878_ = _0877_ | _0876_;
-	assign _0879_ = _0875_ & ~_0878_;
-	assign _0880_ = \mchip.design.inter.data_out_reg [33] & _0760_;
-	assign _0881_ = \mchip.design.inter.data_out_reg [37] & _0763_;
-	assign _0882_ = _0881_ | _0880_;
-	assign _0883_ = \mchip.design.inter.data_out_reg [41] & _0767_;
-	assign _0884_ = \mchip.design.inter.data_out_reg [45] & _0770_;
-	assign _0885_ = _0884_ | _0883_;
-	assign _0886_ = _0885_ | _0882_;
-	assign _0887_ = _0879_ & ~_0886_;
-	assign _0888_ = \mchip.design.inter.data_out_reg [5] & _0696_;
-	assign _0889_ = \mchip.design.inter.data_out_reg [9] & _0721_;
-	assign _0890_ = \mchip.design.inter.data_out_reg [13] & _0685_;
-	assign _0891_ = _0890_ | _0889_;
-	assign _0892_ = _0891_ | _0888_;
-	assign _0893_ = \mchip.design.inter.data_out_reg [17] & _0730_;
-	assign _0894_ = \mchip.design.inter.data_out_reg [21] & _0733_;
-	assign _0895_ = _0894_ | _0893_;
-	assign _0896_ = \mchip.design.inter.data_out_reg [25] & _0736_;
-	assign _0897_ = \mchip.design.inter.data_out_reg [29] & _0671_;
-	assign _0898_ = _0897_ | _0896_;
-	assign _0899_ = _0898_ | _0895_;
-	assign _0900_ = _0899_ | _0892_;
-	assign _0901_ = _0900_ | ~_0887_;
-	assign _0902_ = (_0783_ ? \mchip.design.inter.data_out_reg [1] : _0901_);
-	assign _0903_ = _0902_ & _0660_;
-	assign _0904_ = _0871_ & ~_0903_;
-	assign _0905_ = _0079_ & ~io_in[13];
-	assign _0906_ = ~(_0905_ & _0696_);
-	assign _0907_ = io_in[13] | ~_0083_;
-	assign _0908_ = _0721_ & ~_0907_;
-	assign _0909_ = io_in[13] | ~_0087_;
-	assign _0910_ = _0685_ & ~_0909_;
-	assign _0911_ = _0910_ | _0908_;
-	assign _0912_ = _0906_ & ~_0911_;
-	assign _0913_ = io_in[13] | ~_0091_;
-	assign _0914_ = _0730_ & ~_0913_;
-	assign _0915_ = io_in[13] | ~_0095_;
-	assign _0916_ = _0733_ & ~_0915_;
-	assign _0917_ = _0916_ | _0914_;
-	assign _0918_ = io_in[13] | ~_0099_;
-	assign _0919_ = _0736_ & ~_0918_;
-	assign _0920_ = io_in[13] | ~_0103_;
-	assign _0921_ = _0671_ & ~_0920_;
-	assign _0922_ = _0921_ | _0919_;
-	assign _0923_ = _0922_ | _0917_;
-	assign _0924_ = _0912_ & ~_0923_;
-	assign _0925_ = io_in[13] | ~_0135_;
-	assign _0926_ = _0678_ & ~_0925_;
-	assign _0927_ = io_in[13] | ~_0131_;
-	assign _0928_ = _0746_ & ~_0927_;
-	assign _0929_ = _0928_ | _0926_;
-	assign _0930_ = io_in[13] | ~_0123_;
-	assign _0931_ = _0751_ & ~_0930_;
-	assign _0932_ = io_in[13] | ~_0127_;
-	assign _0933_ = _0754_ & ~_0932_;
-	assign _0934_ = _0933_ | _0931_;
-	assign _0935_ = _0934_ | _0929_;
-	assign _0936_ = io_in[13] | ~_0107_;
-	assign _0937_ = _0760_ & ~_0936_;
-	assign _0938_ = io_in[13] | ~_0111_;
-	assign _0939_ = _0763_ & ~_0938_;
-	assign _0940_ = _0939_ | _0937_;
-	assign _0941_ = io_in[13] | ~_0115_;
-	assign _0942_ = _0767_ & ~_0941_;
-	assign _0943_ = io_in[13] | ~_0119_;
-	assign _0944_ = _0770_ & ~_0943_;
-	assign _0945_ = _0944_ | _0942_;
-	assign _0946_ = _0945_ | _0940_;
-	assign _0947_ = _0946_ | _0935_;
-	assign _0948_ = _0924_ & ~_0947_;
-	assign _0949_ = io_in[13] | ~_0075_;
-	assign _0950_ = (_0783_ ? _0949_ : _0948_);
-	assign _0951_ = _0716_ & ~_0950_;
-	assign _0952_ = _0904_ & ~_0951_;
-	assign io_out[3] = _0718_ & ~_0952_;
-	assign \mchip.design.inter.Addr_reg [2] = _0148_ & ~io_in[13];
-	assign \mchip.design.inter.ENDP_reg [2] = _0140_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [10] = _0164_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [6] = _0160_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [2] = _0156_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [2] = _0414_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [58] = _0470_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [54] = _0466_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [50] = _0462_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [46] = _0458_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [42] = _0454_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [38] = _0450_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [34] = _0446_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [30] = _0442_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [26] = _0438_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [22] = _0434_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [18] = _0430_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [14] = _0426_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [10] = _0422_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [6] = _0418_ & ~io_in[13];
-	assign _0953_ = io_in[13] | ~_0152_;
-	assign _0954_ = _0953_ | ~_0671_;
-	assign _0955_ = ~\mchip.design.inter.Addr_reg [2];
-	assign _0956_ = _0736_ & ~_0955_;
-	assign _0957_ = _0954_ & ~_0956_;
-	assign _0958_ = ~\mchip.design.inter.ENDP_reg [2];
-	assign _0959_ = _0730_ & ~_0958_;
-	assign _0960_ = io_in[13] | ~_0144_;
-	assign _0961_ = _0733_ & ~_0960_;
-	assign _0962_ = _0961_ | _0959_;
-	assign _0963_ = _0957_ & ~_0962_;
-	assign _0964_ = ~\mchip.design.inter.mempage_reg [2];
-	assign _0965_ = _0831_ & ~_0964_;
-	assign _0966_ = ~\mchip.design.inter.mempage_reg [6];
-	assign _0967_ = _0696_ & ~_0966_;
-	assign _0968_ = _0967_ | _0965_;
-	assign _0969_ = ~\mchip.design.inter.mempage_reg [10];
-	assign _0970_ = _0721_ & ~_0969_;
-	assign _0971_ = io_in[13] | ~_0168_;
-	assign _0972_ = _0685_ & ~_0971_;
-	assign _0973_ = _0972_ | _0970_;
-	assign _0974_ = _0973_ | _0968_;
-	assign _0975_ = _0963_ & ~_0974_;
-	assign _0976_ = _0975_ | _0655_;
-	assign _0977_ = _0976_ | _0668_;
-	assign _0978_ = io_in[13] | ~_0474_;
-	assign _0979_ = _0978_ | ~_0678_;
-	assign _0980_ = \mchip.design.inter.data_out_reg [58] & _0746_;
-	assign _0981_ = _0979_ & ~_0980_;
-	assign _0982_ = \mchip.design.inter.data_out_reg [50] & _0751_;
-	assign _0983_ = \mchip.design.inter.data_out_reg [54] & _0754_;
-	assign _0984_ = _0983_ | _0982_;
-	assign _0985_ = _0981_ & ~_0984_;
-	assign _0986_ = \mchip.design.inter.data_out_reg [34] & _0760_;
-	assign _0987_ = \mchip.design.inter.data_out_reg [38] & _0763_;
-	assign _0988_ = _0987_ | _0986_;
-	assign _0989_ = \mchip.design.inter.data_out_reg [42] & _0767_;
-	assign _0990_ = \mchip.design.inter.data_out_reg [46] & _0770_;
-	assign _0991_ = _0990_ | _0989_;
-	assign _0992_ = _0991_ | _0988_;
-	assign _0993_ = _0985_ & ~_0992_;
-	assign _0994_ = \mchip.design.inter.data_out_reg [6] & _0696_;
-	assign _0995_ = \mchip.design.inter.data_out_reg [10] & _0721_;
-	assign _0996_ = \mchip.design.inter.data_out_reg [14] & _0685_;
-	assign _0997_ = _0996_ | _0995_;
-	assign _0998_ = _0997_ | _0994_;
-	assign _0999_ = \mchip.design.inter.data_out_reg [18] & _0730_;
-	assign _1000_ = \mchip.design.inter.data_out_reg [22] & _0733_;
-	assign _1001_ = _1000_ | _0999_;
-	assign _1002_ = \mchip.design.inter.data_out_reg [26] & _0736_;
-	assign _1003_ = \mchip.design.inter.data_out_reg [30] & _0671_;
-	assign _1004_ = _1003_ | _1002_;
-	assign _1005_ = _1004_ | _1001_;
-	assign _1006_ = _1005_ | _0998_;
-	assign _1007_ = _1006_ | ~_0993_;
-	assign _1008_ = (_0783_ ? \mchip.design.inter.data_out_reg [2] : _1007_);
-	assign _1009_ = _1008_ & _0660_;
-	assign _1010_ = _0977_ & ~_1009_;
-	assign _1011_ = _0080_ & ~io_in[13];
-	assign _1012_ = ~(_1011_ & _0696_);
-	assign _1013_ = io_in[13] | ~_0084_;
-	assign _1014_ = _0721_ & ~_1013_;
-	assign _1015_ = io_in[13] | ~_0088_;
-	assign _1016_ = _0685_ & ~_1015_;
-	assign _1017_ = _1016_ | _1014_;
-	assign _1018_ = _1012_ & ~_1017_;
-	assign _1019_ = io_in[13] | ~_0092_;
-	assign _1020_ = _0730_ & ~_1019_;
-	assign _1021_ = io_in[13] | ~_0096_;
-	assign _1022_ = _0733_ & ~_1021_;
-	assign _1023_ = _1022_ | _1020_;
-	assign _1024_ = io_in[13] | ~_0100_;
-	assign _1025_ = _0736_ & ~_1024_;
-	assign _1026_ = io_in[13] | ~_0104_;
-	assign _1027_ = _0671_ & ~_1026_;
-	assign _1028_ = _1027_ | _1025_;
-	assign _1029_ = _1028_ | _1023_;
-	assign _1030_ = _1018_ & ~_1029_;
-	assign _1031_ = io_in[13] | ~_0136_;
-	assign _1032_ = _0678_ & ~_1031_;
-	assign _1033_ = io_in[13] | ~_0132_;
-	assign _1034_ = _0746_ & ~_1033_;
-	assign _1035_ = _1034_ | _1032_;
-	assign _1036_ = io_in[13] | ~_0124_;
-	assign _1037_ = _0751_ & ~_1036_;
-	assign _1038_ = io_in[13] | ~_0128_;
-	assign _1039_ = _0754_ & ~_1038_;
-	assign _1040_ = _1039_ | _1037_;
-	assign _1041_ = _1040_ | _1035_;
-	assign _1042_ = io_in[13] | ~_0108_;
-	assign _1043_ = _0760_ & ~_1042_;
-	assign _1044_ = io_in[13] | ~_0112_;
-	assign _1045_ = _0763_ & ~_1044_;
-	assign _1046_ = _1045_ | _1043_;
-	assign _1047_ = io_in[13] | ~_0116_;
-	assign _1048_ = _0767_ & ~_1047_;
-	assign _1049_ = io_in[13] | ~_0120_;
-	assign _1050_ = _0770_ & ~_1049_;
-	assign _1051_ = _1050_ | _1048_;
-	assign _1052_ = _1051_ | _1046_;
-	assign _1053_ = _1052_ | _1041_;
-	assign _1054_ = _1030_ & ~_1053_;
-	assign _1055_ = io_in[13] | ~_0076_;
-	assign _1056_ = (_0783_ ? _1055_ : _1054_);
-	assign _1057_ = _0716_ & ~_1056_;
-	assign _1058_ = _1010_ & ~_1057_;
-	assign io_out[4] = _0718_ & ~_1058_;
-	assign \mchip.design.inter.Addr_reg [3] = _0149_ & ~io_in[13];
-	assign \mchip.design.inter.ENDP_reg [3] = _0141_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [11] = _0165_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [7] = _0161_ & ~io_in[13];
-	assign \mchip.design.inter.mempage_reg [3] = _0157_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [3] = _0415_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [59] = _0471_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [55] = _0467_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [51] = _0463_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [47] = _0459_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [43] = _0455_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [39] = _0451_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [35] = _0447_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [31] = _0443_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [27] = _0439_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [23] = _0435_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [19] = _0431_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [15] = _0427_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [11] = _0423_ & ~io_in[13];
-	assign \mchip.design.inter.data_out_reg [7] = _0419_ & ~io_in[13];
-	assign _1059_ = _0153_ & ~io_in[13];
-	assign _1060_ = ~(_1059_ & _0671_);
-	assign _1061_ = ~\mchip.design.inter.Addr_reg [3];
-	assign _1062_ = _0736_ & ~_1061_;
-	assign _1063_ = _1060_ & ~_1062_;
-	assign _1064_ = ~\mchip.design.inter.ENDP_reg [3];
-	assign _1065_ = _0730_ & ~_1064_;
-	assign _1066_ = io_in[13] | ~_0145_;
-	assign _1067_ = _0733_ & ~_1066_;
-	assign _1068_ = _1067_ | _1065_;
-	assign _1069_ = _1063_ & ~_1068_;
-	assign _1070_ = ~\mchip.design.inter.mempage_reg [3];
-	assign _1071_ = _0831_ & ~_1070_;
-	assign _1072_ = ~\mchip.design.inter.mempage_reg [7];
-	assign _1073_ = _0696_ & ~_1072_;
-	assign _1074_ = _1073_ | _1071_;
-	assign _1075_ = ~\mchip.design.inter.mempage_reg [11];
-	assign _1076_ = _0721_ & ~_1075_;
-	assign _1077_ = io_in[13] | ~_0169_;
-	assign _1078_ = _0685_ & ~_1077_;
-	assign _1079_ = _1078_ | _1076_;
-	assign _1080_ = _1079_ | _1074_;
-	assign _1081_ = _1069_ & ~_1080_;
-	assign _1082_ = _1081_ | _0655_;
-	assign _1083_ = _1082_ | _0668_;
-	assign _1084_ = io_in[13] | ~_0475_;
-	assign _1085_ = _1084_ | ~_0678_;
-	assign _1086_ = \mchip.design.inter.data_out_reg [59] & _0746_;
-	assign _1087_ = _1085_ & ~_1086_;
-	assign _1088_ = \mchip.design.inter.data_out_reg [51] & _0751_;
-	assign _1089_ = \mchip.design.inter.data_out_reg [55] & _0754_;
-	assign _1090_ = _1089_ | _1088_;
-	assign _1091_ = _1087_ & ~_1090_;
-	assign _1092_ = \mchip.design.inter.data_out_reg [35] & _0760_;
-	assign _1093_ = \mchip.design.inter.data_out_reg [39] & _0763_;
-	assign _1094_ = _1093_ | _1092_;
-	assign _1095_ = \mchip.design.inter.data_out_reg [43] & _0767_;
-	assign _1096_ = \mchip.design.inter.data_out_reg [47] & _0770_;
-	assign _1097_ = _1096_ | _1095_;
-	assign _1098_ = _1097_ | _1094_;
-	assign _1099_ = _1091_ & ~_1098_;
-	assign _1100_ = \mchip.design.inter.data_out_reg [7] & _0696_;
-	assign _1101_ = \mchip.design.inter.data_out_reg [11] & _0721_;
-	assign _1102_ = \mchip.design.inter.data_out_reg [15] & _0685_;
-	assign _1103_ = _1102_ | _1101_;
-	assign _1104_ = _1103_ | _1100_;
-	assign _1105_ = \mchip.design.inter.data_out_reg [19] & _0730_;
-	assign _1106_ = \mchip.design.inter.data_out_reg [23] & _0733_;
-	assign _1107_ = _1106_ | _1105_;
-	assign _1108_ = \mchip.design.inter.data_out_reg [27] & _0736_;
-	assign _1109_ = \mchip.design.inter.data_out_reg [31] & _0671_;
-	assign _1110_ = _1109_ | _1108_;
-	assign _1111_ = _1110_ | _1107_;
-	assign _1112_ = _1111_ | _1104_;
-	assign _1113_ = _1112_ | ~_1099_;
-	assign _1114_ = (_0783_ ? \mchip.design.inter.data_out_reg [3] : _1113_);
-	assign _1115_ = _1114_ & _0660_;
-	assign _1116_ = _1083_ & ~_1115_;
-	assign _1117_ = _0081_ & ~io_in[13];
-	assign _1118_ = ~(_1117_ & _0696_);
-	assign _1119_ = io_in[13] | ~_0085_;
-	assign _1120_ = _0721_ & ~_1119_;
-	assign _1121_ = io_in[13] | ~_0089_;
-	assign _1122_ = _0685_ & ~_1121_;
-	assign _1123_ = _1122_ | _1120_;
-	assign _1124_ = _1118_ & ~_1123_;
-	assign _1125_ = io_in[13] | ~_0093_;
-	assign _1126_ = _0730_ & ~_1125_;
-	assign _1127_ = io_in[13] | ~_0097_;
-	assign _1128_ = _0733_ & ~_1127_;
-	assign _1129_ = _1128_ | _1126_;
-	assign _1130_ = io_in[13] | ~_0101_;
-	assign _1131_ = _0736_ & ~_1130_;
-	assign _1132_ = io_in[13] | ~_0105_;
-	assign _1133_ = _0671_ & ~_1132_;
-	assign _1134_ = _1133_ | _1131_;
-	assign _1135_ = _1134_ | _1129_;
-	assign _1136_ = _1124_ & ~_1135_;
-	assign _1137_ = io_in[13] | ~_0137_;
-	assign _1138_ = _0678_ & ~_1137_;
-	assign _1139_ = io_in[13] | ~_0133_;
-	assign _1140_ = _0746_ & ~_1139_;
-	assign _1141_ = _1140_ | _1138_;
-	assign _1142_ = io_in[13] | ~_0125_;
-	assign _1143_ = _0751_ & ~_1142_;
-	assign _1144_ = io_in[13] | ~_0129_;
-	assign _1145_ = _0754_ & ~_1144_;
-	assign _1146_ = _1145_ | _1143_;
-	assign _1147_ = _1146_ | _1141_;
-	assign _1148_ = io_in[13] | ~_0109_;
-	assign _1149_ = _0760_ & ~_1148_;
-	assign _1150_ = io_in[13] | ~_0113_;
-	assign _1151_ = _0763_ & ~_1150_;
-	assign _1152_ = _1151_ | _1149_;
-	assign _1153_ = io_in[13] | ~_0117_;
-	assign _1154_ = _0767_ & ~_1153_;
-	assign _1155_ = io_in[13] | ~_0121_;
-	assign _1156_ = _0770_ & ~_1155_;
-	assign _1157_ = _1156_ | _1154_;
-	assign _1158_ = _1157_ | _1152_;
-	assign _1159_ = _1158_ | _1147_;
-	assign _1160_ = _1136_ & ~_1159_;
-	assign _1161_ = io_in[13] | ~_0077_;
-	assign _1162_ = (_0783_ ? _1161_ : _1160_);
-	assign _1163_ = _0716_ & ~_1162_;
-	assign _1164_ = _1116_ & ~_1163_;
-	assign io_out[5] = _0718_ & ~_1164_;
-	assign _1165_ = io_in[6] & ~io_in[9];
-	assign _1166_ = ~(_1165_ & _2751_);
-	assign _1167_ = _0484_ & ~_1166_;
-	assign _1168_ = _0066_ & ~_0696_;
-	assign _1169_ = _0067_ & ~_0685_;
-	assign _1170_ = _1169_ | _1168_;
-	assign _1171_ = _1170_ | _1167_;
-	assign _1172_ = _0716_ & ~_0678_;
-	assign _1173_ = _0664_ & ~_0671_;
-	assign _1174_ = _1173_ | _1172_;
-	assign _1175_ = _1174_ | _1171_;
-	assign _1176_ = io_in[13] | ~_0481_;
-	assign _1177_ = _1176_ | _0651_;
-	assign \mchip.design.inter.next_state [0] = _1177_ & _1175_;
-	assign _1178_ = _0678_ | ~_0660_;
-	assign _1179_ = _1178_ & ~_1173_;
-	assign _1180_ = io_in[7] & ~io_in[9];
-	assign _1181_ = ~(_1180_ & _2751_);
-	assign _1182_ = _0484_ & ~_1181_;
-	assign _1183_ = _0065_ & ~_0696_;
-	assign _1184_ = _1183_ | _1182_;
-	assign _1185_ = _1184_ | _1169_;
-	assign _1186_ = _1179_ & ~_1185_;
-	assign \mchip.design.inter.next_state [1] = _1177_ & ~_1186_;
-	assign _1187_ = _0068_ & ~_0678_;
-	assign _1188_ = _1187_ | _1172_;
-	assign _1189_ = _1179_ & ~_1188_;
-	assign _1190_ = io_in[8] & ~io_in[9];
-	assign _1191_ = ~(_1190_ & _2751_);
-	assign _1192_ = _0484_ & ~_1191_;
-	assign _1193_ = _1189_ & ~_1192_;
-	assign \mchip.design.inter.next_state [2] = _1177_ & ~_1193_;
-	assign _1194_ = \mchip.design.io_fsm.completed_transaction  & ~_2766_;
-	assign _1195_ = ~(_0500_ & _1194_);
-	assign _1196_ = _1195_ | ~_0502_;
-	assign _1197_ = _0644_ & _1194_;
-	assign _1198_ = _1197_ | ~_1196_;
-	assign _1199_ = _1198_ & ~_0648_;
-	assign _1200_ = \mchip.design.finished  & ~_1199_;
-	assign io_out[10] = _0485_ & ~_1200_;
-	assign _1201_ = _1199_ & \mchip.design.finished ;
-	assign io_out[11] = _0485_ & ~_1201_;
-	assign _1202_ = _1176_ | _0068_;
-	assign io_out[6] = _0653_ & ~_1202_;
-	assign io_out[7] = _0656_ & ~_1202_;
-	assign io_out[8] = _0654_ & ~_1202_;
-	assign io_out[9] = _0655_ & ~_1202_;
-	assign _1203_ = _2611_ & ~_0593_;
-	assign _1204_ = _2610_ & ~_0593_;
+	assign _0876_ = (\mchip.game2.game_over  ? _0872_ : _0875_);
+	assign _0877_ = (_0693_ ? _0687_ : _0690_);
+	assign _0878_ = ~(_0877_ | _0695_);
+	assign _0879_ = ~(_0878_ & _0706_);
+	assign _0880_ = _0879_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0881_ = \mchip.game2.dinosprite_inst.sprite  & ~_0879_;
+	assign _0882_ = _0880_ & ~_0881_;
+	assign _0883_ = (\mchip.game2.game_over  ? _0879_ : _0882_);
+	assign _0884_ = (\mchip.game2.vga_inst.haddr [1] ? _0883_ : _0876_);
+	assign _0885_ = ~(_0884_ | _0721_);
+	assign _0886_ = (_0706_ ? _0781_ : _0816_);
+	assign _0887_ = _0886_ | \mchip.game2.dinosprite_inst.sprite ;
+	assign _0888_ = \mchip.game2.dinosprite_inst.sprite  & ~_0886_;
+	assign _0889_ = _0887_ & ~_0888_;
+	assign _0890_ = (\mchip.game2.game_over  ? _0886_ : _0889_);
+	assign _0891_ = _0890_ | _0721_;
+	assign _0892_ = _0666_ & ~_0891_;
+	assign _0893_ = (_0725_ ? _0885_ : _0892_);
+	assign _0894_ = (_0727_ ? _0869_ : _0893_);
+	assign _0895_ = (_0665_ ? _0838_ : _0894_);
+	assign _0896_ = (_0772_ ? _0770_ : _0895_);
+	assign _0897_ = _0771_ & ~_0719_;
+	assign _0898_ = _0897_ ^ \mchip.game2.vga_inst.haddr [6];
+	assign _3629_ = _0896_ & ~_0898_;
+	assign _0064_ = _0486_ & ~\mchip.game2.jumping_inst.ctr [0];
+	assign _0899_ = \mchip.game2.jumping_inst.ctr [0] & \mchip.game2.jumping_inst.ctr [1];
+	assign _0900_ = _0899_ | ~_0482_;
+	assign _0075_ = _0486_ & ~_0900_;
+	assign _0901_ = ~(_0899_ ^ \mchip.game2.jumping_inst.ctr [2]);
+	assign _0080_ = _0486_ & ~_0901_;
+	assign _0902_ = ~(_0899_ & \mchip.game2.jumping_inst.ctr [2]);
+	assign _0903_ = _0902_ ^ \mchip.game2.jumping_inst.ctr [3];
+	assign _0081_ = _0486_ & ~_0903_;
+	assign _0904_ = ~(\mchip.game2.jumping_inst.ctr [2] & \mchip.game2.jumping_inst.ctr [3]);
+	assign _0905_ = _0899_ & ~_0904_;
+	assign _0906_ = ~(_0905_ ^ \mchip.game2.jumping_inst.ctr [4]);
+	assign _0082_ = _0486_ & ~_0906_;
+	assign _0907_ = ~(_0905_ & \mchip.game2.jumping_inst.ctr [4]);
+	assign _0908_ = _0907_ ^ \mchip.game2.jumping_inst.ctr [5];
+	assign _0083_ = _0486_ & ~_0908_;
+	assign _0909_ = ~(\mchip.game2.jumping_inst.ctr [4] & \mchip.game2.jumping_inst.ctr [5]);
+	assign _0910_ = _0905_ & ~_0909_;
+	assign _0911_ = ~(_0910_ ^ \mchip.game2.jumping_inst.ctr [6]);
+	assign _0084_ = _0486_ & ~_0911_;
+	assign _0912_ = ~(_0910_ & \mchip.game2.jumping_inst.ctr [6]);
+	assign _0913_ = _0912_ ^ \mchip.game2.jumping_inst.ctr [7];
+	assign _0085_ = _0486_ & ~_0913_;
+	assign _0914_ = ~(\mchip.game2.jumping_inst.ctr [7] & \mchip.game2.jumping_inst.ctr [6]);
+	assign _0915_ = _0914_ | _0909_;
+	assign _0916_ = _0905_ & ~_0915_;
+	assign _0917_ = ~(_0916_ ^ \mchip.game2.jumping_inst.ctr [8]);
+	assign _0086_ = _0486_ & ~_0917_;
+	assign _0918_ = ~(_0916_ & \mchip.game2.jumping_inst.ctr [8]);
+	assign _0919_ = _0918_ ^ \mchip.game2.jumping_inst.ctr [9];
+	assign _0087_ = _0486_ & ~_0919_;
+	assign _0920_ = ~(\mchip.game2.jumping_inst.ctr [8] & \mchip.game2.jumping_inst.ctr [9]);
+	assign _0921_ = _0916_ & ~_0920_;
+	assign _0922_ = ~(_0921_ ^ \mchip.game2.jumping_inst.ctr [10]);
+	assign _0065_ = _0486_ & ~_0922_;
+	assign _0923_ = ~(_0921_ & \mchip.game2.jumping_inst.ctr [10]);
+	assign _0924_ = _0923_ ^ \mchip.game2.jumping_inst.ctr [11];
+	assign _0066_ = _0486_ & ~_0924_;
+	assign _0925_ = ~(\mchip.game2.jumping_inst.ctr [10] & \mchip.game2.jumping_inst.ctr [11]);
+	assign _0926_ = _0925_ | _0920_;
+	assign _0927_ = _0916_ & ~_0926_;
+	assign _0928_ = ~(_0927_ ^ \mchip.game2.jumping_inst.ctr [12]);
+	assign _0067_ = _0486_ & ~_0928_;
+	assign _0929_ = ~(_0927_ & \mchip.game2.jumping_inst.ctr [12]);
+	assign _0930_ = _0929_ ^ \mchip.game2.jumping_inst.ctr [13];
+	assign _0068_ = _0486_ & ~_0930_;
+	assign _0931_ = ~(\mchip.game2.jumping_inst.ctr [12] & \mchip.game2.jumping_inst.ctr [13]);
+	assign _0932_ = _0927_ & ~_0931_;
+	assign _0933_ = ~(_0932_ ^ \mchip.game2.jumping_inst.ctr [14]);
+	assign _0069_ = _0486_ & ~_0933_;
+	assign _0934_ = ~(_0932_ & \mchip.game2.jumping_inst.ctr [14]);
+	assign _0935_ = _0934_ ^ \mchip.game2.jumping_inst.ctr [15];
+	assign _0070_ = _0486_ & ~_0935_;
+	assign _0936_ = _0931_ | _0471_;
+	assign _0937_ = ~(_0936_ | _0926_);
+	assign _0938_ = ~(_0937_ & _0916_);
+	assign _0939_ = _0938_ ^ \mchip.game2.jumping_inst.ctr [16];
+	assign _0071_ = _0486_ & ~_0939_;
+	assign _0940_ = _0938_ | ~\mchip.game2.jumping_inst.ctr [16];
+	assign _0941_ = _0940_ ^ \mchip.game2.jumping_inst.ctr [17];
+	assign _0072_ = _0486_ & ~_0941_;
+	assign _0942_ = ~(_0938_ | _0468_);
+	assign _0943_ = ~(_0942_ ^ \mchip.game2.jumping_inst.ctr [18]);
+	assign _0073_ = _0486_ & ~_0943_;
+	assign _0944_ = ~(_0942_ & \mchip.game2.jumping_inst.ctr [18]);
+	assign _0945_ = _0944_ ^ \mchip.game2.jumping_inst.ctr [19];
+	assign _0074_ = _0486_ & ~_0945_;
+	assign _0946_ = ~(\mchip.game2.jumping_inst.ctr [18] & \mchip.game2.jumping_inst.ctr [19]);
+	assign _0947_ = _0946_ | _0468_;
+	assign _0948_ = ~(_0947_ | _0938_);
+	assign _0949_ = ~(_0948_ ^ \mchip.game2.jumping_inst.ctr [20]);
+	assign _0076_ = _0486_ & ~_0949_;
+	assign _0950_ = ~(_0948_ & \mchip.game2.jumping_inst.ctr [20]);
+	assign _0951_ = _0950_ ^ \mchip.game2.jumping_inst.ctr [21];
+	assign _0077_ = _0486_ & ~_0951_;
+	assign _0952_ = ~(\mchip.game2.jumping_inst.ctr [20] & \mchip.game2.jumping_inst.ctr [21]);
+	assign _0953_ = _0948_ & ~_0952_;
+	assign _0954_ = ~(_0953_ ^ \mchip.game2.jumping_inst.ctr [22]);
+	assign _0078_ = _0486_ & ~_0954_;
+	assign _0955_ = ~(_0953_ & \mchip.game2.jumping_inst.ctr [22]);
+	assign _0956_ = _0955_ ^ \mchip.game2.jumping_inst.ctr [23];
+	assign _0079_ = _0486_ & ~_0956_;
+	assign _0957_ = \mchip.game2.jumping_inst.frame [1] & \mchip.game2.jumping_inst.frame [0];
+	assign _0958_ = ~(\mchip.game2.jumping_inst.frame [3] & \mchip.game2.jumping_inst.frame [2]);
+	assign _0959_ = _0957_ & ~_0958_;
+	assign _0960_ = _0959_ ^ \mchip.game2.jumping_inst.frame [4];
+	assign _0961_ = ~\mchip.game2.jumping_inst.frame [5];
+	assign _0962_ = ~\mchip.game2.jumping_inst.frame [4];
+	assign _0963_ = _0959_ & ~_0962_;
+	assign _0964_ = _0963_ ^ _0961_;
+	assign _0965_ = _0964_ | ~_0960_;
+	assign _0966_ = ~(\mchip.game2.jumping_inst.frame [4] & \mchip.game2.jumping_inst.frame [5]);
+	assign _0967_ = _0959_ & ~_0966_;
+	assign _0968_ = _0967_ ^ \mchip.game2.jumping_inst.frame [6];
+	assign _0969_ = _0967_ & \mchip.game2.jumping_inst.frame [6];
+	assign _0970_ = _0969_ ^ \mchip.game2.jumping_inst.frame [7];
+	assign _0971_ = _0970_ | _0968_;
+	assign _0972_ = _0971_ | ~_0965_;
+	assign _0973_ = \mchip.game2.jumping_inst.frame [1] & ~\mchip.game2.jumping_inst.frame [0];
+	assign _0974_ = ~_0973_;
+	assign _0975_ = _0957_ ^ \mchip.game2.jumping_inst.frame [2];
+	assign _0976_ = ~\mchip.game2.jumping_inst.frame [2];
+	assign _0977_ = _0957_ & ~_0976_;
+	assign _0978_ = _0977_ ^ \mchip.game2.jumping_inst.frame [3];
+	assign _0979_ = _0978_ | _0975_;
+	assign _0980_ = _0974_ & ~_0979_;
+	assign _0981_ = _0971_ | _0965_;
+	assign _0982_ = _0980_ & ~_0981_;
+	assign _0983_ = _0972_ & ~_0982_;
+	assign _0984_ = ~(\mchip.game2.jumping_inst.frame [7] & \mchip.game2.jumping_inst.frame [6]);
+	assign _0985_ = _0984_ | _0966_;
+	assign _0986_ = _0959_ & ~_0985_;
+	assign _0987_ = _0986_ | \mchip.game2.jumping_inst.frame [8];
+	assign _0988_ = _0987_ | _0983_;
+	assign _0989_ = \mchip.game2.jumping_inst.frame [0] & ~\mchip.game2.jumping_inst.frame [1];
+	assign _0990_ = ~_0989_;
+	assign _0991_ = _0990_ | _0979_;
+	assign _0992_ = _0991_ | _0981_;
+	assign _0993_ = ~(_0992_ | _0987_);
+	assign _0994_ = _0993_ | _0988_;
+	assign _0055_ = ~(_0994_ | \mchip.game2.jumping_inst.frame [0]);
+	assign _0995_ = _0989_ | _0973_;
+	assign _0056_ = _0995_ & ~_0994_;
+	assign _0057_ = _0975_ & ~_0994_;
+	assign _0058_ = _0978_ & ~_0994_;
+	assign _0059_ = _0960_ & ~_0994_;
+	assign _0060_ = ~(_0994_ | _0964_);
+	assign _0061_ = _0968_ & ~_0994_;
+	assign _0062_ = _0970_ & ~_0994_;
+	assign _0996_ = ~(_0986_ ^ \mchip.game2.jumping_inst.frame [8]);
+	assign _0063_ = ~(_0996_ | _0994_);
+	assign _0997_ = _0486_ | ~_0994_;
+	assign _0054_ = (\mchip.game2.jumping_inst.in_air  ? _0997_ : io_in[0]);
+	assign _0029_ = _0452_ & ~\mchip.game2.dinosprite_inst.ctr [0];
+	assign _0998_ = \mchip.game2.dinosprite_inst.ctr [0] & \mchip.game2.dinosprite_inst.ctr [1];
+	assign _0999_ = _0998_ | _0426_;
+	assign _0040_ = _0452_ & ~_0999_;
+	assign _1000_ = ~(_0998_ ^ \mchip.game2.dinosprite_inst.ctr [2]);
+	assign _0046_ = _0452_ & ~_1000_;
+	assign _1001_ = ~(_0998_ & \mchip.game2.dinosprite_inst.ctr [2]);
+	assign _1002_ = _1001_ ^ \mchip.game2.dinosprite_inst.ctr [3];
+	assign _0047_ = _0452_ & ~_1002_;
+	assign _1003_ = ~(\mchip.game2.dinosprite_inst.ctr [2] & \mchip.game2.dinosprite_inst.ctr [3]);
+	assign _1004_ = _0998_ & ~_1003_;
+	assign _1005_ = ~(_1004_ ^ \mchip.game2.dinosprite_inst.ctr [4]);
+	assign _0048_ = _0452_ & ~_1005_;
+	assign _1006_ = ~(_1004_ & \mchip.game2.dinosprite_inst.ctr [4]);
+	assign _1007_ = _1006_ ^ \mchip.game2.dinosprite_inst.ctr [5];
+	assign _0049_ = _0452_ & ~_1007_;
+	assign _1008_ = ~(\mchip.game2.dinosprite_inst.ctr [4] & \mchip.game2.dinosprite_inst.ctr [5]);
+	assign _1009_ = _1004_ & ~_1008_;
+	assign _1010_ = ~(_1009_ ^ \mchip.game2.dinosprite_inst.ctr [6]);
+	assign _0050_ = _0452_ & ~_1010_;
+	assign _1011_ = ~(_1009_ & \mchip.game2.dinosprite_inst.ctr [6]);
+	assign _1012_ = _1011_ ^ \mchip.game2.dinosprite_inst.ctr [7];
+	assign _0051_ = _0452_ & ~_1012_;
+	assign _1013_ = ~\mchip.game2.dinosprite_inst.ctr [8];
+	assign _1014_ = _1008_ | ~_0430_;
+	assign _1015_ = _1004_ & ~_1014_;
+	assign _1016_ = _1015_ ^ _1013_;
+	assign _0052_ = _0452_ & ~_1016_;
+	assign _1017_ = _1015_ & ~_1013_;
+	assign _1018_ = _1017_ ^ _0441_;
+	assign _0053_ = _0452_ & ~_1018_;
+	assign _1019_ = ~(\mchip.game2.dinosprite_inst.ctr [9] & \mchip.game2.dinosprite_inst.ctr [8]);
+	assign _1020_ = _1015_ & ~_1019_;
+	assign _1021_ = ~(_1020_ ^ \mchip.game2.dinosprite_inst.ctr [10]);
+	assign _0030_ = _0452_ & ~_1021_;
+	assign _1022_ = ~(_1020_ & \mchip.game2.dinosprite_inst.ctr [10]);
+	assign _1023_ = _1022_ ^ \mchip.game2.dinosprite_inst.ctr [11];
+	assign _0031_ = _0452_ & ~_1023_;
+	assign _1024_ = ~(\mchip.game2.dinosprite_inst.ctr [10] & \mchip.game2.dinosprite_inst.ctr [11]);
+	assign _1025_ = _1024_ | _1019_;
+	assign _1026_ = _1015_ & ~_1025_;
+	assign _1027_ = ~(_1026_ ^ \mchip.game2.dinosprite_inst.ctr [12]);
+	assign _0032_ = _0452_ & ~_1027_;
+	assign _1028_ = ~(_1026_ & \mchip.game2.dinosprite_inst.ctr [12]);
+	assign _1029_ = _1028_ ^ \mchip.game2.dinosprite_inst.ctr [13];
+	assign _0033_ = _0452_ & ~_1029_;
+	assign _1030_ = ~(\mchip.game2.dinosprite_inst.ctr [12] & \mchip.game2.dinosprite_inst.ctr [13]);
+	assign _1031_ = _1026_ & ~_1030_;
+	assign _1032_ = ~(_1031_ ^ \mchip.game2.dinosprite_inst.ctr [14]);
+	assign _0034_ = _0452_ & ~_1032_;
+	assign _1033_ = ~(_1031_ & \mchip.game2.dinosprite_inst.ctr [14]);
+	assign _1034_ = _1033_ ^ \mchip.game2.dinosprite_inst.ctr [15];
+	assign _0035_ = _0452_ & ~_1034_;
+	assign _1035_ = _1030_ | _0423_;
+	assign _1036_ = _1035_ | _1025_;
+	assign _1037_ = _1015_ & ~_1036_;
+	assign _1038_ = ~(_1037_ ^ \mchip.game2.dinosprite_inst.ctr [16]);
+	assign _0036_ = _0452_ & ~_1038_;
+	assign _1039_ = ~(_1037_ & \mchip.game2.dinosprite_inst.ctr [16]);
+	assign _1040_ = _1039_ ^ \mchip.game2.dinosprite_inst.ctr [17];
+	assign _0037_ = _0452_ & ~_1040_;
+	assign _1041_ = ~(\mchip.game2.dinosprite_inst.ctr [17] & \mchip.game2.dinosprite_inst.ctr [16]);
+	assign _1042_ = _1037_ & ~_1041_;
+	assign _1043_ = ~(_1042_ ^ \mchip.game2.dinosprite_inst.ctr [18]);
+	assign _0038_ = _0452_ & ~_1043_;
+	assign _1044_ = ~(_1042_ & \mchip.game2.dinosprite_inst.ctr [18]);
+	assign _1045_ = _1044_ ^ \mchip.game2.dinosprite_inst.ctr [19];
+	assign _0039_ = _0452_ & ~_1045_;
+	assign _1046_ = _1041_ | ~_0415_;
+	assign _1047_ = _1037_ & ~_1046_;
+	assign _1048_ = ~(_1047_ ^ \mchip.game2.dinosprite_inst.ctr [20]);
+	assign _0041_ = _0452_ & ~_1048_;
+	assign _1049_ = ~(_1047_ & \mchip.game2.dinosprite_inst.ctr [20]);
+	assign _1050_ = _1049_ ^ \mchip.game2.dinosprite_inst.ctr [21];
+	assign _0042_ = _0452_ & ~_1050_;
+	assign _1051_ = ~(\mchip.game2.dinosprite_inst.ctr [21] & \mchip.game2.dinosprite_inst.ctr [20]);
+	assign _1052_ = _1047_ & ~_1051_;
+	assign _1053_ = ~(_1052_ ^ \mchip.game2.dinosprite_inst.ctr [22]);
+	assign _0043_ = _0452_ & ~_1053_;
+	assign _1054_ = ~(_1052_ & \mchip.game2.dinosprite_inst.ctr [22]);
+	assign _1055_ = _1054_ ^ \mchip.game2.dinosprite_inst.ctr [23];
+	assign _0044_ = _0452_ & ~_1055_;
+	assign _1056_ = ~(\mchip.game2.dinosprite_inst.ctr [22] & \mchip.game2.dinosprite_inst.ctr [23]);
+	assign _1057_ = _1056_ | _1051_;
+	assign _1058_ = _1057_ | _1046_;
+	assign _1059_ = _1058_ | ~_1037_;
+	assign _1060_ = _1059_ ^ \mchip.game2.dinosprite_inst.ctr [24];
+	assign _0045_ = _0452_ & ~_1060_;
+	assign _0132_ = _3606_ & ~\mchip.game2.scroll_inst.ctr [0];
+	assign _1061_ = ~(\mchip.game2.scroll_inst.ctr [1] ^ \mchip.game2.scroll_inst.ctr [0]);
+	assign _0141_ = _3606_ & ~_1061_;
+	assign _1062_ = \mchip.game2.scroll_inst.ctr [1] & \mchip.game2.scroll_inst.ctr [0];
+	assign _1063_ = ~(_1062_ ^ \mchip.game2.scroll_inst.ctr [2]);
+	assign _0142_ = _3606_ & ~_1063_;
+	assign _1064_ = ~(_1062_ & \mchip.game2.scroll_inst.ctr [2]);
+	assign _1065_ = _1064_ ^ \mchip.game2.scroll_inst.ctr [3];
+	assign _0143_ = _3606_ & ~_1065_;
+	assign _1066_ = ~(\mchip.game2.scroll_inst.ctr [2] & \mchip.game2.scroll_inst.ctr [3]);
+	assign _1067_ = _1062_ & ~_1066_;
+	assign _1068_ = ~(_1067_ ^ \mchip.game2.scroll_inst.ctr [4]);
+	assign _0144_ = _3606_ & ~_1068_;
+	assign _1069_ = ~(_1067_ & \mchip.game2.scroll_inst.ctr [4]);
+	assign _1070_ = _1069_ ^ \mchip.game2.scroll_inst.ctr [5];
+	assign _0145_ = _3606_ & ~_1070_;
+	assign _1071_ = ~(\mchip.game2.scroll_inst.ctr [4] & \mchip.game2.scroll_inst.ctr [5]);
+	assign _1072_ = _1067_ & ~_1071_;
+	assign _1073_ = ~(_1072_ ^ \mchip.game2.scroll_inst.ctr [6]);
+	assign _0146_ = _3606_ & ~_1073_;
+	assign _1074_ = ~(_1072_ & \mchip.game2.scroll_inst.ctr [6]);
+	assign _1075_ = _1074_ ^ \mchip.game2.scroll_inst.ctr [7];
+	assign _0147_ = _3606_ & ~_1075_;
+	assign _1076_ = ~(\mchip.game2.scroll_inst.ctr [6] & \mchip.game2.scroll_inst.ctr [7]);
+	assign _1077_ = _1076_ | _1071_;
+	assign _1078_ = _1067_ & ~_1077_;
+	assign _1079_ = ~(_1078_ ^ \mchip.game2.scroll_inst.ctr [8]);
+	assign _0148_ = _3606_ & ~_1079_;
+	assign _1080_ = ~(_1078_ & \mchip.game2.scroll_inst.ctr [8]);
+	assign _1081_ = _1080_ ^ \mchip.game2.scroll_inst.ctr [9];
+	assign _0149_ = _3606_ & ~_1081_;
+	assign _1082_ = ~(\mchip.game2.scroll_inst.ctr [8] & \mchip.game2.scroll_inst.ctr [9]);
+	assign _1083_ = _1078_ & ~_1082_;
+	assign _1084_ = ~(_1083_ ^ \mchip.game2.scroll_inst.ctr [10]);
+	assign _0133_ = _3606_ & ~_1084_;
+	assign _1085_ = ~(_1083_ & \mchip.game2.scroll_inst.ctr [10]);
+	assign _1086_ = _1085_ ^ \mchip.game2.scroll_inst.ctr [11];
+	assign _0134_ = _3606_ & ~_1086_;
+	assign _1087_ = ~(\mchip.game2.scroll_inst.ctr [10] & \mchip.game2.scroll_inst.ctr [11]);
+	assign _1088_ = _1087_ | _1082_;
+	assign _1089_ = _1078_ & ~_1088_;
+	assign _1090_ = ~(_1089_ ^ \mchip.game2.scroll_inst.ctr [12]);
+	assign _0135_ = _3606_ & ~_1090_;
+	assign _1091_ = ~(_1089_ & \mchip.game2.scroll_inst.ctr [12]);
+	assign _1092_ = _1091_ ^ \mchip.game2.scroll_inst.ctr [13];
+	assign _0136_ = _3606_ & ~_1092_;
+	assign _1093_ = ~(\mchip.game2.scroll_inst.ctr [12] & \mchip.game2.scroll_inst.ctr [13]);
+	assign _1094_ = _1089_ & ~_1093_;
+	assign _1095_ = ~(_1094_ ^ \mchip.game2.scroll_inst.ctr [14]);
+	assign _0137_ = _3606_ & ~_1095_;
+	assign _1096_ = ~(_1094_ & \mchip.game2.scroll_inst.ctr [14]);
+	assign _1097_ = _1096_ ^ \mchip.game2.scroll_inst.ctr [15];
+	assign _0138_ = _3606_ & ~_1097_;
+	assign _1098_ = ~(\mchip.game2.scroll_inst.ctr [14] & \mchip.game2.scroll_inst.ctr [15]);
+	assign _1099_ = _1098_ | _1093_;
+	assign _1100_ = _1099_ | _1088_;
+	assign _1101_ = _1078_ & ~_1100_;
+	assign _1102_ = ~(_1101_ ^ \mchip.game2.scroll_inst.ctr [16]);
+	assign _0139_ = _3606_ & ~_1102_;
+	assign _1103_ = ~(_1101_ & \mchip.game2.scroll_inst.ctr [16]);
+	assign _1104_ = _1103_ ^ \mchip.game2.scroll_inst.ctr [17];
+	assign _0140_ = _3606_ & ~_1104_;
+	assign _1105_ = ~(_0497_ & _3206_);
+	assign _1106_ = _0492_ & ~_1105_;
+	assign _1107_ = \mchip.game2.vga_inst.vaddr [9] & ~\mchip.game2.vga_inst.vaddr [8];
+	assign _1108_ = ~(_1107_ & _1106_);
+	assign _1109_ = _3219_ | ~_3206_;
+	assign _1110_ = _0492_ & ~_1109_;
+	assign _1111_ = _0492_ & ~_1110_;
+	assign _1112_ = _1107_ & ~_1111_;
+	assign _1113_ = _1112_ | _0189_;
+	assign _1114_ = _1108_ & ~_1113_;
+	assign _0152_ = _1114_ & ~\mchip.game2.vga_inst.vaddr [0];
+	assign _0153_ = _1114_ & ~_0515_;
+	assign _1115_ = _3198_ & ~_0516_;
+	assign _1116_ = _1115_ | _0520_;
+	assign _0154_ = _1114_ & ~_1116_;
+	assign _1117_ = _1115_ ^ _0519_;
+	assign _0155_ = _1114_ & ~_1117_;
+	assign _1118_ = ~(_3206_ & _3198_);
+	assign _1119_ = _1118_ ^ \mchip.game2.vga_inst.vaddr [4];
+	assign _0156_ = _1114_ & ~_1119_;
+	assign _1120_ = \mchip.game2.vga_inst.vaddr [4] & ~_1118_;
+	assign _1121_ = _1120_ ^ _3214_;
+	assign _0157_ = _1114_ & ~_1121_;
+	assign _1122_ = _3193_ & ~_1118_;
+	assign _1123_ = _1122_ ^ _0501_;
+	assign _0158_ = _1114_ & ~_1123_;
+	assign _1124_ = _1122_ & ~_0501_;
+	assign _1125_ = _1124_ ^ _3610_;
+	assign _0159_ = _1114_ & ~_1125_;
+	assign _1126_ = _3194_ & ~_1118_;
+	assign _1127_ = _1126_ ^ _0191_;
+	assign _0160_ = _1114_ & ~_1127_;
+	assign _1128_ = ~(_1126_ & \mchip.game2.vga_inst.vaddr [8]);
+	assign _1129_ = _1128_ ^ \mchip.game2.vga_inst.vaddr [9];
+	assign _0161_ = _1114_ & ~_1129_;
+	assign _0110_ = _3331_ & ~\mchip.game2.score_inst.ctr [0];
+	assign _1130_ = \mchip.game2.score_inst.ctr [0] & \mchip.game2.score_inst.ctr [1];
+	assign _1131_ = _1130_ | ~_3299_;
+	assign _0121_ = _3331_ & ~_1131_;
+	assign _1132_ = ~(_1130_ ^ \mchip.game2.score_inst.ctr [2]);
+	assign _0124_ = _3331_ & ~_1132_;
+	assign _1133_ = ~(_1130_ & \mchip.game2.score_inst.ctr [2]);
+	assign _1134_ = _1133_ ^ \mchip.game2.score_inst.ctr [3];
+	assign _0125_ = _3331_ & ~_1134_;
+	assign _1135_ = _3300_ | ~_1130_;
+	assign _1136_ = _1135_ ^ \mchip.game2.score_inst.ctr [4];
+	assign _0126_ = _3331_ & ~_1136_;
+	assign _1137_ = _1135_ | ~\mchip.game2.score_inst.ctr [4];
+	assign _1138_ = _1137_ ^ \mchip.game2.score_inst.ctr [5];
+	assign _0127_ = _3331_ & ~_1138_;
+	assign _1139_ = ~(_1135_ | _3296_);
+	assign _1140_ = ~(_1139_ ^ \mchip.game2.score_inst.ctr [6]);
+	assign _0128_ = _3331_ & ~_1140_;
+	assign _1141_ = ~(_1139_ & \mchip.game2.score_inst.ctr [6]);
+	assign _1142_ = _1141_ ^ \mchip.game2.score_inst.ctr [7];
+	assign _0129_ = _3331_ & ~_1142_;
+	assign _1143_ = ~\mchip.game2.score_inst.ctr [8];
+	assign _1144_ = ~(_1135_ | _3298_);
+	assign _1145_ = _1144_ ^ _1143_;
+	assign _0130_ = _3331_ & ~_1145_;
+	assign _1146_ = _1144_ & ~_1143_;
+	assign _1147_ = _1146_ ^ _3319_;
+	assign _0131_ = _3331_ & ~_1147_;
+	assign _1148_ = ~(\mchip.game2.score_inst.ctr [8] & \mchip.game2.score_inst.ctr [9]);
+	assign _1149_ = _1144_ & ~_1148_;
+	assign _1150_ = ~(_1149_ ^ \mchip.game2.score_inst.ctr [10]);
+	assign _0111_ = _3331_ & ~_1150_;
+	assign _1151_ = ~(_1149_ & \mchip.game2.score_inst.ctr [10]);
+	assign _1152_ = _1151_ ^ \mchip.game2.score_inst.ctr [11];
+	assign _0112_ = _3331_ & ~_1152_;
+	assign _1153_ = _1148_ | _3312_;
+	assign _1154_ = _1153_ | ~_1144_;
+	assign _1155_ = _1154_ ^ \mchip.game2.score_inst.ctr [12];
+	assign _0113_ = _3331_ & ~_1155_;
+	assign _1156_ = _1154_ | ~\mchip.game2.score_inst.ctr [12];
+	assign _1157_ = _1156_ ^ \mchip.game2.score_inst.ctr [13];
+	assign _0114_ = _3331_ & ~_1157_;
+	assign _1158_ = ~\mchip.game2.score_inst.ctr [14];
+	assign _1159_ = ~(_1154_ | _3311_);
+	assign _1160_ = _1159_ ^ _1158_;
+	assign _0115_ = _3331_ & ~_1160_;
+	assign _1161_ = _1159_ & ~_1158_;
+	assign _1162_ = _1161_ ^ _3307_;
+	assign _0116_ = _3331_ & ~_1162_;
+	assign _1163_ = ~(\mchip.game2.score_inst.ctr [15] & \mchip.game2.score_inst.ctr [14]);
+	assign _1164_ = _1163_ | _3311_;
+	assign _1165_ = ~(_1164_ | _1153_);
+	assign _1166_ = ~(_1165_ & _1144_);
+	assign _1167_ = _1166_ ^ \mchip.game2.score_inst.ctr [16];
+	assign _0117_ = _3331_ & ~_1167_;
+	assign _1168_ = _1166_ | ~\mchip.game2.score_inst.ctr [16];
+	assign _1169_ = _1168_ ^ \mchip.game2.score_inst.ctr [17];
+	assign _0118_ = _3331_ & ~_1169_;
+	assign _1170_ = ~(_1166_ | _3306_);
+	assign _1171_ = ~(_1170_ ^ \mchip.game2.score_inst.ctr [18]);
+	assign _0119_ = _3331_ & ~_1171_;
+	assign _1172_ = ~(_1170_ & \mchip.game2.score_inst.ctr [18]);
+	assign _1173_ = _1172_ ^ \mchip.game2.score_inst.ctr [19];
+	assign _0120_ = _3331_ & ~_1173_;
+	assign _1174_ = ~(\mchip.game2.score_inst.ctr [18] & \mchip.game2.score_inst.ctr [19]);
+	assign _1175_ = _1174_ | _3306_;
+	assign _1176_ = ~(_1175_ | _1166_);
+	assign _1177_ = ~(_1176_ ^ \mchip.game2.score_inst.ctr [20]);
+	assign _0122_ = _3331_ & ~_1177_;
+	assign _1178_ = ~(_1176_ & \mchip.game2.score_inst.ctr [20]);
+	assign _1179_ = _1178_ ^ \mchip.game2.score_inst.ctr [21];
+	assign _0123_ = _3331_ & ~_1179_;
+	assign _0106_ = _3362_ & ~\mchip.game2.score_inst.score[0] [0];
+	assign _1180_ = _3359_ & _3351_;
+	assign _0107_ = _3362_ & ~_1180_;
+	assign _0108_ = _3362_ & _3352_;
+	assign _0109_ = _3362_ & ~_3350_;
+	assign _0102_ = ~(_3347_ | \mchip.game2.score_inst.score[1] [0]);
+	assign _1181_ = _3344_ & _3336_;
+	assign _0103_ = ~(_1181_ | _3347_);
+	assign _0104_ = _3337_ & ~_3347_;
+	assign _0105_ = _3335_ & ~_3347_;
+	assign _0098_ = ~(_3379_ | \mchip.game2.score_inst.score[2] [0]);
+	assign _1182_ = _3376_ & _3368_;
+	assign _0099_ = ~(_1182_ | _3379_);
+	assign _0100_ = _3369_ & ~_3379_;
+	assign _0101_ = _3367_ & ~_3379_;
+	assign _1183_ = \mchip.game2.score_inst.score[3] [0] & \mchip.game2.score_inst.score[3] [1];
+	assign _1184_ = _1183_ & \mchip.game2.score_inst.score[3] [2];
+	assign _1185_ = _1184_ ^ \mchip.game2.score_inst.score[3] [3];
+	assign _1186_ = _1183_ ^ \mchip.game2.score_inst.score[3] [2];
+	assign _1187_ = _1185_ & ~_1186_;
+	assign _1188_ = \mchip.game2.score_inst.score[3] [1] & ~\mchip.game2.score_inst.score[3] [0];
+	assign _1189_ = _1187_ & ~_1188_;
+	assign _1190_ = _1185_ & ~_1189_;
+	assign _1191_ = ~(\mchip.game2.score_inst.score[3] [3] & \mchip.game2.score_inst.score[3] [2]);
+	assign _1192_ = _1183_ & ~_1191_;
+	assign _1193_ = _1192_ | _1190_;
+	assign _1194_ = \mchip.game2.score_inst.score[3] [0] & ~\mchip.game2.score_inst.score[3] [1];
+	assign _1195_ = ~(_1194_ & _1187_);
+	assign _1196_ = ~(_1195_ | _1192_);
+	assign _1197_ = _1196_ | _1193_;
+	assign _0094_ = ~(_1197_ | \mchip.game2.score_inst.score[3] [0]);
+	assign _1198_ = ~(_1194_ | _1188_);
+	assign _0095_ = ~(_1198_ | _1197_);
+	assign _0096_ = _1186_ & ~_1197_;
+	assign _0097_ = _1185_ & ~_1197_;
+	assign _3625_[4] = _0253_ ^ \mchip.game2.vga_inst.haddr [4];
+	assign _1199_ = ~\mchip.game2.vga_inst.haddr [4];
+	assign _1200_ = _3179_ & ~_0248_;
+	assign _1201_ = _1199_ & ~_1200_;
+	assign _1202_ = _1201_ ^ \mchip.game2.vga_inst.haddr [5];
+	assign _1203_ = \mchip.game2.score_inst.score_saved[3] [2] & \mchip.game2.score_inst.score_saved[3] [3];
+	assign _1204_ = ~(\mchip.game2.score_inst.score_saved[3] [0] ^ \mchip.game2.score_inst.score_saved[3] [3]);
 	assign _1205_ = _1204_ ^ _1203_;
-	assign _1206_ = _0259_ | io_in[13];
-	assign _1207_ = _2177_ & ~_0593_;
-	assign _1208_ = _0258_ | io_in[13];
-	assign _1209_ = (_1207_ ? _1208_ : _1206_);
-	assign _1210_ = _2617_ & ~_0593_;
-	assign _1211_ = _0257_ | io_in[13];
-	assign _1212_ = _0256_ | io_in[13];
-	assign _1213_ = (_1207_ ? _1212_ : _1211_);
-	assign _1214_ = (_1210_ ? _1213_ : _1209_);
-	assign _1215_ = _2615_ & ~_0593_;
-	assign _1216_ = _0255_ | io_in[13];
-	assign _1217_ = _0254_ | io_in[13];
-	assign _1218_ = (_1207_ ? _1217_ : _1216_);
-	assign _1219_ = _0253_ | io_in[13];
-	assign _1220_ = _0252_ | io_in[13];
-	assign _1221_ = (_1207_ ? _1220_ : _1219_);
-	assign _1222_ = (_1210_ ? _1221_ : _1218_);
-	assign _1223_ = (_1215_ ? _1222_ : _1214_);
-	assign _1224_ = _2614_ & ~_0593_;
-	assign _1225_ = _0251_ | io_in[13];
-	assign _1226_ = _0250_ | io_in[13];
-	assign _1227_ = (_1207_ ? _1226_ : _1225_);
-	assign _1228_ = _0249_ | io_in[13];
-	assign _1229_ = _0248_ | io_in[13];
-	assign _1230_ = (_1207_ ? _1229_ : _1228_);
-	assign _1231_ = (_1210_ ? _1230_ : _1227_);
-	assign _1232_ = _0247_ | io_in[13];
-	assign _1233_ = _0246_ | io_in[13];
-	assign _1234_ = (_1207_ ? _1233_ : _1232_);
-	assign _1235_ = _0245_ | io_in[13];
-	assign _1236_ = _0244_ | io_in[13];
-	assign _1237_ = (_1207_ ? _1236_ : _1235_);
-	assign _1238_ = (_1210_ ? _1237_ : _1234_);
-	assign _1239_ = (_1215_ ? _1238_ : _1231_);
-	assign _1240_ = (_1224_ ? _1239_ : _1223_);
-	assign _1241_ = _1240_ | _1205_;
-	assign _1242_ = _1241_ | _1203_;
-	assign _1243_ = _2621_ & _2158_;
-	assign _1244_ = _0592_ | _1243_;
-	assign _1245_ = ~(_0542_ | _2158_);
-	assign _1246_ = _1245_ | _0535_;
-	assign _1247_ = _1246_ | _0546_;
-	assign _1248_ = _1247_ | _1244_;
-	assign _1249_ = ~(_1210_ | _1207_);
-	assign _1250_ = _1215_ & ~_1249_;
-	assign _1251_ = _1250_ ^ _1224_;
-	assign _1252_ = _1224_ | _1215_;
-	assign _1253_ = _1224_ | ~_1215_;
-	assign _1254_ = _1249_ & ~_1253_;
-	assign _1255_ = _1252_ & ~_1254_;
-	assign _1256_ = _1255_ ^ _1203_;
-	assign _1257_ = _0274_ | io_in[13];
-	assign _1258_ = _1257_ | _1256_;
-	assign _1259_ = _1258_ | _1207_;
-	assign _1260_ = _1210_ ^ _1207_;
-	assign _1261_ = _1260_ | _1259_;
-	assign _1262_ = _1249_ ^ _1215_;
-	assign _1263_ = _0272_ | io_in[13];
-	assign _1264_ = _0273_ | io_in[13];
-	assign _1265_ = (_1207_ ? _1264_ : _1263_);
-	assign _1266_ = _0270_ | io_in[13];
-	assign _1267_ = _0271_ | io_in[13];
-	assign _1268_ = (_1207_ ? _1267_ : _1266_);
-	assign _1269_ = (_1260_ ? _1265_ : _1268_);
-	assign _1270_ = _1269_ | _1256_;
-	assign _1271_ = (_1262_ ? _1261_ : _1270_);
-	assign _1272_ = _1271_ | _1251_;
-	assign _1273_ = (_1248_ ? _1242_ : _1272_);
-	assign _1274_ = ~_2614_;
-	assign _1275_ = ~_2622_;
-	assign _1276_ = (_2621_ ? _2158_ : _1275_);
-	assign _1277_ = ~(_1276_ | _1274_);
-	assign _1278_ = _2611_ & ~_1276_;
-	assign _1279_ = _1278_ ^ _1277_;
-	assign _1280_ = ~_2713_;
-	assign _1281_ = _0529_ | _2738_;
-	assign _1282_ = ~(_1281_ | _2721_);
-	assign _1283_ = _1280_ & ~_1282_;
-	assign _1284_ = _0509_ | _2744_;
-	assign _1285_ = _1284_ | _2608_;
-	assign _1286_ = _1283_ & ~_1285_;
-	assign _1287_ = ~(_1286_ | _2737_);
-	assign _1288_ = _2177_ & ~_1276_;
+	assign _1206_ = ~(\mchip.game2.score_inst.score_saved[3] [2] & \mchip.game2.score_inst.score_saved[3] [1]);
+	assign _1207_ = ~(\mchip.game2.score_inst.score_saved[3] [2] ^ \mchip.game2.score_inst.score_saved[3] [3]);
+	assign _1208_ = _1207_ | _1206_;
+	assign _1209_ = _1207_ ^ _1206_;
+	assign _1210_ = ~(\mchip.game2.score_inst.score_saved[3] [1] & \mchip.game2.score_inst.score_saved[3] [0]);
+	assign _1211_ = ~(\mchip.game2.score_inst.score_saved[3] [2] ^ \mchip.game2.score_inst.score_saved[3] [1]);
+	assign _1212_ = _1211_ | _1210_;
+	assign _1213_ = _1209_ & ~_1212_;
+	assign _1214_ = _1208_ & ~_1213_;
+	assign _1215_ = ~(_1214_ | _1205_);
+	assign _1216_ = _1203_ & ~_1204_;
+	assign _1217_ = ~\mchip.game2.score_inst.score_saved[3] [1];
+	assign _1218_ = \mchip.game2.score_inst.score_saved[3] [0] & \mchip.game2.score_inst.score_saved[3] [3];
+	assign _1219_ = _1218_ ^ _1217_;
+	assign _1220_ = _1219_ ^ _1216_;
+	assign _1221_ = ~(_1220_ ^ _1215_);
+	assign _1222_ = ~(_1221_ & _1202_);
+	assign _1223_ = _1200_ ^ _1199_;
+	assign _1224_ = ~_1223_;
+	assign _1225_ = _1214_ ^ _1205_;
+	assign _1226_ = _1225_ & ~_1224_;
+	assign _1227_ = _1221_ ^ _1202_;
+	assign _1228_ = ~(_1227_ & _1226_);
+	assign _1229_ = ~(_1228_ & _1222_);
+	assign _1230_ = _1225_ ^ _1224_;
+	assign _1231_ = _1227_ & ~_1230_;
+	assign _1232_ = ~\mchip.game2.vga_inst.haddr [2];
+	assign _1233_ = _3179_ & ~_1232_;
+	assign _1234_ = _1233_ ^ \mchip.game2.vga_inst.haddr [3];
+	assign _1235_ = ~(_1212_ ^ _1209_);
+	assign _1236_ = ~(_1235_ & _1234_);
+	assign _1237_ = ~(_1235_ ^ _1234_);
+	assign _1238_ = _1232_ & ~_3179_;
+	assign _1239_ = ~(_1238_ | _1233_);
+	assign _1240_ = _1211_ ^ _1210_;
+	assign _1241_ = ~(_1240_ & _1239_);
+	assign _1242_ = ~(_1241_ | _1237_);
+	assign _1243_ = _1236_ & ~_1242_;
+	assign _1244_ = _1240_ ^ _1239_;
+	assign _1245_ = _1244_ & ~_1237_;
+	assign _1246_ = ~(\mchip.game2.score_inst.score_saved[3] [1] ^ \mchip.game2.score_inst.score_saved[3] [0]);
+	assign _3625_[1] = _3179_ & ~_0241_;
+	assign _1247_ = _3625_[1] | _1246_;
+	assign _1248_ = \mchip.game2.score_inst.score_saved[3] [0] & ~\mchip.game2.vga_inst.haddr [0];
+	assign _1249_ = _3625_[1] ^ _1246_;
+	assign _1250_ = _1249_ & _1248_;
+	assign _1251_ = _1247_ & ~_1250_;
+	assign _1252_ = _1245_ & ~_1251_;
+	assign _1253_ = _1243_ & ~_1252_;
+	assign _1254_ = _1231_ & ~_1253_;
+	assign _1255_ = _1254_ | _1229_;
+	assign _1256_ = ~\mchip.game2.vga_inst.haddr [6];
+	assign _1257_ = _0239_ & ~_1200_;
+	assign _1258_ = _1257_ ^ _1256_;
+	assign _1259_ = _1216_ & ~_1219_;
+	assign _1260_ = _1220_ | _1205_;
+	assign _1261_ = ~(_1260_ | _1214_);
+	assign _1262_ = _1261_ | _1259_;
+	assign _1263_ = _1218_ & ~_1217_;
+	assign _1264_ = _1263_ ^ \mchip.game2.score_inst.score_saved[3] [2];
+	assign _1265_ = _1264_ ^ _1262_;
+	assign _1266_ = _1265_ ^ _1258_;
+	assign _1267_ = _1266_ ^ _1255_;
+	assign _1268_ = ~(\mchip.game2.score_inst.score_saved[3] [0] ^ \mchip.game2.vga_inst.haddr [0]);
+	assign _1269_ = ~\mchip.game2.vga_inst.haddr [8];
+	assign _1270_ = \mchip.game2.vga_inst.haddr [6] & \mchip.game2.vga_inst.haddr [7];
+	assign _1271_ = _0239_ | ~_1270_;
+	assign _1272_ = _1270_ & _0239_;
+	assign _1273_ = _1272_ & _1200_;
+	assign _1274_ = _1271_ & ~_1273_;
+	assign _1275_ = _1274_ ^ _1269_;
+	assign _1276_ = ~_1275_;
+	assign _1277_ = ~\mchip.game2.score_inst.score_saved[3] [3];
+	assign _1278_ = ~(_1263_ & \mchip.game2.score_inst.score_saved[3] [2]);
+	assign _1279_ = _1278_ | _1277_;
+	assign _1280_ = ~(_1264_ & \mchip.game2.score_inst.score_saved[3] [3]);
+	assign _1281_ = _1259_ & ~_1280_;
+	assign _1282_ = _1279_ & ~_1281_;
+	assign _1283_ = _1280_ | _1260_;
+	assign _1284_ = ~(_1283_ | _1214_);
+	assign _1285_ = _1282_ & ~_1284_;
+	assign _1286_ = _1285_ | _1276_;
+	assign _1287_ = \mchip.game2.vga_inst.haddr [6] & ~_1257_;
+	assign _1288_ = _1287_ ^ \mchip.game2.vga_inst.haddr [7];
 	assign _1289_ = ~_1288_;
-	assign _1290_ = ~(_2715_ | _2713_);
-	assign _1291_ = _1282_ | _2718_;
-	assign _1292_ = _1290_ & ~_1291_;
-	assign _1293_ = \mchip.design.io_fsm.next_state [0] | ~\mchip.design.io_fsm.next_state [1];
-	assign _1294_ = _2738_ & ~_1293_;
-	assign _1295_ = _2608_ & ~_1294_;
-	assign _1296_ = _1293_ | _2738_;
-	assign _1297_ = \mchip.design.io_fsm.next_state [1] | ~\mchip.design.io_fsm.next_state [0];
-	assign _1298_ = \mchip.design.io_fsm.next_state [2] & ~_1297_;
-	assign _1299_ = _1296_ & ~_1298_;
-	assign _1300_ = _2628_ & ~_1299_;
-	assign _1301_ = _1300_ | _1295_;
-	assign _1302_ = _1292_ & ~_1301_;
-	assign _1303_ = ~(_1302_ | _2737_);
-	assign _1304_ = (_1288_ ? _1303_ : _1287_);
-	assign _1305_ = _1279_ | ~_1304_;
-	assign _1306_ = _2617_ & ~_1276_;
-	assign _1307_ = ~_1306_;
-	assign _1308_ = _1297_ | \mchip.design.io_fsm.next_state [2];
-	assign _1309_ = _2744_ & ~_1308_;
-	assign _1310_ = _1309_ | _0509_;
-	assign _1311_ = _1298_ | _1296_;
-	assign _1312_ = _2628_ & ~_1311_;
-	assign _1313_ = ~(_1312_ | _1310_);
-	assign _1314_ = _1313_ & ~_2718_;
-	assign _1315_ = ~(_1314_ | _2737_);
-	assign _1316_ = _1279_ | ~_1315_;
-	assign _1317_ = _1316_ | _1289_;
-	assign _1318_ = (_1306_ ? _1317_ : _1305_);
-	assign _1319_ = ~_2615_;
-	assign _1320_ = ~(_1276_ | _1319_);
-	assign _1321_ = ~_1320_;
-	assign _1322_ = _1304_ | _1279_;
-	assign _1323_ = _1315_ | _1279_;
-	assign _1324_ = (_1288_ ? _1323_ : _1279_);
-	assign _1325_ = (_1306_ ? _1324_ : _1322_);
-	assign _1326_ = (_1320_ ? _1325_ : _1318_);
-	assign _1327_ = _1326_ | _1277_;
-	assign _1328_ = (_2158_ ? _0534_ : _1275_);
-	assign _1329_ = ~_1277_;
-	assign _1330_ = _1289_ | _1279_;
-	assign _1331_ = _1330_ | _1307_;
-	assign _1332_ = _1331_ | _1321_;
-	assign _1333_ = _1329_ & ~_1332_;
-	assign _1334_ = ~_1333_;
-	assign _1335_ = _2622_ & ~_2158_;
-	assign _1336_ = _1335_ & ~_0545_;
-	assign _1337_ = ~(_1336_ | _0591_);
-	assign _1338_ = _1337_ | _1335_;
-	assign _1339_ = ~(_1276_ | _2609_);
-	assign _1340_ = ~_1278_;
-	assign _1341_ = _0644_ & ~_0809_;
-	assign _1342_ = ~(\mchip.design.inter.data_out_reg [32] & \mchip.design.io_fsm.completed_transaction );
-	assign _1343_ = _0502_ & ~_1342_;
-	assign _1344_ = ~(_1343_ | _1341_);
-	assign _1345_ = _0648_ & ~_2751_;
-	assign _1346_ = ~(_1345_ | _1344_);
-	assign _1347_ = _1281_ | ~_1346_;
-	assign _1348_ = _1347_ | _2721_;
-	assign _1349_ = (_2604_ ? _2712_ : _2607_);
-	assign _1350_ = _1349_ & _1346_;
-	assign _1351_ = _1348_ & ~_1350_;
-	assign _1352_ = ~(\mchip.design.inter.data_out_reg [33] & _0644_);
-	assign _1353_ = ~(\mchip.design.inter.data_out_reg [33] & \mchip.design.io_fsm.completed_transaction );
-	assign _1354_ = _0502_ & ~_1353_;
-	assign _1355_ = _1352_ & ~_1354_;
-	assign _1356_ = _1355_ | _1345_;
-	assign _1357_ = _1356_ | _1281_;
-	assign _1358_ = _1357_ | _2721_;
-	assign _1359_ = _1349_ & ~_1356_;
-	assign _1360_ = _1358_ & ~_1359_;
-	assign _1361_ = (_1288_ ? _1360_ : _1351_);
-	assign _1362_ = ~(\mchip.design.inter.data_out_reg [34] & _0644_);
-	assign _1363_ = ~(\mchip.design.inter.data_out_reg [34] & \mchip.design.io_fsm.completed_transaction );
-	assign _1364_ = _0502_ & ~_1363_;
-	assign _1365_ = _1362_ & ~_1364_;
-	assign _1366_ = _1365_ | _1345_;
-	assign _1367_ = _1366_ | _1281_;
-	assign _1368_ = _1367_ | _2721_;
-	assign _1369_ = _1349_ & ~_1366_;
-	assign _1370_ = _1368_ & ~_1369_;
-	assign _1371_ = ~(\mchip.design.inter.data_out_reg [35] & _0644_);
-	assign _1372_ = ~(\mchip.design.inter.data_out_reg [35] & \mchip.design.io_fsm.completed_transaction );
-	assign _1373_ = _0502_ & ~_1372_;
-	assign _1374_ = _1371_ & ~_1373_;
-	assign _1375_ = _1374_ | _1345_;
-	assign _1376_ = _1375_ | _1281_;
-	assign _1377_ = _1376_ | _2721_;
-	assign _1378_ = _1349_ & ~_1375_;
-	assign _1379_ = _1377_ & ~_1378_;
-	assign _1380_ = (_1288_ ? _1379_ : _1370_);
-	assign _1381_ = (_1306_ ? _1380_ : _1361_);
-	assign _1382_ = ~(\mchip.design.inter.data_out_reg [36] & _0644_);
-	assign _1383_ = ~(\mchip.design.inter.data_out_reg [36] & \mchip.design.io_fsm.completed_transaction );
-	assign _1384_ = _0502_ & ~_1383_;
-	assign _1385_ = _1382_ & ~_1384_;
-	assign _1386_ = _1385_ | _1345_;
-	assign _1387_ = _1386_ | _1281_;
-	assign _1388_ = _1387_ | _2721_;
-	assign _1389_ = _1349_ & ~_1386_;
-	assign _1390_ = _1388_ & ~_1389_;
-	assign _1391_ = ~(\mchip.design.inter.data_out_reg [37] & _0644_);
-	assign _1392_ = ~(\mchip.design.inter.data_out_reg [37] & \mchip.design.io_fsm.completed_transaction );
-	assign _1393_ = _0502_ & ~_1392_;
-	assign _1394_ = _1391_ & ~_1393_;
-	assign _1395_ = _1394_ | _1345_;
-	assign _1396_ = _1395_ | _1281_;
-	assign _1397_ = _1396_ | _2721_;
-	assign _1398_ = _1349_ & ~_1395_;
-	assign _1399_ = _1397_ & ~_1398_;
-	assign _1400_ = (_1288_ ? _1399_ : _1390_);
-	assign _1401_ = ~(\mchip.design.inter.data_out_reg [38] & _0644_);
-	assign _1402_ = ~(\mchip.design.inter.data_out_reg [38] & \mchip.design.io_fsm.completed_transaction );
-	assign _1403_ = _0502_ & ~_1402_;
-	assign _1404_ = _1401_ & ~_1403_;
-	assign _1405_ = _1404_ | _1345_;
-	assign _1406_ = _1405_ | _1281_;
-	assign _1407_ = _1406_ | _2721_;
-	assign _1408_ = _1349_ & ~_1405_;
-	assign _1409_ = _1407_ & ~_1408_;
-	assign _1410_ = ~(\mchip.design.inter.data_out_reg [39] & _0644_);
-	assign _1411_ = ~(\mchip.design.inter.data_out_reg [39] & \mchip.design.io_fsm.completed_transaction );
-	assign _1412_ = _0502_ & ~_1411_;
-	assign _1413_ = _1410_ & ~_1412_;
-	assign _1414_ = _1413_ | _1345_;
-	assign _1415_ = _1414_ | _1281_;
-	assign _1416_ = _1415_ | _2721_;
-	assign _1417_ = _1349_ & ~_1414_;
-	assign _1418_ = _1416_ & ~_1417_;
-	assign _1419_ = (_1288_ ? _1418_ : _1409_);
-	assign _1420_ = (_1306_ ? _1419_ : _1400_);
-	assign _1421_ = (_1320_ ? _1420_ : _1381_);
-	assign _1422_ = ~(\mchip.design.inter.data_out_reg [40] & _0644_);
-	assign _1423_ = ~(\mchip.design.inter.data_out_reg [40] & \mchip.design.io_fsm.completed_transaction );
-	assign _1424_ = _0502_ & ~_1423_;
-	assign _1425_ = _1422_ & ~_1424_;
-	assign _1426_ = _1425_ | _1345_;
-	assign _1427_ = _1426_ | _1281_;
-	assign _1428_ = _1427_ | _2721_;
-	assign _1429_ = _1349_ & ~_1426_;
-	assign _1430_ = _1428_ & ~_1429_;
-	assign _1431_ = ~(\mchip.design.inter.data_out_reg [41] & _0644_);
-	assign _1432_ = ~(\mchip.design.inter.data_out_reg [41] & \mchip.design.io_fsm.completed_transaction );
-	assign _1433_ = _0502_ & ~_1432_;
-	assign _1434_ = _1431_ & ~_1433_;
-	assign _1435_ = _1434_ | _1345_;
-	assign _1436_ = _1435_ | _1281_;
-	assign _1437_ = _1436_ | _2721_;
-	assign _1438_ = _1349_ & ~_1435_;
-	assign _1439_ = _1437_ & ~_1438_;
-	assign _1440_ = (_1288_ ? _1439_ : _1430_);
-	assign _1441_ = ~(\mchip.design.inter.data_out_reg [42] & _0644_);
-	assign _1442_ = ~(\mchip.design.inter.data_out_reg [42] & \mchip.design.io_fsm.completed_transaction );
-	assign _1443_ = _0502_ & ~_1442_;
-	assign _1444_ = _1441_ & ~_1443_;
-	assign _1445_ = _1444_ | _1345_;
-	assign _1446_ = _1445_ | _1281_;
-	assign _1447_ = _1446_ | _2721_;
-	assign _1448_ = _1349_ & ~_1445_;
-	assign _1449_ = _1447_ & ~_1448_;
-	assign _1450_ = ~(\mchip.design.inter.data_out_reg [43] & _0644_);
-	assign _1451_ = ~(\mchip.design.inter.data_out_reg [43] & \mchip.design.io_fsm.completed_transaction );
-	assign _1452_ = _0502_ & ~_1451_;
-	assign _1453_ = _1450_ & ~_1452_;
-	assign _1454_ = _1453_ | _1345_;
-	assign _1455_ = _1454_ | _1281_;
-	assign _1456_ = _1455_ | _2721_;
-	assign _1457_ = _1349_ & ~_1454_;
-	assign _1458_ = _1456_ & ~_1457_;
-	assign _1459_ = (_1288_ ? _1458_ : _1449_);
-	assign _1460_ = (_1306_ ? _1459_ : _1440_);
-	assign _1461_ = ~(\mchip.design.inter.data_out_reg [44] & _0644_);
-	assign _1462_ = ~(\mchip.design.inter.data_out_reg [44] & \mchip.design.io_fsm.completed_transaction );
-	assign _1463_ = _0502_ & ~_1462_;
-	assign _1464_ = _1461_ & ~_1463_;
-	assign _1465_ = _1464_ | _1345_;
-	assign _1466_ = _1465_ | _1281_;
-	assign _1467_ = _1466_ | _2721_;
-	assign _1468_ = _1349_ & ~_1465_;
-	assign _1469_ = _1467_ & ~_1468_;
-	assign _1470_ = ~(\mchip.design.inter.data_out_reg [45] & _0644_);
-	assign _1471_ = ~(\mchip.design.inter.data_out_reg [45] & \mchip.design.io_fsm.completed_transaction );
-	assign _1472_ = _0502_ & ~_1471_;
-	assign _1473_ = _1470_ & ~_1472_;
-	assign _1474_ = _1473_ | _1345_;
-	assign _1475_ = _1474_ | _1281_;
-	assign _1476_ = _1475_ | _2721_;
-	assign _1477_ = _1349_ & ~_1474_;
-	assign _1478_ = _1476_ & ~_1477_;
-	assign _1479_ = (_1288_ ? _1478_ : _1469_);
-	assign _1480_ = ~(\mchip.design.inter.data_out_reg [46] & _0644_);
-	assign _1481_ = ~(\mchip.design.inter.data_out_reg [46] & \mchip.design.io_fsm.completed_transaction );
-	assign _1482_ = _0502_ & ~_1481_;
-	assign _1483_ = _1480_ & ~_1482_;
-	assign _1484_ = _1483_ | _1345_;
-	assign _1485_ = _1484_ | _1281_;
-	assign _1486_ = _1485_ | _2721_;
-	assign _1487_ = _1349_ & ~_1484_;
-	assign _1488_ = _1486_ & ~_1487_;
-	assign _1489_ = ~(\mchip.design.inter.data_out_reg [47] & _0644_);
-	assign _1490_ = ~(\mchip.design.inter.data_out_reg [47] & \mchip.design.io_fsm.completed_transaction );
-	assign _1491_ = _0502_ & ~_1490_;
-	assign _1492_ = _1489_ & ~_1491_;
-	assign _1493_ = _1492_ | _1345_;
-	assign _1494_ = _1493_ | _1281_;
-	assign _1495_ = _1494_ | _2721_;
-	assign _1496_ = _1349_ & ~_1493_;
-	assign _1497_ = _1495_ & ~_1496_;
-	assign _1498_ = (_1288_ ? _1497_ : _1488_);
-	assign _1499_ = (_1306_ ? _1498_ : _1479_);
-	assign _1500_ = (_1320_ ? _1499_ : _1460_);
-	assign _1501_ = (_1277_ ? _1500_ : _1421_);
-	assign _1502_ = ~(\mchip.design.inter.data_out_reg [48] & _0644_);
-	assign _1503_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [48] : \mchip.design.inter.mempage_reg [0]);
-	assign _1504_ = _1503_ & _0502_;
-	assign _1505_ = _1502_ & ~_1504_;
-	assign _1506_ = _0830_ | _0500_;
-	assign _1507_ = _2751_ & ~_1506_;
-	assign _1508_ = _1505_ & ~_1507_;
-	assign _1509_ = _1508_ | _1345_;
-	assign _1510_ = _1509_ | _1281_;
-	assign _1511_ = _1510_ | _2721_;
-	assign _1512_ = _1349_ & ~_1509_;
-	assign _1513_ = _1511_ & ~_1512_;
-	assign _1514_ = ~(\mchip.design.inter.data_out_reg [49] & _0644_);
-	assign _1515_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [49] : \mchip.design.inter.mempage_reg [1]);
-	assign _1516_ = _1515_ & _0502_;
-	assign _1517_ = _1514_ & ~_1516_;
-	assign _1518_ = _0858_ | _0500_;
-	assign _1519_ = _2751_ & ~_1518_;
-	assign _1520_ = _1517_ & ~_1519_;
-	assign _1521_ = _1520_ | _1345_;
-	assign _1522_ = _1521_ | _1281_;
-	assign _1523_ = _1522_ | _2721_;
-	assign _1524_ = _1349_ & ~_1521_;
-	assign _1525_ = _1523_ & ~_1524_;
-	assign _1526_ = (_1288_ ? _1525_ : _1513_);
-	assign _1527_ = ~(\mchip.design.inter.data_out_reg [50] & _0644_);
-	assign _1528_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [50] : \mchip.design.inter.mempage_reg [2]);
-	assign _1529_ = _1528_ & _0502_;
-	assign _1530_ = _1527_ & ~_1529_;
-	assign _1531_ = _0964_ | _0500_;
-	assign _1532_ = _2751_ & ~_1531_;
-	assign _1533_ = _1530_ & ~_1532_;
-	assign _1534_ = _1533_ | _1345_;
-	assign _1535_ = _1534_ | _1281_;
-	assign _1536_ = _1535_ | _2721_;
-	assign _1537_ = _1349_ & ~_1534_;
-	assign _1538_ = _1536_ & ~_1537_;
-	assign _1539_ = ~(\mchip.design.inter.data_out_reg [51] & _0644_);
-	assign _1540_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [51] : \mchip.design.inter.mempage_reg [3]);
-	assign _1541_ = _1540_ & _0502_;
-	assign _1542_ = _1539_ & ~_1541_;
-	assign _1543_ = _1070_ | _0500_;
-	assign _1544_ = _2751_ & ~_1543_;
-	assign _1545_ = _1542_ & ~_1544_;
-	assign _1546_ = _1545_ | _1345_;
-	assign _1547_ = _1546_ | _1281_;
-	assign _1548_ = _1547_ | _2721_;
-	assign _1549_ = _1349_ & ~_1546_;
-	assign _1550_ = _1548_ & ~_1549_;
-	assign _1551_ = (_1288_ ? _1550_ : _1538_);
-	assign _1552_ = (_1306_ ? _1551_ : _1526_);
-	assign _1553_ = ~(\mchip.design.inter.data_out_reg [52] & _0644_);
-	assign _1554_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [52] : \mchip.design.inter.mempage_reg [4]);
-	assign _1555_ = _1554_ & _0502_;
-	assign _1556_ = _1553_ & ~_1555_;
-	assign _1557_ = _0833_ | _0500_;
-	assign _1558_ = _2751_ & ~_1557_;
-	assign _1559_ = _1556_ & ~_1558_;
-	assign _1560_ = _1559_ | _1345_;
-	assign _1561_ = _1560_ | _1281_;
-	assign _1562_ = _1561_ | _2721_;
-	assign _1563_ = _1349_ & ~_1560_;
-	assign _1564_ = _1562_ & ~_1563_;
-	assign _1565_ = ~(\mchip.design.inter.data_out_reg [53] & _0644_);
-	assign _1566_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [53] : \mchip.design.inter.mempage_reg [5]);
-	assign _1567_ = _1566_ & _0502_;
-	assign _1568_ = _1565_ & ~_1567_;
-	assign _1569_ = _0860_ | _0500_;
-	assign _1570_ = _2751_ & ~_1569_;
-	assign _1571_ = _1568_ & ~_1570_;
-	assign _1572_ = _1571_ | _1345_;
-	assign _1573_ = _1572_ | _1281_;
-	assign _1574_ = _1573_ | _2721_;
-	assign _1575_ = _1349_ & ~_1572_;
-	assign _1576_ = _1574_ & ~_1575_;
-	assign _1577_ = (_1288_ ? _1576_ : _1564_);
-	assign _1578_ = ~(\mchip.design.inter.data_out_reg [54] & _0644_);
-	assign _1579_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [54] : \mchip.design.inter.mempage_reg [6]);
-	assign _1580_ = _1579_ & _0502_;
-	assign _1581_ = _1578_ & ~_1580_;
-	assign _1582_ = _0966_ | _0500_;
-	assign _1583_ = _2751_ & ~_1582_;
-	assign _1584_ = _1581_ & ~_1583_;
-	assign _1585_ = _1584_ | _1345_;
-	assign _1586_ = _1585_ | _1281_;
-	assign _1587_ = _1586_ | _2721_;
-	assign _1588_ = _1349_ & ~_1585_;
-	assign _1589_ = _1587_ & ~_1588_;
-	assign _1590_ = ~(\mchip.design.inter.data_out_reg [55] & _0644_);
-	assign _1591_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [55] : \mchip.design.inter.mempage_reg [7]);
-	assign _1592_ = _1591_ & _0502_;
-	assign _1593_ = _1590_ & ~_1592_;
-	assign _1594_ = _1072_ | _0500_;
-	assign _1595_ = _2751_ & ~_1594_;
-	assign _1596_ = _1593_ & ~_1595_;
-	assign _1597_ = _1596_ | _1345_;
-	assign _1598_ = _1597_ | _1281_;
-	assign _1599_ = _1598_ | _2721_;
-	assign _1600_ = _1349_ & ~_1597_;
-	assign _1601_ = _1599_ & ~_1600_;
-	assign _1602_ = (_1288_ ? _1601_ : _1589_);
-	assign _1603_ = (_1306_ ? _1602_ : _1577_);
-	assign _1604_ = (_1320_ ? _1603_ : _1552_);
-	assign _1605_ = ~(\mchip.design.inter.data_out_reg [56] & _0644_);
-	assign _1606_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [56] : \mchip.design.inter.mempage_reg [8]);
-	assign _1607_ = _1606_ & _0502_;
-	assign _1608_ = _1605_ & ~_1607_;
-	assign _1609_ = _0836_ | _0500_;
-	assign _1610_ = _2751_ & ~_1609_;
-	assign _1611_ = _1608_ & ~_1610_;
-	assign _1612_ = _1611_ | _1345_;
-	assign _1613_ = _1612_ | _1281_;
-	assign _1614_ = _1613_ | _2721_;
-	assign _1615_ = _1349_ & ~_1612_;
-	assign _1616_ = _1614_ & ~_1615_;
-	assign _1617_ = ~(\mchip.design.inter.data_out_reg [57] & _0644_);
-	assign _1618_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [57] : \mchip.design.inter.mempage_reg [9]);
-	assign _1619_ = _1618_ & _0502_;
-	assign _1620_ = _1617_ & ~_1619_;
-	assign _1621_ = _0863_ | _0500_;
-	assign _1622_ = _2751_ & ~_1621_;
-	assign _1623_ = _1620_ & ~_1622_;
-	assign _1624_ = _1623_ | _1345_;
-	assign _1625_ = _1624_ | _1281_;
-	assign _1626_ = _1625_ | _2721_;
-	assign _1627_ = _1349_ & ~_1624_;
-	assign _1628_ = _1626_ & ~_1627_;
-	assign _1629_ = (_1288_ ? _1628_ : _1616_);
-	assign _1630_ = ~(\mchip.design.inter.data_out_reg [58] & _0644_);
-	assign _1631_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [58] : \mchip.design.inter.mempage_reg [10]);
-	assign _1632_ = _1631_ & _0502_;
-	assign _1633_ = _1630_ & ~_1632_;
-	assign _1634_ = _0969_ | _0500_;
-	assign _1635_ = _2751_ & ~_1634_;
-	assign _1636_ = _1633_ & ~_1635_;
-	assign _1637_ = _1636_ | _1345_;
-	assign _1638_ = _1637_ | _1281_;
-	assign _1639_ = _1638_ | _2721_;
-	assign _1640_ = _1349_ & ~_1637_;
-	assign _1641_ = _1639_ & ~_1640_;
-	assign _1642_ = ~(\mchip.design.inter.data_out_reg [59] & _0644_);
-	assign _1643_ = (\mchip.design.io_fsm.completed_transaction  ? \mchip.design.inter.data_out_reg [59] : \mchip.design.inter.mempage_reg [11]);
-	assign _1644_ = _1643_ & _0502_;
-	assign _1645_ = _1642_ & ~_1644_;
-	assign _1646_ = _1075_ | _0500_;
-	assign _1647_ = _2751_ & ~_1646_;
-	assign _1648_ = _1645_ & ~_1647_;
-	assign _1649_ = _1648_ | _1345_;
-	assign _1650_ = _1649_ | _1281_;
-	assign _1651_ = _1650_ | _2721_;
-	assign _1652_ = _1349_ & ~_1649_;
-	assign _1653_ = _1651_ & ~_1652_;
-	assign _1654_ = (_1288_ ? _1653_ : _1641_);
-	assign _1655_ = (_1306_ ? _1654_ : _1629_);
-	assign _1656_ = _0801_ | ~_0644_;
-	assign _1657_ = (\mchip.design.io_fsm.completed_transaction  ? _0801_ : _0838_);
-	assign _1658_ = _0502_ & ~_1657_;
-	assign _1659_ = _1656_ & ~_1658_;
-	assign _1660_ = _0838_ | _0500_;
-	assign _1661_ = _2751_ & ~_1660_;
-	assign _1662_ = _1659_ & ~_1661_;
-	assign _1663_ = _1662_ | _1345_;
-	assign _1664_ = _1663_ | _1281_;
-	assign _1665_ = _1664_ | _2721_;
-	assign _1666_ = _1349_ & ~_1663_;
-	assign _1667_ = _1665_ & ~_1666_;
-	assign _1668_ = _0872_ | ~_0644_;
-	assign _1669_ = (\mchip.design.io_fsm.completed_transaction  ? _0872_ : _0865_);
-	assign _1670_ = _0502_ & ~_1669_;
-	assign _1671_ = _1668_ & ~_1670_;
-	assign _1672_ = _0865_ | _0500_;
-	assign _1673_ = _2751_ & ~_1672_;
-	assign _1674_ = _1671_ & ~_1673_;
-	assign _1675_ = _1674_ | _1345_;
-	assign _1676_ = _1675_ | _1281_;
-	assign _1677_ = _1676_ | _2721_;
-	assign _1678_ = _1349_ & ~_1675_;
+	assign _1290_ = ~(_1264_ & _1262_);
+	assign _1291_ = _1290_ & _1278_;
+	assign _1292_ = _1291_ ^ _1277_;
+	assign _1293_ = _1292_ & ~_1289_;
+	assign _1294_ = _1265_ & _1258_;
+	assign _1295_ = _1292_ ^ _1289_;
+	assign _1296_ = _1294_ & ~_1295_;
+	assign _1297_ = _1296_ | _1293_;
+	assign _1298_ = _1295_ | ~_1266_;
+	assign _1299_ = _1229_ & ~_1298_;
+	assign _1300_ = _1299_ | _1297_;
+	assign _1301_ = _1298_ | ~_1231_;
+	assign _1302_ = ~(_1301_ | _1253_);
+	assign _1303_ = _1302_ | _1300_;
+	assign _1304_ = _1285_ ^ _1276_;
+	assign _1305_ = _1304_ & _1303_;
+	assign _1306_ = _1286_ & ~_1305_;
+	assign _1307_ = ~\mchip.game2.vga_inst.haddr [9];
+	assign _1308_ = \mchip.game2.vga_inst.haddr [8] & ~_1274_;
+	assign _1309_ = _1308_ ^ _1307_;
+	assign _1310_ = _1309_ ^ _1306_;
+	assign _1311_ = \mchip.game2.vga_inst.vaddr [2] & ~_3219_;
+	assign _1312_ = _1311_ ^ _0519_;
+	assign _1313_ = _1312_ & ~_0630_;
+	assign _1314_ = ~(_0404_ | _3219_);
+	assign _1315_ = _0519_ & ~_1314_;
+	assign _1316_ = ~(_1315_ ^ \mchip.game2.vga_inst.vaddr [4]);
+	assign _1317_ = _1316_ | _1313_;
+	assign _1318_ = \mchip.game2.vga_inst.vaddr [4] & ~_1315_;
+	assign _1319_ = _1318_ ^ \mchip.game2.vga_inst.vaddr [5];
+	assign _1320_ = _0629_ & _0586_;
+	assign _1321_ = ~(_1320_ & _1312_);
+	assign _1322_ = _1321_ | ~_1316_;
+	assign _1323_ = (_1319_ ? _1322_ : _1317_);
+	assign _1324_ = _1323_ | ~_1310_;
+	assign _1325_ = _1324_ | _1268_;
+	assign _1326_ = _1249_ ^ _1248_;
+	assign _1327_ = _1326_ | _1325_;
+	assign _1328_ = ~(_1251_ ^ _1244_);
+	assign _1329_ = _3219_ | _0516_;
+	assign _1330_ = ~(_1329_ & _1312_);
+	assign _1331_ = _1330_ | ~_1316_;
+	assign _1332_ = _0586_ & ~_0497_;
+	assign _1333_ = _1332_ & _1312_;
+	assign _1334_ = _1333_ | _1316_;
+	assign _1335_ = (_1319_ ? _1331_ : _1334_);
+	assign _1336_ = _1335_ | ~_1310_;
+	assign _1337_ = (_1326_ ? _1324_ : _1336_);
+	assign _1338_ = (_1328_ ? _1327_ : _1337_);
+	assign _1339_ = _1244_ & ~_1251_;
+	assign _1340_ = _1241_ & ~_1339_;
+	assign _1341_ = _1340_ ^ _1237_;
+	assign _1342_ = ~_3219_;
+	assign _1343_ = (_0586_ ? _0629_ : _1342_);
+	assign _1344_ = _1343_ | ~_1312_;
+	assign _1345_ = _1344_ | ~_1316_;
+	assign _1346_ = _0516_ & ~_3219_;
+	assign _1347_ = (_1312_ ? _1332_ : _1346_);
+	assign _1348_ = _1316_ | ~_1347_;
+	assign _1349_ = (_1319_ ? _1345_ : _1348_);
+	assign _1350_ = _1310_ & ~_1349_;
+	assign _1351_ = ~_1350_;
+	assign _1352_ = (_1319_ ? _1331_ : _1316_);
+	assign _1353_ = _1310_ & ~_1352_;
+	assign _1354_ = ~_1353_;
+	assign _1355_ = ~_1346_;
+	assign _1356_ = (_1312_ ? _0630_ : _1355_);
+	assign _1357_ = _1356_ | _1316_;
+	assign _1358_ = (_1319_ ? _1345_ : _1357_);
+	assign _1359_ = _1358_ | ~_1310_;
+	assign _1360_ = (_1268_ ? _1354_ : _1359_);
+	assign _1361_ = (_1268_ ? _1359_ : _1351_);
+	assign _1362_ = (_1326_ ? _1360_ : _1361_);
+	assign _1363_ = (_1328_ ? _1362_ : _1351_);
+	assign _1364_ = (_1341_ ? _1338_ : _1363_);
+	assign _1365_ = _1253_ ^ _1230_;
+	assign _1366_ = _3219_ & ~_0516_;
+	assign _1367_ = ~_1366_;
+	assign _1368_ = (_1312_ ? _1332_ : _1367_);
+	assign _1369_ = _1316_ | ~_1368_;
+	assign _1370_ = (_1319_ ? _1331_ : _1369_);
+	assign _1371_ = _1310_ & ~_1370_;
+	assign _1372_ = ~_1371_;
+	assign _1373_ = ~_0586_;
+	assign _1374_ = _1373_ & ~_1312_;
+	assign _1375_ = _1316_ | ~_1374_;
+	assign _1376_ = (_1319_ ? _1322_ : _1375_);
+	assign _1377_ = _1376_ | ~_1310_;
+	assign _1378_ = (_1268_ ? _1372_ : _1377_);
+	assign _1379_ = (_1326_ ? _1372_ : _1378_);
+	assign _1380_ = _1377_ | ~_1268_;
+	assign _1381_ = _1368_ | _1316_;
+	assign _1382_ = _1381_ | _1319_;
+	assign _1383_ = _1382_ | ~_1310_;
+	assign _1384_ = (_1326_ ? _1380_ : _1383_);
+	assign _1385_ = (_1328_ ? _1379_ : _1384_);
+	assign _1386_ = _1346_ & ~_1312_;
+	assign _1387_ = _1386_ | _1316_;
+	assign _1388_ = (_1319_ ? _1322_ : _1387_);
+	assign _1389_ = _1388_ | ~_1310_;
+	assign _1390_ = (_1268_ ? _1383_ : _1389_);
+	assign _1391_ = (_1268_ ? _1389_ : _1354_);
+	assign _1392_ = (_1326_ ? _1390_ : _1391_);
+	assign _1393_ = ~_1312_;
+	assign _1394_ = _1332_ | _0630_;
+	assign _1395_ = (_1312_ ? _1394_ : _0586_);
+	assign _1396_ = _1316_ | ~_1395_;
+	assign _1397_ = (_1319_ ? _1345_ : _1396_);
+	assign _1398_ = _1310_ & ~_1397_;
+	assign _1399_ = ~_1398_;
+	assign _1400_ = (_1328_ ? _1392_ : _1399_);
+	assign _1401_ = (_1341_ ? _1385_ : _1400_);
+	assign _1402_ = (_1365_ ? _1364_ : _1401_);
+	assign _1403_ = ~(_1253_ | _1230_);
+	assign _1404_ = _1403_ | _1226_;
+	assign _1405_ = _1404_ ^ _1227_;
+	assign _1406_ = ~(_1394_ | _1393_);
+	assign _1407_ = _0626_ & ~_1312_;
+	assign _1408_ = _1407_ | _1406_;
+	assign _1409_ = _1408_ | _1316_;
+	assign _1410_ = (_1319_ ? _1345_ : _1409_);
+	assign _1411_ = _1310_ & ~_1410_;
+	assign _1412_ = ~_1411_;
+	assign _1413_ = \mchip.game2.vga_inst.vaddr [1] | ~\mchip.game2.vga_inst.vaddr [2];
+	assign _1414_ = (_1312_ ? _1332_ : _1413_);
+	assign _1415_ = _1316_ | ~_1414_;
+	assign _1416_ = (_1319_ ? _1345_ : _1415_);
+	assign _1417_ = _1310_ & ~_1416_;
+	assign _1418_ = ~_1417_;
+	assign _1419_ = (_1268_ ? _1412_ : _1418_);
+	assign _1420_ = (_1268_ ? _1418_ : _1372_);
+	assign _1421_ = (_1326_ ? _1419_ : _1420_);
+	assign _1422_ = (_1268_ ? _1372_ : _1354_);
+	assign _1423_ = _1347_ | _1316_;
+	assign _1424_ = (_1319_ ? _1322_ : _1423_);
+	assign _1425_ = _1424_ | ~_1310_;
+	assign _1426_ = (_1326_ ? _1422_ : _1425_);
+	assign _1427_ = (_1328_ ? _1421_ : _1426_);
+	assign _1428_ = _1316_ | ~_1407_;
+	assign _1429_ = (_1319_ ? _1331_ : _1428_);
+	assign _1430_ = _1429_ | ~_1310_;
+	assign _1431_ = _1430_ | _1268_;
+	assign _1432_ = (_1326_ ? _1431_ : _1430_);
+	assign _1433_ = (_1319_ ? _1331_ : _1375_);
+	assign _1434_ = _1433_ | ~_1310_;
+	assign _1435_ = _1367_ & ~_1312_;
+	assign _1436_ = _1316_ | ~_1435_;
+	assign _1437_ = (_1319_ ? _1331_ : _1436_);
+	assign _1438_ = _1437_ | ~_1310_;
+	assign _1439_ = _1413_ & ~_1312_;
+	assign _1440_ = _1316_ | ~_1439_;
+	assign _1441_ = (_1319_ ? _1345_ : _1440_);
+	assign _1442_ = _1441_ | ~_1310_;
+	assign _1443_ = (_1268_ ? _1438_ : _1442_);
+	assign _1444_ = (_1326_ ? _1434_ : _1443_);
+	assign _1445_ = (_1328_ ? _1432_ : _1444_);
+	assign _1446_ = (_1341_ ? _1427_ : _1445_);
+	assign _1447_ = _1374_ | _1316_;
+	assign _1448_ = (_1319_ ? _1345_ : _1447_);
+	assign _1449_ = _1310_ & ~_1448_;
+	assign _1450_ = ~_1449_;
+	assign _1451_ = (_1268_ ? _1442_ : _1450_);
+	assign _1452_ = (_1326_ ? _1451_ : _1450_);
+	assign _1453_ = _1435_ | _1316_;
+	assign _1454_ = (_1319_ ? _1345_ : _1453_);
+	assign _1455_ = _1454_ | ~_1310_;
+	assign _1456_ = (_1326_ ? _1455_ : _1430_);
+	assign _1457_ = (_1328_ ? _1452_ : _1456_);
+	assign _1458_ = _1430_ | ~_1268_;
+	assign _1459_ = (_1326_ ? _1430_ : _1458_);
+	assign _1460_ = (_1268_ ? _1383_ : _1450_);
+	assign _1461_ = (_1326_ ? _1383_ : _1460_);
+	assign _1462_ = (_1328_ ? _1459_ : _1461_);
+	assign _1463_ = (_1341_ ? _1457_ : _1462_);
+	assign _1464_ = (_1365_ ? _1446_ : _1463_);
+	assign _1465_ = (_1405_ ? _1402_ : _1464_);
+	assign _1466_ = ~(_1465_ | _1267_);
+	assign _1467_ = ~(_1266_ & _1255_);
+	assign _1468_ = _1467_ & ~_1294_;
+	assign _1469_ = _1468_ ^ _1295_;
+	assign _1470_ = (_1326_ ? _1449_ : _1350_);
+	assign _1471_ = (\mchip.game2.vga_inst.vaddr [1] ? _0516_ : \mchip.game2.vga_inst.vaddr [0]);
+	assign _1472_ = (_1312_ ? _1332_ : _1471_);
+	assign _1473_ = _1316_ | ~_1472_;
+	assign _1474_ = (_1319_ ? _1331_ : _1473_);
+	assign _1475_ = _1310_ & ~_1474_;
+	assign _1476_ = (_1326_ ? _1350_ : _1475_);
+	assign _1477_ = (_1328_ ? _1470_ : _1476_);
+	assign _1478_ = (_1319_ ? _1322_ : _1316_);
+	assign _1479_ = _1310_ & ~_1478_;
+	assign _1480_ = (_1268_ ? _1475_ : _1479_);
+	assign _1481_ = (_1326_ ? _1480_ : _1479_);
+	assign _1482_ = ~(_1407_ | _1333_);
+	assign _1483_ = _1316_ | ~_1482_;
+	assign _1484_ = ~(_1483_ | _1319_);
+	assign _1485_ = ~_1484_;
+	assign _1486_ = _1310_ & ~_1485_;
+	assign _1487_ = (_1312_ ? _1332_ : _1373_);
+	assign _1488_ = _1487_ | _1316_;
+	assign _1489_ = _1488_ | _1319_;
+	assign _1490_ = _1310_ & ~_1489_;
+	assign _1491_ = _1490_ & ~_1268_;
+	assign _1492_ = (_1326_ ? _1486_ : _1491_);
+	assign _1493_ = (_1328_ ? _1481_ : _1492_);
+	assign _1494_ = (_1341_ ? _1477_ : _1493_);
+	assign _1495_ = _1407_ | _1316_;
+	assign _1496_ = (_1319_ ? _1345_ : _1495_);
+	assign _1497_ = _1310_ & ~_1496_;
+	assign _1498_ = (_1326_ ? _1490_ : _1497_);
+	assign _1499_ = ~_1332_;
+	assign _1500_ = _0586_ | _0497_;
+	assign _1501_ = (_1312_ ? _1499_ : _1500_);
+	assign _1502_ = _1501_ | _1316_;
+	assign _1503_ = (_1319_ ? _1345_ : _1502_);
+	assign _1504_ = _1310_ & ~_1503_;
+	assign _1505_ = (_1268_ ? _1497_ : _1504_);
+	assign _1506_ = (_1326_ ? _1505_ : _1504_);
+	assign _1507_ = (_1328_ ? _1498_ : _1506_);
+	assign _1508_ = (_1312_ ? _0630_ : _0586_);
+	assign _1509_ = _1508_ | _1316_;
+	assign _1510_ = (_1319_ ? _1331_ : _1509_);
+	assign _1511_ = _1310_ & ~_1510_;
+	assign _1512_ = _1395_ | _1316_;
+	assign _1513_ = (_1319_ ? _1331_ : _1512_);
+	assign _1514_ = _1310_ & ~_1513_;
+	assign _1515_ = (_1268_ ? _1511_ : _1514_);
+	assign _1516_ = (_1326_ ? _1511_ : _1515_);
+	assign _1517_ = (_1328_ ? _1504_ : _1516_);
+	assign _1518_ = (_1341_ ? _1507_ : _1517_);
+	assign _1519_ = (_1365_ ? _1494_ : _1518_);
+	assign _1520_ = ~_1268_;
+	assign _1521_ = _1514_ & ~_1520_;
+	assign _1522_ = (_1312_ ? _0630_ : _1366_);
+	assign _1523_ = _1316_ | ~_1522_;
+	assign _1524_ = _1523_ | _1319_;
+	assign _1525_ = _1310_ & ~_1524_;
+	assign _1526_ = (_1326_ ? _1521_ : _1525_);
+	assign _1527_ = (_1268_ ? _1525_ : _1353_);
+	assign _1528_ = (_1326_ ? _1527_ : _1353_);
+	assign _1529_ = (_1328_ ? _1526_ : _1528_);
+	assign _1530_ = ~_1413_;
+	assign _1531_ = (_1312_ ? _0630_ : _1530_);
+	assign _1532_ = _1316_ | ~_1531_;
+	assign _1533_ = (_1319_ ? _1331_ : _1532_);
+	assign _1534_ = _1310_ & ~_1533_;
+	assign _1535_ = (_1326_ ? _1353_ : _1534_);
+	assign _1536_ = _1319_ & ~_1331_;
+	assign _1537_ = _1356_ & ~_1316_;
+	assign _1538_ = _1537_ & ~_1319_;
+	assign _1539_ = ~(_1538_ | _1536_);
+	assign _1540_ = _1310_ & ~_1539_;
+	assign _1541_ = _1319_ & ~_1322_;
+	assign _1542_ = ~(_1538_ | _1541_);
+	assign _1543_ = _1310_ & ~_1542_;
+	assign _1544_ = (_1268_ ? _1540_ : _1543_);
+	assign _1545_ = ~(_1407_ | _1313_);
+	assign _1546_ = _1316_ | ~_1545_;
+	assign _1547_ = _1546_ | _1319_;
+	assign _1548_ = _1310_ & ~_1547_;
+	assign _1549_ = (_1268_ ? _1543_ : _1548_);
+	assign _1550_ = (_1326_ ? _1544_ : _1549_);
+	assign _1551_ = (_1328_ ? _1535_ : _1550_);
+	assign _1552_ = (_1341_ ? _1529_ : _1551_);
+	assign _1553_ = _1316_ | ~_1508_;
+	assign _1554_ = ~(_1553_ | _1319_);
+	assign _1555_ = ~_1554_;
+	assign _1556_ = _1310_ & ~_1555_;
+	assign _1557_ = (_1326_ ? _1548_ : _1556_);
+	assign _1558_ = (_1319_ ? _1345_ : _1381_);
+	assign _1559_ = _1310_ & ~_1558_;
+	assign _1560_ = _1559_ & ~_1268_;
+	assign _1561_ = (_1326_ ? _1560_ : _1559_);
+	assign _1562_ = (_1328_ ? _1557_ : _1561_);
+	assign _1563_ = ~(_1500_ | _1312_);
+	assign _1564_ = _1563_ | _1316_;
+	assign _1565_ = (_1319_ ? _1331_ : _1564_);
+	assign _1566_ = _1310_ & ~_1565_;
+	assign _1567_ = (_1268_ ? _1353_ : _1371_);
+	assign _1568_ = (_1326_ ? _1566_ : _1567_);
+	assign _1569_ = (_1268_ ? _1371_ : _1417_);
+	assign _1570_ = (_1326_ ? _1569_ : _1417_);
+	assign _1571_ = (_1328_ ? _1568_ : _1570_);
+	assign _1572_ = (_1341_ ? _1562_ : _1571_);
+	assign _1573_ = (_1365_ ? _1552_ : _1572_);
+	assign _1574_ = (_1405_ ? _1519_ : _1573_);
+	assign _1575_ = _1316_ | ~_1313_;
+	assign _1576_ = (_1319_ ? _1345_ : _1575_);
+	assign _1577_ = _1310_ & ~_1576_;
+	assign _1578_ = (_1326_ ? _1350_ : _1577_);
+	assign _1579_ = _1316_ | ~_1406_;
+	assign _1580_ = _1579_ | _1319_;
+	assign _1581_ = _1310_ & ~_1580_;
+	assign _1582_ = (_1268_ ? _1577_ : _1581_);
+	assign _1583_ = _1581_ & ~_1520_;
+	assign _1584_ = (_1326_ ? _1582_ : _1583_);
+	assign _1585_ = (_1328_ ? _1578_ : _1584_);
+	assign _1586_ = _1316_ | ~_1487_;
+	assign _1587_ = (_1319_ ? _1322_ : _1586_);
+	assign _1588_ = _1310_ & ~_1587_;
+	assign _1589_ = (_1268_ ? _1588_ : _1371_);
+	assign _1590_ = (_1326_ ? _1588_ : _1589_);
+	assign _1591_ = _1406_ | _1316_;
+	assign _1592_ = (_1319_ ? _1331_ : _1591_);
+	assign _1593_ = _1310_ & ~_1592_;
+	assign _1594_ = (_1268_ ? _1371_ : _1593_);
+	assign _1595_ = (_1326_ ? _1594_ : _1411_);
+	assign _1596_ = (_1328_ ? _1590_ : _1595_);
+	assign _1597_ = (_1341_ ? _1585_ : _1596_);
+	assign _1598_ = (_1326_ ? _1398_ : _1449_);
+	assign _1599_ = _1439_ | _1316_;
+	assign _1600_ = (_1319_ ? _1331_ : _1599_);
+	assign _1601_ = _1310_ & ~_1600_;
+	assign _1602_ = (_1268_ ? _1449_ : _1601_);
+	assign _1603_ = (_1326_ ? _1602_ : _1601_);
+	assign _1604_ = (_1328_ ? _1598_ : _1603_);
+	assign _1605_ = _1316_ | ~_1333_;
+	assign _1606_ = _1605_ | _1319_;
+	assign _1607_ = _1310_ & ~_1606_;
+	assign _1608_ = _1545_ | _1316_;
+	assign _1609_ = (_1319_ ? _1322_ : _1608_);
+	assign _1610_ = _1310_ & ~_1609_;
+	assign _1611_ = _1607_ & ~_1268_;
+	assign _1612_ = (_1326_ ? _1610_ : _1611_);
+	assign _1613_ = (_1328_ ? _1612_ : _1607_);
+	assign _1614_ = (_1341_ ? _1604_ : _1613_);
+	assign _1615_ = (_1365_ ? _1597_ : _1614_);
+	assign _1616_ = _1482_ | _1316_;
+	assign _1617_ = (_1319_ ? _1322_ : _1616_);
+	assign _1618_ = _1310_ & ~_1617_;
+	assign _1619_ = (_1326_ ? _1353_ : _1618_);
+	assign _1620_ = (_1328_ ? _1353_ : _1619_);
+	assign _1621_ = _1607_ & ~_1520_;
+	assign _1622_ = (_1326_ ? _1607_ : _1621_);
+	assign _1623_ = _1548_ & ~_1326_;
+	assign _1624_ = (_1328_ ? _1622_ : _1623_);
+	assign _1625_ = (_1341_ ? _1620_ : _1624_);
+	assign _1626_ = (_1319_ ? _1322_ : _1334_);
+	assign _1627_ = _1310_ & ~_1626_;
+	assign _1628_ = (_1268_ ? _1548_ : _1627_);
+	assign _1629_ = (_1268_ ? _1627_ : _1353_);
+	assign _1630_ = (_1326_ ? _1628_ : _1629_);
+	assign _1631_ = (_1319_ ? _1331_ : _1616_);
+	assign _1632_ = (_1319_ ? _1345_ : _1605_);
+	assign _1633_ = (_1326_ ? _1631_ : _1632_);
+	assign _1634_ = _1310_ & ~_1633_;
+	assign _1635_ = (_1328_ ? _1630_ : _1634_);
+	assign _1636_ = (_1268_ ? _1577_ : _1627_);
+	assign _1637_ = (_1326_ ? _1577_ : _1636_);
+	assign _1638_ = (_1326_ ? _1627_ : _1548_);
+	assign _1639_ = (_1328_ ? _1637_ : _1638_);
+	assign _1640_ = (_1341_ ? _1635_ : _1639_);
+	assign _1641_ = (_1365_ ? _1625_ : _1640_);
+	assign _1642_ = (_1405_ ? _1615_ : _1641_);
+	assign _1643_ = (_1267_ ? _1574_ : _1642_);
+	assign _1644_ = (_1469_ ? _1466_ : _1643_);
+	assign _1645_ = _1304_ ^ _1303_;
+	assign _1646_ = _1644_ & ~_1645_;
+	assign _1647_ = \mchip.game2.vga_inst.haddr [8] & ~\mchip.game2.vga_inst.haddr [9];
+	assign _1648_ = ~_1647_;
+	assign _1649_ = _1270_ & _3178_;
+	assign _1650_ = _3185_ & ~_3179_;
+	assign _1651_ = ~(_1650_ & _1649_);
+	assign _1652_ = _1651_ | _1648_;
+	assign _1653_ = ~_0237_;
+	assign _1654_ = _1270_ & ~_0771_;
+	assign _1655_ = _1654_ & _1651_;
+	assign _1656_ = _1647_ & ~_1655_;
+	assign _1657_ = _1653_ & ~_1656_;
+	assign _1658_ = _1652_ & ~_1657_;
+	assign _1659_ = _1272_ & ~_1200_;
+	assign _1660_ = _1270_ & ~_1659_;
+	assign _1661_ = _1647_ & ~_1660_;
+	assign _1662_ = _1661_ | _0237_;
+	assign _1663_ = _1658_ & ~_1662_;
+	assign _1664_ = _3185_ & ~_0241_;
+	assign _1665_ = _1664_ & ~\mchip.game2.vga_inst.haddr [4];
+	assign _1666_ = _1665_ ^ _0771_;
+	assign _1667_ = ~_1666_;
+	assign _1668_ = ~(\mchip.game2.score_inst.score_saved[2] [1] & \mchip.game2.score_inst.score_saved[2] [2]);
+	assign _1669_ = ~\mchip.game2.score_inst.score_saved[2] [3];
+	assign _1670_ = \mchip.game2.score_inst.score_saved[2] [2] & ~\mchip.game2.score_inst.score_saved[2] [1];
+	assign _1671_ = _1670_ & ~_1669_;
+	assign _1672_ = _1671_ | ~_1668_;
+	assign _1673_ = ~(\mchip.game2.score_inst.score_saved[2] [0] ^ \mchip.game2.score_inst.score_saved[2] [3]);
+	assign _1674_ = _1672_ & ~_1673_;
+	assign _1675_ = \mchip.game2.score_inst.score_saved[2] [1] & \mchip.game2.score_inst.score_saved[2] [0];
+	assign _1676_ = ~(\mchip.game2.score_inst.score_saved[2] [1] ^ \mchip.game2.score_inst.score_saved[2] [2]);
+	assign _1677_ = _1675_ & ~_1676_;
+	assign _1678_ = _1670_ ^ _1669_;
 	assign _1679_ = _1677_ & ~_1678_;
-	assign _1680_ = (_1288_ ? _1679_ : _1667_);
-	assign _1681_ = _0978_ | ~_0644_;
-	assign _1682_ = (\mchip.design.io_fsm.completed_transaction  ? _0978_ : _0971_);
-	assign _1683_ = _0502_ & ~_1682_;
-	assign _1684_ = _1681_ & ~_1683_;
-	assign _1685_ = _0971_ | _0500_;
-	assign _1686_ = _2751_ & ~_1685_;
-	assign _1687_ = _1684_ & ~_1686_;
-	assign _1688_ = _1687_ | _1345_;
-	assign _1689_ = _1688_ | _1281_;
-	assign _1690_ = _1689_ | _2721_;
-	assign _1691_ = _1349_ & ~_1688_;
-	assign _1692_ = _1690_ & ~_1691_;
-	assign _1693_ = _1084_ | ~_0644_;
-	assign _1694_ = (\mchip.design.io_fsm.completed_transaction  ? _1084_ : _1077_);
-	assign _1695_ = _0502_ & ~_1694_;
-	assign _1696_ = _1693_ & ~_1695_;
-	assign _1697_ = _1077_ | _0500_;
-	assign _1698_ = _2751_ & ~_1697_;
-	assign _1699_ = _1696_ & ~_1698_;
-	assign _1700_ = _1699_ | _1345_;
-	assign _1701_ = _1700_ | _1281_;
-	assign _1702_ = _1701_ | _2721_;
-	assign _1703_ = _1349_ & ~_1700_;
-	assign _1704_ = _1702_ & ~_1703_;
-	assign _1705_ = (_1288_ ? _1704_ : _1692_);
-	assign _1706_ = (_1306_ ? _1705_ : _1680_);
-	assign _1707_ = (_1320_ ? _1706_ : _1655_);
-	assign _1708_ = (_1277_ ? _1707_ : _1604_);
-	assign _1709_ = (_1278_ ? _1708_ : _1501_);
-	assign _1710_ = _2610_ & ~_1276_;
-	assign _1711_ = \mchip.design.inter.data_out_reg [0] & ~_2764_;
-	assign _1712_ = ~(_1711_ & _0502_);
-	assign _1713_ = _0644_ & ~_0787_;
-	assign _1714_ = _1712_ & ~_1713_;
-	assign _1715_ = _1714_ | _1345_;
-	assign _1716_ = _1715_ | _1281_;
-	assign _1717_ = _1716_ | _2721_;
-	assign _1718_ = _1349_ & ~_1715_;
+	assign _1680_ = _1673_ ^ _1672_;
+	assign _1681_ = _1679_ & ~_1680_;
+	assign _1682_ = _1681_ | _1674_;
+	assign _1683_ = \mchip.game2.score_inst.score_saved[2] [0] & \mchip.game2.score_inst.score_saved[2] [3];
+	assign _1684_ = ~(_1683_ ^ \mchip.game2.score_inst.score_saved[2] [1]);
+	assign _1685_ = ~(_1684_ ^ _1682_);
+	assign _1686_ = _1685_ & ~_1667_;
+	assign _1687_ = _1685_ ^ _1667_;
+	assign _1688_ = _1664_ ^ _1199_;
+	assign _1689_ = ~(_1680_ ^ _1679_);
+	assign _1690_ = _1688_ | ~_1689_;
+	assign _1691_ = ~(_1690_ | _1687_);
+	assign _1692_ = _1691_ | _1686_;
+	assign _1693_ = _1689_ ^ _1688_;
+	assign _1694_ = _1693_ | _1687_;
+	assign _1695_ = _1232_ & ~_0241_;
+	assign _1696_ = _1695_ ^ \mchip.game2.vga_inst.haddr [3];
+	assign _1697_ = ~(_1678_ ^ _1677_);
+	assign _1698_ = ~(_1697_ & _1696_);
+	assign _1699_ = ~(_1697_ ^ _1696_);
+	assign _1700_ = _0241_ ^ _1232_;
+	assign _1701_ = ~(_1676_ ^ _1675_);
+	assign _1702_ = ~(_1701_ & _1700_);
+	assign _1703_ = ~(_1702_ | _1699_);
+	assign _1704_ = _1698_ & ~_1703_;
+	assign _1705_ = _1701_ ^ _1700_;
+	assign _1706_ = _1705_ & ~_1699_;
+	assign _1707_ = \mchip.game2.score_inst.score_saved[2] [1] ^ \mchip.game2.score_inst.score_saved[2] [0];
+	assign _1708_ = ~(_1707_ & _3625_[1]);
+	assign _1709_ = \mchip.game2.score_inst.score_saved[2] [0] & ~\mchip.game2.vga_inst.haddr [0];
+	assign _1710_ = _1707_ ^ _3625_[1];
+	assign _1711_ = _1710_ & _1709_;
+	assign _1712_ = _1708_ & ~_1711_;
+	assign _1713_ = _1706_ & ~_1712_;
+	assign _1714_ = _1704_ & ~_1713_;
+	assign _1715_ = ~(_1714_ | _1694_);
+	assign _1716_ = _1715_ | _1692_;
+	assign _1717_ = ~(\mchip.game2.vga_inst.haddr [4] & \mchip.game2.vga_inst.haddr [5]);
+	assign _1718_ = _3178_ & ~_1664_;
 	assign _1719_ = _1717_ & ~_1718_;
-	assign _1720_ = ~(\mchip.design.inter.data_out_reg [1] & _0644_);
-	assign _1721_ = ~(\mchip.design.inter.data_out_reg [1] & \mchip.design.io_fsm.completed_transaction );
-	assign _1722_ = _0502_ & ~_1721_;
-	assign _1723_ = _1720_ & ~_1722_;
-	assign _1724_ = _1723_ | _1345_;
-	assign _1725_ = _1724_ | _1281_;
-	assign _1726_ = _1725_ | _2721_;
-	assign _1727_ = _1349_ & ~_1724_;
-	assign _1728_ = _1726_ & ~_1727_;
-	assign _1729_ = (_1288_ ? _1728_ : _1719_);
-	assign _1730_ = ~(\mchip.design.inter.data_out_reg [2] & _0644_);
-	assign _1731_ = ~(\mchip.design.inter.data_out_reg [2] & \mchip.design.io_fsm.completed_transaction );
-	assign _1732_ = _0502_ & ~_1731_;
-	assign _1733_ = _1730_ & ~_1732_;
-	assign _1734_ = _1733_ | _1345_;
-	assign _1735_ = _1734_ | _1281_;
-	assign _1736_ = _1735_ | _2721_;
-	assign _1737_ = _1349_ & ~_1734_;
-	assign _1738_ = _1736_ & ~_1737_;
-	assign _1739_ = ~(\mchip.design.inter.data_out_reg [3] & _0644_);
-	assign _1740_ = ~(\mchip.design.inter.data_out_reg [3] & \mchip.design.io_fsm.completed_transaction );
-	assign _1741_ = _0502_ & ~_1740_;
-	assign _1742_ = _1739_ & ~_1741_;
-	assign _1743_ = _1742_ | _1345_;
-	assign _1744_ = _1743_ | _1281_;
-	assign _1745_ = _1744_ | _2721_;
-	assign _1746_ = _1349_ & ~_1743_;
-	assign _1747_ = _1745_ & ~_1746_;
-	assign _1748_ = (_1288_ ? _1747_ : _1738_);
-	assign _1749_ = (_1306_ ? _1748_ : _1729_);
-	assign _1750_ = ~(\mchip.design.inter.data_out_reg [4] & _0644_);
-	assign _1751_ = ~(\mchip.design.inter.data_out_reg [4] & \mchip.design.io_fsm.completed_transaction );
-	assign _1752_ = _0502_ & ~_1751_;
-	assign _1753_ = _1750_ & ~_1752_;
-	assign _1754_ = _1753_ | _1345_;
-	assign _1755_ = _1754_ | _1281_;
-	assign _1756_ = _1755_ | _2721_;
-	assign _1757_ = _1349_ & ~_1754_;
-	assign _1758_ = _1756_ & ~_1757_;
-	assign _1759_ = ~(\mchip.design.inter.data_out_reg [5] & _0644_);
-	assign _1760_ = ~(\mchip.design.inter.data_out_reg [5] & \mchip.design.io_fsm.completed_transaction );
-	assign _1761_ = _0502_ & ~_1760_;
-	assign _1762_ = _1759_ & ~_1761_;
-	assign _1763_ = _1762_ | _1345_;
-	assign _1764_ = _1763_ | _1281_;
-	assign _1765_ = _1764_ | _2721_;
-	assign _1766_ = _1349_ & ~_1763_;
-	assign _1767_ = _1765_ & ~_1766_;
-	assign _1768_ = (_1288_ ? _1767_ : _1758_);
-	assign _1769_ = ~(\mchip.design.inter.data_out_reg [6] & _0644_);
-	assign _1770_ = ~(\mchip.design.inter.data_out_reg [6] & \mchip.design.io_fsm.completed_transaction );
-	assign _1771_ = _0502_ & ~_1770_;
-	assign _1772_ = _1769_ & ~_1771_;
-	assign _1773_ = _1772_ | _1345_;
-	assign _1774_ = _1773_ | _1281_;
-	assign _1775_ = _1774_ | _2721_;
-	assign _1776_ = _1349_ & ~_1773_;
-	assign _1777_ = _1775_ & ~_1776_;
-	assign _1778_ = ~(\mchip.design.inter.data_out_reg [7] & _0644_);
-	assign _1779_ = ~(\mchip.design.inter.data_out_reg [7] & \mchip.design.io_fsm.completed_transaction );
-	assign _1780_ = _0502_ & ~_1779_;
-	assign _1781_ = _1778_ & ~_1780_;
-	assign _1782_ = _1781_ | _1345_;
-	assign _1783_ = _1782_ | _1281_;
-	assign _1784_ = _1783_ | _2721_;
-	assign _1785_ = _1349_ & ~_1782_;
-	assign _1786_ = _1784_ & ~_1785_;
-	assign _1787_ = (_1288_ ? _1786_ : _1777_);
-	assign _1788_ = (_1306_ ? _1787_ : _1768_);
-	assign _1789_ = (_1320_ ? _1788_ : _1749_);
-	assign _1790_ = ~(\mchip.design.inter.data_out_reg [8] & _0644_);
-	assign _1791_ = ~(\mchip.design.inter.data_out_reg [8] & \mchip.design.io_fsm.completed_transaction );
-	assign _1792_ = _0502_ & ~_1791_;
-	assign _1793_ = _1790_ & ~_1792_;
-	assign _1794_ = _1793_ | _1345_;
-	assign _1795_ = _1794_ | _1281_;
-	assign _1796_ = _1795_ | _2721_;
-	assign _1797_ = _1349_ & ~_1794_;
-	assign _1798_ = _1796_ & ~_1797_;
-	assign _1799_ = ~(\mchip.design.inter.data_out_reg [9] & _0644_);
-	assign _1800_ = ~(\mchip.design.inter.data_out_reg [9] & \mchip.design.io_fsm.completed_transaction );
-	assign _1801_ = _0502_ & ~_1800_;
-	assign _1802_ = _1799_ & ~_1801_;
-	assign _1803_ = _1802_ | _1345_;
-	assign _1804_ = _1803_ | _1281_;
-	assign _1805_ = _1804_ | _2721_;
-	assign _1806_ = _1349_ & ~_1803_;
-	assign _1807_ = _1805_ & ~_1806_;
-	assign _1808_ = (_1288_ ? _1807_ : _1798_);
-	assign _1809_ = ~(\mchip.design.inter.data_out_reg [10] & _0644_);
-	assign _1810_ = ~(\mchip.design.inter.data_out_reg [10] & \mchip.design.io_fsm.completed_transaction );
-	assign _1811_ = _0502_ & ~_1810_;
-	assign _1812_ = _1809_ & ~_1811_;
-	assign _1813_ = _1812_ | _1345_;
-	assign _1814_ = _1813_ | _1281_;
-	assign _1815_ = _1814_ | _2721_;
-	assign _1816_ = _1349_ & ~_1813_;
-	assign _1817_ = _1815_ & ~_1816_;
-	assign _1818_ = ~(\mchip.design.inter.data_out_reg [11] & _0644_);
-	assign _1819_ = ~(\mchip.design.inter.data_out_reg [11] & \mchip.design.io_fsm.completed_transaction );
-	assign _1820_ = _0502_ & ~_1819_;
-	assign _1821_ = _1818_ & ~_1820_;
-	assign _1822_ = _1821_ | _1345_;
-	assign _1823_ = _1822_ | _1281_;
-	assign _1824_ = _1823_ | _2721_;
-	assign _1825_ = _1349_ & ~_1822_;
-	assign _1826_ = _1824_ & ~_1825_;
-	assign _1827_ = (_1288_ ? _1826_ : _1817_);
-	assign _1828_ = (_1306_ ? _1827_ : _1808_);
-	assign _1829_ = ~(\mchip.design.inter.data_out_reg [12] & _0644_);
-	assign _1830_ = ~(\mchip.design.inter.data_out_reg [12] & \mchip.design.io_fsm.completed_transaction );
-	assign _1831_ = _0502_ & ~_1830_;
-	assign _1832_ = _1829_ & ~_1831_;
-	assign _1833_ = _1832_ | _1345_;
-	assign _1834_ = _1833_ | _1281_;
-	assign _1835_ = _1834_ | _2721_;
-	assign _1836_ = _1349_ & ~_1833_;
-	assign _1837_ = _1835_ & ~_1836_;
-	assign _1838_ = ~(\mchip.design.inter.data_out_reg [13] & _0644_);
-	assign _1839_ = ~(\mchip.design.inter.data_out_reg [13] & \mchip.design.io_fsm.completed_transaction );
-	assign _1840_ = _0502_ & ~_1839_;
-	assign _1841_ = _1838_ & ~_1840_;
-	assign _1842_ = _1841_ | _1345_;
-	assign _1843_ = _1842_ | _1281_;
-	assign _1844_ = _1843_ | _2721_;
-	assign _1845_ = _1349_ & ~_1842_;
-	assign _1846_ = _1844_ & ~_1845_;
-	assign _1847_ = (_1288_ ? _1846_ : _1837_);
-	assign _1848_ = ~(\mchip.design.inter.data_out_reg [14] & _0644_);
-	assign _1849_ = ~(\mchip.design.inter.data_out_reg [14] & \mchip.design.io_fsm.completed_transaction );
-	assign _1850_ = _0502_ & ~_1849_;
-	assign _1851_ = _1848_ & ~_1850_;
-	assign _1852_ = _1851_ | _1345_;
-	assign _1853_ = _1852_ | _1281_;
-	assign _1854_ = _1853_ | _2721_;
-	assign _1855_ = _1349_ & ~_1852_;
-	assign _1856_ = _1854_ & ~_1855_;
-	assign _1857_ = ~(\mchip.design.inter.data_out_reg [15] & _0644_);
-	assign _1858_ = ~(\mchip.design.inter.data_out_reg [15] & \mchip.design.io_fsm.completed_transaction );
-	assign _1859_ = _0502_ & ~_1858_;
-	assign _1860_ = _1857_ & ~_1859_;
-	assign _1861_ = _1860_ | _1345_;
-	assign _1862_ = _1861_ | _1281_;
-	assign _1863_ = _1862_ | _2721_;
-	assign _1864_ = _1349_ & ~_1861_;
-	assign _1865_ = _1863_ & ~_1864_;
-	assign _1866_ = (_1288_ ? _1865_ : _1856_);
-	assign _1867_ = (_1306_ ? _1866_ : _1847_);
-	assign _1868_ = (_1320_ ? _1867_ : _1828_);
-	assign _1869_ = (_1277_ ? _1868_ : _1789_);
-	assign _1870_ = ~(\mchip.design.inter.data_out_reg [16] & _0644_);
-	assign _1871_ = ~(\mchip.design.inter.data_out_reg [16] & \mchip.design.io_fsm.completed_transaction );
-	assign _1872_ = _0502_ & ~_1871_;
-	assign _1873_ = _1870_ & ~_1872_;
-	assign _1874_ = _1873_ | _1345_;
-	assign _1875_ = _1874_ | _1281_;
-	assign _1876_ = _1875_ | _2721_;
-	assign _1877_ = _1349_ & ~_1874_;
-	assign _1878_ = _1876_ & ~_1877_;
-	assign _1879_ = ~(\mchip.design.inter.data_out_reg [17] & _0644_);
-	assign _1880_ = ~(\mchip.design.inter.data_out_reg [17] & \mchip.design.io_fsm.completed_transaction );
-	assign _1881_ = _0502_ & ~_1880_;
-	assign _1882_ = _1879_ & ~_1881_;
-	assign _1883_ = _1882_ | _1345_;
-	assign _1884_ = _1883_ | _1281_;
-	assign _1885_ = _1884_ | _2721_;
-	assign _1886_ = _1349_ & ~_1883_;
-	assign _1887_ = _1885_ & ~_1886_;
-	assign _1888_ = (_1288_ ? _1887_ : _1878_);
-	assign _1889_ = ~(\mchip.design.inter.data_out_reg [18] & _0644_);
-	assign _1890_ = ~(\mchip.design.inter.data_out_reg [18] & \mchip.design.io_fsm.completed_transaction );
-	assign _1891_ = _0502_ & ~_1890_;
-	assign _1892_ = _1889_ & ~_1891_;
-	assign _1893_ = _1892_ | _1345_;
-	assign _1894_ = _1893_ | _1281_;
-	assign _1895_ = _1894_ | _2721_;
-	assign _1896_ = _1349_ & ~_1893_;
-	assign _1897_ = _1895_ & ~_1896_;
-	assign _1898_ = ~(\mchip.design.inter.data_out_reg [19] & _0644_);
-	assign _1899_ = ~(\mchip.design.inter.data_out_reg [19] & \mchip.design.io_fsm.completed_transaction );
-	assign _1900_ = _0502_ & ~_1899_;
-	assign _1901_ = _1898_ & ~_1900_;
-	assign _1902_ = _1901_ | _1345_;
-	assign _1903_ = _1902_ | _1281_;
-	assign _1904_ = _1903_ | _2721_;
-	assign _1905_ = _1349_ & ~_1902_;
-	assign _1906_ = _1904_ & ~_1905_;
-	assign _1907_ = (_1288_ ? _1906_ : _1897_);
-	assign _1908_ = (_1306_ ? _1907_ : _1888_);
-	assign _1909_ = ~(\mchip.design.inter.data_out_reg [20] & _0644_);
-	assign _1910_ = ~(\mchip.design.inter.data_out_reg [20] & \mchip.design.io_fsm.completed_transaction );
-	assign _1911_ = _0502_ & ~_1910_;
-	assign _1912_ = _1909_ & ~_1911_;
-	assign _1913_ = _1912_ | _1345_;
-	assign _1914_ = _1913_ | _1281_;
-	assign _1915_ = _1914_ | _2721_;
-	assign _1916_ = _1349_ & ~_1913_;
-	assign _1917_ = _1915_ & ~_1916_;
-	assign _1918_ = ~(\mchip.design.inter.data_out_reg [21] & _0644_);
-	assign _1919_ = ~(\mchip.design.inter.data_out_reg [21] & \mchip.design.io_fsm.completed_transaction );
-	assign _1920_ = _0502_ & ~_1919_;
-	assign _1921_ = _1918_ & ~_1920_;
-	assign _1922_ = _1921_ | _1345_;
-	assign _1923_ = _1922_ | _1281_;
-	assign _1924_ = _1923_ | _2721_;
-	assign _1925_ = _1349_ & ~_1922_;
-	assign _1926_ = _1924_ & ~_1925_;
-	assign _1927_ = (_1288_ ? _1926_ : _1917_);
-	assign _1928_ = ~(\mchip.design.inter.data_out_reg [22] & _0644_);
-	assign _1929_ = ~(\mchip.design.inter.data_out_reg [22] & \mchip.design.io_fsm.completed_transaction );
-	assign _1930_ = _0502_ & ~_1929_;
-	assign _1931_ = _1928_ & ~_1930_;
-	assign _1932_ = _1931_ | _1345_;
-	assign _1933_ = _1932_ | _1281_;
-	assign _1934_ = _1933_ | _2721_;
-	assign _1935_ = _1349_ & ~_1932_;
-	assign _1936_ = _1934_ & ~_1935_;
-	assign _1937_ = ~(\mchip.design.inter.data_out_reg [23] & _0644_);
-	assign _1938_ = ~(\mchip.design.inter.data_out_reg [23] & \mchip.design.io_fsm.completed_transaction );
-	assign _1939_ = _0502_ & ~_1938_;
-	assign _1940_ = _1937_ & ~_1939_;
-	assign _1941_ = _1940_ | _1345_;
-	assign _1942_ = _1941_ | _1281_;
-	assign _1943_ = _1942_ | _2721_;
-	assign _1944_ = _1349_ & ~_1941_;
-	assign _1945_ = _1943_ & ~_1944_;
-	assign _1946_ = (_1288_ ? _1945_ : _1936_);
-	assign _1947_ = (_1306_ ? _1946_ : _1927_);
-	assign _1948_ = (_1320_ ? _1947_ : _1908_);
-	assign _1949_ = ~(\mchip.design.inter.data_out_reg [24] & _0644_);
-	assign _1950_ = ~(\mchip.design.inter.data_out_reg [24] & \mchip.design.io_fsm.completed_transaction );
-	assign _1951_ = _0502_ & ~_1950_;
-	assign _1952_ = _1949_ & ~_1951_;
-	assign _1953_ = _1952_ | _1345_;
-	assign _1954_ = _1953_ | _1281_;
-	assign _1955_ = _1954_ | _2721_;
-	assign _1956_ = _1349_ & ~_1953_;
-	assign _1957_ = _1955_ & ~_1956_;
-	assign _1958_ = ~(\mchip.design.inter.data_out_reg [25] & _0644_);
-	assign _1959_ = ~(\mchip.design.inter.data_out_reg [25] & \mchip.design.io_fsm.completed_transaction );
-	assign _1960_ = _0502_ & ~_1959_;
-	assign _1961_ = _1958_ & ~_1960_;
-	assign _1962_ = _1961_ | _1345_;
-	assign _1963_ = _1962_ | _1281_;
-	assign _1964_ = _1963_ | _2721_;
-	assign _1965_ = _1349_ & ~_1962_;
-	assign _1966_ = _1964_ & ~_1965_;
-	assign _1967_ = (_1288_ ? _1966_ : _1957_);
-	assign _1968_ = ~(\mchip.design.inter.data_out_reg [26] & _0644_);
-	assign _1969_ = ~(\mchip.design.inter.data_out_reg [26] & \mchip.design.io_fsm.completed_transaction );
-	assign _1970_ = _0502_ & ~_1969_;
-	assign _1971_ = _1968_ & ~_1970_;
-	assign _1972_ = _1971_ | _1345_;
-	assign _1973_ = _1972_ | _1281_;
-	assign _1974_ = _1973_ | _2721_;
-	assign _1975_ = _1349_ & ~_1972_;
-	assign _1976_ = _1974_ & ~_1975_;
-	assign _1977_ = ~(\mchip.design.inter.data_out_reg [27] & _0644_);
-	assign _1978_ = ~(\mchip.design.inter.data_out_reg [27] & \mchip.design.io_fsm.completed_transaction );
-	assign _1979_ = _0502_ & ~_1978_;
-	assign _1980_ = _1977_ & ~_1979_;
-	assign _1981_ = _1980_ | _1345_;
-	assign _1982_ = _1981_ | _1281_;
-	assign _1983_ = _1982_ | _2721_;
-	assign _1984_ = _1349_ & ~_1981_;
-	assign _1985_ = _1983_ & ~_1984_;
-	assign _1986_ = (_1288_ ? _1985_ : _1976_);
-	assign _1987_ = (_1306_ ? _1986_ : _1967_);
-	assign _1988_ = ~(\mchip.design.inter.data_out_reg [28] & _0644_);
-	assign _1989_ = ~(\mchip.design.inter.data_out_reg [28] & \mchip.design.io_fsm.completed_transaction );
-	assign _1990_ = _0502_ & ~_1989_;
-	assign _1991_ = _1988_ & ~_1990_;
-	assign _1992_ = _1991_ | _1345_;
-	assign _1993_ = _1992_ | _1281_;
-	assign _1994_ = _1993_ | _2721_;
-	assign _1995_ = _1349_ & ~_1992_;
-	assign _1996_ = _1994_ & ~_1995_;
-	assign _1997_ = ~(\mchip.design.inter.data_out_reg [29] & _0644_);
-	assign _1998_ = ~(\mchip.design.inter.data_out_reg [29] & \mchip.design.io_fsm.completed_transaction );
-	assign _1999_ = _0502_ & ~_1998_;
-	assign _2000_ = _1997_ & ~_1999_;
-	assign _2001_ = _2000_ | _1345_;
-	assign _2002_ = _2001_ | _1281_;
-	assign _2003_ = _2002_ | _2721_;
-	assign _2004_ = _1349_ & ~_2001_;
-	assign _2005_ = _2003_ & ~_2004_;
-	assign _2006_ = (_1288_ ? _2005_ : _1996_);
-	assign _2007_ = ~(\mchip.design.inter.data_out_reg [30] & _0644_);
-	assign _2008_ = ~(\mchip.design.inter.data_out_reg [30] & \mchip.design.io_fsm.completed_transaction );
-	assign _2009_ = _0502_ & ~_2008_;
-	assign _2010_ = _2007_ & ~_2009_;
-	assign _2011_ = _2010_ | _1345_;
-	assign _2012_ = _2011_ | _1281_;
-	assign _2013_ = _2012_ | _2721_;
-	assign _2014_ = _1349_ & ~_2011_;
-	assign _2015_ = _2013_ & ~_2014_;
-	assign _2016_ = ~(\mchip.design.inter.data_out_reg [31] & _0644_);
-	assign _2017_ = ~(\mchip.design.inter.data_out_reg [31] & \mchip.design.io_fsm.completed_transaction );
-	assign _2018_ = _0502_ & ~_2017_;
-	assign _2019_ = _2016_ & ~_2018_;
-	assign _2020_ = _2019_ | _1345_;
-	assign _2021_ = _2020_ | _1281_;
-	assign _2022_ = _2021_ | _2721_;
-	assign _2023_ = _1349_ & ~_2020_;
-	assign _2024_ = _2022_ & ~_2023_;
-	assign _2025_ = (_1288_ ? _2024_ : _2015_);
-	assign _2026_ = (_1306_ ? _2025_ : _2006_);
-	assign _2027_ = (_1320_ ? _2026_ : _1987_);
-	assign _2028_ = (_1277_ ? _2027_ : _1948_);
-	assign _2029_ = (_1278_ ? _2028_ : _1869_);
-	assign _2030_ = (_1710_ ? _1709_ : _2029_);
-	assign _2031_ = ~(_1349_ | _2720_);
-	assign _2032_ = _2031_ | _2030_;
-	assign _2033_ = _2032_ | _1339_;
-	assign _2034_ = (_1338_ ? _1334_ : _2033_);
-	assign _2035_ = _0591_ | ~_0545_;
-	assign _2036_ = _1277_ & ~_1320_;
-	assign _2037_ = _1306_ & _1288_;
-	assign _2038_ = _2036_ & ~_2037_;
-	assign _2039_ = _1277_ & ~_2038_;
-	assign _2040_ = _2039_ ^ _1340_;
-	assign _2041_ = _2039_ | _1278_;
-	assign _2042_ = _2041_ ^ _1710_;
-	assign _2043_ = _2042_ | ~\mchip.design.inter.Addr_reg [0];
-	assign _2044_ = _2043_ | _1288_;
-	assign _2045_ = ~(_1306_ ^ _1288_);
-	assign _2046_ = (_1288_ ? _0849_ : _0955_);
-	assign _2047_ = _2046_ | _2042_;
-	assign _2048_ = (_2045_ ? _2044_ : _2047_);
-	assign _2049_ = _2037_ ^ _1320_;
-	assign _2050_ = _2049_ | _2048_;
-	assign _2051_ = _1321_ & ~_2037_;
-	assign _2052_ = _2051_ ^ _1277_;
-	assign _2053_ = _2042_ | _0821_;
-	assign _2054_ = _2042_ | _1061_;
-	assign _2055_ = (_1288_ ? _2054_ : _2053_);
-	assign _2056_ = (_1288_ ? _0847_ : _0953_);
-	assign _2057_ = _2056_ | _2042_;
-	assign _2058_ = (_2045_ ? _2055_ : _2057_);
-	assign _2059_ = _0647_ & ~_2751_;
-	assign _2060_ = ~(_0502_ & _2764_);
-	assign _2061_ = _2751_ & ~_0500_;
-	assign _2062_ = _2060_ & ~_2061_;
-	assign _2063_ = _2062_ | _2059_;
-	assign _2064_ = (_2063_ ? _0852_ : _0854_);
-	assign _2065_ = ~\mchip.design.inter.ENDP_reg [0];
-	assign _2066_ = (_2063_ ? _2065_ : _0826_);
-	assign _2067_ = (_1288_ ? _2066_ : _2064_);
-	assign _2068_ = (_2063_ ? _1064_ : _1066_);
-	assign _2069_ = (_2063_ ? _0958_ : _0960_);
-	assign _2070_ = (_1288_ ? _2069_ : _2068_);
-	assign _2071_ = (_2045_ ? _2067_ : _2070_);
-	assign _2072_ = _2071_ | _2042_;
-	assign _2073_ = (_2049_ ? _2058_ : _2072_);
-	assign _2074_ = (_2052_ ? _2050_ : _2073_);
-	assign _2075_ = _2040_ & ~_2074_;
-	assign _2076_ = ~_2075_;
-	assign _2077_ = (_2035_ ? _2034_ : _2076_);
-	assign _2078_ = (_1328_ ? _1327_ : _2077_);
-	assign _2079_ = (_0593_ ? _2078_ : _1273_);
-	assign _2080_ = _2079_ | _0554_;
-	assign _2081_ = ~(io_in[13] | _0069_);
-	assign _2082_ = ~(_2081_ ^ _2080_);
-	assign _0064_ = _2082_ | _0538_;
-	assign _2083_ = _2079_ | _0551_;
-	assign _2084_ = _2083_ | _0554_;
-	assign _0040_ = _0540_ & ~_2084_;
-	assign _2085_ = ~(_0552_ ^ _0551_);
-	assign _2086_ = _2085_ | _2079_;
-	assign _2087_ = _2086_ | _0554_;
-	assign _0041_ = _0540_ & ~_2087_;
-	assign _2088_ = _0552_ & _0551_;
-	assign _2089_ = _2088_ ^ _0550_;
-	assign _2090_ = _2089_ | _2079_;
-	assign _2091_ = _2090_ | _0554_;
-	assign _0042_ = _0540_ & ~_2091_;
-	assign _2092_ = _2082_ & ~_0605_;
-	assign _2093_ = _0615_ | ~_0608_;
-	assign _2094_ = _2093_ | _0642_;
-	assign _2095_ = (_2094_ ? _0642_ : _2092_);
-	assign io_out[1] = _2095_ | _0538_;
-	assign _2096_ = ~(_0302_ | io_in[13]);
-	assign _2097_ = _2096_ ^ _0632_;
-	assign \mchip.design.receiver.crc.crc16.bit_in  = ~(_2097_ | _0579_);
-	assign _2098_ = ~(\mchip.design.receiver.crc.crc16.bit_in  ^ _2660_);
-	assign _0034_ = _2098_ | _0574_;
-	assign _0035_ = _0574_ | _2665_;
-	assign _2099_ = _2098_ ^ _2664_;
-	assign _0036_ = _2099_ | _0574_;
-	assign _0037_ = _0574_ | ~_2662_;
-	assign _0038_ = _0574_ | ~_2661_;
-	assign _2100_ = ~(\mchip.design.receiver.crc.crc16.bit_in  ^ _2645_);
-	assign _0018_ = _2100_ | _0574_;
-	assign _0025_ = _0574_ | _2629_;
-	assign _2101_ = _2100_ ^ _2630_;
-	assign _0026_ = _2101_ | _0574_;
-	assign _0027_ = _0574_ | ~_2633_;
-	assign _0028_ = _0574_ | ~_2632_;
-	assign _0029_ = _0574_ | _2640_;
-	assign _0030_ = _0574_ | _2639_;
-	assign _0031_ = _0574_ | _2637_;
-	assign _0032_ = _0574_ | _2636_;
-	assign _0033_ = _0574_ | _2655_;
-	assign _0019_ = _0574_ | _2654_;
-	assign _0020_ = _0574_ | _2652_;
-	assign _0021_ = _0574_ | _2651_;
-	assign _0022_ = _0574_ | _2648_;
-	assign _0023_ = _0574_ | _2647_;
-	assign _2102_ = _2100_ ^ _2644_;
-	assign _0024_ = _2102_ | _0574_;
-	assign _2103_ = _2097_ | _0576_;
-	assign _2104_ = _2103_ | _0579_;
-	assign _0015_ = _0570_ & ~_2104_;
-	assign _2105_ = ~(_0577_ ^ _0576_);
-	assign _2106_ = _2105_ | _2097_;
-	assign _2107_ = _2106_ | _0579_;
-	assign _0016_ = _0570_ & ~_2107_;
-	assign _2108_ = _0577_ & _0576_;
-	assign _2109_ = _2108_ ^ _0575_;
-	assign _2110_ = _2109_ | _2097_;
-	assign _2111_ = _2110_ | _0579_;
-	assign _0017_ = _0570_ & ~_2111_;
-	assign \mchip.design.receiver.find_sync.log [0] = _0382_ & ~io_in[13];
-	assign \mchip.design.receiver.find_sync.log [1] = _0383_ & ~io_in[13];
-	assign \mchip.design.receiver.find_sync.log [2] = _0384_ & ~io_in[13];
-	assign \mchip.design.receiver.find_sync.log [3] = _0385_ & ~io_in[13];
-	assign \mchip.design.receiver.find_sync.log [4] = _0386_ & ~io_in[13];
-	assign \mchip.design.receiver.find_sync.log [5] = _0387_ & ~io_in[13];
-	assign _2112_ = _0573_ | _0564_;
-	assign _2113_ = _2112_ | _0636_;
-	assign _2114_ = \mchip.design.receiver.find_sync.log [4] | ~\mchip.design.receiver.find_sync.log [5];
-	assign _2115_ = _0388_ & ~io_in[13];
-	assign _2116_ = _2115_ | _2114_;
-	assign _2117_ = \mchip.design.receiver.find_sync.log [2] | ~\mchip.design.receiver.find_sync.log [3];
-	assign _2118_ = \mchip.design.receiver.find_sync.log [0] | ~\mchip.design.receiver.find_sync.log [1];
-	assign _2119_ = _2118_ | _2117_;
-	assign _2120_ = ~(_2119_ | _2116_);
-	assign _2121_ = (_2604_ ? _2607_ : _2627_);
-	assign _2122_ = ~(_2121_ | _2720_);
-	assign _2123_ = _0509_ | _2713_;
-	assign _2124_ = _2122_ & ~_2123_;
-	assign _2125_ = \mchip.design.io_fsm.next_state [2] ^ _2720_;
-	assign _2126_ = ~(\mchip.design.io_fsm.next_state [0] & \mchip.design.io_fsm.next_state [1]);
-	assign _2127_ = _2126_ | _2125_;
-	assign _2128_ = _2127_ | _2122_;
-	assign _2129_ = \mchip.design.io_fsm.next_state [2] ^ _1280_;
-	assign _2130_ = \mchip.design.io_fsm.next_state [0] ^ _1280_;
-	assign _2131_ = _2130_ | \mchip.design.io_fsm.next_state [1];
-	assign _2132_ = _2129_ & ~_2131_;
-	assign _2133_ = _2123_ & ~_2132_;
-	assign _2134_ = _2128_ & ~_2133_;
-	assign _0039_ = _2113_ & ~_0632_;
-	assign \mchip.design.io_fsm.error_counter_nxt [0] = ~(_0531_ | _2675_);
-	assign _2135_ = _2676_ ^ _2675_;
-	assign \mchip.design.io_fsm.error_counter_nxt [1] = _2135_ & ~_0531_;
-	assign _2136_ = _2676_ & _2675_;
-	assign _2137_ = _2136_ ^ _2673_;
-	assign \mchip.design.io_fsm.error_counter_nxt [2] = _2137_ & ~_0531_;
-	assign _2138_ = _2136_ & _2673_;
-	assign _2139_ = _2138_ ^ _2672_;
-	assign \mchip.design.io_fsm.error_counter_nxt [3] = _2139_ & ~_0531_;
-	assign \mchip.design.io_fsm.timeout_counter_nxt [0] = ~(_0531_ | _2700_);
-	assign _2140_ = _2701_ ^ _2700_;
-	assign \mchip.design.io_fsm.timeout_counter_nxt [1] = _2140_ & ~_0531_;
-	assign _2141_ = _2701_ & _2700_;
-	assign _2142_ = _2141_ ^ _2698_;
-	assign \mchip.design.io_fsm.timeout_counter_nxt [2] = _2142_ & ~_0531_;
-	assign _2143_ = _2141_ & _2698_;
-	assign _2144_ = _2143_ ^ _2697_;
-	assign \mchip.design.io_fsm.timeout_counter_nxt [3] = _2144_ & ~_0531_;
-	assign \mchip.design.io_fsm.timer_nxt [0] = _2691_ & ~_0531_;
-	assign _2145_ = _2691_ ^ _2690_;
-	assign \mchip.design.io_fsm.timer_nxt [1] = _2145_ & ~_0531_;
-	assign _2146_ = _2692_ ^ _2688_;
-	assign \mchip.design.io_fsm.timer_nxt [2] = _2146_ & ~_0531_;
-	assign _2147_ = ~(_2692_ | _2688_);
-	assign _2148_ = ~(_2147_ ^ _2687_);
-	assign \mchip.design.io_fsm.timer_nxt [3] = _2148_ & ~_0531_;
-	assign _2149_ = _2693_ ^ _2684_;
-	assign \mchip.design.io_fsm.timer_nxt [4] = _2149_ & ~_0531_;
-	assign _2150_ = ~(_2693_ | _2684_);
-	assign _2151_ = _2150_ ^ _2683_;
-	assign \mchip.design.io_fsm.timer_nxt [5] = _0558_ & ~_2151_;
-	assign _2152_ = ~(_2693_ | _2685_);
-	assign _2153_ = _2152_ ^ _2681_;
-	assign \mchip.design.io_fsm.timer_nxt [6] = _0558_ & ~_2153_;
-	assign _2154_ = _2152_ & ~_2681_;
-	assign _2155_ = ~(_2154_ ^ _2680_);
-	assign \mchip.design.io_fsm.timer_nxt [7] = _0558_ & ~_2155_;
-	assign _2156_ = ~(_2695_ ^ _2694_);
-	assign \mchip.design.io_fsm.timer_nxt [8] = _0558_ & ~_2156_;
-	assign _2157_ = _1246_ | _0545_;
-	assign _2159_ = _2158_ | _2157_;
-	assign _2160_ = _2614_ | ~_2615_;
-	assign _2161_ = _2617_ & _2177_;
-	assign _2162_ = _2160_ | ~_2161_;
-	assign _2163_ = _2613_ & ~_2162_;
-	assign _2164_ = _2163_ | _2177_;
-	assign _2165_ = _2164_ | ~_1246_;
-	assign _2166_ = _2615_ | ~_2614_;
-	assign _2167_ = _2166_ | _2618_;
-	assign _2168_ = _2613_ & ~_2167_;
-	assign _2169_ = _2168_ | _2177_;
-	assign _2170_ = _0545_ & ~_2169_;
-	assign _2171_ = _2165_ & ~_2170_;
-	assign _2172_ = _2160_ | _0595_;
-	assign _2173_ = _2613_ & ~_2172_;
-	assign _2174_ = _2173_ | _2177_;
-	assign _2175_ = _0625_ & ~_2174_;
-	assign _2176_ = _2615_ & _2614_;
-	assign _2178_ = _0620_ & ~_2177_;
-	assign _2179_ = _2178_ | _2175_;
-	assign _2180_ = ~(_2611_ & _2610_);
-	assign _2181_ = _2609_ & ~_2180_;
-	assign _2182_ = _0591_ & ~_2177_;
-	assign _2183_ = _2620_ | _2177_;
-	assign _2184_ = ~(_2183_ | _2624_);
-	assign _2185_ = _2184_ | _2182_;
-	assign _2186_ = _2185_ | _2179_;
-	assign _2187_ = _2171_ & ~_2186_;
-	assign \mchip.design.transmitter.fsm.count_next [0] = _2159_ & ~_2187_;
-	assign _2188_ = _2161_ | ~_0595_;
-	assign _2189_ = _2188_ | _2620_;
-	assign _2190_ = _2189_ | _2624_;
-	assign _2191_ = _0591_ & ~_2188_;
-	assign _2192_ = _2190_ & ~_2191_;
-	assign _2193_ = _2188_ | _2173_;
-	assign _2194_ = _0625_ & ~_2193_;
-	assign _2195_ = ~(_2176_ & _2161_);
-	assign _2196_ = _2613_ & ~_2195_;
-	assign _2197_ = _2188_ | _2196_;
-	assign _2198_ = _0620_ & ~_2197_;
-	assign _2199_ = _2198_ | _2194_;
-	assign _2200_ = _2192_ & ~_2199_;
-	assign _2201_ = _2188_ | _2163_;
-	assign _2202_ = _1246_ & ~_2201_;
-	assign _2203_ = _2188_ | _2168_;
-	assign _2204_ = _0545_ & ~_2203_;
-	assign _2205_ = _2204_ | _2202_;
-	assign _2206_ = _2200_ & ~_2205_;
-	assign \mchip.design.transmitter.fsm.count_next [1] = _2159_ & ~_2206_;
-	assign _2207_ = _2161_ ^ _1319_;
-	assign _2208_ = _2207_ | _2620_;
-	assign _2209_ = _2208_ | _2624_;
-	assign _2210_ = _2181_ & ~_2195_;
-	assign _2211_ = _2207_ | _2210_;
-	assign _2212_ = _0591_ & ~_2211_;
-	assign _2213_ = _2209_ & ~_2212_;
-	assign _2214_ = _2207_ | _2173_;
-	assign _2215_ = _0625_ & ~_2214_;
-	assign _2216_ = _2207_ | _2196_;
-	assign _2217_ = _0620_ & ~_2216_;
-	assign _2218_ = _2217_ | _2215_;
-	assign _2219_ = _2213_ & ~_2218_;
-	assign _2220_ = _2207_ | _2163_;
-	assign _2221_ = _1246_ & ~_2220_;
-	assign _2222_ = _2207_ | _2168_;
-	assign _2223_ = _0545_ & ~_2222_;
-	assign _2224_ = _2223_ | _2221_;
-	assign _2225_ = _2219_ & ~_2224_;
-	assign \mchip.design.transmitter.fsm.count_next [2] = _2159_ & ~_2225_;
-	assign _2226_ = _2161_ & ~_1319_;
-	assign _2227_ = _2226_ ^ _1274_;
-	assign _2228_ = _2227_ | _2620_;
-	assign _2229_ = _2228_ | _2624_;
-	assign _2230_ = _2227_ | _2210_;
-	assign _2231_ = _0591_ & ~_2230_;
-	assign _2232_ = _2229_ & ~_2231_;
-	assign _2233_ = _2227_ | _2173_;
-	assign _2234_ = _0625_ & ~_2233_;
-	assign _2235_ = _2227_ | _2196_;
-	assign _2236_ = _0620_ & ~_2235_;
-	assign _2237_ = _2236_ | _2234_;
-	assign _2238_ = _2232_ & ~_2237_;
-	assign _2239_ = _2227_ | _2163_;
-	assign _2240_ = _1246_ & ~_2239_;
-	assign _2241_ = _2227_ | _2168_;
-	assign _2242_ = _0545_ & ~_2241_;
-	assign _2243_ = _2242_ | _2240_;
-	assign _2244_ = _2238_ & ~_2243_;
-	assign \mchip.design.transmitter.fsm.count_next [3] = _2159_ & ~_2244_;
-	assign _2245_ = _2195_ ^ _2611_;
-	assign _2246_ = _2245_ | _2620_;
-	assign _2247_ = _2246_ | _2624_;
-	assign _2248_ = _2245_ | _2210_;
-	assign _2249_ = _0591_ & ~_2248_;
-	assign _2250_ = _2247_ & ~_2249_;
-	assign _2251_ = _2245_ | _2173_;
-	assign _2252_ = _0625_ & ~_2251_;
-	assign _2253_ = _2245_ | _2196_;
-	assign _2254_ = _0620_ & ~_2253_;
-	assign _2255_ = _2254_ | _2252_;
-	assign _2256_ = _2250_ & ~_2255_;
-	assign _2257_ = _2245_ | _2163_;
-	assign _2258_ = _1246_ & ~_2257_;
-	assign _2259_ = _2245_ | _2168_;
-	assign _2260_ = _0545_ & ~_2259_;
-	assign _2261_ = _2260_ | _2258_;
-	assign _2262_ = _2256_ & ~_2261_;
-	assign \mchip.design.transmitter.fsm.count_next [4] = _2159_ & ~_2262_;
-	assign _2263_ = _2195_ | ~_2611_;
-	assign _2264_ = _2263_ ^ _2610_;
-	assign _2265_ = _2264_ | _2620_;
-	assign _2266_ = _2265_ | _2624_;
-	assign _2267_ = _2264_ | _2210_;
-	assign _2268_ = _0591_ & ~_2267_;
-	assign _2269_ = _2266_ & ~_2268_;
-	assign _2270_ = _2264_ | _2173_;
-	assign _2271_ = _0625_ & ~_2270_;
-	assign _2272_ = _2264_ | _2196_;
-	assign _2273_ = _0620_ & ~_2272_;
-	assign _2274_ = _2273_ | _2271_;
-	assign _2275_ = _2269_ & ~_2274_;
-	assign _2276_ = _2264_ | _2163_;
-	assign _2277_ = _1246_ & ~_2276_;
-	assign _2278_ = _2264_ | _2168_;
-	assign _2279_ = _0545_ & ~_2278_;
-	assign _2280_ = _2279_ | _2277_;
-	assign _2281_ = _2275_ & ~_2280_;
-	assign \mchip.design.transmitter.fsm.count_next [5] = _2159_ & ~_2281_;
-	assign _2282_ = ~(_2180_ | _2195_);
-	assign _2283_ = _2282_ ^ _2609_;
-	assign _2284_ = _2283_ | _2620_;
-	assign _2285_ = _2284_ | _2624_;
-	assign _2286_ = _2283_ | _2210_;
-	assign _2287_ = _0591_ & ~_2286_;
-	assign _2288_ = _2285_ & ~_2287_;
-	assign _2289_ = _2283_ | _2173_;
-	assign _2290_ = _0625_ & ~_2289_;
-	assign _2291_ = _2283_ | _2196_;
-	assign _2292_ = _0620_ & ~_2291_;
-	assign _2293_ = _2292_ | _2290_;
-	assign _2294_ = _2288_ & ~_2293_;
-	assign _2295_ = _2283_ | _2163_;
-	assign _2296_ = _1246_ & ~_2295_;
-	assign _2297_ = _2283_ | _2168_;
-	assign _2298_ = _0545_ & ~_2297_;
-	assign _2299_ = _2298_ | _2296_;
-	assign _2300_ = _2294_ & ~_2299_;
-	assign \mchip.design.transmitter.fsm.count_next [6] = _2159_ & ~_2300_;
-	assign _2301_ = _2744_ & ~_0530_;
-	assign _2302_ = ~(_1281_ | _1280_);
-	assign _2303_ = _2302_ | _2608_;
-	assign _2304_ = _1298_ & _2715_;
-	assign _2305_ = _2718_ & ~_1296_;
-	assign _2306_ = _2305_ | _2304_;
-	assign _2307_ = _2306_ | _2303_;
-	assign _2308_ = _2307_ | _2301_;
-	assign _2309_ = (_2606_ ? _2605_ : _2711_);
-	assign _2310_ = _2309_ & ~_2744_;
-	assign _2311_ = _2308_ & ~_2310_;
-	assign _2312_ = _2158_ | _0537_;
-	assign _2313_ = _0535_ & ~_2163_;
-	assign _2314_ = _2163_ & _1245_;
-	assign _2315_ = _2168_ & ~_0554_;
-	assign _2316_ = _0545_ & ~_2315_;
-	assign _2317_ = _2316_ | _2314_;
-	assign _2318_ = _2317_ | _2313_;
-	assign _2319_ = _0554_ | ~_2173_;
-	assign _2320_ = _0625_ & ~_2319_;
-	assign _2321_ = _0554_ | ~_2196_;
-	assign _2322_ = _0620_ & ~_2321_;
-	assign _2323_ = _2322_ | _2320_;
-	assign _2324_ = _2210_ & ~_0554_;
-	assign _2325_ = _0591_ & ~_2324_;
-	assign _2326_ = ~(_2624_ | _2620_);
-	assign _2327_ = _2326_ | _2325_;
-	assign _2328_ = _2327_ | _2323_;
-	assign _2329_ = _2328_ | _2318_;
-	assign \mchip.design.transmitter.fsm.next_state [0] = (_2312_ ? _2329_ : _2311_);
-	assign _2330_ = ~(_2324_ & _0591_);
-	assign _2331_ = _2330_ & ~_2326_;
-	assign _2332_ = _2320_ | _0620_;
-	assign _2333_ = _2331_ & ~_2332_;
-	assign _2334_ = _2163_ & _0535_;
-	assign _2335_ = ~(_1303_ & _1287_);
-	assign _2336_ = _2335_ | _1315_;
-	assign _2337_ = _1287_ & ~_1303_;
-	assign _2338_ = _2337_ | _2336_;
-	assign _2339_ = _2163_ & ~_2338_;
-	assign _2340_ = _1245_ & ~_2339_;
-	assign _2341_ = _2340_ | _2316_;
-	assign _2342_ = _2341_ | _2334_;
-	assign _2343_ = _2333_ & ~_2342_;
-	assign \mchip.design.transmitter.fsm.next_state [1] = _2312_ & ~_2343_;
-	assign _2344_ = _2326_ | _0591_;
-	assign _2345_ = _0593_ & ~_2344_;
-	assign _2346_ = _2337_ | ~_2163_;
-	assign _2347_ = _1245_ & ~_2346_;
-	assign _2348_ = _2315_ & _0545_;
-	assign _2349_ = _2348_ | _2347_;
-	assign _2350_ = _2345_ & ~_2349_;
-	assign \mchip.design.transmitter.fsm.next_state [2] = _2312_ & ~_2350_;
-	assign _2351_ = _2363_ | _2587_;
-	assign _2352_ = _2351_ | _2577_;
-	assign _2353_ = _2600_ | _2363_;
-	assign _2354_ = _2579_ & ~_2353_;
-	assign _2355_ = _2352_ & ~_2354_;
-	assign _2356_ = _2594_ | ~_2595_;
-	assign _2357_ = _2363_ | ~_2597_;
-	assign _2358_ = _2357_ | _2356_;
-	assign _2359_ = _2593_ & ~_2358_;
-	assign _2360_ = _2359_ | _2363_;
-	assign _2361_ = _0584_ & ~_2360_;
-	assign _2362_ = _2595_ & _2594_;
-	assign _2364_ = _0589_ & ~_2363_;
-	assign _2365_ = _2364_ | _2361_;
-	assign _2366_ = _2355_ & ~_2365_;
-	assign _2367_ = _2363_ & ~_2597_;
-	assign _2368_ = _2356_ | ~_2367_;
-	assign _2369_ = _2593_ & ~_2368_;
-	assign _2370_ = _2369_ | _2363_;
-	assign _2371_ = _0564_ & ~_2370_;
-	assign _2372_ = _2595_ | ~_2594_;
-	assign _2373_ = _2372_ | _2598_;
-	assign _2374_ = _2593_ & ~_2373_;
-	assign _2375_ = _2374_ | _2363_;
-	assign _2376_ = _0567_ & ~_2375_;
-	assign _2377_ = ~(_2591_ & _2590_);
-	assign _2378_ = _2589_ & ~_2377_;
-	assign _2379_ = _0572_ & ~_2363_;
-	assign _2380_ = _2379_ | _2376_;
-	assign _2381_ = _2380_ | _2371_;
-	assign _2382_ = _2366_ & ~_2381_;
-	assign \mchip.design.receiver.fsm.count_next [0] = _2113_ & ~_2382_;
-	assign _2383_ = _2367_ | ~_2357_;
-	assign _2384_ = _2383_ | _2587_;
-	assign _2385_ = _2384_ | _2577_;
-	assign _2386_ = _2383_ | _2600_;
-	assign _2387_ = _2579_ & ~_2386_;
-	assign _2388_ = _2385_ & ~_2387_;
-	assign _2389_ = _2383_ | _2359_;
-	assign _2390_ = _0584_ & ~_2389_;
-	assign _2391_ = ~(_2367_ & _2362_);
-	assign _2392_ = _2593_ & ~_2391_;
-	assign _2393_ = _2383_ | _2392_;
-	assign _2394_ = _0589_ & ~_2393_;
-	assign _2395_ = _2394_ | _2390_;
-	assign _2396_ = _2388_ & ~_2395_;
-	assign _2397_ = _2383_ | _2369_;
-	assign _2398_ = _0564_ & ~_2397_;
-	assign _2399_ = _2383_ | _2374_;
-	assign _2400_ = _0567_ & ~_2399_;
-	assign _2401_ = _2378_ & ~_2391_;
-	assign _2402_ = _2383_ | _2401_;
-	assign _2403_ = _0572_ & ~_2402_;
-	assign _2404_ = _2403_ | _2400_;
-	assign _2405_ = _2404_ | _2398_;
-	assign _2406_ = _2396_ & ~_2405_;
-	assign \mchip.design.receiver.fsm.count_next [1] = _2113_ & ~_2406_;
-	assign _2407_ = ~(_2367_ ^ _2595_);
-	assign _2408_ = _2407_ | _2587_;
-	assign _2409_ = _2408_ | _2577_;
-	assign _2410_ = _2407_ | _2600_;
-	assign _2411_ = _2579_ & ~_2410_;
-	assign _2412_ = _2409_ & ~_2411_;
-	assign _2413_ = _2407_ | _2359_;
-	assign _2414_ = _0584_ & ~_2413_;
-	assign _2415_ = _2407_ | _2392_;
-	assign _2416_ = _0589_ & ~_2415_;
-	assign _2417_ = _2416_ | _2414_;
-	assign _2418_ = _2412_ & ~_2417_;
-	assign _2419_ = _2407_ | _2369_;
-	assign _2420_ = _0564_ & ~_2419_;
-	assign _2421_ = _2407_ | _2374_;
-	assign _2422_ = _0567_ & ~_2421_;
-	assign _2423_ = _2407_ | _2401_;
-	assign _2424_ = _0572_ & ~_2423_;
-	assign _2425_ = _2424_ | _2422_;
-	assign _2426_ = _2425_ | _2420_;
-	assign _2427_ = _2418_ & ~_2426_;
-	assign \mchip.design.receiver.fsm.count_next [2] = _2113_ & ~_2427_;
-	assign _2428_ = ~(_2367_ & _2595_);
-	assign _2429_ = _2428_ ^ _2594_;
-	assign _2430_ = _2429_ | _2587_;
-	assign _2431_ = _2430_ | _2577_;
-	assign _2432_ = _2429_ | _2600_;
-	assign _2433_ = _2579_ & ~_2432_;
-	assign _2434_ = _2431_ & ~_2433_;
-	assign _2435_ = _2429_ | _2359_;
-	assign _2436_ = _0584_ & ~_2435_;
-	assign _2437_ = _2429_ | _2392_;
-	assign _2438_ = _0589_ & ~_2437_;
-	assign _2439_ = _2438_ | _2436_;
-	assign _2440_ = _2434_ & ~_2439_;
-	assign _2441_ = _2429_ | _2369_;
-	assign _2442_ = _0564_ & ~_2441_;
-	assign _2443_ = _2429_ | _2374_;
-	assign _2444_ = _0567_ & ~_2443_;
-	assign _2445_ = _2429_ | _2401_;
-	assign _2446_ = _0572_ & ~_2445_;
-	assign _2447_ = _2446_ | _2444_;
-	assign _2448_ = _2447_ | _2442_;
-	assign _2449_ = _2440_ & ~_2448_;
-	assign \mchip.design.receiver.fsm.count_next [3] = _2113_ & ~_2449_;
-	assign _2450_ = _2391_ ^ _2591_;
-	assign _2451_ = _2450_ | _2587_;
-	assign _2452_ = _2451_ | _2577_;
-	assign _2453_ = _2450_ | _2600_;
-	assign _2454_ = _2579_ & ~_2453_;
-	assign _2455_ = _2452_ & ~_2454_;
-	assign _2456_ = _2450_ | _2359_;
-	assign _2457_ = _0584_ & ~_2456_;
-	assign _2458_ = _2450_ | _2392_;
-	assign _2459_ = _0589_ & ~_2458_;
-	assign _2460_ = _2459_ | _2457_;
-	assign _2461_ = _2455_ & ~_2460_;
-	assign _2462_ = _2450_ | _2369_;
-	assign _2463_ = _0564_ & ~_2462_;
-	assign _2464_ = _2450_ | _2374_;
-	assign _2465_ = _0567_ & ~_2464_;
-	assign _2466_ = _2450_ | _2401_;
-	assign _2467_ = _0572_ & ~_2466_;
-	assign _2468_ = _2467_ | _2465_;
-	assign _2469_ = _2468_ | _2463_;
-	assign _2470_ = _2461_ & ~_2469_;
-	assign \mchip.design.receiver.fsm.count_next [4] = _2113_ & ~_2470_;
-	assign _2471_ = _2391_ | ~_2591_;
-	assign _2472_ = _2471_ ^ _2590_;
-	assign _2473_ = _2472_ | _2587_;
-	assign _2474_ = _2473_ | _2577_;
-	assign _2475_ = _2472_ | _2600_;
-	assign _2476_ = _2579_ & ~_2475_;
-	assign _2477_ = _2474_ & ~_2476_;
-	assign _2478_ = _2472_ | _2359_;
-	assign _2479_ = _0584_ & ~_2478_;
-	assign _2480_ = _2472_ | _2392_;
-	assign _2481_ = _0589_ & ~_2480_;
-	assign _2482_ = _2481_ | _2479_;
-	assign _2483_ = _2477_ & ~_2482_;
-	assign _2484_ = _2472_ | _2369_;
-	assign _2485_ = _0564_ & ~_2484_;
-	assign _2486_ = _2472_ | _2374_;
-	assign _2487_ = _0567_ & ~_2486_;
-	assign _2488_ = _2472_ | _2401_;
-	assign _2489_ = _0572_ & ~_2488_;
-	assign _2490_ = _2489_ | _2487_;
-	assign _2491_ = _2490_ | _2485_;
-	assign _2492_ = _2483_ & ~_2491_;
-	assign \mchip.design.receiver.fsm.count_next [5] = _2113_ & ~_2492_;
-	assign _2493_ = ~(_2377_ | _2391_);
-	assign _2494_ = _2493_ ^ _2589_;
-	assign _2495_ = _2494_ | _2587_;
-	assign _2496_ = _2495_ | _2577_;
-	assign _2497_ = _2494_ | _2600_;
-	assign _2498_ = _2579_ & ~_2497_;
-	assign _2499_ = _2496_ & ~_2498_;
-	assign _2500_ = _2494_ | _2359_;
-	assign _2501_ = _0584_ & ~_2500_;
-	assign _2502_ = _2494_ | _2392_;
-	assign _2503_ = _0589_ & ~_2502_;
-	assign _2504_ = _2503_ | _2501_;
-	assign _2505_ = _2499_ & ~_2504_;
-	assign _2506_ = _2494_ | _2369_;
-	assign _2507_ = _0564_ & ~_2506_;
-	assign _2508_ = _2494_ | _2374_;
-	assign _2509_ = _0567_ & ~_2508_;
-	assign _2510_ = _2494_ | _2401_;
-	assign _2511_ = _0572_ & ~_2510_;
-	assign _2512_ = _2511_ | _2509_;
-	assign _2513_ = _2512_ | _2507_;
-	assign _2514_ = _2505_ & ~_2513_;
-	assign \mchip.design.receiver.fsm.count_next [6] = _2113_ & ~_2514_;
-	assign \mchip.design.receiver.packet_decode.PID_accum [4] = _0307_ & ~io_in[13];
-	assign _2515_ = _2120_ & ~\mchip.design.receiver.find_sync.bit_in ;
-	assign _2516_ = _2134_ | _2124_;
-	assign _2517_ = _2515_ & ~_2516_;
-	assign _2518_ = \mchip.design.receiver.packet_decode.PID_accum [2] & ~\mchip.design.receiver.packet_decode.PID_accum [1];
-	assign _2519_ = \mchip.design.receiver.packet_decode.PID_accum [4] & ~\mchip.design.receiver.packet_decode.PID_accum [3];
-	assign _2520_ = ~(_2519_ & _2518_);
-	assign _2521_ = ~(\mchip.design.receiver.packet_decode.PID_accum [4] | \mchip.design.receiver.packet_decode.PID_accum [3]);
-	assign _2522_ = _2521_ & _2518_;
-	assign _2523_ = _2520_ & ~_2522_;
-	assign _2524_ = ~(\mchip.design.receiver.packet_decode.PID_accum [2] & \mchip.design.receiver.packet_decode.PID_accum [1]);
-	assign _2525_ = _2521_ & ~_2524_;
-	assign _2526_ = _2525_ | _2523_;
-	assign _2527_ = \mchip.design.receiver.packet_decode.PID_accum [2] | ~\mchip.design.receiver.packet_decode.PID_accum [1];
-	assign _2528_ = _2521_ & ~_2527_;
-	assign _2529_ = _2519_ & ~_2527_;
-	assign _2530_ = _2529_ | _2528_;
-	assign _2531_ = _2526_ & ~_2530_;
-	assign _2532_ = _2369_ & ~_2531_;
-	assign _2533_ = _0564_ & ~_2532_;
-	assign _2534_ = _2533_ | _0572_;
-	assign _2535_ = _2392_ & ~_0579_;
-	assign _2536_ = _0589_ & ~_2535_;
-	assign _2537_ = ~(_2587_ | _2577_);
-	assign _2538_ = _2537_ | _2536_;
-	assign _2539_ = _2538_ | _2534_;
-	assign \mchip.design.receiver.fsm.next_state [0] = (_2113_ ? _2539_ : _2517_);
-	assign _2540_ = _2579_ & ~_2600_;
-	assign _2541_ = ~(_2540_ | _2537_);
-	assign _2542_ = _0579_ | ~_2359_;
-	assign _2543_ = _0584_ & ~_2542_;
-	assign _2544_ = _2535_ & _0589_;
-	assign _2545_ = _2544_ | _2543_;
-	assign _2546_ = _2541_ & ~_2545_;
-	assign _2547_ = _2369_ & _0564_;
-	assign _2548_ = _2374_ & ~_0579_;
-	assign _2549_ = _0567_ & ~_2548_;
-	assign _2550_ = _2401_ & ~_0579_;
-	assign _2551_ = _0572_ & ~_2550_;
-	assign _2552_ = _2551_ | _2549_;
-	assign _2553_ = _2552_ | _2547_;
-	assign _2554_ = _2546_ & ~_2553_;
-	assign \mchip.design.receiver.fsm.next_state [1] = _2113_ & ~_2554_;
-	assign _2555_ = _0589_ | _0584_;
-	assign _2556_ = _2541_ & ~_2555_;
-	assign _2557_ = _2530_ | _2525_;
-	assign _2558_ = _2557_ | ~_2369_;
-	assign _2559_ = _0564_ & ~_2558_;
-	assign _2560_ = _2548_ & _0567_;
-	assign _2561_ = _2550_ & _0572_;
-	assign _2562_ = _2561_ | _2560_;
-	assign _2563_ = _2562_ | _2559_;
-	assign _2564_ = _2556_ & ~_2563_;
-	assign \mchip.design.receiver.fsm.next_state [2] = _2113_ & ~_2564_;
-	assign _2565_ = ~(_0642_ | _0615_);
-	assign _2566_ = _0612_ & ~_2082_;
-	assign _2567_ = (_0602_ ? _2566_ : _2565_);
-	assign io_out[0] = _2567_ & ~_0538_;
-	assign _2568_ = ~(_2078_ ^ _1257_);
-	assign _0059_ = _2568_ | _0544_;
-	assign _0060_ = _1266_ | _0544_;
-	assign _2569_ = _2568_ ^ _1267_;
-	assign _0061_ = _2569_ | _0544_;
-	assign _0062_ = _1263_ | _0544_;
-	assign _0063_ = _1264_ | _0544_;
-	assign _2570_ = ~(_2078_ ^ _1206_);
-	assign _0043_ = _2570_ | _0544_;
-	assign _0050_ = _1236_ | _0544_;
-	assign _2571_ = _2570_ ^ _1235_;
-	assign _0051_ = _2571_ | _0544_;
-	assign _0052_ = _1233_ | _0544_;
-	assign _0053_ = _1232_ | _0544_;
-	assign _0054_ = _1229_ | _0544_;
-	assign _0055_ = _1228_ | _0544_;
-	assign _0056_ = _1226_ | _0544_;
-	assign _0057_ = _1225_ | _0544_;
-	assign _0058_ = _1220_ | _0544_;
-	assign _0044_ = _1219_ | _0544_;
-	assign _0045_ = _1217_ | _0544_;
-	assign _0046_ = _1216_ | _0544_;
-	assign _0047_ = _1212_ | _0544_;
-	assign _0048_ = _1211_ | _0544_;
-	assign _2572_ = _2570_ ^ _1208_;
-	assign _0049_ = _2572_ | _0544_;
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [0] = _0180_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [1] = _0181_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [2] = _0182_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [3] = _0183_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [4] = _0184_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [5] = _0185_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [6] = _0186_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [7] = _0187_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [8] = _0188_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [9] = _0189_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [10] = _0190_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [11] = _0191_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [12] = _0192_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [13] = _0193_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [14] = _0194_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [15] = _0195_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [16] = _0196_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [17] = _0197_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [18] = _0198_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [19] = _0199_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [20] = _0200_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [21] = _0201_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [22] = _0202_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [23] = _0203_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [24] = _0204_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [25] = _0205_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [26] = _0206_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [27] = _0207_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [28] = _0208_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [29] = _0209_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [30] = _0210_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [31] = _0211_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [32] = _0212_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [33] = _0213_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [34] = _0214_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [35] = _0215_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [36] = _0216_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [37] = _0217_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [38] = _0218_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [39] = _0219_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [40] = _0220_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [41] = _0221_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [42] = _0222_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [43] = _0223_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [44] = _0224_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [45] = _0225_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [46] = _0226_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [47] = _0227_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [48] = _0228_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [49] = _0229_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [50] = _0230_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [51] = _0231_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [52] = _0232_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [53] = _0233_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [54] = _0234_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [55] = _0235_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [56] = _0236_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [57] = _0237_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [58] = _0238_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [59] = _0239_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [60] = _0240_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [61] = _0241_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [62] = _0242_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [63] = _0243_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PID_accum [5] = _0308_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PID_accum [6] = _0309_ & ~io_in[13];
-	assign \mchip.design.receiver.packet_decode.PID_accum [7] = _0310_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [0] = _0311_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [1] = _0312_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [2] = _0313_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [3] = _0314_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [4] = _0315_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [5] = _0316_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [6] = _0317_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [7] = _0318_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [8] = _0319_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [9] = _0320_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [10] = _0321_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [11] = _0322_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [12] = _0323_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [13] = _0324_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [14] = _0325_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [15] = _0326_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [16] = _0327_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [17] = _0328_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [18] = _0329_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [19] = _0330_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [20] = _0331_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [21] = _0332_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [22] = _0333_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [23] = _0334_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [24] = _0335_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [25] = _0336_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [26] = _0337_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [27] = _0338_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [28] = _0339_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [29] = _0340_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [30] = _0341_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [31] = _0342_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [32] = _0343_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [33] = _0344_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [34] = _0345_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [35] = _0346_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [36] = _0347_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [37] = _0348_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [38] = _0349_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [39] = _0350_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [40] = _0351_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [41] = _0352_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [42] = _0353_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [43] = _0354_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [44] = _0355_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [45] = _0356_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [46] = _0357_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [47] = _0358_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [48] = _0359_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [49] = _0360_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [50] = _0361_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [51] = _0362_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [52] = _0363_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [53] = _0364_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [54] = _0365_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [55] = _0366_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [56] = _0367_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [57] = _0368_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [58] = _0369_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [59] = _0370_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [60] = _0371_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [61] = _0372_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [62] = _0373_ & ~io_in[13];
-	assign \mchip.design.io_fsm.final_data [63] = _0374_ & ~io_in[13];
+	assign _1720_ = _1719_ ^ _1256_;
+	assign _1721_ = ~(_1683_ & \mchip.game2.score_inst.score_saved[2] [1]);
+	assign _1722_ = _1674_ & ~_1684_;
+	assign _1723_ = _1721_ & ~_1722_;
+	assign _1724_ = _1684_ | _1680_;
+	assign _1725_ = _1679_ & ~_1724_;
+	assign _1726_ = _1723_ & ~_1725_;
+	assign _1727_ = _1726_ ^ \mchip.game2.score_inst.score_saved[2] [2];
+	assign _1728_ = _1727_ ^ _1720_;
+	assign _1729_ = ~(_1728_ ^ _1716_);
+	assign _1730_ = ~(\mchip.game2.score_inst.score_saved[2] [0] ^ \mchip.game2.vga_inst.haddr [0]);
+	assign _1731_ = _1270_ & ~_1717_;
+	assign _1732_ = ~_1731_;
+	assign _1733_ = _1649_ & ~_1664_;
+	assign _1734_ = _1732_ & ~_1733_;
+	assign _1735_ = _1734_ ^ _1269_;
+	assign _1736_ = ~(\mchip.game2.score_inst.score_saved[2] [2] & \mchip.game2.score_inst.score_saved[2] [3]);
+	assign _1737_ = _1736_ | _1723_;
+	assign _1738_ = _1736_ | _1724_;
+	assign _1739_ = _1679_ & ~_1738_;
+	assign _1740_ = _1737_ & ~_1739_;
+	assign _1741_ = _1735_ & ~_1740_;
+	assign _1742_ = \mchip.game2.vga_inst.haddr [6] & ~_1719_;
+	assign _1743_ = _1742_ ^ \mchip.game2.vga_inst.haddr [7];
+	assign _1744_ = ~_1743_;
+	assign _1745_ = \mchip.game2.score_inst.score_saved[2] [2] & ~_1726_;
+	assign _1746_ = _1745_ ^ \mchip.game2.score_inst.score_saved[2] [3];
+	assign _1747_ = _1746_ & ~_1744_;
+	assign _1748_ = _1720_ & ~_1727_;
+	assign _1749_ = _1746_ ^ _1744_;
+	assign _1750_ = _1748_ & ~_1749_;
+	assign _1751_ = _1750_ | _1747_;
+	assign _1752_ = _1749_ | _1728_;
+	assign _1753_ = _1692_ & ~_1752_;
+	assign _1754_ = _1753_ | _1751_;
+	assign _1755_ = _1752_ | _1694_;
+	assign _1756_ = ~(_1755_ | _1714_);
+	assign _1757_ = _1756_ | _1754_;
+	assign _1758_ = ~(_1740_ ^ _1735_);
+	assign _1759_ = _1758_ & _1757_;
+	assign _1760_ = _1759_ | _1741_;
+	assign _1761_ = \mchip.game2.vga_inst.haddr [8] & ~_1734_;
+	assign _1762_ = _1761_ ^ _1307_;
+	assign _1763_ = _1762_ ^ _1760_;
+	assign _1764_ = _1763_ | _1323_;
+	assign _1765_ = _1764_ | _1730_;
+	assign _1766_ = _1710_ ^ _1709_;
+	assign _1767_ = _1766_ | _1765_;
+	assign _1768_ = ~(_1712_ ^ _1705_);
+	assign _1769_ = _1763_ | _1335_;
+	assign _1770_ = (_1766_ ? _1764_ : _1769_);
+	assign _1771_ = (_1768_ ? _1767_ : _1770_);
+	assign _1772_ = _1705_ & ~_1712_;
+	assign _1773_ = _1702_ & ~_1772_;
+	assign _1774_ = _1773_ ^ _1699_;
+	assign _1775_ = ~(_1763_ | _1349_);
+	assign _1776_ = ~_1775_;
+	assign _1777_ = ~(_1763_ | _1352_);
+	assign _1778_ = ~_1777_;
+	assign _1779_ = _1763_ | _1358_;
+	assign _1780_ = (_1730_ ? _1778_ : _1779_);
+	assign _1781_ = (_1730_ ? _1779_ : _1776_);
+	assign _1782_ = (_1766_ ? _1780_ : _1781_);
+	assign _1783_ = (_1768_ ? _1782_ : _1776_);
+	assign _1784_ = (_1774_ ? _1771_ : _1783_);
+	assign _1785_ = _1714_ ^ _1693_;
+	assign _1786_ = ~(_1763_ | _1370_);
+	assign _1787_ = ~_1786_;
+	assign _1788_ = _1763_ | _1376_;
+	assign _1789_ = (_1730_ ? _1787_ : _1788_);
+	assign _1790_ = (_1766_ ? _1787_ : _1789_);
+	assign _1791_ = _1788_ | ~_1730_;
+	assign _1792_ = _1763_ | _1382_;
+	assign _1793_ = (_1766_ ? _1791_ : _1792_);
+	assign _1794_ = (_1768_ ? _1790_ : _1793_);
+	assign _1795_ = _1763_ | _1388_;
+	assign _1796_ = (_1730_ ? _1792_ : _1795_);
+	assign _1797_ = (_1730_ ? _1795_ : _1778_);
+	assign _1798_ = (_1766_ ? _1796_ : _1797_);
+	assign _1799_ = ~(_1763_ | _1397_);
+	assign _1800_ = ~_1799_;
+	assign _1801_ = (_1768_ ? _1798_ : _1800_);
+	assign _1802_ = (_1774_ ? _1794_ : _1801_);
+	assign _1803_ = (_1785_ ? _1784_ : _1802_);
+	assign _1804_ = ~(_1714_ | _1693_);
+	assign _1805_ = _1690_ & ~_1804_;
+	assign _1806_ = _1805_ ^ _1687_;
+	assign _1807_ = ~(_1763_ | _1410_);
+	assign _1808_ = ~_1807_;
+	assign _1809_ = ~(_1763_ | _1416_);
+	assign _1810_ = ~_1809_;
+	assign _1811_ = (_1730_ ? _1808_ : _1810_);
+	assign _1812_ = (_1730_ ? _1810_ : _1787_);
+	assign _1813_ = (_1766_ ? _1811_ : _1812_);
+	assign _1814_ = (_1730_ ? _1787_ : _1778_);
+	assign _1815_ = _1763_ | _1424_;
+	assign _1816_ = (_1766_ ? _1814_ : _1815_);
+	assign _1817_ = (_1768_ ? _1813_ : _1816_);
+	assign _1818_ = _1763_ | _1429_;
+	assign _1819_ = _1818_ | _1730_;
+	assign _1820_ = (_1766_ ? _1819_ : _1818_);
+	assign _1821_ = _1763_ | _1433_;
+	assign _1822_ = _1763_ | _1437_;
+	assign _1823_ = _1763_ | _1441_;
+	assign _1824_ = (_1730_ ? _1822_ : _1823_);
+	assign _1825_ = (_1766_ ? _1821_ : _1824_);
+	assign _1826_ = (_1768_ ? _1820_ : _1825_);
+	assign _1827_ = (_1774_ ? _1817_ : _1826_);
+	assign _1828_ = ~(_1763_ | _1448_);
+	assign _1829_ = ~_1828_;
+	assign _1830_ = (_1730_ ? _1823_ : _1829_);
+	assign _1831_ = (_1766_ ? _1830_ : _1829_);
+	assign _1832_ = _1763_ | _1454_;
+	assign _1833_ = (_1766_ ? _1832_ : _1818_);
+	assign _1834_ = (_1768_ ? _1831_ : _1833_);
+	assign _1835_ = _1818_ | ~_1730_;
+	assign _1836_ = (_1766_ ? _1818_ : _1835_);
+	assign _1837_ = (_1730_ ? _1792_ : _1829_);
+	assign _1838_ = (_1766_ ? _1792_ : _1837_);
+	assign _1839_ = (_1768_ ? _1836_ : _1838_);
+	assign _1840_ = (_1774_ ? _1834_ : _1839_);
+	assign _1841_ = (_1785_ ? _1827_ : _1840_);
+	assign _1842_ = (_1806_ ? _1803_ : _1841_);
+	assign _1843_ = ~(_1842_ | _1729_);
+	assign _1844_ = _1716_ & ~_1728_;
+	assign _1845_ = ~(_1844_ | _1748_);
+	assign _1846_ = _1845_ ^ _1749_;
+	assign _1847_ = (_1766_ ? _1828_ : _1775_);
+	assign _1848_ = ~(_1763_ | _1474_);
+	assign _1849_ = (_1766_ ? _1775_ : _1848_);
+	assign _1850_ = (_1768_ ? _1847_ : _1849_);
+	assign _1851_ = ~(_1763_ | _1478_);
+	assign _1852_ = (_1730_ ? _1848_ : _1851_);
+	assign _1853_ = (_1766_ ? _1852_ : _1851_);
+	assign _1854_ = _1484_ & ~_1763_;
+	assign _1855_ = ~(_1763_ | _1489_);
+	assign _1856_ = _1855_ & ~_1730_;
+	assign _1857_ = (_1766_ ? _1854_ : _1856_);
+	assign _1858_ = (_1768_ ? _1853_ : _1857_);
+	assign _1859_ = (_1774_ ? _1850_ : _1858_);
+	assign _1860_ = ~(_1763_ | _1496_);
+	assign _1861_ = (_1766_ ? _1855_ : _1860_);
+	assign _1862_ = ~(_1763_ | _1503_);
+	assign _1863_ = (_1730_ ? _1860_ : _1862_);
+	assign _1864_ = (_1766_ ? _1863_ : _1862_);
+	assign _1865_ = (_1768_ ? _1861_ : _1864_);
+	assign _1866_ = ~(_1763_ | _1510_);
+	assign _1867_ = ~(_1763_ | _1513_);
+	assign _1868_ = (_1730_ ? _1866_ : _1867_);
+	assign _1869_ = (_1766_ ? _1866_ : _1868_);
+	assign _1870_ = (_1768_ ? _1862_ : _1869_);
+	assign _1871_ = (_1774_ ? _1865_ : _1870_);
+	assign _1872_ = (_1785_ ? _1859_ : _1871_);
+	assign _1873_ = ~_1730_;
+	assign _1874_ = _1867_ & ~_1873_;
+	assign _1875_ = ~(_1763_ | _1524_);
+	assign _1876_ = (_1766_ ? _1874_ : _1875_);
+	assign _1877_ = (_1730_ ? _1875_ : _1777_);
+	assign _1878_ = (_1766_ ? _1877_ : _1777_);
+	assign _1879_ = (_1768_ ? _1876_ : _1878_);
+	assign _1880_ = ~(_1763_ | _1533_);
+	assign _1881_ = (_1766_ ? _1777_ : _1880_);
+	assign _1882_ = ~_1539_;
+	assign _1883_ = _1882_ & ~_1763_;
+	assign _1884_ = ~_1542_;
+	assign _1885_ = _1884_ & ~_1763_;
+	assign _1886_ = (_1730_ ? _1883_ : _1885_);
+	assign _1887_ = ~(_1763_ | _1547_);
+	assign _1888_ = (_1730_ ? _1885_ : _1887_);
+	assign _1889_ = (_1766_ ? _1886_ : _1888_);
+	assign _1890_ = (_1768_ ? _1881_ : _1889_);
+	assign _1891_ = (_1774_ ? _1879_ : _1890_);
+	assign _1892_ = _1554_ & ~_1763_;
+	assign _1893_ = (_1766_ ? _1887_ : _1892_);
+	assign _1894_ = ~(_1763_ | _1558_);
+	assign _1895_ = _1894_ & ~_1730_;
+	assign _1896_ = (_1766_ ? _1895_ : _1894_);
+	assign _1897_ = (_1768_ ? _1893_ : _1896_);
+	assign _1898_ = ~(_1763_ | _1565_);
+	assign _1899_ = (_1730_ ? _1777_ : _1786_);
+	assign _1900_ = (_1766_ ? _1898_ : _1899_);
+	assign _1901_ = (_1730_ ? _1786_ : _1809_);
+	assign _1902_ = (_1766_ ? _1901_ : _1809_);
+	assign _1903_ = (_1768_ ? _1900_ : _1902_);
+	assign _1904_ = (_1774_ ? _1897_ : _1903_);
+	assign _1905_ = (_1785_ ? _1891_ : _1904_);
+	assign _1906_ = (_1806_ ? _1872_ : _1905_);
+	assign _1907_ = ~(_1763_ | _1576_);
+	assign _1908_ = (_1766_ ? _1775_ : _1907_);
+	assign _1909_ = ~(_1763_ | _1580_);
+	assign _1910_ = (_1730_ ? _1907_ : _1909_);
+	assign _1911_ = _1909_ & ~_1873_;
+	assign _1912_ = (_1766_ ? _1910_ : _1911_);
+	assign _1913_ = (_1768_ ? _1908_ : _1912_);
+	assign _1914_ = ~(_1763_ | _1587_);
+	assign _1915_ = (_1730_ ? _1914_ : _1786_);
+	assign _1916_ = (_1766_ ? _1914_ : _1915_);
+	assign _1917_ = ~(_1763_ | _1592_);
+	assign _1918_ = (_1730_ ? _1786_ : _1917_);
+	assign _1919_ = (_1766_ ? _1918_ : _1807_);
+	assign _1920_ = (_1768_ ? _1916_ : _1919_);
+	assign _1921_ = (_1774_ ? _1913_ : _1920_);
+	assign _1922_ = (_1766_ ? _1799_ : _1828_);
+	assign _1923_ = ~(_1763_ | _1600_);
+	assign _1924_ = (_1730_ ? _1828_ : _1923_);
+	assign _1925_ = (_1766_ ? _1924_ : _1923_);
+	assign _1926_ = (_1768_ ? _1922_ : _1925_);
+	assign _1927_ = ~(_1763_ | _1606_);
+	assign _1928_ = ~(_1763_ | _1609_);
+	assign _1929_ = _1927_ & ~_1730_;
+	assign _1930_ = (_1766_ ? _1928_ : _1929_);
+	assign _1931_ = (_1768_ ? _1930_ : _1927_);
+	assign _1932_ = (_1774_ ? _1926_ : _1931_);
+	assign _1933_ = (_1785_ ? _1921_ : _1932_);
+	assign _1934_ = ~_1617_;
+	assign _1935_ = _1934_ & ~_1763_;
+	assign _1936_ = (_1766_ ? _1777_ : _1935_);
+	assign _1937_ = (_1768_ ? _1777_ : _1936_);
+	assign _1938_ = _1927_ & ~_1873_;
+	assign _1939_ = (_1766_ ? _1927_ : _1938_);
+	assign _1940_ = _1887_ & ~_1766_;
+	assign _1941_ = (_1768_ ? _1939_ : _1940_);
+	assign _1942_ = (_1774_ ? _1937_ : _1941_);
+	assign _1943_ = ~(_1763_ | _1626_);
+	assign _1944_ = (_1730_ ? _1887_ : _1943_);
+	assign _1945_ = (_1730_ ? _1943_ : _1777_);
+	assign _1946_ = (_1766_ ? _1944_ : _1945_);
+	assign _1947_ = (_1766_ ? _1631_ : _1632_);
+	assign _1948_ = ~(_1947_ | _1763_);
+	assign _1949_ = (_1768_ ? _1946_ : _1948_);
+	assign _1950_ = (_1730_ ? _1907_ : _1943_);
+	assign _1951_ = (_1766_ ? _1907_ : _1950_);
+	assign _1952_ = (_1766_ ? _1943_ : _1887_);
+	assign _1953_ = (_1768_ ? _1951_ : _1952_);
+	assign _1954_ = (_1774_ ? _1949_ : _1953_);
+	assign _1955_ = (_1785_ ? _1942_ : _1954_);
+	assign _1956_ = (_1806_ ? _1933_ : _1955_);
+	assign _1957_ = (_1729_ ? _1906_ : _1956_);
+	assign _1958_ = (_1846_ ? _1843_ : _1957_);
+	assign _1959_ = _1758_ ^ _1757_;
+	assign _1960_ = _1958_ & ~_1959_;
+	assign _1961_ = \mchip.game2.vga_inst.haddr [0] | ~\mchip.game2.vga_inst.haddr [1];
+	assign _1962_ = \mchip.game2.vga_inst.haddr [3] | ~\mchip.game2.vga_inst.haddr [2];
+	assign _1963_ = ~(_1962_ | _1961_);
+	assign _1964_ = ~(_1963_ & _1731_);
+	assign _1965_ = _1964_ | _1648_;
+	assign _1966_ = ~(_1962_ | _0241_);
+	assign _1967_ = _3186_ & ~_1966_;
+	assign _1968_ = _1731_ & ~_1967_;
+	assign _1969_ = _1731_ & ~_1968_;
+	assign _1970_ = _1647_ & ~_1969_;
+	assign _1971_ = _1653_ & ~_1970_;
+	assign _1972_ = _1965_ & ~_1971_;
+	assign _1973_ = _0241_ | ~_3185_;
+	assign _1974_ = _1649_ & ~_1973_;
+	assign _1975_ = _1654_ & ~_1974_;
+	assign _1976_ = _1647_ & ~_1975_;
+	assign _1977_ = _1976_ | _0237_;
+	assign _1978_ = _1972_ & ~_1977_;
+	assign _1979_ = _3179_ & ~_0242_;
+	assign _1980_ = _0248_ & ~_1979_;
+	assign _1981_ = \mchip.game2.vga_inst.haddr [4] & ~_1980_;
+	assign _1982_ = _1981_ ^ \mchip.game2.vga_inst.haddr [5];
+	assign _1983_ = ~_1982_;
+	assign _1984_ = \mchip.game2.score_inst.score_saved[1] [2] & \mchip.game2.score_inst.score_saved[1] [3];
+	assign _1985_ = ~(\mchip.game2.score_inst.score_saved[1] [0] ^ \mchip.game2.score_inst.score_saved[1] [3]);
+	assign _1986_ = _1985_ ^ _1984_;
+	assign _1987_ = ~(\mchip.game2.score_inst.score_saved[1] [2] & \mchip.game2.score_inst.score_saved[1] [1]);
+	assign _1988_ = ~(\mchip.game2.score_inst.score_saved[1] [2] ^ \mchip.game2.score_inst.score_saved[1] [3]);
+	assign _1989_ = _1988_ | _1987_;
+	assign _1990_ = _1988_ ^ _1987_;
+	assign _1991_ = ~(\mchip.game2.score_inst.score_saved[1] [1] & \mchip.game2.score_inst.score_saved[1] [0]);
+	assign _1992_ = ~(\mchip.game2.score_inst.score_saved[1] [2] ^ \mchip.game2.score_inst.score_saved[1] [1]);
+	assign _1993_ = _1992_ | _1991_;
+	assign _1994_ = _1990_ & ~_1993_;
+	assign _1995_ = _1989_ & ~_1994_;
+	assign _1996_ = _1995_ | _1986_;
+	assign _1997_ = _1984_ & ~_1985_;
+	assign _1998_ = ~(\mchip.game2.score_inst.score_saved[1] [0] & \mchip.game2.score_inst.score_saved[1] [3]);
+	assign _1999_ = _1998_ ^ \mchip.game2.score_inst.score_saved[1] [1];
+	assign _2000_ = _1999_ ^ _1997_;
+	assign _2001_ = _2000_ ^ _1996_;
+	assign _2002_ = _2001_ & ~_1983_;
+	assign _2003_ = _2001_ ^ _1983_;
+	assign _2004_ = _1980_ ^ \mchip.game2.vga_inst.haddr [4];
+	assign _2005_ = _1995_ ^ _1986_;
+	assign _2006_ = _2004_ | ~_2005_;
+	assign _2007_ = ~(_2006_ | _2003_);
+	assign _2008_ = _2007_ | _2002_;
+	assign _2009_ = _2005_ ^ _2004_;
+	assign _2010_ = _2009_ | _2003_;
+	assign _2011_ = _1238_ ^ _0662_;
+	assign _2012_ = ~(_1993_ ^ _1990_);
+	assign _2013_ = ~(_2012_ & _2011_);
+	assign _2014_ = ~(_2012_ ^ _2011_);
+	assign _2015_ = _3179_ ^ _1232_;
+	assign _2016_ = _1992_ ^ _1991_;
+	assign _2017_ = ~(_2016_ & _2015_);
+	assign _2018_ = ~(_2017_ | _2014_);
+	assign _2019_ = _2013_ & ~_2018_;
+	assign _2020_ = _2016_ ^ _2015_;
+	assign _2021_ = _2020_ & ~_2014_;
+	assign _2022_ = \mchip.game2.score_inst.score_saved[1] [1] ^ \mchip.game2.score_inst.score_saved[1] [0];
+	assign _2023_ = _3625_[1] | ~_2022_;
+	assign _2024_ = \mchip.game2.score_inst.score_saved[1] [0] & ~\mchip.game2.vga_inst.haddr [0];
+	assign _2025_ = ~(_2022_ ^ _3625_[1]);
+	assign _2026_ = _2025_ & _2024_;
+	assign _2027_ = _2023_ & ~_2026_;
+	assign _2028_ = _2021_ & ~_2027_;
+	assign _2029_ = _2019_ & ~_2028_;
+	assign _2030_ = ~(_2029_ | _2010_);
+	assign _2031_ = _2030_ | _2008_;
+	assign _2032_ = ~(_1980_ | _1717_);
+	assign _2033_ = _2032_ ^ \mchip.game2.vga_inst.haddr [6];
+	assign _2034_ = _1997_ & ~_1999_;
+	assign _2035_ = _2000_ | _1986_;
+	assign _2036_ = ~(_2035_ | _1995_);
+	assign _2037_ = _2036_ | _2034_;
+	assign _2038_ = \mchip.game2.score_inst.score_saved[1] [1] & ~_1998_;
+	assign _2039_ = ~(_2038_ ^ \mchip.game2.score_inst.score_saved[1] [2]);
+	assign _2040_ = _2039_ ^ _2037_;
+	assign _2041_ = _2040_ ^ _2033_;
+	assign _2042_ = ~(_2041_ ^ _2031_);
+	assign _2043_ = ~(\mchip.game2.score_inst.score_saved[1] [0] ^ \mchip.game2.vga_inst.haddr [0]);
+	assign _2044_ = ~(_1980_ | _1732_);
+	assign _2045_ = _2044_ ^ \mchip.game2.vga_inst.haddr [8];
+	assign _2046_ = ~\mchip.game2.score_inst.score_saved[1] [3];
+	assign _2047_ = ~(_2038_ & \mchip.game2.score_inst.score_saved[1] [2]);
+	assign _2048_ = _2047_ | _2046_;
+	assign _2049_ = _2039_ | _2046_;
+	assign _2050_ = _2034_ & ~_2049_;
+	assign _2051_ = _2048_ & ~_2050_;
+	assign _2052_ = _2049_ | _2035_;
+	assign _2053_ = ~(_2052_ | _1995_);
+	assign _2054_ = _2051_ & ~_2053_;
+	assign _2055_ = _2045_ & ~_2054_;
+	assign _2056_ = ~(_2032_ & \mchip.game2.vga_inst.haddr [6]);
+	assign _2057_ = _2056_ ^ \mchip.game2.vga_inst.haddr [7];
+	assign _2058_ = _2037_ & ~_2039_;
+	assign _2059_ = _2047_ & ~_2058_;
+	assign _2060_ = _2059_ ^ _2046_;
+	assign _2061_ = _2060_ & ~_2057_;
+	assign _2062_ = _2033_ & ~_2040_;
+	assign _2063_ = _2060_ ^ _2057_;
+	assign _2064_ = _2062_ & ~_2063_;
+	assign _2065_ = _2064_ | _2061_;
+	assign _2066_ = _2063_ | _2041_;
+	assign _2067_ = _2008_ & ~_2066_;
+	assign _2068_ = _2067_ | _2065_;
+	assign _2069_ = _2066_ | _2010_;
+	assign _2070_ = ~(_2069_ | _2029_);
+	assign _2071_ = _2070_ | _2068_;
+	assign _2072_ = ~(_2054_ ^ _2045_);
+	assign _2073_ = _2072_ & _2071_;
+	assign _2074_ = _2073_ | _2055_;
+	assign _2075_ = _2044_ & ~_1269_;
+	assign _2076_ = _2075_ ^ _1307_;
+	assign _2077_ = _2076_ ^ _2074_;
+	assign _2078_ = _2077_ | _1323_;
+	assign _2079_ = _2078_ | _2043_;
+	assign _2080_ = _2025_ ^ _2024_;
+	assign _2081_ = _2080_ | _2079_;
+	assign _2082_ = ~(_2027_ ^ _2020_);
+	assign _2083_ = _2077_ | _1335_;
+	assign _2084_ = (_2080_ ? _2078_ : _2083_);
+	assign _2085_ = (_2082_ ? _2081_ : _2084_);
+	assign _2086_ = _2020_ & ~_2027_;
+	assign _2087_ = _2017_ & ~_2086_;
+	assign _2088_ = _2087_ ^ _2014_;
+	assign _2089_ = _2077_ | _1349_;
+	assign _2090_ = _2077_ | _1352_;
+	assign _2091_ = _2077_ | _1358_;
+	assign _2092_ = (_2043_ ? _2090_ : _2091_);
+	assign _2093_ = (_2043_ ? _2091_ : _2089_);
+	assign _2094_ = (_2080_ ? _2092_ : _2093_);
+	assign _2095_ = (_2082_ ? _2094_ : _2089_);
+	assign _2096_ = (_2088_ ? _2085_ : _2095_);
+	assign _2097_ = _2029_ ^ _2009_;
+	assign _2098_ = _2077_ | _1370_;
+	assign _2099_ = _2077_ | _1376_;
+	assign _2100_ = (_2043_ ? _2098_ : _2099_);
+	assign _2101_ = (_2080_ ? _2098_ : _2100_);
+	assign _2102_ = _2099_ | ~_2043_;
+	assign _2103_ = _2077_ | _1382_;
+	assign _2104_ = (_2080_ ? _2102_ : _2103_);
+	assign _2105_ = (_2082_ ? _2101_ : _2104_);
+	assign _2106_ = _2077_ | _1388_;
+	assign _2107_ = (_2043_ ? _2103_ : _2106_);
+	assign _2108_ = (_2043_ ? _2106_ : _2090_);
+	assign _2109_ = (_2080_ ? _2107_ : _2108_);
+	assign _2110_ = ~(_2077_ | _1397_);
+	assign _2111_ = ~_2110_;
+	assign _2112_ = (_2082_ ? _2109_ : _2111_);
+	assign _2113_ = (_2088_ ? _2105_ : _2112_);
+	assign _2114_ = (_2097_ ? _2096_ : _2113_);
+	assign _2115_ = ~(_2029_ | _2009_);
+	assign _2116_ = _2006_ & ~_2115_;
+	assign _2117_ = _2116_ ^ _2003_;
+	assign _2118_ = _2077_ | _1410_;
+	assign _2119_ = _2077_ | _1416_;
+	assign _2120_ = (_2043_ ? _2118_ : _2119_);
+	assign _2121_ = (_2043_ ? _2119_ : _2098_);
+	assign _2122_ = (_2080_ ? _2120_ : _2121_);
+	assign _2123_ = (_2043_ ? _2098_ : _2090_);
+	assign _2124_ = _2077_ | _1424_;
+	assign _2125_ = (_2080_ ? _2123_ : _2124_);
+	assign _2126_ = (_2082_ ? _2122_ : _2125_);
+	assign _2127_ = _2077_ | _1429_;
+	assign _2128_ = _2127_ | _2043_;
+	assign _2129_ = (_2080_ ? _2128_ : _2127_);
+	assign _2130_ = _2077_ | _1433_;
+	assign _2131_ = _2077_ | _1437_;
+	assign _2132_ = _2077_ | _1441_;
+	assign _2133_ = (_2043_ ? _2131_ : _2132_);
+	assign _2134_ = (_2080_ ? _2130_ : _2133_);
+	assign _2135_ = (_2082_ ? _2129_ : _2134_);
+	assign _2136_ = (_2088_ ? _2126_ : _2135_);
+	assign _2137_ = _2077_ | _1448_;
+	assign _2138_ = (_2043_ ? _2132_ : _2137_);
+	assign _2139_ = (_2080_ ? _2138_ : _2137_);
+	assign _2140_ = _2077_ | _1454_;
+	assign _2141_ = (_2080_ ? _2140_ : _2127_);
+	assign _2142_ = (_2082_ ? _2139_ : _2141_);
+	assign _2143_ = _2127_ | ~_2043_;
+	assign _2144_ = (_2080_ ? _2127_ : _2143_);
+	assign _2145_ = (_2043_ ? _2103_ : _2137_);
+	assign _2146_ = (_2080_ ? _2103_ : _2145_);
+	assign _2147_ = (_2082_ ? _2144_ : _2146_);
+	assign _2148_ = (_2088_ ? _2142_ : _2147_);
+	assign _2149_ = (_2097_ ? _2136_ : _2148_);
+	assign _2150_ = (_2117_ ? _2114_ : _2149_);
+	assign _2151_ = ~(_2150_ | _2042_);
+	assign _2152_ = _2031_ & ~_2041_;
+	assign _2153_ = ~(_2152_ | _2062_);
+	assign _2154_ = _2153_ ^ _2063_;
+	assign _2155_ = ~_2089_;
+	assign _2156_ = ~(_2077_ | _1448_);
+	assign _2157_ = (_2080_ ? _2156_ : _2155_);
+	assign _2158_ = ~(_2077_ | _1474_);
+	assign _2159_ = (_2080_ ? _2155_ : _2158_);
+	assign _2160_ = (_2082_ ? _2157_ : _2159_);
+	assign _2161_ = ~(_2077_ | _1478_);
+	assign _2162_ = (_2043_ ? _2158_ : _2161_);
+	assign _2163_ = (_2080_ ? _2162_ : _2161_);
+	assign _2164_ = _1484_ & ~_2077_;
+	assign _2165_ = ~(_2077_ | _1489_);
+	assign _2166_ = _2165_ & ~_2043_;
+	assign _2167_ = (_2080_ ? _2164_ : _2166_);
+	assign _2168_ = (_2082_ ? _2163_ : _2167_);
+	assign _2169_ = (_2088_ ? _2160_ : _2168_);
+	assign _2170_ = ~(_2077_ | _1496_);
+	assign _2171_ = (_2080_ ? _2165_ : _2170_);
+	assign _2172_ = ~(_2077_ | _1503_);
+	assign _2173_ = (_2043_ ? _2170_ : _2172_);
+	assign _2174_ = (_2080_ ? _2173_ : _2172_);
+	assign _2175_ = (_2082_ ? _2171_ : _2174_);
+	assign _2176_ = ~(_2077_ | _1510_);
+	assign _2177_ = ~(_2077_ | _1513_);
+	assign _2178_ = (_2043_ ? _2176_ : _2177_);
+	assign _2179_ = (_2080_ ? _2176_ : _2178_);
+	assign _2180_ = (_2082_ ? _2172_ : _2179_);
+	assign _2181_ = (_2088_ ? _2175_ : _2180_);
+	assign _2182_ = (_2097_ ? _2169_ : _2181_);
+	assign _2183_ = ~_2043_;
+	assign _2184_ = _2177_ & ~_2183_;
+	assign _2185_ = ~(_2077_ | _1524_);
+	assign _2186_ = (_2080_ ? _2184_ : _2185_);
+	assign _2187_ = ~(_2077_ | _1352_);
+	assign _2188_ = (_2043_ ? _2185_ : _2187_);
+	assign _2189_ = (_2080_ ? _2188_ : _2187_);
+	assign _2190_ = (_2082_ ? _2186_ : _2189_);
+	assign _2191_ = ~(_2077_ | _1533_);
+	assign _2192_ = (_2080_ ? _2187_ : _2191_);
+	assign _2193_ = _1882_ & ~_2077_;
+	assign _2194_ = _1884_ & ~_2077_;
+	assign _2195_ = (_2043_ ? _2193_ : _2194_);
+	assign _2196_ = ~(_2077_ | _1547_);
+	assign _2197_ = (_2043_ ? _2194_ : _2196_);
+	assign _2198_ = (_2080_ ? _2195_ : _2197_);
+	assign _2199_ = (_2082_ ? _2192_ : _2198_);
+	assign _2200_ = (_2088_ ? _2190_ : _2199_);
+	assign _2201_ = _1554_ & ~_2077_;
+	assign _2202_ = (_2080_ ? _2196_ : _2201_);
+	assign _2203_ = ~(_2077_ | _1558_);
+	assign _2204_ = _2203_ & ~_2043_;
+	assign _2205_ = (_2080_ ? _2204_ : _2203_);
+	assign _2206_ = (_2082_ ? _2202_ : _2205_);
+	assign _2207_ = ~(_2077_ | _1565_);
+	assign _2208_ = ~(_2077_ | _1370_);
+	assign _2209_ = (_2043_ ? _2187_ : _2208_);
+	assign _2210_ = (_2080_ ? _2207_ : _2209_);
+	assign _2211_ = ~(_2077_ | _1416_);
+	assign _2212_ = (_2043_ ? _2208_ : _2211_);
+	assign _2213_ = (_2080_ ? _2212_ : _2211_);
+	assign _2214_ = (_2082_ ? _2210_ : _2213_);
+	assign _2215_ = (_2088_ ? _2206_ : _2214_);
+	assign _2216_ = (_2097_ ? _2200_ : _2215_);
+	assign _2217_ = (_2117_ ? _2182_ : _2216_);
+	assign _2218_ = ~(_2077_ | _1576_);
+	assign _2219_ = (_2080_ ? _2155_ : _2218_);
+	assign _2220_ = ~(_2077_ | _1580_);
+	assign _2221_ = (_2043_ ? _2218_ : _2220_);
+	assign _2222_ = _2220_ & ~_2183_;
+	assign _2223_ = (_2080_ ? _2221_ : _2222_);
+	assign _2224_ = (_2082_ ? _2219_ : _2223_);
+	assign _2225_ = ~(_2077_ | _1587_);
+	assign _2226_ = (_2043_ ? _2225_ : _2208_);
+	assign _2227_ = (_2080_ ? _2225_ : _2226_);
+	assign _2228_ = ~_2118_;
+	assign _2229_ = ~(_2077_ | _1592_);
+	assign _2230_ = (_2043_ ? _2208_ : _2229_);
+	assign _2231_ = (_2080_ ? _2230_ : _2228_);
+	assign _2232_ = (_2082_ ? _2227_ : _2231_);
+	assign _2233_ = (_2088_ ? _2224_ : _2232_);
+	assign _2234_ = (_2080_ ? _2110_ : _2156_);
+	assign _2235_ = ~(_2077_ | _1600_);
+	assign _2236_ = (_2043_ ? _2156_ : _2235_);
+	assign _2237_ = (_2080_ ? _2236_ : _2235_);
+	assign _2238_ = (_2082_ ? _2234_ : _2237_);
+	assign _2239_ = _2077_ | _1606_;
+	assign _2240_ = ~_2239_;
+	assign _2241_ = ~(_2077_ | _1609_);
+	assign _2242_ = _2183_ & ~_2239_;
+	assign _2243_ = (_2080_ ? _2241_ : _2242_);
+	assign _2244_ = (_2082_ ? _2243_ : _2240_);
+	assign _2245_ = (_2088_ ? _2238_ : _2244_);
+	assign _2246_ = (_2097_ ? _2233_ : _2245_);
+	assign _2247_ = _1934_ & ~_2077_;
+	assign _2248_ = (_2080_ ? _2187_ : _2247_);
+	assign _2249_ = (_2082_ ? _2187_ : _2248_);
+	assign _2250_ = _2043_ & ~_2239_;
+	assign _2251_ = (_2080_ ? _2240_ : _2250_);
+	assign _2252_ = _2196_ & ~_2080_;
+	assign _2253_ = (_2082_ ? _2251_ : _2252_);
+	assign _2254_ = (_2088_ ? _2249_ : _2253_);
+	assign _2255_ = ~(_2077_ | _1626_);
+	assign _2256_ = (_2043_ ? _2196_ : _2255_);
+	assign _2257_ = (_2043_ ? _2255_ : _2187_);
+	assign _2258_ = (_2080_ ? _2256_ : _2257_);
+	assign _2259_ = (_2080_ ? _1631_ : _1632_);
+	assign _2260_ = ~(_2259_ | _2077_);
+	assign _2261_ = (_2082_ ? _2258_ : _2260_);
+	assign _2262_ = (_2043_ ? _2218_ : _2255_);
+	assign _2263_ = (_2080_ ? _2218_ : _2262_);
+	assign _2264_ = (_2080_ ? _2255_ : _2196_);
+	assign _2265_ = (_2082_ ? _2263_ : _2264_);
+	assign _2266_ = (_2088_ ? _2261_ : _2265_);
+	assign _2267_ = (_2097_ ? _2254_ : _2266_);
+	assign _2268_ = (_2117_ ? _2246_ : _2267_);
+	assign _2269_ = (_2042_ ? _2217_ : _2268_);
+	assign _2270_ = (_2154_ ? _2151_ : _2269_);
+	assign _2271_ = _2072_ ^ _2071_;
+	assign _2272_ = _2270_ & ~_2271_;
+	assign _2273_ = \mchip.game2.vga_inst.haddr [9] & ~\mchip.game2.vga_inst.haddr [8];
+	assign _2274_ = ~(_2273_ & _3182_);
+	assign _2275_ = _0248_ & _0239_;
+	assign _2276_ = _2275_ | _2274_;
+	assign _2277_ = _2273_ & ~_3182_;
+	assign _2278_ = _2277_ | _3181_;
+	assign _2279_ = _2276_ & ~_2278_;
+	assign _2280_ = ~(_0242_ | _3179_);
+	assign _2281_ = \mchip.game2.vga_inst.haddr [3] & ~_2280_;
+	assign _2282_ = _1731_ & ~_2281_;
+	assign _2283_ = _1731_ & ~_2282_;
+	assign _2284_ = _1647_ & ~_2283_;
+	assign _2285_ = _2284_ | _0237_;
+	assign _2286_ = _2279_ & ~_2285_;
+	assign _2287_ = _3227_ & _3174_;
+	assign _2288_ = \mchip.game2.vga_inst.haddr [4] | ~\mchip.game2.vga_inst.haddr [3];
+	assign _2289_ = _0663_ & ~_2288_;
+	assign _2290_ = _1199_ & ~_2289_;
+	assign _2291_ = _2287_ & ~_2290_;
+	assign _2292_ = _2287_ & ~_2291_;
+	assign _2293_ = \mchip.game2.vga_inst.haddr [9] & ~_2292_;
+	assign _2294_ = ~(_1961_ | _0248_);
+	assign _2295_ = ~(_2294_ & _0257_);
+	assign _2296_ = _2273_ & ~_2295_;
+	assign _2297_ = _2293_ & ~_2296_;
+	assign _2298_ = _3227_ & ~\mchip.game2.vga_inst.haddr [6];
+	assign _2299_ = \mchip.game2.vga_inst.haddr [6] | ~\mchip.game2.vga_inst.haddr [5];
+	assign _2300_ = _3227_ & ~_2299_;
+	assign _2301_ = \mchip.game2.vga_inst.haddr [3] | \mchip.game2.vga_inst.haddr [4];
+	assign _2302_ = _0724_ & ~_2301_;
+	assign _2303_ = _2300_ & ~_2302_;
+	assign _2304_ = _2298_ & ~_2303_;
+	assign _2305_ = \mchip.game2.vga_inst.haddr [9] & ~_2304_;
+	assign _2306_ = _2297_ & ~_2305_;
+	assign _2307_ = _0253_ | ~_0239_;
+	assign _2308_ = _1256_ & ~_2307_;
+	assign _2309_ = _2308_ ^ \mchip.game2.vga_inst.haddr [7];
+	assign _2310_ = \mchip.game2.score_inst.score_saved[0] [0] & \mchip.game2.score_inst.score_saved[0] [3];
+	assign _2311_ = ~(_2310_ & \mchip.game2.score_inst.score_saved[0] [1]);
+	assign _2312_ = _2310_ ^ \mchip.game2.score_inst.score_saved[0] [1];
+	assign _2313_ = ~(\mchip.game2.score_inst.score_saved[0] [1] & \mchip.game2.score_inst.score_saved[0] [2]);
+	assign _2314_ = ~\mchip.game2.score_inst.score_saved[0] [3];
+	assign _2315_ = \mchip.game2.score_inst.score_saved[0] [2] & ~\mchip.game2.score_inst.score_saved[0] [1];
+	assign _2316_ = _2315_ & ~_2314_;
+	assign _2317_ = _2316_ | ~_2313_;
+	assign _2318_ = \mchip.game2.score_inst.score_saved[0] [0] ^ \mchip.game2.score_inst.score_saved[0] [3];
+	assign _2319_ = ~(_2318_ & _2317_);
+	assign _2320_ = _2312_ & ~_2319_;
+	assign _2321_ = _2311_ & ~_2320_;
+	assign _2322_ = _2318_ ^ _2317_;
+	assign _2323_ = _2322_ & _2312_;
+	assign _2324_ = \mchip.game2.score_inst.score_saved[0] [1] & \mchip.game2.score_inst.score_saved[0] [0];
+	assign _2325_ = ~(\mchip.game2.score_inst.score_saved[0] [1] ^ \mchip.game2.score_inst.score_saved[0] [2]);
+	assign _2326_ = _2324_ & ~_2325_;
+	assign _2327_ = _2315_ ^ _2314_;
+	assign _2328_ = _2326_ & ~_2327_;
+	assign _2329_ = ~_2328_;
+	assign _2330_ = _2323_ & ~_2329_;
+	assign _2331_ = _2321_ & ~_2330_;
+	assign _2332_ = \mchip.game2.score_inst.score_saved[0] [2] & ~_2331_;
+	assign _2333_ = _2332_ ^ \mchip.game2.score_inst.score_saved[0] [3];
+	assign _2334_ = _2333_ & _2309_;
+	assign _2335_ = _2333_ ^ _2309_;
+	assign _2336_ = _2307_ ^ \mchip.game2.vga_inst.haddr [6];
+	assign _2337_ = ~(_2331_ ^ \mchip.game2.score_inst.score_saved[0] [2]);
+	assign _2338_ = _2336_ | ~_2337_;
+	assign _2339_ = _2335_ & ~_2338_;
+	assign _2340_ = _2339_ | _2334_;
+	assign _2341_ = _2337_ ^ _2336_;
+	assign _2342_ = _2335_ & ~_2341_;
+	assign _2343_ = _1199_ & ~_0253_;
+	assign _2344_ = _2343_ ^ \mchip.game2.vga_inst.haddr [5];
+	assign _2345_ = _2322_ & ~_2329_;
+	assign _2346_ = _2319_ & ~_2345_;
+	assign _2347_ = ~(_2346_ ^ _2312_);
+	assign _2348_ = ~(_2347_ & _2344_);
+	assign _2349_ = _2347_ ^ _2344_;
+	assign _2350_ = _2328_ ^ _2322_;
+	assign _2351_ = _3625_[4] | ~_2350_;
+	assign _2352_ = _2349_ & ~_2351_;
+	assign _2353_ = _2348_ & ~_2352_;
+	assign _2354_ = _2342_ & ~_2353_;
+	assign _2355_ = _2354_ | _2340_;
+	assign _2356_ = _2350_ ^ _3625_[4];
+	assign _2357_ = _2356_ | ~_2349_;
+	assign _2358_ = _2342_ & ~_2357_;
+	assign _2359_ = _0241_ & ~_1232_;
+	assign _3625_[3] = _2359_ ^ \mchip.game2.vga_inst.haddr [3];
+	assign _2360_ = ~(_2327_ ^ _2326_);
+	assign _2361_ = ~(_2360_ & _3625_[3]);
+	assign _2362_ = ~(_2360_ ^ _3625_[3]);
+	assign _3625_[2] = ~(_2359_ | _1695_);
+	assign _2363_ = ~(_2325_ ^ _2324_);
+	assign _2364_ = ~(_2363_ & _3625_[2]);
+	assign _2365_ = ~(_2364_ | _2362_);
+	assign _2366_ = _2361_ & ~_2365_;
+	assign _2367_ = _2363_ ^ _3625_[2];
+	assign _2368_ = _2367_ & ~_2362_;
+	assign _2369_ = \mchip.game2.score_inst.score_saved[0] [1] ^ \mchip.game2.score_inst.score_saved[0] [0];
+	assign _2370_ = ~(_2369_ & _3625_[1]);
+	assign _2371_ = \mchip.game2.score_inst.score_saved[0] [0] & ~\mchip.game2.vga_inst.haddr [0];
+	assign _2372_ = _2369_ ^ _3625_[1];
+	assign _2373_ = _2372_ & _2371_;
+	assign _2374_ = _2370_ & ~_2373_;
+	assign _2375_ = _2368_ & ~_2374_;
+	assign _2376_ = _2366_ & ~_2375_;
+	assign _2377_ = _2358_ & ~_2376_;
+	assign _2378_ = _2377_ | _2355_;
+	assign _2379_ = _0253_ & _0257_;
+	assign _2380_ = _0257_ & ~_2379_;
+	assign _2381_ = _2380_ ^ \mchip.game2.vga_inst.haddr [8];
+	assign _2382_ = ~(\mchip.game2.score_inst.score_saved[0] [2] & \mchip.game2.score_inst.score_saved[0] [3]);
+	assign _2383_ = _2382_ | _2321_;
+	assign _2384_ = _2382_ | ~_2323_;
+	assign _2385_ = _2328_ & ~_2384_;
+	assign _2386_ = _2383_ & ~_2385_;
+	assign _2387_ = ~(_2386_ ^ _2381_);
+	assign _2388_ = _2387_ ^ _2378_;
+	assign _2389_ = _2381_ & ~_2386_;
+	assign _2390_ = _2387_ & _2378_;
+	assign _2391_ = _2390_ | _2389_;
+	assign _2392_ = _2380_ & ~\mchip.game2.vga_inst.haddr [8];
+	assign _2393_ = _2392_ ^ _1307_;
+	assign _2394_ = _2393_ ^ _2391_;
+	assign _2395_ = _2394_ | _1323_;
+	assign _2396_ = ~(\mchip.game2.score_inst.score_saved[0] [0] ^ \mchip.game2.vga_inst.haddr [0]);
+	assign _2397_ = _2396_ | _2395_;
+	assign _2398_ = _2372_ ^ _2371_;
+	assign _2399_ = _2398_ | _2397_;
+	assign _2400_ = ~(_2374_ ^ _2367_);
+	assign _2401_ = _2394_ | _1335_;
+	assign _2402_ = (_2398_ ? _2395_ : _2401_);
+	assign _2403_ = (_2400_ ? _2399_ : _2402_);
+	assign _2404_ = _2367_ & ~_2374_;
+	assign _2405_ = _2364_ & ~_2404_;
+	assign _2406_ = _2405_ ^ _2362_;
+	assign _2407_ = _2394_ | _1352_;
+	assign _2408_ = _2394_ | _1358_;
+	assign _2409_ = (_2396_ ? _2407_ : _2408_);
+	assign _2410_ = _2394_ | _1349_;
+	assign _2411_ = (_2396_ ? _2408_ : _2410_);
+	assign _2412_ = (_2398_ ? _2409_ : _2411_);
+	assign _2413_ = (_2400_ ? _2412_ : _2410_);
+	assign _2414_ = (_2406_ ? _2403_ : _2413_);
+	assign _2415_ = _2376_ ^ _2356_;
+	assign _2416_ = _2394_ | _1370_;
+	assign _2417_ = _2394_ | _1376_;
+	assign _2418_ = (_2396_ ? _2416_ : _2417_);
+	assign _2419_ = (_2398_ ? _2416_ : _2418_);
+	assign _2420_ = _2417_ | ~_2396_;
+	assign _2421_ = _2394_ | _1382_;
+	assign _2422_ = (_2398_ ? _2420_ : _2421_);
+	assign _2423_ = (_2400_ ? _2419_ : _2422_);
+	assign _2424_ = _2394_ | _1388_;
+	assign _2425_ = (_2396_ ? _2421_ : _2424_);
+	assign _2426_ = (_2396_ ? _2424_ : _2407_);
+	assign _2427_ = (_2398_ ? _2425_ : _2426_);
+	assign _2428_ = _2394_ | _1397_;
+	assign _2429_ = (_2400_ ? _2427_ : _2428_);
+	assign _2430_ = (_2406_ ? _2423_ : _2429_);
+	assign _2431_ = (_2415_ ? _2414_ : _2430_);
+	assign _2432_ = ~(_2376_ | _2356_);
+	assign _2433_ = _2432_ | ~_2351_;
+	assign _2434_ = _2433_ ^ _2349_;
+	assign _2435_ = _2394_ | _1410_;
+	assign _2436_ = _2394_ | _1416_;
+	assign _2437_ = (_2396_ ? _2435_ : _2436_);
+	assign _2438_ = (_2396_ ? _2436_ : _2416_);
+	assign _2439_ = (_2398_ ? _2437_ : _2438_);
+	assign _2440_ = (_2396_ ? _2416_ : _2407_);
+	assign _2441_ = _2394_ | _1424_;
+	assign _2442_ = (_2398_ ? _2440_ : _2441_);
+	assign _2443_ = (_2400_ ? _2439_ : _2442_);
+	assign _2444_ = _2394_ | _1429_;
+	assign _2445_ = _2444_ | _2396_;
+	assign _2446_ = (_2398_ ? _2445_ : _2444_);
+	assign _2447_ = _2394_ | _1433_;
+	assign _2448_ = _2394_ | _1437_;
+	assign _2449_ = _2394_ | _1441_;
+	assign _2450_ = (_2396_ ? _2448_ : _2449_);
+	assign _2451_ = (_2398_ ? _2447_ : _2450_);
+	assign _2452_ = (_2400_ ? _2446_ : _2451_);
+	assign _2453_ = (_2406_ ? _2443_ : _2452_);
+	assign _2454_ = _2394_ | _1448_;
+	assign _2455_ = (_2396_ ? _2449_ : _2454_);
+	assign _2456_ = (_2398_ ? _2455_ : _2454_);
+	assign _2457_ = _2394_ | _1454_;
+	assign _2458_ = (_2398_ ? _2457_ : _2444_);
+	assign _2459_ = (_2400_ ? _2456_ : _2458_);
+	assign _2460_ = _2444_ | ~_2396_;
+	assign _2461_ = (_2398_ ? _2444_ : _2460_);
+	assign _2462_ = (_2396_ ? _2421_ : _2454_);
+	assign _2463_ = (_2398_ ? _2421_ : _2462_);
+	assign _2464_ = (_2400_ ? _2461_ : _2463_);
+	assign _2465_ = (_2406_ ? _2459_ : _2464_);
+	assign _2466_ = (_2415_ ? _2453_ : _2465_);
+	assign _2467_ = (_2434_ ? _2431_ : _2466_);
+	assign _2468_ = ~(_2376_ | _2357_);
+	assign _2469_ = _2353_ & ~_2468_;
+	assign _2470_ = _2469_ ^ _2341_;
+	assign _2471_ = _2470_ | _2467_;
+	assign _2472_ = ~(_2469_ | _2341_);
+	assign _2473_ = _2472_ | ~_2338_;
+	assign _2474_ = _2473_ ^ _2335_;
+	assign _2475_ = (_2398_ ? _2454_ : _2410_);
+	assign _2476_ = _2394_ | _1474_;
+	assign _2477_ = (_2398_ ? _2410_ : _2476_);
+	assign _2478_ = (_2400_ ? _2475_ : _2477_);
+	assign _2479_ = _2394_ | _1478_;
+	assign _2480_ = (_2396_ ? _2476_ : _2479_);
+	assign _2481_ = (_2398_ ? _2480_ : _2479_);
+	assign _2482_ = _2394_ | _1485_;
+	assign _2483_ = _2394_ | _1489_;
+	assign _2484_ = _2483_ | _2396_;
+	assign _2485_ = (_2398_ ? _2482_ : _2484_);
+	assign _2486_ = (_2400_ ? _2481_ : _2485_);
+	assign _2487_ = (_2406_ ? _2478_ : _2486_);
+	assign _2488_ = _2394_ | _1496_;
+	assign _2489_ = (_2398_ ? _2483_ : _2488_);
+	assign _2490_ = _2394_ | _1503_;
+	assign _2491_ = (_2396_ ? _2488_ : _2490_);
+	assign _2492_ = (_2398_ ? _2491_ : _2490_);
+	assign _2493_ = (_2400_ ? _2489_ : _2492_);
+	assign _2494_ = _2394_ | _1510_;
+	assign _2495_ = _2394_ | _1513_;
+	assign _2496_ = (_2396_ ? _2494_ : _2495_);
+	assign _2497_ = (_2398_ ? _2494_ : _2496_);
+	assign _2498_ = (_2400_ ? _2490_ : _2497_);
+	assign _2499_ = (_2406_ ? _2493_ : _2498_);
+	assign _2500_ = (_2415_ ? _2487_ : _2499_);
+	assign _2501_ = _2495_ | ~_2396_;
+	assign _2502_ = _2394_ | _1524_;
+	assign _2503_ = (_2398_ ? _2501_ : _2502_);
+	assign _2504_ = (_2396_ ? _2502_ : _2407_);
+	assign _2505_ = (_2398_ ? _2504_ : _2407_);
+	assign _2506_ = (_2400_ ? _2503_ : _2505_);
+	assign _2507_ = _2394_ | _1533_;
+	assign _2508_ = (_2398_ ? _2407_ : _2507_);
+	assign _2509_ = _2394_ | _1539_;
+	assign _2510_ = _2394_ | _1542_;
+	assign _2511_ = (_2396_ ? _2509_ : _2510_);
+	assign _2512_ = _2394_ | _1547_;
+	assign _2513_ = (_2396_ ? _2510_ : _2512_);
+	assign _2514_ = (_2398_ ? _2511_ : _2513_);
+	assign _2515_ = (_2400_ ? _2508_ : _2514_);
+	assign _2516_ = (_2406_ ? _2506_ : _2515_);
+	assign _2517_ = _2394_ | _1555_;
+	assign _2518_ = (_2398_ ? _2512_ : _2517_);
+	assign _2519_ = _2394_ | _1558_;
+	assign _2520_ = _2519_ | _2396_;
+	assign _2521_ = (_2398_ ? _2520_ : _2519_);
+	assign _2522_ = (_2400_ ? _2518_ : _2521_);
+	assign _2523_ = _2394_ | _1565_;
+	assign _2524_ = (_2396_ ? _2407_ : _2416_);
+	assign _2525_ = (_2398_ ? _2523_ : _2524_);
+	assign _2526_ = (_2396_ ? _2416_ : _2436_);
+	assign _2527_ = (_2398_ ? _2526_ : _2436_);
+	assign _2528_ = (_2400_ ? _2525_ : _2527_);
+	assign _2529_ = (_2406_ ? _2522_ : _2528_);
+	assign _2530_ = (_2415_ ? _2516_ : _2529_);
+	assign _2531_ = (_2434_ ? _2500_ : _2530_);
+	assign _2532_ = _2394_ | _1576_;
+	assign _2533_ = (_2398_ ? _2410_ : _2532_);
+	assign _2534_ = _2394_ | _1580_;
+	assign _2535_ = (_2396_ ? _2532_ : _2534_);
+	assign _2536_ = _2534_ | ~_2396_;
+	assign _2537_ = (_2398_ ? _2535_ : _2536_);
+	assign _2538_ = (_2400_ ? _2533_ : _2537_);
+	assign _2539_ = _2394_ | _1587_;
+	assign _2540_ = (_2396_ ? _2539_ : _2416_);
+	assign _2541_ = (_2398_ ? _2539_ : _2540_);
+	assign _2542_ = _2394_ | _1592_;
+	assign _2543_ = (_2396_ ? _2416_ : _2542_);
+	assign _2544_ = (_2398_ ? _2543_ : _2435_);
+	assign _2545_ = (_2400_ ? _2541_ : _2544_);
+	assign _2546_ = (_2406_ ? _2538_ : _2545_);
+	assign _2547_ = (_2398_ ? _2428_ : _2454_);
+	assign _2548_ = _2394_ | _1600_;
+	assign _2549_ = (_2396_ ? _2454_ : _2548_);
+	assign _2550_ = (_2398_ ? _2549_ : _2548_);
+	assign _2551_ = (_2400_ ? _2547_ : _2550_);
+	assign _2552_ = _2394_ | _1609_;
+	assign _2553_ = _2394_ | _1606_;
+	assign _2554_ = _2553_ | _2396_;
+	assign _2555_ = (_2398_ ? _2552_ : _2554_);
+	assign _2556_ = (_2400_ ? _2555_ : _2553_);
+	assign _2557_ = (_2406_ ? _2551_ : _2556_);
+	assign _2558_ = (_2415_ ? _2546_ : _2557_);
+	assign _2559_ = _2394_ | _1617_;
+	assign _2560_ = (_2398_ ? _2407_ : _2559_);
+	assign _2561_ = (_2400_ ? _2407_ : _2560_);
+	assign _2562_ = _2553_ | ~_2396_;
+	assign _2563_ = (_2398_ ? _2553_ : _2562_);
+	assign _2564_ = _2512_ | _2398_;
+	assign _2565_ = (_2400_ ? _2563_ : _2564_);
+	assign _2566_ = (_2406_ ? _2561_ : _2565_);
+	assign _2567_ = _2394_ | _1626_;
+	assign _2568_ = (_2396_ ? _2512_ : _2567_);
+	assign _2569_ = (_2396_ ? _2567_ : _2407_);
+	assign _2570_ = (_2398_ ? _2568_ : _2569_);
+	assign _2571_ = _2394_ | _1631_;
+	assign _2572_ = _2394_ | _1632_;
+	assign _2573_ = (_2398_ ? _2571_ : _2572_);
+	assign _2574_ = (_2400_ ? _2570_ : _2573_);
+	assign _2575_ = (_2396_ ? _2532_ : _2567_);
+	assign _2576_ = (_2398_ ? _2532_ : _2575_);
+	assign _2577_ = (_2398_ ? _2567_ : _2512_);
+	assign _2578_ = (_2400_ ? _2576_ : _2577_);
+	assign _2579_ = (_2406_ ? _2574_ : _2578_);
+	assign _2580_ = (_2415_ ? _2566_ : _2579_);
+	assign _2581_ = (_2434_ ? _2558_ : _2580_);
+	assign _2582_ = (_2470_ ? _2531_ : _2581_);
+	assign _2583_ = (_2474_ ? _2471_ : _2582_);
+	assign _2584_ = _2583_ | _2388_;
+	assign _2585_ = _2306_ & ~_2584_;
+	assign _2586_ = (_2286_ ? _2272_ : _2585_);
+	assign _2587_ = (_1978_ ? _1960_ : _2586_);
+	assign _0093_ = (_1663_ ? _1646_ : _2587_);
+	assign _2588_ = ~\mchip.game2.jumping_inst.frame [3];
+	assign _2589_ = \mchip.game2.jumping_inst.frame [2] & ~\mchip.game2.jumping_inst.frame [0];
+	assign _2590_ = ~_0957_;
+	assign _2591_ = (\mchip.game2.jumping_inst.frame [2] ? \mchip.game2.jumping_inst.frame [0] : _2590_);
+	assign _2592_ = (\mchip.game2.jumping_inst.frame [3] ? _2591_ : _2589_);
+	assign _2593_ = ~_2589_;
+	assign _2594_ = (\mchip.game2.jumping_inst.frame [2] ? \mchip.game2.jumping_inst.frame [0] : _0990_);
+	assign _2595_ = (\mchip.game2.jumping_inst.frame [3] ? _2594_ : _2593_);
+	assign _2596_ = (\mchip.game2.jumping_inst.frame [4] ? _2595_ : _2592_);
+	assign _2597_ = \mchip.game2.jumping_inst.frame [2] & ~_0989_;
+	assign _2598_ = ~(\mchip.game2.jumping_inst.frame [1] | \mchip.game2.jumping_inst.frame [0]);
+	assign _2599_ = ~(_2598_ | _0973_);
+	assign _2600_ = (\mchip.game2.jumping_inst.frame [2] ? _2599_ : _0957_);
+	assign _2601_ = (\mchip.game2.jumping_inst.frame [3] ? _2600_ : _2597_);
+	assign _2602_ = _0962_ & ~_2601_;
+	assign _0000_[0] = (\mchip.game2.jumping_inst.frame [5] ? _2602_ : _2596_);
+	assign _2603_ = _2598_ | _0957_;
+	assign _2604_ = (\mchip.game2.jumping_inst.frame [2] ? _2603_ : \mchip.game2.jumping_inst.frame [0]);
+	assign _2605_ = _2603_ | _0976_;
+	assign _2606_ = (\mchip.game2.jumping_inst.frame [3] ? _2605_ : _2604_);
+	assign _2607_ = (\mchip.game2.jumping_inst.frame [2] ? \mchip.game2.jumping_inst.frame [1] : \mchip.game2.jumping_inst.frame [0]);
+	assign _2608_ = (\mchip.game2.jumping_inst.frame [2] ? _2603_ : _0990_);
+	assign _2609_ = (\mchip.game2.jumping_inst.frame [3] ? _2608_ : _2607_);
+	assign _2610_ = (\mchip.game2.jumping_inst.frame [4] ? _2609_ : _2606_);
+	assign _2611_ = \mchip.game2.jumping_inst.frame [2] & ~\mchip.game2.jumping_inst.frame [1];
+	assign _2612_ = ~_2611_;
+	assign _2613_ = (\mchip.game2.jumping_inst.frame [3] ? _2612_ : _2607_);
+	assign _2614_ = (\mchip.game2.jumping_inst.frame [4] ? _0989_ : _2613_);
+	assign _0000_[1] = (\mchip.game2.jumping_inst.frame [5] ? _2614_ : _2610_);
+	assign _2615_ = (\mchip.game2.jumping_inst.frame [2] ? _0974_ : _0995_);
+	assign _2616_ = (\mchip.game2.jumping_inst.frame [2] ? _0989_ : \mchip.game2.jumping_inst.frame [0]);
+	assign _2617_ = (\mchip.game2.jumping_inst.frame [3] ? _2616_ : _2615_);
+	assign _2618_ = \mchip.game2.jumping_inst.frame [2] | ~\mchip.game2.jumping_inst.frame [1];
+	assign _2619_ = (\mchip.game2.jumping_inst.frame [2] ? _2590_ : _0990_);
+	assign _2620_ = (\mchip.game2.jumping_inst.frame [3] ? _2619_ : _2618_);
+	assign _2621_ = (\mchip.game2.jumping_inst.frame [4] ? _2620_ : _2617_);
+	assign _2622_ = ~\mchip.game2.jumping_inst.frame [1];
+	assign _2623_ = (\mchip.game2.jumping_inst.frame [2] ? \mchip.game2.jumping_inst.frame [0] : _0995_);
+	assign _2624_ = (\mchip.game2.jumping_inst.frame [2] ? _0995_ : \mchip.game2.jumping_inst.frame [0]);
+	assign _2625_ = (\mchip.game2.jumping_inst.frame [3] ? _2624_ : _2623_);
+	assign _2626_ = (\mchip.game2.jumping_inst.frame [4] ? _2622_ : _2625_);
+	assign _0000_[2] = (\mchip.game2.jumping_inst.frame [5] ? _2626_ : _2621_);
+	assign _2627_ = (\mchip.game2.jumping_inst.frame [2] ? _0989_ : _0973_);
+	assign _2628_ = ~(\mchip.game2.jumping_inst.frame [2] | \mchip.game2.jumping_inst.frame [1]);
+	assign _2629_ = _2628_ | _2611_;
+	assign _2630_ = (\mchip.game2.jumping_inst.frame [3] ? _2629_ : _2627_);
+	assign _2631_ = (\mchip.game2.jumping_inst.frame [3] ? _0989_ : _2622_);
+	assign _2632_ = ~(_2631_ & _0976_);
+	assign _2633_ = (\mchip.game2.jumping_inst.frame [4] ? _2632_ : _2630_);
+	assign _2634_ = (\mchip.game2.jumping_inst.frame [2] ? _0995_ : _2598_);
+	assign _2635_ = (\mchip.game2.jumping_inst.frame [2] ? _0989_ : _0995_);
+	assign _2636_ = (\mchip.game2.jumping_inst.frame [3] ? _2635_ : _2634_);
+	assign _2637_ = (\mchip.game2.jumping_inst.frame [4] ? _2598_ : _2636_);
+	assign _0000_[3] = (\mchip.game2.jumping_inst.frame [5] ? _2637_ : _2633_);
+	assign _2638_ = (\mchip.game2.jumping_inst.frame [2] ? _2622_ : _0957_);
+	assign _2639_ = _2611_ | ~_2618_;
+	assign _2640_ = (\mchip.game2.jumping_inst.frame [3] ? _2639_ : _2638_);
+	assign _2641_ = ~(_0989_ & _0976_);
+	assign _2642_ = \mchip.game2.jumping_inst.frame [3] & ~_2641_;
+	assign _2643_ = (\mchip.game2.jumping_inst.frame [4] ? _2642_ : _2640_);
+	assign _2644_ = \mchip.game2.jumping_inst.frame [2] & ~_2598_;
+	assign _2645_ = ~_2644_;
+	assign _2646_ = _2598_ ^ _0976_;
+	assign _2647_ = (\mchip.game2.jumping_inst.frame [3] ? _2646_ : _2645_);
+	assign _2648_ = _0962_ & ~_2647_;
+	assign _0000_[4] = (\mchip.game2.jumping_inst.frame [5] ? _2648_ : _2643_);
+	assign _2649_ = \mchip.game2.jumping_inst.frame [2] & \mchip.game2.jumping_inst.frame [1];
+	assign _2650_ = _2649_ ^ _2588_;
+	assign _2651_ = _2644_ ^ _2588_;
+	assign _2652_ = (\mchip.game2.jumping_inst.frame [5] ? _2651_ : _2650_);
+	assign _0000_[5] = _0962_ & ~_2652_;
+	assign _2653_ = _2649_ & ~_2588_;
+	assign _2654_ = _2653_ | \mchip.game2.jumping_inst.frame [4];
+	assign _2655_ = _2644_ | \mchip.game2.jumping_inst.frame [3];
+	assign _2656_ = _0962_ & ~_2655_;
+	assign _0000_[6] = (\mchip.game2.jumping_inst.frame [5] ? _2656_ : _2654_);
+	assign _3621_[0] = ~\mchip.game2.no_jump_ctr [0];
+	assign _3622_[0] = ~\mchip.game2.start_ctr [0];
+	assign _0027_ = ~_0372_;
+	assign _2657_ = ~(_3219_ & _3206_);
+	assign _2658_ = _2657_ | _3217_;
+	assign _2659_ = _3213_ & ~_2658_;
+	assign _2660_ = _3206_ & ~_3219_;
+	assign _2661_ = ~(_2660_ | _3217_);
+	assign _2662_ = _3215_ & ~_2661_;
+	assign _2663_ = _3213_ & ~_2662_;
+	assign _2664_ = ~(_2663_ | _3188_);
+	assign _2665_ = _2664_ | _2659_;
+	assign _2666_ = _3217_ | _3191_;
+	assign _2667_ = _2666_ | ~_3213_;
+	assign _2668_ = ~(_3217_ | _3200_);
+	assign _2669_ = _3215_ & ~_2668_;
+	assign _2670_ = _3213_ & ~_2669_;
+	assign _2671_ = _3197_ & ~_2670_;
+	assign _2672_ = _2667_ & ~_2671_;
+	assign _0151_ = _2672_ | _2665_;
+	assign _2673_ = _2273_ & _1731_;
+	assign _2674_ = _2673_ | _3181_;
+	assign _2675_ = _3179_ | ~_2273_;
+	assign _2676_ = \mchip.game2.vga_inst.haddr [6] | ~\mchip.game2.vga_inst.haddr [7];
+	assign _2677_ = _2676_ | _0254_;
+	assign _2678_ = _2677_ | _2675_;
+	assign _2679_ = _2678_ | _3186_;
+	assign _2680_ = _2676_ | _0239_;
+	assign _2681_ = _2680_ & ~_1270_;
+	assign _2682_ = _2273_ & ~_2681_;
+	assign _2683_ = _2682_ | _3181_;
+	assign _2684_ = _2679_ & ~_2683_;
+	assign _0150_ = _2684_ | _2674_;
+	assign _2685_ = _0253_ & ~_1199_;
+	assign _3625_[5] = _2685_ ^ \mchip.game2.vga_inst.haddr [5];
+	assign _2686_ = _0253_ & ~_1717_;
+	assign _3625_[6] = _2686_ ^ \mchip.game2.vga_inst.haddr [6];
+	assign _2687_ = _2686_ & ~_1256_;
+	assign _3625_[7] = _2687_ ^ \mchip.game2.vga_inst.haddr [7];
+	assign _2688_ = _1731_ & _0253_;
+	assign _3625_[8] = _2688_ ^ \mchip.game2.vga_inst.haddr [8];
+	assign _2689_ = _2688_ & ~_1269_;
+	assign _3625_[9] = _2689_ ^ \mchip.game2.vga_inst.haddr [9];
+	assign _3624_[1] = \mchip.game2.start_ctr [0] ^ \mchip.game2.start_ctr [1];
+	assign _2690_ = \mchip.game2.start_ctr [0] & \mchip.game2.start_ctr [1];
+	assign _3624_[2] = _2690_ ^ \mchip.game2.start_ctr [2];
+	assign _2691_ = _2690_ & \mchip.game2.start_ctr [2];
+	assign _3624_[3] = _2691_ ^ \mchip.game2.start_ctr [3];
+	assign _2692_ = ~(\mchip.game2.start_ctr [2] & \mchip.game2.start_ctr [3]);
+	assign _2693_ = _2690_ & ~_2692_;
+	assign _3624_[4] = _2693_ ^ \mchip.game2.start_ctr [4];
+	assign _2694_ = _2693_ & \mchip.game2.start_ctr [4];
+	assign _3624_[5] = _2694_ ^ \mchip.game2.start_ctr [5];
+	assign _2695_ = ~(\mchip.game2.start_ctr [5] & \mchip.game2.start_ctr [4]);
+	assign _2696_ = _2693_ & ~_2695_;
+	assign _3624_[6] = _2696_ ^ \mchip.game2.start_ctr [6];
+	assign _2697_ = _2696_ & \mchip.game2.start_ctr [6];
+	assign _3624_[7] = _2697_ ^ \mchip.game2.start_ctr [7];
+	assign _2698_ = ~(\mchip.game2.start_ctr [6] & \mchip.game2.start_ctr [7]);
+	assign _2699_ = ~(_2698_ | _2695_);
+	assign _2700_ = ~(_2699_ & _2693_);
+	assign _3624_[8] = ~(_2700_ ^ \mchip.game2.start_ctr [8]);
+	assign _2701_ = \mchip.game2.start_ctr [8] & ~_2700_;
+	assign _3624_[9] = _2701_ ^ \mchip.game2.start_ctr [9];
+	assign _2702_ = _3258_ & ~_2700_;
+	assign _3624_[10] = _2702_ ^ \mchip.game2.start_ctr [10];
+	assign _2703_ = _2702_ & \mchip.game2.start_ctr [10];
+	assign _3624_[11] = _2703_ ^ \mchip.game2.start_ctr [11];
+	assign _2704_ = \mchip.game2.start_ctr [10] & \mchip.game2.start_ctr [11];
+	assign _2705_ = ~(_2704_ & _3258_);
+	assign _2706_ = ~(_2705_ | _2700_);
+	assign _3624_[12] = _2706_ ^ \mchip.game2.start_ctr [12];
+	assign _2707_ = _2706_ & \mchip.game2.start_ctr [12];
+	assign _3624_[13] = _2707_ ^ \mchip.game2.start_ctr [13];
+	assign _2708_ = ~(\mchip.game2.start_ctr [12] & \mchip.game2.start_ctr [13]);
+	assign _2709_ = _2706_ & ~_2708_;
+	assign _3624_[14] = _2709_ ^ \mchip.game2.start_ctr [14];
+	assign _2710_ = _2709_ & \mchip.game2.start_ctr [14];
+	assign _3624_[15] = _2710_ ^ \mchip.game2.start_ctr [15];
+	assign _2711_ = _2708_ | _3255_;
+	assign _2712_ = _2711_ | _2705_;
+	assign _2713_ = ~(_2712_ | _2700_);
+	assign _3624_[16] = _2713_ ^ \mchip.game2.start_ctr [16];
+	assign _2714_ = _2713_ & \mchip.game2.start_ctr [16];
+	assign _3624_[17] = _2714_ ^ \mchip.game2.start_ctr [17];
+	assign _2715_ = ~(\mchip.game2.start_ctr [17] & \mchip.game2.start_ctr [16]);
+	assign _2716_ = _2713_ & ~_2715_;
+	assign _3624_[18] = _2716_ ^ \mchip.game2.start_ctr [18];
+	assign _2717_ = _2716_ & \mchip.game2.start_ctr [18];
+	assign _3624_[19] = _2717_ ^ \mchip.game2.start_ctr [19];
+	assign _2718_ = ~(\mchip.game2.start_ctr [18] & \mchip.game2.start_ctr [19]);
+	assign _2719_ = _2718_ | _2715_;
+	assign _2720_ = _2713_ & ~_2719_;
+	assign _3624_[20] = _2720_ ^ \mchip.game2.start_ctr [20];
+	assign _2721_ = _2720_ & \mchip.game2.start_ctr [20];
+	assign _3624_[21] = _2721_ ^ \mchip.game2.start_ctr [21];
+	assign _2722_ = ~(\mchip.game2.start_ctr [20] & \mchip.game2.start_ctr [21]);
+	assign _2723_ = _2720_ & ~_2722_;
+	assign _3624_[22] = _2723_ ^ \mchip.game2.start_ctr [22];
+	assign _2724_ = _2723_ & \mchip.game2.start_ctr [22];
+	assign _3624_[23] = _2724_ ^ \mchip.game2.start_ctr [23];
+	assign _2725_ = _2722_ | ~_3244_;
+	assign _2726_ = _2725_ | _2719_;
+	assign _2727_ = _2713_ & ~_2726_;
+	assign _3624_[24] = _2727_ ^ \mchip.game2.start_ctr [24];
+	assign _2728_ = _2727_ & \mchip.game2.start_ctr [24];
+	assign _3624_[25] = _2728_ ^ \mchip.game2.start_ctr [25];
+	assign _2729_ = ~(\mchip.game2.start_ctr [24] & \mchip.game2.start_ctr [25]);
+	assign _2730_ = _2727_ & ~_2729_;
+	assign _3624_[26] = _2730_ ^ \mchip.game2.start_ctr [26];
+	assign _2731_ = _2730_ & \mchip.game2.start_ctr [26];
+	assign _3624_[27] = _2731_ ^ \mchip.game2.start_ctr [27];
+	assign _2732_ = ~(\mchip.game2.start_ctr [26] & \mchip.game2.start_ctr [27]);
+	assign _2733_ = _2732_ | _2729_;
+	assign _2734_ = _2727_ & ~_2733_;
+	assign _3624_[28] = _2734_ ^ \mchip.game2.start_ctr [28];
+	assign _2735_ = _2734_ & \mchip.game2.start_ctr [28];
+	assign _3624_[29] = _2735_ ^ \mchip.game2.start_ctr [29];
+	assign _2736_ = ~(\mchip.game2.start_ctr [29] & \mchip.game2.start_ctr [28]);
+	assign _2737_ = _2734_ & ~_2736_;
+	assign _3624_[30] = _2737_ ^ \mchip.game2.start_ctr [30];
+	assign _2738_ = _2737_ & \mchip.game2.start_ctr [30];
+	assign _3624_[31] = _2738_ ^ \mchip.game2.start_ctr [31];
+	assign _3623_[1] = \mchip.game2.no_jump_ctr [0] ^ \mchip.game2.no_jump_ctr [1];
+	assign _2739_ = \mchip.game2.no_jump_ctr [0] & \mchip.game2.no_jump_ctr [1];
+	assign _3623_[2] = _2739_ ^ \mchip.game2.no_jump_ctr [2];
+	assign _2740_ = _2739_ & \mchip.game2.no_jump_ctr [2];
+	assign _3623_[3] = _2740_ ^ \mchip.game2.no_jump_ctr [3];
+	assign _2741_ = ~(\mchip.game2.no_jump_ctr [2] & \mchip.game2.no_jump_ctr [3]);
+	assign _2742_ = _2739_ & ~_2741_;
+	assign _3623_[4] = _2742_ ^ \mchip.game2.no_jump_ctr [4];
+	assign _2743_ = _2742_ & \mchip.game2.no_jump_ctr [4];
+	assign _3623_[5] = _2743_ ^ \mchip.game2.no_jump_ctr [5];
+	assign _2744_ = ~(\mchip.game2.no_jump_ctr [4] & \mchip.game2.no_jump_ctr [5]);
+	assign _2745_ = _2742_ & ~_2744_;
+	assign _3623_[6] = _2745_ ^ \mchip.game2.no_jump_ctr [6];
+	assign _2746_ = _2745_ & \mchip.game2.no_jump_ctr [6];
+	assign _3623_[7] = _2746_ ^ \mchip.game2.no_jump_ctr [7];
+	assign _2747_ = ~(\mchip.game2.no_jump_ctr [6] & \mchip.game2.no_jump_ctr [7]);
+	assign _2748_ = _2747_ | _2744_;
+	assign _2749_ = _2742_ & ~_2748_;
+	assign _3623_[8] = _2749_ ^ \mchip.game2.no_jump_ctr [8];
+	assign _2750_ = _2749_ & \mchip.game2.no_jump_ctr [8];
+	assign _3623_[9] = _2750_ ^ \mchip.game2.no_jump_ctr [9];
+	assign _2751_ = ~(\mchip.game2.no_jump_ctr [8] & \mchip.game2.no_jump_ctr [9]);
+	assign _2752_ = _2749_ & ~_2751_;
+	assign _3623_[10] = _2752_ ^ \mchip.game2.no_jump_ctr [10];
+	assign _2753_ = _2752_ & \mchip.game2.no_jump_ctr [10];
+	assign _3623_[11] = _2753_ ^ \mchip.game2.no_jump_ctr [11];
+	assign _2754_ = ~(\mchip.game2.no_jump_ctr [10] & \mchip.game2.no_jump_ctr [11]);
+	assign _2755_ = _2754_ | _2751_;
+	assign _2756_ = _2749_ & ~_2755_;
+	assign _3623_[12] = _2756_ ^ \mchip.game2.no_jump_ctr [12];
+	assign _2757_ = _2756_ & \mchip.game2.no_jump_ctr [12];
+	assign _3623_[13] = _2757_ ^ \mchip.game2.no_jump_ctr [13];
+	assign _2758_ = ~(\mchip.game2.no_jump_ctr [12] & \mchip.game2.no_jump_ctr [13]);
+	assign _2759_ = _2756_ & ~_2758_;
+	assign _3623_[14] = _2759_ ^ \mchip.game2.no_jump_ctr [14];
+	assign _2760_ = _2759_ & \mchip.game2.no_jump_ctr [14];
+	assign _3623_[15] = _2760_ ^ \mchip.game2.no_jump_ctr [15];
+	assign _2761_ = ~(\mchip.game2.no_jump_ctr [14] & \mchip.game2.no_jump_ctr [15]);
+	assign _2762_ = _2761_ | _2758_;
+	assign _2763_ = _2762_ | _2755_;
+	assign _2764_ = _2749_ & ~_2763_;
+	assign _3623_[16] = _2764_ ^ \mchip.game2.no_jump_ctr [16];
+	assign _2765_ = _2764_ & \mchip.game2.no_jump_ctr [16];
+	assign _3623_[17] = _2765_ ^ \mchip.game2.no_jump_ctr [17];
+	assign _2766_ = ~(\mchip.game2.no_jump_ctr [16] & \mchip.game2.no_jump_ctr [17]);
+	assign _2767_ = _2764_ & ~_2766_;
+	assign _3623_[18] = _2767_ ^ \mchip.game2.no_jump_ctr [18];
+	assign _2768_ = _2767_ & \mchip.game2.no_jump_ctr [18];
+	assign _3623_[19] = _2768_ ^ \mchip.game2.no_jump_ctr [19];
+	assign _0091_ = \mchip.game2.rng_inst.out [1] ^ \mchip.game2.rng_inst.out [4];
+	assign _2769_ = ~_3450_;
+	assign _2770_ = _2769_ & ~_3454_;
+	assign _2771_ = _3447_ | _3442_;
+	assign _2772_ = _2770_ & ~_2771_;
+	assign _2773_ = _3470_ | _3436_;
+	assign _2774_ = _3441_ | _3435_;
+	assign _2775_ = _2774_ | _2773_;
+	assign _2776_ = _2772_ & ~_2775_;
+	assign _2777_ = _2776_ | _3454_;
+	assign _2778_ = ~(_3484_ & _3426_);
+	assign _2779_ = _2778_ | _3432_;
+	assign _2780_ = _2777_ & ~_2779_;
+	assign _2781_ = _3433_ & ~_2780_;
+	assign _2782_ = _3450_ | _3447_;
+	assign _2783_ = _2782_ | _3455_;
+	assign _2784_ = _3437_ | _3435_;
+	assign _2785_ = _2784_ | _3443_;
+	assign _2786_ = _2785_ | _2783_;
+	assign _2787_ = _3432_ | ~_3426_;
+	assign _2788_ = _2787_ | _2786_;
+	assign _2789_ = _3470_ & ~_2788_;
+	assign _2790_ = _3454_ & ~_2778_;
+	assign _2791_ = _3426_ & ~_2790_;
+	assign _2792_ = _2770_ & ~_2778_;
+	assign _2793_ = _3442_ & ~_3447_;
+	assign _2794_ = _3441_ & _3435_;
+	assign _2795_ = _2793_ & ~_2794_;
+	assign _2796_ = _2771_ & ~_2795_;
+	assign _2797_ = _2792_ & ~_2796_;
+	assign _2798_ = _2791_ & ~_2797_;
+	assign _2799_ = _2798_ | _3432_;
+	assign _2800_ = _2799_ | _2789_;
+	assign _2801_ = _2781_ & ~_2800_;
+	assign _2802_ = ~\mchip.game2.cactus_type [0];
+	assign _2803_ = _0536_ & _0521_;
+	assign _2804_ = _2803_ | ~_0525_;
+	assign _2805_ = _2804_ | _0528_;
+	assign _2806_ = _2805_ | _2802_;
+	assign _2807_ = _2806_ | _3450_;
+	assign _2808_ = _2807_ | _3470_;
+	assign _2809_ = _2808_ | _3436_;
+	assign _2810_ = _2809_ | _3435_;
+	assign _2811_ = ~(_0577_ & _0525_);
+	assign _2812_ = (_0528_ ? _0562_ : _2811_);
+	assign _2813_ = _2812_ | _2802_;
+	assign _2814_ = _2813_ | _3450_;
+	assign _2815_ = _2814_ | _3470_;
+	assign _2816_ = _3470_ & ~_2814_;
+	assign _2817_ = _2815_ & ~_2816_;
+	assign _2818_ = _0521_ | ~_0555_;
+	assign _2819_ = ~(_2818_ | _0525_);
+	assign _2820_ = _2819_ & ~_0528_;
+	assign _2821_ = (_3470_ ? _0551_ : _2820_);
+	assign _2822_ = _2821_ | _2802_;
+	assign _2823_ = _2822_ | _3450_;
+	assign _2824_ = (_3436_ ? _2817_ : _2823_);
+	assign _2825_ = _3198_ | _0516_;
+	assign _2826_ = ~(_2825_ | _0521_);
+	assign _2827_ = ~(_2826_ & _0525_);
+	assign _2828_ = _2827_ | _0528_;
+	assign _2829_ = _2828_ | _2802_;
+	assign _2830_ = _2829_ | _3450_;
+	assign _2831_ = _2830_ | _3470_;
+	assign _2832_ = _3470_ & ~_2830_;
+	assign _2833_ = _2831_ & ~_2832_;
+	assign _2834_ = (_0521_ ? _0541_ : _0518_);
+	assign _2835_ = (_0525_ ? _2834_ : _0554_);
+	assign _2836_ = (_0528_ ? _2818_ : _2835_);
+	assign _2837_ = ~(_0522_ & _0518_);
+	assign _2838_ = _0554_ & ~_2837_;
+	assign _2839_ = ~(_2838_ & _0528_);
+	assign _2840_ = (_3470_ ? _2836_ : _2839_);
+	assign _2841_ = _2840_ | _2802_;
+	assign _2842_ = _2841_ | _3450_;
+	assign _2843_ = (_3436_ ? _2833_ : _2842_);
+	assign _2844_ = (_3435_ ? _2824_ : _2843_);
+	assign _2845_ = (_3441_ ? _2810_ : _2844_);
+	assign _2846_ = _0571_ & ~_0521_;
+	assign _2847_ = _2846_ | ~_0525_;
+	assign _2848_ = _2847_ & ~_0528_;
+	assign _2849_ = _2848_ | _2802_;
+	assign _2850_ = _2849_ | _3450_;
+	assign _2851_ = _0517_ | _0515_;
+	assign _2852_ = ~(_2851_ | _0521_);
+	assign _2853_ = ~(_2852_ & _0528_);
+	assign _2854_ = _2853_ | _2802_;
+	assign _2855_ = _2854_ | _3450_;
+	assign _2856_ = (_3470_ ? _2850_ : _2855_);
+	assign _2857_ = ~(_0542_ & _0525_);
+	assign _2858_ = (_0528_ ? _0549_ : _2857_);
+	assign _2859_ = _2858_ | _2802_;
+	assign _2860_ = _2859_ | _3450_;
+	assign _2861_ = (_3470_ ? _2855_ : _2860_);
+	assign _2862_ = (_3436_ ? _2856_ : _2861_);
+	assign _2863_ = _0540_ | _2802_;
+	assign _2864_ = _2802_ & ~_0540_;
+	assign _2865_ = _2863_ & ~_2864_;
+	assign _2866_ = _0544_ | _2802_;
+	assign _2867_ = _2802_ & ~_0544_;
+	assign _2868_ = _2866_ & ~_2867_;
+	assign _2869_ = (_3470_ ? _2865_ : _2868_);
+	assign _2870_ = _2869_ | _3450_;
+	assign _2871_ = (_0521_ ? _0541_ : _0517_);
+	assign _2872_ = ~(_2871_ & _0525_);
+	assign _2873_ = _2872_ | _0528_;
+	assign _2874_ = (\mchip.game2.cactus_type [0] ? _2873_ : _0529_);
+	assign _2875_ = (_0528_ ? _0532_ : _2872_);
+	assign _2876_ = (\mchip.game2.cactus_type [0] ? _2875_ : _0533_);
+	assign _2877_ = (_3470_ ? _2874_ : _2876_);
+	assign _2878_ = _2877_ | _3450_;
+	assign _2879_ = (_3436_ ? _2870_ : _2878_);
+	assign _2880_ = (_3435_ ? _2862_ : _2879_);
+	assign _2881_ = (_3470_ ? _0551_ : _0564_);
+	assign _2882_ = _2881_ & ~\mchip.game2.cactus_type [0];
+	assign _2883_ = _2882_ | _3450_;
+	assign _2884_ = (\mchip.game2.cactus_type [0] ? _0564_ : _0551_);
+	assign _2885_ = _2884_ | _3450_;
+	assign _2886_ = (_0517_ ? _0515_ : _3189_);
+	assign _2887_ = _2886_ & _0521_;
+	assign _2888_ = ~(_2887_ & _0525_);
+	assign _2889_ = _2888_ | _0528_;
+	assign _2890_ = (\mchip.game2.cactus_type [0] ? _2889_ : _0559_);
+	assign _2891_ = _2890_ | _3450_;
+	assign _2892_ = (_3470_ ? _2885_ : _2891_);
+	assign _2893_ = (_3436_ ? _2883_ : _2892_);
+	assign _2894_ = (_0525_ ? _0572_ : _0570_);
+	assign _2895_ = _2894_ | _0528_;
+	assign _2896_ = (\mchip.game2.cactus_type [0] ? _2895_ : _0579_);
+	assign _2897_ = _2896_ | _3450_;
+	assign _2898_ = (_3470_ ? _2891_ : _2897_);
+	assign _2899_ = ~(_0521_ & _0518_);
+	assign _2900_ = (_0525_ ? _2899_ : _0572_);
+	assign _2901_ = _0528_ | ~_2900_;
+	assign _2902_ = (\mchip.game2.cactus_type [0] ? _2901_ : _0574_);
+	assign _2903_ = _2902_ | _3450_;
+	assign _2904_ = _2903_ | _3471_;
+	assign _2905_ = (_3436_ ? _2898_ : _2904_);
+	assign _2906_ = (_3435_ ? _2893_ : _2905_);
+	assign _2907_ = (_3441_ ? _2880_ : _2906_);
+	assign _2908_ = (_3442_ ? _2845_ : _2907_);
+	assign _2909_ = _2908_ | _3447_;
+	assign _0022_ = _2801_ & ~_2909_;
+	assign _2910_ = _3432_ ^ \mchip.game2.scroll_inst.pos [10];
+	assign _2911_ = ~(_2910_ | _3426_);
+	assign _2912_ = _3432_ & ~_0301_;
+	assign _2913_ = _2911_ & ~_2912_;
+	assign _2914_ = _3434_ & ~_3454_;
+	assign _2915_ = _2914_ & ~_3451_;
+	assign _2916_ = _3450_ & ~_3447_;
+	assign _2917_ = _2916_ & _2914_;
+	assign _2918_ = _3442_ | _3441_;
+	assign _2919_ = _3438_ & ~_2918_;
+	assign _2920_ = _2917_ & ~_2919_;
+	assign _2921_ = _2920_ | _2915_;
+	assign _2922_ = _2913_ & ~_2921_;
+	assign _2923_ = _2921_ ^ _3479_;
+	assign _2924_ = _3479_ & ~_2921_;
+	assign _2925_ = _2924_ ^ _2910_;
+	assign _2926_ = _2911_ & ~_2921_;
+	assign _2927_ = _2926_ ^ _2912_;
+	assign _2928_ = _2927_ | _2925_;
+	assign _2929_ = _2928_ | _2923_;
+	assign _2930_ = _2926_ & ~_2912_;
+	assign _2931_ = _2930_ | _2922_;
+	assign _2932_ = _2931_ | _2929_;
+	assign _2933_ = ~_3454_;
+	assign _2934_ = _2916_ & ~_2919_;
+	assign _2935_ = _3451_ & ~_2934_;
+	assign _2936_ = _2933_ & ~_2935_;
+	assign _2937_ = _2936_ ^ _3434_;
+	assign _2938_ = _2923_ & ~_2937_;
+	assign _2939_ = _2928_ | ~_2938_;
+	assign _2940_ = ~(_2939_ | _2931_);
+	assign _2941_ = _2935_ ^ _2933_;
+	assign _2942_ = ~_2941_;
+	assign _2943_ = ~(_2919_ ^ _3447_);
+	assign _2944_ = _3474_ ^ _3442_;
+	assign _2945_ = _2943_ & ~_2944_;
+	assign _2946_ = _2919_ & ~_3447_;
+	assign _2947_ = _2946_ ^ _2769_;
+	assign _2948_ = _2947_ | _2941_;
+	assign _2949_ = _2945_ & ~_2948_;
+	assign _2950_ = _3441_ ^ _3438_;
+	assign _2951_ = _2950_ | _3473_;
+	assign _2952_ = _2951_ | _3508_;
+	assign _2953_ = _2949_ & ~_2952_;
+	assign _2954_ = _2942_ & ~_2953_;
+	assign _2955_ = _2940_ & ~_2954_;
+	assign _2956_ = _2932_ & ~_2955_;
+	assign _2957_ = _2956_ | _2922_;
+	assign _2958_ = _2944_ & _2943_;
+	assign _2959_ = _2948_ | ~_2958_;
+	assign _2960_ = _3473_ | ~_2950_;
+	assign _2961_ = _2960_ | _3472_;
+	assign _2962_ = ~(_2961_ | _2959_);
+	assign _2963_ = ~(_2962_ & _2940_);
+	assign _2964_ = ~(_2963_ | _2922_);
+	assign _2965_ = _2938_ & ~_2942_;
+	assign _2966_ = _2923_ & ~_2965_;
+	assign _2967_ = _2938_ & ~_2948_;
+	assign _2968_ = _2950_ & _3473_;
+	assign _2969_ = _2968_ | ~_2958_;
+	assign _2970_ = _2969_ & ~_2945_;
+	assign _2971_ = _2967_ & ~_2970_;
+	assign _2972_ = _2966_ & ~_2971_;
+	assign _2973_ = _2931_ | _2928_;
+	assign _2974_ = _2973_ | _2922_;
+	assign _2975_ = _2974_ | _2972_;
+	assign _2976_ = _2975_ | _2922_;
+	assign _2977_ = _2976_ | _2964_;
+	assign _2978_ = _2957_ & ~_2977_;
+	assign _2979_ = ~(\mchip.game2.scroll_inst.pos [4] ^ \mchip.game2.vga_inst.haddr [4]);
+	assign _2980_ = _2979_ & ~_3400_;
+	assign _2981_ = _2979_ ^ _3400_;
+	assign _2982_ = ~(\mchip.game2.scroll_inst.pos [3] ^ \mchip.game2.vga_inst.haddr [3]);
+	assign _2983_ = _3410_ | ~_2982_;
+	assign _2984_ = _2982_ ^ _3410_;
+	assign _2985_ = ~(\mchip.game2.scroll_inst.pos [2] ^ \mchip.game2.vga_inst.haddr [2]);
+	assign _2986_ = _3406_ | ~_2985_;
+	assign _2987_ = ~(_2986_ | _2984_);
+	assign _2988_ = _2983_ & ~_2987_;
+	assign _2989_ = ~(\mchip.game2.scroll_inst.pos [1] ^ \mchip.game2.vga_inst.haddr [1]);
+	assign _2990_ = _2989_ & _3405_;
+	assign _2991_ = ~(_2985_ ^ _3406_);
+	assign _2992_ = _2984_ | ~_2991_;
+	assign _2993_ = _2990_ & ~_2992_;
+	assign _2994_ = _2988_ & ~_2993_;
+	assign _2995_ = ~(_2994_ | _2981_);
+	assign _2996_ = _2995_ | _2980_;
+	assign _2997_ = ~(\mchip.game2.scroll_inst.pos [5] ^ \mchip.game2.vga_inst.haddr [5]);
+	assign _2998_ = ~(_2997_ ^ _3415_);
+	assign _2999_ = _2998_ ^ _2996_;
+	assign _3000_ = _2989_ ^ _3405_;
+	assign _3001_ = ~\mchip.game2.cactus_type [2];
+	assign _3002_ = _2805_ | _3001_;
+	assign _3003_ = _2997_ & ~_3415_;
+	assign _3004_ = _2998_ & _2980_;
+	assign _3005_ = _3004_ | _3003_;
+	assign _3006_ = _2981_ | ~_2998_;
+	assign _3007_ = ~(_3006_ | _2994_);
+	assign _3008_ = _3007_ | _3005_;
+	assign _3009_ = _3393_ ^ _3389_;
+	assign _3010_ = _3009_ ^ _3008_;
+	assign _3011_ = _3010_ | _3002_;
+	assign _3012_ = _3011_ | _3470_;
+	assign _3013_ = _3012_ | _3000_;
+	assign _3014_ = _2991_ ^ _2990_;
+	assign _3015_ = _3014_ | _3013_;
+	assign _3016_ = _2991_ & _2990_;
+	assign _3017_ = _2986_ & ~_3016_;
+	assign _3018_ = _3017_ ^ _2984_;
+	assign _3019_ = _2812_ | _3001_;
+	assign _3020_ = _3019_ | _3010_;
+	assign _3021_ = _3020_ | _3470_;
+	assign _3022_ = _3470_ & ~_3020_;
+	assign _3023_ = _3021_ & ~_3022_;
+	assign _3024_ = _2821_ | _3001_;
+	assign _3025_ = _3024_ | _3010_;
+	assign _3026_ = (_3000_ ? _3023_ : _3025_);
+	assign _3027_ = _2828_ | _3001_;
+	assign _3028_ = _3027_ | _3010_;
+	assign _3029_ = _3028_ | _3470_;
+	assign _3030_ = _3470_ & ~_3028_;
+	assign _3031_ = _3029_ & ~_3030_;
+	assign _3032_ = _2840_ | _3001_;
+	assign _3033_ = _3032_ | _3010_;
+	assign _3034_ = (_3000_ ? _3031_ : _3033_);
+	assign _3035_ = (_3014_ ? _3026_ : _3034_);
+	assign _3036_ = (_3018_ ? _3015_ : _3035_);
+	assign _3037_ = _2994_ ^ _2981_;
+	assign _3038_ = _2848_ | _3001_;
+	assign _3039_ = _3038_ | _3010_;
+	assign _3040_ = _2853_ | _3001_;
+	assign _3041_ = _3040_ | _3010_;
+	assign _3042_ = (_3470_ ? _3039_ : _3041_);
+	assign _3043_ = _2858_ | _3001_;
+	assign _3044_ = _3043_ | _3010_;
+	assign _3045_ = (_3470_ ? _3041_ : _3044_);
+	assign _3046_ = (_3000_ ? _3042_ : _3045_);
+	assign _3047_ = (_0525_ ? _0532_ : _0577_);
+	assign _3048_ = ~(_3047_ & _0568_);
+	assign _3049_ = (\mchip.game2.cactus_type [2] ? _0540_ : _3048_);
+	assign _3050_ = ~(_0577_ | _0525_);
+	assign _3051_ = _3050_ | _0528_;
+	assign _3052_ = (\mchip.game2.cactus_type [2] ? _0544_ : _3051_);
+	assign _3053_ = (_3470_ ? _3049_ : _3052_);
+	assign _3054_ = _3053_ | _3010_;
+	assign _3055_ = ~(_0569_ & _0525_);
+	assign _3056_ = _3055_ | _0528_;
+	assign _3057_ = (\mchip.game2.cactus_type [2] ? _2873_ : _3056_);
+	assign _3058_ = _3057_ | _3010_;
+	assign _3059_ = _0517_ & _0497_;
+	assign _3060_ = ~(_3059_ & _0521_);
+	assign _3061_ = _3060_ | _0525_;
+	assign _3062_ = (_0528_ ? _3061_ : _3055_);
+	assign _3063_ = (\mchip.game2.cactus_type [2] ? _2875_ : _3062_);
+	assign _3064_ = _3063_ | _3010_;
+	assign _3065_ = (_3470_ ? _3058_ : _3064_);
+	assign _3066_ = (_3000_ ? _3054_ : _3065_);
+	assign _3067_ = (_3014_ ? _3046_ : _3066_);
+	assign _3068_ = ~(_2803_ | _0525_);
+	assign _3069_ = (_0528_ ? _3068_ : _0550_);
+	assign _3070_ = ~_3068_;
+	assign _3071_ = (_0528_ ? _3070_ : _0563_);
+	assign _3072_ = ~_3071_;
+	assign _3073_ = (_3470_ ? _3069_ : _3072_);
+	assign _3074_ = _3001_ & ~_3073_;
+	assign _3075_ = (\mchip.game2.cactus_type [2] ? _0564_ : _3071_);
+	assign _3076_ = (_0528_ ? _0553_ : _0558_);
+	assign _3077_ = (\mchip.game2.cactus_type [2] ? _2889_ : _3076_);
+	assign _3078_ = (_3470_ ? _3075_ : _3077_);
+	assign _3079_ = (_3000_ ? _3074_ : _3078_);
+	assign _3080_ = _3079_ | _3010_;
+	assign _3081_ = (\mchip.game2.cactus_type [2] ? _2889_ : _0559_);
+	assign _3082_ = (_0525_ ? _0531_ : _0570_);
+	assign _3083_ = _3082_ | _0528_;
+	assign _3084_ = (\mchip.game2.cactus_type [2] ? _2895_ : _3083_);
+	assign _3085_ = (_3470_ ? _3081_ : _3084_);
+	assign _3086_ = _3085_ | _3010_;
+	assign _3087_ = (\mchip.game2.cactus_type [2] ? _2901_ : _2895_);
+	assign _3088_ = _3087_ | _3010_;
+	assign _3089_ = _3088_ | ~_3470_;
+	assign _3090_ = (_3000_ ? _3086_ : _3089_);
+	assign _3091_ = (_3014_ ? _3080_ : _3090_);
+	assign _3092_ = (_3018_ ? _3067_ : _3091_);
+	assign _3093_ = (_3037_ ? _3036_ : _3092_);
+	assign _3094_ = _3093_ | _2999_;
+	assign _0021_ = _2978_ & ~_3094_;
+	assign _3095_ = \mchip.game2.scroll_inst.tick_time [0] | ~_3171_;
+	assign _3096_ = io_in[8] & io_in[11];
+	assign _3097_ = ~(_3096_ ^ \mchip.game2.scroll_inst.tick_time [1]);
+	assign _3628_[1] = _3097_ ^ _3095_;
+	assign _3098_ = \mchip.game2.scroll_inst.tick_time [1] & ~_3096_;
+	assign _3099_ = _3097_ & _3095_;
+	assign _3100_ = _3099_ | _3098_;
+	assign _3101_ = io_in[11] & ~io_in[9];
+	assign _3102_ = _3101_ ^ \mchip.game2.scroll_inst.tick_time [2];
+	assign _3628_[2] = _3102_ ^ _3100_;
+	assign _3103_ = _3101_ & \mchip.game2.scroll_inst.tick_time [2];
+	assign _3104_ = _3102_ & _3100_;
+	assign _3105_ = _3104_ | _3103_;
+	assign _3106_ = io_in[10] & io_in[11];
+	assign _3107_ = ~(_3106_ ^ \mchip.game2.scroll_inst.tick_time [3]);
+	assign _3628_[3] = _3107_ ^ _3105_;
+	assign _3108_ = ~(_3107_ & _3102_);
+	assign _3109_ = _3100_ & ~_3108_;
+	assign _3110_ = \mchip.game2.scroll_inst.tick_time [3] & ~_3106_;
+	assign _3111_ = _3107_ & _3103_;
+	assign _3112_ = _3111_ | _3110_;
+	assign _3113_ = ~(_3112_ | _3109_);
+	assign _3628_[4] = _3113_ ^ \mchip.game2.scroll_inst.tick_time [4];
+	assign _3114_ = _3113_ & ~\mchip.game2.scroll_inst.tick_time [4];
+	assign _3628_[5] = _3114_ ^ \mchip.game2.scroll_inst.tick_time [5];
+	assign _3115_ = \mchip.game2.scroll_inst.tick_time [4] | \mchip.game2.scroll_inst.tick_time [5];
+	assign _3116_ = _3113_ & ~_3115_;
+	assign _3628_[6] = _3116_ ^ \mchip.game2.scroll_inst.tick_time [6];
+	assign _3117_ = _3116_ & ~\mchip.game2.scroll_inst.tick_time [6];
+	assign _3628_[7] = _3117_ ^ \mchip.game2.scroll_inst.tick_time [7];
+	assign _3118_ = ~\mchip.game2.scroll_inst.tick_time [8];
+	assign _3119_ = \mchip.game2.scroll_inst.tick_time [6] | \mchip.game2.scroll_inst.tick_time [7];
+	assign _3120_ = ~(_3119_ | _3115_);
+	assign _3121_ = _3120_ & ~_3113_;
+	assign _3122_ = _3119_ | _3115_;
+	assign _3123_ = _3122_ | _3121_;
+	assign _3628_[8] = _3123_ ^ _3118_;
+	assign _3124_ = _3118_ & ~_3123_;
+	assign _3628_[9] = _3124_ ^ \mchip.game2.scroll_inst.tick_time [9];
+	assign _3125_ = \mchip.game2.scroll_inst.tick_time [8] | \mchip.game2.scroll_inst.tick_time [9];
+	assign _3126_ = ~(_3125_ | _3123_);
+	assign _3628_[10] = _3126_ ^ \mchip.game2.scroll_inst.tick_time [10];
+	assign _3127_ = _3126_ & ~\mchip.game2.scroll_inst.tick_time [10];
+	assign _3628_[11] = _3127_ ^ \mchip.game2.scroll_inst.tick_time [11];
+	assign _3128_ = \mchip.game2.scroll_inst.tick_time [10] | \mchip.game2.scroll_inst.tick_time [11];
+	assign _3129_ = _3128_ | _3125_;
+	assign _3130_ = _3123_ & ~_3129_;
+	assign _3131_ = ~(_3129_ | _3130_);
+	assign _3628_[12] = _3131_ ^ \mchip.game2.scroll_inst.tick_time [12];
+	assign _3132_ = _3131_ & ~\mchip.game2.scroll_inst.tick_time [12];
+	assign _3628_[13] = _3132_ ^ \mchip.game2.scroll_inst.tick_time [13];
+	assign _3133_ = ~(\mchip.game2.scroll_inst.tick_time [12] | \mchip.game2.scroll_inst.tick_time [13]);
+	assign _3134_ = _3133_ & _3131_;
+	assign _3628_[14] = _3134_ ^ \mchip.game2.scroll_inst.tick_time [14];
+	assign _3135_ = _3134_ & ~\mchip.game2.scroll_inst.tick_time [14];
+	assign _3628_[15] = _3135_ ^ \mchip.game2.scroll_inst.tick_time [15];
+	assign _3136_ = \mchip.game2.scroll_inst.tick_time [14] | \mchip.game2.scroll_inst.tick_time [15];
+	assign _3137_ = _3133_ & ~_3136_;
+	assign _3138_ = _3136_ | ~_3133_;
+	assign _3139_ = _3129_ & ~_3138_;
+	assign _3140_ = _3137_ & ~_3139_;
+	assign _3141_ = _3138_ | _3129_;
+	assign _3142_ = _3123_ & ~_3141_;
+	assign _3143_ = _3140_ & ~_3142_;
+	assign _3628_[16] = _3143_ ^ \mchip.game2.scroll_inst.tick_time [16];
+	assign _3144_ = _3143_ & ~\mchip.game2.scroll_inst.tick_time [16];
+	assign _3628_[17] = _3144_ ^ \mchip.game2.scroll_inst.tick_time [17];
+	assign _3145_ = io_in[3] & io_in[11];
+	assign _3146_ = _3145_ & \mchip.game2.scroll_inst.pos [0];
+	assign _3147_ = io_in[11] & ~io_in[4];
+	assign _3148_ = _3147_ ^ \mchip.game2.scroll_inst.pos [1];
+	assign _3627_[1] = ~(_3148_ ^ _3146_);
+	assign _3149_ = _3146_ & ~_3148_;
+	assign _3150_ = \mchip.game2.scroll_inst.pos [1] & ~_3147_;
+	assign _3151_ = _3150_ | _3149_;
+	assign _3152_ = io_in[5] & io_in[11];
+	assign _3153_ = _3152_ ^ \mchip.game2.scroll_inst.pos [2];
+	assign _3627_[2] = _3153_ ^ _3151_;
+	assign _3154_ = _3152_ & \mchip.game2.scroll_inst.pos [2];
+	assign _3155_ = _3153_ & _3151_;
+	assign _3156_ = _3155_ | _3154_;
+	assign _3157_ = io_in[6] & io_in[11];
+	assign _3158_ = _3157_ ^ \mchip.game2.scroll_inst.pos [3];
+	assign _3627_[3] = _3158_ ^ _3156_;
+	assign _3159_ = ~(_3157_ & \mchip.game2.scroll_inst.pos [3]);
+	assign _3160_ = _3158_ & _3154_;
+	assign _3161_ = _3159_ & ~_3160_;
+	assign _3162_ = ~(_3158_ & _3153_);
+	assign _3163_ = _3151_ & ~_3162_;
+	assign _3164_ = _3161_ & ~_3163_;
+	assign _3627_[4] = ~(_3164_ ^ \mchip.game2.scroll_inst.pos [4]);
+	assign _3165_ = \mchip.game2.scroll_inst.pos [4] & ~_3164_;
+	assign _3627_[5] = _3165_ ^ \mchip.game2.scroll_inst.pos [5];
+	assign _3166_ = ~(_3164_ | _0327_);
+	assign _3627_[6] = _3166_ ^ \mchip.game2.scroll_inst.pos [6];
+	assign _3167_ = _3166_ & \mchip.game2.scroll_inst.pos [6];
+	assign _3627_[7] = _3167_ ^ \mchip.game2.scroll_inst.pos [7];
+	assign _3168_ = _0328_ & ~_3164_;
+	assign _3627_[8] = _3168_ ^ \mchip.game2.scroll_inst.pos [8];
+	assign _3169_ = _3168_ & \mchip.game2.scroll_inst.pos [8];
+	assign _3627_[9] = _3169_ ^ \mchip.game2.scroll_inst.pos [9];
+	assign _3170_ = _3168_ & ~_0378_;
+	assign _3627_[10] = _3170_ ^ \mchip.game2.scroll_inst.pos [10];
+	assign _3626_[0] = _3145_ ^ \mchip.game2.scroll_inst.pos [0];
 	always @(posedge io_in[12])
 		if (io_in[13])
-			_0069_ <= 1'h1;
+			\mchip.game2.vga_inst.hsync  <= 1'h1;
+		else
+			\mchip.game2.vga_inst.hsync  <= _0150_;
+	always @(posedge io_in[12])
+		if (_0016_)
+			\mchip.game2.rendering_inst.layers [4] <= 1'h0;
+		else
+			\mchip.game2.rendering_inst.layers [4] <= _0021_;
+	always @(posedge io_in[12])
+		if (_0015_)
+			\mchip.game2.rendering_inst.layers [1] <= 1'h0;
+		else
+			\mchip.game2.rendering_inst.layers [1] <= _0022_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.game_over  <= 1'h1;
+		else if (_0001_)
+			\mchip.game2.game_over  <= _0027_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.cactus_type [2] <= 1'h0;
+		else if (_0024_)
+			\mchip.game2.cactus_type [2] <= \mchip.game2.rng_inst.out [4];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [0] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [0] <= _3622_[0];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [1] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [1] <= _3624_[1];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [2] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [2] <= _3624_[2];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [3] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [3] <= _3624_[3];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [4] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [4] <= _3624_[4];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [5] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [5] <= _3624_[5];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [6] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [6] <= _3624_[6];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [7] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [7] <= _3624_[7];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [8] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [8] <= _3624_[8];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [9] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [9] <= _3624_[9];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [10] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [10] <= _3624_[10];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [11] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [11] <= _3624_[11];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [12] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [12] <= _3624_[12];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [13] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [13] <= _3624_[13];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [14] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [14] <= _3624_[14];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [15] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [15] <= _3624_[15];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [16] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [16] <= _3624_[16];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [17] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [17] <= _3624_[17];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [18] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [18] <= _3624_[18];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [19] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [19] <= _3624_[19];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [20] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [20] <= _3624_[20];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [21] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [21] <= _3624_[21];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [22] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [22] <= _3624_[22];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [23] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [23] <= _3624_[23];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [24] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [24] <= _3624_[24];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [25] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [25] <= _3624_[25];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [26] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [26] <= _3624_[26];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [27] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [27] <= _3624_[27];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [28] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [28] <= _3624_[28];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [29] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [29] <= _3624_[29];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [30] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [30] <= _3624_[30];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.start_ctr [31] <= 1'h0;
+		else if (_0162_)
+			\mchip.game2.start_ctr [31] <= _3624_[31];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.cactus_select_last [0] <= 1'h0;
+		else
+			\mchip.game2.cactus_select_last [0] <= \mchip.game2.rendering_inst.cactus_select [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.cactus_select_last [1] <= 1'h0;
+		else
+			\mchip.game2.cactus_select_last [1] <= \mchip.game2.rendering_inst.cactus_select [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.cactus_select_last [2] <= 1'h0;
+		else
+			\mchip.game2.cactus_select_last [2] <= \mchip.game2.rendering_inst.cactus_select [2];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.in_air  <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.jumping_inst.in_air  <= _0054_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.frame [0] <= 1'h0;
+		else if (_0010_)
+			\mchip.game2.jumping_inst.frame [0] <= _0055_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.frame [1] <= 1'h0;
+		else if (_0010_)
+			\mchip.game2.jumping_inst.frame [1] <= _0056_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.frame [2] <= 1'h0;
+		else if (_0010_)
+			\mchip.game2.jumping_inst.frame [2] <= _0057_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.frame [3] <= 1'h0;
+		else if (_0010_)
+			\mchip.game2.jumping_inst.frame [3] <= _0058_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.frame [4] <= 1'h0;
+		else if (_0010_)
+			\mchip.game2.jumping_inst.frame [4] <= _0059_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.frame [5] <= 1'h0;
+		else if (_0010_)
+			\mchip.game2.jumping_inst.frame [5] <= _0060_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.frame [6] <= 1'h0;
+		else if (_0010_)
+			\mchip.game2.jumping_inst.frame [6] <= _0061_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.frame [7] <= 1'h0;
+		else if (_0010_)
+			\mchip.game2.jumping_inst.frame [7] <= _0062_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.frame [8] <= 1'h0;
+		else if (_0010_)
+			\mchip.game2.jumping_inst.frame [8] <= _0063_;
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [0] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [0] <= _3621_[0];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [1] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [1] <= _3623_[1];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [2] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [2] <= _3623_[2];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [3] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [3] <= _3623_[3];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [4] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [4] <= _3623_[4];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [5] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [5] <= _3623_[5];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [6] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [6] <= _3623_[6];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [7] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [7] <= _3623_[7];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [8] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [8] <= _3623_[8];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [9] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [9] <= _3623_[9];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [10] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [10] <= _3623_[10];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [11] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [11] <= _3623_[11];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [12] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [12] <= _3623_[12];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [13] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [13] <= _3623_[13];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [14] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [14] <= _3623_[14];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [15] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [15] <= _3623_[15];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [16] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [16] <= _3623_[16];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [17] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [17] <= _3623_[17];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [18] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [18] <= _3623_[18];
+	always @(posedge io_in[12])
+		if (_0019_)
+			\mchip.game2.no_jump_ctr [19] <= 1'h0;
+		else
+			\mchip.game2.no_jump_ctr [19] <= _3623_[19];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [0] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [0] <= _0064_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [1] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [1] <= _0075_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [2] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [2] <= _0080_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [3] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [3] <= _0081_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [4] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [4] <= _0082_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [5] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [5] <= _0083_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [6] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [6] <= _0084_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [7] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [7] <= _0085_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [8] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [8] <= _0086_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [9] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [9] <= _0087_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [10] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [10] <= _0065_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [11] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [11] <= _0066_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [12] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [12] <= _0067_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [13] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [13] <= _0068_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [14] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [14] <= _0069_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [15] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [15] <= _0070_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [16] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [16] <= _0071_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [17] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [17] <= _0072_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [18] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [18] <= _0073_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [19] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [19] <= _0074_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [20] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [20] <= _0076_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [21] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [21] <= _0077_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [22] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [22] <= _0078_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.jumping_inst.ctr [23] <= 1'h0;
+		else if (_0011_)
+			\mchip.game2.jumping_inst.ctr [23] <= _0079_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [0] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [0] <= _0029_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [1] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [1] <= _0040_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [2] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [2] <= _0046_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [3] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [3] <= _0047_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [4] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [4] <= _0048_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [5] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [5] <= _0049_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [6] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [6] <= _0050_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [7] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [7] <= _0051_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [8] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [8] <= _0052_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [9] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [9] <= _0053_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [10] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [10] <= _0030_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [11] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [11] <= _0031_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [12] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [12] <= _0032_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [13] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [13] <= _0033_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [14] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [14] <= _0034_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [15] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [15] <= _0035_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [16] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [16] <= _0036_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [17] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [17] <= _0037_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [18] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [18] <= _0038_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [19] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [19] <= _0039_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [20] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [20] <= _0041_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [21] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [21] <= _0042_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [22] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [22] <= _0043_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [23] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [23] <= _0044_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.ctr [24] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.dinosprite_inst.ctr [24] <= _0045_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.dinosprite_inst.sprite  <= 1'h0;
+		else if (_0012_)
+			\mchip.game2.dinosprite_inst.sprite  <= _0028_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [0] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [0] <= _3628_[0];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [1] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [1] <= _3628_[1];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [2] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [2] <= _3628_[2];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [3] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [3] <= _3628_[3];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [4] <= 1'h1;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [4] <= _3628_[4];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [5] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [5] <= _3628_[5];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [6] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [6] <= _3628_[6];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [7] <= 1'h1;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [7] <= _3628_[7];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [8] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [8] <= _3628_[8];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [9] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [9] <= _3628_[9];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [10] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [10] <= _3628_[10];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [11] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [11] <= _3628_[11];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [12] <= 1'h1;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [12] <= _3628_[12];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [13] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [13] <= _3628_[13];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [14] <= 1'h1;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [14] <= _3628_[14];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [15] <= 1'h1;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [15] <= _3628_[15];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [16] <= 1'h1;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [16] <= _3628_[16];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.tick_time [17] <= 1'h1;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.tick_time [17] <= _3628_[17];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [0] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [0] <= _3626_[0];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [1] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [1] <= _3627_[1];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [2] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [2] <= _3627_[2];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [3] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [3] <= _3627_[3];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [4] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [4] <= _3627_[4];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [5] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [5] <= _3627_[5];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [6] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [6] <= _3627_[6];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [7] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [7] <= _3627_[7];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [8] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [8] <= _3627_[8];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [9] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [9] <= _3627_[9];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.pos [10] <= 1'h0;
+		else if (_0002_)
+			\mchip.game2.scroll_inst.pos [10] <= _3627_[10];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [0] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [0] <= _0132_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [1] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [1] <= _0141_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [2] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [2] <= _0142_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [3] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [3] <= _0143_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [4] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [4] <= _0144_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [5] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [5] <= _0145_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [6] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [6] <= _0146_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [7] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [7] <= _0147_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [8] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [8] <= _0148_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [9] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [9] <= _0149_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [10] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [10] <= _0133_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [11] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [11] <= _0134_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [12] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [12] <= _0135_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [13] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [13] <= _0136_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [14] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [14] <= _0137_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [15] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [15] <= _0138_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [16] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [16] <= _0139_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.scroll_inst.ctr [17] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.scroll_inst.ctr [17] <= _0140_;
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [0] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [0] <= _3620_[0];
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [1] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [1] <= _3625_[1];
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [2] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [2] <= _3625_[2];
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [3] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [3] <= _3625_[3];
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [4] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [4] <= _3625_[4];
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [5] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [5] <= _3625_[5];
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [6] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [6] <= _3625_[6];
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [7] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [7] <= _3625_[7];
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [8] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [8] <= _3625_[8];
+	always @(posedge io_in[12])
+		if (_0013_)
+			\mchip.game2.vga_inst.haddr [9] <= 1'h0;
+		else
+			\mchip.game2.vga_inst.haddr [9] <= _3625_[9];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vsync  <= 1'h1;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vsync  <= _0151_;
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[3] [0] <= \mchip.game2.score_inst.score[3] [0];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[3] [1] <= \mchip.game2.score_inst.score[3] [1];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[3] [2] <= \mchip.game2.score_inst.score[3] [2];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[3] [3] <= \mchip.game2.score_inst.score[3] [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [0] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [0] <= _0152_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [1] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [1] <= _0153_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [2] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [2] <= _0154_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [3] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [3] <= _0155_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [4] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [4] <= _0156_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [5] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [5] <= _0157_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [6] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [6] <= _0158_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [7] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [7] <= _0159_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [8] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [8] <= _0160_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.vga_inst.vaddr [9] <= 1'h0;
+		else if (_0023_)
+			\mchip.game2.vga_inst.vaddr [9] <= _0161_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.rng_inst.out [0] <= 1'h1;
+		else if (io_in[0])
+			\mchip.game2.rng_inst.out [0] <= _0091_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.rng_inst.out [1] <= 1'h0;
+		else if (io_in[0])
+			\mchip.game2.rng_inst.out [1] <= \mchip.game2.rng_inst.out [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.rng_inst.out [2] <= 1'h0;
+		else if (io_in[0])
+			\mchip.game2.rng_inst.out [2] <= \mchip.game2.rng_inst.out [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.rng_inst.out [3] <= 1'h0;
+		else if (io_in[0])
+			\mchip.game2.rng_inst.out [3] <= \mchip.game2.rng_inst.out [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.rng_inst.out [4] <= 1'h0;
+		else if (io_in[0])
+			\mchip.game2.rng_inst.out [4] <= \mchip.game2.rng_inst.out [3];
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.score[3] [0] <= 1'h0;
+		else if (_0003_)
+			\mchip.game2.score_inst.score[3] [0] <= _0094_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.score[3] [1] <= 1'h0;
+		else if (_0003_)
+			\mchip.game2.score_inst.score[3] [1] <= _0095_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.score[3] [2] <= 1'h0;
+		else if (_0003_)
+			\mchip.game2.score_inst.score[3] [2] <= _0096_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.score[3] [3] <= 1'h0;
+		else if (_0003_)
+			\mchip.game2.score_inst.score[3] [3] <= _0097_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.score[2] [0] <= 1'h0;
 		else if (_0004_)
-			_0069_ <= _0064_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0070_ <= 1'h0;
-		else
-			_0070_ <= \mchip.design.inter.count_next [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0071_ <= 1'h0;
-		else
-			_0071_ <= \mchip.design.inter.count_next [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0072_ <= 1'h0;
-		else
-			_0072_ <= \mchip.design.inter.count_next [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0073_ <= 1'h0;
-		else
-			_0073_ <= \mchip.design.inter.count_next [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0074_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0074_ <= \mchip.design.io_fsm.final_data [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0075_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0075_ <= \mchip.design.io_fsm.final_data [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0076_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0076_ <= \mchip.design.io_fsm.final_data [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0077_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0077_ <= \mchip.design.io_fsm.final_data [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0078_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0078_ <= \mchip.design.io_fsm.final_data [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0079_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0079_ <= \mchip.design.io_fsm.final_data [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0080_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0080_ <= \mchip.design.io_fsm.final_data [6];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0081_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0081_ <= \mchip.design.io_fsm.final_data [7];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0082_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0082_ <= \mchip.design.io_fsm.final_data [8];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0083_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0083_ <= \mchip.design.io_fsm.final_data [9];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0084_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0084_ <= \mchip.design.io_fsm.final_data [10];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0085_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0085_ <= \mchip.design.io_fsm.final_data [11];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0086_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0086_ <= \mchip.design.io_fsm.final_data [12];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0087_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0087_ <= \mchip.design.io_fsm.final_data [13];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0088_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0088_ <= \mchip.design.io_fsm.final_data [14];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0089_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0089_ <= \mchip.design.io_fsm.final_data [15];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0090_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0090_ <= \mchip.design.io_fsm.final_data [16];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0091_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0091_ <= \mchip.design.io_fsm.final_data [17];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0092_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0092_ <= \mchip.design.io_fsm.final_data [18];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0093_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0093_ <= \mchip.design.io_fsm.final_data [19];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0094_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0094_ <= \mchip.design.io_fsm.final_data [20];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0095_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0095_ <= \mchip.design.io_fsm.final_data [21];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0096_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0096_ <= \mchip.design.io_fsm.final_data [22];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0097_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0097_ <= \mchip.design.io_fsm.final_data [23];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0098_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0098_ <= \mchip.design.io_fsm.final_data [24];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0099_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0099_ <= \mchip.design.io_fsm.final_data [25];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0100_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0100_ <= \mchip.design.io_fsm.final_data [26];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0101_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0101_ <= \mchip.design.io_fsm.final_data [27];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0102_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0102_ <= \mchip.design.io_fsm.final_data [28];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0103_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0103_ <= \mchip.design.io_fsm.final_data [29];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0104_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0104_ <= \mchip.design.io_fsm.final_data [30];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0105_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0105_ <= \mchip.design.io_fsm.final_data [31];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0106_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0106_ <= \mchip.design.io_fsm.final_data [32];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0107_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0107_ <= \mchip.design.io_fsm.final_data [33];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0108_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0108_ <= \mchip.design.io_fsm.final_data [34];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0109_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0109_ <= \mchip.design.io_fsm.final_data [35];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0110_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0110_ <= \mchip.design.io_fsm.final_data [36];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0111_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0111_ <= \mchip.design.io_fsm.final_data [37];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0112_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0112_ <= \mchip.design.io_fsm.final_data [38];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0113_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0113_ <= \mchip.design.io_fsm.final_data [39];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0114_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0114_ <= \mchip.design.io_fsm.final_data [40];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0115_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0115_ <= \mchip.design.io_fsm.final_data [41];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0116_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0116_ <= \mchip.design.io_fsm.final_data [42];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0117_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0117_ <= \mchip.design.io_fsm.final_data [43];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0118_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0118_ <= \mchip.design.io_fsm.final_data [44];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0119_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0119_ <= \mchip.design.io_fsm.final_data [45];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0120_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0120_ <= \mchip.design.io_fsm.final_data [46];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0121_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0121_ <= \mchip.design.io_fsm.final_data [47];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0122_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0122_ <= \mchip.design.io_fsm.final_data [48];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0123_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0123_ <= \mchip.design.io_fsm.final_data [49];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0124_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0124_ <= \mchip.design.io_fsm.final_data [50];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0125_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0125_ <= \mchip.design.io_fsm.final_data [51];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0126_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0126_ <= \mchip.design.io_fsm.final_data [52];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0127_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0127_ <= \mchip.design.io_fsm.final_data [53];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0128_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0128_ <= \mchip.design.io_fsm.final_data [54];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0129_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0129_ <= \mchip.design.io_fsm.final_data [55];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0130_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0130_ <= \mchip.design.io_fsm.final_data [56];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0131_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0131_ <= \mchip.design.io_fsm.final_data [57];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0132_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0132_ <= \mchip.design.io_fsm.final_data [58];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0133_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0133_ <= \mchip.design.io_fsm.final_data [59];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0134_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0134_ <= \mchip.design.io_fsm.final_data [60];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0135_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0135_ <= \mchip.design.io_fsm.final_data [61];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0136_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0136_ <= \mchip.design.io_fsm.final_data [62];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0137_ <= 1'h0;
-		else if (\mchip.design.finished )
-			_0137_ <= \mchip.design.io_fsm.final_data [63];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0138_ <= 1'h0;
-		else if (_0065_)
-			_0138_ <= io_in[2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0139_ <= 1'h0;
-		else if (_0065_)
-			_0139_ <= io_in[3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0140_ <= 1'h0;
-		else if (_0065_)
-			_0140_ <= io_in[4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0141_ <= 1'h0;
-		else if (_0065_)
-			_0141_ <= io_in[5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0142_ <= 1'h0;
-		else if (_0065_)
-			_0142_ <= \mchip.design.inter.ENDP_reg [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0143_ <= 1'h0;
-		else if (_0065_)
-			_0143_ <= \mchip.design.inter.ENDP_reg [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0144_ <= 1'h0;
-		else if (_0065_)
-			_0144_ <= \mchip.design.inter.ENDP_reg [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0145_ <= 1'h0;
-		else if (_0065_)
-			_0145_ <= \mchip.design.inter.ENDP_reg [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0146_ <= 1'h0;
-		else if (_0066_)
-			_0146_ <= io_in[2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0147_ <= 1'h0;
-		else if (_0066_)
-			_0147_ <= io_in[3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0148_ <= 1'h0;
-		else if (_0066_)
-			_0148_ <= io_in[4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0149_ <= 1'h0;
-		else if (_0066_)
-			_0149_ <= io_in[5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0150_ <= 1'h0;
-		else if (_0066_)
-			_0150_ <= \mchip.design.inter.Addr_reg [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0151_ <= 1'h0;
-		else if (_0066_)
-			_0151_ <= \mchip.design.inter.Addr_reg [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0152_ <= 1'h0;
-		else if (_0066_)
-			_0152_ <= \mchip.design.inter.Addr_reg [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0153_ <= 1'h0;
-		else if (_0066_)
-			_0153_ <= \mchip.design.inter.Addr_reg [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0154_ <= 1'h0;
-		else if (_0067_)
-			_0154_ <= io_in[2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0155_ <= 1'h0;
-		else if (_0067_)
-			_0155_ <= io_in[3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0156_ <= 1'h0;
-		else if (_0067_)
-			_0156_ <= io_in[4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0157_ <= 1'h0;
-		else if (_0067_)
-			_0157_ <= io_in[5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0158_ <= 1'h0;
-		else if (_0067_)
-			_0158_ <= \mchip.design.inter.mempage_reg [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0159_ <= 1'h0;
-		else if (_0067_)
-			_0159_ <= \mchip.design.inter.mempage_reg [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0160_ <= 1'h0;
-		else if (_0067_)
-			_0160_ <= \mchip.design.inter.mempage_reg [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0161_ <= 1'h0;
-		else if (_0067_)
-			_0161_ <= \mchip.design.inter.mempage_reg [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0162_ <= 1'h0;
-		else if (_0067_)
-			_0162_ <= \mchip.design.inter.mempage_reg [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0163_ <= 1'h0;
-		else if (_0067_)
-			_0163_ <= \mchip.design.inter.mempage_reg [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0164_ <= 1'h0;
-		else if (_0067_)
-			_0164_ <= \mchip.design.inter.mempage_reg [6];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0165_ <= 1'h0;
-		else if (_0067_)
-			_0165_ <= \mchip.design.inter.mempage_reg [7];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0166_ <= 1'h0;
-		else if (_0067_)
-			_0166_ <= \mchip.design.inter.mempage_reg [8];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0167_ <= 1'h0;
-		else if (_0067_)
-			_0167_ <= \mchip.design.inter.mempage_reg [9];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0168_ <= 1'h0;
-		else if (_0067_)
-			_0168_ <= \mchip.design.inter.mempage_reg [10];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0169_ <= 1'h0;
-		else if (_0067_)
-			_0169_ <= \mchip.design.inter.mempage_reg [11];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0170_ <= 1'h0;
-		else
-			_0170_ <= \mchip.design.io_fsm.next_state [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0171_ <= 1'h0;
-		else
-			_0171_ <= \mchip.design.io_fsm.next_state [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0172_ <= 1'h0;
-		else
-			_0172_ <= \mchip.design.io_fsm.next_state [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0173_ <= 1'h0;
-		else if (_0009_)
-			_0173_ <= \mchip.design.transmitter.fsm.count_next [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0174_ <= 1'h0;
-		else if (_0009_)
-			_0174_ <= \mchip.design.transmitter.fsm.count_next [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0175_ <= 1'h0;
-		else if (_0009_)
-			_0175_ <= \mchip.design.transmitter.fsm.count_next [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0176_ <= 1'h0;
-		else if (_0009_)
-			_0176_ <= \mchip.design.transmitter.fsm.count_next [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0177_ <= 1'h0;
-		else if (_0009_)
-			_0177_ <= \mchip.design.transmitter.fsm.count_next [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0178_ <= 1'h0;
-		else if (_0009_)
-			_0178_ <= \mchip.design.transmitter.fsm.count_next [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0179_ <= 1'h0;
-		else if (_0009_)
-			_0179_ <= \mchip.design.transmitter.fsm.count_next [6];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0180_ <= 1'h0;
-		else if (!_0013_)
-			_0180_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0181_ <= 1'h0;
-		else if (!_0013_)
-			_0181_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0182_ <= 1'h0;
-		else if (!_0013_)
-			_0182_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0183_ <= 1'h0;
-		else if (!_0013_)
-			_0183_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0184_ <= 1'h0;
-		else if (!_0013_)
-			_0184_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0185_ <= 1'h0;
-		else if (!_0013_)
-			_0185_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [6];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0186_ <= 1'h0;
-		else if (!_0013_)
-			_0186_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [7];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0187_ <= 1'h0;
-		else if (!_0013_)
-			_0187_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [8];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0188_ <= 1'h0;
-		else if (!_0013_)
-			_0188_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [9];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0189_ <= 1'h0;
-		else if (!_0013_)
-			_0189_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [10];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0190_ <= 1'h0;
-		else if (!_0013_)
-			_0190_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [11];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0191_ <= 1'h0;
-		else if (!_0013_)
-			_0191_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [12];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0192_ <= 1'h0;
-		else if (!_0013_)
-			_0192_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [13];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0193_ <= 1'h0;
-		else if (!_0013_)
-			_0193_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [14];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0194_ <= 1'h0;
-		else if (!_0013_)
-			_0194_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [15];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0195_ <= 1'h0;
-		else if (!_0013_)
-			_0195_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [16];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0196_ <= 1'h0;
-		else if (!_0013_)
-			_0196_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [17];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0197_ <= 1'h0;
-		else if (!_0013_)
-			_0197_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [18];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0198_ <= 1'h0;
-		else if (!_0013_)
-			_0198_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [19];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0199_ <= 1'h0;
-		else if (!_0013_)
-			_0199_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [20];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0200_ <= 1'h0;
-		else if (!_0013_)
-			_0200_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [21];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0201_ <= 1'h0;
-		else if (!_0013_)
-			_0201_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [22];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0202_ <= 1'h0;
-		else if (!_0013_)
-			_0202_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [23];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0203_ <= 1'h0;
-		else if (!_0013_)
-			_0203_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [24];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0204_ <= 1'h0;
-		else if (!_0013_)
-			_0204_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [25];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0205_ <= 1'h0;
-		else if (!_0013_)
-			_0205_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [26];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0206_ <= 1'h0;
-		else if (!_0013_)
-			_0206_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [27];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0207_ <= 1'h0;
-		else if (!_0013_)
-			_0207_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [28];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0208_ <= 1'h0;
-		else if (!_0013_)
-			_0208_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [29];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0209_ <= 1'h0;
-		else if (!_0013_)
-			_0209_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [30];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0210_ <= 1'h0;
-		else if (!_0013_)
-			_0210_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [31];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0211_ <= 1'h0;
-		else if (!_0013_)
-			_0211_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [32];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0212_ <= 1'h0;
-		else if (!_0013_)
-			_0212_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [33];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0213_ <= 1'h0;
-		else if (!_0013_)
-			_0213_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [34];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0214_ <= 1'h0;
-		else if (!_0013_)
-			_0214_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [35];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0215_ <= 1'h0;
-		else if (!_0013_)
-			_0215_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [36];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0216_ <= 1'h0;
-		else if (!_0013_)
-			_0216_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [37];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0217_ <= 1'h0;
-		else if (!_0013_)
-			_0217_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [38];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0218_ <= 1'h0;
-		else if (!_0013_)
-			_0218_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [39];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0219_ <= 1'h0;
-		else if (!_0013_)
-			_0219_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [40];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0220_ <= 1'h0;
-		else if (!_0013_)
-			_0220_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [41];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0221_ <= 1'h0;
-		else if (!_0013_)
-			_0221_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [42];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0222_ <= 1'h0;
-		else if (!_0013_)
-			_0222_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [43];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0223_ <= 1'h0;
-		else if (!_0013_)
-			_0223_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [44];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0224_ <= 1'h0;
-		else if (!_0013_)
-			_0224_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [45];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0225_ <= 1'h0;
-		else if (!_0013_)
-			_0225_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [46];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0226_ <= 1'h0;
-		else if (!_0013_)
-			_0226_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [47];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0227_ <= 1'h0;
-		else if (!_0013_)
-			_0227_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [48];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0228_ <= 1'h0;
-		else if (!_0013_)
-			_0228_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [49];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0229_ <= 1'h0;
-		else if (!_0013_)
-			_0229_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [50];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0230_ <= 1'h0;
-		else if (!_0013_)
-			_0230_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [51];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0231_ <= 1'h0;
-		else if (!_0013_)
-			_0231_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [52];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0232_ <= 1'h0;
-		else if (!_0013_)
-			_0232_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [53];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0233_ <= 1'h0;
-		else if (!_0013_)
-			_0233_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [54];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0234_ <= 1'h0;
-		else if (!_0013_)
-			_0234_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [55];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0235_ <= 1'h0;
-		else if (!_0013_)
-			_0235_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [56];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0236_ <= 1'h0;
-		else if (!_0013_)
-			_0236_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [57];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0237_ <= 1'h0;
-		else if (!_0013_)
-			_0237_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [58];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0238_ <= 1'h0;
-		else if (!_0013_)
-			_0238_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [59];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0239_ <= 1'h0;
-		else if (!_0013_)
-			_0239_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [60];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0240_ <= 1'h0;
-		else if (!_0013_)
-			_0240_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [61];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0241_ <= 1'h0;
-		else if (!_0013_)
-			_0241_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [62];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0242_ <= 1'h0;
-		else if (!_0013_)
-			_0242_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [63];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0243_ <= 1'h0;
-		else if (!_0013_)
-			_0243_ <= \mchip.design.receiver.crc.crc16.bit_in ;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0244_ <= 1'h1;
+			\mchip.game2.score_inst.score[2] [0] <= _0098_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.score[2] [1] <= 1'h0;
+		else if (_0004_)
+			\mchip.game2.score_inst.score[2] [1] <= _0099_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.score[2] [2] <= 1'h0;
+		else if (_0004_)
+			\mchip.game2.score_inst.score[2] [2] <= _0100_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.score[2] [3] <= 1'h0;
+		else if (_0004_)
+			\mchip.game2.score_inst.score[2] [3] <= _0101_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.score[1] [0] <= 1'h0;
 		else if (_0005_)
-			_0244_ <= _0043_;
+			\mchip.game2.score_inst.score[1] [0] <= _0102_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0245_ <= 1'h1;
+		if (_0020_)
+			\mchip.game2.score_inst.score[1] [1] <= 1'h0;
 		else if (_0005_)
-			_0245_ <= _0050_;
+			\mchip.game2.score_inst.score[1] [1] <= _0103_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0246_ <= 1'h1;
+		if (_0020_)
+			\mchip.game2.score_inst.score[1] [2] <= 1'h0;
 		else if (_0005_)
-			_0246_ <= _0051_;
+			\mchip.game2.score_inst.score[1] [2] <= _0104_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0247_ <= 1'h1;
+		if (_0020_)
+			\mchip.game2.score_inst.score[1] [3] <= 1'h0;
 		else if (_0005_)
-			_0247_ <= _0052_;
+			\mchip.game2.score_inst.score[1] [3] <= _0105_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0248_ <= 1'h1;
-		else if (_0005_)
-			_0248_ <= _0053_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0249_ <= 1'h1;
-		else if (_0005_)
-			_0249_ <= _0054_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0250_ <= 1'h1;
-		else if (_0005_)
-			_0250_ <= _0055_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0251_ <= 1'h1;
-		else if (_0005_)
-			_0251_ <= _0056_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0252_ <= 1'h1;
-		else if (_0005_)
-			_0252_ <= _0057_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0253_ <= 1'h1;
-		else if (_0005_)
-			_0253_ <= _0058_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0254_ <= 1'h1;
-		else if (_0005_)
-			_0254_ <= _0044_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0255_ <= 1'h1;
-		else if (_0005_)
-			_0255_ <= _0045_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0256_ <= 1'h1;
-		else if (_0005_)
-			_0256_ <= _0046_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0257_ <= 1'h1;
-		else if (_0005_)
-			_0257_ <= _0047_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0258_ <= 1'h1;
-		else if (_0005_)
-			_0258_ <= _0048_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0259_ <= 1'h1;
-		else if (_0005_)
-			_0259_ <= _0049_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0260_ <= 1'h0;
+		if (_0020_)
+			\mchip.game2.score_inst.score[0] [0] <= 1'h0;
 		else if (_0006_)
-			_0260_ <= _0040_;
+			\mchip.game2.score_inst.score[0] [0] <= _0106_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0261_ <= 1'h0;
+		if (_0020_)
+			\mchip.game2.score_inst.score[0] [1] <= 1'h0;
 		else if (_0006_)
-			_0261_ <= _0041_;
+			\mchip.game2.score_inst.score[0] [1] <= _0107_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0262_ <= 1'h0;
+		if (_0020_)
+			\mchip.game2.score_inst.score[0] [2] <= 1'h0;
 		else if (_0006_)
-			_0262_ <= _0042_;
+			\mchip.game2.score_inst.score[0] [2] <= _0108_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0263_ <= 1'h1;
+		if (_0020_)
+			\mchip.game2.score_inst.score[0] [3] <= 1'h0;
+		else if (_0006_)
+			\mchip.game2.score_inst.score[0] [3] <= _0109_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [0] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [0] <= _0110_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [1] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [1] <= _0121_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [2] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [2] <= _0124_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [3] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [3] <= _0125_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [4] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [4] <= _0126_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [5] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [5] <= _0127_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [6] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [6] <= _0128_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [7] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [7] <= _0129_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [8] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [8] <= _0130_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [9] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [9] <= _0131_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [10] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [10] <= _0111_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [11] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [11] <= _0112_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [12] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [12] <= _0113_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [13] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [13] <= _0114_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [14] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [14] <= _0115_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [15] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [15] <= _0116_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [16] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [16] <= _0117_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [17] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [17] <= _0118_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [18] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [18] <= _0119_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [19] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [19] <= _0120_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [20] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [20] <= _0122_;
+	always @(posedge io_in[12])
+		if (_0020_)
+			\mchip.game2.score_inst.ctr [21] <= 1'h0;
+		else if (_0163_)
+			\mchip.game2.score_inst.ctr [21] <= _0123_;
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[2] [0] <= \mchip.game2.score_inst.score[2] [0];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[2] [1] <= \mchip.game2.score_inst.score[2] [1];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[2] [2] <= \mchip.game2.score_inst.score[2] [2];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[2] [3] <= \mchip.game2.score_inst.score[2] [3];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[1] [0] <= \mchip.game2.score_inst.score[1] [0];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[1] [1] <= \mchip.game2.score_inst.score[1] [1];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[1] [2] <= \mchip.game2.score_inst.score[1] [2];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[1] [3] <= \mchip.game2.score_inst.score[1] [3];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[0] [0] <= \mchip.game2.score_inst.score[0] [0];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[0] [1] <= \mchip.game2.score_inst.score[0] [1];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[0] [2] <= \mchip.game2.score_inst.score[0] [2];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.score_saved[0] [3] <= \mchip.game2.score_inst.score[0] [3];
+	always @(posedge io_in[12])
+		if (!_0092_)
+			\mchip.game2.score_inst.pixel  <= 1'h0;
 		else
-			_0263_ <= _0000_;
+			\mchip.game2.score_inst.pixel  <= _0093_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0264_ <= 1'h0;
+		if (_0014_)
+			\mchip.game2.rendering_inst.layers [3] <= 1'h0;
 		else
-			_0264_ <= _0001_;
+			\mchip.game2.rendering_inst.layers [3] <= _3631_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0265_ <= 1'h0;
+		if (_0017_)
+			\mchip.game2.rendering_inst.layers [2] <= 1'h0;
 		else
-			_0265_ <= _0002_;
+			\mchip.game2.rendering_inst.layers [2] <= _3630_;
 	always @(posedge io_in[12])
 		if (io_in[13])
-			_0266_ <= 1'h0;
-		else
-			_0266_ <= _0003_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0267_ <= 1'h0;
-		else
-			_0267_ <= \mchip.design.transmitter.fsm.next_state [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0268_ <= 1'h0;
-		else
-			_0268_ <= \mchip.design.transmitter.fsm.next_state [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0269_ <= 1'h0;
-		else
-			_0269_ <= \mchip.design.transmitter.fsm.next_state [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0270_ <= 1'h1;
-		else if (_0005_)
-			_0270_ <= _0059_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0271_ <= 1'h1;
-		else if (_0005_)
-			_0271_ <= _0060_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0272_ <= 1'h1;
-		else if (_0005_)
-			_0272_ <= _0061_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0273_ <= 1'h1;
-		else if (_0005_)
-			_0273_ <= _0062_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0274_ <= 1'h1;
-		else if (_0005_)
-			_0274_ <= _0063_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0275_ <= 1'h0;
-		else
-			_0275_ <= \mchip.design.receiver.fsm.next_state [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0276_ <= 1'h0;
-		else
-			_0276_ <= \mchip.design.receiver.fsm.next_state [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0277_ <= 1'h0;
-		else
-			_0277_ <= \mchip.design.receiver.fsm.next_state [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0278_ <= 1'h1;
-		else if (_0007_)
-			_0278_ <= _0034_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0279_ <= 1'h1;
-		else if (_0007_)
-			_0279_ <= _0035_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0280_ <= 1'h1;
-		else if (_0007_)
-			_0280_ <= _0036_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0281_ <= 1'h1;
-		else if (_0007_)
-			_0281_ <= _0037_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0282_ <= 1'h1;
-		else if (_0007_)
-			_0282_ <= _0038_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0283_ <= 1'h1;
-		else if (_0007_)
-			_0283_ <= _0018_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0284_ <= 1'h1;
-		else if (_0007_)
-			_0284_ <= _0025_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0285_ <= 1'h1;
-		else if (_0007_)
-			_0285_ <= _0026_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0286_ <= 1'h1;
-		else if (_0007_)
-			_0286_ <= _0027_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0287_ <= 1'h1;
-		else if (_0007_)
-			_0287_ <= _0028_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0288_ <= 1'h1;
-		else if (_0007_)
-			_0288_ <= _0029_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0289_ <= 1'h1;
-		else if (_0007_)
-			_0289_ <= _0030_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0290_ <= 1'h1;
-		else if (_0007_)
-			_0290_ <= _0031_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0291_ <= 1'h1;
-		else if (_0007_)
-			_0291_ <= _0032_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0292_ <= 1'h1;
-		else if (_0007_)
-			_0292_ <= _0033_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0293_ <= 1'h1;
-		else if (_0007_)
-			_0293_ <= _0019_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0294_ <= 1'h1;
-		else if (_0007_)
-			_0294_ <= _0020_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0295_ <= 1'h1;
-		else if (_0007_)
-			_0295_ <= _0021_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0296_ <= 1'h1;
-		else if (_0007_)
-			_0296_ <= _0022_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0297_ <= 1'h1;
-		else if (_0007_)
-			_0297_ <= _0023_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0298_ <= 1'h1;
-		else if (_0007_)
-			_0298_ <= _0024_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0299_ <= 1'h0;
+			\mchip.game2.rendering_inst.cactus_select [1] <= 1'h0;
 		else if (_0008_)
-			_0299_ <= _0015_;
+			\mchip.game2.rendering_inst.cactus_select [1] <= _0089_;
 	always @(posedge io_in[12])
 		if (io_in[13])
-			_0300_ <= 1'h0;
-		else if (_0008_)
-			_0300_ <= _0016_;
+			\mchip.game2.rendering_inst.cactus_select [2] <= 1'h0;
+		else if (_0007_)
+			\mchip.game2.rendering_inst.cactus_select [2] <= _0090_;
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0301_ <= 1'h0;
-		else if (_0008_)
-			_0301_ <= _0017_;
+		if (!_0020_)
+			\mchip.game2.jumping_inst.jump_pos [0] <= _0000_[0];
 	always @(posedge io_in[12])
-		if (io_in[13])
-			_0302_ <= 1'h1;
+		if (!_0020_)
+			\mchip.game2.jumping_inst.jump_pos [1] <= _0000_[1];
+	always @(posedge io_in[12])
+		if (!_0020_)
+			\mchip.game2.jumping_inst.jump_pos [2] <= _0000_[2];
+	always @(posedge io_in[12])
+		if (!_0020_)
+			\mchip.game2.jumping_inst.jump_pos [3] <= _0000_[3];
+	always @(posedge io_in[12])
+		if (!_0020_)
+			\mchip.game2.jumping_inst.jump_pos [4] <= _0000_[4];
+	always @(posedge io_in[12])
+		if (!_0020_)
+			\mchip.game2.jumping_inst.jump_pos [5] <= _0000_[5];
+	always @(posedge io_in[12])
+		if (!_0020_)
+			\mchip.game2.jumping_inst.jump_pos [6] <= _0000_[6];
+	always @(posedge io_in[12])
+		if (_0018_)
+			\mchip.game2.rendering_inst.layers [0] <= 1'h0;
 		else
-			_0302_ <= _0039_;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0303_ <= 1'h0;
-		else if (!_0014_)
-			_0303_ <= \mchip.design.receiver.packet_decode.PID_accum [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0304_ <= 1'h0;
-		else if (!_0014_)
-			_0304_ <= \mchip.design.receiver.packet_decode.PID_accum [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0305_ <= 1'h0;
-		else if (!_0014_)
-			_0305_ <= \mchip.design.receiver.packet_decode.PID_accum [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0306_ <= 1'h0;
-		else if (!_0014_)
-			_0306_ <= \mchip.design.receiver.packet_decode.PID_accum [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0307_ <= 1'h0;
-		else if (!_0014_)
-			_0307_ <= \mchip.design.receiver.packet_decode.PID_accum [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0308_ <= 1'h0;
-		else if (!_0014_)
-			_0308_ <= \mchip.design.receiver.packet_decode.PID_accum [6];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0309_ <= 1'h0;
-		else if (!_0014_)
-			_0309_ <= \mchip.design.receiver.packet_decode.PID_accum [7];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0310_ <= 1'h0;
-		else if (!_0014_)
-			_0310_ <= \mchip.design.receiver.crc.crc16.bit_in ;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0311_ <= 1'h0;
-		else if (_2603_)
-			_0311_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0312_ <= 1'h0;
-		else if (_2603_)
-			_0312_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0313_ <= 1'h0;
-		else if (_2603_)
-			_0313_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0314_ <= 1'h0;
-		else if (_2603_)
-			_0314_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0315_ <= 1'h0;
-		else if (_2603_)
-			_0315_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0316_ <= 1'h0;
-		else if (_2603_)
-			_0316_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0317_ <= 1'h0;
-		else if (_2603_)
-			_0317_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [6];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0318_ <= 1'h0;
-		else if (_2603_)
-			_0318_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [7];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0319_ <= 1'h0;
-		else if (_2603_)
-			_0319_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [8];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0320_ <= 1'h0;
-		else if (_2603_)
-			_0320_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [9];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0321_ <= 1'h0;
-		else if (_2603_)
-			_0321_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [10];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0322_ <= 1'h0;
-		else if (_2603_)
-			_0322_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [11];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0323_ <= 1'h0;
-		else if (_2603_)
-			_0323_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [12];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0324_ <= 1'h0;
-		else if (_2603_)
-			_0324_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [13];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0325_ <= 1'h0;
-		else if (_2603_)
-			_0325_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [14];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0326_ <= 1'h0;
-		else if (_2603_)
-			_0326_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [15];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0327_ <= 1'h0;
-		else if (_2603_)
-			_0327_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [16];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0328_ <= 1'h0;
-		else if (_2603_)
-			_0328_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [17];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0329_ <= 1'h0;
-		else if (_2603_)
-			_0329_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [18];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0330_ <= 1'h0;
-		else if (_2603_)
-			_0330_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [19];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0331_ <= 1'h0;
-		else if (_2603_)
-			_0331_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [20];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0332_ <= 1'h0;
-		else if (_2603_)
-			_0332_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [21];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0333_ <= 1'h0;
-		else if (_2603_)
-			_0333_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [22];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0334_ <= 1'h0;
-		else if (_2603_)
-			_0334_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [23];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0335_ <= 1'h0;
-		else if (_2603_)
-			_0335_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [24];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0336_ <= 1'h0;
-		else if (_2603_)
-			_0336_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [25];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0337_ <= 1'h0;
-		else if (_2603_)
-			_0337_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [26];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0338_ <= 1'h0;
-		else if (_2603_)
-			_0338_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [27];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0339_ <= 1'h0;
-		else if (_2603_)
-			_0339_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [28];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0340_ <= 1'h0;
-		else if (_2603_)
-			_0340_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [29];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0341_ <= 1'h0;
-		else if (_2603_)
-			_0341_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [30];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0342_ <= 1'h0;
-		else if (_2603_)
-			_0342_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [31];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0343_ <= 1'h0;
-		else if (_2603_)
-			_0343_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [32];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0344_ <= 1'h0;
-		else if (_2603_)
-			_0344_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [33];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0345_ <= 1'h0;
-		else if (_2603_)
-			_0345_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [34];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0346_ <= 1'h0;
-		else if (_2603_)
-			_0346_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [35];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0347_ <= 1'h0;
-		else if (_2603_)
-			_0347_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [36];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0348_ <= 1'h0;
-		else if (_2603_)
-			_0348_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [37];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0349_ <= 1'h0;
-		else if (_2603_)
-			_0349_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [38];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0350_ <= 1'h0;
-		else if (_2603_)
-			_0350_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [39];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0351_ <= 1'h0;
-		else if (_2603_)
-			_0351_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [40];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0352_ <= 1'h0;
-		else if (_2603_)
-			_0352_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [41];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0353_ <= 1'h0;
-		else if (_2603_)
-			_0353_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [42];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0354_ <= 1'h0;
-		else if (_2603_)
-			_0354_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [43];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0355_ <= 1'h0;
-		else if (_2603_)
-			_0355_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [44];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0356_ <= 1'h0;
-		else if (_2603_)
-			_0356_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [45];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0357_ <= 1'h0;
-		else if (_2603_)
-			_0357_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [46];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0358_ <= 1'h0;
-		else if (_2603_)
-			_0358_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [47];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0359_ <= 1'h0;
-		else if (_2603_)
-			_0359_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [48];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0360_ <= 1'h0;
-		else if (_2603_)
-			_0360_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [49];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0361_ <= 1'h0;
-		else if (_2603_)
-			_0361_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [50];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0362_ <= 1'h0;
-		else if (_2603_)
-			_0362_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [51];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0363_ <= 1'h0;
-		else if (_2603_)
-			_0363_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [52];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0364_ <= 1'h0;
-		else if (_2603_)
-			_0364_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [53];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0365_ <= 1'h0;
-		else if (_2603_)
-			_0365_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [54];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0366_ <= 1'h0;
-		else if (_2603_)
-			_0366_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [55];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0367_ <= 1'h0;
-		else if (_2603_)
-			_0367_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [56];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0368_ <= 1'h0;
-		else if (_2603_)
-			_0368_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [57];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0369_ <= 1'h0;
-		else if (_2603_)
-			_0369_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [58];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0370_ <= 1'h0;
-		else if (_2603_)
-			_0370_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [59];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0371_ <= 1'h0;
-		else if (_2603_)
-			_0371_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [60];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0372_ <= 1'h0;
-		else if (_2603_)
-			_0372_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [61];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0373_ <= 1'h0;
-		else if (_2603_)
-			_0373_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [62];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0374_ <= 1'h0;
-		else if (_2603_)
-			_0374_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [63];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0375_ <= 1'h0;
-		else if (_0010_)
-			_0375_ <= \mchip.design.receiver.fsm.count_next [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0376_ <= 1'h0;
-		else if (_0010_)
-			_0376_ <= \mchip.design.receiver.fsm.count_next [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0377_ <= 1'h0;
-		else if (_0010_)
-			_0377_ <= \mchip.design.receiver.fsm.count_next [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0378_ <= 1'h0;
-		else if (_0010_)
-			_0378_ <= \mchip.design.receiver.fsm.count_next [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0379_ <= 1'h0;
-		else if (_0010_)
-			_0379_ <= \mchip.design.receiver.fsm.count_next [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0380_ <= 1'h0;
-		else if (_0010_)
-			_0380_ <= \mchip.design.receiver.fsm.count_next [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0381_ <= 1'h0;
-		else if (_0010_)
-			_0381_ <= \mchip.design.receiver.fsm.count_next [6];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0382_ <= 1'h0;
-		else
-			_0382_ <= \mchip.design.receiver.find_sync.bit_in ;
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0383_ <= 1'h0;
-		else
-			_0383_ <= \mchip.design.receiver.find_sync.log [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0384_ <= 1'h0;
-		else
-			_0384_ <= \mchip.design.receiver.find_sync.log [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0385_ <= 1'h0;
-		else
-			_0385_ <= \mchip.design.receiver.find_sync.log [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0386_ <= 1'h0;
-		else
-			_0386_ <= \mchip.design.receiver.find_sync.log [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0387_ <= 1'h0;
-		else
-			_0387_ <= \mchip.design.receiver.find_sync.log [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0388_ <= 1'h0;
-		else
-			_0388_ <= \mchip.design.receiver.find_sync.log [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0389_ <= 1'h0;
-		else
-			_0389_ <= io_in[0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0390_ <= 1'h0;
-		else
-			_0390_ <= \mchip.design.receiver.wire_in.dm_log [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0391_ <= 1'h0;
-		else
-			_0391_ <= \mchip.design.receiver.wire_in.dm_log [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0392_ <= 1'h0;
-		else
-			_0392_ <= io_in[1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0393_ <= 1'h0;
-		else
-			_0393_ <= \mchip.design.receiver.wire_in.dp_log [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0394_ <= 1'h0;
-		else
-			_0394_ <= \mchip.design.receiver.wire_in.dp_log [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0395_ <= 1'h0;
-		else if (_0011_)
-			_0395_ <= \mchip.design.io_fsm.timeout_counter_nxt [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0396_ <= 1'h0;
-		else if (_0011_)
-			_0396_ <= \mchip.design.io_fsm.timeout_counter_nxt [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0397_ <= 1'h0;
-		else if (_0011_)
-			_0397_ <= \mchip.design.io_fsm.timeout_counter_nxt [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0398_ <= 1'h0;
-		else if (_0011_)
-			_0398_ <= \mchip.design.io_fsm.timeout_counter_nxt [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0399_ <= 1'h0;
-		else
-			_0399_ <= \mchip.design.io_fsm.timer_nxt [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0400_ <= 1'h0;
-		else
-			_0400_ <= \mchip.design.io_fsm.timer_nxt [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0401_ <= 1'h0;
-		else
-			_0401_ <= \mchip.design.io_fsm.timer_nxt [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0402_ <= 1'h0;
-		else
-			_0402_ <= \mchip.design.io_fsm.timer_nxt [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0403_ <= 1'h0;
-		else
-			_0403_ <= \mchip.design.io_fsm.timer_nxt [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0404_ <= 1'h0;
-		else
-			_0404_ <= \mchip.design.io_fsm.timer_nxt [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0405_ <= 1'h0;
-		else
-			_0405_ <= \mchip.design.io_fsm.timer_nxt [6];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0406_ <= 1'h0;
-		else
-			_0406_ <= \mchip.design.io_fsm.timer_nxt [7];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0407_ <= 1'h0;
-		else
-			_0407_ <= \mchip.design.io_fsm.timer_nxt [8];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0408_ <= 1'h0;
-		else if (_0012_)
-			_0408_ <= \mchip.design.io_fsm.error_counter_nxt [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0409_ <= 1'h0;
-		else if (_0012_)
-			_0409_ <= \mchip.design.io_fsm.error_counter_nxt [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0410_ <= 1'h0;
-		else if (_0012_)
-			_0410_ <= \mchip.design.io_fsm.error_counter_nxt [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0411_ <= 1'h0;
-		else if (_0012_)
-			_0411_ <= \mchip.design.io_fsm.error_counter_nxt [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0412_ <= 1'h0;
-		else if (_0068_)
-			_0412_ <= io_in[2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0413_ <= 1'h0;
-		else if (_0068_)
-			_0413_ <= io_in[3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0414_ <= 1'h0;
-		else if (_0068_)
-			_0414_ <= io_in[4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0415_ <= 1'h0;
-		else if (_0068_)
-			_0415_ <= io_in[5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0416_ <= 1'h0;
-		else if (_0068_)
-			_0416_ <= \mchip.design.inter.data_out_reg [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0417_ <= 1'h0;
-		else if (_0068_)
-			_0417_ <= \mchip.design.inter.data_out_reg [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0418_ <= 1'h0;
-		else if (_0068_)
-			_0418_ <= \mchip.design.inter.data_out_reg [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0419_ <= 1'h0;
-		else if (_0068_)
-			_0419_ <= \mchip.design.inter.data_out_reg [3];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0420_ <= 1'h0;
-		else if (_0068_)
-			_0420_ <= \mchip.design.inter.data_out_reg [4];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0421_ <= 1'h0;
-		else if (_0068_)
-			_0421_ <= \mchip.design.inter.data_out_reg [5];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0422_ <= 1'h0;
-		else if (_0068_)
-			_0422_ <= \mchip.design.inter.data_out_reg [6];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0423_ <= 1'h0;
-		else if (_0068_)
-			_0423_ <= \mchip.design.inter.data_out_reg [7];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0424_ <= 1'h0;
-		else if (_0068_)
-			_0424_ <= \mchip.design.inter.data_out_reg [8];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0425_ <= 1'h0;
-		else if (_0068_)
-			_0425_ <= \mchip.design.inter.data_out_reg [9];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0426_ <= 1'h0;
-		else if (_0068_)
-			_0426_ <= \mchip.design.inter.data_out_reg [10];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0427_ <= 1'h0;
-		else if (_0068_)
-			_0427_ <= \mchip.design.inter.data_out_reg [11];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0428_ <= 1'h0;
-		else if (_0068_)
-			_0428_ <= \mchip.design.inter.data_out_reg [12];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0429_ <= 1'h0;
-		else if (_0068_)
-			_0429_ <= \mchip.design.inter.data_out_reg [13];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0430_ <= 1'h0;
-		else if (_0068_)
-			_0430_ <= \mchip.design.inter.data_out_reg [14];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0431_ <= 1'h0;
-		else if (_0068_)
-			_0431_ <= \mchip.design.inter.data_out_reg [15];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0432_ <= 1'h0;
-		else if (_0068_)
-			_0432_ <= \mchip.design.inter.data_out_reg [16];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0433_ <= 1'h0;
-		else if (_0068_)
-			_0433_ <= \mchip.design.inter.data_out_reg [17];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0434_ <= 1'h0;
-		else if (_0068_)
-			_0434_ <= \mchip.design.inter.data_out_reg [18];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0435_ <= 1'h0;
-		else if (_0068_)
-			_0435_ <= \mchip.design.inter.data_out_reg [19];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0436_ <= 1'h0;
-		else if (_0068_)
-			_0436_ <= \mchip.design.inter.data_out_reg [20];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0437_ <= 1'h0;
-		else if (_0068_)
-			_0437_ <= \mchip.design.inter.data_out_reg [21];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0438_ <= 1'h0;
-		else if (_0068_)
-			_0438_ <= \mchip.design.inter.data_out_reg [22];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0439_ <= 1'h0;
-		else if (_0068_)
-			_0439_ <= \mchip.design.inter.data_out_reg [23];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0440_ <= 1'h0;
-		else if (_0068_)
-			_0440_ <= \mchip.design.inter.data_out_reg [24];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0441_ <= 1'h0;
-		else if (_0068_)
-			_0441_ <= \mchip.design.inter.data_out_reg [25];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0442_ <= 1'h0;
-		else if (_0068_)
-			_0442_ <= \mchip.design.inter.data_out_reg [26];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0443_ <= 1'h0;
-		else if (_0068_)
-			_0443_ <= \mchip.design.inter.data_out_reg [27];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0444_ <= 1'h0;
-		else if (_0068_)
-			_0444_ <= \mchip.design.inter.data_out_reg [28];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0445_ <= 1'h0;
-		else if (_0068_)
-			_0445_ <= \mchip.design.inter.data_out_reg [29];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0446_ <= 1'h0;
-		else if (_0068_)
-			_0446_ <= \mchip.design.inter.data_out_reg [30];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0447_ <= 1'h0;
-		else if (_0068_)
-			_0447_ <= \mchip.design.inter.data_out_reg [31];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0448_ <= 1'h0;
-		else if (_0068_)
-			_0448_ <= \mchip.design.inter.data_out_reg [32];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0449_ <= 1'h0;
-		else if (_0068_)
-			_0449_ <= \mchip.design.inter.data_out_reg [33];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0450_ <= 1'h0;
-		else if (_0068_)
-			_0450_ <= \mchip.design.inter.data_out_reg [34];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0451_ <= 1'h0;
-		else if (_0068_)
-			_0451_ <= \mchip.design.inter.data_out_reg [35];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0452_ <= 1'h0;
-		else if (_0068_)
-			_0452_ <= \mchip.design.inter.data_out_reg [36];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0453_ <= 1'h0;
-		else if (_0068_)
-			_0453_ <= \mchip.design.inter.data_out_reg [37];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0454_ <= 1'h0;
-		else if (_0068_)
-			_0454_ <= \mchip.design.inter.data_out_reg [38];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0455_ <= 1'h0;
-		else if (_0068_)
-			_0455_ <= \mchip.design.inter.data_out_reg [39];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0456_ <= 1'h0;
-		else if (_0068_)
-			_0456_ <= \mchip.design.inter.data_out_reg [40];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0457_ <= 1'h0;
-		else if (_0068_)
-			_0457_ <= \mchip.design.inter.data_out_reg [41];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0458_ <= 1'h0;
-		else if (_0068_)
-			_0458_ <= \mchip.design.inter.data_out_reg [42];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0459_ <= 1'h0;
-		else if (_0068_)
-			_0459_ <= \mchip.design.inter.data_out_reg [43];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0460_ <= 1'h0;
-		else if (_0068_)
-			_0460_ <= \mchip.design.inter.data_out_reg [44];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0461_ <= 1'h0;
-		else if (_0068_)
-			_0461_ <= \mchip.design.inter.data_out_reg [45];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0462_ <= 1'h0;
-		else if (_0068_)
-			_0462_ <= \mchip.design.inter.data_out_reg [46];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0463_ <= 1'h0;
-		else if (_0068_)
-			_0463_ <= \mchip.design.inter.data_out_reg [47];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0464_ <= 1'h0;
-		else if (_0068_)
-			_0464_ <= \mchip.design.inter.data_out_reg [48];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0465_ <= 1'h0;
-		else if (_0068_)
-			_0465_ <= \mchip.design.inter.data_out_reg [49];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0466_ <= 1'h0;
-		else if (_0068_)
-			_0466_ <= \mchip.design.inter.data_out_reg [50];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0467_ <= 1'h0;
-		else if (_0068_)
-			_0467_ <= \mchip.design.inter.data_out_reg [51];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0468_ <= 1'h0;
-		else if (_0068_)
-			_0468_ <= \mchip.design.inter.data_out_reg [52];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0469_ <= 1'h0;
-		else if (_0068_)
-			_0469_ <= \mchip.design.inter.data_out_reg [53];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0470_ <= 1'h0;
-		else if (_0068_)
-			_0470_ <= \mchip.design.inter.data_out_reg [54];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0471_ <= 1'h0;
-		else if (_0068_)
-			_0471_ <= \mchip.design.inter.data_out_reg [55];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0472_ <= 1'h0;
-		else if (_0068_)
-			_0472_ <= \mchip.design.inter.data_out_reg [56];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0473_ <= 1'h0;
-		else if (_0068_)
-			_0473_ <= \mchip.design.inter.data_out_reg [57];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0474_ <= 1'h0;
-		else if (_0068_)
-			_0474_ <= \mchip.design.inter.data_out_reg [58];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0475_ <= 1'h0;
-		else if (_0068_)
-			_0475_ <= \mchip.design.inter.data_out_reg [59];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0476_ <= 1'h0;
-		else
-			_0476_ <= \mchip.design.rw_fsm.next_state [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0477_ <= 1'h0;
-		else
-			_0477_ <= \mchip.design.rw_fsm.next_state [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0478_ <= 1'h0;
-		else
-			_0478_ <= \mchip.design.rw_fsm.next_state [2];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0479_ <= 1'h0;
-		else
-			_0479_ <= \mchip.design.inter.next_state [0];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0480_ <= 1'h0;
-		else
-			_0480_ <= \mchip.design.inter.next_state [1];
-	always @(posedge io_in[12])
-		if (io_in[13])
-			_0481_ <= 1'h0;
-		else
-			_0481_ <= \mchip.design.inter.next_state [2];
-	assign io_out[13:12] = 2'h0;
+			\mchip.game2.rendering_inst.layers [0] <= _3629_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.rendering_inst.cactus_select [0] <= 1'h0;
+		else if (_0009_)
+			\mchip.game2.rendering_inst.cactus_select [0] <= _0088_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.cactus_type [1] <= 1'h0;
+		else if (_0025_)
+			\mchip.game2.cactus_type [1] <= \mchip.game2.rng_inst.out [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			\mchip.game2.cactus_type [0] <= 1'h0;
+		else if (_0026_)
+			\mchip.game2.cactus_type [0] <= \mchip.game2.rng_inst.out [2];
+	assign _3620_[9:1] = 9'h000;
+	assign _3621_[19:1] = 19'h00000;
+	assign _3622_[31:1] = 31'h00000000;
+	assign _3623_[0] = _3621_[0];
+	assign _3624_[0] = _3622_[0];
+	assign _3625_[0] = _3620_[0];
+	assign _3626_[10:1] = {\mchip.game2.scroll_inst.pos [10:4], 3'h0};
+	assign _3627_[0] = _3626_[0];
+	assign io_out = {8'h00, \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.vga_inst.vsync , \mchip.game2.vga_inst.hsync };
 	assign \mchip.clock  = io_in[12];
-	assign \mchip.design.clock  = io_in[12];
-	assign \mchip.design.data_ENDP  = \mchip.design.inter.ENDP_reg [3:0];
-	assign \mchip.design.data_in  = io_in[5:2];
-	assign \mchip.design.data_indx  = io_out[9:6];
-	assign \mchip.design.data_out  = io_out[5:2];
-	assign \mchip.design.data_received  = \mchip.design.finished ;
-	assign \mchip.design.final_data  = \mchip.design.io_fsm.final_data ;
-	assign \mchip.design.in_data  = \mchip.design.io_fsm.final_data ;
-	assign \mchip.design.inter.clock  = io_in[12];
-	assign \mchip.design.inter.cur_state [3] = 1'h0;
-	assign \mchip.design.inter.data_ENDP  = \mchip.design.inter.ENDP_reg [3:0];
-	assign \mchip.design.inter.data_in  = io_in[5:2];
-	assign \mchip.design.inter.data_indx  = io_out[9:6];
-	assign \mchip.design.inter.data_out  = io_out[5:2];
-	assign \mchip.design.inter.data_received  = \mchip.design.finished ;
-	assign \mchip.design.inter.final_data  = \mchip.design.io_fsm.final_data ;
-	assign \mchip.design.inter.memdata  = \mchip.design.inter.data_out_reg ;
-	assign \mchip.design.inter.mempage [11:0] = \mchip.design.inter.mempage_reg [11:0];
-	assign \mchip.design.inter.mempage_reg [15:12] = \mchip.design.inter.mempage [15:12];
-	assign \mchip.design.inter.mode  = io_in[9:6];
-	assign {\mchip.design.inter.msc_hb.in_reg [31:24], \mchip.design.inter.msc_hb.in_reg [19:0]} = {\mchip.design.inter.Addr_reg , \mchip.design.inter.ENDP_reg [3:0], \mchip.design.inter.mempage [15:12], \mchip.design.inter.mempage_reg [11:0]};
-	assign \mchip.design.inter.next_state [3] = 1'h0;
-	assign \mchip.design.inter.out_hb.in_reg  = \mchip.design.inter.data_out_reg ;
-	assign \mchip.design.inter.send_Addr  = \mchip.design.inter.Addr_reg [6:0];
-	assign \mchip.design.io_fsm.PID_to_sender  = 4'h0;
-	assign \mchip.design.io_fsm.clock  = io_in[12];
-	assign \mchip.design.io_fsm.cur_state [3] = 1'h0;
-	assign \mchip.design.io_fsm.data_ENDP  = \mchip.design.inter.ENDP_reg [3:0];
-	assign \mchip.design.io_fsm.next_state [3] = 1'h0;
-	assign \mchip.design.io_fsm.received_PID [3:1] = \mchip.design.receiver.packet_decode.PID_accum [3:1];
-	assign \mchip.design.io_fsm.received_data  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
-	assign \mchip.design.memory_address  = {\mchip.design.inter.mempage [15:12], \mchip.design.inter.mempage_reg [11:0]};
-	assign \mchip.design.memory_data  = \mchip.design.inter.data_out_reg ;
-	assign \mchip.design.mode  = io_in[9:6];
-	assign \mchip.design.read  = io_in[11];
-	assign \mchip.design.received_PID  = {\mchip.design.receiver.packet_decode.PID_accum [3:1], \mchip.design.io_fsm.received_PID [0]};
-	assign \mchip.design.received_payload  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
-	assign \mchip.design.receiver.PID  = {\mchip.design.receiver.packet_decode.PID_accum [3:1], \mchip.design.io_fsm.received_PID [0]};
-	assign \mchip.design.receiver.Payload  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
-	assign \mchip.design.receiver.bit_unstuff.bit_out  = \mchip.design.receiver.crc.crc16.bit_in ;
-	assign \mchip.design.receiver.bit_unstuff.clock  = io_in[12];
-	assign \mchip.design.receiver.clock  = io_in[12];
-	assign \mchip.design.receiver.crc.bit_in  = \mchip.design.receiver.crc.crc16.bit_in ;
-	assign \mchip.design.receiver.crc.clock  = io_in[12];
-	assign \mchip.design.receiver.crc.crc16.clock  = io_in[12];
-	assign \mchip.design.receiver.crc.crc5.bit_in  = \mchip.design.receiver.crc.crc16.bit_in ;
-	assign \mchip.design.receiver.crc.crc5.clock  = io_in[12];
-	assign \mchip.design.receiver.crc.index  = 7'h00;
-	assign \mchip.design.receiver.crc.sv2v_autoblock_1.i  = 32'd5;
-	assign \mchip.design.receiver.crc.sv2v_autoblock_2.j  = 32'd16;
-	assign \mchip.design.receiver.find_sync.clock  = io_in[12];
-	assign \mchip.design.receiver.find_sync.log [7] = 1'h0;
-	assign \mchip.design.receiver.fsm.PID  = \mchip.design.receiver.packet_decode.PID_accum [4:1];
-	assign \mchip.design.receiver.fsm.clock  = io_in[12];
-	assign \mchip.design.receiver.fsm.nrzi_en  = 1'h1;
-	assign \mchip.design.receiver.nrzi.bit_in  = \mchip.design.receiver.find_sync.bit_in ;
-	assign \mchip.design.receiver.nrzi.clock  = io_in[12];
-	assign \mchip.design.receiver.nrzi.cur_value_next  = \mchip.design.receiver.find_sync.bit_in ;
-	assign \mchip.design.receiver.nrzi.en  = 1'h1;
-	assign \mchip.design.receiver.nrzi_en  = 1'h1;
-	assign \mchip.design.receiver.packet_decode.PID_accum [0] = \mchip.design.io_fsm.received_PID [0];
-	assign \mchip.design.receiver.packet_decode.bit_in  = \mchip.design.receiver.crc.crc16.bit_in ;
-	assign \mchip.design.receiver.packet_decode.clock  = io_in[12];
-	assign \mchip.design.receiver.packet_decode.payload  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
-	assign \mchip.design.receiver.packet_decode.pid  = {\mchip.design.receiver.packet_decode.PID_accum [3:1], \mchip.design.io_fsm.received_PID [0]};
-	assign \mchip.design.receiver.packet_decode.pid_inv  = \mchip.design.receiver.packet_decode.PID_accum [7:4];
-	assign \mchip.design.receiver.packet_decode.pid_to_fsm  = \mchip.design.receiver.packet_decode.PID_accum [4:1];
-	assign \mchip.design.receiver.payload  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
-	assign \mchip.design.receiver.pid  = {\mchip.design.receiver.packet_decode.PID_accum [3:1], \mchip.design.io_fsm.received_PID [0]};
-	assign \mchip.design.receiver.pid_to_fsm  = \mchip.design.receiver.packet_decode.PID_accum [4:1];
-	assign \mchip.design.receiver.stuff_out  = \mchip.design.receiver.crc.crc16.bit_in ;
-	assign \mchip.design.receiver.wire_in.bit_out  = \mchip.design.receiver.find_sync.bit_in ;
-	assign \mchip.design.receiver.wire_in.clock  = io_in[12];
-	assign \mchip.design.receiver.wire_in.dm  = io_in[0];
-	assign \mchip.design.receiver.wire_in.dp  = io_in[1];
-	assign \mchip.design.receiver.wire_in.wires_in  = io_in[1:0];
-	assign \mchip.design.receiver.wire_out  = \mchip.design.receiver.find_sync.bit_in ;
-	assign \mchip.design.receiver.wires_in  = io_in[1:0];
-	assign \mchip.design.rw_fsm.clock  = io_in[12];
-	assign \mchip.design.rw_fsm.final_data  = \mchip.design.io_fsm.final_data ;
-	assign \mchip.design.rw_fsm.finished  = \mchip.design.finished ;
-	assign \mchip.design.rw_fsm.in_data  = \mchip.design.io_fsm.final_data ;
-	assign \mchip.design.rw_fsm.memdata  = \mchip.design.inter.data_out_reg ;
-	assign \mchip.design.rw_fsm.mempage  = {\mchip.design.inter.mempage [15:12], \mchip.design.inter.mempage_reg [11:0]};
-	assign \mchip.design.rw_fsm.page_data  = {\mchip.design.inter.mempage [15:12], \mchip.design.inter.mempage_reg [11:0], 48'h000000000000};
-	assign \mchip.design.rw_fsm.txn_done  = \mchip.design.io_fsm.completed_transaction ;
-	assign \mchip.design.send_Addr  = \mchip.design.inter.Addr_reg [6:0];
-	assign \mchip.design.send_PID  = 4'h0;
-	assign \mchip.design.status  = io_out[11:10];
-	assign \mchip.design.transmitter.Addr  = \mchip.design.inter.Addr_reg [6:0];
-	assign \mchip.design.transmitter.PID  = 4'h0;
-	assign \mchip.design.transmitter.bit_stuff.clock  = io_in[12];
-	assign \mchip.design.transmitter.clock  = io_in[12];
-	assign \mchip.design.transmitter.crc.clock  = io_in[12];
-	assign \mchip.design.transmitter.crc.crc16.clock  = io_in[12];
-	assign \mchip.design.transmitter.crc.crc5.clock  = io_in[12];
-	assign \mchip.design.transmitter.crc.sv2v_autoblock_1.i  = 32'd5;
-	assign \mchip.design.transmitter.crc.sv2v_autoblock_2.j  = 32'd16;
-	assign \mchip.design.transmitter.encoder.Addr  = \mchip.design.inter.Addr_reg [6:0];
-	assign \mchip.design.transmitter.encoder.Addr_Endp_register  = {\mchip.design.inter.Addr_reg [0], \mchip.design.inter.Addr_reg [1], \mchip.design.inter.Addr_reg [2], \mchip.design.inter.Addr_reg [3], \mchip.design.inter.Addr_reg [4], \mchip.design.inter.Addr_reg [5], \mchip.design.inter.Addr_reg [6], 4'h0};
-	assign \mchip.design.transmitter.encoder.Addr_lsb  = {\mchip.design.inter.Addr_reg [0], \mchip.design.inter.Addr_reg [1], \mchip.design.inter.Addr_reg [2], \mchip.design.inter.Addr_reg [3], \mchip.design.inter.Addr_reg [4], \mchip.design.inter.Addr_reg [5], \mchip.design.inter.Addr_reg [6]};
-	assign \mchip.design.transmitter.encoder.PID  = 4'h0;
-	assign \mchip.design.transmitter.encoder.PID_full  = 8'h02;
-	assign \mchip.design.transmitter.encoder.PID_lsb  = 4'h0;
-	assign \mchip.design.transmitter.encoder.PID_lsb_inv  = 4'h2;
-	assign \mchip.design.transmitter.encoder.SYNC  = 8'h01;
-	assign \mchip.design.transmitter.encoder.clock  = io_in[12];
-	assign \mchip.design.transmitter.encoder.sv2v_autoblock_1.i  = 32'd4;
-	assign \mchip.design.transmitter.encoder.sv2v_autoblock_2.j  = 32'd7;
-	assign \mchip.design.transmitter.encoder.sv2v_autoblock_3.k  = 32'd64;
-	assign \mchip.design.transmitter.fsm.PID  = 4'h0;
-	assign \mchip.design.transmitter.fsm.clock  = io_in[12];
-	assign \mchip.design.transmitter.nrzi.clock  = io_in[12];
-	assign \mchip.design.transmitter.out_wire.clock  = io_in[12];
-	assign \mchip.design.transmitter.out_wire.wires_out  = io_out[1:0];
-	assign \mchip.design.transmitter.wires_out  = io_out[1:0];
-	assign \mchip.design.txn_done  = \mchip.design.io_fsm.completed_transaction ;
-	assign \mchip.design.wires_in  = io_in[1:0];
-	assign \mchip.design.wires_out  = io_out[1:0];
-	assign \mchip.design.write  = io_in[10];
+	assign \mchip.game2.cactus_select  = \mchip.game2.rendering_inst.cactus_select ;
+	assign \mchip.game2.clk  = io_in[12];
+	assign \mchip.game2.dbg_score  = {\mchip.game2.score_inst.score[3] , \mchip.game2.score_inst.score[2] , \mchip.game2.score_inst.score[1] , \mchip.game2.score_inst.score[0] };
+	assign \mchip.game2.dbg_scrolladdr  = \mchip.game2.scroll_inst.pos ;
+	assign \mchip.game2.dbg_speed  = {6'h00, \mchip.game2.scroll_inst.tick_time };
+	assign \mchip.game2.debug_in  = io_in[2];
+	assign \mchip.game2.dinosprite_inst.clk  = io_in[12];
+	assign \mchip.game2.dinosprite_inst.sys_rst  = io_in[13];
+	assign \mchip.game2.dinosprite_num  = \mchip.game2.dinosprite_inst.sprite ;
+	assign \mchip.game2.haddr  = \mchip.game2.vga_inst.haddr ;
+	assign \mchip.game2.halt_in  = io_in[1];
+	assign \mchip.game2.jump_in  = io_in[0];
+	assign \mchip.game2.jump_pos  = \mchip.game2.jumping_inst.jump_pos ;
+	assign \mchip.game2.jumping_inst.clk  = io_in[12];
+	assign \mchip.game2.jumping_inst.jump  = io_in[0];
+	assign \mchip.game2.jumping_inst.speed  = 24'h03d090;
+	assign \mchip.game2.jumping_inst.sys_rst  = io_in[13];
+	assign \mchip.game2.random  = \mchip.game2.rng_inst.out ;
+	assign \mchip.game2.rendering_inst.cactus_type  = \mchip.game2.cactus_type ;
+	assign \mchip.game2.rendering_inst.clk  = io_in[12];
+	assign \mchip.game2.rendering_inst.dinosprite_num  = \mchip.game2.dinosprite_inst.sprite ;
+	assign \mchip.game2.rendering_inst.game_over  = \mchip.game2.game_over ;
+	assign \mchip.game2.rendering_inst.haddr  = \mchip.game2.vga_inst.haddr ;
+	assign \mchip.game2.rendering_inst.jump_pos  = \mchip.game2.jumping_inst.jump_pos ;
+	assign \mchip.game2.rendering_inst.pixel  = \mchip.game2.dbg_pixel ;
+	assign \mchip.game2.rendering_inst.score_pixel  = \mchip.game2.score_inst.pixel ;
+	assign \mchip.game2.rendering_inst.scrolladdr  = \mchip.game2.scroll_inst.pos ;
+	assign \mchip.game2.rendering_inst.sys_rst  = io_in[13];
+	assign \mchip.game2.rendering_inst.vaddr  = \mchip.game2.vga_inst.vaddr ;
+	assign \mchip.game2.rng_inst.clk  = io_in[12];
+	assign \mchip.game2.rng_inst.entropy_in  = io_in[0];
+	assign \mchip.game2.rng_inst.sys_rst  = io_in[13];
+	assign \mchip.game2.score_inst.clk  = io_in[12];
+	assign \mchip.game2.score_inst.haddr  = \mchip.game2.vga_inst.haddr ;
+	assign \mchip.game2.score_inst.score_out  = {\mchip.game2.score_inst.score[3] , \mchip.game2.score_inst.score[2] , \mchip.game2.score_inst.score[1] , \mchip.game2.score_inst.score[0] };
+	assign \mchip.game2.score_inst.sys_rst  = io_in[13];
+	assign \mchip.game2.score_inst.vaddr  = \mchip.game2.vga_inst.vaddr ;
+	assign \mchip.game2.score_out  = {\mchip.game2.score_inst.score[3] , \mchip.game2.score_inst.score[2] , \mchip.game2.score_inst.score[1] , \mchip.game2.score_inst.score[0] };
+	assign \mchip.game2.score_pixel  = \mchip.game2.score_inst.pixel ;
+	assign \mchip.game2.scroll_inst.clk  = io_in[12];
+	assign \mchip.game2.scroll_inst.move_amt  = 8'h00;
+	assign \mchip.game2.scroll_inst.speed  = {6'h00, \mchip.game2.scroll_inst.tick_time };
+	assign \mchip.game2.scroll_inst.speed_change  = 8'h00;
+	assign \mchip.game2.scroll_inst.sys_rst  = io_in[13];
+	assign \mchip.game2.scrolladdr  = \mchip.game2.scroll_inst.pos ;
+	assign \mchip.game2.speed  = {6'h00, \mchip.game2.scroll_inst.tick_time };
+	assign \mchip.game2.sys_rst  = io_in[13];
+	assign \mchip.game2.vaddr  = \mchip.game2.vga_inst.vaddr ;
+	assign \mchip.game2.vga_blue  = {\mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel };
+	assign \mchip.game2.vga_green  = {\mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel };
+	assign \mchip.game2.vga_hsync  = \mchip.game2.vga_inst.hsync ;
+	assign \mchip.game2.vga_inst.clk  = io_in[12];
+	assign \mchip.game2.vga_inst.sys_rst  = io_in[13];
+	assign \mchip.game2.vga_pixel  = \mchip.game2.dbg_pixel ;
+	assign \mchip.game2.vga_red  = {\mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel };
+	assign \mchip.game2.vga_vsync  = \mchip.game2.vga_inst.vsync ;
 	assign \mchip.io_in  = io_in[11:0];
-	assign \mchip.io_out  = io_out[11:0];
+	assign \mchip.io_out  = {6'h00, \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.dbg_pixel , \mchip.game2.vga_inst.vsync , \mchip.game2.vga_inst.hsync };
 	assign \mchip.reset  = io_in[13];
 endmodule
 module d10_jjalacce_connect4 (
@@ -72048,14 +82862,20 @@ module design_instantiations (
 		.io_in({des_reset[2], clock, des_io_in[732+:12]}),
 		.io_out(des_io_out[732+:12])
 	);
-	assign des_io_out[720+:12] = 12'h000;
+	d03_example_iotest inst3(
+		.io_in({des_reset[3], clock, des_io_in[720+:12]}),
+		.io_out(des_io_out[720+:12])
+	);
 	assign des_io_out[708+:12] = 12'h000;
 	d05_meta_info inst5(
 		.io_in({des_reset[5], clock, des_io_in[696+:12]}),
 		.io_out(des_io_out[696+:12])
 	);
-	assign des_io_out[684+:12] = 12'h000;
-	d07_pemmanou_usb inst7(
+	d06_demo_vgapong inst6(
+		.io_in({des_reset[6], clock, des_io_in[684+:12]}),
+		.io_out(des_io_out[684+:12])
+	);
+	d07_demo_vgarunner inst7(
 		.io_in({des_reset[7], clock, des_io_in[672+:12]}),
 		.io_out(des_io_out[672+:12])
 	);

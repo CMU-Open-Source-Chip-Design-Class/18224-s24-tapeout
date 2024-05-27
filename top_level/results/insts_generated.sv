@@ -39,8 +39,11 @@ d02_example_counter inst2 (
 
 
 // Design #3
-// Unpopulated design slot
-assign des_io_out[3] = 12'h000;
+// Design name d03_example_iotest
+d03_example_iotest inst3 (
+    .io_in({des_reset[3], clock, des_io_in[3]}),
+    .io_out(des_io_out[3])
+);
 
 
 // Design #4
@@ -57,13 +60,16 @@ d05_meta_info inst5 (
 
 
 // Design #6
-// Unpopulated design slot
-assign des_io_out[6] = 12'h000;
+// Design name d06_demo_vgapong
+d06_demo_vgapong inst6 (
+    .io_in({des_reset[6], clock, des_io_in[6]}),
+    .io_out(des_io_out[6])
+);
 
 
 // Design #7
-// Design name d07_pemmanou_usb
-d07_pemmanou_usb inst7 (
+// Design name d07_demo_vgarunner
+d07_demo_vgarunner inst7 (
     .io_in({des_reset[7], clock, des_io_in[7]}),
     .io_out(des_io_out[7])
 );
