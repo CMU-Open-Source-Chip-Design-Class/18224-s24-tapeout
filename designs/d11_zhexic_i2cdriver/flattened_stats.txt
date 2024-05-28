@@ -1,0 +1,23 @@
+=== d11_zhexic_i2cdriver ===
+
+   Number of wires:                284
+   Number of wire bits:            391
+   Number of public wires:          40
+   Number of public wire bits:     147
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                271
+     $_ANDNOT_                      71
+     $_AND_                         42
+     $_MUX_                         13
+     $_NAND_                        13
+     $_NOR_                         19
+     $_NOT_                          9
+     $_ORNOT_                       10
+     $_OR_                          48
+     $_SDFFE_PN0P_                  32
+     $_SDFFE_PN1P_                   1
+     $_SDFF_PN0_                     6
+     $_SDFF_PN1_                     2
+     $_XOR_                          5

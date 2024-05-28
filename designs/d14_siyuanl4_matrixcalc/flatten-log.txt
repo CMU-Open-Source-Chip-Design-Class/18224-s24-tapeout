@@ -1,0 +1,2499 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Running command `read_verilog -sv d14_siyuanl4_matrixcalc/src/toplevel_chip.v d14_siyuanl4_matrixcalc/src/chip.sv d14_siyuanl4_matrixcalc/src/add.sv d14_siyuanl4_matrixcalc/src/mult.sv d14_siyuanl4_matrixcalc/src/main.sv d14_siyuanl4_matrixcalc/src/library.sv; synth -flatten -top toplevel_chip; setundef -undriven -zero; setundef -zero; async2sync; synth -top toplevel_chip; rename toplevel_chip d14_siyuanl4_matrixcalc; write_verilog -attr2comment d14_siyuanl4_matrixcalc/flattened.v; check; stat;' --
+
+1. Executing Verilog-2005 frontend: d14_siyuanl4_matrixcalc/src/toplevel_chip.v
+Parsing SystemVerilog input from `d14_siyuanl4_matrixcalc/src/toplevel_chip.v' to AST representation.
+Generating RTLIL representation for module `\toplevel_chip'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: d14_siyuanl4_matrixcalc/src/chip.sv
+Parsing SystemVerilog input from `d14_siyuanl4_matrixcalc/src/chip.sv' to AST representation.
+Generating RTLIL representation for module `\my_chip'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: d14_siyuanl4_matrixcalc/src/add.sv
+Parsing SystemVerilog input from `d14_siyuanl4_matrixcalc/src/add.sv' to AST representation.
+Generating RTLIL representation for module `\Add_Path'.
+Generating RTLIL representation for module `\add_fsm'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: d14_siyuanl4_matrixcalc/src/mult.sv
+Parsing SystemVerilog input from `d14_siyuanl4_matrixcalc/src/mult.sv' to AST representation.
+Generating RTLIL representation for module `\Multiply_Path'.
+Generating RTLIL representation for module `\mult_fsm'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: d14_siyuanl4_matrixcalc/src/main.sv
+Parsing SystemVerilog input from `d14_siyuanl4_matrixcalc/src/main.sv' to AST representation.
+Generating RTLIL representation for module `\Matrix_Calculator'.
+Generating RTLIL representation for module `\matrix_calc_fsm'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: d14_siyuanl4_matrixcalc/src/library.sv
+Parsing SystemVerilog input from `d14_siyuanl4_matrixcalc/src/library.sv' to AST representation.
+Generating RTLIL representation for module `\MagComp'.
+Generating RTLIL representation for module `\Adder'.
+Generating RTLIL representation for module `\Multiplier'.
+Generating RTLIL representation for module `\Mux2to1'.
+Generating RTLIL representation for module `\Register'.
+Generating RTLIL representation for module `\Counter'.
+Generating RTLIL representation for module `\Synchronizer'.
+Generating RTLIL representation for module `\ShiftRegister_8_128'.
+Generating RTLIL representation for module `\ShiftRegister_6_96'.
+Generating RTLIL representation for module `\ShiftRegister_48_96'.
+Generating RTLIL representation for module `\edge_detector'.
+Generating RTLIL representation for module `\ShiftRegister_12_96'.
+Generating RTLIL representation for module `\ShiftRegister_20_160'.
+Generating RTLIL representation for module `\ShiftRegister_96_96'.
+Generating RTLIL representation for module `\ShiftRegister_160_160'.
+Generating RTLIL representation for module `\ShiftRegister_80_160'.
+Generating RTLIL representation for module `\ShiftRegister_40_160'.
+Successfully finished Verilog frontend.
+
+7. Executing SYNTH pass.
+
+7.1. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \Matrix_Calculator
+Used module:             \Counter
+Used module:             \edge_detector
+Used module:             \Multiply_Path
+Used module:                 \mult_fsm
+Used module:                 \ShiftRegister_20_160
+Used module:                 \Register
+Used module:                 \Multiplier
+Used module:             \Add_Path
+Used module:                 \add_fsm
+Used module:                 \Adder
+Used module:             \matrix_calc_fsm
+Used module:             \Mux2to1
+Used module:             \ShiftRegister_8_128
+Used module:         \Synchronizer
+Parameter 1 (\WIDTH) = 5
+
+7.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\Counter'.
+Parameter 1 (\WIDTH) = 5
+Generating RTLIL representation for module `$paramod\Counter\WIDTH=s32'00000000000000000000000000000101'.
+Parameter 1 (\WIDTH) = 160
+
+7.1.3. Executing AST frontend in derive mode using pre-parsed AST for module `\Mux2to1'.
+Parameter 1 (\WIDTH) = 160
+Generating RTLIL representation for module `$paramod\Mux2to1\WIDTH=s32'00000000000000000000000010100000'.
+Parameter 1 (\WIDTH) = 2
+
+7.1.4. Executing AST frontend in derive mode using pre-parsed AST for module `\Register'.
+Parameter 1 (\WIDTH) = 2
+Generating RTLIL representation for module `$paramod\Register\WIDTH=s32'00000000000000000000000000000010'.
+Parameter 1 (\WIDTH) = 4
+
+7.1.5. Executing AST frontend in derive mode using pre-parsed AST for module `\Adder'.
+Parameter 1 (\WIDTH) = 4
+Generating RTLIL representation for module `$paramod\Adder\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\Adder\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 32
+
+7.1.6. Executing AST frontend in derive mode using pre-parsed AST for module `\Register'.
+Parameter 1 (\WIDTH) = 32
+Generating RTLIL representation for module `$paramod\Register\WIDTH=s32'00000000000000000000000000100000'.
+Parameter 1 (\WIDTH) = 32
+Found cached RTLIL representation for module `$paramod\Register\WIDTH=s32'00000000000000000000000000100000'.
+Parameter 1 (\WIDTH) = 4
+
+7.1.7. Executing AST frontend in derive mode using pre-parsed AST for module `\Multiplier'.
+Parameter 1 (\WIDTH) = 4
+Generating RTLIL representation for module `$paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100'.
+
+7.1.8. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \Matrix_Calculator
+Used module:             $paramod\Counter\WIDTH=s32'00000000000000000000000000000101
+Used module:             \edge_detector
+Used module:             \Multiply_Path
+Used module:                 \mult_fsm
+Used module:                 \ShiftRegister_20_160
+Used module:                 $paramod\Register\WIDTH=s32'00000000000000000000000000100000
+Used module:                 $paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100
+Used module:             \Add_Path
+Used module:                 \add_fsm
+Used module:                 $paramod\Adder\WIDTH=s32'00000000000000000000000000000100
+Used module:             \matrix_calc_fsm
+Used module:             $paramod\Mux2to1\WIDTH=s32'00000000000000000000000010100000
+Used module:             $paramod\Register\WIDTH=s32'00000000000000000000000000000010
+Used module:             \ShiftRegister_8_128
+Used module:         \Synchronizer
+
+7.1.9. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \Matrix_Calculator
+Used module:             $paramod\Counter\WIDTH=s32'00000000000000000000000000000101
+Used module:             \edge_detector
+Used module:             \Multiply_Path
+Used module:                 \mult_fsm
+Used module:                 \ShiftRegister_20_160
+Used module:                 $paramod\Register\WIDTH=s32'00000000000000000000000000100000
+Used module:                 $paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100
+Used module:             \Add_Path
+Used module:                 \add_fsm
+Used module:                 $paramod\Adder\WIDTH=s32'00000000000000000000000000000100
+Used module:             \matrix_calc_fsm
+Used module:             $paramod\Mux2to1\WIDTH=s32'00000000000000000000000010100000
+Used module:             $paramod\Register\WIDTH=s32'00000000000000000000000000000010
+Used module:             \ShiftRegister_8_128
+Used module:         \Synchronizer
+Removing unused module `\ShiftRegister_40_160'.
+Removing unused module `\ShiftRegister_80_160'.
+Removing unused module `\ShiftRegister_160_160'.
+Removing unused module `\ShiftRegister_96_96'.
+Removing unused module `\ShiftRegister_12_96'.
+Removing unused module `\ShiftRegister_48_96'.
+Removing unused module `\ShiftRegister_6_96'.
+Removing unused module `\Counter'.
+Removing unused module `\Register'.
+Removing unused module `\Mux2to1'.
+Removing unused module `\Multiplier'.
+Removing unused module `\Adder'.
+Removing unused module `\MagComp'.
+Removed 13 unused modules.
+
+7.2. Executing PROC pass (convert processes to netlists).
+
+7.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/library.sv:68$46 in module $paramod\Counter\WIDTH=s32'00000000000000000000000000000101.
+Marked 2 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/library.sv:100$34 in module ShiftRegister_8_128.
+Marked 2 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/library.sv:52$53 in module $paramod\Register\WIDTH=s32'00000000000000000000000000100000.
+Marked 2 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/library.sv:52$49 in module $paramod\Register\WIDTH=s32'00000000000000000000000000000010.
+Marked 2 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/library.sv:190$41 in module ShiftRegister_20_160.
+Marked 1 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/main.sv:430$20 in module matrix_calc_fsm.
+Marked 21 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17 in module matrix_calc_fsm.
+Removed 1 dead cases from process $proc$d14_siyuanl4_matrixcalc/src/main.sv:0$16 in module Matrix_Calculator.
+Marked 1 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/main.sv:0$16 in module Matrix_Calculator.
+Marked 1 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/mult.sv:454$12 in module mult_fsm.
+Marked 2 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11 in module mult_fsm.
+Marked 1 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/add.sv:192$4 in module add_fsm.
+Marked 2 switch rules as full_case in process $proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3 in module add_fsm.
+Removed a total of 1 dead cases.
+
+7.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 8 redundant assignments.
+Promoted 37 assignments to connections.
+
+7.2.4. Executing PROC_INIT pass (extract init attributes).
+
+7.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+7.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~39 debug messages>
+
+7.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\Counter\WIDTH=s32'00000000000000000000000000000101.$proc$d14_siyuanl4_matrixcalc/src/library.sv:68$46'.
+     1/1: $0\Q[4:0]
+Creating decoders for process `\ShiftRegister_8_128.$proc$d14_siyuanl4_matrixcalc/src/library.sv:100$34'.
+     1/1: $0\Q[127:0]
+Creating decoders for process `\Synchronizer.$proc$d14_siyuanl4_matrixcalc/src/library.sv:90$33'.
+Creating decoders for process `\Synchronizer.$proc$d14_siyuanl4_matrixcalc/src/library.sv:88$32'.
+Creating decoders for process `$paramod\Register\WIDTH=s32'00000000000000000000000000100000.$proc$d14_siyuanl4_matrixcalc/src/library.sv:52$53'.
+     1/1: $0\Q[31:0]
+Creating decoders for process `$paramod\Register\WIDTH=s32'00000000000000000000000000000010.$proc$d14_siyuanl4_matrixcalc/src/library.sv:52$49'.
+     1/1: $0\Q[1:0]
+Creating decoders for process `\ShiftRegister_20_160.$proc$d14_siyuanl4_matrixcalc/src/library.sv:190$41'.
+     1/1: $0\Q[159:0]
+Creating decoders for process `\edge_detector.$proc$d14_siyuanl4_matrixcalc/src/library.sv:159$37'.
+Creating decoders for process `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:430$20'.
+     1/1: $0\cur_state[4:0]
+Creating decoders for process `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17'.
+     1/33: $3\finish[0:0]
+     2/33: $21\n_state[4:0]
+     3/33: $2\finish[0:0]
+     4/33: $20\n_state[4:0]
+     5/33: $3\add_en[0:0]
+     6/33: $3\error[0:0]
+     7/33: $19\n_state[4:0]
+     8/33: $2\mul_en[0:0]
+     9/33: $2\error[0:0]
+    10/33: $18\n_state[4:0]
+    11/33: $2\add_en[0:0]
+    12/33: $17\n_state[4:0]
+    13/33: $16\n_state[4:0]
+    14/33: $15\n_state[4:0]
+    15/33: $14\n_state[4:0]
+    16/33: $13\n_state[4:0]
+    17/33: $12\n_state[4:0]
+    18/33: $11\n_state[4:0]
+    19/33: $10\n_state[4:0]
+    20/33: $9\n_state[4:0]
+    21/33: $8\n_state[4:0]
+    22/33: $7\n_state[4:0]
+    23/33: $6\n_state[4:0]
+    24/33: $5\n_state[4:0]
+    25/33: $4\n_state[4:0]
+    26/33: $3\n_state[4:0]
+    27/33: $2\n_state[4:0]
+    28/33: $1\n_state[4:0]
+    29/33: $1\finish[0:0]
+    30/33: $1\add_en[0:0]
+    31/33: $1\mul_en[0:0]
+    32/33: $1\error[0:0]
+    33/33: $1\input_en[0:0]
+Creating decoders for process `\Matrix_Calculator.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$16'.
+     1/1: $1\data_out[4:0]
+Creating decoders for process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:454$12'.
+     1/1: $0\cur_state[4:0]
+Creating decoders for process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+     1/21: $2\n_state[4:0]
+     2/21: $1\n_state[4:0]
+     3/21: $1\finish[0:0]
+     4/21: $1\layer_2_en[0:0]
+     5/21: $1\layer_1_en[0:0]
+     6/21: $1\mult8_in2[3:0]
+     7/21: $1\mult8_in1[3:0]
+     8/21: $1\mult7_in2[3:0]
+     9/21: $1\mult7_in1[3:0]
+    10/21: $1\mult6_in2[3:0]
+    11/21: $1\mult6_in1[3:0]
+    12/21: $1\mult5_in2[3:0]
+    13/21: $1\mult5_in1[3:0]
+    14/21: $1\mult4_in2[3:0]
+    15/21: $1\mult4_in1[3:0]
+    16/21: $1\mult3_in2[3:0]
+    17/21: $1\mult3_in1[3:0]
+    18/21: $1\mult2_in2[3:0]
+    19/21: $1\mult2_in1[3:0]
+    20/21: $1\mult1_in2[3:0]
+    21/21: $1\mult1_in1[3:0]
+Creating decoders for process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:192$4'.
+     1/1: $0\cur_state[3:0]
+Creating decoders for process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+     1/8: $2\n_state[3:0]
+     2/8: $1\n_state[3:0]
+     3/8: $1\finish[0:0]
+     4/8: $1\shift_en[0:0]
+     5/8: $1\add2_in2[3:0]
+     6/8: $1\add2_in1[3:0]
+     7/8: $1\add1_in2[3:0]
+     8/8: $1\add1_in1[3:0]
+
+7.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\matrix_calc_fsm.\finish' from process `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17'.
+No latch inferred for signal `\matrix_calc_fsm.\error' from process `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17'.
+No latch inferred for signal `\matrix_calc_fsm.\add_en' from process `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17'.
+No latch inferred for signal `\matrix_calc_fsm.\n_state' from process `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17'.
+No latch inferred for signal `\matrix_calc_fsm.\input_en' from process `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17'.
+No latch inferred for signal `\matrix_calc_fsm.\mul_en' from process `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17'.
+No latch inferred for signal `\Matrix_Calculator.\data_out' from process `\Matrix_Calculator.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$16'.
+No latch inferred for signal `\mult_fsm.\finish' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\n_state' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult1_in1' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult1_in2' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult2_in1' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult2_in2' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult3_in1' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult3_in2' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult4_in1' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult4_in2' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult5_in1' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult5_in2' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult6_in1' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult6_in2' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult7_in1' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult7_in2' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult8_in1' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\mult8_in2' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\layer_1_en' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\mult_fsm.\layer_2_en' from process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+No latch inferred for signal `\add_fsm.\finish' from process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+No latch inferred for signal `\add_fsm.\shift_en' from process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+No latch inferred for signal `\add_fsm.\add1_in1' from process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+No latch inferred for signal `\add_fsm.\add1_in2' from process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+No latch inferred for signal `\add_fsm.\add2_in1' from process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+No latch inferred for signal `\add_fsm.\add2_in2' from process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+No latch inferred for signal `\add_fsm.\n_state' from process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+
+7.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\Counter\WIDTH=s32'00000000000000000000000000000101.\Q' using process `$paramod\Counter\WIDTH=s32'00000000000000000000000000000101.$proc$d14_siyuanl4_matrixcalc/src/library.sv:68$46'.
+  created $dff cell `$procdff$936' with positive edge clock.
+Creating register for signal `\ShiftRegister_8_128.\Q' using process `\ShiftRegister_8_128.$proc$d14_siyuanl4_matrixcalc/src/library.sv:100$34'.
+  created $dff cell `$procdff$937' with positive edge clock.
+Creating register for signal `\Synchronizer.\sync' using process `\Synchronizer.$proc$d14_siyuanl4_matrixcalc/src/library.sv:90$33'.
+  created $dff cell `$procdff$938' with positive edge clock.
+Creating register for signal `\Synchronizer.\tmp1' using process `\Synchronizer.$proc$d14_siyuanl4_matrixcalc/src/library.sv:88$32'.
+  created $dff cell `$procdff$939' with positive edge clock.
+Creating register for signal `$paramod\Register\WIDTH=s32'00000000000000000000000000100000.\Q' using process `$paramod\Register\WIDTH=s32'00000000000000000000000000100000.$proc$d14_siyuanl4_matrixcalc/src/library.sv:52$53'.
+  created $dff cell `$procdff$940' with positive edge clock.
+Creating register for signal `$paramod\Register\WIDTH=s32'00000000000000000000000000000010.\Q' using process `$paramod\Register\WIDTH=s32'00000000000000000000000000000010.$proc$d14_siyuanl4_matrixcalc/src/library.sv:52$49'.
+  created $dff cell `$procdff$941' with positive edge clock.
+Creating register for signal `\ShiftRegister_20_160.\Q' using process `\ShiftRegister_20_160.$proc$d14_siyuanl4_matrixcalc/src/library.sv:190$41'.
+  created $dff cell `$procdff$942' with positive edge clock.
+Creating register for signal `\edge_detector.\tmp1' using process `\edge_detector.$proc$d14_siyuanl4_matrixcalc/src/library.sv:159$37'.
+  created $dff cell `$procdff$943' with positive edge clock.
+Creating register for signal `\matrix_calc_fsm.\cur_state' using process `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:430$20'.
+  created $dff cell `$procdff$944' with positive edge clock.
+Creating register for signal `\mult_fsm.\cur_state' using process `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:454$12'.
+  created $dff cell `$procdff$945' with positive edge clock.
+Creating register for signal `\add_fsm.\cur_state' using process `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:192$4'.
+  created $dff cell `$procdff$946' with positive edge clock.
+
+7.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+7.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `$paramod\Counter\WIDTH=s32'00000000000000000000000000000101.$proc$d14_siyuanl4_matrixcalc/src/library.sv:68$46'.
+Removing empty process `$paramod\Counter\WIDTH=s32'00000000000000000000000000000101.$proc$d14_siyuanl4_matrixcalc/src/library.sv:68$46'.
+Found and cleaned up 2 empty switches in `\ShiftRegister_8_128.$proc$d14_siyuanl4_matrixcalc/src/library.sv:100$34'.
+Removing empty process `ShiftRegister_8_128.$proc$d14_siyuanl4_matrixcalc/src/library.sv:100$34'.
+Removing empty process `Synchronizer.$proc$d14_siyuanl4_matrixcalc/src/library.sv:90$33'.
+Removing empty process `Synchronizer.$proc$d14_siyuanl4_matrixcalc/src/library.sv:88$32'.
+Found and cleaned up 2 empty switches in `$paramod\Register\WIDTH=s32'00000000000000000000000000100000.$proc$d14_siyuanl4_matrixcalc/src/library.sv:52$53'.
+Removing empty process `$paramod\Register\WIDTH=s32'00000000000000000000000000100000.$proc$d14_siyuanl4_matrixcalc/src/library.sv:52$53'.
+Found and cleaned up 2 empty switches in `$paramod\Register\WIDTH=s32'00000000000000000000000000000010.$proc$d14_siyuanl4_matrixcalc/src/library.sv:52$49'.
+Removing empty process `$paramod\Register\WIDTH=s32'00000000000000000000000000000010.$proc$d14_siyuanl4_matrixcalc/src/library.sv:52$49'.
+Found and cleaned up 2 empty switches in `\ShiftRegister_20_160.$proc$d14_siyuanl4_matrixcalc/src/library.sv:190$41'.
+Removing empty process `ShiftRegister_20_160.$proc$d14_siyuanl4_matrixcalc/src/library.sv:190$41'.
+Removing empty process `edge_detector.$proc$d14_siyuanl4_matrixcalc/src/library.sv:159$37'.
+Found and cleaned up 1 empty switch in `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:430$20'.
+Removing empty process `matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:430$20'.
+Found and cleaned up 21 empty switches in `\matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17'.
+Removing empty process `matrix_calc_fsm.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$17'.
+Found and cleaned up 1 empty switch in `\Matrix_Calculator.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$16'.
+Removing empty process `Matrix_Calculator.$proc$d14_siyuanl4_matrixcalc/src/main.sv:0$16'.
+Found and cleaned up 1 empty switch in `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:454$12'.
+Removing empty process `mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:454$12'.
+Found and cleaned up 2 empty switches in `\mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+Removing empty process `mult_fsm.$proc$d14_siyuanl4_matrixcalc/src/mult.sv:0$11'.
+Found and cleaned up 1 empty switch in `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:192$4'.
+Removing empty process `add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:192$4'.
+Found and cleaned up 2 empty switches in `\add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+Removing empty process `add_fsm.$proc$d14_siyuanl4_matrixcalc/src/add.sv:0$3'.
+Cleaned up 39 empty switches.
+
+7.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\Counter\WIDTH=s32'00000000000000000000000000000101.
+Optimizing module $paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100.
+Optimizing module ShiftRegister_8_128.
+Optimizing module Synchronizer.
+Optimizing module $paramod\Register\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\Adder\WIDTH=s32'00000000000000000000000000000100.
+Optimizing module $paramod\Register\WIDTH=s32'00000000000000000000000000000010.
+Optimizing module ShiftRegister_20_160.
+Optimizing module $paramod\Mux2to1\WIDTH=s32'00000000000000000000000010100000.
+Optimizing module edge_detector.
+Optimizing module matrix_calc_fsm.
+<suppressed ~5 debug messages>
+Optimizing module Matrix_Calculator.
+<suppressed ~1 debug messages>
+Optimizing module mult_fsm.
+<suppressed ~2 debug messages>
+Optimizing module Multiply_Path.
+Optimizing module add_fsm.
+<suppressed ~2 debug messages>
+Optimizing module Add_Path.
+Optimizing module my_chip.
+Optimizing module toplevel_chip.
+
+7.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\Counter\WIDTH=s32'00000000000000000000000000000101.
+Deleting now unused module $paramod\Multiplier\WIDTH=s32'00000000000000000000000000000100.
+Deleting now unused module ShiftRegister_8_128.
+Deleting now unused module Synchronizer.
+Deleting now unused module $paramod\Register\WIDTH=s32'00000000000000000000000000100000.
+Deleting now unused module $paramod\Adder\WIDTH=s32'00000000000000000000000000000100.
+Deleting now unused module $paramod\Register\WIDTH=s32'00000000000000000000000000000010.
+Deleting now unused module ShiftRegister_20_160.
+Deleting now unused module $paramod\Mux2to1\WIDTH=s32'00000000000000000000000010100000.
+Deleting now unused module edge_detector.
+Deleting now unused module matrix_calc_fsm.
+Deleting now unused module Matrix_Calculator.
+Deleting now unused module mult_fsm.
+Deleting now unused module Multiply_Path.
+Deleting now unused module add_fsm.
+Deleting now unused module Add_Path.
+Deleting now unused module my_chip.
+<suppressed ~40 debug messages>
+
+7.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~2 debug messages>
+
+7.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 2 unused cells and 241 unused wires.
+<suppressed ~5 debug messages>
+
+7.6. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Warning: Wire toplevel_chip.\io_out [11] is used but has no driver.
+Found and reported 1 problems.
+
+7.7. Executing OPT pass (performing simple optimizations).
+
+7.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~717 debug messages>
+Removed a total of 239 cells.
+
+7.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$93.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$615.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$100.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$108.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$116.
+    dead port 1/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$127.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$129.
+    dead port 1/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$140.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$142.
+    dead port 1/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$153.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$155.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$864.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$165.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$175.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$185.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$195.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$206.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$218.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$231.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$245.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$260.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$276.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$293.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$311.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$330.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$350.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$371.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$393.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$416.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$440.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$465.
+    dead port 2/2 on $mux $flatten\mchip.\matrix_calculator.\fsm.$procmux$491.
+Removed 32 multiplexer ports.
+<suppressed ~41 debug messages>
+
+7.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$635: $auto$opt_reduce.cc:134:opt_pmux$948
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$647: $auto$opt_reduce.cc:134:opt_pmux$950
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$659: { $auto$opt_reduce.cc:134:opt_pmux$954 $auto$opt_reduce.cc:134:opt_pmux$952 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$671: { $auto$opt_reduce.cc:134:opt_pmux$962 $auto$opt_reduce.cc:134:opt_pmux$960 $auto$opt_reduce.cc:134:opt_pmux$958 $auto$opt_reduce.cc:134:opt_pmux$956 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$683: { $auto$opt_reduce.cc:134:opt_pmux$966 $auto$opt_reduce.cc:134:opt_pmux$964 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$695: { $auto$opt_reduce.cc:134:opt_pmux$974 $auto$opt_reduce.cc:134:opt_pmux$972 $auto$opt_reduce.cc:134:opt_pmux$970 $auto$opt_reduce.cc:134:opt_pmux$968 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$867: { $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$865_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$876_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$875_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$874_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$873_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$872_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$871_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$870_CMP $auto$opt_reduce.cc:134:opt_pmux$976 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$707: { $auto$opt_reduce.cc:134:opt_pmux$980 $auto$opt_reduce.cc:134:opt_pmux$978 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$719: { $auto$opt_reduce.cc:134:opt_pmux$988 $auto$opt_reduce.cc:134:opt_pmux$986 $auto$opt_reduce.cc:134:opt_pmux$984 $auto$opt_reduce.cc:134:opt_pmux$982 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$731: { $auto$opt_reduce.cc:134:opt_pmux$992 $auto$opt_reduce.cc:134:opt_pmux$990 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$743: { $auto$opt_reduce.cc:134:opt_pmux$1000 $auto$opt_reduce.cc:134:opt_pmux$998 $auto$opt_reduce.cc:134:opt_pmux$996 $auto$opt_reduce.cc:134:opt_pmux$994 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$618: { $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$616_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$628_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$627_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$626_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$625_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$624_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$623_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$622_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$621_CMP $auto$opt_reduce.cc:134:opt_pmux$1002 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$755: { $auto$opt_reduce.cc:134:opt_pmux$1006 $auto$opt_reduce.cc:134:opt_pmux$1004 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$767: { $auto$opt_reduce.cc:134:opt_pmux$1014 $auto$opt_reduce.cc:134:opt_pmux$1012 $auto$opt_reduce.cc:134:opt_pmux$1010 $auto$opt_reduce.cc:134:opt_pmux$1008 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$779: { $auto$opt_reduce.cc:134:opt_pmux$1018 $auto$opt_reduce.cc:134:opt_pmux$1016 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$791: { $auto$opt_reduce.cc:134:opt_pmux$1026 $auto$opt_reduce.cc:134:opt_pmux$1024 $auto$opt_reduce.cc:134:opt_pmux$1022 $auto$opt_reduce.cc:134:opt_pmux$1020 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$883: $auto$opt_reduce.cc:134:opt_pmux$1028
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$803: { $auto$opt_reduce.cc:134:opt_pmux$1032 $auto$opt_reduce.cc:134:opt_pmux$1030 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$815: { $auto$opt_reduce.cc:134:opt_pmux$1040 $auto$opt_reduce.cc:134:opt_pmux$1038 $auto$opt_reduce.cc:134:opt_pmux$1036 $auto$opt_reduce.cc:134:opt_pmux$1034 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$827: { $auto$opt_reduce.cc:134:opt_pmux$1044 $auto$opt_reduce.cc:134:opt_pmux$1042 }
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\fsm.$procmux$548: $auto$opt_reduce.cc:134:opt_pmux$1046
+    New ctrl vector for $pmux cell $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$839: { $auto$opt_reduce.cc:134:opt_pmux$1054 $auto$opt_reduce.cc:134:opt_pmux$1052 $auto$opt_reduce.cc:134:opt_pmux$1050 $auto$opt_reduce.cc:134:opt_pmux$1048 }
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 22 changes.
+
+7.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~138 debug messages>
+Removed a total of 46 cells.
+
+7.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 312 unused wires.
+<suppressed ~1 debug messages>
+
+7.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~37 debug messages>
+
+7.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.7.16. Finished OPT passes. (There is nothing left to do.)
+
+7.8. Executing FSM pass (extract and optimize FSM).
+
+7.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register toplevel_chip.mchip.matrix_calculator.add_logic.fsm.cur_state.
+Found FSM state register toplevel_chip.mchip.matrix_calculator.fsm.cur_state.
+Found FSM state register toplevel_chip.mchip.matrix_calculator.mul_logic.fsm.cur_state.
+
+7.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\mchip.matrix_calculator.add_logic.fsm.cur_state' from module `\toplevel_chip'.
+  found $dff cell for state register: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procdff$946
+  root of input selection tree: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$0\cur_state[3:0]
+  found reset state: 4'0000 (guessed from mux tree)
+  found ctrl input: \mchip.sync13.sync
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$976
+  found ctrl input: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$870_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$871_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$872_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$873_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$874_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$875_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$876_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$865_CMP
+  found state code: 4'0000
+  found state code: 4'1001
+  found state code: 4'1000
+  found state code: 4'0111
+  found state code: 4'0110
+  found state code: 4'0101
+  found state code: 4'0100
+  found state code: 4'0011
+  found state code: 4'0010
+  found ctrl input: \mchip.matrix_calculator.add_en
+  found state code: 4'0001
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$865_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$868_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$869_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$870_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$871_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$872_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$873_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$874_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$875_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$876_CMP
+  ctrl inputs: { $auto$opt_reduce.cc:134:opt_pmux$976 \mchip.sync13.sync \mchip.matrix_calculator.add_en }
+  ctrl outputs: { $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$876_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$875_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$874_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$873_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$872_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$871_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$870_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$869_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$868_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$865_CMP $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$0\cur_state[3:0] }
+  transition:     4'0000 3'-00 ->     4'0000 14'00000000010000
+  transition:     4'0000 3'-01 ->     4'0001 14'00000000010001
+  transition:     4'0000 3'-1- ->     4'0000 14'00000000010000
+  transition:     4'1000 3'-0- ->     4'1001 14'00000001001001
+  transition:     4'1000 3'-1- ->     4'0000 14'00000001000000
+  transition:     4'0100 3'-0- ->     4'0101 14'00010000000101
+  transition:     4'0100 3'-1- ->     4'0000 14'00010000000000
+  transition:     4'0010 3'-0- ->     4'0011 14'01000000000011
+  transition:     4'0010 3'-1- ->     4'0000 14'01000000000000
+  transition:     4'0110 3'-0- ->     4'0111 14'00000100000111
+  transition:     4'0110 3'-1- ->     4'0000 14'00000100000000
+  transition:     4'0001 3'-0- ->     4'0010 14'10000000000010
+  transition:     4'0001 3'-1- ->     4'0000 14'10000000000000
+  transition:     4'1001 3'-0- ->     4'1001 14'00000000101001
+  transition:     4'1001 3'-1- ->     4'0000 14'00000000100000
+  transition:     4'0101 3'-0- ->     4'0110 14'00001000000110
+  transition:     4'0101 3'-1- ->     4'0000 14'00001000000000
+  transition:     4'0011 3'-0- ->     4'0100 14'00100000000100
+  transition:     4'0011 3'-1- ->     4'0000 14'00100000000000
+  transition:     4'0111 3'-0- ->     4'1000 14'00000010001000
+  transition:     4'0111 3'-1- ->     4'0000 14'00000010000000
+Extracting FSM `\mchip.matrix_calculator.fsm.cur_state' from module `\toplevel_chip'.
+  found $dff cell for state register: $flatten\mchip.\matrix_calculator.\fsm.$procdff$944
+  root of input selection tree: $flatten\mchip.\matrix_calculator.\fsm.$0\cur_state[4:0]
+  found reset state: 5'00000 (guessed from mux tree)
+  found ctrl input: \mchip.sync13.sync
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$495_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$101_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$109_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$498_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$130_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$207_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$219_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$232_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$246_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$261_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$277_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$294_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$312_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$331_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$351_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$372_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$394_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$417_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$441_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$466_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$procmux$492_CMP
+  found state code: 5'00000
+  found state code: 5'10011
+  found ctrl input: \mchip.matrix_calculator.add_finish
+  found state code: 5'10010
+  found ctrl input: \mchip.matrix_calculator.fsm.mul_finish
+  found state code: 5'10001
+  found state code: 5'10100
+  found ctrl input: $flatten\mchip.\matrix_calculator.\fsm.$eq$d14_siyuanl4_matrixcalc/src/main.sv:359$18_Y
+  found ctrl input: \mchip.matrix_calculator.op_reg.Q [1]
+  found ctrl input: \mchip.matrix_calculator.enter_pulse
+  found state code: 5'01111
+  found state code: 5'10000
+  found state code: 5'01110
+  found state code: 5'01101
+  found state code: 5'01100
+  found state code: 5'01011
+  found state code: 5'01010
+  found state code: 5'01001
+  found state code: 5'01000
+  found state code: 5'00111
+  found state code: 5'00110
+  found state code: 5'00101
+  found state code: 5'00100
+  found state code: 5'00011
+  found state code: 5'00010
+  found state code: 5'00001
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$498_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$495_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$492_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$466_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$441_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$417_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$394_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$372_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$351_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$331_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$312_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$294_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$277_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$261_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$246_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$232_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$219_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$207_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$130_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$109_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\fsm.$procmux$101_CMP
+  ctrl inputs: { \mchip.sync13.sync \mchip.matrix_calculator.fsm.mul_finish $flatten\mchip.\matrix_calculator.\fsm.$eq$d14_siyuanl4_matrixcalc/src/main.sv:359$18_Y \mchip.matrix_calculator.op_reg.Q [1] \mchip.matrix_calculator.enter_pulse \mchip.matrix_calculator.add_finish }
+  ctrl outputs: { $flatten\mchip.\matrix_calculator.\fsm.$0\cur_state[4:0] $flatten\mchip.\matrix_calculator.\fsm.$procmux$101_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$109_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$130_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$207_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$219_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$232_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$246_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$261_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$277_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$294_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$312_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$331_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$351_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$372_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$394_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$417_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$441_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$466_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$492_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$495_CMP $flatten\mchip.\matrix_calculator.\fsm.$procmux$498_CMP }
+  transition:    5'00000 6'0---0- ->    5'00000 26'00000000000000000000000100
+  transition:    5'00000 6'0---1- ->    5'00001 26'00001000000000000000000100
+  transition:    5'00000 6'1----- ->    5'00000 26'00000000000000000000000100
+  transition:    5'10000 6'0-00-- ->    5'10100 26'10100001000000000000000000
+  transition:    5'10000 6'0-01-- ->    5'10010 26'10010001000000000000000000
+  transition:    5'10000 6'0-1--- ->    5'10001 26'10001001000000000000000000
+  transition:    5'10000 6'1----- ->    5'00000 26'00000001000000000000000000
+  transition:    5'01000 6'0---0- ->    5'01000 26'01000000000000010000000000
+  transition:    5'01000 6'0---1- ->    5'01001 26'01001000000000010000000000
+  transition:    5'01000 6'1----- ->    5'00000 26'00000000000000010000000000
+  transition:    5'00100 6'0---0- ->    5'00100 26'00100000000000000001000000
+  transition:    5'00100 6'0---1- ->    5'00101 26'00101000000000000001000000
+  transition:    5'00100 6'1----- ->    5'00000 26'00000000000000000001000000
+  transition:    5'10100 6'0----- ->    5'10100 26'10100000000000000000000001
+  transition:    5'10100 6'1----- ->    5'00000 26'00000000000000000000000001
+  transition:    5'01100 6'0---0- ->    5'01100 26'01100000000100000000000000
+  transition:    5'01100 6'0---1- ->    5'01101 26'01101000000100000000000000
+  transition:    5'01100 6'1----- ->    5'00000 26'00000000000100000000000000
+  transition:    5'00010 6'0---0- ->    5'00010 26'00010000000000000000010000
+  transition:    5'00010 6'0---1- ->    5'00011 26'00011000000000000000010000
+  transition:    5'00010 6'1----- ->    5'00000 26'00000000000000000000010000
+  transition:    5'10010 6'0----0 ->    5'10010 26'10010100000000000000000000
+  transition:    5'10010 6'0----1 ->    5'10011 26'10011100000000000000000000
+  transition:    5'10010 6'1----- ->    5'00000 26'00000100000000000000000000
+  transition:    5'01010 6'0---0- ->    5'01010 26'01010000000001000000000000
+  transition:    5'01010 6'0---1- ->    5'01011 26'01011000000001000000000000
+  transition:    5'01010 6'1----- ->    5'00000 26'00000000000001000000000000
+  transition:    5'00110 6'0---0- ->    5'00110 26'00110000000000000100000000
+  transition:    5'00110 6'0---1- ->    5'00111 26'00111000000000000100000000
+  transition:    5'00110 6'1----- ->    5'00000 26'00000000000000000100000000
+  transition:    5'01110 6'0---0- ->    5'01110 26'01110000010000000000000000
+  transition:    5'01110 6'0---1- ->    5'01111 26'01111000010000000000000000
+  transition:    5'01110 6'1----- ->    5'00000 26'00000000010000000000000000
+  transition:    5'00001 6'0---0- ->    5'00001 26'00001000000000000000001000
+  transition:    5'00001 6'0---1- ->    5'00010 26'00010000000000000000001000
+  transition:    5'00001 6'1----- ->    5'00000 26'00000000000000000000001000
+  transition:    5'10001 6'00---- ->    5'10001 26'10001010000000000000000000
+  transition:    5'10001 6'01---- ->    5'10011 26'10011010000000000000000000
+  transition:    5'10001 6'1----- ->    5'00000 26'00000010000000000000000000
+  transition:    5'01001 6'0---0- ->    5'01001 26'01001000000000100000000000
+  transition:    5'01001 6'0---1- ->    5'01010 26'01010000000000100000000000
+  transition:    5'01001 6'1----- ->    5'00000 26'00000000000000100000000000
+  transition:    5'00101 6'0---0- ->    5'00101 26'00101000000000000010000000
+  transition:    5'00101 6'0---1- ->    5'00110 26'00110000000000000010000000
+  transition:    5'00101 6'1----- ->    5'00000 26'00000000000000000010000000
+  transition:    5'01101 6'0---0- ->    5'01101 26'01101000001000000000000000
+  transition:    5'01101 6'0---1- ->    5'01110 26'01110000001000000000000000
+  transition:    5'01101 6'1----- ->    5'00000 26'00000000001000000000000000
+  transition:    5'00011 6'0---0- ->    5'00011 26'00011000000000000000100000
+  transition:    5'00011 6'0---1- ->    5'00100 26'00100000000000000000100000
+  transition:    5'00011 6'1----- ->    5'00000 26'00000000000000000000100000
+  transition:    5'10011 6'0----- ->    5'10011 26'10011000000000000000000010
+  transition:    5'10011 6'1----- ->    5'00000 26'00000000000000000000000010
+  transition:    5'01011 6'0---0- ->    5'01011 26'01011000000010000000000000
+  transition:    5'01011 6'0---1- ->    5'01100 26'01100000000010000000000000
+  transition:    5'01011 6'1----- ->    5'00000 26'00000000000010000000000000
+  transition:    5'00111 6'0---0- ->    5'00111 26'00111000000000001000000000
+  transition:    5'00111 6'0---1- ->    5'01000 26'01000000000000001000000000
+  transition:    5'00111 6'1----- ->    5'00000 26'00000000000000001000000000
+  transition:    5'01111 6'0---0- ->    5'01111 26'01111000100000000000000000
+  transition:    5'01111 6'0---1- ->    5'10000 26'10000000100000000000000000
+  transition:    5'01111 6'1----- ->    5'00000 26'00000000100000000000000000
+Extracting FSM `\mchip.matrix_calculator.mul_logic.fsm.cur_state' from module `\toplevel_chip'.
+  found $dff cell for state register: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procdff$945
+  root of input selection tree: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$0\cur_state[4:0]
+  found reset state: 5'00000 (guessed from mux tree)
+  found ctrl input: \mchip.sync13.sync
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$1002
+  found ctrl input: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$621_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$622_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$623_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$624_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$625_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$626_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$627_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$628_CMP
+  found ctrl input: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$616_CMP
+  found state code: 5'00000
+  found state code: 5'01010
+  found state code: 5'01001
+  found state code: 5'01000
+  found state code: 5'00111
+  found state code: 5'00110
+  found state code: 5'00101
+  found state code: 5'00100
+  found state code: 5'00011
+  found state code: 5'00010
+  found ctrl input: \mchip.matrix_calculator.fsm.mul_en
+  found state code: 5'00001
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$616_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$619_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$620_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$621_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$622_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$623_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$624_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$625_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$626_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$627_CMP
+  found ctrl output: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$628_CMP
+  ctrl inputs: { $auto$opt_reduce.cc:134:opt_pmux$1002 \mchip.sync13.sync \mchip.matrix_calculator.fsm.mul_en }
+  ctrl outputs: { $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$628_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$627_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$626_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$625_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$624_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$623_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$622_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$621_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$620_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$619_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$616_CMP $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$0\cur_state[4:0] }
+  transition:    5'00000 3'-00 ->    5'00000 16'0000000000100000
+  transition:    5'00000 3'-01 ->    5'00001 16'0000000000100001
+  transition:    5'00000 3'-1- ->    5'00000 16'0000000000100000
+  transition:    5'01000 3'-0- ->    5'01001 16'0000000100001001
+  transition:    5'01000 3'-1- ->    5'00000 16'0000000100000000
+  transition:    5'00100 3'-0- ->    5'00101 16'0001000000000101
+  transition:    5'00100 3'-1- ->    5'00000 16'0001000000000000
+  transition:    5'00010 3'-0- ->    5'00011 16'0100000000000011
+  transition:    5'00010 3'-1- ->    5'00000 16'0100000000000000
+  transition:    5'01010 3'-0- ->    5'01010 16'0000000001001010
+  transition:    5'01010 3'-1- ->    5'00000 16'0000000001000000
+  transition:    5'00110 3'-0- ->    5'00111 16'0000010000000111
+  transition:    5'00110 3'-1- ->    5'00000 16'0000010000000000
+  transition:    5'00001 3'-0- ->    5'00010 16'1000000000000010
+  transition:    5'00001 3'-1- ->    5'00000 16'1000000000000000
+  transition:    5'01001 3'-0- ->    5'01010 16'0000000010001010
+  transition:    5'01001 3'-1- ->    5'00000 16'0000000010000000
+  transition:    5'00101 3'-0- ->    5'00110 16'0000100000000110
+  transition:    5'00101 3'-1- ->    5'00000 16'0000100000000000
+  transition:    5'00011 3'-0- ->    5'00100 16'0010000000000100
+  transition:    5'00011 3'-1- ->    5'00000 16'0010000000000000
+  transition:    5'00111 3'-0- ->    5'01000 16'0000001000001000
+  transition:    5'00111 3'-1- ->    5'00000 16'0000001000000000
+
+7.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\mchip.matrix_calculator.mul_logic.fsm.cur_state$1090' from module `\toplevel_chip'.
+  Removing unused input signal $auto$opt_reduce.cc:134:opt_pmux$1002.
+Optimizing FSM `$fsm$\mchip.matrix_calculator.fsm.cur_state$1067' from module `\toplevel_chip'.
+Optimizing FSM `$fsm$\mchip.matrix_calculator.add_logic.fsm.cur_state$1055' from module `\toplevel_chip'.
+  Removing unused input signal $auto$opt_reduce.cc:134:opt_pmux$976.
+
+7.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 75 unused cells and 75 unused wires.
+<suppressed ~79 debug messages>
+
+7.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\mchip.matrix_calculator.add_logic.fsm.cur_state$1055' from module `\toplevel_chip'.
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$0\cur_state[3:0] [0].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$0\cur_state[3:0] [1].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$0\cur_state[3:0] [2].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$0\cur_state[3:0] [3].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$865_CMP.
+Optimizing FSM `$fsm$\mchip.matrix_calculator.fsm.cur_state$1067' from module `\toplevel_chip'.
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\fsm.$0\cur_state[4:0] [0].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\fsm.$0\cur_state[4:0] [1].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\fsm.$0\cur_state[4:0] [2].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\fsm.$0\cur_state[4:0] [3].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\fsm.$0\cur_state[4:0] [4].
+Optimizing FSM `$fsm$\mchip.matrix_calculator.mul_logic.fsm.cur_state$1090' from module `\toplevel_chip'.
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$0\cur_state[4:0] [0].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$0\cur_state[4:0] [1].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$0\cur_state[4:0] [2].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$0\cur_state[4:0] [3].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$0\cur_state[4:0] [4].
+  Removing unused output signal $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$616_CMP.
+
+7.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\mchip.matrix_calculator.add_logic.fsm.cur_state$1055' from module `\toplevel_chip' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  0000 -> ---------1
+  1000 -> --------1-
+  0100 -> -------1--
+  0010 -> ------1---
+  0110 -> -----1----
+  0001 -> ----1-----
+  1001 -> ---1------
+  0101 -> --1-------
+  0011 -> -1--------
+  0111 -> 1---------
+Recoding FSM `$fsm$\mchip.matrix_calculator.fsm.cur_state$1067' from module `\toplevel_chip' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00000 -> --------------------1
+  10000 -> -------------------1-
+  01000 -> ------------------1--
+  00100 -> -----------------1---
+  10100 -> ----------------1----
+  01100 -> ---------------1-----
+  00010 -> --------------1------
+  10010 -> -------------1-------
+  01010 -> ------------1--------
+  00110 -> -----------1---------
+  01110 -> ----------1----------
+  00001 -> ---------1-----------
+  10001 -> --------1------------
+  01001 -> -------1-------------
+  00101 -> ------1--------------
+  01101 -> -----1---------------
+  00011 -> ----1----------------
+  10011 -> ---1-----------------
+  01011 -> --1------------------
+  00111 -> -1-------------------
+  01111 -> 1--------------------
+Recoding FSM `$fsm$\mchip.matrix_calculator.mul_logic.fsm.cur_state$1090' from module `\toplevel_chip' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00000 -> ----------1
+  01000 -> ---------1-
+  00100 -> --------1--
+  00010 -> -------1---
+  01010 -> ------1----
+  00110 -> -----1-----
+  00001 -> ----1------
+  01001 -> ---1-------
+  00101 -> --1--------
+  00011 -> -1---------
+  00111 -> 1----------
+
+7.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\mchip.matrix_calculator.add_logic.fsm.cur_state$1055' from module `toplevel_chip':
+-------------------------------------
+
+  Information on FSM $fsm$\mchip.matrix_calculator.add_logic.fsm.cur_state$1055 (\mchip.matrix_calculator.add_logic.fsm.cur_state):
+
+  Number of input signals:    2
+  Number of output signals:   9
+  Number of state bits:      10
+
+  Input signals:
+    0: \mchip.matrix_calculator.add_en
+    1: \mchip.sync13.sync
+
+  Output signals:
+    0: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$868_CMP
+    1: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$869_CMP
+    2: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$870_CMP
+    3: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$871_CMP
+    4: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$872_CMP
+    5: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$873_CMP
+    6: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$874_CMP
+    7: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$875_CMP
+    8: $flatten\mchip.\matrix_calculator.\add_logic.\fsm.$procmux$876_CMP
+
+  State encoding:
+    0: 10'---------1  <RESET STATE>
+    1: 10'--------1-
+    2: 10'-------1--
+    3: 10'------1---
+    4: 10'-----1----
+    5: 10'----1-----
+    6: 10'---1------
+    7: 10'--1-------
+    8: 10'-1--------
+    9: 10'1---------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 2'00   ->     0 9'000000000
+      1:     0 2'1-   ->     0 9'000000000
+      2:     0 2'01   ->     5 9'000000000
+      3:     1 2'1-   ->     0 9'000000010
+      4:     1 2'0-   ->     6 9'000000010
+      5:     2 2'1-   ->     0 9'000100000
+      6:     2 2'0-   ->     7 9'000100000
+      7:     3 2'1-   ->     0 9'010000000
+      8:     3 2'0-   ->     8 9'010000000
+      9:     4 2'1-   ->     0 9'000001000
+     10:     4 2'0-   ->     9 9'000001000
+     11:     5 2'1-   ->     0 9'100000000
+     12:     5 2'0-   ->     3 9'100000000
+     13:     6 2'1-   ->     0 9'000000001
+     14:     6 2'0-   ->     6 9'000000001
+     15:     7 2'1-   ->     0 9'000010000
+     16:     7 2'0-   ->     4 9'000010000
+     17:     8 2'1-   ->     0 9'001000000
+     18:     8 2'0-   ->     2 9'001000000
+     19:     9 2'1-   ->     0 9'000000100
+     20:     9 2'0-   ->     1 9'000000100
+
+-------------------------------------
+
+FSM `$fsm$\mchip.matrix_calculator.fsm.cur_state$1067' from module `toplevel_chip':
+-------------------------------------
+
+  Information on FSM $fsm$\mchip.matrix_calculator.fsm.cur_state$1067 (\mchip.matrix_calculator.fsm.cur_state):
+
+  Number of input signals:    6
+  Number of output signals:  21
+  Number of state bits:      21
+
+  Input signals:
+    0: \mchip.matrix_calculator.add_finish
+    1: \mchip.matrix_calculator.enter_pulse
+    2: \mchip.matrix_calculator.op_reg.Q [1]
+    3: $flatten\mchip.\matrix_calculator.\fsm.$eq$d14_siyuanl4_matrixcalc/src/main.sv:359$18_Y
+    4: \mchip.matrix_calculator.fsm.mul_finish
+    5: \mchip.sync13.sync
+
+  Output signals:
+    0: $flatten\mchip.\matrix_calculator.\fsm.$procmux$498_CMP
+    1: $flatten\mchip.\matrix_calculator.\fsm.$procmux$495_CMP
+    2: $flatten\mchip.\matrix_calculator.\fsm.$procmux$492_CMP
+    3: $flatten\mchip.\matrix_calculator.\fsm.$procmux$466_CMP
+    4: $flatten\mchip.\matrix_calculator.\fsm.$procmux$441_CMP
+    5: $flatten\mchip.\matrix_calculator.\fsm.$procmux$417_CMP
+    6: $flatten\mchip.\matrix_calculator.\fsm.$procmux$394_CMP
+    7: $flatten\mchip.\matrix_calculator.\fsm.$procmux$372_CMP
+    8: $flatten\mchip.\matrix_calculator.\fsm.$procmux$351_CMP
+    9: $flatten\mchip.\matrix_calculator.\fsm.$procmux$331_CMP
+   10: $flatten\mchip.\matrix_calculator.\fsm.$procmux$312_CMP
+   11: $flatten\mchip.\matrix_calculator.\fsm.$procmux$294_CMP
+   12: $flatten\mchip.\matrix_calculator.\fsm.$procmux$277_CMP
+   13: $flatten\mchip.\matrix_calculator.\fsm.$procmux$261_CMP
+   14: $flatten\mchip.\matrix_calculator.\fsm.$procmux$246_CMP
+   15: $flatten\mchip.\matrix_calculator.\fsm.$procmux$232_CMP
+   16: $flatten\mchip.\matrix_calculator.\fsm.$procmux$219_CMP
+   17: $flatten\mchip.\matrix_calculator.\fsm.$procmux$207_CMP
+   18: $flatten\mchip.\matrix_calculator.\fsm.$procmux$130_CMP
+   19: $flatten\mchip.\matrix_calculator.\fsm.$procmux$109_CMP
+   20: $flatten\mchip.\matrix_calculator.\fsm.$procmux$101_CMP
+
+  State encoding:
+    0: 21'--------------------1  <RESET STATE>
+    1: 21'-------------------1-
+    2: 21'------------------1--
+    3: 21'-----------------1---
+    4: 21'----------------1----
+    5: 21'---------------1-----
+    6: 21'--------------1------
+    7: 21'-------------1-------
+    8: 21'------------1--------
+    9: 21'-----------1---------
+   10: 21'----------1----------
+   11: 21'---------1-----------
+   12: 21'--------1------------
+   13: 21'-------1-------------
+   14: 21'------1--------------
+   15: 21'-----1---------------
+   16: 21'----1----------------
+   17: 21'---1-----------------
+   18: 21'--1------------------
+   19: 21'-1-------------------
+   20: 21'1--------------------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 6'0---0-   ->     0 21'000000000000000000100
+      1:     0 6'1-----   ->     0 21'000000000000000000100
+      2:     0 6'0---1-   ->    11 21'000000000000000000100
+      3:     1 6'1-----   ->     0 21'001000000000000000000
+      4:     1 6'0-00--   ->     4 21'001000000000000000000
+      5:     1 6'0-01--   ->     7 21'001000000000000000000
+      6:     1 6'0-1---   ->    12 21'001000000000000000000
+      7:     2 6'1-----   ->     0 21'000000000010000000000
+      8:     2 6'0---0-   ->     2 21'000000000010000000000
+      9:     2 6'0---1-   ->    13 21'000000000010000000000
+     10:     3 6'1-----   ->     0 21'000000000000001000000
+     11:     3 6'0---0-   ->     3 21'000000000000001000000
+     12:     3 6'0---1-   ->    14 21'000000000000001000000
+     13:     4 6'1-----   ->     0 21'000000000000000000001
+     14:     4 6'0-----   ->     4 21'000000000000000000001
+     15:     5 6'1-----   ->     0 21'000000100000000000000
+     16:     5 6'0---0-   ->     5 21'000000100000000000000
+     17:     5 6'0---1-   ->    15 21'000000100000000000000
+     18:     6 6'1-----   ->     0 21'000000000000000010000
+     19:     6 6'0---0-   ->     6 21'000000000000000010000
+     20:     6 6'0---1-   ->    16 21'000000000000000010000
+     21:     7 6'1-----   ->     0 21'100000000000000000000
+     22:     7 6'0----0   ->     7 21'100000000000000000000
+     23:     7 6'0----1   ->    17 21'100000000000000000000
+     24:     8 6'1-----   ->     0 21'000000001000000000000
+     25:     8 6'0---0-   ->     8 21'000000001000000000000
+     26:     8 6'0---1-   ->    18 21'000000001000000000000
+     27:     9 6'1-----   ->     0 21'000000000000100000000
+     28:     9 6'0---0-   ->     9 21'000000000000100000000
+     29:     9 6'0---1-   ->    19 21'000000000000100000000
+     30:    10 6'1-----   ->     0 21'000010000000000000000
+     31:    10 6'0---0-   ->    10 21'000010000000000000000
+     32:    10 6'0---1-   ->    20 21'000010000000000000000
+     33:    11 6'1-----   ->     0 21'000000000000000001000
+     34:    11 6'0---1-   ->     6 21'000000000000000001000
+     35:    11 6'0---0-   ->    11 21'000000000000000001000
+     36:    12 6'1-----   ->     0 21'010000000000000000000
+     37:    12 6'00----   ->    12 21'010000000000000000000
+     38:    12 6'01----   ->    17 21'010000000000000000000
+     39:    13 6'1-----   ->     0 21'000000000100000000000
+     40:    13 6'0---1-   ->     8 21'000000000100000000000
+     41:    13 6'0---0-   ->    13 21'000000000100000000000
+     42:    14 6'1-----   ->     0 21'000000000000010000000
+     43:    14 6'0---1-   ->     9 21'000000000000010000000
+     44:    14 6'0---0-   ->    14 21'000000000000010000000
+     45:    15 6'1-----   ->     0 21'000001000000000000000
+     46:    15 6'0---1-   ->    10 21'000001000000000000000
+     47:    15 6'0---0-   ->    15 21'000001000000000000000
+     48:    16 6'1-----   ->     0 21'000000000000000100000
+     49:    16 6'0---1-   ->     3 21'000000000000000100000
+     50:    16 6'0---0-   ->    16 21'000000000000000100000
+     51:    17 6'1-----   ->     0 21'000000000000000000010
+     52:    17 6'0-----   ->    17 21'000000000000000000010
+     53:    18 6'1-----   ->     0 21'000000010000000000000
+     54:    18 6'0---1-   ->     5 21'000000010000000000000
+     55:    18 6'0---0-   ->    18 21'000000010000000000000
+     56:    19 6'1-----   ->     0 21'000000000001000000000
+     57:    19 6'0---1-   ->     2 21'000000000001000000000
+     58:    19 6'0---0-   ->    19 21'000000000001000000000
+     59:    20 6'1-----   ->     0 21'000100000000000000000
+     60:    20 6'0---1-   ->     1 21'000100000000000000000
+     61:    20 6'0---0-   ->    20 21'000100000000000000000
+
+-------------------------------------
+
+FSM `$fsm$\mchip.matrix_calculator.mul_logic.fsm.cur_state$1090' from module `toplevel_chip':
+-------------------------------------
+
+  Information on FSM $fsm$\mchip.matrix_calculator.mul_logic.fsm.cur_state$1090 (\mchip.matrix_calculator.mul_logic.fsm.cur_state):
+
+  Number of input signals:    2
+  Number of output signals:  10
+  Number of state bits:      11
+
+  Input signals:
+    0: \mchip.matrix_calculator.fsm.mul_en
+    1: \mchip.sync13.sync
+
+  Output signals:
+    0: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$619_CMP
+    1: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$620_CMP
+    2: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$621_CMP
+    3: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$622_CMP
+    4: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$623_CMP
+    5: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$624_CMP
+    6: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$625_CMP
+    7: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$626_CMP
+    8: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$627_CMP
+    9: $flatten\mchip.\matrix_calculator.\mul_logic.\fsm.$procmux$628_CMP
+
+  State encoding:
+    0: 11'----------1  <RESET STATE>
+    1: 11'---------1-
+    2: 11'--------1--
+    3: 11'-------1---
+    4: 11'------1----
+    5: 11'-----1-----
+    6: 11'----1------
+    7: 11'---1-------
+    8: 11'--1--------
+    9: 11'-1---------
+   10: 11'1----------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 2'00   ->     0 10'0000000000
+      1:     0 2'1-   ->     0 10'0000000000
+      2:     0 2'01   ->     6 10'0000000000
+      3:     1 2'1-   ->     0 10'0000000100
+      4:     1 2'0-   ->     7 10'0000000100
+      5:     2 2'1-   ->     0 10'0001000000
+      6:     2 2'0-   ->     8 10'0001000000
+      7:     3 2'1-   ->     0 10'0100000000
+      8:     3 2'0-   ->     9 10'0100000000
+      9:     4 2'1-   ->     0 10'0000000001
+     10:     4 2'0-   ->     4 10'0000000001
+     11:     5 2'1-   ->     0 10'0000010000
+     12:     5 2'0-   ->    10 10'0000010000
+     13:     6 2'1-   ->     0 10'1000000000
+     14:     6 2'0-   ->     3 10'1000000000
+     15:     7 2'1-   ->     0 10'0000000010
+     16:     7 2'0-   ->     4 10'0000000010
+     17:     8 2'1-   ->     0 10'0000100000
+     18:     8 2'0-   ->     5 10'0000100000
+     19:     9 2'1-   ->     0 10'0010000000
+     20:     9 2'0-   ->     2 10'0010000000
+     21:    10 2'1-   ->     0 10'0000001000
+     22:    10 2'0-   ->     1 10'0000001000
+
+-------------------------------------
+
+7.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\mchip.matrix_calculator.add_logic.fsm.cur_state$1055' from module `\toplevel_chip'.
+Mapping FSM `$fsm$\mchip.matrix_calculator.fsm.cur_state$1067' from module `\toplevel_chip'.
+Mapping FSM `$fsm$\mchip.matrix_calculator.mul_logic.fsm.cur_state$1090' from module `\toplevel_chip'.
+
+7.9. Executing OPT pass (performing simple optimizations).
+
+7.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~43 debug messages>
+
+7.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~144 debug messages>
+Removed a total of 48 cells.
+
+7.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~34 debug messages>
+
+7.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\mchip.\matrix_calculator.\shift_register.$procdff$937 ($dff) from module toplevel_chip (D = $flatten\mchip.\matrix_calculator.\shift_register.$procmux$62_Y, Q = \mchip.matrix_calculator.shift_register.Q, rval = 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$1395 ($sdff) from module toplevel_chip (D = { \mchip.matrix_calculator.shift_register.Q [119:0] \mchip.sync8.sync \mchip.sync7.sync \mchip.sync6.sync \mchip.sync5.sync \mchip.sync4.sync \mchip.sync3.sync \mchip.sync2.sync \mchip.sync1.sync }, Q = \mchip.matrix_calculator.shift_register.Q).
+Adding SRST signal on $flatten\mchip.\matrix_calculator.\op_reg.$procdff$941 ($dff) from module toplevel_chip (D = $flatten\mchip.\matrix_calculator.\op_reg.$procmux$74_Y, Q = \mchip.matrix_calculator.op_reg.Q, rval = 2'00).
+Adding EN signal on $auto$ff.cc:266:slice$1397 ($sdff) from module toplevel_chip (D = { \mchip.sync12.sync \mchip.sync11.sync }, Q = \mchip.matrix_calculator.op_reg.Q).
+Adding SRST signal on $flatten\mchip.\matrix_calculator.\mul_logic.\shift_register.$procdff$942 ($dff) from module toplevel_chip (D = $flatten\mchip.\matrix_calculator.\mul_logic.\shift_register.$procmux$80_Y, Q = \mchip.matrix_calculator.mul_logic.shift_register.Q, rval = 160'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$1399 ($sdff) from module toplevel_chip (D = { \mchip.matrix_calculator.mul_logic.shift_register.Q [139:0] \mchip.matrix_calculator.mul_logic.add_out \mchip.matrix_calculator.mul_logic.add_out2 }, Q = \mchip.matrix_calculator.mul_logic.shift_register.Q).
+Adding SRST signal on $flatten\mchip.\matrix_calculator.\mul_logic.\layer_1_reg.$procdff$940 ($dff) from module toplevel_chip (D = $flatten\mchip.\matrix_calculator.\mul_logic.\layer_1_reg.$procmux$68_Y, Q = \mchip.matrix_calculator.mul_logic.layer_1_reg.Q, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1401 ($sdff) from module toplevel_chip (D = { \mchip.matrix_calculator.mul_logic.mult1.S \mchip.matrix_calculator.mul_logic.mult2.S \mchip.matrix_calculator.mul_logic.mult3.S \mchip.matrix_calculator.mul_logic.mult4.S }, Q = \mchip.matrix_calculator.mul_logic.layer_1_reg.Q).
+Adding SRST signal on $flatten\mchip.\matrix_calculator.\mul_logic.\layer_1_2_reg.$procdff$940 ($dff) from module toplevel_chip (D = $flatten\mchip.\matrix_calculator.\mul_logic.\layer_1_2_reg.$procmux$68_Y, Q = \mchip.matrix_calculator.mul_logic.layer_1_2_reg.Q, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1403 ($sdff) from module toplevel_chip (D = { \mchip.matrix_calculator.mul_logic.mult5.S \mchip.matrix_calculator.mul_logic.mult6.S \mchip.matrix_calculator.mul_logic.mult7.S \mchip.matrix_calculator.mul_logic.mult8.S }, Q = \mchip.matrix_calculator.mul_logic.layer_1_2_reg.Q).
+Adding SRST signal on $flatten\mchip.\matrix_calculator.\index_counter.$procdff$936 ($dff) from module toplevel_chip (D = $flatten\mchip.\matrix_calculator.\index_counter.$procmux$56_Y, Q = \mchip.matrix_calculator.index_counter.Q, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:266:slice$1405 ($sdff) from module toplevel_chip (D = $flatten\mchip.\matrix_calculator.\index_counter.$add$d14_siyuanl4_matrixcalc/src/library.sv:73$47_Y, Q = \mchip.matrix_calculator.index_counter.Q).
+Adding SRST signal on $flatten\mchip.\matrix_calculator.\add_logic.\shift1.$procdff$942 ($dff) from module toplevel_chip (D = $flatten\mchip.\matrix_calculator.\add_logic.\shift1.$procmux$80_Y, Q = \mchip.matrix_calculator.add_logic.shift1.Q, rval = 160'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$1407 ($sdff) from module toplevel_chip (D = { \mchip.matrix_calculator.add_logic.shift1.Q [139:0] 5'00000 \mchip.matrix_calculator.add_logic.add1.S 5'00000 \mchip.matrix_calculator.add_logic.add2.S }, Q = \mchip.matrix_calculator.add_logic.shift1.Q).
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$1408 ($sdffe) from module toplevel_chip.
+
+7.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 14 unused cells and 116 unused wires.
+<suppressed ~15 debug messages>
+
+7.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$1409 ($sdffe) from module toplevel_chip.
+
+7.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 35 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 36 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 37 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 38 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 39 on $auto$ff.cc:266:slice$1410 ($sdffe) from module toplevel_chip.
+
+7.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.9.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.9.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.9.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.9.27. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 35 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 36 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 37 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 38 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 39 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 45 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 46 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 47 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 48 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 49 on $auto$ff.cc:266:slice$1411 ($sdffe) from module toplevel_chip.
+
+7.9.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.9.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.9.30. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.31. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.9.32. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.9.33. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.9.34. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 45 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 46 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 47 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 48 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 49 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 55 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 56 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 57 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 58 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 59 on $auto$ff.cc:266:slice$1412 ($sdffe) from module toplevel_chip.
+
+7.9.35. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.9.36. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.9.37. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.38. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.9.39. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.9.40. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.9.41. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 55 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 56 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 57 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 58 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 59 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 65 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 66 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 67 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 68 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 69 on $auto$ff.cc:266:slice$1413 ($sdffe) from module toplevel_chip.
+
+7.9.42. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.9.43. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.9.44. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.45. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.9.46. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.9.47. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.9.48. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 65 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 66 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 67 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 68 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 69 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 75 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 76 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 77 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 78 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 79 on $auto$ff.cc:266:slice$1414 ($sdffe) from module toplevel_chip.
+
+7.9.49. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.9.50. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.9.51. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.52. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.9.53. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.9.54. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.9.55. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 75 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 76 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 77 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 78 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 79 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 85 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 86 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 87 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 88 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+Setting constant 0-bit at position 89 on $auto$ff.cc:266:slice$1415 ($sdffe) from module toplevel_chip.
+
+7.9.56. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.9.57. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.9.58. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.59. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.9.60. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.9.61. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.9.62. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.9.63. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.9.64. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.9.65. Finished OPT passes. (There is nothing left to do.)
+
+7.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$1338 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$1307 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$1303 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$1258 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$1376 ($eq).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$582_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$583_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$584_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$585_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$586_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$587_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$588_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$589_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$590_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$591_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$592_CMP0 ($eq).
+Removed top 2 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$593_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$594_CMP0 ($eq).
+Removed top 3 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$595_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\matrix_calculator.$procmux$596_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$1217 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$1131 ($eq).
+Removed top 1 bits (of 10) from port Y of cell toplevel_chip.$flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$8 ($add).
+Removed top 1 bits (of 10) from port Y of cell toplevel_chip.$flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$5 ($add).
+Removed top 1 bits (of 10) from wire toplevel_chip.$flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$5_Y.
+Removed top 5 bits (of 10) from wire toplevel_chip.$flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$6_Y.
+Removed top 7 bits (of 10) from wire toplevel_chip.$flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$8_Y.
+
+7.11. Executing PEEPOPT pass (run peephole optimizers).
+
+7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+7.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module toplevel_chip:
+  creating $macc model for $flatten\mchip.\matrix_calculator.\add_logic.\add1.$add$d14_siyuanl4_matrixcalc/src/library.sv:21$50 ($add).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\add_logic.\add1.$sub$d14_siyuanl4_matrixcalc/src/library.sv:21$51 ($sub).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\add_logic.\add2.$add$d14_siyuanl4_matrixcalc/src/library.sv:21$50 ($add).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\add_logic.\add2.$sub$d14_siyuanl4_matrixcalc/src/library.sv:21$51 ($sub).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\index_counter.$add$d14_siyuanl4_matrixcalc/src/library.sv:73$47 ($add).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$5 ($add).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$6 ($add).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$7 ($add).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$10 ($add).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$8 ($add).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$9 ($add).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.\mult1.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54 ($mul).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.\mult2.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54 ($mul).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.\mult3.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54 ($mul).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.\mult4.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54 ($mul).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.\mult5.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54 ($mul).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.\mult6.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54 ($mul).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.\mult7.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54 ($mul).
+  creating $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.\mult8.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54 ($mul).
+  merging $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$9 into $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$10.
+  merging $macc model for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$6 into $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$7.
+  creating $alu model for $macc $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$8.
+  creating $alu model for $macc $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$5.
+  creating $alu model for $macc $flatten\mchip.\matrix_calculator.\index_counter.$add$d14_siyuanl4_matrixcalc/src/library.sv:73$47.
+  creating $alu model for $macc $flatten\mchip.\matrix_calculator.\add_logic.\add2.$sub$d14_siyuanl4_matrixcalc/src/library.sv:21$51.
+  creating $alu model for $macc $flatten\mchip.\matrix_calculator.\add_logic.\add2.$add$d14_siyuanl4_matrixcalc/src/library.sv:21$50.
+  creating $alu model for $macc $flatten\mchip.\matrix_calculator.\add_logic.\add1.$sub$d14_siyuanl4_matrixcalc/src/library.sv:21$51.
+  creating $alu model for $macc $flatten\mchip.\matrix_calculator.\add_logic.\add1.$add$d14_siyuanl4_matrixcalc/src/library.sv:21$50.
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.\mult7.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54: $auto$alumacc.cc:365:replace_macc$1420
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$10: $auto$alumacc.cc:365:replace_macc$1421
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$7: $auto$alumacc.cc:365:replace_macc$1422
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.\mult8.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54: $auto$alumacc.cc:365:replace_macc$1423
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.\mult1.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54: $auto$alumacc.cc:365:replace_macc$1424
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.\mult2.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54: $auto$alumacc.cc:365:replace_macc$1425
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.\mult3.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54: $auto$alumacc.cc:365:replace_macc$1426
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.\mult4.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54: $auto$alumacc.cc:365:replace_macc$1427
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.\mult5.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54: $auto$alumacc.cc:365:replace_macc$1428
+  creating $macc cell for $flatten\mchip.\matrix_calculator.\mul_logic.\mult6.$mul$d14_siyuanl4_matrixcalc/src/library.sv:30$54: $auto$alumacc.cc:365:replace_macc$1429
+  creating $alu cell for $flatten\mchip.\matrix_calculator.\add_logic.\add1.$add$d14_siyuanl4_matrixcalc/src/library.sv:21$50: $auto$alumacc.cc:485:replace_alu$1430
+  creating $alu cell for $flatten\mchip.\matrix_calculator.\add_logic.\add1.$sub$d14_siyuanl4_matrixcalc/src/library.sv:21$51: $auto$alumacc.cc:485:replace_alu$1433
+  creating $alu cell for $flatten\mchip.\matrix_calculator.\add_logic.\add2.$add$d14_siyuanl4_matrixcalc/src/library.sv:21$50: $auto$alumacc.cc:485:replace_alu$1436
+  creating $alu cell for $flatten\mchip.\matrix_calculator.\add_logic.\add2.$sub$d14_siyuanl4_matrixcalc/src/library.sv:21$51: $auto$alumacc.cc:485:replace_alu$1439
+  creating $alu cell for $flatten\mchip.\matrix_calculator.\index_counter.$add$d14_siyuanl4_matrixcalc/src/library.sv:73$47: $auto$alumacc.cc:485:replace_alu$1442
+  creating $alu cell for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:77$5: $auto$alumacc.cc:485:replace_alu$1445
+  creating $alu cell for $flatten\mchip.\matrix_calculator.\mul_logic.$add$d14_siyuanl4_matrixcalc/src/mult.sv:78$8: $auto$alumacc.cc:485:replace_alu$1448
+  created 7 $alu and 10 $macc cells.
+
+7.14. Executing SHARE pass (SAT-based resource sharing).
+
+7.15. Executing OPT pass (performing simple optimizations).
+
+7.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+7.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+7.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.15.16. Finished OPT passes. (There is nothing left to do.)
+
+7.16. Executing MEMORY pass.
+
+7.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+7.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+7.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+7.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+7.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+7.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+7.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.18. Executing OPT pass (performing simple optimizations).
+
+7.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~15 debug messages>
+
+7.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 1 unused cells and 9 unused wires.
+<suppressed ~2 debug messages>
+
+7.18.5. Finished fast OPT passes.
+
+7.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+7.20. Executing OPT pass (performing simple optimizations).
+
+7.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+7.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.20.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $mux $flatten\mchip.\matrix_calculator.\add_logic.\add1.$ternary$d14_siyuanl4_matrixcalc/src/library.sv:21$52 in front of them:
+        $auto$alumacc.cc:485:replace_alu$1433
+        $auto$alumacc.cc:485:replace_alu$1430
+
+    Found cells that share an operand and can be merged by moving the $mux $flatten\mchip.\matrix_calculator.\add_logic.\add2.$ternary$d14_siyuanl4_matrixcalc/src/library.sv:21$52 in front of them:
+        $auto$alumacc.cc:485:replace_alu$1439
+        $auto$alumacc.cc:485:replace_alu$1436
+
+7.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 12 unused wires.
+<suppressed ~1 debug messages>
+
+7.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~2 debug messages>
+
+7.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+7.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.20.14. Executing OPT_SHARE pass.
+
+7.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+7.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+7.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+7.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.20.22. Executing OPT_SHARE pass.
+
+7.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+7.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+7.20.26. Finished OPT passes. (There is nothing left to do.)
+
+7.21. Executing TECHMAP pass (map to technology primitives).
+
+7.21.1. Executing Verilog-2005 frontend: /Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+7.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $eq.
+Running "alumacc" on wrapper $extern:wrap:$neg:A_SIGNED=0:A_WIDTH=5:Y_WIDTH=5:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$neg:A_SIGNED=0:A_WIDTH=5:Y_WIDTH=5:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$neg:A_SIGNED=0:A_WIDTH=5:Y_WIDTH=5:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper maccmap for cells of type $macc.
+  add \mchip.matrix_calculator.mul_logic.mult3.A * \mchip.matrix_calculator.mul_logic.mult7.B (4x4 bits, unsigned)
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod$b6ec48645094baeb70d6b93add0cdbbe7498ad3c\_90_pmux for cells of type $pmux.
+Using template $paramod$83dd457849c736323edf2edb15923eb27f99c683\_90_alu for cells of type $alu.
+  add \mchip.matrix_calculator.mul_logic.mult2.A * \mchip.matrix_calculator.mul_logic.mult2.B (4x4 bits, unsigned)
+Using template $paramod$4ccbe221165818e15f326ddee3d1183c7924e12f\_90_alu for cells of type $alu.
+Using template $paramod$e311099c588f37960fc999857d0fff1744db29fb\_90_pmux for cells of type $pmux.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using template $paramod$d629d85c8826a74239b9178d1930215a43b0ceb0\_90_pmux for cells of type $pmux.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_90_alu for cells of type $alu.
+Using template $paramod$bf2533632d512eac76dd186c0da49367e29b8e98\_90_pmux for cells of type $pmux.
+Using template $paramod$20d3ee62d72123142eb855d7ddafd835e31ba009\_90_pmux for cells of type $pmux.
+  add $auto$wreduce.cc:461:run$1417 [8:0] (9 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.layer_1_reg.Q [7:0] (8 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.layer_1_reg.Q [15:8] (8 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.mult4.A * \mchip.matrix_calculator.mul_logic.mult8.B (4x4 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.mult1.A * \mchip.matrix_calculator.mul_logic.mult1.B (4x4 bits, unsigned)
+  add $auto$wreduce.cc:461:run$1419 [8:0] (9 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.layer_1_2_reg.Q [7:0] (8 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.layer_1_2_reg.Q [15:8] (8 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.mult2.A * \mchip.matrix_calculator.mul_logic.mult6.B (4x4 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.mult1.A * \mchip.matrix_calculator.mul_logic.mult5.B (4x4 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.mult4.A * \mchip.matrix_calculator.mul_logic.mult4.B (4x4 bits, unsigned)
+  add \mchip.matrix_calculator.mul_logic.mult3.A * \mchip.matrix_calculator.mul_logic.mult3.B (4x4 bits, unsigned)
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001000 for cells of type $fa.
+Using template $paramod$a1bc51c02ce12ac21eb18988e83292af48ed7d72\_90_alu for cells of type $alu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001001 for cells of type $fa.
+Using template $paramod$484d51534650924b7ed4c69e46eed3a56904771f\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001001 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using template $paramod$3e96e356bb68fcbd4f9c12f6d97ec8513d1af8c6\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001010 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1900 debug messages>
+
+7.22. Executing OPT pass (performing simple optimizations).
+
+7.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~1234 debug messages>
+
+7.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~603 debug messages>
+Removed a total of 201 cells.
+
+7.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 93 unused cells and 1475 unused wires.
+<suppressed ~94 debug messages>
+
+7.22.5. Finished fast OPT passes.
+
+7.23. Executing ABC pass (technology mapping using ABC).
+
+7.23.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
+Extracted 2208 gates and 2695 wires to a netlist network with 486 inputs and 153 outputs.
+
+7.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:       91
+ABC RESULTS:              NAND cells:       35
+ABC RESULTS:               NOT cells:       21
+ABC RESULTS:              XNOR cells:      107
+ABC RESULTS:             ORNOT cells:      213
+ABC RESULTS:               AND cells:      233
+ABC RESULTS:               XOR cells:      176
+ABC RESULTS:            ANDNOT cells:      636
+ABC RESULTS:               NOR cells:      136
+ABC RESULTS:                OR cells:      496
+ABC RESULTS:        internal signals:     2056
+ABC RESULTS:           input signals:      486
+ABC RESULTS:          output signals:      153
+Removing temp directory.
+
+7.24. Executing OPT pass (performing simple optimizations).
+
+7.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~64 debug messages>
+
+7.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+7.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 1 unused cells and 1294 unused wires.
+<suppressed ~83 debug messages>
+
+7.24.5. Finished fast OPT passes.
+
+7.25. Executing HIERARCHY pass (managing design hierarchy).
+
+7.25.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+7.25.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+7.26. Printing statistics.
+
+=== toplevel_chip ===
+
+   Number of wires:               2307
+   Number of wire bits:           5182
+   Number of public wires:         272
+   Number of public wire bits:    3139
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2652
+     $_ANDNOT_                     636
+     $_AND_                        233
+     $_DFF_P_                       70
+     $_MUX_                         91
+     $_NAND_                        35
+     $_NOR_                        136
+     $_NOT_                         20
+     $_ORNOT_                      213
+     $_OR_                         496
+     $_SDFFE_PP0N_                  64
+     $_SDFFE_PP0P_                 375
+     $_XNOR_                       107
+     $_XOR_                        176
+
+7.27. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+
+8. Executing SETUNDEF pass (replace undef values with defined constants).
+
+9. Executing SETUNDEF pass (replace undef values with defined constants).
+
+10. Executing ASYNC2SYNC pass.
+
+11. Executing SYNTH pass.
+
+11.1. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+11.1.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+11.2. Executing PROC pass (convert processes to netlists).
+
+11.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+11.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+11.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+11.2.4. Executing PROC_INIT pass (extract init attributes).
+
+11.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+11.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+11.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+11.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+11.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+11.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+11.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+11.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.5. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+
+11.6. Executing OPT pass (performing simple optimizations).
+
+11.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.6.9. Finished OPT passes. (There is nothing left to do.)
+
+11.7. Executing FSM pass (extract and optimize FSM).
+
+11.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+11.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+11.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+11.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+11.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+11.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+11.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+11.8. Executing OPT pass (performing simple optimizations).
+
+11.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.8.9. Finished OPT passes. (There is nothing left to do.)
+
+11.9. Executing WREDUCE pass (reducing word size of cells).
+
+11.10. Executing PEEPOPT pass (run peephole optimizers).
+
+11.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module toplevel_chip:
+  created 0 $alu and 0 $macc cells.
+
+11.13. Executing SHARE pass (SAT-based resource sharing).
+
+11.14. Executing OPT pass (performing simple optimizations).
+
+11.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.14.9. Finished OPT passes. (There is nothing left to do.)
+
+11.15. Executing MEMORY pass.
+
+11.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+11.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+11.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+11.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+11.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+11.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+11.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+11.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+11.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.17. Executing OPT pass (performing simple optimizations).
+
+11.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.17.5. Finished fast OPT passes.
+
+11.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+11.19. Executing OPT pass (performing simple optimizations).
+
+11.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.19.6. Executing OPT_SHARE pass.
+
+11.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.19.10. Finished OPT passes. (There is nothing left to do.)
+
+11.20. Executing TECHMAP pass (map to technology primitives).
+
+11.20.1. Executing Verilog-2005 frontend: /Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+11.20.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~73 debug messages>
+
+11.21. Executing OPT pass (performing simple optimizations).
+
+11.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.21.5. Finished fast OPT passes.
+
+11.22. Executing ABC pass (technology mapping using ABC).
+
+11.22.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
+Extracted 2143 gates and 2629 wires to a netlist network with 486 inputs and 153 outputs.
+
+11.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+11.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:       91
+ABC RESULTS:               NOT cells:       14
+ABC RESULTS:              NAND cells:       48
+ABC RESULTS:             ORNOT cells:      184
+ABC RESULTS:              XNOR cells:      110
+ABC RESULTS:               NOR cells:      105
+ABC RESULTS:               XOR cells:      173
+ABC RESULTS:            ANDNOT cells:      599
+ABC RESULTS:               AND cells:      283
+ABC RESULTS:                OR cells:      528
+ABC RESULTS:        internal signals:     1990
+ABC RESULTS:           input signals:      486
+ABC RESULTS:          output signals:      153
+Removing temp directory.
+
+11.23. Executing OPT pass (performing simple optimizations).
+
+11.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 2629 unused wires.
+<suppressed ~1 debug messages>
+
+11.23.5. Finished fast OPT passes.
+
+11.24. Executing HIERARCHY pass (managing design hierarchy).
+
+11.24.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+11.24.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+11.25. Printing statistics.
+
+=== toplevel_chip ===
+
+   Number of wires:               2299
+   Number of wire bits:           5174
+   Number of public wires:         272
+   Number of public wire bits:    3139
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2644
+     $_ANDNOT_                     599
+     $_AND_                        283
+     $_DFF_P_                       70
+     $_MUX_                         91
+     $_NAND_                        48
+     $_NOR_                        105
+     $_NOT_                         14
+     $_ORNOT_                      184
+     $_OR_                         528
+     $_SDFFE_PP0N_                  64
+     $_SDFFE_PP0P_                 375
+     $_XNOR_                       110
+     $_XOR_                        173
+
+11.26. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+Renaming module \toplevel_chip to \d14_siyuanl4_matrixcalc.
+
+12. Executing Verilog backend.
+
+12.1. Executing BMUXMAP pass.
+
+12.2. Executing DEMUXMAP pass.
+Dumping module `\d14_siyuanl4_matrixcalc'.
+
+13. Executing CHECK pass (checking for obvious problems).
+Checking module d14_siyuanl4_matrixcalc...
+Found and reported 0 problems.
+
+14. Printing statistics.
+
+=== d14_siyuanl4_matrixcalc ===
+
+   Number of wires:               2299
+   Number of wire bits:           5174
+   Number of public wires:         272
+   Number of public wire bits:    3139
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2644
+     $_ANDNOT_                     599
+     $_AND_                        283
+     $_DFF_P_                       70
+     $_MUX_                         91
+     $_NAND_                        48
+     $_NOR_                        105
+     $_NOT_                         14
+     $_ORNOT_                      184
+     $_OR_                         528
+     $_SDFFE_PP0N_                  64
+     $_SDFFE_PP0P_                 375
+     $_XNOR_                       110
+     $_XOR_                        173
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 5b11313242, CPU: user 1.19s system 0.04s
+Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 23% 46x opt_expr (0 sec), 18% 42x opt_clean (0 sec), ...
+

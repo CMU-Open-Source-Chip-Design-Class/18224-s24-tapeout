@@ -1,0 +1,28 @@
+=== d18_vrajesh_motorcontroller ===
+
+   Number of wires:               1106
+   Number of wire bits:           1612
+   Number of public wires:          87
+   Number of public wire bits:     455
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1243
+     $_ANDNOT_                     240
+     $_AND_                        163
+     $_DFFE_PP_                     18
+     $_DFF_P_                       71
+     $_MUX_                         18
+     $_NAND_                        58
+     $_NOR_                         40
+     $_NOT_                         25
+     $_ORNOT_                       57
+     $_OR_                         235
+     $_SDFFE_PN1N_                   3
+     $_SDFFE_PP0P_                   9
+     $_SDFFE_PP1P_                   8
+     $_SDFF_PN0_                    14
+     $_SDFF_PP0_                    38
+     $_SDFF_PP1_                    15
+     $_XNOR_                        49
+     $_XOR_                        182

@@ -1,0 +1,23 @@
+=== d13_thomaska_cordic ===
+
+   Number of wires:               2238
+   Number of wire bits:           3435
+   Number of public wires:         103
+   Number of public wire bits:    1298
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2182
+     $_ANDNOT_                     559
+     $_AND_                        108
+     $_DFFE_PP_                     22
+     $_MUX_                        411
+     $_NAND_                        72
+     $_NOR_                         88
+     $_NOT_                         71
+     $_ORNOT_                      110
+     $_OR_                         132
+     $_SDFFE_PP0N_                   4
+     $_SDFFE_PP0P_                  51
+     $_XNOR_                       182
+     $_XOR_                        372

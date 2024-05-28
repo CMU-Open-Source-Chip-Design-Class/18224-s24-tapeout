@@ -1,0 +1,25 @@
+=== d10_jjalacce_connect4 ===
+
+   Number of wires:               6494
+   Number of wire bits:           9796
+   Number of public wires:         427
+   Number of public wire bits:    3623
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               6337
+     $_ANDNOT_                    1787
+     $_AND_                         69
+     $_DFF_P_                       28
+     $_MUX_                        808
+     $_NAND_                        86
+     $_NOR_                        126
+     $_NOT_                        136
+     $_ORNOT_                      696
+     $_OR_                        2285
+     $_SDFFE_PP0P_                 117
+     $_SDFFE_PP1P_                   1
+     $_SDFF_PP0_                    45
+     $_SDFF_PP1_                    18
+     $_XNOR_                        38
+     $_XOR_                         97

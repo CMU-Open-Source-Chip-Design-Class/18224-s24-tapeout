@@ -2,7 +2,7 @@
 
 `define ASSERT(x) if (!(x)) begin \
     $display("Assert failed at line %d", `__LINE__); \
-    $finish(1); 
+    $finish(1); \
 end
 
 
@@ -41,7 +41,7 @@ module standard_tb (
  
         // Wait until calculation has finished.
         while (!done) @(negedge clock);
-        ASSERT(out_val == expected_out_val);
+        `ASSERT(out_val == expected_out_val);
 
 
         $finish(0); // Pass

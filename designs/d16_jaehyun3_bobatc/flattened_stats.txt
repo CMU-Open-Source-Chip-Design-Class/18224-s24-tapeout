@@ -1,0 +1,25 @@
+=== d16_jaehyun3_bobatc ===
+
+   Number of wires:               1804
+   Number of wire bits:           2370
+   Number of public wires:         144
+   Number of public wire bits:     608
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2018
+     $_ANDNOT_                     471
+     $_AND_                         30
+     $_DFFE_PP_                    128
+     $_DFF_P_                       22
+     $_MUX_                        216
+     $_NAND_                       121
+     $_NOR_                         45
+     $_NOT_                         61
+     $_ORNOT_                      122
+     $_OR_                         586
+     $_SDFFE_PP0P_                 123
+     $_SDFF_PP0_                    21
+     $_SDFF_PP1_                     1
+     $_XNOR_                         4
+     $_XOR_                         67

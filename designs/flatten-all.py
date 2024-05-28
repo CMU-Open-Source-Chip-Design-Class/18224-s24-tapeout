@@ -12,10 +12,16 @@ def yosys_script(name, files):
     return f"read_verilog -sv {files}; synth -flatten -top toplevel_chip; setundef -undriven -zero; setundef -zero; async2sync; synth -top toplevel_chip; rename toplevel_chip {name}; write_verilog -attr2comment {name}/flattened.v; check; stat;"
 
 def run_yosys(name, files):
-    out = subprocess.check_output(["yosys", "-p", yosys_script(name, files)]).decode()
-    out = out.split("Printing statistics.")[-1].split("End of script")[0].split("Warnings")[0].strip()
+    out_raw = subprocess.check_output(["yosys", "-p", yosys_script(name, files)]).decode()
+    out = out_raw.split("Printing statistics.")[-1].split("End of script")[0].split("Warnings")[0].strip()
+    cells = [x for x in out.splitlines() if "Number of cells:" in x][0]
+    cells = cells.split(":")[-1].strip()
+    print(f"cell count: {cells}")
     with open(f"{name}/flattened_stats.txt", "w+") as f:
         f.write(out+"\n")
+
+    with open(f"{name}/flatten-log.txt", "w+") as f:
+        f.write(out_raw+"\n")
 
 if len(sys.argv) > 1:
     g = sys.argv[1]
@@ -26,7 +32,7 @@ for des in sorted(list(glob.glob(g))):
     with open(f"{des}/info.yaml") as f:
         data = yaml.load(f, Loader=yaml.Loader)
 
-    print("Processing design (standard format)", des)
+    print(f"Processing design (standard format) {des}... ", end="", flush=True)
     assert data["project"]["top_module"] == "toplevel_chip"
     sources = data["project"]["source_files"]
 

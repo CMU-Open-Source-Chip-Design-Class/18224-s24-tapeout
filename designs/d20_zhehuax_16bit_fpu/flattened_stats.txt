@@ -1,0 +1,23 @@
+=== d20_zhehuax_16bit_fpu ===
+
+   Number of wires:               2628
+   Number of wire bits:           2717
+   Number of public wires:          18
+   Number of public wire bits:     107
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2620
+     $_ANDNOT_                     502
+     $_AND_                        248
+     $_MUX_                        543
+     $_NAND_                        66
+     $_NOR_                        205
+     $_NOT_                        133
+     $_ORNOT_                      121
+     $_OR_                         372
+     $_SDFFE_PP0N_                   1
+     $_SDFFE_PP0P_                  37
+     $_SDFF_PP0_                    10
+     $_XNOR_                       128
+     $_XOR_                        254

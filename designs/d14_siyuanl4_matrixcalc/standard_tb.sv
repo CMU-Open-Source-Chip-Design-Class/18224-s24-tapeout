@@ -2,7 +2,7 @@
 
 `define ASSERT(x) if (!(x)) begin \
     $display("Assert failed at line %d", `__LINE__); \
-    $finish(1); 
+    $finish(1); \
 end
 
 
@@ -55,7 +55,7 @@ module standard_tb (
             enter_pulse();
         end
 
-        wait(io_out[5]);
+        while(!(io_out[5]));
         // io_in = '1;
 
         // Output all resulting 16 elements

@@ -1,0 +1,2878 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Running command `read_verilog -sv d15_spencer2_pianotiles/src/toplevel_chip.v d15_spencer2_pianotiles/src/chip.sv d15_spencer2_pianotiles/src/main.sv d15_spencer2_pianotiles/src/library.sv d15_spencer2_pianotiles/src/game.sv d15_spencer2_pianotiles/src/random.sv d15_spencer2_pianotiles/src/spi.sv; synth -flatten -top toplevel_chip; setundef -undriven -zero; setundef -zero; async2sync; synth -top toplevel_chip; rename toplevel_chip d15_spencer2_pianotiles; write_verilog -attr2comment d15_spencer2_pianotiles/flattened.v; check; stat;' --
+
+1. Executing Verilog-2005 frontend: d15_spencer2_pianotiles/src/toplevel_chip.v
+Parsing SystemVerilog input from `d15_spencer2_pianotiles/src/toplevel_chip.v' to AST representation.
+Generating RTLIL representation for module `\toplevel_chip'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: d15_spencer2_pianotiles/src/chip.sv
+Parsing SystemVerilog input from `d15_spencer2_pianotiles/src/chip.sv' to AST representation.
+Generating RTLIL representation for module `\my_chip'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: d15_spencer2_pianotiles/src/main.sv
+Parsing SystemVerilog input from `d15_spencer2_pianotiles/src/main.sv' to AST representation.
+Generating RTLIL representation for module `\ChipInterface'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: d15_spencer2_pianotiles/src/library.sv
+Parsing SystemVerilog input from `d15_spencer2_pianotiles/src/library.sv' to AST representation.
+Generating RTLIL representation for module `\Async2Sync'.
+Generating RTLIL representation for module `\HalfClock'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: d15_spencer2_pianotiles/src/game.sv
+Parsing SystemVerilog input from `d15_spencer2_pianotiles/src/game.sv' to AST representation.
+Warning: Literal has a width of 5 bit, but value requires 6 bit. (d15_spencer2_pianotiles/src/game.sv:91)
+Generating RTLIL representation for module `\Game'.
+Generating RTLIL representation for module `\ButtonDetector'.
+Generating RTLIL representation for module `\DisplayText'.
+Generating RTLIL representation for module `\DisplayTiles'.
+Generating RTLIL representation for module `\Tiles'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: d15_spencer2_pianotiles/src/random.sv
+Parsing SystemVerilog input from `d15_spencer2_pianotiles/src/random.sv' to AST representation.
+Generating RTLIL representation for module `\Random'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: d15_spencer2_pianotiles/src/spi.sv
+Parsing SystemVerilog input from `d15_spencer2_pianotiles/src/spi.sv' to AST representation.
+Generating RTLIL representation for module `\SPI'.
+Successfully finished Verilog frontend.
+
+8. Executing SYNTH pass.
+
+8.1. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \ChipInterface
+Used module:             \SPI
+Used module:             \Game
+Used module:                 \ButtonDetector
+Used module:                 \DisplayText
+Used module:                 \DisplayTiles
+Used module:                 \Tiles
+Used module:                 \Random
+Used module:             \Async2Sync
+
+8.1.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \ChipInterface
+Used module:             \SPI
+Used module:             \Game
+Used module:                 \ButtonDetector
+Used module:                 \DisplayText
+Used module:                 \DisplayTiles
+Used module:                 \Tiles
+Used module:                 \Random
+Used module:             \Async2Sync
+Removing unused module `\HalfClock'.
+Removed 1 unused modules.
+
+8.2. Executing PROC pass (convert processes to netlists).
+
+8.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/random.sv:20$161 in module Random.
+Marked 1 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:463$155 in module Tiles.
+Marked 13 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:0$71 in module DisplayText.
+Marked 1 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:374$68 in module DisplayText.
+Marked 1 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:0$64 in module ButtonDetector.
+Marked 2 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:218$59 in module ButtonDetector.
+Marked 1 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:135$45 in module Game.
+Marked 2 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:126$41 in module Game.
+Marked 6 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:0$20 in module Game.
+Marked 2 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:39$17 in module Game.
+Marked 2 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/game.sv:24$12 in module Game.
+Marked 1 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/spi.sv:0$200 in module SPI.
+Marked 3 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/spi.sv:80$193 in module SPI.
+Marked 1 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/spi.sv:67$186 in module SPI.
+Marked 2 switch rules as full_case in process $proc$d15_spencer2_pianotiles/src/spi.sv:39$182 in module SPI.
+Removed a total of 0 dead cases.
+
+8.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 9 redundant assignments.
+Promoted 14 assignments to connections.
+
+8.2.4. Executing PROC_INIT pass (extract init attributes).
+
+8.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\DisplayText.$proc$d15_spencer2_pianotiles/src/game.sv:374$68'.
+Found async reset \rst_n in `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:126$41'.
+Found async reset \rst_n in `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:39$17'.
+
+8.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~39 debug messages>
+
+8.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\Random.$proc$d15_spencer2_pianotiles/src/random.sv:20$161'.
+     1/1: $0\random_reg[23:0]
+Creating decoders for process `\Tiles.$proc$d15_spencer2_pianotiles/src/game.sv:463$155'.
+     1/5: $0\tiles[19:0] [19:16]
+     2/5: $0\tiles[19:0] [15:12]
+     3/5: $0\tiles[19:0] [11:8]
+     4/5: $0\tiles[19:0] [7:4]
+     5/5: $0\tiles[19:0] [3:0]
+Creating decoders for process `\DisplayText.$proc$d15_spencer2_pianotiles/src/game.sv:0$71'.
+     1/13: $13\data[7:0]
+     2/13: $12\data[7:0]
+     3/13: $11\data[7:0]
+     4/13: $10\data[7:0]
+     5/13: $9\data[7:0]
+     6/13: $8\data[7:0]
+     7/13: $7\data[7:0]
+     8/13: $6\data[7:0]
+     9/13: $5\data[7:0]
+    10/13: $4\data[7:0]
+    11/13: $3\data[7:0]
+    12/13: $2\data[7:0]
+    13/13: $1\data[7:0]
+Creating decoders for process `\DisplayText.$proc$d15_spencer2_pianotiles/src/game.sv:374$68'.
+     1/1: $0\text_loc[0:0]
+Creating decoders for process `\ButtonDetector.$proc$d15_spencer2_pianotiles/src/game.sv:0$64'.
+     1/1: $1\mask[7:0]
+Creating decoders for process `\ButtonDetector.$proc$d15_spencer2_pianotiles/src/game.sv:218$59'.
+     1/2: $0\game_over[0:0]
+     2/2: $0\press_reg[3:0]
+Creating decoders for process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:135$45'.
+     1/1: $0\state[2:0]
+Creating decoders for process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:126$41'.
+     1/1: $0\gameover_anim_count[2:0]
+Creating decoders for process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:0$20'.
+     1/9: $6\next[2:0]
+     2/9: $5\next[2:0]
+     3/9: $4\next[2:0]
+     4/9: $3\next[2:0]
+     5/9: $2\next[2:0]
+     6/9: $1\data[7:0]
+     7/9: $1\next[2:0]
+     8/9: $1\playing[0:0]
+     9/9: $1\count_end[11:0]
+Creating decoders for process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:39$17'.
+     1/1: $0\stages[4:0]
+Creating decoders for process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:24$12'.
+     1/1: $0\count[11:0]
+Creating decoders for process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:0$200'.
+     1/5: $1\next[3:0]
+     2/5: $1\dc[0:0]
+     3/5: $1\out_byte[31:0]
+     4/5: $1\en[0:0]
+     5/5: $1\count_end[4:0]
+Creating decoders for process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:80$193'.
+     1/2: $0\col[6:0]
+     2/2: $0\row[2:0]
+Creating decoders for process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:67$186'.
+     1/1: $0\state[3:0]
+Creating decoders for process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:39$182'.
+     1/1: $0\count[4:0]
+Creating decoders for process `\Async2Sync.$proc$d15_spencer2_pianotiles/src/library.sv:12$2'.
+
+8.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\DisplayText.\data' from process `\DisplayText.$proc$d15_spencer2_pianotiles/src/game.sv:0$71'.
+No latch inferred for signal `\ButtonDetector.\mask' from process `\ButtonDetector.$proc$d15_spencer2_pianotiles/src/game.sv:0$64'.
+No latch inferred for signal `\Game.\data' from process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:0$20'.
+No latch inferred for signal `\Game.\count_end' from process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:0$20'.
+No latch inferred for signal `\Game.\next' from process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:0$20'.
+No latch inferred for signal `\Game.\playing' from process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:0$20'.
+No latch inferred for signal `\SPI.\dc' from process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:0$200'.
+No latch inferred for signal `\SPI.\count_end' from process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:0$200'.
+No latch inferred for signal `\SPI.\next' from process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:0$200'.
+No latch inferred for signal `\SPI.\out_byte' from process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:0$200'.
+No latch inferred for signal `\SPI.\en' from process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:0$200'.
+
+8.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\Random.\random_reg' using process `\Random.$proc$d15_spencer2_pianotiles/src/random.sv:20$161'.
+  created $dff cell `$procdff$614' with positive edge clock.
+Creating register for signal `\Tiles.\tiles' using process `\Tiles.$proc$d15_spencer2_pianotiles/src/game.sv:463$155'.
+  created $dff cell `$procdff$615' with positive edge clock.
+Creating register for signal `\DisplayText.\text_loc' using process `\DisplayText.$proc$d15_spencer2_pianotiles/src/game.sv:374$68'.
+  created $adff cell `$procdff$616' with positive edge clock and negative level reset.
+Creating register for signal `\ButtonDetector.\game_over' using process `\ButtonDetector.$proc$d15_spencer2_pianotiles/src/game.sv:218$59'.
+  created $dff cell `$procdff$617' with positive edge clock.
+Creating register for signal `\ButtonDetector.\press_reg' using process `\ButtonDetector.$proc$d15_spencer2_pianotiles/src/game.sv:218$59'.
+  created $dff cell `$procdff$618' with positive edge clock.
+Creating register for signal `\Game.\state' using process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:135$45'.
+  created $dff cell `$procdff$619' with positive edge clock.
+Creating register for signal `\Game.\gameover_anim_count' using process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:126$41'.
+  created $adff cell `$procdff$620' with positive edge clock and negative level reset.
+Creating register for signal `\Game.\stages' using process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:39$17'.
+  created $adff cell `$procdff$621' with positive edge clock and negative level reset.
+Creating register for signal `\Game.\pframe' using process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:24$12'.
+  created $dff cell `$procdff$622' with positive edge clock.
+Creating register for signal `\Game.\count' using process `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:24$12'.
+  created $dff cell `$procdff$623' with positive edge clock.
+Creating register for signal `\SPI.\row' using process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:80$193'.
+  created $dff cell `$procdff$624' with positive edge clock.
+Creating register for signal `\SPI.\col' using process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:80$193'.
+  created $dff cell `$procdff$625' with positive edge clock.
+Creating register for signal `\SPI.\state' using process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:67$186'.
+  created $dff cell `$procdff$626' with positive edge clock.
+Creating register for signal `\SPI.\count' using process `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:39$182'.
+  created $dff cell `$procdff$627' with positive edge clock.
+Creating register for signal `\Async2Sync.\sync' using process `\Async2Sync.$proc$d15_spencer2_pianotiles/src/library.sv:12$2'.
+  created $dff cell `$procdff$628' with positive edge clock.
+Creating register for signal `\Async2Sync.\metastable' using process `\Async2Sync.$proc$d15_spencer2_pianotiles/src/library.sv:12$2'.
+  created $dff cell `$procdff$629' with positive edge clock.
+
+8.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+8.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\Random.$proc$d15_spencer2_pianotiles/src/random.sv:20$161'.
+Removing empty process `Random.$proc$d15_spencer2_pianotiles/src/random.sv:20$161'.
+Found and cleaned up 2 empty switches in `\Tiles.$proc$d15_spencer2_pianotiles/src/game.sv:463$155'.
+Removing empty process `Tiles.$proc$d15_spencer2_pianotiles/src/game.sv:463$155'.
+Found and cleaned up 13 empty switches in `\DisplayText.$proc$d15_spencer2_pianotiles/src/game.sv:0$71'.
+Removing empty process `DisplayText.$proc$d15_spencer2_pianotiles/src/game.sv:0$71'.
+Removing empty process `DisplayText.$proc$d15_spencer2_pianotiles/src/game.sv:374$68'.
+Found and cleaned up 1 empty switch in `\ButtonDetector.$proc$d15_spencer2_pianotiles/src/game.sv:0$64'.
+Removing empty process `ButtonDetector.$proc$d15_spencer2_pianotiles/src/game.sv:0$64'.
+Found and cleaned up 2 empty switches in `\ButtonDetector.$proc$d15_spencer2_pianotiles/src/game.sv:218$59'.
+Removing empty process `ButtonDetector.$proc$d15_spencer2_pianotiles/src/game.sv:218$59'.
+Found and cleaned up 1 empty switch in `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:135$45'.
+Removing empty process `Game.$proc$d15_spencer2_pianotiles/src/game.sv:135$45'.
+Found and cleaned up 1 empty switch in `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:126$41'.
+Removing empty process `Game.$proc$d15_spencer2_pianotiles/src/game.sv:126$41'.
+Found and cleaned up 6 empty switches in `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:0$20'.
+Removing empty process `Game.$proc$d15_spencer2_pianotiles/src/game.sv:0$20'.
+Found and cleaned up 1 empty switch in `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:39$17'.
+Removing empty process `Game.$proc$d15_spencer2_pianotiles/src/game.sv:39$17'.
+Found and cleaned up 3 empty switches in `\Game.$proc$d15_spencer2_pianotiles/src/game.sv:24$12'.
+Removing empty process `Game.$proc$d15_spencer2_pianotiles/src/game.sv:24$12'.
+Found and cleaned up 1 empty switch in `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:0$200'.
+Removing empty process `SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:0$200'.
+Found and cleaned up 4 empty switches in `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:80$193'.
+Removing empty process `SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:80$193'.
+Found and cleaned up 1 empty switch in `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:67$186'.
+Removing empty process `SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:67$186'.
+Found and cleaned up 2 empty switches in `\SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:39$182'.
+Removing empty process `SPI.$proc$d15_spencer2_pianotiles/src/spi.sv:39$182'.
+Removing empty process `Async2Sync.$proc$d15_spencer2_pianotiles/src/library.sv:12$2'.
+Cleaned up 39 empty switches.
+
+8.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Random.
+<suppressed ~1 debug messages>
+Optimizing module Tiles.
+<suppressed ~5 debug messages>
+Optimizing module DisplayTiles.
+<suppressed ~3 debug messages>
+Optimizing module DisplayText.
+<suppressed ~14 debug messages>
+Optimizing module ButtonDetector.
+<suppressed ~2 debug messages>
+Optimizing module Game.
+<suppressed ~4 debug messages>
+Optimizing module SPI.
+<suppressed ~6 debug messages>
+Optimizing module Async2Sync.
+Optimizing module ChipInterface.
+Optimizing module my_chip.
+Optimizing module toplevel_chip.
+
+8.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module Random.
+Deleting now unused module Tiles.
+Deleting now unused module DisplayTiles.
+Deleting now unused module DisplayText.
+Deleting now unused module ButtonDetector.
+Deleting now unused module Game.
+Deleting now unused module SPI.
+Deleting now unused module Async2Sync.
+Deleting now unused module ChipInterface.
+Deleting now unused module my_chip.
+<suppressed ~16 debug messages>
+
+8.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~12 debug messages>
+
+8.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 13 unused cells and 235 unused wires.
+<suppressed ~27 debug messages>
+
+8.6. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Warning: Wire toplevel_chip.\io_out [6] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [5] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [4] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [3] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [2] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [1] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [0] is used but has no driver.
+Found and reported 7 problems.
+
+8.7. Executing OPT pass (performing simple optimizations).
+
+8.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~246 debug messages>
+Removed a total of 82 cells.
+
+8.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$245.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$248.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$251.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$254.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$257.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$260.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$263.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$266.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$272.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$275.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$278.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$281.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$284.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$287.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$290.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$296.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$299.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$302.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$305.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$308.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$311.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$317.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$320.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$323.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$326.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$329.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$335.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$338.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$341.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$344.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$350.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$353.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$356.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$362.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$365.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$371.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$378.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$381.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$384.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$386.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$393.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$396.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$398.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$405.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$407.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.\displaytext.$procmux$413.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.$procmux$444.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.$procmux$453.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.$procmux$455.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.$procmux$463.
+    dead port 1/2 on $mux $flatten\mchip.\my_chip.\game.$procmux$473.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.$procmux$475.
+    dead port 2/2 on $mux $flatten\mchip.\my_chip.\game.$procmux$484.
+Removed 53 multiplexer ports.
+<suppressed ~26 debug messages>
+
+8.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+    New ctrl vector for $pmux cell $flatten\mchip.\my_chip.\game.$procmux$506: $auto$opt_reduce.cc:134:opt_pmux$631
+    New ctrl vector for $pmux cell $flatten\mchip.\my_chip.\spi.$procmux$563: $auto$opt_reduce.cc:134:opt_pmux$633
+    New ctrl vector for $pmux cell $flatten\mchip.\my_chip.\game.$procmux$487: { $auto$opt_reduce.cc:134:opt_pmux$637 $auto$opt_reduce.cc:134:opt_pmux$635 }
+    New ctrl vector for $pmux cell $flatten\mchip.\my_chip.\spi.$procmux$578: { $auto$opt_reduce.cc:134:opt_pmux$641 $auto$opt_reduce.cc:134:opt_pmux$639 }
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 4 changes.
+
+8.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+8.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 138 unused wires.
+<suppressed ~1 debug messages>
+
+8.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+8.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.7.16. Finished OPT passes. (There is nothing left to do.)
+
+8.8. Executing FSM pass (extract and optimize FSM).
+
+8.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register toplevel_chip.mchip.my_chip.game.state.
+Found FSM state register toplevel_chip.mchip.my_chip.spi.state.
+
+8.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\mchip.my_chip.game.state' from module `\toplevel_chip'.
+  found $dff cell for state register: $flatten\mchip.\my_chip.\game.$procdff$619
+  root of input selection tree: $flatten\mchip.\my_chip.\game.$0\state[2:0]
+  found reset state: 3'000 (guessed from mux tree)
+  found ctrl input: \mchip.my_chip.async2sync0.sync
+  found state code: 3'000
+  found ctrl input: \mchip.my_chip.game.displaytext.game_over
+  found ctrl input: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:157$55_Y
+  found ctrl input: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:156$53_Y
+  found ctrl input: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:155$52_Y
+  found ctrl input: $flatten\mchip.\my_chip.\game.$procmux$492_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\game.$procmux$493_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\game.$procmux$494_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:113$39_Y
+  found state code: 3'110
+  found ctrl input: \mchip.my_chip.game.buttondetector.game_over
+  found state code: 3'101
+  found ctrl input: $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:91$36_Y
+  found state code: 3'100
+  found ctrl input: $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:78$34_Y
+  found state code: 3'011
+  found ctrl input: \mchip.my_chip.game.displaytext.tick
+  found state code: 3'010
+  found ctrl input: $flatten\mchip.\my_chip.\game.$logic_and$d15_spencer2_pianotiles/src/game.sv:62$31_Y
+  found state code: 3'001
+  found ctrl input: $flatten\mchip.\my_chip.\game.$or$d15_spencer2_pianotiles/src/game.sv:53$24_Y
+  found ctrl output: $flatten\mchip.\my_chip.\game.$procmux$494_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\game.$procmux$493_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\game.$procmux$492_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:157$55_Y
+  found ctrl output: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:156$53_Y
+  found ctrl output: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:155$52_Y
+  found ctrl output: \mchip.my_chip.game.displaytext.game_over
+  ctrl inputs: { $flatten\mchip.\my_chip.\game.$or$d15_spencer2_pianotiles/src/game.sv:53$24_Y $flatten\mchip.\my_chip.\game.$logic_and$d15_spencer2_pianotiles/src/game.sv:62$31_Y $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:78$34_Y $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:91$36_Y $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:113$39_Y \mchip.my_chip.game.displaytext.tick \mchip.my_chip.game.buttondetector.game_over \mchip.my_chip.async2sync0.sync }
+  ctrl outputs: { $flatten\mchip.\my_chip.\game.$0\state[2:0] $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:155$52_Y $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:156$53_Y $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:157$55_Y $flatten\mchip.\my_chip.\game.$procmux$492_CMP $flatten\mchip.\my_chip.\game.$procmux$493_CMP $flatten\mchip.\my_chip.\game.$procmux$494_CMP \mchip.my_chip.game.displaytext.game_over }
+  transition:      3'000 8'-------0 ->      3'000 10'0000000010
+  transition:      3'000 8'0------1 ->      3'000 10'0000000010
+  transition:      3'000 8'1------1 ->      3'001 10'0010000010
+  transition:      3'100 8'-------0 ->      3'000 10'0000100000
+  transition:      3'100 8'---0--01 ->      3'100 10'1000100000
+  transition:      3'100 8'---1--01 ->      3'101 10'1010100000
+  transition:      3'100 8'------11 ->      3'110 10'1100100000
+  transition:      3'010 8'-------0 ->      3'000 10'0000001000
+  transition:      3'010 8'-----0-1 ->      3'010 10'0100001000
+  transition:      3'010 8'-----1-1 ->      3'011 10'0110001000
+  transition:      3'110 8'-------0 ->      3'000 10'0000000001
+  transition:      3'110 8'----0--1 ->      3'110 10'1100000001
+  transition:      3'110 8'----1--1 ->      3'000 10'0000000001
+  transition:      3'001 8'-------0 ->      3'000 10'0000000100
+  transition:      3'001 8'-0-----1 ->      3'001 10'0010000100
+  transition:      3'001 8'-1-----1 ->      3'010 10'0100000100
+  transition:      3'101 8'-------0 ->      3'000 10'0000010000
+  transition:      3'101 8'------01 ->      3'101 10'1010010000
+  transition:      3'101 8'------11 ->      3'110 10'1100010000
+  transition:      3'011 8'-------0 ->      3'000 10'0001000000
+  transition:      3'011 8'--0---01 ->      3'011 10'0111000000
+  transition:      3'011 8'--1---01 ->      3'100 10'1001000000
+  transition:      3'011 8'------11 ->      3'110 10'1101000000
+Extracting FSM `\mchip.my_chip.spi.state' from module `\toplevel_chip'.
+  found $dff cell for state register: $flatten\mchip.\my_chip.\spi.$procdff$626
+  root of input selection tree: $flatten\mchip.\my_chip.\spi.$0\state[3:0]
+  found reset state: 4'0000 (guessed from mux tree)
+  found ctrl input: \mchip.my_chip.async2sync0.sync
+  found state code: 4'0000
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$529_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$530_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$531_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$532_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$533_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$534_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$535_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$536_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$537_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$538_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$539_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$540_CMP
+  found ctrl input: $flatten\mchip.\my_chip.\spi.$procmux$541_CMP
+  found state code: 4'1101
+  found ctrl input: \mchip.my_chip.spi.frame_end
+  found state code: 4'1100
+  found state code: 4'1001
+  found ctrl input: \mchip.my_chip.spi.end_byte
+  found state code: 4'1010
+  found state code: 4'0111
+  found state code: 4'0110
+  found state code: 4'0101
+  found state code: 4'0100
+  found state code: 4'0011
+  found state code: 4'0010
+  found state code: 4'1000
+  found state code: 4'0001
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$541_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$540_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$539_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$538_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$537_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$536_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$535_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$534_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$533_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$532_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$531_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$530_CMP
+  found ctrl output: $flatten\mchip.\my_chip.\spi.$procmux$529_CMP
+  ctrl inputs: { \mchip.my_chip.spi.end_byte \mchip.my_chip.spi.frame_end \mchip.my_chip.async2sync0.sync }
+  ctrl outputs: { $flatten\mchip.\my_chip.\spi.$0\state[3:0] $flatten\mchip.\my_chip.\spi.$procmux$529_CMP $flatten\mchip.\my_chip.\spi.$procmux$530_CMP $flatten\mchip.\my_chip.\spi.$procmux$531_CMP $flatten\mchip.\my_chip.\spi.$procmux$532_CMP $flatten\mchip.\my_chip.\spi.$procmux$533_CMP $flatten\mchip.\my_chip.\spi.$procmux$534_CMP $flatten\mchip.\my_chip.\spi.$procmux$535_CMP $flatten\mchip.\my_chip.\spi.$procmux$536_CMP $flatten\mchip.\my_chip.\spi.$procmux$537_CMP $flatten\mchip.\my_chip.\spi.$procmux$538_CMP $flatten\mchip.\my_chip.\spi.$procmux$539_CMP $flatten\mchip.\my_chip.\spi.$procmux$540_CMP $flatten\mchip.\my_chip.\spi.$procmux$541_CMP }
+  transition:     4'0000 3'--0 ->     4'0000 17'00000000000000001
+  transition:     4'0000 3'0-1 ->     4'0000 17'00000000000000001
+  transition:     4'0000 3'1-1 ->     4'0001 17'00010000000000001
+  transition:     4'1000 3'--0 ->     4'0000 17'00000000000000100
+  transition:     4'1000 3'0-1 ->     4'1000 17'10000000000000100
+  transition:     4'1000 3'1-1 ->     4'0010 17'00100000000000100
+  transition:     4'0100 3'--0 ->     4'0000 17'00000000000100000
+  transition:     4'0100 3'0-1 ->     4'0100 17'01000000000100000
+  transition:     4'0100 3'1-1 ->     4'0101 17'01010000000100000
+  transition:     4'1100 3'--0 ->     4'0000 17'00000100000000000
+  transition:     4'1100 3'-01 ->     4'1100 17'11000100000000000
+  transition:     4'1100 3'-11 ->     4'1001 17'10010100000000000
+  transition:     4'0010 3'--0 ->     4'0000 17'00000000000001000
+  transition:     4'0010 3'0-1 ->     4'0010 17'00100000000001000
+  transition:     4'0010 3'1-1 ->     4'0011 17'00110000000001000
+  transition:     4'1010 3'--0 ->     4'0000 17'00000010000000000
+  transition:     4'1010 3'0-1 ->     4'1010 17'10100010000000000
+  transition:     4'1010 3'1-1 ->     4'1100 17'11000010000000000
+  transition:     4'0110 3'--0 ->     4'0000 17'00000000010000000
+  transition:     4'0110 3'0-1 ->     4'0110 17'01100000010000000
+  transition:     4'0110 3'1-1 ->     4'0111 17'01110000010000000
+  transition:     4'0001 3'--0 ->     4'0000 17'00000000000000010
+  transition:     4'0001 3'0-1 ->     4'0001 17'00010000000000010
+  transition:     4'0001 3'1-1 ->     4'1000 17'10000000000000010
+  transition:     4'1001 3'--0 ->     4'0000 17'00000001000000000
+  transition:     4'1001 3'0-1 ->     4'1001 17'10010001000000000
+  transition:     4'1001 3'1-1 ->     4'1010 17'10100001000000000
+  transition:     4'0101 3'--0 ->     4'0000 17'00000000001000000
+  transition:     4'0101 3'0-1 ->     4'0101 17'01010000001000000
+  transition:     4'0101 3'1-1 ->     4'0110 17'01100000001000000
+  transition:     4'1101 3'--0 ->     4'0000 17'00001000000000000
+  transition:     4'1101 3'--1 ->     4'1101 17'11011000000000000
+  transition:     4'0011 3'--0 ->     4'0000 17'00000000000010000
+  transition:     4'0011 3'0-1 ->     4'0011 17'00110000000010000
+  transition:     4'0011 3'1-1 ->     4'0100 17'01000000000010000
+  transition:     4'0111 3'--0 ->     4'0000 17'00000000100000000
+  transition:     4'0111 3'0-1 ->     4'0111 17'01110000100000000
+  transition:     4'0111 3'1-1 ->     4'1001 17'10010000100000000
+
+8.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\mchip.my_chip.spi.state$651' from module `\toplevel_chip'.
+Optimizing FSM `$fsm$\mchip.my_chip.game.state$642' from module `\toplevel_chip'.
+
+8.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 47 unused cells and 47 unused wires.
+<suppressed ~50 debug messages>
+
+8.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\mchip.my_chip.game.state$642' from module `\toplevel_chip'.
+  Removing unused output signal $flatten\mchip.\my_chip.\game.$0\state[2:0] [0].
+  Removing unused output signal $flatten\mchip.\my_chip.\game.$0\state[2:0] [1].
+  Removing unused output signal $flatten\mchip.\my_chip.\game.$0\state[2:0] [2].
+Optimizing FSM `$fsm$\mchip.my_chip.spi.state$651' from module `\toplevel_chip'.
+  Removing unused output signal $flatten\mchip.\my_chip.\spi.$0\state[3:0] [0].
+  Removing unused output signal $flatten\mchip.\my_chip.\spi.$0\state[3:0] [1].
+  Removing unused output signal $flatten\mchip.\my_chip.\spi.$0\state[3:0] [2].
+  Removing unused output signal $flatten\mchip.\my_chip.\spi.$0\state[3:0] [3].
+
+8.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\mchip.my_chip.game.state$642' from module `\toplevel_chip' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> ------1
+  100 -> -----1-
+  010 -> ----1--
+  110 -> ---1---
+  001 -> --1----
+  101 -> -1-----
+  011 -> 1------
+Recoding FSM `$fsm$\mchip.my_chip.spi.state$651' from module `\toplevel_chip' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  0000 -> ------------1
+  1000 -> -----------1-
+  0100 -> ----------1--
+  1100 -> ---------1---
+  0010 -> --------1----
+  1010 -> -------1-----
+  0110 -> ------1------
+  0001 -> -----1-------
+  1001 -> ----1--------
+  0101 -> ---1---------
+  1101 -> --1----------
+  0011 -> -1-----------
+  0111 -> 1------------
+
+8.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\mchip.my_chip.game.state$642' from module `toplevel_chip':
+-------------------------------------
+
+  Information on FSM $fsm$\mchip.my_chip.game.state$642 (\mchip.my_chip.game.state):
+
+  Number of input signals:    8
+  Number of output signals:   7
+  Number of state bits:       7
+
+  Input signals:
+    0: \mchip.my_chip.async2sync0.sync
+    1: \mchip.my_chip.game.buttondetector.game_over
+    2: \mchip.my_chip.game.displaytext.tick
+    3: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:113$39_Y
+    4: $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:91$36_Y
+    5: $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:78$34_Y
+    6: $flatten\mchip.\my_chip.\game.$logic_and$d15_spencer2_pianotiles/src/game.sv:62$31_Y
+    7: $flatten\mchip.\my_chip.\game.$or$d15_spencer2_pianotiles/src/game.sv:53$24_Y
+
+  Output signals:
+    0: \mchip.my_chip.game.displaytext.game_over
+    1: $flatten\mchip.\my_chip.\game.$procmux$494_CMP
+    2: $flatten\mchip.\my_chip.\game.$procmux$493_CMP
+    3: $flatten\mchip.\my_chip.\game.$procmux$492_CMP
+    4: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:157$55_Y
+    5: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:156$53_Y
+    6: $flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:155$52_Y
+
+  State encoding:
+    0:  7'------1  <RESET STATE>
+    1:  7'-----1-
+    2:  7'----1--
+    3:  7'---1---
+    4:  7'--1----
+    5:  7'-1-----
+    6:  7'1------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 8'-------0   ->     0 7'0000010
+      1:     0 8'0------1   ->     0 7'0000010
+      2:     0 8'1------1   ->     4 7'0000010
+      3:     1 8'-------0   ->     0 7'0100000
+      4:     1 8'---0--01   ->     1 7'0100000
+      5:     1 8'------11   ->     3 7'0100000
+      6:     1 8'---1--01   ->     5 7'0100000
+      7:     2 8'-------0   ->     0 7'0001000
+      8:     2 8'-----0-1   ->     2 7'0001000
+      9:     2 8'-----1-1   ->     6 7'0001000
+     10:     3 8'-------0   ->     0 7'0000001
+     11:     3 8'----1--1   ->     0 7'0000001
+     12:     3 8'----0--1   ->     3 7'0000001
+     13:     4 8'-------0   ->     0 7'0000100
+     14:     4 8'-1-----1   ->     2 7'0000100
+     15:     4 8'-0-----1   ->     4 7'0000100
+     16:     5 8'-------0   ->     0 7'0010000
+     17:     5 8'------11   ->     3 7'0010000
+     18:     5 8'------01   ->     5 7'0010000
+     19:     6 8'-------0   ->     0 7'1000000
+     20:     6 8'--1---01   ->     1 7'1000000
+     21:     6 8'------11   ->     3 7'1000000
+     22:     6 8'--0---01   ->     6 7'1000000
+
+-------------------------------------
+
+FSM `$fsm$\mchip.my_chip.spi.state$651' from module `toplevel_chip':
+-------------------------------------
+
+  Information on FSM $fsm$\mchip.my_chip.spi.state$651 (\mchip.my_chip.spi.state):
+
+  Number of input signals:    3
+  Number of output signals:  13
+  Number of state bits:      13
+
+  Input signals:
+    0: \mchip.my_chip.async2sync0.sync
+    1: \mchip.my_chip.spi.frame_end
+    2: \mchip.my_chip.spi.end_byte
+
+  Output signals:
+    0: $flatten\mchip.\my_chip.\spi.$procmux$541_CMP
+    1: $flatten\mchip.\my_chip.\spi.$procmux$540_CMP
+    2: $flatten\mchip.\my_chip.\spi.$procmux$539_CMP
+    3: $flatten\mchip.\my_chip.\spi.$procmux$538_CMP
+    4: $flatten\mchip.\my_chip.\spi.$procmux$537_CMP
+    5: $flatten\mchip.\my_chip.\spi.$procmux$536_CMP
+    6: $flatten\mchip.\my_chip.\spi.$procmux$535_CMP
+    7: $flatten\mchip.\my_chip.\spi.$procmux$534_CMP
+    8: $flatten\mchip.\my_chip.\spi.$procmux$533_CMP
+    9: $flatten\mchip.\my_chip.\spi.$procmux$532_CMP
+   10: $flatten\mchip.\my_chip.\spi.$procmux$531_CMP
+   11: $flatten\mchip.\my_chip.\spi.$procmux$530_CMP
+   12: $flatten\mchip.\my_chip.\spi.$procmux$529_CMP
+
+  State encoding:
+    0: 13'------------1  <RESET STATE>
+    1: 13'-----------1-
+    2: 13'----------1--
+    3: 13'---------1---
+    4: 13'--------1----
+    5: 13'-------1-----
+    6: 13'------1------
+    7: 13'-----1-------
+    8: 13'----1--------
+    9: 13'---1---------
+   10: 13'--1----------
+   11: 13'-1-----------
+   12: 13'1------------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 3'--0   ->     0 13'0000000000001
+      1:     0 3'0-1   ->     0 13'0000000000001
+      2:     0 3'1-1   ->     7 13'0000000000001
+      3:     1 3'--0   ->     0 13'0000000000100
+      4:     1 3'0-1   ->     1 13'0000000000100
+      5:     1 3'1-1   ->     4 13'0000000000100
+      6:     2 3'--0   ->     0 13'0000000100000
+      7:     2 3'0-1   ->     2 13'0000000100000
+      8:     2 3'1-1   ->     9 13'0000000100000
+      9:     3 3'--0   ->     0 13'0100000000000
+     10:     3 3'-01   ->     3 13'0100000000000
+     11:     3 3'-11   ->     8 13'0100000000000
+     12:     4 3'--0   ->     0 13'0000000001000
+     13:     4 3'0-1   ->     4 13'0000000001000
+     14:     4 3'1-1   ->    11 13'0000000001000
+     15:     5 3'--0   ->     0 13'0010000000000
+     16:     5 3'1-1   ->     3 13'0010000000000
+     17:     5 3'0-1   ->     5 13'0010000000000
+     18:     6 3'--0   ->     0 13'0000010000000
+     19:     6 3'0-1   ->     6 13'0000010000000
+     20:     6 3'1-1   ->    12 13'0000010000000
+     21:     7 3'--0   ->     0 13'0000000000010
+     22:     7 3'1-1   ->     1 13'0000000000010
+     23:     7 3'0-1   ->     7 13'0000000000010
+     24:     8 3'--0   ->     0 13'0001000000000
+     25:     8 3'1-1   ->     5 13'0001000000000
+     26:     8 3'0-1   ->     8 13'0001000000000
+     27:     9 3'--0   ->     0 13'0000001000000
+     28:     9 3'1-1   ->     6 13'0000001000000
+     29:     9 3'0-1   ->     9 13'0000001000000
+     30:    10 3'--0   ->     0 13'1000000000000
+     31:    10 3'--1   ->    10 13'1000000000000
+     32:    11 3'--0   ->     0 13'0000000010000
+     33:    11 3'1-1   ->     2 13'0000000010000
+     34:    11 3'0-1   ->    11 13'0000000010000
+     35:    12 3'--0   ->     0 13'0000100000000
+     36:    12 3'1-1   ->     8 13'0000100000000
+     37:    12 3'0-1   ->    12 13'0000100000000
+
+-------------------------------------
+
+8.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\mchip.my_chip.game.state$642' from module `\toplevel_chip'.
+Mapping FSM `$fsm$\mchip.my_chip.spi.state$651' from module `\toplevel_chip'.
+
+8.9. Executing OPT pass (performing simple optimizations).
+
+8.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~3 debug messages>
+
+8.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~66 debug messages>
+Removed a total of 22 cells.
+
+8.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~26 debug messages>
+
+8.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\mchip.\my_chip.\spi.$procdff$627 ($dff) from module toplevel_chip (D = $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:45$185_Y, Q = \mchip.my_chip.spi.count, rval = 5'00000).
+Adding SRST signal on $flatten\mchip.\my_chip.\spi.$procdff$625 ($dff) from module toplevel_chip (D = $flatten\mchip.\my_chip.\spi.$procmux$585_Y, Q = \mchip.my_chip.spi.col, rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:266:slice$860 ($sdff) from module toplevel_chip (D = $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:91$199_Y, Q = \mchip.my_chip.spi.col).
+Adding SRST signal on $flatten\mchip.\my_chip.\spi.$procdff$624 ($dff) from module toplevel_chip (D = $flatten\mchip.\my_chip.\spi.$procmux$597_Y, Q = \mchip.my_chip.spi.row, rval = 3'000).
+Adding EN signal on $auto$ff.cc:266:slice$866 ($sdff) from module toplevel_chip (D = $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:89$197_Y, Q = \mchip.my_chip.spi.row).
+Adding SRST signal on $flatten\mchip.\my_chip.\game.\tilesreg.$procdff$615 ($dff) from module toplevel_chip (D = { $flatten\mchip.\my_chip.\game.\tilesreg.$procmux$216_Y $flatten\mchip.\my_chip.\game.\tilesreg.$procmux$221_Y $flatten\mchip.\my_chip.\game.\tilesreg.$procmux$226_Y $flatten\mchip.\my_chip.\game.\tilesreg.$procmux$231_Y $flatten\mchip.\my_chip.\game.\tilesreg.$procmux$236_Y }, Q = \mchip.my_chip.game.tilesreg.tiles, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$872 ($sdff) from module toplevel_chip (D = { \mchip.my_chip.game.tilesreg.tiles [15:0] \mchip.my_chip.game.tilesreg.new_tiles }, Q = \mchip.my_chip.game.tilesreg.tiles).
+Adding SRST signal on $flatten\mchip.\my_chip.\game.\random.$procdff$614 ($dff) from module toplevel_chip (D = { \mchip.my_chip.game.random.next_bit $flatten\mchip.\my_chip.\game.\random.$xor$d15_spencer2_pianotiles/src/random.sv:24$163_Y \mchip.my_chip.game.random.random_reg [22:1] }, Q = \mchip.my_chip.game.random.random_reg, rval = 24'011010010100001000110111).
+Adding SRST signal on $flatten\mchip.\my_chip.\game.\buttondetector.$procdff$618 ($dff) from module toplevel_chip (D = $flatten\mchip.\my_chip.\game.\buttondetector.$or$d15_spencer2_pianotiles/src/game.sv:226$63_Y, Q = \mchip.my_chip.game.buttondetector.press_reg, rval = 4'0000).
+Adding SRST signal on $flatten\mchip.\my_chip.\game.\buttondetector.$procdff$617 ($dff) from module toplevel_chip (D = $flatten\mchip.\my_chip.\game.\buttondetector.$logic_not$d15_spencer2_pianotiles/src/game.sv:224$62_Y, Q = \mchip.my_chip.game.buttondetector.game_over, rval = 1'0).
+Adding SRST signal on $flatten\mchip.\my_chip.\game.$procdff$623 ($dff) from module toplevel_chip (D = $flatten\mchip.\my_chip.\game.$procmux$519_Y, Q = \mchip.my_chip.game.count, rval = 12'000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$883 ($sdff) from module toplevel_chip (D = $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:30$16_Y, Q = \mchip.my_chip.game.count).
+
+8.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 27 unused cells and 71 unused wires.
+<suppressed ~28 debug messages>
+
+8.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+8.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+8.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+8.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+8.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.9.23. Finished OPT passes. (There is nothing left to do.)
+
+8.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$767 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$677 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$711 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$691 ($eq).
+Removed top 2 bits (of 3) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$682 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$847 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$706 ($eq).
+Removed top 1 bits (of 8) from mux cell toplevel_chip.$flatten\mchip.\my_chip.\game.\buttondetector.$ternary$d15_spencer2_pianotiles/src/game.sv:234$67 ($mux).
+Removed top 1 bits (of 8) from mux cell toplevel_chip.$flatten\mchip.\my_chip.\game.\buttondetector.$procmux$419 ($mux).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$76 ($shiftx).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$81 ($shiftx).
+Removed top 1 bits (of 3) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$eq$d15_spencer2_pianotiles/src/game.sv:387$83 ($eq).
+Removed top 1 bits (of 3) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$eq$d15_spencer2_pianotiles/src/game.sv:389$88 ($eq).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$91 ($shiftx).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$96 ($shiftx).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$101 ($shiftx).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$106 ($shiftx).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$111 ($shiftx).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$116 ($shiftx).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$121 ($shiftx).
+Removed top 2 bits (of 3) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$eq$d15_spencer2_pianotiles/src/game.sv:407$123 ($eq).
+Removed top 25 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytext.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$131 ($shiftx).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytiles.$shiftx$d15_spencer2_pianotiles/src/game.sv:0$134 ($shiftx).
+Removed top 2 bits (of 7) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytiles.$eq$d15_spencer2_pianotiles/src/game.sv:441$139 ($eq).
+Removed top 1 bits (of 7) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytiles.$eq$d15_spencer2_pianotiles/src/game.sv:442$141 ($eq).
+Removed top 1 bits (of 7) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.\displaytiles.$eq$d15_spencer2_pianotiles/src/game.sv:443$143 ($eq).
+Removed top 1 bits (of 12) from mux cell toplevel_chip.$flatten\mchip.\my_chip.\game.$procmux$512 ($pmux).
+Removed top 1 bits (of 8) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.$xor$d15_spencer2_pianotiles/src/game.sv:110$38 ($xor).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:91$36 ($ge).
+Removed top 1 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:78$34 ($ge).
+Removed top 1 bits (of 12) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\game.$eq$d15_spencer2_pianotiles/src/game.sv:23$11 ($eq).
+Removed top 10 bits (of 32) from mux cell toplevel_chip.$flatten\mchip.\my_chip.\spi.$procmux$547 ($pmux).
+Removed top 2 bits (of 3) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$729 ($eq).
+Removed top 1 bits (of 2) from port B of cell toplevel_chip.$auto$fsm_map.cc:77:implement_pattern_cache$724 ($eq).
+Removed top 2 bits (of 3) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:89$197 ($add).
+Removed top 4 bits (of 5) from port B of cell toplevel_chip.$flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:45$185 ($add).
+Removed top 1 bits (of 8) from wire toplevel_chip.$flatten\mchip.\my_chip.\game.\buttondetector.$ternary$d15_spencer2_pianotiles/src/game.sv:234$67_Y.
+
+8.11. Executing PEEPOPT pass (run peephole optimizers).
+
+8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+8.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module toplevel_chip:
+  creating $macc model for $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:130$44 ($add).
+  creating $macc model for $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:30$16 ($add).
+  creating $macc model for $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:43$19 ($add).
+  creating $macc model for $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:45$185 ($add).
+  creating $macc model for $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:89$197 ($add).
+  creating $macc model for $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:91$199 ($add).
+  creating $macc model for $flatten\mchip.\my_chip.\spi.$sub$d15_spencer2_pianotiles/src/spi.sv:37$179 ($sub).
+  creating $alu model for $macc $flatten\mchip.\my_chip.\spi.$sub$d15_spencer2_pianotiles/src/spi.sv:37$179.
+  creating $alu model for $macc $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:91$199.
+  creating $alu model for $macc $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:89$197.
+  creating $alu model for $macc $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:45$185.
+  creating $alu model for $macc $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:43$19.
+  creating $alu model for $macc $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:30$16.
+  creating $alu model for $macc $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:130$44.
+  creating $alu model for $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:78$34 ($ge): new $alu
+  creating $alu model for $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:91$36 ($ge): new $alu
+  creating $alu cell for $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:91$36: $auto$alumacc.cc:485:replace_alu$892
+  creating $alu cell for $flatten\mchip.\my_chip.\game.$ge$d15_spencer2_pianotiles/src/game.sv:78$34: $auto$alumacc.cc:485:replace_alu$901
+  creating $alu cell for $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:130$44: $auto$alumacc.cc:485:replace_alu$910
+  creating $alu cell for $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:30$16: $auto$alumacc.cc:485:replace_alu$913
+  creating $alu cell for $flatten\mchip.\my_chip.\game.$add$d15_spencer2_pianotiles/src/game.sv:43$19: $auto$alumacc.cc:485:replace_alu$916
+  creating $alu cell for $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:45$185: $auto$alumacc.cc:485:replace_alu$919
+  creating $alu cell for $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:89$197: $auto$alumacc.cc:485:replace_alu$922
+  creating $alu cell for $flatten\mchip.\my_chip.\spi.$add$d15_spencer2_pianotiles/src/spi.sv:91$199: $auto$alumacc.cc:485:replace_alu$925
+  creating $alu cell for $flatten\mchip.\my_chip.\spi.$sub$d15_spencer2_pianotiles/src/spi.sv:37$179: $auto$alumacc.cc:485:replace_alu$928
+  created 9 $alu and 0 $macc cells.
+
+8.14. Executing SHARE pass (SAT-based resource sharing).
+
+8.15. Executing OPT pass (performing simple optimizations).
+
+8.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+8.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+8.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+8.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.15.16. Finished OPT passes. (There is nothing left to do.)
+
+8.16. Executing MEMORY pass.
+
+8.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+8.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+8.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+8.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+8.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+8.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+8.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+8.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+8.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.18. Executing OPT pass (performing simple optimizations).
+
+8.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~14 debug messages>
+
+8.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+8.18.5. Finished fast OPT passes.
+
+8.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+8.20. Executing OPT pass (performing simple optimizations).
+
+8.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+8.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+    Consolidated identical input bits for $pmux cell $flatten\mchip.\my_chip.\game.$procmux$512:
+      Old ports: A=11'01111111111, B=33'111111111111111101111111101111111, Y=\mchip.my_chip.game.count_end [10:0]
+      New ports: A=3'011, B=9'111110101, Y={ \mchip.my_chip.game.count_end [10] \mchip.my_chip.game.count_end [7] \mchip.my_chip.game.count_end [5] }
+      New connections: { \mchip.my_chip.game.count_end [9:8] \mchip.my_chip.game.count_end [6] \mchip.my_chip.game.count_end [4:0] } = 8'11111111
+    Consolidated identical input bits for $mux cell $flatten\mchip.\my_chip.\game.\buttondetector.$ternary$d15_spencer2_pianotiles/src/game.sv:234$67:
+      Old ports: A=7'0000000, B=7'1010101, Y=$auto$wreduce.cc:461:run$889 [6:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:461:run$889 [0]
+      New connections: $auto$wreduce.cc:461:run$889 [6:1] = { $auto$wreduce.cc:461:run$889 [0] 1'0 $auto$wreduce.cc:461:run$889 [0] 1'0 $auto$wreduce.cc:461:run$889 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $flatten\mchip.\my_chip.\game.\displaytiles.$ternary$d15_spencer2_pianotiles/src/game.sv:440$153:
+      Old ports: A=8'11111111, B=8'00000000, Y=\mchip.my_chip.game.displaytiles.vert_mask
+      New ports: A=1'1, B=1'0, Y=\mchip.my_chip.game.displaytiles.vert_mask [0]
+      New connections: \mchip.my_chip.game.displaytiles.vert_mask [7:1] = { \mchip.my_chip.game.displaytiles.vert_mask [0] \mchip.my_chip.game.displaytiles.vert_mask [0] \mchip.my_chip.game.displaytiles.vert_mask [0] \mchip.my_chip.game.displaytiles.vert_mask [0] \mchip.my_chip.game.displaytiles.vert_mask [0] \mchip.my_chip.game.displaytiles.vert_mask [0] \mchip.my_chip.game.displaytiles.vert_mask [0] }
+    Consolidated identical input bits for $mux cell $flatten\mchip.\my_chip.\game.\displaytiles.$ternary$d15_spencer2_pianotiles/src/game.sv:449$154:
+      Old ports: A=8'11111110, B=8'01111111, Y=\mchip.my_chip.game.displaytiles.horz_mask
+      New ports: A=2'10, B=2'01, Y={ \mchip.my_chip.game.displaytiles.horz_mask [7] \mchip.my_chip.game.displaytiles.horz_mask [0] }
+      New connections: \mchip.my_chip.game.displaytiles.horz_mask [6:1] = 6'111111
+    Consolidated identical input bits for $pmux cell $flatten\mchip.\my_chip.\spi.$procmux$547:
+      Old ports: A=22'0000000000000001010011, B={ 256'0000000000000000000000000000100011010001010000000000100000000000000000001000000111001111000000110110011111000100000000000000101000010000000000000011001000000000000000001010010000000000000000101011111000100000000011111111100001000000000111111100000000000000 \mchip.my_chip.spi.data 22'0000000000000011111111 }, Y=\mchip.my_chip.spi.out_byte [21:0]
+      New ports: A=16'0000000001010011, B={ 184'0000000000000000000001110001010000010000000000000000000111001111000011011111000100000000101000010000000011001000000000001010010000000000101011111100000011111111101000000111111100000000 \mchip.my_chip.spi.data 16'0000000011111111 }, Y={ \mchip.my_chip.spi.out_byte [21] \mchip.my_chip.spi.out_byte [17:16] \mchip.my_chip.spi.out_byte [13:10] \mchip.my_chip.spi.out_byte [8:0] }
+      New connections: { \mchip.my_chip.spi.out_byte [20:18] \mchip.my_chip.spi.out_byte [15:14] \mchip.my_chip.spi.out_byte [9] } = { 3'000 \mchip.my_chip.spi.out_byte [8] \mchip.my_chip.spi.out_byte [12] 1'0 }
+    Consolidated identical input bits for $pmux cell $flatten\mchip.\my_chip.\spi.$procmux$578:
+      Old ports: A=5'00111, B=10'0111110111, Y=\mchip.my_chip.spi.count_end
+      New ports: A=2'00, B=4'0110, Y=\mchip.my_chip.spi.count_end [4:3]
+      New connections: \mchip.my_chip.spi.count_end [2:0] = 3'111
+  Optimizing cells in module \toplevel_chip.
+    Consolidated identical input bits for $mux cell $flatten\mchip.\my_chip.\game.\buttondetector.$procmux$419:
+      Old ports: A=7'0000000, B=$auto$wreduce.cc:461:run$889 [6:0], Y=\mchip.my_chip.game.mask [6:0]
+      New ports: A=1'0, B=$auto$wreduce.cc:461:run$889 [0], Y=\mchip.my_chip.game.mask [0]
+      New connections: \mchip.my_chip.game.mask [6:1] = { \mchip.my_chip.game.mask [0] 1'0 \mchip.my_chip.game.mask [0] 1'0 \mchip.my_chip.game.mask [0] 1'0 }
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 7 changes.
+
+8.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.20.6. Executing OPT_SHARE pass.
+
+8.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~14 debug messages>
+
+8.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+8.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+    Consolidated identical input bits for $mux cell $flatten\mchip.\my_chip.\game.\displaytiles.$ternary$d15_spencer2_pianotiles/src/game.sv:437$137:
+      Old ports: A=8'00000000, B=$flatten\mchip.\my_chip.\game.\displaytiles.$and$d15_spencer2_pianotiles/src/game.sv:437$136_Y, Y=\mchip.my_chip.game.tile_data
+      New ports: A=3'000, B={ $auto$opt_expr.cc:205:group_cell_inputs$934 [1] \mchip.my_chip.game.displaytiles.vert_mask [7] $auto$opt_expr.cc:205:group_cell_inputs$934 [0] }, Y={ \mchip.my_chip.game.tile_data [7] \mchip.my_chip.game.tile_data [1:0] }
+      New connections: \mchip.my_chip.game.tile_data [6:2] = { \mchip.my_chip.game.tile_data [1] \mchip.my_chip.game.tile_data [1] \mchip.my_chip.game.tile_data [1] \mchip.my_chip.game.tile_data [1] \mchip.my_chip.game.tile_data [1] }
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 1 changes.
+
+8.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.20.14. Executing OPT_SHARE pass.
+
+8.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+8.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~4 debug messages>
+
+8.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+8.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.20.22. Executing OPT_SHARE pass.
+
+8.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+8.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.20.26. Rerunning OPT passes. (Maybe there is more to do..)
+
+8.20.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+8.20.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+8.20.29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+8.20.30. Executing OPT_SHARE pass.
+
+8.20.31. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.20.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+8.20.33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+8.20.34. Finished OPT passes. (There is nothing left to do.)
+
+8.21. Executing TECHMAP pass (map to technology primitives).
+
+8.21.1. Executing Verilog-2005 frontend: /Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+8.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$83dd457849c736323edf2edb15923eb27f99c683\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$constmap:1ef046be63c9541309f2f19c4ef998a798f64488$paramod$7fe1424d9d826b3a6286885bc851fafa5143be2b\_90_shift_shiftx for cells of type $shiftx.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$constmap:440f4e62ea9d60ea4592df4eee00f6a51bba27a8$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Using extmapper simplemap for cells of type $mux.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'0
+  Constant input on bit 1 of port A: 1'0
+  Constant input on bit 2 of port A: 1'0
+  Constant input on bit 3 of port A: 1'0
+  Constant input on bit 4 of port A: 1'0
+  Constant input on bit 5 of port A: 1'1
+  Constant input on bit 6 of port A: 1'0
+  Constant input on bit 7 of port A: 1'0
+  Constant input on bit 8 of port A: 1'0
+  Constant input on bit 9 of port A: 1'0
+  Constant input on bit 10 of port A: 1'0
+  Constant input on bit 11 of port A: 1'0
+  Constant input on bit 12 of port A: 1'0
+  Constant input on bit 13 of port A: 1'1
+  Constant input on bit 14 of port A: 1'0
+  Constant input on bit 15 of port A: 1'0
+  Constant input on bit 16 of port A: 1'0
+  Constant input on bit 17 of port A: 1'0
+  Constant input on bit 18 of port A: 1'0
+  Constant input on bit 19 of port A: 1'0
+  Constant input on bit 20 of port A: 1'0
+  Constant input on bit 21 of port A: 1'1
+  Constant input on bit 22 of port A: 1'0
+  Constant input on bit 23 of port A: 1'0
+  Constant input on bit 24 of port A: 1'0
+  Constant input on bit 25 of port A: 1'0
+  Constant input on bit 26 of port A: 1'0
+  Constant input on bit 27 of port A: 1'0
+  Constant input on bit 28 of port A: 1'0
+  Constant input on bit 29 of port A: 1'1
+  Constant input on bit 30 of port A: 1'0
+  Constant input on bit 31 of port A: 1'0
+  Constant input on bit 32 of port A: 1'0
+  Constant input on bit 33 of port A: 1'0
+  Constant input on bit 34 of port A: 1'0
+  Constant input on bit 35 of port A: 1'0
+  Constant input on bit 36 of port A: 1'0
+  Constant input on bit 37 of port A: 1'1
+  Constant input on bit 38 of port A: 1'0
+  Constant input on bit 39 of port A: 1'0
+  Constant input on bit 40 of port A: 1'0
+  Constant input on bit 41 of port A: 1'0
+  Constant input on bit 42 of port A: 1'0
+  Constant input on bit 43 of port A: 1'0
+  Constant input on bit 44 of port A: 1'0
+  Constant input on bit 45 of port A: 1'1
+  Constant input on bit 46 of port A: 1'0
+  Constant input on bit 47 of port A: 1'0
+  Constant input on bit 48 of port A: 1'0
+  Constant input on bit 49 of port A: 1'0
+  Constant input on bit 50 of port A: 1'0
+  Constant input on bit 51 of port A: 1'0
+  Constant input on bit 52 of port A: 1'0
+  Constant input on bit 53 of port A: 1'1
+  Constant input on bit 54 of port A: 1'0
+  Constant input on bit 55 of port A: 1'0
+  Constant input on bit 56 of port A: 1'0
+  Constant input on bit 57 of port A: 1'0
+  Constant input on bit 58 of port A: 1'1
+  Constant input on bit 59 of port A: 1'1
+  Constant input on bit 60 of port A: 1'1
+  Constant input on bit 61 of port A: 1'1
+  Constant input on bit 62 of port A: 1'0
+  Constant input on bit 63 of port A: 1'0
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+  Constant input on bit 2 of port B: 1'0
+  Constant input on bit 6 of port B: 1'0
+Creating constmapped module `$paramod$constmap:098c6c70e7a48f6c17cdd6cae24524f565d5462c$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx'.
+
+8.21.15. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:098c6c70e7a48f6c17cdd6cae24524f565d5462c$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 2/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1379.
+    dead port 2/2 on $mux $procmux$1373.
+    dead port 2/2 on $mux $procmux$1367.
+Removed 12 multiplexer ports.
+<suppressed ~556 debug messages>
+
+8.21.16. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:098c6c70e7a48f6c17cdd6cae24524f565d5462c$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 15 unused wires.
+Using template $paramod$constmap:098c6c70e7a48f6c17cdd6cae24524f565d5462c$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'0
+  Constant input on bit 1 of port A: 1'0
+  Constant input on bit 2 of port A: 1'1
+  Constant input on bit 3 of port A: 1'0
+  Constant input on bit 4 of port A: 1'0
+  Constant input on bit 5 of port A: 1'1
+  Constant input on bit 6 of port A: 1'0
+  Constant input on bit 7 of port A: 1'0
+  Constant input on bit 8 of port A: 1'0
+  Constant input on bit 9 of port A: 1'0
+  Constant input on bit 10 of port A: 1'1
+  Constant input on bit 11 of port A: 1'0
+  Constant input on bit 12 of port A: 1'0
+  Constant input on bit 13 of port A: 1'1
+  Constant input on bit 14 of port A: 1'0
+  Constant input on bit 15 of port A: 1'0
+  Constant input on bit 16 of port A: 1'0
+  Constant input on bit 17 of port A: 1'0
+  Constant input on bit 18 of port A: 1'1
+  Constant input on bit 19 of port A: 1'0
+  Constant input on bit 20 of port A: 1'0
+  Constant input on bit 21 of port A: 1'1
+  Constant input on bit 22 of port A: 1'0
+  Constant input on bit 23 of port A: 1'0
+  Constant input on bit 24 of port A: 1'0
+  Constant input on bit 25 of port A: 1'0
+  Constant input on bit 26 of port A: 1'1
+  Constant input on bit 27 of port A: 1'0
+  Constant input on bit 28 of port A: 1'0
+  Constant input on bit 29 of port A: 1'1
+  Constant input on bit 30 of port A: 1'0
+  Constant input on bit 31 of port A: 1'0
+  Constant input on bit 32 of port A: 1'0
+  Constant input on bit 33 of port A: 1'0
+  Constant input on bit 34 of port A: 1'0
+  Constant input on bit 35 of port A: 1'1
+  Constant input on bit 36 of port A: 1'1
+  Constant input on bit 37 of port A: 1'0
+  Constant input on bit 38 of port A: 1'0
+  Constant input on bit 39 of port A: 1'0
+  Constant input on bit 40 of port A: 1'0
+  Constant input on bit 41 of port A: 1'0
+  Constant input on bit 42 of port A: 1'0
+  Constant input on bit 43 of port A: 1'1
+  Constant input on bit 44 of port A: 1'0
+  Constant input on bit 45 of port A: 1'0
+  Constant input on bit 46 of port A: 1'0
+  Constant input on bit 47 of port A: 1'0
+  Constant input on bit 48 of port A: 1'0
+  Constant input on bit 49 of port A: 1'0
+  Constant input on bit 50 of port A: 1'0
+  Constant input on bit 51 of port A: 1'1
+  Constant input on bit 52 of port A: 1'0
+  Constant input on bit 53 of port A: 1'0
+  Constant input on bit 54 of port A: 1'0
+  Constant input on bit 55 of port A: 1'0
+  Constant input on bit 56 of port A: 1'0
+  Constant input on bit 57 of port A: 1'0
+  Constant input on bit 58 of port A: 1'0
+  Constant input on bit 59 of port A: 1'1
+  Constant input on bit 60 of port A: 1'1
+  Constant input on bit 61 of port A: 1'0
+  Constant input on bit 62 of port A: 1'0
+  Constant input on bit 63 of port A: 1'0
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+  Constant input on bit 2 of port B: 1'0
+  Constant input on bit 6 of port B: 1'0
+Creating constmapped module `$paramod$constmap:9a74d70ad0d84c6a49b63a523343a5d907529c41$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx'.
+
+8.21.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:9a74d70ad0d84c6a49b63a523343a5d907529c41$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 2/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1379.
+    dead port 2/2 on $mux $procmux$1373.
+    dead port 2/2 on $mux $procmux$1367.
+Removed 12 multiplexer ports.
+<suppressed ~18 debug messages>
+
+8.21.18. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:9a74d70ad0d84c6a49b63a523343a5d907529c41$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 15 unused wires.
+Using template $paramod$constmap:9a74d70ad0d84c6a49b63a523343a5d907529c41$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'0
+  Constant input on bit 1 of port A: 1'0
+  Constant input on bit 2 of port A: 1'0
+  Constant input on bit 3 of port A: 1'1
+  Constant input on bit 4 of port A: 1'1
+  Constant input on bit 5 of port A: 1'0
+  Constant input on bit 6 of port A: 1'0
+  Constant input on bit 7 of port A: 1'0
+  Constant input on bit 8 of port A: 1'0
+  Constant input on bit 9 of port A: 1'0
+  Constant input on bit 10 of port A: 1'1
+  Constant input on bit 11 of port A: 1'0
+  Constant input on bit 12 of port A: 1'0
+  Constant input on bit 13 of port A: 1'1
+  Constant input on bit 14 of port A: 1'0
+  Constant input on bit 15 of port A: 1'0
+  Constant input on bit 16 of port A: 1'0
+  Constant input on bit 17 of port A: 1'0
+  Constant input on bit 18 of port A: 1'1
+  Constant input on bit 19 of port A: 1'0
+  Constant input on bit 20 of port A: 1'0
+  Constant input on bit 21 of port A: 1'1
+  Constant input on bit 22 of port A: 1'0
+  Constant input on bit 23 of port A: 1'0
+  Constant input on bit 24 of port A: 1'0
+  Constant input on bit 25 of port A: 1'0
+  Constant input on bit 26 of port A: 1'0
+  Constant input on bit 27 of port A: 1'0
+  Constant input on bit 28 of port A: 1'0
+  Constant input on bit 29 of port A: 1'1
+  Constant input on bit 30 of port A: 1'0
+  Constant input on bit 31 of port A: 1'0
+  Constant input on bit 32 of port A: 1'0
+  Constant input on bit 33 of port A: 1'0
+  Constant input on bit 34 of port A: 1'1
+  Constant input on bit 35 of port A: 1'1
+  Constant input on bit 36 of port A: 1'0
+  Constant input on bit 37 of port A: 1'1
+  Constant input on bit 38 of port A: 1'0
+  Constant input on bit 39 of port A: 1'0
+  Constant input on bit 40 of port A: 1'0
+  Constant input on bit 41 of port A: 1'0
+  Constant input on bit 42 of port A: 1'1
+  Constant input on bit 43 of port A: 1'0
+  Constant input on bit 44 of port A: 1'0
+  Constant input on bit 45 of port A: 1'1
+  Constant input on bit 46 of port A: 1'0
+  Constant input on bit 47 of port A: 1'0
+  Constant input on bit 48 of port A: 1'0
+  Constant input on bit 49 of port A: 1'0
+  Constant input on bit 50 of port A: 1'1
+  Constant input on bit 51 of port A: 1'0
+  Constant input on bit 52 of port A: 1'0
+  Constant input on bit 53 of port A: 1'1
+  Constant input on bit 54 of port A: 1'0
+  Constant input on bit 55 of port A: 1'0
+  Constant input on bit 56 of port A: 1'0
+  Constant input on bit 57 of port A: 1'0
+  Constant input on bit 58 of port A: 1'0
+  Constant input on bit 59 of port A: 1'1
+  Constant input on bit 60 of port A: 1'1
+  Constant input on bit 61 of port A: 1'0
+  Constant input on bit 62 of port A: 1'0
+  Constant input on bit 63 of port A: 1'0
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+  Constant input on bit 2 of port B: 1'0
+  Constant input on bit 6 of port B: 1'0
+Creating constmapped module `$paramod$constmap:c9fb3c3c2cf19e06c5ef82fc76a5d92e372ba52a$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx'.
+
+8.21.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:c9fb3c3c2cf19e06c5ef82fc76a5d92e372ba52a$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 2/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1379.
+    dead port 2/2 on $mux $procmux$1373.
+    dead port 2/2 on $mux $procmux$1367.
+Removed 12 multiplexer ports.
+<suppressed ~15 debug messages>
+
+8.21.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:c9fb3c3c2cf19e06c5ef82fc76a5d92e372ba52a$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 15 unused wires.
+Using template $paramod$constmap:c9fb3c3c2cf19e06c5ef82fc76a5d92e372ba52a$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'0
+  Constant input on bit 1 of port A: 1'0
+  Constant input on bit 2 of port A: 1'0
+  Constant input on bit 3 of port A: 1'1
+  Constant input on bit 4 of port A: 1'1
+  Constant input on bit 5 of port A: 1'0
+  Constant input on bit 6 of port A: 1'0
+  Constant input on bit 7 of port A: 1'0
+  Constant input on bit 8 of port A: 1'0
+  Constant input on bit 9 of port A: 1'0
+  Constant input on bit 10 of port A: 1'1
+  Constant input on bit 11 of port A: 1'0
+  Constant input on bit 12 of port A: 1'0
+  Constant input on bit 13 of port A: 1'1
+  Constant input on bit 14 of port A: 1'0
+  Constant input on bit 15 of port A: 1'0
+  Constant input on bit 16 of port A: 1'0
+  Constant input on bit 17 of port A: 1'0
+  Constant input on bit 18 of port A: 1'1
+  Constant input on bit 19 of port A: 1'0
+  Constant input on bit 20 of port A: 1'0
+  Constant input on bit 21 of port A: 1'1
+  Constant input on bit 22 of port A: 1'0
+  Constant input on bit 23 of port A: 1'0
+  Constant input on bit 24 of port A: 1'0
+  Constant input on bit 25 of port A: 1'0
+  Constant input on bit 26 of port A: 1'1
+  Constant input on bit 27 of port A: 1'0
+  Constant input on bit 28 of port A: 1'0
+  Constant input on bit 29 of port A: 1'1
+  Constant input on bit 30 of port A: 1'0
+  Constant input on bit 31 of port A: 1'0
+  Constant input on bit 32 of port A: 1'0
+  Constant input on bit 33 of port A: 1'0
+  Constant input on bit 34 of port A: 1'1
+  Constant input on bit 35 of port A: 1'1
+  Constant input on bit 36 of port A: 1'1
+  Constant input on bit 37 of port A: 1'1
+  Constant input on bit 38 of port A: 1'0
+  Constant input on bit 39 of port A: 1'0
+  Constant input on bit 40 of port A: 1'0
+  Constant input on bit 41 of port A: 1'0
+  Constant input on bit 42 of port A: 1'1
+  Constant input on bit 43 of port A: 1'0
+  Constant input on bit 44 of port A: 1'0
+  Constant input on bit 45 of port A: 1'1
+  Constant input on bit 46 of port A: 1'0
+  Constant input on bit 47 of port A: 1'0
+  Constant input on bit 48 of port A: 1'0
+  Constant input on bit 49 of port A: 1'0
+  Constant input on bit 50 of port A: 1'1
+  Constant input on bit 51 of port A: 1'0
+  Constant input on bit 52 of port A: 1'0
+  Constant input on bit 53 of port A: 1'1
+  Constant input on bit 54 of port A: 1'0
+  Constant input on bit 55 of port A: 1'0
+  Constant input on bit 56 of port A: 1'0
+  Constant input on bit 57 of port A: 1'0
+  Constant input on bit 58 of port A: 1'1
+  Constant input on bit 59 of port A: 1'0
+  Constant input on bit 60 of port A: 1'0
+  Constant input on bit 61 of port A: 1'1
+  Constant input on bit 62 of port A: 1'0
+  Constant input on bit 63 of port A: 1'0
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+  Constant input on bit 2 of port B: 1'0
+  Constant input on bit 6 of port B: 1'0
+Creating constmapped module `$paramod$constmap:c1dd62c4f343f936649e568733cea75a174d3226$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx'.
+
+8.21.21. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:c1dd62c4f343f936649e568733cea75a174d3226$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 2/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1379.
+    dead port 2/2 on $mux $procmux$1373.
+    dead port 2/2 on $mux $procmux$1367.
+Removed 12 multiplexer ports.
+<suppressed ~16 debug messages>
+
+8.21.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:c1dd62c4f343f936649e568733cea75a174d3226$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 15 unused wires.
+Using template $paramod$constmap:c1dd62c4f343f936649e568733cea75a174d3226$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'0
+  Constant input on bit 1 of port A: 1'1
+  Constant input on bit 2 of port A: 1'0
+  Constant input on bit 3 of port A: 1'0
+  Constant input on bit 4 of port A: 1'0
+  Constant input on bit 5 of port A: 1'0
+  Constant input on bit 6 of port A: 1'1
+  Constant input on bit 7 of port A: 1'0
+  Constant input on bit 8 of port A: 1'0
+  Constant input on bit 9 of port A: 1'1
+  Constant input on bit 10 of port A: 1'1
+  Constant input on bit 11 of port A: 1'0
+  Constant input on bit 12 of port A: 1'0
+  Constant input on bit 13 of port A: 1'1
+  Constant input on bit 14 of port A: 1'1
+  Constant input on bit 15 of port A: 1'0
+  Constant input on bit 16 of port A: 1'0
+  Constant input on bit 17 of port A: 1'1
+  Constant input on bit 18 of port A: 1'1
+  Constant input on bit 19 of port A: 1'0
+  Constant input on bit 20 of port A: 1'0
+  Constant input on bit 21 of port A: 1'1
+  Constant input on bit 22 of port A: 1'1
+  Constant input on bit 23 of port A: 1'0
+  Constant input on bit 24 of port A: 1'0
+  Constant input on bit 25 of port A: 1'1
+  Constant input on bit 26 of port A: 1'0
+  Constant input on bit 27 of port A: 1'1
+  Constant input on bit 28 of port A: 1'1
+  Constant input on bit 29 of port A: 1'0
+  Constant input on bit 30 of port A: 1'1
+  Constant input on bit 31 of port A: 1'0
+  Constant input on bit 32 of port A: 1'0
+  Constant input on bit 33 of port A: 1'1
+  Constant input on bit 34 of port A: 1'0
+  Constant input on bit 35 of port A: 1'1
+  Constant input on bit 36 of port A: 1'1
+  Constant input on bit 37 of port A: 1'0
+  Constant input on bit 38 of port A: 1'1
+  Constant input on bit 39 of port A: 1'0
+  Constant input on bit 40 of port A: 1'0
+  Constant input on bit 41 of port A: 1'1
+  Constant input on bit 42 of port A: 1'0
+  Constant input on bit 43 of port A: 1'0
+  Constant input on bit 44 of port A: 1'0
+  Constant input on bit 45 of port A: 1'0
+  Constant input on bit 46 of port A: 1'1
+  Constant input on bit 47 of port A: 1'0
+  Constant input on bit 48 of port A: 1'0
+  Constant input on bit 49 of port A: 1'1
+  Constant input on bit 50 of port A: 1'0
+  Constant input on bit 51 of port A: 1'0
+  Constant input on bit 52 of port A: 1'0
+  Constant input on bit 53 of port A: 1'0
+  Constant input on bit 54 of port A: 1'1
+  Constant input on bit 55 of port A: 1'0
+  Constant input on bit 56 of port A: 1'0
+  Constant input on bit 57 of port A: 1'1
+  Constant input on bit 58 of port A: 1'0
+  Constant input on bit 59 of port A: 1'0
+  Constant input on bit 60 of port A: 1'0
+  Constant input on bit 61 of port A: 1'0
+  Constant input on bit 62 of port A: 1'1
+  Constant input on bit 63 of port A: 1'0
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+  Constant input on bit 2 of port B: 1'0
+  Constant input on bit 6 of port B: 1'0
+Creating constmapped module `$paramod$constmap:5733cf1d18e0198a164999bdfed420b153e7e3ab$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx'.
+
+8.21.23. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:5733cf1d18e0198a164999bdfed420b153e7e3ab$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 2/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1379.
+    dead port 2/2 on $mux $procmux$1373.
+    dead port 2/2 on $mux $procmux$1367.
+Removed 12 multiplexer ports.
+<suppressed ~14 debug messages>
+
+8.21.24. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:5733cf1d18e0198a164999bdfed420b153e7e3ab$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 15 unused wires.
+Using template $paramod$constmap:5733cf1d18e0198a164999bdfed420b153e7e3ab$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'0
+  Constant input on bit 1 of port A: 1'0
+  Constant input on bit 2 of port A: 1'1
+  Constant input on bit 3 of port A: 1'1
+  Constant input on bit 4 of port A: 1'1
+  Constant input on bit 5 of port A: 1'1
+  Constant input on bit 6 of port A: 1'0
+  Constant input on bit 7 of port A: 1'0
+  Constant input on bit 8 of port A: 1'0
+  Constant input on bit 9 of port A: 1'0
+  Constant input on bit 10 of port A: 1'0
+  Constant input on bit 11 of port A: 1'0
+  Constant input on bit 12 of port A: 1'0
+  Constant input on bit 13 of port A: 1'1
+  Constant input on bit 14 of port A: 1'0
+  Constant input on bit 15 of port A: 1'0
+  Constant input on bit 16 of port A: 1'0
+  Constant input on bit 17 of port A: 1'0
+  Constant input on bit 18 of port A: 1'0
+  Constant input on bit 19 of port A: 1'0
+  Constant input on bit 20 of port A: 1'0
+  Constant input on bit 21 of port A: 1'1
+  Constant input on bit 22 of port A: 1'0
+  Constant input on bit 23 of port A: 1'0
+  Constant input on bit 24 of port A: 1'0
+  Constant input on bit 25 of port A: 1'0
+  Constant input on bit 26 of port A: 1'0
+  Constant input on bit 27 of port A: 1'0
+  Constant input on bit 28 of port A: 1'0
+  Constant input on bit 29 of port A: 1'1
+  Constant input on bit 30 of port A: 1'0
+  Constant input on bit 31 of port A: 1'0
+  Constant input on bit 32 of port A: 1'0
+  Constant input on bit 33 of port A: 1'0
+  Constant input on bit 34 of port A: 1'0
+  Constant input on bit 35 of port A: 1'1
+  Constant input on bit 36 of port A: 1'1
+  Constant input on bit 37 of port A: 1'1
+  Constant input on bit 38 of port A: 1'0
+  Constant input on bit 39 of port A: 1'0
+  Constant input on bit 40 of port A: 1'0
+  Constant input on bit 41 of port A: 1'0
+  Constant input on bit 42 of port A: 1'0
+  Constant input on bit 43 of port A: 1'0
+  Constant input on bit 44 of port A: 1'0
+  Constant input on bit 45 of port A: 1'1
+  Constant input on bit 46 of port A: 1'0
+  Constant input on bit 47 of port A: 1'0
+  Constant input on bit 48 of port A: 1'0
+  Constant input on bit 49 of port A: 1'0
+  Constant input on bit 50 of port A: 1'0
+  Constant input on bit 51 of port A: 1'0
+  Constant input on bit 52 of port A: 1'0
+  Constant input on bit 53 of port A: 1'1
+  Constant input on bit 54 of port A: 1'0
+  Constant input on bit 55 of port A: 1'0
+  Constant input on bit 56 of port A: 1'0
+  Constant input on bit 57 of port A: 1'0
+  Constant input on bit 58 of port A: 1'1
+  Constant input on bit 59 of port A: 1'1
+  Constant input on bit 60 of port A: 1'1
+  Constant input on bit 61 of port A: 1'1
+  Constant input on bit 62 of port A: 1'0
+  Constant input on bit 63 of port A: 1'0
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+  Constant input on bit 2 of port B: 1'0
+  Constant input on bit 6 of port B: 1'0
+Creating constmapped module `$paramod$constmap:f2399c90525edea8964aeff35a68d9967c5307a3$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx'.
+
+8.21.25. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:f2399c90525edea8964aeff35a68d9967c5307a3$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 2/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1379.
+    dead port 2/2 on $mux $procmux$1373.
+    dead port 2/2 on $mux $procmux$1367.
+Removed 12 multiplexer ports.
+<suppressed ~15 debug messages>
+
+8.21.26. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:f2399c90525edea8964aeff35a68d9967c5307a3$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 15 unused wires.
+Using template $paramod$constmap:f2399c90525edea8964aeff35a68d9967c5307a3$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'0
+  Constant input on bit 1 of port A: 1'0
+  Constant input on bit 2 of port A: 1'0
+  Constant input on bit 3 of port A: 1'1
+  Constant input on bit 4 of port A: 1'1
+  Constant input on bit 5 of port A: 1'0
+  Constant input on bit 6 of port A: 1'0
+  Constant input on bit 7 of port A: 1'0
+  Constant input on bit 8 of port A: 1'0
+  Constant input on bit 9 of port A: 1'0
+  Constant input on bit 10 of port A: 1'1
+  Constant input on bit 11 of port A: 1'0
+  Constant input on bit 12 of port A: 1'0
+  Constant input on bit 13 of port A: 1'1
+  Constant input on bit 14 of port A: 1'0
+  Constant input on bit 15 of port A: 1'0
+  Constant input on bit 16 of port A: 1'0
+  Constant input on bit 17 of port A: 1'0
+  Constant input on bit 18 of port A: 1'1
+  Constant input on bit 19 of port A: 1'0
+  Constant input on bit 20 of port A: 1'0
+  Constant input on bit 21 of port A: 1'1
+  Constant input on bit 22 of port A: 1'0
+  Constant input on bit 23 of port A: 1'0
+  Constant input on bit 24 of port A: 1'0
+  Constant input on bit 25 of port A: 1'0
+  Constant input on bit 26 of port A: 1'1
+  Constant input on bit 27 of port A: 1'0
+  Constant input on bit 28 of port A: 1'0
+  Constant input on bit 29 of port A: 1'1
+  Constant input on bit 30 of port A: 1'0
+  Constant input on bit 31 of port A: 1'0
+  Constant input on bit 32 of port A: 1'0
+  Constant input on bit 33 of port A: 1'0
+  Constant input on bit 34 of port A: 1'1
+  Constant input on bit 35 of port A: 1'0
+  Constant input on bit 36 of port A: 1'0
+  Constant input on bit 37 of port A: 1'1
+  Constant input on bit 38 of port A: 1'0
+  Constant input on bit 39 of port A: 1'0
+  Constant input on bit 40 of port A: 1'0
+  Constant input on bit 41 of port A: 1'0
+  Constant input on bit 42 of port A: 1'1
+  Constant input on bit 43 of port A: 1'0
+  Constant input on bit 44 of port A: 1'0
+  Constant input on bit 45 of port A: 1'1
+  Constant input on bit 46 of port A: 1'0
+  Constant input on bit 47 of port A: 1'0
+  Constant input on bit 48 of port A: 1'0
+  Constant input on bit 49 of port A: 1'0
+  Constant input on bit 50 of port A: 1'1
+  Constant input on bit 51 of port A: 1'0
+  Constant input on bit 52 of port A: 1'0
+  Constant input on bit 53 of port A: 1'1
+  Constant input on bit 54 of port A: 1'0
+  Constant input on bit 55 of port A: 1'0
+  Constant input on bit 56 of port A: 1'0
+  Constant input on bit 57 of port A: 1'0
+  Constant input on bit 58 of port A: 1'0
+  Constant input on bit 59 of port A: 1'1
+  Constant input on bit 60 of port A: 1'1
+  Constant input on bit 61 of port A: 1'0
+  Constant input on bit 62 of port A: 1'0
+  Constant input on bit 63 of port A: 1'0
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+  Constant input on bit 2 of port B: 1'0
+  Constant input on bit 6 of port B: 1'0
+Creating constmapped module `$paramod$constmap:0ff1e48d85b13b20b03445c00b6b3948773af089$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx'.
+
+8.21.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:0ff1e48d85b13b20b03445c00b6b3948773af089$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 2/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1379.
+    dead port 2/2 on $mux $procmux$1373.
+    dead port 2/2 on $mux $procmux$1367.
+Removed 12 multiplexer ports.
+<suppressed ~15 debug messages>
+
+8.21.28. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:0ff1e48d85b13b20b03445c00b6b3948773af089$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 15 unused wires.
+Using template $paramod$constmap:0ff1e48d85b13b20b03445c00b6b3948773af089$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'0
+  Constant input on bit 1 of port A: 1'1
+  Constant input on bit 2 of port A: 1'0
+  Constant input on bit 3 of port A: 1'0
+  Constant input on bit 4 of port A: 1'0
+  Constant input on bit 5 of port A: 1'0
+  Constant input on bit 6 of port A: 1'1
+  Constant input on bit 7 of port A: 1'0
+  Constant input on bit 8 of port A: 1'0
+  Constant input on bit 9 of port A: 1'1
+  Constant input on bit 10 of port A: 1'0
+  Constant input on bit 11 of port A: 1'0
+  Constant input on bit 12 of port A: 1'0
+  Constant input on bit 13 of port A: 1'0
+  Constant input on bit 14 of port A: 1'1
+  Constant input on bit 15 of port A: 1'0
+  Constant input on bit 16 of port A: 1'0
+  Constant input on bit 17 of port A: 1'1
+  Constant input on bit 18 of port A: 1'0
+  Constant input on bit 19 of port A: 1'0
+  Constant input on bit 20 of port A: 1'0
+  Constant input on bit 21 of port A: 1'0
+  Constant input on bit 22 of port A: 1'1
+  Constant input on bit 23 of port A: 1'0
+  Constant input on bit 24 of port A: 1'0
+  Constant input on bit 25 of port A: 1'1
+  Constant input on bit 26 of port A: 1'0
+  Constant input on bit 27 of port A: 1'0
+  Constant input on bit 28 of port A: 1'0
+  Constant input on bit 29 of port A: 1'0
+  Constant input on bit 30 of port A: 1'1
+  Constant input on bit 31 of port A: 1'0
+  Constant input on bit 32 of port A: 1'0
+  Constant input on bit 33 of port A: 1'0
+  Constant input on bit 34 of port A: 1'1
+  Constant input on bit 35 of port A: 1'0
+  Constant input on bit 36 of port A: 1'0
+  Constant input on bit 37 of port A: 1'1
+  Constant input on bit 38 of port A: 1'0
+  Constant input on bit 39 of port A: 1'0
+  Constant input on bit 40 of port A: 1'0
+  Constant input on bit 41 of port A: 1'0
+  Constant input on bit 42 of port A: 1'1
+  Constant input on bit 43 of port A: 1'0
+  Constant input on bit 44 of port A: 1'0
+  Constant input on bit 45 of port A: 1'1
+  Constant input on bit 46 of port A: 1'0
+  Constant input on bit 47 of port A: 1'0
+  Constant input on bit 48 of port A: 1'0
+  Constant input on bit 49 of port A: 1'0
+  Constant input on bit 50 of port A: 1'1
+  Constant input on bit 51 of port A: 1'0
+  Constant input on bit 52 of port A: 1'0
+  Constant input on bit 53 of port A: 1'1
+  Constant input on bit 54 of port A: 1'0
+  Constant input on bit 55 of port A: 1'0
+  Constant input on bit 56 of port A: 1'0
+  Constant input on bit 57 of port A: 1'0
+  Constant input on bit 58 of port A: 1'0
+  Constant input on bit 59 of port A: 1'1
+  Constant input on bit 60 of port A: 1'1
+  Constant input on bit 61 of port A: 1'0
+  Constant input on bit 62 of port A: 1'0
+  Constant input on bit 63 of port A: 1'0
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+  Constant input on bit 2 of port B: 1'0
+  Constant input on bit 6 of port B: 1'0
+Creating constmapped module `$paramod$constmap:8f8df3521c3a0ccb3bdcfccaf5da8461f250a553$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx'.
+
+8.21.29. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:8f8df3521c3a0ccb3bdcfccaf5da8461f250a553$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 2/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1379.
+    dead port 2/2 on $mux $procmux$1373.
+    dead port 2/2 on $mux $procmux$1367.
+Removed 12 multiplexer ports.
+<suppressed ~15 debug messages>
+
+8.21.30. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:8f8df3521c3a0ccb3bdcfccaf5da8461f250a553$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 15 unused wires.
+Using template $paramod$constmap:8f8df3521c3a0ccb3bdcfccaf5da8461f250a553$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'0
+  Constant input on bit 1 of port A: 1'0
+  Constant input on bit 2 of port A: 1'0
+  Constant input on bit 3 of port A: 1'1
+  Constant input on bit 4 of port A: 1'1
+  Constant input on bit 5 of port A: 1'1
+  Constant input on bit 6 of port A: 1'0
+  Constant input on bit 7 of port A: 1'0
+  Constant input on bit 8 of port A: 1'0
+  Constant input on bit 9 of port A: 1'0
+  Constant input on bit 10 of port A: 1'1
+  Constant input on bit 11 of port A: 1'0
+  Constant input on bit 12 of port A: 1'0
+  Constant input on bit 13 of port A: 1'1
+  Constant input on bit 14 of port A: 1'0
+  Constant input on bit 15 of port A: 1'0
+  Constant input on bit 16 of port A: 1'0
+  Constant input on bit 17 of port A: 1'0
+  Constant input on bit 18 of port A: 1'1
+  Constant input on bit 19 of port A: 1'0
+  Constant input on bit 20 of port A: 1'0
+  Constant input on bit 21 of port A: 1'1
+  Constant input on bit 22 of port A: 1'0
+  Constant input on bit 23 of port A: 1'0
+  Constant input on bit 24 of port A: 1'0
+  Constant input on bit 25 of port A: 1'0
+  Constant input on bit 26 of port A: 1'1
+  Constant input on bit 27 of port A: 1'0
+  Constant input on bit 28 of port A: 1'0
+  Constant input on bit 29 of port A: 1'1
+  Constant input on bit 30 of port A: 1'0
+  Constant input on bit 31 of port A: 1'0
+  Constant input on bit 32 of port A: 1'0
+  Constant input on bit 33 of port A: 1'0
+  Constant input on bit 34 of port A: 1'0
+  Constant input on bit 35 of port A: 1'1
+  Constant input on bit 36 of port A: 1'1
+  Constant input on bit 37 of port A: 1'1
+  Constant input on bit 38 of port A: 1'0
+  Constant input on bit 39 of port A: 1'0
+  Constant input on bit 40 of port A: 1'0
+  Constant input on bit 41 of port A: 1'0
+  Constant input on bit 42 of port A: 1'1
+  Constant input on bit 43 of port A: 1'0
+  Constant input on bit 44 of port A: 1'0
+  Constant input on bit 45 of port A: 1'1
+  Constant input on bit 46 of port A: 1'0
+  Constant input on bit 47 of port A: 1'0
+  Constant input on bit 48 of port A: 1'0
+  Constant input on bit 49 of port A: 1'0
+  Constant input on bit 50 of port A: 1'1
+  Constant input on bit 51 of port A: 1'0
+  Constant input on bit 52 of port A: 1'0
+  Constant input on bit 53 of port A: 1'1
+  Constant input on bit 54 of port A: 1'0
+  Constant input on bit 55 of port A: 1'0
+  Constant input on bit 56 of port A: 1'0
+  Constant input on bit 57 of port A: 1'0
+  Constant input on bit 58 of port A: 1'1
+  Constant input on bit 59 of port A: 1'0
+  Constant input on bit 60 of port A: 1'0
+  Constant input on bit 61 of port A: 1'1
+  Constant input on bit 62 of port A: 1'0
+  Constant input on bit 63 of port A: 1'0
+  Constant input on bit 0 of port B: 1'0
+  Constant input on bit 1 of port B: 1'0
+  Constant input on bit 2 of port B: 1'0
+  Constant input on bit 6 of port B: 1'0
+Creating constmapped module `$paramod$constmap:53bb3b7ac33ba9e62aab6e4a776600f26e4c1324$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx'.
+
+8.21.31. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:53bb3b7ac33ba9e62aab6e4a776600f26e4c1324$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1400.
+    dead port 1/2 on $mux $procmux$1397.
+    dead port 2/2 on $mux $procmux$1397.
+    dead port 1/2 on $mux $procmux$1394.
+    dead port 1/2 on $mux $procmux$1391.
+    dead port 2/2 on $mux $procmux$1391.
+    dead port 1/2 on $mux $procmux$1388.
+    dead port 1/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1385.
+    dead port 2/2 on $mux $procmux$1379.
+    dead port 2/2 on $mux $procmux$1373.
+    dead port 2/2 on $mux $procmux$1367.
+Removed 12 multiplexer ports.
+<suppressed ~17 debug messages>
+
+8.21.32. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:53bb3b7ac33ba9e62aab6e4a776600f26e4c1324$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 15 unused wires.
+Using template $paramod$constmap:53bb3b7ac33ba9e62aab6e4a776600f26e4c1324$paramod$3bc42dccc683f8adaddd1d2d9861164873fa59f0\_90_shift_shiftx for cells of type $shiftx.
+Using extmapper simplemap for cells of type $adff.
+Using template $paramod$constmap:fd9b266a811f1d375b286403600ea911a96c9ace$paramod$8e3229ac35b82f7d3aa4f15d16a09aafa8844b1e\_90_shift_shiftx for cells of type $shiftx.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod$85df5dc01c7df96a7d8e5f1fdf76ce9ac452af63\_90_pmux for cells of type $pmux.
+Using template $paramod$fc16b9f758000d363d24f130038bd99b46b4fa1b\_90_pmux for cells of type $pmux.
+Using template $paramod$8f780356cb6cdb52f6a744190131b65634639c4e\_90_alu for cells of type $alu.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_90_alu for cells of type $alu.
+Using template $paramod$521ce43182eecb9f60c72393a788160d2c356bf5\_90_pmux for cells of type $pmux.
+Using template $paramod$d6bda349df5337d6c5b209ac911db21df19d73bb\_90_pmux for cells of type $pmux.
+Using template $paramod$7e708ae28ab761f11d0fb59d3ffc72f6a4baf5d9\_90_alu for cells of type $alu.
+Using template $paramod$103b4016182df467cceab67bcf3e18e6361ec0fd\_90_alu for cells of type $alu.
+Using template $paramod$constmap:6e1d46e9e8091ea674d070251f7b2d5a6fb7388b$paramod$e194a9e890de0a7be18db8bd15a1479dea055e42\_90_shift_shiftx for cells of type $shiftx.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000111 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001100 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1442 debug messages>
+
+8.22. Executing OPT pass (performing simple optimizations).
+
+8.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~3849 debug messages>
+
+8.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~3585 debug messages>
+Removed a total of 1195 cells.
+
+8.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 295 unused cells and 786 unused wires.
+<suppressed ~296 debug messages>
+
+8.22.5. Finished fast OPT passes.
+
+8.23. Executing ABC pass (technology mapping using ABC).
+
+8.23.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
+Extracted 625 gates and 734 wires to a netlist network with 107 inputs and 80 outputs.
+
+8.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+8.23.1.2. Re-integrating ABC results.
+ABC RESULTS:             ORNOT cells:       16
+ABC RESULTS:               MUX cells:       78
+ABC RESULTS:                OR cells:      162
+ABC RESULTS:               NOT cells:       22
+ABC RESULTS:              XNOR cells:       19
+ABC RESULTS:               NOR cells:       33
+ABC RESULTS:               AND cells:       21
+ABC RESULTS:              NAND cells:       27
+ABC RESULTS:            ANDNOT cells:      129
+ABC RESULTS:               XOR cells:       41
+ABC RESULTS:        internal signals:      547
+ABC RESULTS:           input signals:      107
+ABC RESULTS:          output signals:       80
+Removing temp directory.
+
+8.24. Executing OPT pass (performing simple optimizations).
+
+8.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~29 debug messages>
+
+8.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+8.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 2 unused cells and 492 unused wires.
+<suppressed ~20 debug messages>
+
+8.24.5. Finished fast OPT passes.
+
+8.25. Executing HIERARCHY pass (managing design hierarchy).
+
+8.25.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+8.25.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+8.26. Printing statistics.
+
+=== toplevel_chip ===
+
+   Number of wires:                636
+   Number of wire bits:           1672
+   Number of public wires:         123
+   Number of public wire bits:    1115
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                658
+     $_ANDNOT_                     129
+     $_AND_                         20
+     $_DFF_NN0_                      9
+     $_DFF_P_                       35
+     $_MUX_                         78
+     $_NAND_                        27
+     $_NOR_                         32
+     $_NOT_                         20
+     $_ORNOT_                       16
+     $_OR_                         161
+     $_SDFFE_PN0N_                  16
+     $_SDFFE_PP0P_                  22
+     $_SDFF_PN0_                    14
+     $_SDFF_PN1_                    11
+     $_SDFF_PP0_                     9
+     $_XNOR_                        19
+     $_XOR_                         40
+
+8.27. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+
+9. Executing SETUNDEF pass (replace undef values with defined constants).
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing ASYNC2SYNC pass.
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1686 ($_DFF_NN0_): ARST=\mchip.my_chip.async2sync0.sync, D=$abc$7702$flatten\mchip.\my_chip.\game.\displaytext.$0\text_loc[0:0], Q=\mchip.my_chip.game.displaytext.text_loc
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1928 ($_DFF_NN0_): ARST=\mchip.my_chip.async2sync0.sync, D=$abc$7702$flatten\mchip.\my_chip.\game.$0\stages[4:0][0], Q=\mchip.my_chip.game.stages [0]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1929 ($_DFF_NN0_): ARST=\mchip.my_chip.async2sync0.sync, D=$abc$7702$flatten\mchip.\my_chip.\game.$0\stages[4:0][1], Q=\mchip.my_chip.game.stages [1]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1930 ($_DFF_NN0_): ARST=\mchip.my_chip.async2sync0.sync, D=$abc$7702$flatten\mchip.\my_chip.\game.$0\stages[4:0][2], Q=\mchip.my_chip.game.stages [2]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1931 ($_DFF_NN0_): ARST=\mchip.my_chip.async2sync0.sync, D=$abc$7702$flatten\mchip.\my_chip.\game.$0\stages[4:0][3], Q=\mchip.my_chip.game.stages [3]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1932 ($_DFF_NN0_): ARST=\mchip.my_chip.async2sync0.sync, D=$abc$7702$flatten\mchip.\my_chip.\game.$0\stages[4:0][4], Q=\mchip.my_chip.game.stages [4]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1933 ($_DFF_NN0_): ARST=\mchip.my_chip.async2sync0.sync, D=$abc$7702$flatten\mchip.\my_chip.\game.$0\gameover_anim_count[2:0][0], Q=\mchip.my_chip.game.gameover_anim_count [0]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1934 ($_DFF_NN0_): ARST=\mchip.my_chip.async2sync0.sync, D=$abc$7702$flatten\mchip.\my_chip.\game.$0\gameover_anim_count[2:0][1], Q=\mchip.my_chip.game.gameover_anim_count [1]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1935 ($_DFF_NN0_): ARST=\mchip.my_chip.async2sync0.sync, D=$abc$7702$flatten\mchip.\my_chip.\game.$0\gameover_anim_count[2:0][2], Q=\mchip.my_chip.game.gameover_anim_count [2]
+
+12. Executing SYNTH pass.
+
+12.1. Executing HIERARCHY pass (managing design hierarchy).
+
+12.1.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+12.1.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+12.2. Executing PROC pass (convert processes to netlists).
+
+12.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+12.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+12.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+12.2.4. Executing PROC_INIT pass (extract init attributes).
+
+12.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+12.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+12.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+12.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+12.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+12.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+12.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+12.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.5. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+
+12.6. Executing OPT pass (performing simple optimizations).
+
+12.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+12.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.6.9. Finished OPT passes. (There is nothing left to do.)
+
+12.7. Executing FSM pass (extract and optimize FSM).
+
+12.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+12.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+12.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+12.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+12.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+12.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+12.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+12.8. Executing OPT pass (performing simple optimizations).
+
+12.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+12.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.8.9. Finished OPT passes. (There is nothing left to do.)
+
+12.9. Executing WREDUCE pass (reducing word size of cells).
+
+12.10. Executing PEEPOPT pass (run peephole optimizers).
+
+12.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module toplevel_chip:
+  created 0 $alu and 0 $macc cells.
+
+12.13. Executing SHARE pass (SAT-based resource sharing).
+
+12.14. Executing OPT pass (performing simple optimizations).
+
+12.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+12.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.14.9. Finished OPT passes. (There is nothing left to do.)
+
+12.15. Executing MEMORY pass.
+
+12.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+12.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+12.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+12.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+12.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+12.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+12.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+12.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+12.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.17. Executing OPT pass (performing simple optimizations).
+
+12.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~9 debug messages>
+
+12.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.17.5. Finished fast OPT passes.
+
+12.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+12.19. Executing OPT pass (performing simple optimizations).
+
+12.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+12.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.19.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $_MUX_ $abc$7702$auto$blifparse.cc:386:parse_blif$7944 in front of them:
+        $abc$7702$auto$blifparse.cc:386:parse_blif$7943
+        $abc$7702$auto$blifparse.cc:386:parse_blif$7942
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $abc$7702$auto$blifparse.cc:386:parse_blif$8163 in front of them:
+        $abc$7702$auto$blifparse.cc:386:parse_blif$8162
+        $abc$7702$auto$blifparse.cc:386:parse_blif$8135
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $abc$7702$auto$blifparse.cc:386:parse_blif$8184 in front of them:
+        $abc$7702$auto$blifparse.cc:386:parse_blif$8183
+        $abc$7702$auto$blifparse.cc:386:parse_blif$8171
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $abc$7702$auto$blifparse.cc:386:parse_blif$8196 in front of them:
+        $abc$7702$auto$blifparse.cc:386:parse_blif$8195
+        $abc$7702$auto$blifparse.cc:386:parse_blif$8194
+
+    Found cells that share an operand and can be merged by moving the $_MUX_ $abc$7702$auto$blifparse.cc:386:parse_blif$8198 in front of them:
+        $abc$7702$auto$blifparse.cc:386:parse_blif$8197
+        $abc$7702$auto$blifparse.cc:386:parse_blif$8193
+
+12.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+12.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~5 debug messages>
+
+12.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+12.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+12.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+12.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.19.14. Executing OPT_SHARE pass.
+
+12.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+12.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+12.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+12.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+12.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.19.22. Executing OPT_SHARE pass.
+
+12.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.19.26. Finished OPT passes. (There is nothing left to do.)
+
+12.20. Executing TECHMAP pass (map to technology primitives).
+
+12.20.1. Executing Verilog-2005 frontend: /Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+12.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~78 debug messages>
+
+12.21. Executing OPT pass (performing simple optimizations).
+
+12.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+12.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+12.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+12.21.5. Finished fast OPT passes.
+
+12.22. Executing ABC pass (technology mapping using ABC).
+
+12.22.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
+Extracted 546 gates and 653 wires to a netlist network with 107 inputs and 80 outputs.
+
+12.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+12.22.1.2. Re-integrating ABC results.
+ABC RESULTS:             ORNOT cells:       19
+ABC RESULTS:               NOT cells:       20
+ABC RESULTS:               MUX cells:       78
+ABC RESULTS:                OR cells:      158
+ABC RESULTS:              XNOR cells:       16
+ABC RESULTS:               NOR cells:       31
+ABC RESULTS:               AND cells:       25
+ABC RESULTS:              NAND cells:       28
+ABC RESULTS:            ANDNOT cells:      121
+ABC RESULTS:               XOR cells:       42
+ABC RESULTS:        internal signals:      466
+ABC RESULTS:           input signals:      107
+ABC RESULTS:          output signals:       80
+Removing temp directory.
+
+12.23. Executing OPT pass (performing simple optimizations).
+
+12.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~26 debug messages>
+
+12.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+12.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+12.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 1 unused cells and 649 unused wires.
+<suppressed ~5 debug messages>
+
+12.23.5. Finished fast OPT passes.
+
+12.24. Executing HIERARCHY pass (managing design hierarchy).
+
+12.24.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+12.24.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+12.25. Printing statistics.
+
+=== toplevel_chip ===
+
+   Number of wires:                636
+   Number of wire bits:           1666
+   Number of public wires:         120
+   Number of public wire bits:    1106
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                652
+     $_ANDNOT_                     121
+     $_AND_                         25
+     $_DFF_P_                       35
+     $_MUX_                         77
+     $_NAND_                        28
+     $_NOR_                         31
+     $_NOT_                         19
+     $_ORNOT_                       19
+     $_OR_                         158
+     $_SDFFE_PN0N_                  16
+     $_SDFFE_PP0P_                  22
+     $_SDFF_NN0_                     9
+     $_SDFF_PN0_                    14
+     $_SDFF_PN1_                    11
+     $_SDFF_PP0_                     9
+     $_XNOR_                        16
+     $_XOR_                         42
+
+12.26. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+Renaming module \toplevel_chip to \d15_spencer2_pianotiles.
+
+13. Executing Verilog backend.
+
+13.1. Executing BMUXMAP pass.
+
+13.2. Executing DEMUXMAP pass.
+Dumping module `\d15_spencer2_pianotiles'.
+
+14. Executing CHECK pass (checking for obvious problems).
+Checking module d15_spencer2_pianotiles...
+Found and reported 0 problems.
+
+15. Printing statistics.
+
+=== d15_spencer2_pianotiles ===
+
+   Number of wires:                636
+   Number of wire bits:           1666
+   Number of public wires:         120
+   Number of public wire bits:    1106
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                652
+     $_ANDNOT_                     121
+     $_AND_                         25
+     $_DFF_P_                       35
+     $_MUX_                         77
+     $_NAND_                        28
+     $_NOR_                         31
+     $_NOT_                         19
+     $_ORNOT_                       19
+     $_OR_                         158
+     $_SDFFE_PN0N_                  16
+     $_SDFFE_PP0P_                  22
+     $_SDFF_NN0_                     9
+     $_SDFF_PN0_                    14
+     $_SDFF_PN1_                    11
+     $_SDFF_PP0_                     9
+     $_XNOR_                        16
+     $_XOR_                         42
+
+Warnings: 8 unique messages, 8 total
+End of script. Logfile hash: aa8da25961, CPU: user 0.73s system 0.04s
+Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 25% 62x opt_expr (0 sec), 14% 2x abc (0 sec), ...
+

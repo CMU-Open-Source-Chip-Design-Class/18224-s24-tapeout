@@ -1,0 +1,1876 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Running command `read_verilog -sv d18_vrajesh_motorcontroller/src/toplevel_chip.v d18_vrajesh_motorcontroller/src/chip.sv d18_vrajesh_motorcontroller/src/motor_driver.sv d18_vrajesh_motorcontroller/src/p.sv d18_vrajesh_motorcontroller/src/params.sv d18_vrajesh_motorcontroller/src/pwm.sv d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv d18_vrajesh_motorcontroller/src/stability_detector.sv d18_vrajesh_motorcontroller/src/top.sv; synth -flatten -top toplevel_chip; setundef -undriven -zero; setundef -zero; async2sync; synth -top toplevel_chip; rename toplevel_chip d18_vrajesh_motorcontroller; write_verilog -attr2comment d18_vrajesh_motorcontroller/flattened.v; check; stat;' --
+
+1. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/toplevel_chip.v
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/toplevel_chip.v' to AST representation.
+Generating RTLIL representation for module `\toplevel_chip'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/chip.sv
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/chip.sv' to AST representation.
+Generating RTLIL representation for module `\my_chip'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/motor_driver.sv
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/motor_driver.sv' to AST representation.
+Generating RTLIL representation for module `\motor_driver'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/p.sv
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/p.sv' to AST representation.
+Generating RTLIL representation for module `\p_controller'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/params.sv
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/params.sv' to AST representation.
+Generating RTLIL representation for module `\params'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/pwm.sv
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/pwm.sv' to AST representation.
+Generating RTLIL representation for module `\pwm'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv' to AST representation.
+Generating RTLIL representation for module `\spi_mcp3202_interface'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv' to AST representation.
+Generating RTLIL representation for module `\spi_mosi_interface'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/stability_detector.sv
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/stability_detector.sv' to AST representation.
+Generating RTLIL representation for module `\stability_detector'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: d18_vrajesh_motorcontroller/src/top.sv
+Parsing SystemVerilog input from `d18_vrajesh_motorcontroller/src/top.sv' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.
+
+11. Executing SYNTH pass.
+
+11.1. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \top
+Used module:             \motor_driver
+Used module:                 \pwm
+Used module:             \p_controller
+Used module:             \spi_mcp3202_interface
+Used module:             \params
+Used module:             \spi_mosi_interface
+Used module:                 \stability_detector
+Parameter 1 (\WIDTH) = 16
+
+11.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\spi_mosi_interface'.
+Parameter 1 (\WIDTH) = 16
+Generating RTLIL representation for module `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000'.
+
+11.1.3. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \top
+Used module:             \motor_driver
+Used module:                 \pwm
+Used module:             \p_controller
+Used module:             \spi_mcp3202_interface
+Used module:             \params
+Used module:             $paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000
+Used module:                 \stability_detector
+
+11.1.4. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Used module:     \my_chip
+Used module:         \top
+Used module:             \motor_driver
+Used module:                 \pwm
+Used module:             \p_controller
+Used module:             \spi_mcp3202_interface
+Used module:             \params
+Used module:             $paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000
+Used module:                 \stability_detector
+Removing unused module `\spi_mosi_interface'.
+Removed 1 unused modules.
+Mapping positional arguments of cell $paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.cs_n (stability_detector).
+Mapping positional arguments of cell $paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.mosi (stability_detector).
+Mapping positional arguments of cell $paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.clk (stability_detector).
+
+11.2. Executing PROC pass (convert processes to netlists).
+
+11.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+11.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/stability_detector.sv:13$71 in module stability_detector.
+Marked 1 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:35$80 in module $paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.
+Marked 2 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:21$75 in module $paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.
+Marked 2 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:0$57 in module spi_mcp3202_interface.
+Marked 13 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:59$42 in module spi_mcp3202_interface.
+Marked 4 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:45$37 in module spi_mcp3202_interface.
+Marked 2 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:22$24 in module spi_mcp3202_interface.
+Marked 1 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/pwm.sv:21$22 in module pwm.
+Marked 1 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/pwm.sv:13$19 in module pwm.
+Marked 2 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/params.sv:11$17 in module params.
+Marked 1 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/p.sv:14$6 in module p_controller.
+Marked 1 switch rules as full_case in process $proc$d18_vrajesh_motorcontroller/src/motor_driver.sv:14$2 in module motor_driver.
+Removed a total of 0 dead cases.
+
+11.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 13 redundant assignments.
+Promoted 7 assignments to connections.
+
+11.2.4. Executing PROC_INIT pass (extract init attributes).
+
+11.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \internal_reset_n in `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:35$80'.
+Found async reset \sys_reset_n in `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:21$75'.
+
+11.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~33 debug messages>
+
+11.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\top.$proc$d18_vrajesh_motorcontroller/src/top.sv:40$74'.
+     1/1: $0\sensor_reading_captured[11:0]
+Creating decoders for process `\stability_detector.$proc$d18_vrajesh_motorcontroller/src/stability_detector.sv:13$71'.
+     1/1: $0\data_out[0:0]
+Creating decoders for process `\stability_detector.$proc$d18_vrajesh_motorcontroller/src/stability_detector.sv:9$70'.
+Creating decoders for process `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:35$80'.
+     1/2: $0\mosi_buffer_counter[4:0]
+     2/2: $0\mosi_buffer[15:0]
+Creating decoders for process `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:21$75'.
+     1/2: $0\internal_reset_n[0:0]
+     2/2: $0\sync_spi_cs_n_del[0:0]
+Creating decoders for process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:0$57'.
+     1/2: $2\next_state[31:0]
+     2/2: $1\next_state[31:0]
+Creating decoders for process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:59$42'.
+     1/13: $0\sensor_reading[11:0] [1]
+     2/13: $0\sensor_reading[11:0] [0]
+     3/13: $0\sensor_reading[11:0] [2]
+     4/13: $0\sensor_reading[11:0] [3]
+     5/13: $0\sensor_reading[11:0] [4]
+     6/13: $0\sensor_reading[11:0] [5]
+     7/13: $0\sensor_reading[11:0] [6]
+     8/13: $0\sensor_reading[11:0] [7]
+     9/13: $0\sensor_reading[11:0] [8]
+    10/13: $0\sensor_reading[11:0] [9]
+    11/13: $0\sensor_reading[11:0] [10]
+    12/13: $0\sensor_reading[11:0] [11]
+    13/13: $0\reading_valid[0:0]
+Creating decoders for process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:45$37'.
+     1/1: $0\spi_mosi[0:0]
+Creating decoders for process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:40$29'.
+Creating decoders for process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:22$24'.
+     1/3: $0\state[31:0]
+     2/3: $0\done_counter[8:0]
+     3/3: $0\counter[4:0]
+Creating decoders for process `\pwm.$proc$d18_vrajesh_motorcontroller/src/pwm.sv:21$22'.
+     1/1: $0\pwm_out[0:0]
+Creating decoders for process `\pwm.$proc$d18_vrajesh_motorcontroller/src/pwm.sv:13$19'.
+     1/1: $0\counter[9:0]
+Creating decoders for process `\params.$proc$d18_vrajesh_motorcontroller/src/params.sv:11$17'.
+     1/2: $0\p[7:0]
+     2/2: $0\setpoint[7:0]
+Creating decoders for process `\p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:30$15'.
+Creating decoders for process `\p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:26$13'.
+Creating decoders for process `\p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:22$11'.
+Creating decoders for process `\p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:14$6'.
+     1/1: $0\round_reading[7:0]
+Creating decoders for process `\motor_driver.$proc$d18_vrajesh_motorcontroller/src/motor_driver.sv:14$2'.
+     1/2: $0\motor_b_duty_cycle[7:0]
+     2/2: $0\motor_a_duty_cycle[7:0]
+
+11.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\spi_mcp3202_interface.\next_state' from process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:0$57'.
+
+11.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\top.\sensor_reading_captured' using process `\top.$proc$d18_vrajesh_motorcontroller/src/top.sv:40$74'.
+  created $dff cell `$procdff$488' with positive edge clock.
+Creating register for signal `\stability_detector.\data_out' using process `\stability_detector.$proc$d18_vrajesh_motorcontroller/src/stability_detector.sv:13$71'.
+  created $dff cell `$procdff$489' with positive edge clock.
+Creating register for signal `\stability_detector.\data_buffer' using process `\stability_detector.$proc$d18_vrajesh_motorcontroller/src/stability_detector.sv:9$70'.
+  created $dff cell `$procdff$490' with positive edge clock.
+Creating register for signal `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.\mosi_buffer' using process `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:35$80'.
+  created $adff cell `$procdff$491' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.\mosi_buffer_counter' using process `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:35$80'.
+  created $adff cell `$procdff$492' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.\sync_spi_cs_n_del' using process `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:21$75'.
+  created $adff cell `$procdff$493' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.\internal_reset_n' using process `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:21$75'.
+  created $adff cell `$procdff$494' with positive edge clock and negative level reset.
+Creating register for signal `\spi_mcp3202_interface.\sensor_reading' using process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:59$42'.
+  created $dff cell `$procdff$495' with positive edge clock.
+Creating register for signal `\spi_mcp3202_interface.\reading_valid' using process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:59$42'.
+  created $dff cell `$procdff$496' with positive edge clock.
+Creating register for signal `\spi_mcp3202_interface.\spi_mosi' using process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:45$37'.
+  created $dff cell `$procdff$497' with positive edge clock.
+Creating register for signal `\spi_mcp3202_interface.\spi_clk' using process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:40$29'.
+  created $dff cell `$procdff$498' with positive edge clock.
+Creating register for signal `\spi_mcp3202_interface.\spi_cs_n' using process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:40$29'.
+  created $dff cell `$procdff$499' with positive edge clock.
+Creating register for signal `\spi_mcp3202_interface.\counter' using process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:22$24'.
+  created $dff cell `$procdff$500' with positive edge clock.
+Creating register for signal `\spi_mcp3202_interface.\state' using process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:22$24'.
+  created $dff cell `$procdff$501' with positive edge clock.
+Creating register for signal `\spi_mcp3202_interface.\done_counter' using process `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:22$24'.
+  created $dff cell `$procdff$502' with positive edge clock.
+Creating register for signal `\pwm.\pwm_out' using process `\pwm.$proc$d18_vrajesh_motorcontroller/src/pwm.sv:21$22'.
+  created $dff cell `$procdff$503' with positive edge clock.
+Creating register for signal `\pwm.\counter' using process `\pwm.$proc$d18_vrajesh_motorcontroller/src/pwm.sv:13$19'.
+  created $dff cell `$procdff$504' with positive edge clock.
+Creating register for signal `\params.\setpoint' using process `\params.$proc$d18_vrajesh_motorcontroller/src/params.sv:11$17'.
+  created $dff cell `$procdff$505' with positive edge clock.
+Creating register for signal `\params.\p' using process `\params.$proc$d18_vrajesh_motorcontroller/src/params.sv:11$17'.
+  created $dff cell `$procdff$506' with positive edge clock.
+Creating register for signal `\p_controller.\output_setpoint' using process `\p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:30$15'.
+  created $dff cell `$procdff$507' with positive edge clock.
+Creating register for signal `\p_controller.\internal_output_setpoint' using process `\p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:26$13'.
+  created $dff cell `$procdff$508' with positive edge clock.
+Creating register for signal `\p_controller.\error' using process `\p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:22$11'.
+  created $dff cell `$procdff$509' with positive edge clock.
+Creating register for signal `\p_controller.\round_reading' using process `\p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:14$6'.
+  created $dff cell `$procdff$510' with positive edge clock.
+Creating register for signal `\motor_driver.\motor_a_duty_cycle' using process `\motor_driver.$proc$d18_vrajesh_motorcontroller/src/motor_driver.sv:14$2'.
+  created $dff cell `$procdff$511' with positive edge clock.
+Creating register for signal `\motor_driver.\motor_b_duty_cycle' using process `\motor_driver.$proc$d18_vrajesh_motorcontroller/src/motor_driver.sv:14$2'.
+  created $dff cell `$procdff$512' with positive edge clock.
+
+11.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+11.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\top.$proc$d18_vrajesh_motorcontroller/src/top.sv:40$74'.
+Removing empty process `top.$proc$d18_vrajesh_motorcontroller/src/top.sv:40$74'.
+Found and cleaned up 2 empty switches in `\stability_detector.$proc$d18_vrajesh_motorcontroller/src/stability_detector.sv:13$71'.
+Removing empty process `stability_detector.$proc$d18_vrajesh_motorcontroller/src/stability_detector.sv:13$71'.
+Removing empty process `stability_detector.$proc$d18_vrajesh_motorcontroller/src/stability_detector.sv:9$70'.
+Removing empty process `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:35$80'.
+Found and cleaned up 1 empty switch in `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:21$75'.
+Removing empty process `$paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.$proc$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:21$75'.
+Found and cleaned up 2 empty switches in `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:0$57'.
+Removing empty process `spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:0$57'.
+Found and cleaned up 14 empty switches in `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:59$42'.
+Removing empty process `spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:59$42'.
+Found and cleaned up 4 empty switches in `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:45$37'.
+Removing empty process `spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:45$37'.
+Removing empty process `spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:40$29'.
+Found and cleaned up 2 empty switches in `\spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:22$24'.
+Removing empty process `spi_mcp3202_interface.$proc$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:22$24'.
+Found and cleaned up 1 empty switch in `\pwm.$proc$d18_vrajesh_motorcontroller/src/pwm.sv:21$22'.
+Removing empty process `pwm.$proc$d18_vrajesh_motorcontroller/src/pwm.sv:21$22'.
+Found and cleaned up 1 empty switch in `\pwm.$proc$d18_vrajesh_motorcontroller/src/pwm.sv:13$19'.
+Removing empty process `pwm.$proc$d18_vrajesh_motorcontroller/src/pwm.sv:13$19'.
+Found and cleaned up 3 empty switches in `\params.$proc$d18_vrajesh_motorcontroller/src/params.sv:11$17'.
+Removing empty process `params.$proc$d18_vrajesh_motorcontroller/src/params.sv:11$17'.
+Removing empty process `p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:30$15'.
+Removing empty process `p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:26$13'.
+Removing empty process `p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:22$11'.
+Found and cleaned up 1 empty switch in `\p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:14$6'.
+Removing empty process `p_controller.$proc$d18_vrajesh_motorcontroller/src/p.sv:14$6'.
+Found and cleaned up 1 empty switch in `\motor_driver.$proc$d18_vrajesh_motorcontroller/src/motor_driver.sv:14$2'.
+Removing empty process `motor_driver.$proc$d18_vrajesh_motorcontroller/src/motor_driver.sv:14$2'.
+Cleaned up 33 empty switches.
+
+11.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+Optimizing module stability_detector.
+<suppressed ~1 debug messages>
+Optimizing module $paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.
+<suppressed ~2 debug messages>
+Optimizing module spi_mcp3202_interface.
+<suppressed ~7 debug messages>
+Optimizing module pwm.
+<suppressed ~1 debug messages>
+Optimizing module params.
+<suppressed ~5 debug messages>
+Optimizing module p_controller.
+<suppressed ~2 debug messages>
+Optimizing module motor_driver.
+<suppressed ~2 debug messages>
+Optimizing module my_chip.
+Optimizing module toplevel_chip.
+
+11.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module top.
+Deleting now unused module stability_detector.
+Deleting now unused module $paramod\spi_mosi_interface\WIDTH=s32'00000000000000000000000000010000.
+Deleting now unused module spi_mcp3202_interface.
+Deleting now unused module pwm.
+Deleting now unused module params.
+Deleting now unused module p_controller.
+Deleting now unused module motor_driver.
+Deleting now unused module my_chip.
+<suppressed ~12 debug messages>
+
+11.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~17 debug messages>
+
+11.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 3 unused cells and 193 unused wires.
+<suppressed ~4 debug messages>
+
+11.6. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Warning: Wire toplevel_chip.\io_out [6] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [5] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [4] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [3] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [2] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [1] is used but has no driver.
+Warning: Wire toplevel_chip.\io_out [0] is used but has no driver.
+Found and reported 7 problems.
+
+11.7. Executing OPT pass (performing simple optimizations).
+
+11.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+11.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\mchip.\dut.\mcp3202.$procmux$118.
+Removed 1 multiplexer ports.
+<suppressed ~33 debug messages>
+
+11.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 13 unused wires.
+<suppressed ~9 debug messages>
+
+11.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+11.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.7.16. Finished OPT passes. (There is nothing left to do.)
+
+11.8. Executing FSM pass (extract and optimize FSM).
+
+11.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register toplevel_chip.mchip.dut.mcp3202.state.
+
+11.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\mchip.dut.mcp3202.state' from module `\toplevel_chip'.
+  found $dff cell for state register: $flatten\mchip.\dut.\mcp3202.$procdff$501
+  root of input selection tree: $flatten\mchip.\dut.\mcp3202.$0\state[31:0]
+  found reset state: 0 (guessed from mux tree)
+  found ctrl input: \io_in [13]
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:95$58_Y
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$97_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:30$27_Y
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$99_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$100_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$101_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$102_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$103_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$104_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$105_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$106_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$107_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$108_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$109_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$110_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$111_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$112_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$113_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$114_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$115_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$116_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$procmux$117_CMP
+  found ctrl input: $flatten\mchip.\dut.\mcp3202.$reduce_and$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$59_Y
+  found state code: 20
+  found state code: 0
+  found state code: 19
+  found state code: 18
+  found state code: 17
+  found state code: 16
+  found state code: 15
+  found state code: 14
+  found state code: 13
+  found state code: 12
+  found state code: 11
+  found state code: 10
+  found state code: 9
+  found state code: 8
+  found state code: 7
+  found state code: 6
+  found state code: 5
+  found state code: 4
+  found state code: 3
+  found state code: 2
+  found state code: 1
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$117_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$116_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$115_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$114_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$113_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$112_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$111_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$110_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$109_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$108_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$107_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$106_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$105_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$104_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$103_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$102_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$101_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$100_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$99_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$procmux$97_CMP
+  found ctrl output: $flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:30$27_Y
+  ctrl inputs: { $flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:95$58_Y $flatten\mchip.\dut.\mcp3202.$reduce_and$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$59_Y \io_in [13] }
+  ctrl outputs: { $flatten\mchip.\dut.\mcp3202.$0\state[31:0] $flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:30$27_Y $flatten\mchip.\dut.\mcp3202.$procmux$97_CMP $flatten\mchip.\dut.\mcp3202.$procmux$99_CMP $flatten\mchip.\dut.\mcp3202.$procmux$100_CMP $flatten\mchip.\dut.\mcp3202.$procmux$101_CMP $flatten\mchip.\dut.\mcp3202.$procmux$102_CMP $flatten\mchip.\dut.\mcp3202.$procmux$103_CMP $flatten\mchip.\dut.\mcp3202.$procmux$104_CMP $flatten\mchip.\dut.\mcp3202.$procmux$105_CMP $flatten\mchip.\dut.\mcp3202.$procmux$106_CMP $flatten\mchip.\dut.\mcp3202.$procmux$107_CMP $flatten\mchip.\dut.\mcp3202.$procmux$108_CMP $flatten\mchip.\dut.\mcp3202.$procmux$109_CMP $flatten\mchip.\dut.\mcp3202.$procmux$110_CMP $flatten\mchip.\dut.\mcp3202.$procmux$111_CMP $flatten\mchip.\dut.\mcp3202.$procmux$112_CMP $flatten\mchip.\dut.\mcp3202.$procmux$113_CMP $flatten\mchip.\dut.\mcp3202.$procmux$114_CMP $flatten\mchip.\dut.\mcp3202.$procmux$115_CMP $flatten\mchip.\dut.\mcp3202.$procmux$116_CMP $flatten\mchip.\dut.\mcp3202.$procmux$117_CMP }
+  transition:          0 3'0-0 ->          0 53'00000000000000000000000000000000000000000000000000001
+  transition:          0 3'1-0 ->          1 53'00000000000000000000000000000001000000000000000000001
+  transition:          0 3'--1 ->          0 53'00000000000000000000000000000000000000000000000000001
+  transition:         16 3'0-0 ->         16 53'00000000000000000000000000010000000010000000000000000
+  transition:         16 3'1-0 ->         17 53'00000000000000000000000000010001000010000000000000000
+  transition:         16 3'--1 ->          0 53'00000000000000000000000000000000000010000000000000000
+  transition:          8 3'0-0 ->          8 53'00000000000000000000000000001000000000000000100000000
+  transition:          8 3'1-0 ->          9 53'00000000000000000000000000001001000000000000100000000
+  transition:          8 3'--1 ->          0 53'00000000000000000000000000000000000000000000100000000
+  transition:          4 3'0-0 ->          4 53'00000000000000000000000000000100000000000000000010000
+  transition:          4 3'1-0 ->          5 53'00000000000000000000000000000101000000000000000010000
+  transition:          4 3'--1 ->          0 53'00000000000000000000000000000000000000000000000010000
+  transition:         20 3'0-0 ->         20 53'00000000000000000000000000010100010000000000000000000
+  transition:         20 3'100 ->         20 53'00000000000000000000000000010100010000000000000000000
+  transition:         20 3'110 ->          0 53'00000000000000000000000000000000010000000000000000000
+  transition:         20 3'--1 ->          0 53'00000000000000000000000000000000010000000000000000000
+  transition:         12 3'0-0 ->         12 53'00000000000000000000000000001100000000001000000000000
+  transition:         12 3'1-0 ->         13 53'00000000000000000000000000001101000000001000000000000
+  transition:         12 3'--1 ->          0 53'00000000000000000000000000000000000000001000000000000
+  transition:          2 3'0-0 ->          2 53'00000000000000000000000000000010000000000000000000100
+  transition:          2 3'1-0 ->          3 53'00000000000000000000000000000011000000000000000000100
+  transition:          2 3'--1 ->          0 53'00000000000000000000000000000000000000000000000000100
+  transition:         18 3'0-0 ->         18 53'00000000000000000000000000010010001000000000000000000
+  transition:         18 3'1-0 ->         19 53'00000000000000000000000000010011001000000000000000000
+  transition:         18 3'--1 ->          0 53'00000000000000000000000000000000001000000000000000000
+  transition:         10 3'0-0 ->         10 53'00000000000000000000000000001010000000000010000000000
+  transition:         10 3'1-0 ->         11 53'00000000000000000000000000001011000000000010000000000
+  transition:         10 3'--1 ->          0 53'00000000000000000000000000000000000000000010000000000
+  transition:          6 3'0-0 ->          6 53'00000000000000000000000000000110000000000000001000000
+  transition:          6 3'1-0 ->          7 53'00000000000000000000000000000111000000000000001000000
+  transition:          6 3'--1 ->          0 53'00000000000000000000000000000000000000000000001000000
+  transition:         14 3'0-0 ->         14 53'00000000000000000000000000001110000000100000000000000
+  transition:         14 3'1-0 ->         15 53'00000000000000000000000000001111000000100000000000000
+  transition:         14 3'--1 ->          0 53'00000000000000000000000000000000000000100000000000000
+  transition:          1 3'0-0 ->          1 53'00000000000000000000000000000001000000000000000000010
+  transition:          1 3'1-0 ->          2 53'00000000000000000000000000000010000000000000000000010
+  transition:          1 3'--1 ->          0 53'00000000000000000000000000000000000000000000000000010
+  transition:         17 3'0-0 ->         17 53'00000000000000000000000000010001000100000000000000000
+  transition:         17 3'1-0 ->         18 53'00000000000000000000000000010010000100000000000000000
+  transition:         17 3'--1 ->          0 53'00000000000000000000000000000000000100000000000000000
+  transition:          9 3'0-0 ->          9 53'00000000000000000000000000001001000000000001000000000
+  transition:          9 3'1-0 ->         10 53'00000000000000000000000000001010000000000001000000000
+  transition:          9 3'--1 ->          0 53'00000000000000000000000000000000000000000001000000000
+  transition:          5 3'0-0 ->          5 53'00000000000000000000000000000101000000000000000100000
+  transition:          5 3'1-0 ->          6 53'00000000000000000000000000000110000000000000000100000
+  transition:          5 3'--1 ->          0 53'00000000000000000000000000000000000000000000000100000
+  transition:         13 3'0-0 ->         13 53'00000000000000000000000000001101000000010000000000000
+  transition:         13 3'1-0 ->         14 53'00000000000000000000000000001110000000010000000000000
+  transition:         13 3'--1 ->          0 53'00000000000000000000000000000000000000010000000000000
+  transition:          3 3'0-0 ->          3 53'00000000000000000000000000000011000000000000000001000
+  transition:          3 3'1-0 ->          4 53'00000000000000000000000000000100000000000000000001000
+  transition:          3 3'--1 ->          0 53'00000000000000000000000000000000000000000000000001000
+  transition:         19 3'0-0 ->         19 53'00000000000000000000000000010011100000000000000000000
+  transition:         19 3'1-0 ->         20 53'00000000000000000000000000010100100000000000000000000
+  transition:         19 3'--1 ->          0 53'00000000000000000000000000000000100000000000000000000
+  transition:         11 3'0-0 ->         11 53'00000000000000000000000000001011000000000100000000000
+  transition:         11 3'1-0 ->         12 53'00000000000000000000000000001100000000000100000000000
+  transition:         11 3'--1 ->          0 53'00000000000000000000000000000000000000000100000000000
+  transition:          7 3'0-0 ->          7 53'00000000000000000000000000000111000000000000010000000
+  transition:          7 3'1-0 ->          8 53'00000000000000000000000000001000000000000000010000000
+  transition:          7 3'--1 ->          0 53'00000000000000000000000000000000000000000000010000000
+  transition:         15 3'0-0 ->         15 53'00000000000000000000000000001111000001000000000000000
+  transition:         15 3'1-0 ->         16 53'00000000000000000000000000010000000001000000000000000
+  transition:         15 3'--1 ->          0 53'00000000000000000000000000000000000001000000000000000
+
+11.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\mchip.dut.mcp3202.state$513' from module `\toplevel_chip'.
+
+11.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 22 unused cells and 22 unused wires.
+<suppressed ~23 debug messages>
+
+11.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\mchip.dut.mcp3202.state$513' from module `\toplevel_chip'.
+
+11.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\mchip.dut.mcp3202.state$513' from module `\toplevel_chip' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00000000000000000000000000000000 -> --------------------1
+  00000000000000000000000000010000 -> -------------------1-
+  00000000000000000000000000001000 -> ------------------1--
+  00000000000000000000000000000100 -> -----------------1---
+  00000000000000000000000000010100 -> ----------------1----
+  00000000000000000000000000001100 -> ---------------1-----
+  00000000000000000000000000000010 -> --------------1------
+  00000000000000000000000000010010 -> -------------1-------
+  00000000000000000000000000001010 -> ------------1--------
+  00000000000000000000000000000110 -> -----------1---------
+  00000000000000000000000000001110 -> ----------1----------
+  00000000000000000000000000000001 -> ---------1-----------
+  00000000000000000000000000010001 -> --------1------------
+  00000000000000000000000000001001 -> -------1-------------
+  00000000000000000000000000000101 -> ------1--------------
+  00000000000000000000000000001101 -> -----1---------------
+  00000000000000000000000000000011 -> ----1----------------
+  00000000000000000000000000010011 -> ---1-----------------
+  00000000000000000000000000001011 -> --1------------------
+  00000000000000000000000000000111 -> -1-------------------
+  00000000000000000000000000001111 -> 1--------------------
+
+11.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\mchip.dut.mcp3202.state$513' from module `toplevel_chip':
+-------------------------------------
+
+  Information on FSM $fsm$\mchip.dut.mcp3202.state$513 (\mchip.dut.mcp3202.state):
+
+  Number of input signals:    3
+  Number of output signals:  53
+  Number of state bits:      21
+
+  Input signals:
+    0: \io_in [13]
+    1: $flatten\mchip.\dut.\mcp3202.$reduce_and$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$59_Y
+    2: $flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:95$58_Y
+
+  Output signals:
+    0: $flatten\mchip.\dut.\mcp3202.$procmux$117_CMP
+    1: $flatten\mchip.\dut.\mcp3202.$procmux$116_CMP
+    2: $flatten\mchip.\dut.\mcp3202.$procmux$115_CMP
+    3: $flatten\mchip.\dut.\mcp3202.$procmux$114_CMP
+    4: $flatten\mchip.\dut.\mcp3202.$procmux$113_CMP
+    5: $flatten\mchip.\dut.\mcp3202.$procmux$112_CMP
+    6: $flatten\mchip.\dut.\mcp3202.$procmux$111_CMP
+    7: $flatten\mchip.\dut.\mcp3202.$procmux$110_CMP
+    8: $flatten\mchip.\dut.\mcp3202.$procmux$109_CMP
+    9: $flatten\mchip.\dut.\mcp3202.$procmux$108_CMP
+   10: $flatten\mchip.\dut.\mcp3202.$procmux$107_CMP
+   11: $flatten\mchip.\dut.\mcp3202.$procmux$106_CMP
+   12: $flatten\mchip.\dut.\mcp3202.$procmux$105_CMP
+   13: $flatten\mchip.\dut.\mcp3202.$procmux$104_CMP
+   14: $flatten\mchip.\dut.\mcp3202.$procmux$103_CMP
+   15: $flatten\mchip.\dut.\mcp3202.$procmux$102_CMP
+   16: $flatten\mchip.\dut.\mcp3202.$procmux$101_CMP
+   17: $flatten\mchip.\dut.\mcp3202.$procmux$100_CMP
+   18: $flatten\mchip.\dut.\mcp3202.$procmux$99_CMP
+   19: $flatten\mchip.\dut.\mcp3202.$procmux$97_CMP
+   20: $flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:30$27_Y
+   21: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [0]
+   22: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [1]
+   23: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [2]
+   24: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [3]
+   25: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [4]
+   26: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [5]
+   27: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [6]
+   28: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [7]
+   29: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [8]
+   30: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [9]
+   31: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [10]
+   32: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [11]
+   33: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [12]
+   34: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [13]
+   35: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [14]
+   36: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [15]
+   37: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [16]
+   38: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [17]
+   39: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [18]
+   40: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [19]
+   41: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [20]
+   42: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [21]
+   43: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [22]
+   44: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [23]
+   45: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [24]
+   46: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [25]
+   47: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [26]
+   48: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [27]
+   49: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [28]
+   50: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [29]
+   51: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [30]
+   52: $flatten\mchip.\dut.\mcp3202.$0\state[31:0] [31]
+
+  State encoding:
+    0: 21'--------------------1  <RESET STATE>
+    1: 21'-------------------1-
+    2: 21'------------------1--
+    3: 21'-----------------1---
+    4: 21'----------------1----
+    5: 21'---------------1-----
+    6: 21'--------------1------
+    7: 21'-------------1-------
+    8: 21'------------1--------
+    9: 21'-----------1---------
+   10: 21'----------1----------
+   11: 21'---------1-----------
+   12: 21'--------1------------
+   13: 21'-------1-------------
+   14: 21'------1--------------
+   15: 21'-----1---------------
+   16: 21'----1----------------
+   17: 21'---1-----------------
+   18: 21'--1------------------
+   19: 21'-1-------------------
+   20: 21'1--------------------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 3'0-0   ->     0 53'00000000000000000000000000000000000000000000000000001
+      1:     0 3'--1   ->     0 53'00000000000000000000000000000000000000000000000000001
+      2:     0 3'1-0   ->    11 53'00000000000000000000000000000001000000000000000000001
+      3:     1 3'--1   ->     0 53'00000000000000000000000000000000000010000000000000000
+      4:     1 3'0-0   ->     1 53'00000000000000000000000000010000000010000000000000000
+      5:     1 3'1-0   ->    12 53'00000000000000000000000000010001000010000000000000000
+      6:     2 3'--1   ->     0 53'00000000000000000000000000000000000000000000100000000
+      7:     2 3'0-0   ->     2 53'00000000000000000000000000001000000000000000100000000
+      8:     2 3'1-0   ->    13 53'00000000000000000000000000001001000000000000100000000
+      9:     3 3'--1   ->     0 53'00000000000000000000000000000000000000000000000010000
+     10:     3 3'0-0   ->     3 53'00000000000000000000000000000100000000000000000010000
+     11:     3 3'1-0   ->    14 53'00000000000000000000000000000101000000000000000010000
+     12:     4 3'110   ->     0 53'00000000000000000000000000000000010000000000000000000
+     13:     4 3'--1   ->     0 53'00000000000000000000000000000000010000000000000000000
+     14:     4 3'100   ->     4 53'00000000000000000000000000010100010000000000000000000
+     15:     4 3'0-0   ->     4 53'00000000000000000000000000010100010000000000000000000
+     16:     5 3'--1   ->     0 53'00000000000000000000000000000000000000001000000000000
+     17:     5 3'0-0   ->     5 53'00000000000000000000000000001100000000001000000000000
+     18:     5 3'1-0   ->    15 53'00000000000000000000000000001101000000001000000000000
+     19:     6 3'--1   ->     0 53'00000000000000000000000000000000000000000000000000100
+     20:     6 3'0-0   ->     6 53'00000000000000000000000000000010000000000000000000100
+     21:     6 3'1-0   ->    16 53'00000000000000000000000000000011000000000000000000100
+     22:     7 3'--1   ->     0 53'00000000000000000000000000000000001000000000000000000
+     23:     7 3'0-0   ->     7 53'00000000000000000000000000010010001000000000000000000
+     24:     7 3'1-0   ->    17 53'00000000000000000000000000010011001000000000000000000
+     25:     8 3'--1   ->     0 53'00000000000000000000000000000000000000000010000000000
+     26:     8 3'0-0   ->     8 53'00000000000000000000000000001010000000000010000000000
+     27:     8 3'1-0   ->    18 53'00000000000000000000000000001011000000000010000000000
+     28:     9 3'--1   ->     0 53'00000000000000000000000000000000000000000000001000000
+     29:     9 3'0-0   ->     9 53'00000000000000000000000000000110000000000000001000000
+     30:     9 3'1-0   ->    19 53'00000000000000000000000000000111000000000000001000000
+     31:    10 3'--1   ->     0 53'00000000000000000000000000000000000000100000000000000
+     32:    10 3'0-0   ->    10 53'00000000000000000000000000001110000000100000000000000
+     33:    10 3'1-0   ->    20 53'00000000000000000000000000001111000000100000000000000
+     34:    11 3'--1   ->     0 53'00000000000000000000000000000000000000000000000000010
+     35:    11 3'1-0   ->     6 53'00000000000000000000000000000010000000000000000000010
+     36:    11 3'0-0   ->    11 53'00000000000000000000000000000001000000000000000000010
+     37:    12 3'--1   ->     0 53'00000000000000000000000000000000000100000000000000000
+     38:    12 3'1-0   ->     7 53'00000000000000000000000000010010000100000000000000000
+     39:    12 3'0-0   ->    12 53'00000000000000000000000000010001000100000000000000000
+     40:    13 3'--1   ->     0 53'00000000000000000000000000000000000000000001000000000
+     41:    13 3'1-0   ->     8 53'00000000000000000000000000001010000000000001000000000
+     42:    13 3'0-0   ->    13 53'00000000000000000000000000001001000000000001000000000
+     43:    14 3'--1   ->     0 53'00000000000000000000000000000000000000000000000100000
+     44:    14 3'1-0   ->     9 53'00000000000000000000000000000110000000000000000100000
+     45:    14 3'0-0   ->    14 53'00000000000000000000000000000101000000000000000100000
+     46:    15 3'--1   ->     0 53'00000000000000000000000000000000000000010000000000000
+     47:    15 3'1-0   ->    10 53'00000000000000000000000000001110000000010000000000000
+     48:    15 3'0-0   ->    15 53'00000000000000000000000000001101000000010000000000000
+     49:    16 3'--1   ->     0 53'00000000000000000000000000000000000000000000000001000
+     50:    16 3'1-0   ->     3 53'00000000000000000000000000000100000000000000000001000
+     51:    16 3'0-0   ->    16 53'00000000000000000000000000000011000000000000000001000
+     52:    17 3'--1   ->     0 53'00000000000000000000000000000000100000000000000000000
+     53:    17 3'1-0   ->     4 53'00000000000000000000000000010100100000000000000000000
+     54:    17 3'0-0   ->    17 53'00000000000000000000000000010011100000000000000000000
+     55:    18 3'--1   ->     0 53'00000000000000000000000000000000000000000100000000000
+     56:    18 3'1-0   ->     5 53'00000000000000000000000000001100000000000100000000000
+     57:    18 3'0-0   ->    18 53'00000000000000000000000000001011000000000100000000000
+     58:    19 3'--1   ->     0 53'00000000000000000000000000000000000000000000010000000
+     59:    19 3'1-0   ->     2 53'00000000000000000000000000001000000000000000010000000
+     60:    19 3'0-0   ->    19 53'00000000000000000000000000000111000000000000010000000
+     61:    20 3'--1   ->     0 53'00000000000000000000000000000000000001000000000000000
+     62:    20 3'1-0   ->     1 53'00000000000000000000000000010000000001000000000000000
+     63:    20 3'0-0   ->    20 53'00000000000000000000000000001111000001000000000000000
+
+-------------------------------------
+
+11.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\mchip.dut.mcp3202.state$513' from module `\toplevel_chip'.
+
+11.9. Executing OPT pass (performing simple optimizations).
+
+11.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~27 debug messages>
+
+11.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~159 debug messages>
+Removed a total of 53 cells.
+
+11.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~32 debug messages>
+
+11.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\mchip.\dut.\p_setpoint_storage.$procdff$506 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\p_setpoint_storage.$procmux$467_Y, Q = \mchip.dut.p_setpoint_storage.p, rval = 8'00010000).
+Adding EN signal on $auto$ff.cc:266:slice$808 ($sdff) from module toplevel_chip (D = \mchip.dut.input_spi_interface.mosi_buffer [7:0], Q = \mchip.dut.p_setpoint_storage.p).
+Adding SRST signal on $flatten\mchip.\dut.\p_setpoint_storage.$procdff$505 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\p_setpoint_storage.$procmux$474_Y, Q = \mchip.dut.p_setpoint_storage.setpoint, rval = 8'01111111).
+Adding EN signal on $auto$ff.cc:266:slice$814 ($sdff) from module toplevel_chip (D = \mchip.dut.input_spi_interface.mosi_buffer [7:0], Q = \mchip.dut.p_setpoint_storage.setpoint).
+Adding SRST signal on $flatten\mchip.\dut.\mcp3202.$procdff$502 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:33$28_Y [8:0], Q = \mchip.dut.mcp3202.done_counter, rval = 9'000000000).
+Adding SRST signal on $flatten\mchip.\dut.\mcp3202.$procdff$500 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:28$26_Y [4:0], Q = \mchip.dut.mcp3202.counter, rval = 5'00000).
+Adding SRST signal on $flatten\mchip.\dut.\mcp3202.$procdff$498 ($dff) from module toplevel_chip (D = \mchip.dut.mcp3202.counter [4], Q = \mchip.dut.mcp3202.spi_clk, rval = 1'0).
+Adding SRST signal on $flatten\mchip.\dut.\mcp3202.$procdff$497 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\mcp3202.$procmux$438_Y, Q = \mchip.dut.mcp3202.spi_mosi, rval = 1'1).
+Adding SRST signal on $flatten\mchip.\dut.\mcp3202.$procdff$496 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\mcp3202.$procmux$430_Y, Q = \mchip.dut.mcp3202.reading_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$826 ($sdff) from module toplevel_chip (D = 1'1, Q = \mchip.dut.mcp3202.reading_valid).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [0]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [1]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [2]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [3]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [4]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [5]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [6]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [7]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [8]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [9]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [10]).
+Adding EN signal on $flatten\mchip.\dut.\mcp3202.$procdff$495 ($dff) from module toplevel_chip (D = \io_in [8], Q = \mchip.dut.mcp3202.sensor_reading [11]).
+Adding SRST signal on $flatten\mchip.\dut.\input_spi_interface.\mosi.$procdff$489 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\input_spi_interface.\mosi.$procmux$86_Y, Q = \mchip.dut.input_spi_interface.mosi.data_out, rval = 1'1).
+Adding EN signal on $auto$ff.cc:266:slice$1022 ($sdff) from module toplevel_chip (D = 1'0, Q = \mchip.dut.input_spi_interface.mosi.data_out).
+Adding SRST signal on $flatten\mchip.\dut.\input_spi_interface.\cs_n.$procdff$489 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\input_spi_interface.\cs_n.$procmux$86_Y, Q = \mchip.dut.input_spi_interface.cs_n.data_out, rval = 1'1).
+Adding EN signal on $auto$ff.cc:266:slice$1024 ($sdff) from module toplevel_chip (D = 1'0, Q = \mchip.dut.input_spi_interface.cs_n.data_out).
+Adding SRST signal on $flatten\mchip.\dut.\input_spi_interface.\clk.$procdff$489 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\input_spi_interface.\clk.$procmux$86_Y, Q = \mchip.dut.input_spi_interface.clk.data_out, rval = 1'1).
+Adding EN signal on $auto$ff.cc:266:slice$1026 ($sdff) from module toplevel_chip (D = 1'0, Q = \mchip.dut.input_spi_interface.clk.data_out).
+Adding SRST signal on $flatten\mchip.\dut.\driver.\b.$procdff$504 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\driver.\b.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21_Y [9:0], Q = \mchip.dut.driver.b.counter, rval = 10'0000000000).
+Adding SRST signal on $flatten\mchip.\dut.\driver.\a.$procdff$504 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\driver.\a.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21_Y [9:0], Q = \mchip.dut.driver.a.counter, rval = 10'0000000000).
+Adding SRST signal on $flatten\mchip.\dut.\driver.$procdff$512 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\driver.$sub$d18_vrajesh_motorcontroller/src/motor_driver.sv:20$5_Y, Q = \mchip.dut.driver.motor_b_duty_cycle, rval = 8'01111111).
+Adding SRST signal on $flatten\mchip.\dut.\driver.$procdff$511 ($dff) from module toplevel_chip (D = $flatten\mchip.\dut.\driver.$add$d18_vrajesh_motorcontroller/src/motor_driver.sv:19$4_Y, Q = \mchip.dut.driver.motor_a_duty_cycle, rval = 8'01111111).
+Adding EN signal on $flatten\mchip.\dut.$procdff$488 ($dff) from module toplevel_chip (D = \mchip.dut.mcp3202.sensor_reading, Q = \mchip.dut.sensor_reading_captured).
+
+11.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 127 unused cells and 193 unused wires.
+<suppressed ~128 debug messages>
+
+11.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+11.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~198 debug messages>
+Removed a total of 66 cells.
+
+11.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 5 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 6 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 7 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 8 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 9 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 10 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 11 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 12 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 13 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 14 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 15 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 16 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 17 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 18 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 19 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 20 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 21 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 22 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 23 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 24 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 25 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 26 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 27 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 28 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 29 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 30 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+Setting constant 0-bit at position 31 on $flatten\mchip.\dut.\mcp3202.$procdff$501 ($dff) from module toplevel_chip.
+
+11.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 66 unused wires.
+<suppressed ~1 debug messages>
+
+11.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+11.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.9.23. Finished OPT passes. (There is nothing left to do.)
+
+11.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 16) from FF cell toplevel_chip.$flatten\mchip.\dut.\input_spi_interface.$procdff$491 ($adff).
+Removed top 27 bits (of 32) from mux cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$ternary$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$60 ($mux).
+Removed top 27 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:85$56 ($eq).
+Removed top 27 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:83$55 ($eq).
+Removed top 27 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:81$54 ($eq).
+Removed top 28 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:79$53 ($eq).
+Removed top 28 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:77$52 ($eq).
+Removed top 28 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:75$51 ($eq).
+Removed top 28 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:73$50 ($eq).
+Removed top 28 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:71$49 ($eq).
+Removed top 28 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:69$48 ($eq).
+Removed top 28 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:67$47 ($eq).
+Removed top 28 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:65$46 ($eq).
+Removed top 29 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:63$45 ($eq).
+Removed top 29 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:61$44 ($eq).
+Removed top 29 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:52$41 ($eq).
+Removed top 30 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:50$40 ($eq).
+Removed top 30 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:48$39 ($eq).
+Removed top 31 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:46$38 ($eq).
+Removed top 27 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$eq$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:41$31 ($eq).
+Removed top 31 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:33$28 ($add).
+Removed top 23 bits (of 32) from port Y of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:33$28 ($add).
+Removed top 31 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:28$26 ($add).
+Removed top 27 bits (of 32) from port Y of cell toplevel_chip.$flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:28$26 ($add).
+Removed top 9 bits (of 18) from port B of cell toplevel_chip.$flatten\mchip.\dut.\p_cont.$mul$d18_vrajesh_motorcontroller/src/p.sv:27$14 ($mul).
+Removed top 1 bits (of 9) from port A of cell toplevel_chip.$flatten\mchip.\dut.\p_cont.$sub$d18_vrajesh_motorcontroller/src/p.sv:23$12 ($sub).
+Removed top 1 bits (of 9) from port B of cell toplevel_chip.$flatten\mchip.\dut.\p_cont.$sub$d18_vrajesh_motorcontroller/src/p.sv:23$12 ($sub).
+Removed top 31 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\p_cont.$add$d18_vrajesh_motorcontroller/src/p.sv:16$10 ($add).
+Removed top 24 bits (of 32) from port Y of cell toplevel_chip.$flatten\mchip.\dut.\p_cont.$add$d18_vrajesh_motorcontroller/src/p.sv:16$10 ($add).
+Removed top 31 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\driver.\b.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21 ($add).
+Removed top 22 bits (of 32) from port Y of cell toplevel_chip.$flatten\mchip.\dut.\driver.\b.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21 ($add).
+Removed top 31 bits (of 32) from port B of cell toplevel_chip.$flatten\mchip.\dut.\driver.\a.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21 ($add).
+Removed top 22 bits (of 32) from port Y of cell toplevel_chip.$flatten\mchip.\dut.\driver.\a.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21 ($add).
+Removed top 1 bits (of 15) from FF cell toplevel_chip.$flatten\mchip.\dut.\input_spi_interface.$procdff$491 ($adff).
+Removed top 1 bits (of 14) from FF cell toplevel_chip.$flatten\mchip.\dut.\input_spi_interface.$procdff$491 ($adff).
+Removed top 1 bits (of 13) from FF cell toplevel_chip.$flatten\mchip.\dut.\input_spi_interface.$procdff$491 ($adff).
+Removed top 1 bits (of 12) from FF cell toplevel_chip.$flatten\mchip.\dut.\input_spi_interface.$procdff$491 ($adff).
+Removed top 1 bits (of 11) from FF cell toplevel_chip.$flatten\mchip.\dut.\input_spi_interface.$procdff$491 ($adff).
+Removed top 1 bits (of 10) from FF cell toplevel_chip.$flatten\mchip.\dut.\input_spi_interface.$procdff$491 ($adff).
+Removed top 22 bits (of 32) from wire toplevel_chip.$flatten\mchip.\dut.\driver.\a.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21_Y.
+Removed top 22 bits (of 32) from wire toplevel_chip.$flatten\mchip.\dut.\driver.\b.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21_Y.
+Removed top 27 bits (of 32) from wire toplevel_chip.$flatten\mchip.\dut.\mcp3202.$0\state[31:0].
+Removed top 27 bits (of 32) from wire toplevel_chip.$flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:28$26_Y.
+Removed top 23 bits (of 32) from wire toplevel_chip.$flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:33$28_Y.
+
+11.11. Executing PEEPOPT pass (run peephole optimizers).
+
+11.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+11.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module toplevel_chip:
+  creating $macc model for $flatten\mchip.\dut.\driver.$add$d18_vrajesh_motorcontroller/src/motor_driver.sv:19$4 ($add).
+  creating $macc model for $flatten\mchip.\dut.\driver.$sub$d18_vrajesh_motorcontroller/src/motor_driver.sv:20$5 ($sub).
+  creating $macc model for $flatten\mchip.\dut.\driver.\a.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21 ($add).
+  creating $macc model for $flatten\mchip.\dut.\driver.\b.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21 ($add).
+  creating $macc model for $flatten\mchip.\dut.\input_spi_interface.$add$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:41$82 ($add).
+  creating $macc model for $flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:28$26 ($add).
+  creating $macc model for $flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:33$28 ($add).
+  creating $macc model for $flatten\mchip.\dut.\p_cont.$add$d18_vrajesh_motorcontroller/src/p.sv:16$10 ($add).
+  creating $macc model for $flatten\mchip.\dut.\p_cont.$mul$d18_vrajesh_motorcontroller/src/p.sv:27$14 ($mul).
+  creating $macc model for $flatten\mchip.\dut.\p_cont.$sub$d18_vrajesh_motorcontroller/src/p.sv:23$12 ($sub).
+  creating $alu model for $macc $flatten\mchip.\dut.\p_cont.$sub$d18_vrajesh_motorcontroller/src/p.sv:23$12.
+  creating $alu model for $macc $flatten\mchip.\dut.\p_cont.$add$d18_vrajesh_motorcontroller/src/p.sv:16$10.
+  creating $alu model for $macc $flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:33$28.
+  creating $alu model for $macc $flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:28$26.
+  creating $alu model for $macc $flatten\mchip.\dut.\input_spi_interface.$add$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:41$82.
+  creating $alu model for $macc $flatten\mchip.\dut.\driver.\b.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21.
+  creating $alu model for $macc $flatten\mchip.\dut.\driver.\a.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21.
+  creating $alu model for $macc $flatten\mchip.\dut.\driver.$sub$d18_vrajesh_motorcontroller/src/motor_driver.sv:20$5.
+  creating $alu model for $macc $flatten\mchip.\dut.\driver.$add$d18_vrajesh_motorcontroller/src/motor_driver.sv:19$4.
+  creating $macc cell for $flatten\mchip.\dut.\p_cont.$mul$d18_vrajesh_motorcontroller/src/p.sv:27$14: $auto$alumacc.cc:365:replace_macc$1039
+  creating $alu model for $flatten\mchip.\dut.\driver.\a.$gt$d18_vrajesh_motorcontroller/src/pwm.sv:22$23 ($gt): new $alu
+  creating $alu model for $flatten\mchip.\dut.\driver.\b.$gt$d18_vrajesh_motorcontroller/src/pwm.sv:22$23 ($gt): new $alu
+  creating $alu cell for $flatten\mchip.\dut.\driver.\b.$gt$d18_vrajesh_motorcontroller/src/pwm.sv:22$23: $auto$alumacc.cc:485:replace_alu$1042
+  creating $alu cell for $flatten\mchip.\dut.\driver.\a.$gt$d18_vrajesh_motorcontroller/src/pwm.sv:22$23: $auto$alumacc.cc:485:replace_alu$1053
+  creating $alu cell for $flatten\mchip.\dut.\driver.$add$d18_vrajesh_motorcontroller/src/motor_driver.sv:19$4: $auto$alumacc.cc:485:replace_alu$1064
+  creating $alu cell for $flatten\mchip.\dut.\driver.$sub$d18_vrajesh_motorcontroller/src/motor_driver.sv:20$5: $auto$alumacc.cc:485:replace_alu$1067
+  creating $alu cell for $flatten\mchip.\dut.\driver.\a.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21: $auto$alumacc.cc:485:replace_alu$1070
+  creating $alu cell for $flatten\mchip.\dut.\driver.\b.$add$d18_vrajesh_motorcontroller/src/pwm.sv:17$21: $auto$alumacc.cc:485:replace_alu$1073
+  creating $alu cell for $flatten\mchip.\dut.\input_spi_interface.$add$d18_vrajesh_motorcontroller/src/spi_mosi_interface.sv:41$82: $auto$alumacc.cc:485:replace_alu$1076
+  creating $alu cell for $flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:28$26: $auto$alumacc.cc:485:replace_alu$1079
+  creating $alu cell for $flatten\mchip.\dut.\mcp3202.$add$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:33$28: $auto$alumacc.cc:485:replace_alu$1082
+  creating $alu cell for $flatten\mchip.\dut.\p_cont.$add$d18_vrajesh_motorcontroller/src/p.sv:16$10: $auto$alumacc.cc:485:replace_alu$1085
+  creating $alu cell for $flatten\mchip.\dut.\p_cont.$sub$d18_vrajesh_motorcontroller/src/p.sv:23$12: $auto$alumacc.cc:485:replace_alu$1088
+  created 11 $alu and 1 $macc cells.
+
+11.14. Executing SHARE pass (SAT-based resource sharing).
+
+11.15. Executing OPT pass (performing simple optimizations).
+
+11.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~2 debug messages>
+
+11.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+11.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 2 unused cells and 4 unused wires.
+<suppressed ~3 debug messages>
+
+11.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+11.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.15.16. Finished OPT passes. (There is nothing left to do.)
+
+11.16. Executing MEMORY pass.
+
+11.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+11.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+11.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+11.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+11.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+11.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+11.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+11.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+11.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.18. Executing OPT pass (performing simple optimizations).
+
+11.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~18 debug messages>
+
+11.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+11.18.5. Finished fast OPT passes.
+
+11.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+11.20. Executing OPT pass (performing simple optimizations).
+
+11.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+11.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+    Consolidated identical input bits for $pmux cell $flatten\mchip.\dut.\mcp3202.$procmux$96:
+      Old ports: A={ 27'000000000000000000000000000 $fsm$oldstate\mchip.dut.mcp3202.state [4:0] }, B={ 667'0000000000000000000000000000000100000000000000000000000000000010000000000000000000000000000000110000000000000000000000000000010000000000000000000000000000000101000000000000000000000000000001100000000000000000000000000000011100000000000000000000000000001000000000000000000000000000000010010000000000000000000000000000101000000000000000000000000000001011000000000000000000000000000011000000000000000000000000000000110100000000000000000000000000001110000000000000000000000000000011110000000000000000000000000001000000000000000000000000000000010001000000000000000000000000000100100000000000000000000000000001001100000000000000000000000000010100000000000000000000000000000 $flatten\mchip.\dut.\mcp3202.$ternary$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$60_Y [4:0] }, Y=$flatten\mchip.\dut.\mcp3202.$2\next_state[31:0]
+      New ports: A=$fsm$oldstate\mchip.dut.mcp3202.state [4:0], B={ 100'0000100010000110010000101001100011101000010010101001011011000110101110011111000010001100101001110100 $flatten\mchip.\dut.\mcp3202.$ternary$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$60_Y [4:0] }, Y=$flatten\mchip.\dut.\mcp3202.$2\next_state[31:0] [4:0]
+      New connections: $flatten\mchip.\dut.\mcp3202.$2\next_state[31:0] [31:5] = 27'000000000000000000000000000
+    Consolidated identical input bits for $mux cell $flatten\mchip.\dut.\mcp3202.$ternary$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$60:
+      Old ports: A=5'10100, B=5'00000, Y=$flatten\mchip.\dut.\mcp3202.$ternary$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$60_Y [4:0]
+      New ports: A=1'1, B=1'0, Y=$flatten\mchip.\dut.\mcp3202.$ternary$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$60_Y [2]
+      New connections: { $flatten\mchip.\dut.\mcp3202.$ternary$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$60_Y [4:3] $flatten\mchip.\dut.\mcp3202.$ternary$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$60_Y [1:0] } = { $flatten\mchip.\dut.\mcp3202.$ternary$d18_vrajesh_motorcontroller/src/spi_mcp3202_interface.sv:117$60_Y [2] 3'000 }
+  Optimizing cells in module \toplevel_chip.
+    Consolidated identical input bits for $mux cell $flatten\mchip.\dut.\mcp3202.$procmux$121:
+      Old ports: A={ 27'000000000000000000000000000 $fsm$oldstate\mchip.dut.mcp3202.state [4:0] }, B=$flatten\mchip.\dut.\mcp3202.$2\next_state[31:0], Y=\mchip.dut.mcp3202.next_state
+      New ports: A=$fsm$oldstate\mchip.dut.mcp3202.state [4:0], B=$flatten\mchip.\dut.\mcp3202.$2\next_state[31:0] [4:0], Y=\mchip.dut.mcp3202.next_state [4:0]
+      New connections: \mchip.dut.mcp3202.next_state [31:5] = 27'000000000000000000000000000
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 3 changes.
+
+11.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.20.6. Executing OPT_SHARE pass.
+
+11.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~2 debug messages>
+
+11.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+11.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+11.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+11.20.14. Executing OPT_SHARE pass.
+
+11.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+11.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.20.18. Finished OPT passes. (There is nothing left to do.)
+
+11.21. Executing TECHMAP pass (map to technology primitives).
+
+11.21.1. Executing Verilog-2005 frontend: /Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+11.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper maccmap for cells of type $macc.
+  add \mchip.dut.p_cont.error * { 1'0 \mchip.dut.p_setpoint_storage.p } (9x9 bits, signed)
+Using template $paramod$a1bc51c02ce12ac21eb18988e83292af48ed7d72\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $adff.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$882740dfb2991569bcc7104c8c698a7de60e5895\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_90_alu for cells of type $alu.
+Using template $paramod$53700bbee849b2010ad0b60a61ccd204a10e24ca\_90_alu for cells of type $alu.
+Using template $paramod$381d5ac9ce4d79feb95fa03ade8f84c5a58bb3c0\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $ne.
+Using template $paramod$754650b284649a026620fc6856e5b6886cbfe794\_90_alu for cells of type $alu.
+Using template $paramod$08c2d337fba0d8fba53e35b89be96dd105931d9e\_90_alu for cells of type $alu.
+Using template $paramod$b52b1c34c6942a4262a8b287ee6ae3a092dfc180\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001010 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001001 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000001 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010010 for cells of type $fa.
+Using template $paramod$12350b8c8422a70d10b7db4eaae1202a7148b784\_90_alu for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010010 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1703 debug messages>
+
+11.22. Executing OPT pass (performing simple optimizations).
+
+11.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~944 debug messages>
+
+11.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~1017 debug messages>
+Removed a total of 339 cells.
+
+11.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 165 unused cells and 788 unused wires.
+<suppressed ~166 debug messages>
+
+11.22.5. Finished fast OPT passes.
+
+11.23. Executing ABC pass (technology mapping using ABC).
+
+11.23.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
+Extracted 1135 gates and 1279 wires to a netlist network with 143 inputs and 130 outputs.
+
+11.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+11.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:       18
+ABC RESULTS:             ORNOT cells:       62
+ABC RESULTS:              NAND cells:       48
+ABC RESULTS:               AND cells:      145
+ABC RESULTS:               NOT cells:       23
+ABC RESULTS:              XNOR cells:       52
+ABC RESULTS:                OR cells:      209
+ABC RESULTS:               NOR cells:       55
+ABC RESULTS:            ANDNOT cells:      262
+ABC RESULTS:               XOR cells:      179
+ABC RESULTS:        internal signals:     1006
+ABC RESULTS:           input signals:      143
+ABC RESULTS:          output signals:      130
+Removing temp directory.
+
+11.24. Executing OPT pass (performing simple optimizations).
+
+11.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+11.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+11.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 669 unused wires.
+<suppressed ~4 debug messages>
+
+11.24.5. Finished fast OPT passes.
+
+11.25. Executing HIERARCHY pass (managing design hierarchy).
+
+11.25.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+11.25.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+11.26. Printing statistics.
+
+=== toplevel_chip ===
+
+   Number of wires:               1084
+   Number of wire bits:           1590
+   Number of public wires:          88
+   Number of public wire bits:     456
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1227
+     $_ANDNOT_                     262
+     $_AND_                        145
+     $_DFFE_PP_                     18
+     $_DFF_PN0_                     14
+     $_DFF_PP0_                      1
+     $_DFF_PP1_                      1
+     $_DFF_P_                       71
+     $_MUX_                         18
+     $_NAND_                        48
+     $_NOR_                         53
+     $_NOT_                         23
+     $_ORNOT_                       62
+     $_OR_                         209
+     $_SDFFE_PN1N_                   3
+     $_SDFFE_PP0P_                   9
+     $_SDFFE_PP1P_                   8
+     $_SDFF_PP0_                    37
+     $_SDFF_PP1_                    14
+     $_XNOR_                        52
+     $_XOR_                        179
+
+11.27. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+
+12. Executing SETUNDEF pass (replace undef values with defined constants).
+
+13. Executing SETUNDEF pass (replace undef values with defined constants).
+
+14. Executing ASYNC2SYNC pass.
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1731 ($_DFF_PP1_): ARST=\io_in [13], D=\mchip.dut.input_spi_interface.cs_n.data_out, Q=\mchip.dut.input_spi_interface.sync_spi_cs_n_del
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1732 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=$auto$alumacc.cc:485:replace_alu$1076.X [0], Q=\mchip.dut.input_spi_interface.mosi_buffer_counter [0]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1733 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=$auto$alumacc.cc:485:replace_alu$1076.Y [1], Q=\mchip.dut.input_spi_interface.mosi_buffer_counter [1]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1734 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=$auto$alumacc.cc:485:replace_alu$1076.Y [2], Q=\mchip.dut.input_spi_interface.mosi_buffer_counter [2]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1735 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=$auto$alumacc.cc:485:replace_alu$1076.Y [3], Q=\mchip.dut.input_spi_interface.mosi_buffer_counter [3]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1736 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=$auto$alumacc.cc:485:replace_alu$1076.Y [4], Q=\mchip.dut.input_spi_interface.mosi_buffer_counter [4]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1737 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=\mchip.dut.input_spi_interface.mosi.data_out, Q=\mchip.dut.input_spi_interface.mosi_buffer [0]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1738 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=\mchip.dut.input_spi_interface.mosi_buffer [0], Q=\mchip.dut.input_spi_interface.mosi_buffer [1]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1739 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=\mchip.dut.input_spi_interface.mosi_buffer [1], Q=\mchip.dut.input_spi_interface.mosi_buffer [2]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1740 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=\mchip.dut.input_spi_interface.mosi_buffer [2], Q=\mchip.dut.input_spi_interface.mosi_buffer [3]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1741 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=\mchip.dut.input_spi_interface.mosi_buffer [3], Q=\mchip.dut.input_spi_interface.mosi_buffer [4]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1742 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=\mchip.dut.input_spi_interface.mosi_buffer [4], Q=\mchip.dut.input_spi_interface.mosi_buffer [5]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1743 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=\mchip.dut.input_spi_interface.mosi_buffer [5], Q=\mchip.dut.input_spi_interface.mosi_buffer [6]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1744 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=\mchip.dut.input_spi_interface.mosi_buffer [6], Q=\mchip.dut.input_spi_interface.mosi_buffer [7]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1745 ($_DFF_PN0_): ARST=\mchip.dut.input_spi_interface.internal_reset_n, D=\mchip.dut.input_spi_interface.mosi_buffer [7], Q=\mchip.dut.input_spi_interface.mosi_buffer [8]
+Replacing toplevel_chip.$auto$ff.cc:266:slice$1822 ($_DFF_PP0_): ARST=\io_in [13], D=$abc$4740$flatten\mchip.\dut.\input_spi_interface.$0\internal_reset_n[0:0], Q=\mchip.dut.input_spi_interface.internal_reset_n
+
+15. Executing SYNTH pass.
+
+15.1. Executing HIERARCHY pass (managing design hierarchy).
+
+15.1.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+15.1.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+15.2. Executing PROC pass (convert processes to netlists).
+
+15.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+15.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+15.2.4. Executing PROC_INIT pass (extract init attributes).
+
+15.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+15.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+15.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+15.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+15.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+15.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+15.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.5. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+
+15.6. Executing OPT pass (performing simple optimizations).
+
+15.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+15.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.6.9. Finished OPT passes. (There is nothing left to do.)
+
+15.7. Executing FSM pass (extract and optimize FSM).
+
+15.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+15.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+15.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+15.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+15.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+15.8. Executing OPT pass (performing simple optimizations).
+
+15.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+15.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.8.9. Finished OPT passes. (There is nothing left to do.)
+
+15.9. Executing WREDUCE pass (reducing word size of cells).
+
+15.10. Executing PEEPOPT pass (run peephole optimizers).
+
+15.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module toplevel_chip:
+  created 0 $alu and 0 $macc cells.
+
+15.13. Executing SHARE pass (SAT-based resource sharing).
+
+15.14. Executing OPT pass (performing simple optimizations).
+
+15.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+15.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.14.9. Finished OPT passes. (There is nothing left to do.)
+
+15.15. Executing MEMORY pass.
+
+15.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+15.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+15.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+15.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+15.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+15.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+15.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+15.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+15.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.17. Executing OPT pass (performing simple optimizations).
+
+15.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+<suppressed ~15 debug messages>
+
+15.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.17.5. Finished fast OPT passes.
+
+15.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+15.19. Executing OPT pass (performing simple optimizations).
+
+15.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \toplevel_chip..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \toplevel_chip.
+Performed a total of 0 changes.
+
+15.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.19.6. Executing OPT_SHARE pass.
+
+15.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.19.10. Finished OPT passes. (There is nothing left to do.)
+
+15.20. Executing TECHMAP pass (map to technology primitives).
+
+15.20.1. Executing Verilog-2005 frontend: /Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/anish/workspace/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+15.20.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~73 debug messages>
+
+15.21. Executing OPT pass (performing simple optimizations).
+
+15.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+
+15.21.5. Finished fast OPT passes.
+
+15.22. Executing ABC pass (technology mapping using ABC).
+
+15.22.1. Extracting gate netlist of module `\toplevel_chip' to `<abc-temp-dir>/input.blif'..
+Extracted 1067 gates and 1220 wires to a netlist network with 152 inputs and 139 outputs.
+
+15.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+15.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:       18
+ABC RESULTS:               NOR cells:       40
+ABC RESULTS:              XNOR cells:       49
+ABC RESULTS:               NOT cells:       25
+ABC RESULTS:                OR cells:      235
+ABC RESULTS:              NAND cells:       58
+ABC RESULTS:             ORNOT cells:       57
+ABC RESULTS:            ANDNOT cells:      240
+ABC RESULTS:               XOR cells:      182
+ABC RESULTS:               AND cells:      163
+ABC RESULTS:        internal signals:      929
+ABC RESULTS:           input signals:      152
+ABC RESULTS:          output signals:      139
+Removing temp directory.
+
+15.23. Executing OPT pass (performing simple optimizations).
+
+15.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toplevel_chip.
+
+15.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\toplevel_chip'.
+Removed a total of 0 cells.
+
+15.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toplevel_chip..
+Removed 0 unused cells and 1213 unused wires.
+<suppressed ~2 debug messages>
+
+15.23.5. Finished fast OPT passes.
+
+15.24. Executing HIERARCHY pass (managing design hierarchy).
+
+15.24.1. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+
+15.24.2. Analyzing design hierarchy..
+Top module:  \toplevel_chip
+Removed 0 unused modules.
+
+15.25. Printing statistics.
+
+=== toplevel_chip ===
+
+   Number of wires:               1106
+   Number of wire bits:           1612
+   Number of public wires:          87
+   Number of public wire bits:     455
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1243
+     $_ANDNOT_                     240
+     $_AND_                        163
+     $_DFFE_PP_                     18
+     $_DFF_P_                       71
+     $_MUX_                         18
+     $_NAND_                        58
+     $_NOR_                         40
+     $_NOT_                         25
+     $_ORNOT_                       57
+     $_OR_                         235
+     $_SDFFE_PN1N_                   3
+     $_SDFFE_PP0P_                   9
+     $_SDFFE_PP1P_                   8
+     $_SDFF_PN0_                    14
+     $_SDFF_PP0_                    38
+     $_SDFF_PP1_                    15
+     $_XNOR_                        49
+     $_XOR_                        182
+
+15.26. Executing CHECK pass (checking for obvious problems).
+Checking module toplevel_chip...
+Found and reported 0 problems.
+Renaming module \toplevel_chip to \d18_vrajesh_motorcontroller.
+
+16. Executing Verilog backend.
+
+16.1. Executing BMUXMAP pass.
+
+16.2. Executing DEMUXMAP pass.
+Dumping module `\d18_vrajesh_motorcontroller'.
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module d18_vrajesh_motorcontroller...
+Found and reported 0 problems.
+
+18. Printing statistics.
+
+=== d18_vrajesh_motorcontroller ===
+
+   Number of wires:               1106
+   Number of wire bits:           1612
+   Number of public wires:          87
+   Number of public wire bits:     455
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1243
+     $_ANDNOT_                     240
+     $_AND_                        163
+     $_DFFE_PP_                     18
+     $_DFF_P_                       71
+     $_MUX_                         18
+     $_NAND_                        58
+     $_NOR_                         40
+     $_NOT_                         25
+     $_ORNOT_                       57
+     $_OR_                         235
+     $_SDFFE_PN1N_                   3
+     $_SDFFE_PP0P_                   9
+     $_SDFFE_PP1P_                   8
+     $_SDFF_PN0_                    14
+     $_SDFF_PP0_                    38
+     $_SDFF_PP1_                    15
+     $_XNOR_                        49
+     $_XOR_                        182
+
+Warnings: 7 unique messages, 7 total
+End of script. Logfile hash: f549c4f5be, CPU: user 0.62s system 0.02s
+Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 23% 43x opt_expr (0 sec), 20% 2x abc (0 sec), ...
+
