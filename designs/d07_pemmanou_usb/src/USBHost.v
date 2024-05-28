@@ -1117,6 +1117,8 @@ module IN_OUT_HANDLER (
 	reg [3:0] timeout_counter_nxt;
 	reg [8:0] timer;
 	reg [8:0] timer_nxt;
+	reg completed_transaction_log;
+	reg ended_with_errors_log;
 	wire timeout;
 	wire end_transaction;
 	assign timeout = timer == 9'd255;
@@ -1170,6 +1172,7 @@ module IN_OUT_HANDLER (
 				expect_packet = 1'sb0;
 				PID_to_sender = (next_state == 4'd1 ? 4'b1001 : 4'b0001);
 				data_to_sender = 1'sb0;
+				completed_transaction_log = 1'sb0;
 			end
 			4'd1: begin
 				error_counter_nxt = 1'sb0;
@@ -1179,6 +1182,7 @@ module IN_OUT_HANDLER (
 				expect_packet = next_state != 4'd1;
 				PID_to_sender = 4'b1001;
 				data_to_sender = 1'sb0;
+				completed_transaction_log = 1'sb0;
 			end
 			4'd2: begin
 				error_counter_nxt = 1'sb0;
@@ -1188,6 +1192,7 @@ module IN_OUT_HANDLER (
 				expect_packet = 1'sb0;
 				PID_to_sender = (next_state != 4'd2 ? 4'b0011 : 4'b0001);
 				data_to_sender = send_data;
+				completed_transaction_log = 1'sb0;
 			end
 			4'd3: begin
 				error_counter_nxt = (had_errors ? error_counter + 1 : error_counter);
@@ -1202,6 +1207,7 @@ module IN_OUT_HANDLER (
 				else
 					PID_to_sender = 1'sb0;
 				data_to_sender = 1'sb0;
+				completed_transaction_log = next_state == 4'b0000;
 			end
 			4'd4: begin
 				error_counter_nxt = error_counter;
@@ -1211,6 +1217,7 @@ module IN_OUT_HANDLER (
 				expect_packet = next_state != 4'd4;
 				data_to_sender = send_data;
 				PID_to_sender = 4'b0011;
+				completed_transaction_log = 1'sb0;
 			end
 			4'd5: begin
 				error_counter_nxt = error_counter;
@@ -1220,6 +1227,7 @@ module IN_OUT_HANDLER (
 				expect_packet = 1'sb0;
 				data_to_sender = 1'sb0;
 				PID_to_sender = 4'b0010;
+				completed_transaction_log = next_state == 4'b0000;
 			end
 			4'd6: begin
 				error_counter_nxt = error_counter;
@@ -1229,6 +1237,7 @@ module IN_OUT_HANDLER (
 				expect_packet = next_state == 4'd3;
 				data_to_sender = 1'sb0;
 				PID_to_sender = 4'b1010;
+				completed_transaction_log = 1'sb0;
 			end
 			4'd7: begin
 				error_counter_nxt = (had_errors ? error_counter + 1 : error_counter);
@@ -1238,6 +1247,7 @@ module IN_OUT_HANDLER (
 				expect_packet = next_state == 4'd7;
 				data_to_sender = (next_state == 4'd4 ? send_data : {64 {1'sb0}});
 				PID_to_sender = (next_state == 4'd4 ? 4'b0011 : {4 {1'sb0}});
+				completed_transaction_log = next_state == 4'b0000;
 			end
 			default: begin
 				error_counter_nxt = 1'sb0;
@@ -1247,13 +1257,20 @@ module IN_OUT_HANDLER (
 				expect_packet = 1'sb0;
 				PID_to_sender = 1'sb0;
 				data_to_sender = 1'sb0;
+				completed_transaction_log = 1'sb0;
 			end
 		endcase
 	end
-	always @(*) begin
-		completed_transaction = (((cur_state == 4'd3) || (cur_state == 4'd7)) || (cur_state == 4'd5)) && (next_state == 4'b0000);
-		ended_with_errors = completed_transaction && (timeout || (had_errors && (received_PID != 4'b0010)));
-	end
+	always @(*) ended_with_errors_log = completed_transaction_log && (timeout || (had_errors && (received_PID != 4'b0010)));
+	always @(posedge clock or negedge reset_n)
+		if (~reset_n) begin
+			completed_transaction <= 1'sb0;
+			ended_with_errors <= 1'sb0;
+		end
+		else begin
+			completed_transaction <= completed_transaction_log;
+			ended_with_errors <= ended_with_errors_log;
+		end
 	always @(posedge clock or negedge reset_n)
 		if (~reset_n)
 			final_data <= 1'sb0;
@@ -1357,7 +1374,7 @@ module READ_WRITE_HANDLER (
 			3'd1: begin
 				finished_with_error = (next_state == 3'b000) && txn_error;
 				finished = next_state == 3'b000;
-				make_out = txn_done && !txn_error;
+				make_out = !txn_done && !txn_error;
 				make_in = 1'sb0;
 				out_data = (txn_done ? memdata : page_data);
 				addr_or_data = ~txn_done;
