@@ -919,7 +919,7 @@ Found and reported 0 problems.
      $_ORNOT_                       22
      $_OR_                        2004
 
-End of script. Logfile hash: e755cce2ef, CPU: user 1.80s system 0.04s
+End of script. Logfile hash: e755cce2ef, CPU: user 1.76s system 0.05s
 Yosys 0.36+3 (git sha1 a53032104, aarch64-apple-darwin20.2-clang 10.0.0-4ubuntu1 -fPIC -Os)
 Time spent: 26% 27x opt_expr (0 sec), 14% 5x read_verilog (0 sec), ...
 

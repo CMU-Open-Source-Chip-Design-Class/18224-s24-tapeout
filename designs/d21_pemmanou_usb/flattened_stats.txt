@@ -1,25 +1,25 @@
 === d21_pemmanou_usb ===
 
-   Number of wires:               2920
-   Number of wire bits:           4637
-   Number of public wires:         146
-   Number of public wire bits:    1863
+   Number of wires:               2978
+   Number of wire bits:           4695
+   Number of public wires:         145
+   Number of public wire bits:    1862
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               3065
-     $_ANDNOT_                    1121
-     $_AND_                        114
-     $_MUX_                        153
-     $_NAND_                       146
-     $_NOR_                         91
-     $_NOT_                         46
-     $_ORNOT_                      179
-     $_OR_                         746
+   Number of cells:               3125
+     $_ANDNOT_                    1232
+     $_AND_                         50
+     $_MUX_                        155
+     $_NAND_                        41
+     $_NOR_                         81
+     $_NOT_                        103
+     $_ORNOT_                      177
+     $_OR_                         814
      $_SDFFE_PP0N_                  72
      $_SDFFE_PP0P_                 252
      $_SDFFE_PP1P_                  43
-     $_SDFF_PP0_                    44
+     $_SDFF_PP0_                    46
      $_SDFF_PP1_                     2
-     $_XNOR_                        12
-     $_XOR_                         44
+     $_XNOR_                        19
+     $_XOR_                         38

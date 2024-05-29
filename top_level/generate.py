@@ -6,7 +6,7 @@ sources = []
 insts = ["" for _ in range(64)]
 
 # Designs to exclude from the synthesis
-SKIP_DESIGNS = ["d21_pemmanou_usb"]
+SKIP_DESIGNS = []
 
 # Populate all slots with placeholder
 # which will be replaced if there exists a design

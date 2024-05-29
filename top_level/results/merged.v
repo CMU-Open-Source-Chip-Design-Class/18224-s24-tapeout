@@ -82769,6 +82769,10101 @@ module d20_zhehuax_16bit_fpu (
 	assign \mchip.reset  = io_in[13];
 	assign \mchip.signal  = \mchip.in1.start ;
 endmodule
+module d21_pemmanou_usb (
+	io_in,
+	io_out
+);
+	wire _0000_;
+	wire _0001_;
+	wire _0002_;
+	wire _0003_;
+	wire _0004_;
+	wire _0005_;
+	wire _0006_;
+	wire _0007_;
+	wire _0008_;
+	wire _0009_;
+	wire _0010_;
+	wire _0011_;
+	wire _0012_;
+	wire _0013_;
+	wire _0014_;
+	wire _0015_;
+	wire _0016_;
+	wire _0017_;
+	wire _0018_;
+	wire _0019_;
+	wire _0020_;
+	wire _0021_;
+	wire _0022_;
+	wire _0023_;
+	wire _0024_;
+	wire _0025_;
+	wire _0026_;
+	wire _0027_;
+	wire _0028_;
+	wire _0029_;
+	wire _0030_;
+	wire _0031_;
+	wire _0032_;
+	wire _0033_;
+	wire _0034_;
+	wire _0035_;
+	wire _0036_;
+	wire _0037_;
+	wire _0038_;
+	wire _0039_;
+	wire _0040_;
+	wire _0041_;
+	wire _0042_;
+	wire _0043_;
+	wire _0044_;
+	wire _0045_;
+	wire _0046_;
+	wire _0047_;
+	wire _0048_;
+	wire _0049_;
+	wire _0050_;
+	wire _0051_;
+	wire _0052_;
+	wire _0053_;
+	wire _0054_;
+	wire _0055_;
+	wire _0056_;
+	wire _0057_;
+	wire _0058_;
+	wire _0059_;
+	wire _0060_;
+	wire _0061_;
+	wire _0062_;
+	wire _0063_;
+	wire _0064_;
+	wire _0065_;
+	wire _0066_;
+	wire _0067_;
+	wire _0068_;
+	reg _0069_;
+	reg _0070_;
+	reg _0071_;
+	reg _0072_;
+	reg _0073_;
+	reg _0074_;
+	reg _0075_;
+	reg _0076_;
+	reg _0077_;
+	reg _0078_;
+	reg _0079_;
+	reg _0080_;
+	reg _0081_;
+	reg _0082_;
+	reg _0083_;
+	reg _0084_;
+	reg _0085_;
+	reg _0086_;
+	reg _0087_;
+	reg _0088_;
+	reg _0089_;
+	reg _0090_;
+	reg _0091_;
+	reg _0092_;
+	reg _0093_;
+	reg _0094_;
+	reg _0095_;
+	reg _0096_;
+	reg _0097_;
+	reg _0098_;
+	reg _0099_;
+	reg _0100_;
+	reg _0101_;
+	reg _0102_;
+	reg _0103_;
+	reg _0104_;
+	reg _0105_;
+	reg _0106_;
+	reg _0107_;
+	reg _0108_;
+	reg _0109_;
+	reg _0110_;
+	reg _0111_;
+	reg _0112_;
+	reg _0113_;
+	reg _0114_;
+	reg _0115_;
+	reg _0116_;
+	reg _0117_;
+	reg _0118_;
+	reg _0119_;
+	reg _0120_;
+	reg _0121_;
+	reg _0122_;
+	reg _0123_;
+	reg _0124_;
+	reg _0125_;
+	reg _0126_;
+	reg _0127_;
+	reg _0128_;
+	reg _0129_;
+	reg _0130_;
+	reg _0131_;
+	reg _0132_;
+	reg _0133_;
+	reg _0134_;
+	reg _0135_;
+	reg _0136_;
+	reg _0137_;
+	reg _0138_;
+	reg _0139_;
+	reg _0140_;
+	reg _0141_;
+	reg _0142_;
+	reg _0143_;
+	reg _0144_;
+	reg _0145_;
+	reg _0146_;
+	reg _0147_;
+	reg _0148_;
+	reg _0149_;
+	reg _0150_;
+	reg _0151_;
+	reg _0152_;
+	reg _0153_;
+	reg _0154_;
+	reg _0155_;
+	reg _0156_;
+	reg _0157_;
+	reg _0158_;
+	reg _0159_;
+	reg _0160_;
+	reg _0161_;
+	reg _0162_;
+	reg _0163_;
+	reg _0164_;
+	reg _0165_;
+	reg _0166_;
+	reg _0167_;
+	reg _0168_;
+	reg _0169_;
+	reg _0170_;
+	reg _0171_;
+	reg _0172_;
+	reg _0173_;
+	reg _0174_;
+	reg _0175_;
+	reg _0176_;
+	reg _0177_;
+	reg _0178_;
+	reg _0179_;
+	reg _0180_;
+	reg _0181_;
+	reg _0182_;
+	reg _0183_;
+	reg _0184_;
+	reg _0185_;
+	reg _0186_;
+	reg _0187_;
+	reg _0188_;
+	reg _0189_;
+	reg _0190_;
+	reg _0191_;
+	reg _0192_;
+	reg _0193_;
+	reg _0194_;
+	reg _0195_;
+	reg _0196_;
+	reg _0197_;
+	reg _0198_;
+	reg _0199_;
+	reg _0200_;
+	reg _0201_;
+	reg _0202_;
+	reg _0203_;
+	reg _0204_;
+	reg _0205_;
+	reg _0206_;
+	reg _0207_;
+	reg _0208_;
+	reg _0209_;
+	reg _0210_;
+	reg _0211_;
+	reg _0212_;
+	reg _0213_;
+	reg _0214_;
+	reg _0215_;
+	reg _0216_;
+	reg _0217_;
+	reg _0218_;
+	reg _0219_;
+	reg _0220_;
+	reg _0221_;
+	reg _0222_;
+	reg _0223_;
+	reg _0224_;
+	reg _0225_;
+	reg _0226_;
+	reg _0227_;
+	reg _0228_;
+	reg _0229_;
+	reg _0230_;
+	reg _0231_;
+	reg _0232_;
+	reg _0233_;
+	reg _0234_;
+	reg _0235_;
+	reg _0236_;
+	reg _0237_;
+	reg _0238_;
+	reg _0239_;
+	reg _0240_;
+	reg _0241_;
+	reg _0242_;
+	reg _0243_;
+	reg _0244_;
+	reg _0245_;
+	reg _0246_;
+	reg _0247_;
+	reg _0248_;
+	reg _0249_;
+	reg _0250_;
+	reg _0251_;
+	reg _0252_;
+	reg _0253_;
+	reg _0254_;
+	reg _0255_;
+	reg _0256_;
+	reg _0257_;
+	reg _0258_;
+	reg _0259_;
+	reg _0260_;
+	reg _0261_;
+	reg _0262_;
+	reg _0263_;
+	reg _0264_;
+	reg _0265_;
+	reg _0266_;
+	reg _0267_;
+	reg _0268_;
+	reg _0269_;
+	reg _0270_;
+	reg _0271_;
+	reg _0272_;
+	reg _0273_;
+	reg _0274_;
+	reg _0275_;
+	reg _0276_;
+	reg _0277_;
+	reg _0278_;
+	reg _0279_;
+	reg _0280_;
+	reg _0281_;
+	reg _0282_;
+	reg _0283_;
+	reg _0284_;
+	reg _0285_;
+	reg _0286_;
+	reg _0287_;
+	reg _0288_;
+	reg _0289_;
+	reg _0290_;
+	reg _0291_;
+	reg _0292_;
+	reg _0293_;
+	reg _0294_;
+	reg _0295_;
+	reg _0296_;
+	reg _0297_;
+	reg _0298_;
+	reg _0299_;
+	reg _0300_;
+	reg _0301_;
+	reg _0302_;
+	reg _0303_;
+	reg _0304_;
+	reg _0305_;
+	reg _0306_;
+	reg _0307_;
+	reg _0308_;
+	reg _0309_;
+	reg _0310_;
+	reg _0311_;
+	reg _0312_;
+	reg _0313_;
+	reg _0314_;
+	reg _0315_;
+	reg _0316_;
+	reg _0317_;
+	reg _0318_;
+	reg _0319_;
+	reg _0320_;
+	reg _0321_;
+	reg _0322_;
+	reg _0323_;
+	reg _0324_;
+	reg _0325_;
+	reg _0326_;
+	reg _0327_;
+	reg _0328_;
+	reg _0329_;
+	reg _0330_;
+	reg _0331_;
+	reg _0332_;
+	reg _0333_;
+	reg _0334_;
+	reg _0335_;
+	reg _0336_;
+	reg _0337_;
+	reg _0338_;
+	reg _0339_;
+	reg _0340_;
+	reg _0341_;
+	reg _0342_;
+	reg _0343_;
+	reg _0344_;
+	reg _0345_;
+	reg _0346_;
+	reg _0347_;
+	reg _0348_;
+	reg _0349_;
+	reg _0350_;
+	reg _0351_;
+	reg _0352_;
+	reg _0353_;
+	reg _0354_;
+	reg _0355_;
+	reg _0356_;
+	reg _0357_;
+	reg _0358_;
+	reg _0359_;
+	reg _0360_;
+	reg _0361_;
+	reg _0362_;
+	reg _0363_;
+	reg _0364_;
+	reg _0365_;
+	reg _0366_;
+	reg _0367_;
+	reg _0368_;
+	reg _0369_;
+	reg _0370_;
+	reg _0371_;
+	reg _0372_;
+	reg _0373_;
+	reg _0374_;
+	reg _0375_;
+	reg _0376_;
+	reg _0377_;
+	reg _0378_;
+	reg _0379_;
+	reg _0380_;
+	reg _0381_;
+	reg _0382_;
+	reg _0383_;
+	reg _0384_;
+	reg _0385_;
+	reg _0386_;
+	reg _0387_;
+	reg _0388_;
+	reg _0389_;
+	reg _0390_;
+	reg _0391_;
+	reg _0392_;
+	reg _0393_;
+	reg _0394_;
+	reg _0395_;
+	reg _0396_;
+	reg _0397_;
+	reg _0398_;
+	reg _0399_;
+	reg _0400_;
+	reg _0401_;
+	reg _0402_;
+	reg _0403_;
+	reg _0404_;
+	reg _0405_;
+	reg _0406_;
+	reg _0407_;
+	reg _0408_;
+	reg _0409_;
+	reg _0410_;
+	reg _0411_;
+	reg _0412_;
+	reg _0413_;
+	reg _0414_;
+	reg _0415_;
+	reg _0416_;
+	reg _0417_;
+	reg _0418_;
+	reg _0419_;
+	reg _0420_;
+	reg _0421_;
+	reg _0422_;
+	reg _0423_;
+	reg _0424_;
+	reg _0425_;
+	reg _0426_;
+	reg _0427_;
+	reg _0428_;
+	reg _0429_;
+	reg _0430_;
+	reg _0431_;
+	reg _0432_;
+	reg _0433_;
+	reg _0434_;
+	reg _0435_;
+	reg _0436_;
+	reg _0437_;
+	reg _0438_;
+	reg _0439_;
+	reg _0440_;
+	reg _0441_;
+	reg _0442_;
+	reg _0443_;
+	reg _0444_;
+	reg _0445_;
+	reg _0446_;
+	reg _0447_;
+	reg _0448_;
+	reg _0449_;
+	reg _0450_;
+	reg _0451_;
+	reg _0452_;
+	reg _0453_;
+	reg _0454_;
+	reg _0455_;
+	reg _0456_;
+	reg _0457_;
+	reg _0458_;
+	reg _0459_;
+	reg _0460_;
+	reg _0461_;
+	reg _0462_;
+	reg _0463_;
+	reg _0464_;
+	reg _0465_;
+	reg _0466_;
+	reg _0467_;
+	reg _0468_;
+	reg _0469_;
+	reg _0470_;
+	reg _0471_;
+	reg _0472_;
+	reg _0473_;
+	reg _0474_;
+	reg _0475_;
+	reg _0476_;
+	reg _0477_;
+	reg _0478_;
+	reg _0479_;
+	reg _0480_;
+	reg _0481_;
+	reg _0482_;
+	reg _0483_;
+	wire _0484_;
+	wire _0485_;
+	wire _0486_;
+	wire _0487_;
+	wire _0488_;
+	wire _0489_;
+	wire _0490_;
+	wire _0491_;
+	wire _0492_;
+	wire _0493_;
+	wire _0494_;
+	wire _0495_;
+	wire _0496_;
+	wire _0497_;
+	wire _0498_;
+	wire _0499_;
+	wire _0500_;
+	wire _0501_;
+	wire _0502_;
+	wire _0503_;
+	wire _0504_;
+	wire _0505_;
+	wire _0506_;
+	wire _0507_;
+	wire _0508_;
+	wire _0509_;
+	wire _0510_;
+	wire _0511_;
+	wire _0512_;
+	wire _0513_;
+	wire _0514_;
+	wire _0515_;
+	wire _0516_;
+	wire _0517_;
+	wire _0518_;
+	wire _0519_;
+	wire _0520_;
+	wire _0521_;
+	wire _0522_;
+	wire _0523_;
+	wire _0524_;
+	wire _0525_;
+	wire _0526_;
+	wire _0527_;
+	wire _0528_;
+	wire _0529_;
+	wire _0530_;
+	wire _0531_;
+	wire _0532_;
+	wire _0533_;
+	wire _0534_;
+	wire _0535_;
+	wire _0536_;
+	wire _0537_;
+	wire _0538_;
+	wire _0539_;
+	wire _0540_;
+	wire _0541_;
+	wire _0542_;
+	wire _0543_;
+	wire _0544_;
+	wire _0545_;
+	wire _0546_;
+	wire _0547_;
+	wire _0548_;
+	wire _0549_;
+	wire _0550_;
+	wire _0551_;
+	wire _0552_;
+	wire _0553_;
+	wire _0554_;
+	wire _0555_;
+	wire _0556_;
+	wire _0557_;
+	wire _0558_;
+	wire _0559_;
+	wire _0560_;
+	wire _0561_;
+	wire _0562_;
+	wire _0563_;
+	wire _0564_;
+	wire _0565_;
+	wire _0566_;
+	wire _0567_;
+	wire _0568_;
+	wire _0569_;
+	wire _0570_;
+	wire _0571_;
+	wire _0572_;
+	wire _0573_;
+	wire _0574_;
+	wire _0575_;
+	wire _0576_;
+	wire _0577_;
+	wire _0578_;
+	wire _0579_;
+	wire _0580_;
+	wire _0581_;
+	wire _0582_;
+	wire _0583_;
+	wire _0584_;
+	wire _0585_;
+	wire _0586_;
+	wire _0587_;
+	wire _0588_;
+	wire _0589_;
+	wire _0590_;
+	wire _0591_;
+	wire _0592_;
+	wire _0593_;
+	wire _0594_;
+	wire _0595_;
+	wire _0596_;
+	wire _0597_;
+	wire _0598_;
+	wire _0599_;
+	wire _0600_;
+	wire _0601_;
+	wire _0602_;
+	wire _0603_;
+	wire _0604_;
+	wire _0605_;
+	wire _0606_;
+	wire _0607_;
+	wire _0608_;
+	wire _0609_;
+	wire _0610_;
+	wire _0611_;
+	wire _0612_;
+	wire _0613_;
+	wire _0614_;
+	wire _0615_;
+	wire _0616_;
+	wire _0617_;
+	wire _0618_;
+	wire _0619_;
+	wire _0620_;
+	wire _0621_;
+	wire _0622_;
+	wire _0623_;
+	wire _0624_;
+	wire _0625_;
+	wire _0626_;
+	wire _0627_;
+	wire _0628_;
+	wire _0629_;
+	wire _0630_;
+	wire _0631_;
+	wire _0632_;
+	wire _0633_;
+	wire _0634_;
+	wire _0635_;
+	wire _0636_;
+	wire _0637_;
+	wire _0638_;
+	wire _0639_;
+	wire _0640_;
+	wire _0641_;
+	wire _0642_;
+	wire _0643_;
+	wire _0644_;
+	wire _0645_;
+	wire _0646_;
+	wire _0647_;
+	wire _0648_;
+	wire _0649_;
+	wire _0650_;
+	wire _0651_;
+	wire _0652_;
+	wire _0653_;
+	wire _0654_;
+	wire _0655_;
+	wire _0656_;
+	wire _0657_;
+	wire _0658_;
+	wire _0659_;
+	wire _0660_;
+	wire _0661_;
+	wire _0662_;
+	wire _0663_;
+	wire _0664_;
+	wire _0665_;
+	wire _0666_;
+	wire _0667_;
+	wire _0668_;
+	wire _0669_;
+	wire _0670_;
+	wire _0671_;
+	wire _0672_;
+	wire _0673_;
+	wire _0674_;
+	wire _0675_;
+	wire _0676_;
+	wire _0677_;
+	wire _0678_;
+	wire _0679_;
+	wire _0680_;
+	wire _0681_;
+	wire _0682_;
+	wire _0683_;
+	wire _0684_;
+	wire _0685_;
+	wire _0686_;
+	wire _0687_;
+	wire _0688_;
+	wire _0689_;
+	wire _0690_;
+	wire _0691_;
+	wire _0692_;
+	wire _0693_;
+	wire _0694_;
+	wire _0695_;
+	wire _0696_;
+	wire _0697_;
+	wire _0698_;
+	wire _0699_;
+	wire _0700_;
+	wire _0701_;
+	wire _0702_;
+	wire _0703_;
+	wire _0704_;
+	wire _0705_;
+	wire _0706_;
+	wire _0707_;
+	wire _0708_;
+	wire _0709_;
+	wire _0710_;
+	wire _0711_;
+	wire _0712_;
+	wire _0713_;
+	wire _0714_;
+	wire _0715_;
+	wire _0716_;
+	wire _0717_;
+	wire _0718_;
+	wire _0719_;
+	wire _0720_;
+	wire _0721_;
+	wire _0722_;
+	wire _0723_;
+	wire _0724_;
+	wire _0725_;
+	wire _0726_;
+	wire _0727_;
+	wire _0728_;
+	wire _0729_;
+	wire _0730_;
+	wire _0731_;
+	wire _0732_;
+	wire _0733_;
+	wire _0734_;
+	wire _0735_;
+	wire _0736_;
+	wire _0737_;
+	wire _0738_;
+	wire _0739_;
+	wire _0740_;
+	wire _0741_;
+	wire _0742_;
+	wire _0743_;
+	wire _0744_;
+	wire _0745_;
+	wire _0746_;
+	wire _0747_;
+	wire _0748_;
+	wire _0749_;
+	wire _0750_;
+	wire _0751_;
+	wire _0752_;
+	wire _0753_;
+	wire _0754_;
+	wire _0755_;
+	wire _0756_;
+	wire _0757_;
+	wire _0758_;
+	wire _0759_;
+	wire _0760_;
+	wire _0761_;
+	wire _0762_;
+	wire _0763_;
+	wire _0764_;
+	wire _0765_;
+	wire _0766_;
+	wire _0767_;
+	wire _0768_;
+	wire _0769_;
+	wire _0770_;
+	wire _0771_;
+	wire _0772_;
+	wire _0773_;
+	wire _0774_;
+	wire _0775_;
+	wire _0776_;
+	wire _0777_;
+	wire _0778_;
+	wire _0779_;
+	wire _0780_;
+	wire _0781_;
+	wire _0782_;
+	wire _0783_;
+	wire _0784_;
+	wire _0785_;
+	wire _0786_;
+	wire _0787_;
+	wire _0788_;
+	wire _0789_;
+	wire _0790_;
+	wire _0791_;
+	wire _0792_;
+	wire _0793_;
+	wire _0794_;
+	wire _0795_;
+	wire _0796_;
+	wire _0797_;
+	wire _0798_;
+	wire _0799_;
+	wire _0800_;
+	wire _0801_;
+	wire _0802_;
+	wire _0803_;
+	wire _0804_;
+	wire _0805_;
+	wire _0806_;
+	wire _0807_;
+	wire _0808_;
+	wire _0809_;
+	wire _0810_;
+	wire _0811_;
+	wire _0812_;
+	wire _0813_;
+	wire _0814_;
+	wire _0815_;
+	wire _0816_;
+	wire _0817_;
+	wire _0818_;
+	wire _0819_;
+	wire _0820_;
+	wire _0821_;
+	wire _0822_;
+	wire _0823_;
+	wire _0824_;
+	wire _0825_;
+	wire _0826_;
+	wire _0827_;
+	wire _0828_;
+	wire _0829_;
+	wire _0830_;
+	wire _0831_;
+	wire _0832_;
+	wire _0833_;
+	wire _0834_;
+	wire _0835_;
+	wire _0836_;
+	wire _0837_;
+	wire _0838_;
+	wire _0839_;
+	wire _0840_;
+	wire _0841_;
+	wire _0842_;
+	wire _0843_;
+	wire _0844_;
+	wire _0845_;
+	wire _0846_;
+	wire _0847_;
+	wire _0848_;
+	wire _0849_;
+	wire _0850_;
+	wire _0851_;
+	wire _0852_;
+	wire _0853_;
+	wire _0854_;
+	wire _0855_;
+	wire _0856_;
+	wire _0857_;
+	wire _0858_;
+	wire _0859_;
+	wire _0860_;
+	wire _0861_;
+	wire _0862_;
+	wire _0863_;
+	wire _0864_;
+	wire _0865_;
+	wire _0866_;
+	wire _0867_;
+	wire _0868_;
+	wire _0869_;
+	wire _0870_;
+	wire _0871_;
+	wire _0872_;
+	wire _0873_;
+	wire _0874_;
+	wire _0875_;
+	wire _0876_;
+	wire _0877_;
+	wire _0878_;
+	wire _0879_;
+	wire _0880_;
+	wire _0881_;
+	wire _0882_;
+	wire _0883_;
+	wire _0884_;
+	wire _0885_;
+	wire _0886_;
+	wire _0887_;
+	wire _0888_;
+	wire _0889_;
+	wire _0890_;
+	wire _0891_;
+	wire _0892_;
+	wire _0893_;
+	wire _0894_;
+	wire _0895_;
+	wire _0896_;
+	wire _0897_;
+	wire _0898_;
+	wire _0899_;
+	wire _0900_;
+	wire _0901_;
+	wire _0902_;
+	wire _0903_;
+	wire _0904_;
+	wire _0905_;
+	wire _0906_;
+	wire _0907_;
+	wire _0908_;
+	wire _0909_;
+	wire _0910_;
+	wire _0911_;
+	wire _0912_;
+	wire _0913_;
+	wire _0914_;
+	wire _0915_;
+	wire _0916_;
+	wire _0917_;
+	wire _0918_;
+	wire _0919_;
+	wire _0920_;
+	wire _0921_;
+	wire _0922_;
+	wire _0923_;
+	wire _0924_;
+	wire _0925_;
+	wire _0926_;
+	wire _0927_;
+	wire _0928_;
+	wire _0929_;
+	wire _0930_;
+	wire _0931_;
+	wire _0932_;
+	wire _0933_;
+	wire _0934_;
+	wire _0935_;
+	wire _0936_;
+	wire _0937_;
+	wire _0938_;
+	wire _0939_;
+	wire _0940_;
+	wire _0941_;
+	wire _0942_;
+	wire _0943_;
+	wire _0944_;
+	wire _0945_;
+	wire _0946_;
+	wire _0947_;
+	wire _0948_;
+	wire _0949_;
+	wire _0950_;
+	wire _0951_;
+	wire _0952_;
+	wire _0953_;
+	wire _0954_;
+	wire _0955_;
+	wire _0956_;
+	wire _0957_;
+	wire _0958_;
+	wire _0959_;
+	wire _0960_;
+	wire _0961_;
+	wire _0962_;
+	wire _0963_;
+	wire _0964_;
+	wire _0965_;
+	wire _0966_;
+	wire _0967_;
+	wire _0968_;
+	wire _0969_;
+	wire _0970_;
+	wire _0971_;
+	wire _0972_;
+	wire _0973_;
+	wire _0974_;
+	wire _0975_;
+	wire _0976_;
+	wire _0977_;
+	wire _0978_;
+	wire _0979_;
+	wire _0980_;
+	wire _0981_;
+	wire _0982_;
+	wire _0983_;
+	wire _0984_;
+	wire _0985_;
+	wire _0986_;
+	wire _0987_;
+	wire _0988_;
+	wire _0989_;
+	wire _0990_;
+	wire _0991_;
+	wire _0992_;
+	wire _0993_;
+	wire _0994_;
+	wire _0995_;
+	wire _0996_;
+	wire _0997_;
+	wire _0998_;
+	wire _0999_;
+	wire _1000_;
+	wire _1001_;
+	wire _1002_;
+	wire _1003_;
+	wire _1004_;
+	wire _1005_;
+	wire _1006_;
+	wire _1007_;
+	wire _1008_;
+	wire _1009_;
+	wire _1010_;
+	wire _1011_;
+	wire _1012_;
+	wire _1013_;
+	wire _1014_;
+	wire _1015_;
+	wire _1016_;
+	wire _1017_;
+	wire _1018_;
+	wire _1019_;
+	wire _1020_;
+	wire _1021_;
+	wire _1022_;
+	wire _1023_;
+	wire _1024_;
+	wire _1025_;
+	wire _1026_;
+	wire _1027_;
+	wire _1028_;
+	wire _1029_;
+	wire _1030_;
+	wire _1031_;
+	wire _1032_;
+	wire _1033_;
+	wire _1034_;
+	wire _1035_;
+	wire _1036_;
+	wire _1037_;
+	wire _1038_;
+	wire _1039_;
+	wire _1040_;
+	wire _1041_;
+	wire _1042_;
+	wire _1043_;
+	wire _1044_;
+	wire _1045_;
+	wire _1046_;
+	wire _1047_;
+	wire _1048_;
+	wire _1049_;
+	wire _1050_;
+	wire _1051_;
+	wire _1052_;
+	wire _1053_;
+	wire _1054_;
+	wire _1055_;
+	wire _1056_;
+	wire _1057_;
+	wire _1058_;
+	wire _1059_;
+	wire _1060_;
+	wire _1061_;
+	wire _1062_;
+	wire _1063_;
+	wire _1064_;
+	wire _1065_;
+	wire _1066_;
+	wire _1067_;
+	wire _1068_;
+	wire _1069_;
+	wire _1070_;
+	wire _1071_;
+	wire _1072_;
+	wire _1073_;
+	wire _1074_;
+	wire _1075_;
+	wire _1076_;
+	wire _1077_;
+	wire _1078_;
+	wire _1079_;
+	wire _1080_;
+	wire _1081_;
+	wire _1082_;
+	wire _1083_;
+	wire _1084_;
+	wire _1085_;
+	wire _1086_;
+	wire _1087_;
+	wire _1088_;
+	wire _1089_;
+	wire _1090_;
+	wire _1091_;
+	wire _1092_;
+	wire _1093_;
+	wire _1094_;
+	wire _1095_;
+	wire _1096_;
+	wire _1097_;
+	wire _1098_;
+	wire _1099_;
+	wire _1100_;
+	wire _1101_;
+	wire _1102_;
+	wire _1103_;
+	wire _1104_;
+	wire _1105_;
+	wire _1106_;
+	wire _1107_;
+	wire _1108_;
+	wire _1109_;
+	wire _1110_;
+	wire _1111_;
+	wire _1112_;
+	wire _1113_;
+	wire _1114_;
+	wire _1115_;
+	wire _1116_;
+	wire _1117_;
+	wire _1118_;
+	wire _1119_;
+	wire _1120_;
+	wire _1121_;
+	wire _1122_;
+	wire _1123_;
+	wire _1124_;
+	wire _1125_;
+	wire _1126_;
+	wire _1127_;
+	wire _1128_;
+	wire _1129_;
+	wire _1130_;
+	wire _1131_;
+	wire _1132_;
+	wire _1133_;
+	wire _1134_;
+	wire _1135_;
+	wire _1136_;
+	wire _1137_;
+	wire _1138_;
+	wire _1139_;
+	wire _1140_;
+	wire _1141_;
+	wire _1142_;
+	wire _1143_;
+	wire _1144_;
+	wire _1145_;
+	wire _1146_;
+	wire _1147_;
+	wire _1148_;
+	wire _1149_;
+	wire _1150_;
+	wire _1151_;
+	wire _1152_;
+	wire _1153_;
+	wire _1154_;
+	wire _1155_;
+	wire _1156_;
+	wire _1157_;
+	wire _1158_;
+	wire _1159_;
+	wire _1160_;
+	wire _1161_;
+	wire _1162_;
+	wire _1163_;
+	wire _1164_;
+	wire _1165_;
+	wire _1166_;
+	wire _1167_;
+	wire _1168_;
+	wire _1169_;
+	wire _1170_;
+	wire _1171_;
+	wire _1172_;
+	wire _1173_;
+	wire _1174_;
+	wire _1175_;
+	wire _1176_;
+	wire _1177_;
+	wire _1178_;
+	wire _1179_;
+	wire _1180_;
+	wire _1181_;
+	wire _1182_;
+	wire _1183_;
+	wire _1184_;
+	wire _1185_;
+	wire _1186_;
+	wire _1187_;
+	wire _1188_;
+	wire _1189_;
+	wire _1190_;
+	wire _1191_;
+	wire _1192_;
+	wire _1193_;
+	wire _1194_;
+	wire _1195_;
+	wire _1196_;
+	wire _1197_;
+	wire _1198_;
+	wire _1199_;
+	wire _1200_;
+	wire _1201_;
+	wire _1202_;
+	wire _1203_;
+	wire _1204_;
+	wire _1205_;
+	wire _1206_;
+	wire _1207_;
+	wire _1208_;
+	wire _1209_;
+	wire _1210_;
+	wire _1211_;
+	wire _1212_;
+	wire _1213_;
+	wire _1214_;
+	wire _1215_;
+	wire _1216_;
+	wire _1217_;
+	wire _1218_;
+	wire _1219_;
+	wire _1220_;
+	wire _1221_;
+	wire _1222_;
+	wire _1223_;
+	wire _1224_;
+	wire _1225_;
+	wire _1226_;
+	wire _1227_;
+	wire _1228_;
+	wire _1229_;
+	wire _1230_;
+	wire _1231_;
+	wire _1232_;
+	wire _1233_;
+	wire _1234_;
+	wire _1235_;
+	wire _1236_;
+	wire _1237_;
+	wire _1238_;
+	wire _1239_;
+	wire _1240_;
+	wire _1241_;
+	wire _1242_;
+	wire _1243_;
+	wire _1244_;
+	wire _1245_;
+	wire _1246_;
+	wire _1247_;
+	wire _1248_;
+	wire _1249_;
+	wire _1250_;
+	wire _1251_;
+	wire _1252_;
+	wire _1253_;
+	wire _1254_;
+	wire _1255_;
+	wire _1256_;
+	wire _1257_;
+	wire _1258_;
+	wire _1259_;
+	wire _1260_;
+	wire _1261_;
+	wire _1262_;
+	wire _1263_;
+	wire _1264_;
+	wire _1265_;
+	wire _1266_;
+	wire _1267_;
+	wire _1268_;
+	wire _1269_;
+	wire _1270_;
+	wire _1271_;
+	wire _1272_;
+	wire _1273_;
+	wire _1274_;
+	wire _1275_;
+	wire _1276_;
+	wire _1277_;
+	wire _1278_;
+	wire _1279_;
+	wire _1280_;
+	wire _1281_;
+	wire _1282_;
+	wire _1283_;
+	wire _1284_;
+	wire _1285_;
+	wire _1286_;
+	wire _1287_;
+	wire _1288_;
+	wire _1289_;
+	wire _1290_;
+	wire _1291_;
+	wire _1292_;
+	wire _1293_;
+	wire _1294_;
+	wire _1295_;
+	wire _1296_;
+	wire _1297_;
+	wire _1298_;
+	wire _1299_;
+	wire _1300_;
+	wire _1301_;
+	wire _1302_;
+	wire _1303_;
+	wire _1304_;
+	wire _1305_;
+	wire _1306_;
+	wire _1307_;
+	wire _1308_;
+	wire _1309_;
+	wire _1310_;
+	wire _1311_;
+	wire _1312_;
+	wire _1313_;
+	wire _1314_;
+	wire _1315_;
+	wire _1316_;
+	wire _1317_;
+	wire _1318_;
+	wire _1319_;
+	wire _1320_;
+	wire _1321_;
+	wire _1322_;
+	wire _1323_;
+	wire _1324_;
+	wire _1325_;
+	wire _1326_;
+	wire _1327_;
+	wire _1328_;
+	wire _1329_;
+	wire _1330_;
+	wire _1331_;
+	wire _1332_;
+	wire _1333_;
+	wire _1334_;
+	wire _1335_;
+	wire _1336_;
+	wire _1337_;
+	wire _1338_;
+	wire _1339_;
+	wire _1340_;
+	wire _1341_;
+	wire _1342_;
+	wire _1343_;
+	wire _1344_;
+	wire _1345_;
+	wire _1346_;
+	wire _1347_;
+	wire _1348_;
+	wire _1349_;
+	wire _1350_;
+	wire _1351_;
+	wire _1352_;
+	wire _1353_;
+	wire _1354_;
+	wire _1355_;
+	wire _1356_;
+	wire _1357_;
+	wire _1358_;
+	wire _1359_;
+	wire _1360_;
+	wire _1361_;
+	wire _1362_;
+	wire _1363_;
+	wire _1364_;
+	wire _1365_;
+	wire _1366_;
+	wire _1367_;
+	wire _1368_;
+	wire _1369_;
+	wire _1370_;
+	wire _1371_;
+	wire _1372_;
+	wire _1373_;
+	wire _1374_;
+	wire _1375_;
+	wire _1376_;
+	wire _1377_;
+	wire _1378_;
+	wire _1379_;
+	wire _1380_;
+	wire _1381_;
+	wire _1382_;
+	wire _1383_;
+	wire _1384_;
+	wire _1385_;
+	wire _1386_;
+	wire _1387_;
+	wire _1388_;
+	wire _1389_;
+	wire _1390_;
+	wire _1391_;
+	wire _1392_;
+	wire _1393_;
+	wire _1394_;
+	wire _1395_;
+	wire _1396_;
+	wire _1397_;
+	wire _1398_;
+	wire _1399_;
+	wire _1400_;
+	wire _1401_;
+	wire _1402_;
+	wire _1403_;
+	wire _1404_;
+	wire _1405_;
+	wire _1406_;
+	wire _1407_;
+	wire _1408_;
+	wire _1409_;
+	wire _1410_;
+	wire _1411_;
+	wire _1412_;
+	wire _1413_;
+	wire _1414_;
+	wire _1415_;
+	wire _1416_;
+	wire _1417_;
+	wire _1418_;
+	wire _1419_;
+	wire _1420_;
+	wire _1421_;
+	wire _1422_;
+	wire _1423_;
+	wire _1424_;
+	wire _1425_;
+	wire _1426_;
+	wire _1427_;
+	wire _1428_;
+	wire _1429_;
+	wire _1430_;
+	wire _1431_;
+	wire _1432_;
+	wire _1433_;
+	wire _1434_;
+	wire _1435_;
+	wire _1436_;
+	wire _1437_;
+	wire _1438_;
+	wire _1439_;
+	wire _1440_;
+	wire _1441_;
+	wire _1442_;
+	wire _1443_;
+	wire _1444_;
+	wire _1445_;
+	wire _1446_;
+	wire _1447_;
+	wire _1448_;
+	wire _1449_;
+	wire _1450_;
+	wire _1451_;
+	wire _1452_;
+	wire _1453_;
+	wire _1454_;
+	wire _1455_;
+	wire _1456_;
+	wire _1457_;
+	wire _1458_;
+	wire _1459_;
+	wire _1460_;
+	wire _1461_;
+	wire _1462_;
+	wire _1463_;
+	wire _1464_;
+	wire _1465_;
+	wire _1466_;
+	wire _1467_;
+	wire _1468_;
+	wire _1469_;
+	wire _1470_;
+	wire _1471_;
+	wire _1472_;
+	wire _1473_;
+	wire _1474_;
+	wire _1475_;
+	wire _1476_;
+	wire _1477_;
+	wire _1478_;
+	wire _1479_;
+	wire _1480_;
+	wire _1481_;
+	wire _1482_;
+	wire _1483_;
+	wire _1484_;
+	wire _1485_;
+	wire _1486_;
+	wire _1487_;
+	wire _1488_;
+	wire _1489_;
+	wire _1490_;
+	wire _1491_;
+	wire _1492_;
+	wire _1493_;
+	wire _1494_;
+	wire _1495_;
+	wire _1496_;
+	wire _1497_;
+	wire _1498_;
+	wire _1499_;
+	wire _1500_;
+	wire _1501_;
+	wire _1502_;
+	wire _1503_;
+	wire _1504_;
+	wire _1505_;
+	wire _1506_;
+	wire _1507_;
+	wire _1508_;
+	wire _1509_;
+	wire _1510_;
+	wire _1511_;
+	wire _1512_;
+	wire _1513_;
+	wire _1514_;
+	wire _1515_;
+	wire _1516_;
+	wire _1517_;
+	wire _1518_;
+	wire _1519_;
+	wire _1520_;
+	wire _1521_;
+	wire _1522_;
+	wire _1523_;
+	wire _1524_;
+	wire _1525_;
+	wire _1526_;
+	wire _1527_;
+	wire _1528_;
+	wire _1529_;
+	wire _1530_;
+	wire _1531_;
+	wire _1532_;
+	wire _1533_;
+	wire _1534_;
+	wire _1535_;
+	wire _1536_;
+	wire _1537_;
+	wire _1538_;
+	wire _1539_;
+	wire _1540_;
+	wire _1541_;
+	wire _1542_;
+	wire _1543_;
+	wire _1544_;
+	wire _1545_;
+	wire _1546_;
+	wire _1547_;
+	wire _1548_;
+	wire _1549_;
+	wire _1550_;
+	wire _1551_;
+	wire _1552_;
+	wire _1553_;
+	wire _1554_;
+	wire _1555_;
+	wire _1556_;
+	wire _1557_;
+	wire _1558_;
+	wire _1559_;
+	wire _1560_;
+	wire _1561_;
+	wire _1562_;
+	wire _1563_;
+	wire _1564_;
+	wire _1565_;
+	wire _1566_;
+	wire _1567_;
+	wire _1568_;
+	wire _1569_;
+	wire _1570_;
+	wire _1571_;
+	wire _1572_;
+	wire _1573_;
+	wire _1574_;
+	wire _1575_;
+	wire _1576_;
+	wire _1577_;
+	wire _1578_;
+	wire _1579_;
+	wire _1580_;
+	wire _1581_;
+	wire _1582_;
+	wire _1583_;
+	wire _1584_;
+	wire _1585_;
+	wire _1586_;
+	wire _1587_;
+	wire _1588_;
+	wire _1589_;
+	wire _1590_;
+	wire _1591_;
+	wire _1592_;
+	wire _1593_;
+	wire _1594_;
+	wire _1595_;
+	wire _1596_;
+	wire _1597_;
+	wire _1598_;
+	wire _1599_;
+	wire _1600_;
+	wire _1601_;
+	wire _1602_;
+	wire _1603_;
+	wire _1604_;
+	wire _1605_;
+	wire _1606_;
+	wire _1607_;
+	wire _1608_;
+	wire _1609_;
+	wire _1610_;
+	wire _1611_;
+	wire _1612_;
+	wire _1613_;
+	wire _1614_;
+	wire _1615_;
+	wire _1616_;
+	wire _1617_;
+	wire _1618_;
+	wire _1619_;
+	wire _1620_;
+	wire _1621_;
+	wire _1622_;
+	wire _1623_;
+	wire _1624_;
+	wire _1625_;
+	wire _1626_;
+	wire _1627_;
+	wire _1628_;
+	wire _1629_;
+	wire _1630_;
+	wire _1631_;
+	wire _1632_;
+	wire _1633_;
+	wire _1634_;
+	wire _1635_;
+	wire _1636_;
+	wire _1637_;
+	wire _1638_;
+	wire _1639_;
+	wire _1640_;
+	wire _1641_;
+	wire _1642_;
+	wire _1643_;
+	wire _1644_;
+	wire _1645_;
+	wire _1646_;
+	wire _1647_;
+	wire _1648_;
+	wire _1649_;
+	wire _1650_;
+	wire _1651_;
+	wire _1652_;
+	wire _1653_;
+	wire _1654_;
+	wire _1655_;
+	wire _1656_;
+	wire _1657_;
+	wire _1658_;
+	wire _1659_;
+	wire _1660_;
+	wire _1661_;
+	wire _1662_;
+	wire _1663_;
+	wire _1664_;
+	wire _1665_;
+	wire _1666_;
+	wire _1667_;
+	wire _1668_;
+	wire _1669_;
+	wire _1670_;
+	wire _1671_;
+	wire _1672_;
+	wire _1673_;
+	wire _1674_;
+	wire _1675_;
+	wire _1676_;
+	wire _1677_;
+	wire _1678_;
+	wire _1679_;
+	wire _1680_;
+	wire _1681_;
+	wire _1682_;
+	wire _1683_;
+	wire _1684_;
+	wire _1685_;
+	wire _1686_;
+	wire _1687_;
+	wire _1688_;
+	wire _1689_;
+	wire _1690_;
+	wire _1691_;
+	wire _1692_;
+	wire _1693_;
+	wire _1694_;
+	wire _1695_;
+	wire _1696_;
+	wire _1697_;
+	wire _1698_;
+	wire _1699_;
+	wire _1700_;
+	wire _1701_;
+	wire _1702_;
+	wire _1703_;
+	wire _1704_;
+	wire _1705_;
+	wire _1706_;
+	wire _1707_;
+	wire _1708_;
+	wire _1709_;
+	wire _1710_;
+	wire _1711_;
+	wire _1712_;
+	wire _1713_;
+	wire _1714_;
+	wire _1715_;
+	wire _1716_;
+	wire _1717_;
+	wire _1718_;
+	wire _1719_;
+	wire _1720_;
+	wire _1721_;
+	wire _1722_;
+	wire _1723_;
+	wire _1724_;
+	wire _1725_;
+	wire _1726_;
+	wire _1727_;
+	wire _1728_;
+	wire _1729_;
+	wire _1730_;
+	wire _1731_;
+	wire _1732_;
+	wire _1733_;
+	wire _1734_;
+	wire _1735_;
+	wire _1736_;
+	wire _1737_;
+	wire _1738_;
+	wire _1739_;
+	wire _1740_;
+	wire _1741_;
+	wire _1742_;
+	wire _1743_;
+	wire _1744_;
+	wire _1745_;
+	wire _1746_;
+	wire _1747_;
+	wire _1748_;
+	wire _1749_;
+	wire _1750_;
+	wire _1751_;
+	wire _1752_;
+	wire _1753_;
+	wire _1754_;
+	wire _1755_;
+	wire _1756_;
+	wire _1757_;
+	wire _1758_;
+	wire _1759_;
+	wire _1760_;
+	wire _1761_;
+	wire _1762_;
+	wire _1763_;
+	wire _1764_;
+	wire _1765_;
+	wire _1766_;
+	wire _1767_;
+	wire _1768_;
+	wire _1769_;
+	wire _1770_;
+	wire _1771_;
+	wire _1772_;
+	wire _1773_;
+	wire _1774_;
+	wire _1775_;
+	wire _1776_;
+	wire _1777_;
+	wire _1778_;
+	wire _1779_;
+	wire _1780_;
+	wire _1781_;
+	wire _1782_;
+	wire _1783_;
+	wire _1784_;
+	wire _1785_;
+	wire _1786_;
+	wire _1787_;
+	wire _1788_;
+	wire _1789_;
+	wire _1790_;
+	wire _1791_;
+	wire _1792_;
+	wire _1793_;
+	wire _1794_;
+	wire _1795_;
+	wire _1796_;
+	wire _1797_;
+	wire _1798_;
+	wire _1799_;
+	wire _1800_;
+	wire _1801_;
+	wire _1802_;
+	wire _1803_;
+	wire _1804_;
+	wire _1805_;
+	wire _1806_;
+	wire _1807_;
+	wire _1808_;
+	wire _1809_;
+	wire _1810_;
+	wire _1811_;
+	wire _1812_;
+	wire _1813_;
+	wire _1814_;
+	wire _1815_;
+	wire _1816_;
+	wire _1817_;
+	wire _1818_;
+	wire _1819_;
+	wire _1820_;
+	wire _1821_;
+	wire _1822_;
+	wire _1823_;
+	wire _1824_;
+	wire _1825_;
+	wire _1826_;
+	wire _1827_;
+	wire _1828_;
+	wire _1829_;
+	wire _1830_;
+	wire _1831_;
+	wire _1832_;
+	wire _1833_;
+	wire _1834_;
+	wire _1835_;
+	wire _1836_;
+	wire _1837_;
+	wire _1838_;
+	wire _1839_;
+	wire _1840_;
+	wire _1841_;
+	wire _1842_;
+	wire _1843_;
+	wire _1844_;
+	wire _1845_;
+	wire _1846_;
+	wire _1847_;
+	wire _1848_;
+	wire _1849_;
+	wire _1850_;
+	wire _1851_;
+	wire _1852_;
+	wire _1853_;
+	wire _1854_;
+	wire _1855_;
+	wire _1856_;
+	wire _1857_;
+	wire _1858_;
+	wire _1859_;
+	wire _1860_;
+	wire _1861_;
+	wire _1862_;
+	wire _1863_;
+	wire _1864_;
+	wire _1865_;
+	wire _1866_;
+	wire _1867_;
+	wire _1868_;
+	wire _1869_;
+	wire _1870_;
+	wire _1871_;
+	wire _1872_;
+	wire _1873_;
+	wire _1874_;
+	wire _1875_;
+	wire _1876_;
+	wire _1877_;
+	wire _1878_;
+	wire _1879_;
+	wire _1880_;
+	wire _1881_;
+	wire _1882_;
+	wire _1883_;
+	wire _1884_;
+	wire _1885_;
+	wire _1886_;
+	wire _1887_;
+	wire _1888_;
+	wire _1889_;
+	wire _1890_;
+	wire _1891_;
+	wire _1892_;
+	wire _1893_;
+	wire _1894_;
+	wire _1895_;
+	wire _1896_;
+	wire _1897_;
+	wire _1898_;
+	wire _1899_;
+	wire _1900_;
+	wire _1901_;
+	wire _1902_;
+	wire _1903_;
+	wire _1904_;
+	wire _1905_;
+	wire _1906_;
+	wire _1907_;
+	wire _1908_;
+	wire _1909_;
+	wire _1910_;
+	wire _1911_;
+	wire _1912_;
+	wire _1913_;
+	wire _1914_;
+	wire _1915_;
+	wire _1916_;
+	wire _1917_;
+	wire _1918_;
+	wire _1919_;
+	wire _1920_;
+	wire _1921_;
+	wire _1922_;
+	wire _1923_;
+	wire _1924_;
+	wire _1925_;
+	wire _1926_;
+	wire _1927_;
+	wire _1928_;
+	wire _1929_;
+	wire _1930_;
+	wire _1931_;
+	wire _1932_;
+	wire _1933_;
+	wire _1934_;
+	wire _1935_;
+	wire _1936_;
+	wire _1937_;
+	wire _1938_;
+	wire _1939_;
+	wire _1940_;
+	wire _1941_;
+	wire _1942_;
+	wire _1943_;
+	wire _1944_;
+	wire _1945_;
+	wire _1946_;
+	wire _1947_;
+	wire _1948_;
+	wire _1949_;
+	wire _1950_;
+	wire _1951_;
+	wire _1952_;
+	wire _1953_;
+	wire _1954_;
+	wire _1955_;
+	wire _1956_;
+	wire _1957_;
+	wire _1958_;
+	wire _1959_;
+	wire _1960_;
+	wire _1961_;
+	wire _1962_;
+	wire _1963_;
+	wire _1964_;
+	wire _1965_;
+	wire _1966_;
+	wire _1967_;
+	wire _1968_;
+	wire _1969_;
+	wire _1970_;
+	wire _1971_;
+	wire _1972_;
+	wire _1973_;
+	wire _1974_;
+	wire _1975_;
+	wire _1976_;
+	wire _1977_;
+	wire _1978_;
+	wire _1979_;
+	wire _1980_;
+	wire _1981_;
+	wire _1982_;
+	wire _1983_;
+	wire _1984_;
+	wire _1985_;
+	wire _1986_;
+	wire _1987_;
+	wire _1988_;
+	wire _1989_;
+	wire _1990_;
+	wire _1991_;
+	wire _1992_;
+	wire _1993_;
+	wire _1994_;
+	wire _1995_;
+	wire _1996_;
+	wire _1997_;
+	wire _1998_;
+	wire _1999_;
+	wire _2000_;
+	wire _2001_;
+	wire _2002_;
+	wire _2003_;
+	wire _2004_;
+	wire _2005_;
+	wire _2006_;
+	wire _2007_;
+	wire _2008_;
+	wire _2009_;
+	wire _2010_;
+	wire _2011_;
+	wire _2012_;
+	wire _2013_;
+	wire _2014_;
+	wire _2015_;
+	wire _2016_;
+	wire _2017_;
+	wire _2018_;
+	wire _2019_;
+	wire _2020_;
+	wire _2021_;
+	wire _2022_;
+	wire _2023_;
+	wire _2024_;
+	wire _2025_;
+	wire _2026_;
+	wire _2027_;
+	wire _2028_;
+	wire _2029_;
+	wire _2030_;
+	wire _2031_;
+	wire _2032_;
+	wire _2033_;
+	wire _2034_;
+	wire _2035_;
+	wire _2036_;
+	wire _2037_;
+	wire _2038_;
+	wire _2039_;
+	wire _2040_;
+	wire _2041_;
+	wire _2042_;
+	wire _2043_;
+	wire _2044_;
+	wire _2045_;
+	wire _2046_;
+	wire _2047_;
+	wire _2048_;
+	wire _2049_;
+	wire _2050_;
+	wire _2051_;
+	wire _2052_;
+	wire _2053_;
+	wire _2054_;
+	wire _2055_;
+	wire _2056_;
+	wire _2057_;
+	wire _2058_;
+	wire _2059_;
+	wire _2060_;
+	wire _2061_;
+	wire _2062_;
+	wire _2063_;
+	wire _2064_;
+	wire _2065_;
+	wire _2066_;
+	wire _2067_;
+	wire _2068_;
+	wire _2069_;
+	wire _2070_;
+	wire _2071_;
+	wire _2072_;
+	wire _2073_;
+	wire _2074_;
+	wire _2075_;
+	wire _2076_;
+	wire _2077_;
+	wire _2078_;
+	wire _2079_;
+	wire _2080_;
+	wire _2081_;
+	wire _2082_;
+	wire _2083_;
+	wire _2084_;
+	wire _2085_;
+	wire _2086_;
+	wire _2087_;
+	wire _2088_;
+	wire _2089_;
+	wire _2090_;
+	wire _2091_;
+	wire _2092_;
+	wire _2093_;
+	wire _2094_;
+	wire _2095_;
+	wire _2096_;
+	wire _2097_;
+	wire _2098_;
+	wire _2099_;
+	wire _2100_;
+	wire _2101_;
+	wire _2102_;
+	wire _2103_;
+	wire _2104_;
+	wire _2105_;
+	wire _2106_;
+	wire _2107_;
+	wire _2108_;
+	wire _2109_;
+	wire _2110_;
+	wire _2111_;
+	wire _2112_;
+	wire _2113_;
+	wire _2114_;
+	wire _2115_;
+	wire _2116_;
+	wire _2117_;
+	wire _2118_;
+	wire _2119_;
+	wire _2120_;
+	wire _2121_;
+	wire _2122_;
+	wire _2123_;
+	wire _2124_;
+	wire _2125_;
+	wire _2126_;
+	wire _2127_;
+	wire _2128_;
+	wire _2129_;
+	wire _2130_;
+	wire _2131_;
+	wire _2132_;
+	wire _2133_;
+	wire _2134_;
+	wire _2135_;
+	wire _2136_;
+	wire _2137_;
+	wire _2138_;
+	wire _2139_;
+	wire _2140_;
+	wire _2141_;
+	wire _2142_;
+	wire _2143_;
+	wire _2144_;
+	wire _2145_;
+	wire _2146_;
+	wire _2147_;
+	wire _2148_;
+	wire _2149_;
+	wire _2150_;
+	wire _2151_;
+	wire _2152_;
+	wire _2153_;
+	wire _2154_;
+	wire _2155_;
+	wire _2156_;
+	wire _2157_;
+	wire _2158_;
+	wire _2159_;
+	wire _2160_;
+	wire _2161_;
+	wire _2162_;
+	wire _2163_;
+	wire _2164_;
+	wire _2165_;
+	wire _2166_;
+	wire _2167_;
+	wire _2168_;
+	wire _2169_;
+	wire _2170_;
+	wire _2171_;
+	wire _2172_;
+	wire _2173_;
+	wire _2174_;
+	wire _2175_;
+	wire _2176_;
+	wire _2177_;
+	wire _2178_;
+	wire _2179_;
+	wire _2180_;
+	wire _2181_;
+	wire _2182_;
+	wire _2183_;
+	wire _2184_;
+	wire _2185_;
+	wire _2186_;
+	wire _2187_;
+	wire _2188_;
+	wire _2189_;
+	wire _2190_;
+	wire _2191_;
+	wire _2192_;
+	wire _2193_;
+	wire _2194_;
+	wire _2195_;
+	wire _2196_;
+	wire _2197_;
+	wire _2198_;
+	wire _2199_;
+	wire _2200_;
+	wire _2201_;
+	wire _2202_;
+	wire _2203_;
+	wire _2204_;
+	wire _2205_;
+	wire _2206_;
+	wire _2207_;
+	wire _2208_;
+	wire _2209_;
+	wire _2210_;
+	wire _2211_;
+	wire _2212_;
+	wire _2213_;
+	wire _2214_;
+	wire _2215_;
+	wire _2216_;
+	wire _2217_;
+	wire _2218_;
+	wire _2219_;
+	wire _2220_;
+	wire _2221_;
+	wire _2222_;
+	wire _2223_;
+	wire _2224_;
+	wire _2225_;
+	wire _2226_;
+	wire _2227_;
+	wire _2228_;
+	wire _2229_;
+	wire _2230_;
+	wire _2231_;
+	wire _2232_;
+	wire _2233_;
+	wire _2234_;
+	wire _2235_;
+	wire _2236_;
+	wire _2237_;
+	wire _2238_;
+	wire _2239_;
+	wire _2240_;
+	wire _2241_;
+	wire _2242_;
+	wire _2243_;
+	wire _2244_;
+	wire _2245_;
+	wire _2246_;
+	wire _2247_;
+	wire _2248_;
+	wire _2249_;
+	wire _2250_;
+	wire _2251_;
+	wire _2252_;
+	wire _2253_;
+	wire _2254_;
+	wire _2255_;
+	wire _2256_;
+	wire _2257_;
+	wire _2258_;
+	wire _2259_;
+	wire _2260_;
+	wire _2261_;
+	wire _2262_;
+	wire _2263_;
+	wire _2264_;
+	wire _2265_;
+	wire _2266_;
+	wire _2267_;
+	wire _2268_;
+	wire _2269_;
+	wire _2270_;
+	wire _2271_;
+	wire _2272_;
+	wire _2273_;
+	wire _2274_;
+	wire _2275_;
+	wire _2276_;
+	wire _2277_;
+	wire _2278_;
+	wire _2279_;
+	wire _2280_;
+	wire _2281_;
+	wire _2282_;
+	wire _2283_;
+	wire _2284_;
+	wire _2285_;
+	wire _2286_;
+	wire _2287_;
+	wire _2288_;
+	wire _2289_;
+	wire _2290_;
+	wire _2291_;
+	wire _2292_;
+	wire _2293_;
+	wire _2294_;
+	wire _2295_;
+	wire _2296_;
+	wire _2297_;
+	wire _2298_;
+	wire _2299_;
+	wire _2300_;
+	wire _2301_;
+	wire _2302_;
+	wire _2303_;
+	wire _2304_;
+	wire _2305_;
+	wire _2306_;
+	wire _2307_;
+	wire _2308_;
+	wire _2309_;
+	wire _2310_;
+	wire _2311_;
+	wire _2312_;
+	wire _2313_;
+	wire _2314_;
+	wire _2315_;
+	wire _2316_;
+	wire _2317_;
+	wire _2318_;
+	wire _2319_;
+	wire _2320_;
+	wire _2321_;
+	wire _2322_;
+	wire _2323_;
+	wire _2324_;
+	wire _2325_;
+	wire _2326_;
+	wire _2327_;
+	wire _2328_;
+	wire _2329_;
+	wire _2330_;
+	wire _2331_;
+	wire _2332_;
+	wire _2333_;
+	wire _2334_;
+	wire _2335_;
+	wire _2336_;
+	wire _2337_;
+	wire _2338_;
+	wire _2339_;
+	wire _2340_;
+	wire _2341_;
+	wire _2342_;
+	wire _2343_;
+	wire _2344_;
+	wire _2345_;
+	wire _2346_;
+	wire _2347_;
+	wire _2348_;
+	wire _2349_;
+	wire _2350_;
+	wire _2351_;
+	wire _2352_;
+	wire _2353_;
+	wire _2354_;
+	wire _2355_;
+	wire _2356_;
+	wire _2357_;
+	wire _2358_;
+	wire _2359_;
+	wire _2360_;
+	wire _2361_;
+	wire _2362_;
+	wire _2363_;
+	wire _2364_;
+	wire _2365_;
+	wire _2366_;
+	wire _2367_;
+	wire _2368_;
+	wire _2369_;
+	wire _2370_;
+	wire _2371_;
+	wire _2372_;
+	wire _2373_;
+	wire _2374_;
+	wire _2375_;
+	wire _2376_;
+	wire _2377_;
+	wire _2378_;
+	wire _2379_;
+	wire _2380_;
+	wire _2381_;
+	wire _2382_;
+	wire _2383_;
+	wire _2384_;
+	wire _2385_;
+	wire _2386_;
+	wire _2387_;
+	wire _2388_;
+	wire _2389_;
+	wire _2390_;
+	wire _2391_;
+	wire _2392_;
+	wire _2393_;
+	wire _2394_;
+	wire _2395_;
+	wire _2396_;
+	wire _2397_;
+	wire _2398_;
+	wire _2399_;
+	wire _2400_;
+	wire _2401_;
+	wire _2402_;
+	wire _2403_;
+	wire _2404_;
+	wire _2405_;
+	wire _2406_;
+	wire _2407_;
+	wire _2408_;
+	wire _2409_;
+	wire _2410_;
+	wire _2411_;
+	wire _2412_;
+	wire _2413_;
+	wire _2414_;
+	wire _2415_;
+	wire _2416_;
+	wire _2417_;
+	wire _2418_;
+	wire _2419_;
+	wire _2420_;
+	wire _2421_;
+	wire _2422_;
+	wire _2423_;
+	wire _2424_;
+	wire _2425_;
+	wire _2426_;
+	wire _2427_;
+	wire _2428_;
+	wire _2429_;
+	wire _2430_;
+	wire _2431_;
+	wire _2432_;
+	wire _2433_;
+	wire _2434_;
+	wire _2435_;
+	wire _2436_;
+	wire _2437_;
+	wire _2438_;
+	wire _2439_;
+	wire _2440_;
+	wire _2441_;
+	wire _2442_;
+	wire _2443_;
+	wire _2444_;
+	wire _2445_;
+	wire _2446_;
+	wire _2447_;
+	wire _2448_;
+	wire _2449_;
+	wire _2450_;
+	wire _2451_;
+	wire _2452_;
+	wire _2453_;
+	wire _2454_;
+	wire _2455_;
+	wire _2456_;
+	wire _2457_;
+	wire _2458_;
+	wire _2459_;
+	wire _2460_;
+	wire _2461_;
+	wire _2462_;
+	wire _2463_;
+	wire _2464_;
+	wire _2465_;
+	wire _2466_;
+	wire _2467_;
+	wire _2468_;
+	wire _2469_;
+	wire _2470_;
+	wire _2471_;
+	wire _2472_;
+	wire _2473_;
+	wire _2474_;
+	wire _2475_;
+	wire _2476_;
+	wire _2477_;
+	wire _2478_;
+	wire _2479_;
+	wire _2480_;
+	wire _2481_;
+	wire _2482_;
+	wire _2483_;
+	wire _2484_;
+	wire _2485_;
+	wire _2486_;
+	wire _2487_;
+	wire _2488_;
+	wire _2489_;
+	wire _2490_;
+	wire _2491_;
+	wire _2492_;
+	wire _2493_;
+	wire _2494_;
+	wire _2495_;
+	wire _2496_;
+	wire _2497_;
+	wire _2498_;
+	wire _2499_;
+	wire _2500_;
+	wire _2501_;
+	wire _2502_;
+	wire _2503_;
+	wire _2504_;
+	wire _2505_;
+	wire _2506_;
+	wire _2507_;
+	wire _2508_;
+	wire _2509_;
+	wire _2510_;
+	wire _2511_;
+	wire _2512_;
+	wire _2513_;
+	wire _2514_;
+	wire _2515_;
+	wire _2516_;
+	wire _2517_;
+	wire _2518_;
+	wire _2519_;
+	wire _2520_;
+	wire _2521_;
+	wire _2522_;
+	wire _2523_;
+	wire _2524_;
+	wire _2525_;
+	wire _2526_;
+	wire _2527_;
+	wire _2528_;
+	wire _2529_;
+	wire _2530_;
+	wire _2531_;
+	wire _2532_;
+	wire _2533_;
+	wire _2534_;
+	wire _2535_;
+	wire _2536_;
+	wire _2537_;
+	wire _2538_;
+	wire _2539_;
+	wire _2540_;
+	wire _2541_;
+	wire _2542_;
+	wire _2543_;
+	wire _2544_;
+	wire _2545_;
+	wire _2546_;
+	wire _2547_;
+	wire _2548_;
+	wire _2549_;
+	wire _2550_;
+	wire _2551_;
+	wire _2552_;
+	wire _2553_;
+	wire _2554_;
+	wire _2555_;
+	wire _2556_;
+	wire _2557_;
+	wire _2558_;
+	wire _2559_;
+	wire _2560_;
+	wire _2561_;
+	wire _2562_;
+	wire _2563_;
+	wire _2564_;
+	wire _2565_;
+	wire _2566_;
+	wire _2567_;
+	wire _2568_;
+	wire _2569_;
+	wire _2570_;
+	wire _2571_;
+	wire _2572_;
+	wire _2573_;
+	wire _2574_;
+	wire _2575_;
+	wire _2576_;
+	wire _2577_;
+	wire _2578_;
+	wire _2579_;
+	wire _2580_;
+	wire _2581_;
+	wire _2582_;
+	wire _2583_;
+	wire _2584_;
+	wire _2585_;
+	wire _2586_;
+	wire _2587_;
+	wire _2588_;
+	wire _2589_;
+	wire _2590_;
+	wire _2591_;
+	wire _2592_;
+	wire _2593_;
+	wire _2594_;
+	wire _2595_;
+	wire _2596_;
+	wire _2597_;
+	wire _2598_;
+	wire _2599_;
+	wire _2600_;
+	wire _2601_;
+	wire _2602_;
+	wire _2603_;
+	wire _2604_;
+	wire _2605_;
+	wire _2606_;
+	wire _2607_;
+	wire _2608_;
+	wire _2609_;
+	wire _2610_;
+	wire _2611_;
+	wire _2612_;
+	wire _2613_;
+	wire _2614_;
+	wire _2615_;
+	wire _2616_;
+	wire _2617_;
+	wire _2618_;
+	wire _2619_;
+	wire _2620_;
+	wire _2621_;
+	wire _2622_;
+	wire _2623_;
+	wire _2624_;
+	wire _2625_;
+	wire _2626_;
+	wire _2627_;
+	wire _2628_;
+	wire _2629_;
+	wire _2630_;
+	wire _2631_;
+	wire _2632_;
+	wire _2633_;
+	wire _2634_;
+	wire _2635_;
+	wire _2636_;
+	wire _2637_;
+	wire _2638_;
+	wire _2639_;
+	wire _2640_;
+	wire _2641_;
+	wire _2642_;
+	wire _2643_;
+	wire _2644_;
+	wire _2645_;
+	wire _2646_;
+	wire _2647_;
+	wire _2648_;
+	wire _2649_;
+	wire _2650_;
+	wire _2651_;
+	wire _2652_;
+	wire _2653_;
+	wire _2654_;
+	wire _2655_;
+	wire _2656_;
+	wire _2657_;
+	wire _2658_;
+	wire _2659_;
+	wire _2660_;
+	wire _2661_;
+	wire _2662_;
+	wire _2663_;
+	wire _2664_;
+	wire _2665_;
+	wire _2666_;
+	wire _2667_;
+	wire _2668_;
+	wire _2669_;
+	wire _2670_;
+	wire _2671_;
+	wire _2672_;
+	wire _2673_;
+	wire _2674_;
+	wire _2675_;
+	wire _2676_;
+	wire _2677_;
+	wire _2678_;
+	wire _2679_;
+	wire _2680_;
+	wire _2681_;
+	wire _2682_;
+	wire _2683_;
+	wire _2684_;
+	wire _2685_;
+	wire _2686_;
+	wire _2687_;
+	wire _2688_;
+	wire _2689_;
+	wire _2690_;
+	wire _2691_;
+	wire _2692_;
+	wire _2693_;
+	wire _2694_;
+	wire _2695_;
+	wire _2696_;
+	wire _2697_;
+	wire _2698_;
+	wire _2699_;
+	wire _2700_;
+	wire _2701_;
+	wire _2702_;
+	wire _2703_;
+	wire _2704_;
+	wire _2705_;
+	wire _2706_;
+	wire _2707_;
+	wire _2708_;
+	wire _2709_;
+	wire _2710_;
+	wire _2711_;
+	wire _2712_;
+	wire _2713_;
+	wire _2714_;
+	wire _2715_;
+	wire _2716_;
+	wire _2717_;
+	wire _2718_;
+	wire _2719_;
+	wire _2720_;
+	wire _2721_;
+	wire _2722_;
+	wire _2723_;
+	wire _2724_;
+	wire _2725_;
+	wire _2726_;
+	wire _2727_;
+	wire _2728_;
+	wire _2729_;
+	wire _2730_;
+	wire _2731_;
+	wire _2732_;
+	wire _2733_;
+	wire _2734_;
+	wire _2735_;
+	wire _2736_;
+	wire _2737_;
+	wire _2738_;
+	wire _2739_;
+	wire _2740_;
+	wire _2741_;
+	wire _2742_;
+	wire _2743_;
+	wire _2744_;
+	wire _2745_;
+	wire _2746_;
+	wire _2747_;
+	wire _2748_;
+	wire _2749_;
+	wire _2750_;
+	wire _2751_;
+	wire _2752_;
+	wire _2753_;
+	wire _2754_;
+	wire _2755_;
+	wire _2756_;
+	wire _2757_;
+	wire _2758_;
+	wire _2759_;
+	wire _2760_;
+	wire _2761_;
+	wire _2762_;
+	wire _2763_;
+	wire _2764_;
+	wire _2765_;
+	wire _2766_;
+	wire _2767_;
+	wire _2768_;
+	wire _2769_;
+	wire _2770_;
+	wire _2771_;
+	wire _2772_;
+	wire _2773_;
+	wire _2774_;
+	wire _2775_;
+	wire _2776_;
+	wire _2777_;
+	wire _2778_;
+	wire _2779_;
+	wire _2780_;
+	wire _2781_;
+	wire _2782_;
+	wire _2783_;
+	wire _2784_;
+	wire _2785_;
+	wire _2786_;
+	wire _2787_;
+	wire _2788_;
+	wire _2789_;
+	wire _2790_;
+	wire _2791_;
+	wire _2792_;
+	wire _2793_;
+	wire _2794_;
+	wire _2795_;
+	wire _2796_;
+	wire _2797_;
+	wire _2798_;
+	wire _2799_;
+	wire _2800_;
+	wire _2801_;
+	wire _2802_;
+	wire _2803_;
+	wire _2804_;
+	wire _2805_;
+	wire _2806_;
+	wire _2807_;
+	wire _2808_;
+	wire _2809_;
+	wire _2810_;
+	wire _2811_;
+	wire _2812_;
+	wire _2813_;
+	wire _2814_;
+	wire _2815_;
+	wire _2816_;
+	wire _2817_;
+	wire _2818_;
+	wire _2819_;
+	wire _2820_;
+	wire _2821_;
+	wire _2822_;
+	wire _2823_;
+	wire _2824_;
+	wire _2825_;
+	wire _2826_;
+	wire _2827_;
+	wire _2828_;
+	wire _2829_;
+	wire _2830_;
+	wire _2831_;
+	wire _2832_;
+	input wire [13:0] io_in;
+	output wire [13:0] io_out;
+	wire \mchip.clock ;
+	wire \mchip.design.clock ;
+	wire [3:0] \mchip.design.data_ENDP ;
+	wire [3:0] \mchip.design.data_in ;
+	wire [3:0] \mchip.design.data_indx ;
+	wire [3:0] \mchip.design.data_out ;
+	wire \mchip.design.data_received ;
+	wire [63:0] \mchip.design.final_data ;
+	wire \mchip.design.finished ;
+	wire [63:0] \mchip.design.in_data ;
+	wire [7:0] \mchip.design.inter.Addr_reg ;
+	wire [7:0] \mchip.design.inter.ENDP_reg ;
+	wire \mchip.design.inter.clock ;
+	wire [3:0] \mchip.design.inter.count_next ;
+	wire [3:0] \mchip.design.inter.cur_state ;
+	wire [3:0] \mchip.design.inter.data_ENDP ;
+	wire [3:0] \mchip.design.inter.data_in ;
+	wire [3:0] \mchip.design.inter.data_indx ;
+	wire [3:0] \mchip.design.inter.data_out ;
+	wire [63:0] \mchip.design.inter.data_out_reg ;
+	wire \mchip.design.inter.data_received ;
+	wire [63:0] \mchip.design.inter.final_data ;
+	wire [63:0] \mchip.design.inter.memdata ;
+	wire [15:0] \mchip.design.inter.mempage ;
+	wire [15:0] \mchip.design.inter.mempage_reg ;
+	wire [3:0] \mchip.design.inter.mode ;
+	wire [31:0] \mchip.design.inter.msc_hb.in_reg ;
+	wire [3:0] \mchip.design.inter.next_state ;
+	wire [63:0] \mchip.design.inter.out_hb.in_reg ;
+	wire [6:0] \mchip.design.inter.send_Addr ;
+	wire [3:0] \mchip.design.io_fsm.PID_to_sender ;
+	wire \mchip.design.io_fsm.clock ;
+	wire \mchip.design.io_fsm.completed_transaction_log ;
+	wire [3:0] \mchip.design.io_fsm.cur_state ;
+	wire [3:0] \mchip.design.io_fsm.data_ENDP ;
+	wire \mchip.design.io_fsm.ended_with_errors_log ;
+	wire [3:0] \mchip.design.io_fsm.error_counter_nxt ;
+	wire [63:0] \mchip.design.io_fsm.final_data ;
+	wire [3:0] \mchip.design.io_fsm.next_state ;
+	wire [3:0] \mchip.design.io_fsm.received_PID ;
+	wire [63:0] \mchip.design.io_fsm.received_data ;
+	wire [3:0] \mchip.design.io_fsm.timeout_counter_nxt ;
+	wire [8:0] \mchip.design.io_fsm.timer_nxt ;
+	wire [15:0] \mchip.design.memory_address ;
+	wire [63:0] \mchip.design.memory_data ;
+	wire [3:0] \mchip.design.mode ;
+	wire \mchip.design.read ;
+	wire [3:0] \mchip.design.received_PID ;
+	wire [63:0] \mchip.design.received_payload ;
+	wire [3:0] \mchip.design.receiver.PID ;
+	wire [63:0] \mchip.design.receiver.Payload ;
+	wire \mchip.design.receiver.bit_unstuff.bit_out ;
+	wire \mchip.design.receiver.bit_unstuff.clock ;
+	wire \mchip.design.receiver.clock ;
+	wire \mchip.design.receiver.crc.bit_in ;
+	wire \mchip.design.receiver.crc.clock ;
+	wire \mchip.design.receiver.crc.crc16.bit_in ;
+	wire \mchip.design.receiver.crc.crc16.clock ;
+	wire \mchip.design.receiver.crc.crc5.bit_in ;
+	wire \mchip.design.receiver.crc.crc5.clock ;
+	wire [6:0] \mchip.design.receiver.crc.index ;
+	wire [31:0] \mchip.design.receiver.crc.sv2v_autoblock_1.i ;
+	wire [31:0] \mchip.design.receiver.crc.sv2v_autoblock_2.j ;
+	wire \mchip.design.receiver.find_sync.bit_in ;
+	wire \mchip.design.receiver.find_sync.clock ;
+	wire [7:0] \mchip.design.receiver.find_sync.log ;
+	wire [3:0] \mchip.design.receiver.fsm.PID ;
+	wire \mchip.design.receiver.fsm.clock ;
+	wire [6:0] \mchip.design.receiver.fsm.count_next ;
+	wire [2:0] \mchip.design.receiver.fsm.next_state ;
+	wire \mchip.design.receiver.fsm.nrzi_en ;
+	wire \mchip.design.receiver.nrzi.bit_in ;
+	wire \mchip.design.receiver.nrzi.clock ;
+	wire \mchip.design.receiver.nrzi.cur_value_next ;
+	wire \mchip.design.receiver.nrzi.en ;
+	wire \mchip.design.receiver.nrzi_en ;
+	wire [63:0] \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
+	wire [7:0] \mchip.design.receiver.packet_decode.PID_accum ;
+	wire \mchip.design.receiver.packet_decode.bit_in ;
+	wire \mchip.design.receiver.packet_decode.clock ;
+	wire [63:0] \mchip.design.receiver.packet_decode.payload ;
+	wire [3:0] \mchip.design.receiver.packet_decode.pid ;
+	wire [3:0] \mchip.design.receiver.packet_decode.pid_inv ;
+	wire [3:0] \mchip.design.receiver.packet_decode.pid_to_fsm ;
+	wire [63:0] \mchip.design.receiver.payload ;
+	wire [3:0] \mchip.design.receiver.pid ;
+	wire [3:0] \mchip.design.receiver.pid_to_fsm ;
+	wire \mchip.design.receiver.stuff_out ;
+	wire \mchip.design.receiver.wire_in.bit_out ;
+	wire \mchip.design.receiver.wire_in.clock ;
+	wire \mchip.design.receiver.wire_in.dm ;
+	wire [2:0] \mchip.design.receiver.wire_in.dm_log ;
+	wire \mchip.design.receiver.wire_in.dp ;
+	wire [2:0] \mchip.design.receiver.wire_in.dp_log ;
+	wire [1:0] \mchip.design.receiver.wire_in.wires_in ;
+	wire \mchip.design.receiver.wire_out ;
+	wire [1:0] \mchip.design.receiver.wires_in ;
+	wire \mchip.design.rw_fsm.clock ;
+	wire [63:0] \mchip.design.rw_fsm.final_data ;
+	wire \mchip.design.rw_fsm.finished ;
+	wire [63:0] \mchip.design.rw_fsm.in_data ;
+	wire [63:0] \mchip.design.rw_fsm.memdata ;
+	wire [15:0] \mchip.design.rw_fsm.mempage ;
+	wire [2:0] \mchip.design.rw_fsm.next_state ;
+	wire [63:0] \mchip.design.rw_fsm.page_data ;
+	wire [6:0] \mchip.design.send_Addr ;
+	wire [3:0] \mchip.design.send_PID ;
+	wire [1:0] \mchip.design.status ;
+	wire [6:0] \mchip.design.transmitter.Addr ;
+	wire [3:0] \mchip.design.transmitter.PID ;
+	wire \mchip.design.transmitter.bit_stuff.clock ;
+	wire \mchip.design.transmitter.clock ;
+	wire \mchip.design.transmitter.crc.clock ;
+	wire \mchip.design.transmitter.crc.crc16.clock ;
+	wire \mchip.design.transmitter.crc.crc5.clock ;
+	wire [31:0] \mchip.design.transmitter.crc.sv2v_autoblock_1.i ;
+	wire [31:0] \mchip.design.transmitter.crc.sv2v_autoblock_2.j ;
+	wire [6:0] \mchip.design.transmitter.encoder.Addr ;
+	wire [10:0] \mchip.design.transmitter.encoder.Addr_Endp_register ;
+	wire [6:0] \mchip.design.transmitter.encoder.Addr_lsb ;
+	wire [3:0] \mchip.design.transmitter.encoder.PID ;
+	wire [7:0] \mchip.design.transmitter.encoder.PID_full ;
+	wire [3:0] \mchip.design.transmitter.encoder.PID_lsb ;
+	wire [3:0] \mchip.design.transmitter.encoder.PID_lsb_inv ;
+	wire [7:0] \mchip.design.transmitter.encoder.SYNC ;
+	wire \mchip.design.transmitter.encoder.clock ;
+	wire [31:0] \mchip.design.transmitter.encoder.sv2v_autoblock_1.i ;
+	wire [31:0] \mchip.design.transmitter.encoder.sv2v_autoblock_2.j ;
+	wire [31:0] \mchip.design.transmitter.encoder.sv2v_autoblock_3.k ;
+	wire [3:0] \mchip.design.transmitter.fsm.PID ;
+	wire \mchip.design.transmitter.fsm.clock ;
+	wire [6:0] \mchip.design.transmitter.fsm.count_next ;
+	wire [2:0] \mchip.design.transmitter.fsm.next_state ;
+	wire \mchip.design.transmitter.nrzi.clock ;
+	wire \mchip.design.transmitter.out_wire.clock ;
+	wire [1:0] \mchip.design.transmitter.out_wire.wires_out ;
+	wire [1:0] \mchip.design.transmitter.wires_out ;
+	wire [1:0] \mchip.design.wires_in ;
+	wire [1:0] \mchip.design.wires_out ;
+	wire \mchip.design.write ;
+	wire [11:0] \mchip.io_in ;
+	wire [11:0] \mchip.io_out ;
+	wire \mchip.reset ;
+	assign \mchip.design.receiver.wire_in.dp_log [0] = _0392_ & ~io_in[13];
+	assign \mchip.design.receiver.wire_in.dp_log [1] = _0393_ & ~io_in[13];
+	assign \mchip.design.receiver.wire_in.dm_log [1] = _0390_ & ~io_in[13];
+	assign \mchip.design.receiver.wire_in.dm_log [0] = _0389_ & ~io_in[13];
+	assign _2635_ = _0277_ & ~io_in[13];
+	assign _2636_ = io_in[13] | ~_0276_;
+	assign _2637_ = _2636_ | ~_2635_;
+	assign _2638_ = ~_2635_;
+	assign _2639_ = _0275_ & ~io_in[13];
+	assign _2640_ = _2636_ | ~_2639_;
+	assign _2641_ = _2640_ | _2638_;
+	assign _2642_ = \mchip.design.receiver.wire_in.dp_log [0] & ~\mchip.design.receiver.wire_in.dp_log [1];
+	assign _2643_ = _0394_ & ~io_in[13];
+	assign _2644_ = _2642_ & ~_2643_;
+	assign _2645_ = \mchip.design.receiver.wire_in.dm_log [0] | \mchip.design.receiver.wire_in.dm_log [1];
+	assign _2646_ = _0391_ & ~io_in[13];
+	assign _2647_ = _2646_ | _2645_;
+	assign _2648_ = _2644_ & ~_2647_;
+	assign _2649_ = _2641_ | ~_2648_;
+	assign _2650_ = _2639_ | _2636_;
+	assign _2651_ = ~(_2650_ | _2638_);
+	assign _2652_ = io_in[13] | ~_0381_;
+	assign _2653_ = _0380_ & ~io_in[13];
+	assign _2654_ = _0379_ & ~io_in[13];
+	assign _2655_ = _2654_ | _2653_;
+	assign _2656_ = _2652_ & ~_2655_;
+	assign _2657_ = _0378_ & ~io_in[13];
+	assign _2658_ = _0377_ & ~io_in[13];
+	assign _2659_ = _2658_ | _2657_;
+	assign _2426_ = _0375_ & ~io_in[13];
+	assign _2660_ = io_in[13] | ~_0376_;
+	assign _2661_ = _2660_ | _2426_;
+	assign _2662_ = _2661_ | _2659_;
+	assign _2663_ = _2656_ & ~_2662_;
+	assign _2664_ = _2663_ & _2651_;
+	assign _2665_ = _2649_ & ~_2664_;
+	assign _2666_ = ~(_2665_ | _2637_);
+	assign \mchip.design.receiver.packet_decode.PID_accum [1] = _0304_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PID_accum [2] = _0305_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PID_accum [3] = _0306_ & ~io_in[13];
+	assign _2667_ = _0172_ & ~io_in[13];
+	assign _2668_ = _0170_ & ~io_in[13];
+	assign _2669_ = _0171_ & ~io_in[13];
+	assign _2670_ = _2669_ & ~_2668_;
+	assign _2671_ = _2670_ & ~_2667_;
+	assign _2672_ = io_in[13] | ~_0179_;
+	assign _2673_ = _0178_ & ~io_in[13];
+	assign _2674_ = _0177_ & ~io_in[13];
+	assign _2675_ = _2674_ | _2673_;
+	assign _2676_ = _2672_ & ~_2675_;
+	assign _2677_ = _0176_ & ~io_in[13];
+	assign _2678_ = _0175_ & ~io_in[13];
+	assign _2679_ = _2678_ | _2677_;
+	assign _2240_ = _0173_ & ~io_in[13];
+	assign _2680_ = _0174_ & ~io_in[13];
+	assign _2681_ = _2240_ | ~_2680_;
+	assign _2682_ = _2681_ | _2679_;
+	assign _2683_ = _2676_ & ~_2682_;
+	assign _2221_ = _0269_ & ~io_in[13];
+	assign _2684_ = ~_2221_;
+	assign _2685_ = _0268_ & ~io_in[13];
+	assign _2686_ = _0267_ & ~io_in[13];
+	assign _2687_ = ~(_2686_ & _2685_);
+	assign _2688_ = _2687_ | _2684_;
+	assign _2689_ = _2683_ & ~_2688_;
+	assign _2690_ = _2689_ & _2671_;
+	assign _2691_ = _2669_ & _2668_;
+	assign _2692_ = _2691_ & ~_2667_;
+	assign _2693_ = _0283_ | io_in[13];
+	assign _2694_ = _0284_ | io_in[13];
+	assign _2695_ = _2693_ & ~_2694_;
+	assign _2696_ = ~(_0286_ | io_in[13]);
+	assign _2697_ = ~(_0285_ | io_in[13]);
+	assign _2698_ = _2697_ | _2696_;
+	assign _2699_ = _2695_ & ~_2698_;
+	assign _2700_ = _0290_ | io_in[13];
+	assign _2701_ = _0289_ | io_in[13];
+	assign _2702_ = _2701_ | _2700_;
+	assign _2703_ = _0288_ | io_in[13];
+	assign _2704_ = _0287_ | io_in[13];
+	assign _2705_ = _2704_ | _2703_;
+	assign _2706_ = _2705_ | _2702_;
+	assign _2707_ = _2699_ & ~_2706_;
+	assign _2708_ = _0297_ | io_in[13];
+	assign _2709_ = ~(_0298_ | io_in[13]);
+	assign _2710_ = _2709_ | _2708_;
+	assign _2711_ = _0296_ | io_in[13];
+	assign _2712_ = _0295_ | io_in[13];
+	assign _2713_ = _2712_ | _2711_;
+	assign _2714_ = _2713_ | _2710_;
+	assign _2715_ = _0294_ | io_in[13];
+	assign _2716_ = _0293_ | io_in[13];
+	assign _2717_ = _2716_ | _2715_;
+	assign _2718_ = _0292_ | io_in[13];
+	assign _2719_ = _0291_ | io_in[13];
+	assign _2720_ = _2719_ | _2718_;
+	assign _2721_ = _2720_ | _2717_;
+	assign _2722_ = _2721_ | _2714_;
+	assign _2723_ = _2707_ & ~_2722_;
+	assign _2724_ = ~(_0282_ | io_in[13]);
+	assign _2725_ = ~(_0281_ | io_in[13]);
+	assign _2726_ = ~(_0280_ | io_in[13]);
+	assign _2727_ = _2726_ | _2725_;
+	assign _2728_ = _0279_ | io_in[13];
+	assign _2729_ = _0278_ | io_in[13];
+	assign _2730_ = _2729_ | _2728_;
+	assign _2731_ = _2730_ | _2727_;
+	assign _2732_ = _2724_ & ~_2731_;
+	assign _2733_ = _2732_ | _2723_;
+	assign _2734_ = _2666_ & ~_2733_;
+	assign _2735_ = _0413_ & ~io_in[13];
+	assign _2736_ = _0412_ & ~io_in[13];
+	assign _2737_ = _2735_ | ~_2736_;
+	assign _2738_ = _0410_ & ~io_in[13];
+	assign _2739_ = _0411_ & ~io_in[13];
+	assign _2740_ = _2738_ | ~_2739_;
+	assign _2741_ = _2740_ | _2737_;
+	assign _2742_ = _2734_ & ~_2741_;
+	assign _2743_ = _0408_ & ~io_in[13];
+	assign _2744_ = _0407_ & ~io_in[13];
+	assign _2745_ = _2744_ & _2743_;
+	assign _2746_ = io_in[13] | ~_0406_;
+	assign _2747_ = io_in[13] | ~_0405_;
+	assign _2748_ = _2747_ | _2746_;
+	assign _2749_ = _2745_ & ~_2748_;
+	assign _2750_ = _0402_ & ~io_in[13];
+	assign _2751_ = _0401_ & ~io_in[13];
+	assign _2752_ = _2751_ & _2750_;
+	assign _2753_ = io_in[13] | ~_0404_;
+	assign _2754_ = _0403_ & ~io_in[13];
+	assign _2755_ = _2754_ & ~_2753_;
+	assign _2756_ = ~(_2755_ & _2752_);
+	assign _2757_ = _2749_ & ~_2756_;
+	assign _2758_ = _0409_ & ~io_in[13];
+	assign _2759_ = _2757_ & ~_2758_;
+	assign _2760_ = _0400_ & ~io_in[13];
+	assign _2761_ = _0399_ & ~io_in[13];
+	assign _2762_ = _2760_ | ~_2761_;
+	assign _2763_ = _0397_ & ~io_in[13];
+	assign _2764_ = _0398_ & ~io_in[13];
+	assign _2765_ = _2763_ | ~_2764_;
+	assign _2766_ = _2765_ | _2762_;
+	assign _2767_ = _2759_ & ~_2766_;
+	assign _2768_ = _2767_ | _2742_;
+	assign _2769_ = _2768_ & _2734_;
+	assign _2770_ = _2768_ | ~_2759_;
+	assign _2771_ = (_2666_ ? _2769_ : _2770_);
+	assign _2772_ = _2692_ & ~_2771_;
+	assign _2773_ = ~(_2772_ | _2690_);
+	assign _2774_ = ~_2667_;
+	assign _2775_ = ~(_2669_ | _2668_);
+	assign _2776_ = _2775_ & ~_2774_;
+	assign _2777_ = _2668_ & ~_2669_;
+	assign _2778_ = _2777_ & ~_2774_;
+	assign _2779_ = _2778_ & ~_2689_;
+	assign _2780_ = _2779_ | _2776_;
+	assign _2781_ = _2670_ & ~_2774_;
+	assign _2782_ = _2781_ & ~_2689_;
+	assign _2783_ = ~(_2691_ & _2667_);
+	assign _2784_ = \mchip.design.receiver.packet_decode.PID_accum [2] | ~\mchip.design.receiver.packet_decode.PID_accum [3];
+	assign _2785_ = io_in[13] | ~_0303_;
+	assign _2786_ = ~(_2785_ & \mchip.design.receiver.packet_decode.PID_accum [1]);
+	assign _2787_ = ~(_2786_ | _2784_);
+	assign _2788_ = \mchip.design.receiver.packet_decode.PID_accum [3] | \mchip.design.receiver.packet_decode.PID_accum [2];
+	assign _2789_ = ~(_2788_ | _2786_);
+	assign _2790_ = _2789_ & ~_2787_;
+	assign _2791_ = _2790_ | _2768_;
+	assign _2792_ = _2768_ & _2759_;
+	assign _2793_ = (_2666_ ? _2791_ : _2792_);
+	assign _2794_ = ~(_2793_ | _2783_);
+	assign _2795_ = _2794_ | _2782_;
+	assign _2796_ = _2795_ | _2780_;
+	assign _2797_ = _2773_ & ~_2796_;
+	assign _2798_ = io_in[13] | ~_0172_;
+	assign _2799_ = _2798_ & ~_2798_;
+	assign _2800_ = _2799_ | _2797_;
+	assign \mchip.design.io_fsm.next_state [2] = ~_2800_;
+	assign _2801_ = io_in[13] | ~_0480_;
+	assign _2802_ = _0479_ & ~io_in[13];
+	assign _2803_ = _0478_ & ~io_in[13];
+	assign _2804_ = _2802_ | ~_2803_;
+	assign _2805_ = _2801_ & ~_2804_;
+	assign _2806_ = _2803_ | ~_2802_;
+	assign _2807_ = _2801_ & ~_2806_;
+	assign _2808_ = _2807_ | _2805_;
+	assign _2809_ = _2803_ | _2802_;
+	assign _2810_ = _2809_ | _2801_;
+	assign _2811_ = ~(_2803_ & _2802_);
+	assign _2812_ = _2801_ & ~_2811_;
+	assign _2813_ = _2812_ | ~_2810_;
+	assign _2814_ = _2813_ | _2808_;
+	assign _2815_ = _2809_ | ~_2801_;
+	assign _2816_ = ~_2815_;
+	assign _2817_ = _2816_ | _2814_;
+	assign _0659_ = _0483_ & ~io_in[13];
+	assign _2818_ = _0481_ & ~io_in[13];
+	assign _2819_ = _0482_ & ~io_in[13];
+	assign _2820_ = _2819_ | _2818_;
+	assign _2821_ = _2820_ | _0659_;
+	assign _2822_ = _2821_ | _2815_;
+	assign _2823_ = io_in[11] & ~_2822_;
+	assign _2824_ = _2822_ | ~io_in[10];
+	assign _2825_ = _2824_ & ~_2823_;
+	assign _2826_ = _2825_ | _2815_;
+	assign _2827_ = io_in[13] | ~_0396_;
+	assign _2828_ = _0395_ & ~io_in[13];
+	assign _2829_ = ~(_2827_ & _2805_);
+	assign _2830_ = ~(_2827_ & _2812_);
+	assign _2831_ = ~(_2830_ & _2829_);
+	assign _2832_ = _2826_ & ~_2831_;
+	assign \mchip.design.rw_fsm.next_state [0] = _2817_ & ~_2832_;
+	assign _0484_ = _2828_ | _2827_;
+	assign _0485_ = _2805_ & ~_0484_;
+	assign _0486_ = _2827_ & _2807_;
+	assign _0487_ = _0486_ | _0485_;
+	assign _0488_ = _2830_ & ~_0487_;
+	assign _0489_ = _2824_ | _2823_;
+	assign _0490_ = _2816_ & ~_0489_;
+	assign _0491_ = _0488_ & ~_0490_;
+	assign \mchip.design.rw_fsm.next_state [1] = _2817_ & ~_0491_;
+	assign _0492_ = ~_2827_;
+	assign _0493_ = _0492_ | _2810_;
+	assign _0494_ = _2812_ & ~_0484_;
+	assign _0495_ = _0493_ & ~_0494_;
+	assign \mchip.design.rw_fsm.next_state [2] = _2817_ & ~_0495_;
+	assign _0496_ = ~(_2781_ & _2689_);
+	assign _0497_ = _2759_ | _2666_;
+	assign _0498_ = ~(_0497_ | _2783_);
+	assign _0499_ = _0496_ & ~_0498_;
+	assign _0500_ = (_2689_ ? _2776_ : _2778_);
+	assign _0501_ = _0499_ & ~_0500_;
+	assign _0502_ = _2777_ & ~_2667_;
+	assign _0503_ = _2775_ & ~_2667_;
+	assign _0504_ = \mchip.design.rw_fsm.next_state [1] | \mchip.design.rw_fsm.next_state [0];
+	assign _0505_ = ~(_0504_ | \mchip.design.rw_fsm.next_state [2]);
+	assign _0506_ = _2807_ & ~_0505_;
+	assign _0507_ = _0506_ & _0503_;
+	assign _0508_ = _0507_ | _0502_;
+	assign _0509_ = (_2666_ ? _2734_ : _2759_);
+	assign _0510_ = _2692_ & ~_0509_;
+	assign _0511_ = _0510_ | _0508_;
+	assign _0512_ = _0501_ & ~_0511_;
+	assign \mchip.design.io_fsm.next_state [0] = ~(_0512_ | _2799_);
+	assign _0513_ = ~(_2776_ & _2689_);
+	assign _0514_ = _0498_ | _2781_;
+	assign _0515_ = _0513_ & ~_0514_;
+	assign _0516_ = ~_2801_;
+	assign _0517_ = (_2803_ ? _0516_ : _2802_);
+	assign _0518_ = _0505_ | _2809_;
+	assign _0519_ = ~(_2827_ ^ _2812_);
+	assign _0520_ = ~(_0519_ | _2828_);
+	assign _0521_ = ~(_2812_ | _2805_);
+	assign _0522_ = ~_0521_;
+	assign _0523_ = _0522_ & _0520_;
+	assign _0524_ = _0518_ & ~_0523_;
+	assign _0525_ = _0524_ | _0517_;
+	assign _0526_ = _0525_ | _0506_;
+	assign _0527_ = _0503_ & ~_0526_;
+	assign _0528_ = _0502_ & _2689_;
+	assign _0529_ = _0528_ | _0527_;
+	assign _0530_ = _2671_ & ~_2689_;
+	assign _0531_ = _2768_ | ~_2734_;
+	assign _0532_ = (_2666_ ? _0531_ : _2792_);
+	assign _0533_ = _2692_ & ~_0532_;
+	assign _0534_ = _0533_ | _0530_;
+	assign _0535_ = _0534_ | _0529_;
+	assign _0536_ = _0515_ & ~_0535_;
+	assign \mchip.design.io_fsm.next_state [1] = ~(_0536_ | _2799_);
+	assign _0537_ = io_in[13] | ~_0269_;
+	assign _0538_ = _2685_ | ~_2686_;
+	assign _0539_ = _2684_ & ~_0538_;
+	assign _0540_ = _2685_ & ~_2221_;
+	assign _0541_ = _0540_ | _0539_;
+	assign _0542_ = _0537_ & ~_0541_;
+	assign _0543_ = _2686_ | _2685_;
+	assign _0544_ = (_2221_ ? _2687_ : _0543_);
+	assign _0004_ = _0544_ | _0542_;
+	assign _0545_ = _2686_ | ~_2685_;
+	assign _0546_ = _2221_ & ~_0545_;
+	assign _0547_ = io_in[13] | ~_0262_;
+	assign _0548_ = _0260_ & ~io_in[13];
+	assign _0549_ = _0261_ & ~io_in[13];
+	assign _0550_ = _0548_ | ~_0549_;
+	assign _0551_ = ~(_0550_ | _0547_);
+	assign _0552_ = ~(_0551_ & _0546_);
+	assign _0553_ = _2221_ & ~_0538_;
+	assign _0554_ = _0551_ & _0553_;
+	assign _0555_ = _0552_ & ~_0554_;
+	assign _0556_ = _2221_ & ~_0543_;
+	assign _0557_ = _0551_ & _0556_;
+	assign _0558_ = _0551_ & ~_2688_;
+	assign _0559_ = _0558_ | _0557_;
+	assign _0560_ = _0555_ & ~_0559_;
+	assign _0561_ = _2684_ & ~_2687_;
+	assign _0562_ = _0551_ & _0561_;
+	assign _0009_ = _0560_ & ~_0562_;
+	assign _0563_ = _2685_ | _2221_;
+	assign _0564_ = (_2221_ ? _2687_ : _0545_);
+	assign _0565_ = ~(_0564_ & _0563_);
+	assign _0566_ = ~(_2686_ & _2221_);
+	assign _0567_ = _2684_ & ~_0543_;
+	assign _0568_ = _0567_ | _0561_;
+	assign _0569_ = _0566_ & ~_0568_;
+	assign _0570_ = ~(_0569_ | _0551_);
+	assign _0005_ = _0570_ | _0565_;
+	assign _0571_ = ~(_2778_ | _2776_);
+	assign _0572_ = _0571_ & ~_2781_;
+	assign _0573_ = _2691_ & ~_2734_;
+	assign _0012_ = _0572_ & ~_0573_;
+	assign _0574_ = _2691_ & ~_2759_;
+	assign _0011_ = _0572_ & ~_0574_;
+	assign _0575_ = ~(_2636_ & _2635_);
+	assign _0576_ = ~(_2636_ | _2635_);
+	assign _0577_ = _0576_ | ~_0575_;
+	assign _0578_ = _2638_ & ~_2650_;
+	assign _0579_ = ~(_2639_ & _2636_);
+	assign _0580_ = _2638_ & ~_0579_;
+	assign _0581_ = _0580_ | _0578_;
+	assign _0582_ = (_2636_ ? _2635_ : _2639_);
+	assign _0583_ = _0582_ | _0581_;
+	assign _0008_ = _0577_ | ~_0583_;
+	assign _0584_ = _2636_ & ~_2635_;
+	assign _0585_ = io_in[13] | ~_0301_;
+	assign _0586_ = _0299_ & ~io_in[13];
+	assign _0587_ = _0300_ & ~io_in[13];
+	assign _0588_ = _0586_ | ~_0587_;
+	assign _0589_ = ~(_0588_ | _0585_);
+	assign _0590_ = _2637_ & ~_0589_;
+	assign _0007_ = _0590_ | _0584_;
+	assign _0591_ = ~(_0589_ & _0578_);
+	assign _0592_ = _2638_ & ~_2640_;
+	assign _0593_ = _0592_ & _0589_;
+	assign _0594_ = _0591_ & ~_0593_;
+	assign _0595_ = ~(_0579_ | _2638_);
+	assign _0596_ = _0595_ & _0589_;
+	assign _0597_ = _2639_ | ~_2636_;
+	assign _0598_ = ~(_0597_ | _2638_);
+	assign _0599_ = _0598_ & _0589_;
+	assign _0600_ = _0599_ | _0596_;
+	assign _0601_ = _0594_ & ~_0600_;
+	assign _0602_ = _0589_ & _2651_;
+	assign _0010_ = _0601_ & ~_0602_;
+	assign _0603_ = _0561_ | _0553_;
+	assign _0604_ = _2686_ | ~_2221_;
+	assign _0605_ = _0603_ | ~_0604_;
+	assign _0606_ = _2680_ | _2240_;
+	assign _0607_ = _0606_ | _2679_;
+	assign _0608_ = _0607_ | ~_2676_;
+	assign _0609_ = ~(_0608_ | _2688_);
+	assign _0610_ = _0609_ | _0605_;
+	assign _0611_ = _2688_ & ~_0605_;
+	assign _0612_ = _0610_ & ~_0611_;
+	assign _0006_ = _0612_ | ~_0544_;
+	assign _0613_ = _0265_ & ~io_in[13];
+	assign _0614_ = ~_0613_;
+	assign _0615_ = _0542_ & ~_0614_;
+	assign _0616_ = ~(_0551_ | _2688_);
+	assign _0617_ = _0616_ | _0542_;
+	assign _0618_ = _0613_ & ~_0617_;
+	assign _0619_ = ~(_0263_ | io_in[13]);
+	assign _0620_ = ~_0619_;
+	assign _0621_ = _0620_ & ~_0542_;
+	assign _0622_ = _0621_ | _0618_;
+	assign _0002_ = _0622_ | _0615_;
+	assign _0623_ = ~_0616_;
+	assign _0624_ = _0623_ | _0542_;
+	assign _0625_ = _0613_ & ~_0624_;
+	assign _0626_ = _0264_ & ~io_in[13];
+	assign _0627_ = _0626_ & _0542_;
+	assign _0001_ = _0627_ | _0625_;
+	assign _0628_ = _2818_ | ~_2819_;
+	assign _0065_ = ~(_0628_ | _0659_);
+	assign _0629_ = _2819_ | ~_2818_;
+	assign _0066_ = ~(_0629_ | _0659_);
+	assign _0630_ = ~(_2819_ & _2818_);
+	assign _0067_ = ~(_0630_ | _0659_);
+	assign _0068_ = _0659_ & ~_2820_;
+	assign _0631_ = io_in[1] & ~io_in[0];
+	assign _0632_ = io_in[0] & io_in[1];
+	assign _0633_ = ~(_0632_ | _0631_);
+	assign \mchip.design.receiver.find_sync.bit_in  = ~_0633_;
+	assign _0634_ = _0589_ | ~_0592_;
+	assign _0635_ = _0578_ & ~_0589_;
+	assign _0636_ = _0634_ & ~_0635_;
+	assign _0637_ = ~(_0575_ & _2637_);
+	assign _0638_ = _2638_ & ~_0597_;
+	assign _0639_ = _0638_ | _0637_;
+	assign _0640_ = _0639_ | _0592_;
+	assign _0641_ = ~(_0640_ | _0578_);
+	assign _0642_ = ~(_0641_ | _0636_);
+	assign _0643_ = (_0641_ ? _0589_ : _0634_);
+	assign _0014_ = _0643_ | _0642_;
+	assign _0013_ = _0643_ | ~_0642_;
+	assign _0644_ = _0266_ & ~io_in[13];
+	assign _0000_ = (_0542_ ? _0620_ : _0644_);
+	assign _0003_ = (_0542_ ? _0644_ : _0626_);
+	assign _0645_ = _0522_ & _0505_;
+	assign _0646_ = (_2801_ ? _2806_ : _2809_);
+	assign _0647_ = _0492_ & ~_0646_;
+	assign _0648_ = _0647_ | _0645_;
+	assign _0649_ = ~_0646_;
+	assign _0650_ = _0521_ & ~_0649_;
+	assign \mchip.design.finished  = _0648_ & ~_0650_;
+	assign _0651_ = \mchip.design.io_fsm.next_state [1] | \mchip.design.io_fsm.next_state [0];
+	assign _0652_ = _2800_ & ~_0651_;
+	assign _0653_ = (_2667_ ? _2777_ : _2691_);
+	assign _0654_ = _2783_ & ~_0653_;
+	assign \mchip.design.io_fsm.completed_transaction_log  = _0652_ & ~_0654_;
+	assign _0655_ = _2734_ & ~_2789_;
+	assign _0656_ = ~(_0655_ | _2759_);
+	assign \mchip.design.io_fsm.ended_with_errors_log  = \mchip.design.io_fsm.completed_transaction_log  & ~_0656_;
+	assign _0657_ = _0066_ | _0065_;
+	assign _0658_ = _0657_ | _0067_;
+	assign _0660_ = _0659_ | _0658_;
+	assign _0661_ = _0070_ & ~io_in[13];
+	assign _0662_ = _0072_ & ~io_in[13];
+	assign _0663_ = _0073_ & ~io_in[13];
+	assign _0664_ = _0071_ & ~io_in[13];
+	assign _0665_ = _0661_ | ~_0657_;
+	assign _0666_ = _0067_ & ~_0661_;
+	assign _0667_ = _0665_ & ~_0666_;
+	assign _0668_ = _0659_ & ~_0628_;
+	assign _0669_ = _0659_ & ~_2819_;
+	assign _0670_ = _0669_ | _0668_;
+	assign _0671_ = _0670_ & ~_0661_;
+	assign _0672_ = _0659_ & ~_0630_;
+	assign _0673_ = _0672_ & ~_0661_;
+	assign _0674_ = _0673_ | _0671_;
+	assign _0675_ = _0667_ & ~_0674_;
+	assign \mchip.design.inter.count_next [0] = _0660_ & ~_0675_;
+	assign _0676_ = ~_0672_;
+	assign _0677_ = ~(_0664_ & _0661_);
+	assign _0678_ = _0663_ | ~_0662_;
+	assign _0679_ = ~(_0678_ | _0677_);
+	assign _0680_ = _0664_ | ~_0661_;
+	assign _0681_ = _0661_ | ~_0664_;
+	assign _0682_ = _0681_ & _0680_;
+	assign _0683_ = _0682_ | _0679_;
+	assign _0684_ = _0683_ | _0676_;
+	assign _0685_ = ~(_0663_ & _0662_);
+	assign _0686_ = ~(_0685_ | _0677_);
+	assign _0687_ = _0682_ | _0686_;
+	assign _0688_ = _0670_ & ~_0687_;
+	assign _0689_ = _0684_ & ~_0688_;
+	assign _0690_ = ~(_0663_ | _0662_);
+	assign _0691_ = (_0680_ ? _0681_ : _0690_);
+	assign _0692_ = _0657_ & ~_0691_;
+	assign _0693_ = _0690_ & ~_0677_;
+	assign _0694_ = _0682_ | _0693_;
+	assign _0695_ = _0067_ & ~_0694_;
+	assign _0696_ = _0695_ | _0692_;
+	assign _0697_ = _0689_ & ~_0696_;
+	assign \mchip.design.inter.count_next [1] = _0660_ & ~_0697_;
+	assign _0698_ = _0677_ ^ _0662_;
+	assign _0699_ = _0698_ | _0679_;
+	assign _0700_ = _0699_ | _0676_;
+	assign _0701_ = _0698_ | _0686_;
+	assign _0702_ = _0670_ & ~_0701_;
+	assign _0703_ = _0700_ & ~_0702_;
+	assign _0704_ = _0690_ & ~_0680_;
+	assign _0705_ = _0698_ | _0704_;
+	assign _0706_ = _0657_ & ~_0705_;
+	assign _0707_ = _0698_ | _0693_;
+	assign _0708_ = _0067_ & ~_0707_;
+	assign _0709_ = _0708_ | _0706_;
+	assign _0710_ = _0703_ & ~_0709_;
+	assign \mchip.design.inter.count_next [2] = _0660_ & ~_0710_;
+	assign _0711_ = _0677_ | ~_0662_;
+	assign _0712_ = _0711_ ^ _0663_;
+	assign _0713_ = _0712_ | _0679_;
+	assign _0714_ = _0713_ | _0676_;
+	assign _0715_ = _0712_ | _0686_;
+	assign _0716_ = _0670_ & ~_0715_;
+	assign _0717_ = _0714_ & ~_0716_;
+	assign _0718_ = _0712_ | _0704_;
+	assign _0719_ = _0657_ & ~_0718_;
+	assign _0720_ = _0712_ | _0693_;
+	assign _0721_ = _0067_ & ~_0720_;
+	assign _0722_ = _0721_ | _0719_;
+	assign _0723_ = _0717_ & ~_0722_;
+	assign \mchip.design.inter.count_next [3] = _0660_ & ~_0723_;
+	assign \mchip.design.inter.Addr_reg [0] = _0146_ & ~io_in[13];
+	assign \mchip.design.inter.ENDP_reg [0] = _0138_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [8] = _0162_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [4] = _0158_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [0] = _0154_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [56] = _0470_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [52] = _0466_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [48] = _0462_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [44] = _0458_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [40] = _0454_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [36] = _0450_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [32] = _0446_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [28] = _0442_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [24] = _0438_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [20] = _0434_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [16] = _0430_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [12] = _0426_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [8] = _0422_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [4] = _0418_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [0] = _0414_ & ~io_in[13];
+	assign _0724_ = _2819_ & _0659_;
+	assign _0725_ = _0659_ & ~_0629_;
+	assign _0726_ = _0725_ | _0724_;
+	assign _0727_ = _0078_ & ~io_in[13];
+	assign _0728_ = ~(_0727_ & _0704_);
+	assign _0729_ = _0690_ & ~_0681_;
+	assign _0730_ = io_in[13] | ~_0082_;
+	assign _0731_ = _0729_ & ~_0730_;
+	assign _0732_ = io_in[13] | ~_0086_;
+	assign _0733_ = _0693_ & ~_0732_;
+	assign _0734_ = _0733_ | _0731_;
+	assign _0735_ = _0728_ & ~_0734_;
+	assign _0736_ = _0090_ & ~io_in[13];
+	assign _0737_ = _0664_ | _0661_;
+	assign _0738_ = ~(_0737_ | _0678_);
+	assign _0739_ = _0738_ & _0736_;
+	assign _0740_ = io_in[13] | ~_0094_;
+	assign _0741_ = ~(_0678_ | _0680_);
+	assign _0742_ = _0741_ & ~_0740_;
+	assign _0743_ = _0742_ | _0739_;
+	assign _0744_ = ~(_0681_ | _0678_);
+	assign _0745_ = io_in[13] | ~_0098_;
+	assign _0746_ = _0744_ & ~_0745_;
+	assign _0747_ = io_in[13] | ~_0102_;
+	assign _0748_ = _0679_ & ~_0747_;
+	assign _0749_ = _0748_ | _0746_;
+	assign _0750_ = _0749_ | _0743_;
+	assign _0751_ = _0735_ & ~_0750_;
+	assign _0752_ = io_in[13] | ~_0134_;
+	assign _0753_ = _0686_ & ~_0752_;
+	assign _0754_ = ~(_0681_ | _0685_);
+	assign _0755_ = io_in[13] | ~_0130_;
+	assign _0756_ = _0754_ & ~_0755_;
+	assign _0757_ = _0756_ | _0753_;
+	assign _0758_ = io_in[13] | ~_0122_;
+	assign _0759_ = ~(_0737_ | _0685_);
+	assign _0760_ = _0759_ & ~_0758_;
+	assign _0761_ = io_in[13] | ~_0126_;
+	assign _0762_ = ~(_0685_ | _0680_);
+	assign _0763_ = _0762_ & ~_0761_;
+	assign _0764_ = _0763_ | _0760_;
+	assign _0765_ = _0764_ | _0757_;
+	assign _0766_ = io_in[13] | ~_0106_;
+	assign _0767_ = _0662_ | ~_0663_;
+	assign _0768_ = ~(_0767_ | _0737_);
+	assign _0769_ = _0768_ & ~_0766_;
+	assign _0770_ = io_in[13] | ~_0110_;
+	assign _0771_ = ~(_0767_ | _0680_);
+	assign _0772_ = _0771_ & ~_0770_;
+	assign _0773_ = _0772_ | _0769_;
+	assign _0774_ = io_in[13] | ~_0114_;
+	assign _0775_ = ~(_0767_ | _0681_);
+	assign _0776_ = _0775_ & ~_0774_;
+	assign _0777_ = io_in[13] | ~_0118_;
+	assign _0778_ = ~(_0767_ | _0677_);
+	assign _0779_ = _0778_ & ~_0777_;
+	assign _0780_ = _0779_ | _0776_;
+	assign _0781_ = _0780_ | _0773_;
+	assign _0782_ = _0781_ | _0765_;
+	assign _0783_ = _0782_ | ~_0751_;
+	assign _0784_ = io_in[13] | ~_0073_;
+	assign _0785_ = _0729_ | _0693_;
+	assign _0786_ = _0785_ | _0704_;
+	assign _0787_ = _0744_ | _0679_;
+	assign _0788_ = _0741_ | _0738_;
+	assign _0789_ = _0788_ | _0787_;
+	assign _0790_ = _0789_ | _0786_;
+	assign _0791_ = _0784_ & ~_0790_;
+	assign _0792_ = _0074_ & ~io_in[13];
+	assign _0793_ = (_0791_ ? _0792_ : _0783_);
+	assign _0794_ = ~(_0793_ & _0725_);
+	assign _0795_ = ~(\mchip.design.inter.data_out_reg [4] & _0704_);
+	assign _0796_ = ~\mchip.design.inter.data_out_reg [8];
+	assign _0797_ = _0729_ & ~_0796_;
+	assign _0798_ = ~\mchip.design.inter.data_out_reg [12];
+	assign _0799_ = _0693_ & ~_0798_;
+	assign _0800_ = _0799_ | _0797_;
+	assign _0801_ = _0795_ & ~_0800_;
+	assign _0802_ = ~\mchip.design.inter.data_out_reg [16];
+	assign _0803_ = _0738_ & ~_0802_;
+	assign _0804_ = ~\mchip.design.inter.data_out_reg [20];
+	assign _0805_ = _0741_ & ~_0804_;
+	assign _0806_ = _0805_ | _0803_;
+	assign _0807_ = ~\mchip.design.inter.data_out_reg [24];
+	assign _0808_ = _0744_ & ~_0807_;
+	assign _0809_ = ~\mchip.design.inter.data_out_reg [28];
+	assign _0810_ = _0679_ & ~_0809_;
+	assign _0811_ = _0810_ | _0808_;
+	assign _0812_ = _0811_ | _0806_;
+	assign _0813_ = _0801_ & ~_0812_;
+	assign _0814_ = io_in[13] | ~_0474_;
+	assign _0815_ = _0686_ & ~_0814_;
+	assign _0816_ = ~\mchip.design.inter.data_out_reg [56];
+	assign _0817_ = _0754_ & ~_0816_;
+	assign _0818_ = _0817_ | _0815_;
+	assign _0819_ = ~\mchip.design.inter.data_out_reg [48];
+	assign _0820_ = _0759_ & ~_0819_;
+	assign _0821_ = ~\mchip.design.inter.data_out_reg [52];
+	assign _0822_ = _0762_ & ~_0821_;
+	assign _0823_ = _0822_ | _0820_;
+	assign _0824_ = _0823_ | _0818_;
+	assign _0825_ = _0768_ & \mchip.design.inter.data_out_reg [32];
+	assign _0826_ = ~\mchip.design.inter.data_out_reg [36];
+	assign _0827_ = _0771_ & ~_0826_;
+	assign _0828_ = _0827_ | _0825_;
+	assign _0829_ = ~\mchip.design.inter.data_out_reg [40];
+	assign _0830_ = _0775_ & ~_0829_;
+	assign _0831_ = ~\mchip.design.inter.data_out_reg [44];
+	assign _0832_ = _0778_ & ~_0831_;
+	assign _0833_ = _0832_ | _0830_;
+	assign _0834_ = _0833_ | _0828_;
+	assign _0835_ = _0834_ | _0824_;
+	assign _0836_ = _0835_ | ~_0813_;
+	assign _0837_ = (_0791_ ? \mchip.design.inter.data_out_reg [0] : _0836_);
+	assign _0838_ = _0837_ & _0668_;
+	assign _0839_ = io_in[13] | ~_0150_;
+	assign _0840_ = _0839_ | ~_0679_;
+	assign _0841_ = _0744_ & \mchip.design.inter.Addr_reg [0];
+	assign _0842_ = _0840_ & ~_0841_;
+	assign _0843_ = _0738_ & \mchip.design.inter.ENDP_reg [0];
+	assign _0844_ = io_in[13] | ~_0142_;
+	assign _0845_ = _0741_ & ~_0844_;
+	assign _0846_ = _0845_ | _0843_;
+	assign _0847_ = _0842_ & ~_0846_;
+	assign _0848_ = ~\mchip.design.inter.mempage_reg [0];
+	assign _0849_ = _0690_ & ~_0737_;
+	assign _0850_ = _0849_ & ~_0848_;
+	assign _0851_ = ~\mchip.design.inter.mempage_reg [4];
+	assign _0852_ = _0704_ & ~_0851_;
+	assign _0853_ = _0852_ | _0850_;
+	assign _0854_ = ~\mchip.design.inter.mempage_reg [8];
+	assign _0855_ = _0729_ & ~_0854_;
+	assign _0856_ = io_in[13] | ~_0166_;
+	assign _0857_ = _0693_ & ~_0856_;
+	assign _0858_ = _0857_ | _0855_;
+	assign _0859_ = _0858_ | _0853_;
+	assign _0860_ = _0847_ & ~_0859_;
+	assign _0861_ = _0860_ | _0663_;
+	assign _0862_ = ~(_0861_ | _0676_);
+	assign _0863_ = _0862_ | _0838_;
+	assign _0864_ = _0794_ & ~_0863_;
+	assign io_out[2] = _0726_ & ~_0864_;
+	assign \mchip.design.inter.Addr_reg [1] = _0147_ & ~io_in[13];
+	assign \mchip.design.inter.ENDP_reg [1] = _0139_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [9] = _0163_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [5] = _0159_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [1] = _0155_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [1] = _0415_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [57] = _0471_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [53] = _0467_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [49] = _0463_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [45] = _0459_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [41] = _0455_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [37] = _0451_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [33] = _0447_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [29] = _0443_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [25] = _0439_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [21] = _0435_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [17] = _0431_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [13] = _0427_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [9] = _0423_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [5] = _0419_ & ~io_in[13];
+	assign _0865_ = io_in[13] | ~_0151_;
+	assign _0866_ = _0865_ | ~_0679_;
+	assign _0867_ = ~\mchip.design.inter.Addr_reg [1];
+	assign _0868_ = _0744_ & ~_0867_;
+	assign _0869_ = _0866_ & ~_0868_;
+	assign _0870_ = ~\mchip.design.inter.ENDP_reg [1];
+	assign _0871_ = _0738_ & ~_0870_;
+	assign _0872_ = io_in[13] | ~_0143_;
+	assign _0873_ = _0741_ & ~_0872_;
+	assign _0874_ = _0873_ | _0871_;
+	assign _0875_ = _0869_ & ~_0874_;
+	assign _0876_ = ~\mchip.design.inter.mempage_reg [1];
+	assign _0877_ = _0849_ & ~_0876_;
+	assign _0878_ = ~\mchip.design.inter.mempage_reg [5];
+	assign _0879_ = _0704_ & ~_0878_;
+	assign _0880_ = _0879_ | _0877_;
+	assign _0881_ = ~\mchip.design.inter.mempage_reg [9];
+	assign _0882_ = _0729_ & ~_0881_;
+	assign _0883_ = io_in[13] | ~_0167_;
+	assign _0884_ = _0693_ & ~_0883_;
+	assign _0885_ = _0884_ | _0882_;
+	assign _0886_ = _0885_ | _0880_;
+	assign _0887_ = _0875_ & ~_0886_;
+	assign _0888_ = _0887_ | _0663_;
+	assign _0889_ = _0888_ | _0676_;
+	assign _0890_ = ~\mchip.design.inter.data_out_reg [1];
+	assign _0891_ = io_in[13] | ~_0475_;
+	assign _0892_ = _0891_ | ~_0686_;
+	assign _0893_ = ~\mchip.design.inter.data_out_reg [57];
+	assign _0894_ = _0754_ & ~_0893_;
+	assign _0895_ = _0892_ & ~_0894_;
+	assign _0896_ = ~\mchip.design.inter.data_out_reg [49];
+	assign _0897_ = _0759_ & ~_0896_;
+	assign _0898_ = ~\mchip.design.inter.data_out_reg [53];
+	assign _0899_ = _0762_ & ~_0898_;
+	assign _0900_ = _0899_ | _0897_;
+	assign _0901_ = _0895_ & ~_0900_;
+	assign _0902_ = ~\mchip.design.inter.data_out_reg [33];
+	assign _0903_ = _0768_ & ~_0902_;
+	assign _0904_ = ~\mchip.design.inter.data_out_reg [37];
+	assign _0905_ = _0771_ & ~_0904_;
+	assign _0906_ = _0905_ | _0903_;
+	assign _0907_ = ~\mchip.design.inter.data_out_reg [41];
+	assign _0908_ = _0775_ & ~_0907_;
+	assign _0909_ = ~\mchip.design.inter.data_out_reg [45];
+	assign _0910_ = _0778_ & ~_0909_;
+	assign _0911_ = _0910_ | _0908_;
+	assign _0912_ = _0911_ | _0906_;
+	assign _0913_ = _0901_ & ~_0912_;
+	assign _0914_ = ~\mchip.design.inter.data_out_reg [5];
+	assign _0915_ = _0704_ & ~_0914_;
+	assign _0916_ = ~\mchip.design.inter.data_out_reg [9];
+	assign _0917_ = _0729_ & ~_0916_;
+	assign _0918_ = ~\mchip.design.inter.data_out_reg [13];
+	assign _0919_ = _0693_ & ~_0918_;
+	assign _0920_ = _0919_ | _0917_;
+	assign _0921_ = _0920_ | _0915_;
+	assign _0922_ = ~\mchip.design.inter.data_out_reg [17];
+	assign _0923_ = _0738_ & ~_0922_;
+	assign _0924_ = ~\mchip.design.inter.data_out_reg [21];
+	assign _0925_ = _0741_ & ~_0924_;
+	assign _0926_ = _0925_ | _0923_;
+	assign _0927_ = ~\mchip.design.inter.data_out_reg [25];
+	assign _0928_ = _0744_ & ~_0927_;
+	assign _0929_ = ~\mchip.design.inter.data_out_reg [29];
+	assign _0930_ = _0679_ & ~_0929_;
+	assign _0931_ = _0930_ | _0928_;
+	assign _0932_ = _0931_ | _0926_;
+	assign _0933_ = _0932_ | _0921_;
+	assign _0934_ = _0913_ & ~_0933_;
+	assign _0935_ = (_0791_ ? _0890_ : _0934_);
+	assign _0936_ = _0668_ & ~_0935_;
+	assign _0937_ = _0889_ & ~_0936_;
+	assign _0938_ = _0079_ & ~io_in[13];
+	assign _0939_ = ~(_0938_ & _0704_);
+	assign _0940_ = io_in[13] | ~_0083_;
+	assign _0941_ = _0729_ & ~_0940_;
+	assign _0942_ = io_in[13] | ~_0087_;
+	assign _0943_ = _0693_ & ~_0942_;
+	assign _0944_ = _0943_ | _0941_;
+	assign _0945_ = _0939_ & ~_0944_;
+	assign _0946_ = io_in[13] | ~_0091_;
+	assign _0947_ = _0738_ & ~_0946_;
+	assign _0948_ = io_in[13] | ~_0095_;
+	assign _0949_ = _0741_ & ~_0948_;
+	assign _0950_ = _0949_ | _0947_;
+	assign _0951_ = io_in[13] | ~_0099_;
+	assign _0952_ = _0744_ & ~_0951_;
+	assign _0953_ = io_in[13] | ~_0103_;
+	assign _0954_ = _0679_ & ~_0953_;
+	assign _0955_ = _0954_ | _0952_;
+	assign _0956_ = _0955_ | _0950_;
+	assign _0957_ = _0945_ & ~_0956_;
+	assign _0958_ = io_in[13] | ~_0135_;
+	assign _0959_ = _0686_ & ~_0958_;
+	assign _0960_ = io_in[13] | ~_0131_;
+	assign _0961_ = _0754_ & ~_0960_;
+	assign _0962_ = _0961_ | _0959_;
+	assign _0963_ = io_in[13] | ~_0123_;
+	assign _0964_ = _0759_ & ~_0963_;
+	assign _0965_ = io_in[13] | ~_0127_;
+	assign _0966_ = _0762_ & ~_0965_;
+	assign _0967_ = _0966_ | _0964_;
+	assign _0968_ = _0967_ | _0962_;
+	assign _0969_ = io_in[13] | ~_0107_;
+	assign _0970_ = _0768_ & ~_0969_;
+	assign _0971_ = io_in[13] | ~_0111_;
+	assign _0972_ = _0771_ & ~_0971_;
+	assign _0973_ = _0972_ | _0970_;
+	assign _0974_ = io_in[13] | ~_0115_;
+	assign _0975_ = _0775_ & ~_0974_;
+	assign _0976_ = io_in[13] | ~_0119_;
+	assign _0977_ = _0778_ & ~_0976_;
+	assign _0978_ = _0977_ | _0975_;
+	assign _0979_ = _0978_ | _0973_;
+	assign _0980_ = _0979_ | _0968_;
+	assign _0981_ = _0957_ & ~_0980_;
+	assign _0982_ = io_in[13] | ~_0075_;
+	assign _0983_ = (_0791_ ? _0982_ : _0981_);
+	assign _0984_ = _0725_ & ~_0983_;
+	assign _0985_ = _0937_ & ~_0984_;
+	assign io_out[3] = _0726_ & ~_0985_;
+	assign \mchip.design.inter.Addr_reg [2] = _0148_ & ~io_in[13];
+	assign \mchip.design.inter.ENDP_reg [2] = _0140_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [10] = _0164_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [6] = _0160_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [2] = _0156_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [2] = _0416_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [58] = _0472_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [54] = _0468_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [50] = _0464_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [46] = _0460_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [42] = _0456_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [38] = _0452_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [34] = _0448_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [30] = _0444_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [26] = _0440_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [22] = _0436_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [18] = _0432_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [14] = _0428_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [10] = _0424_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [6] = _0420_ & ~io_in[13];
+	assign _0986_ = io_in[13] | ~_0152_;
+	assign _0987_ = _0986_ | ~_0679_;
+	assign _0988_ = ~\mchip.design.inter.Addr_reg [2];
+	assign _0989_ = _0744_ & ~_0988_;
+	assign _0990_ = _0987_ & ~_0989_;
+	assign _0991_ = ~\mchip.design.inter.ENDP_reg [2];
+	assign _0992_ = _0738_ & ~_0991_;
+	assign _0993_ = io_in[13] | ~_0144_;
+	assign _0994_ = _0741_ & ~_0993_;
+	assign _0995_ = _0994_ | _0992_;
+	assign _0996_ = _0990_ & ~_0995_;
+	assign _0997_ = ~\mchip.design.inter.mempage_reg [2];
+	assign _0998_ = _0849_ & ~_0997_;
+	assign _0999_ = ~\mchip.design.inter.mempage_reg [6];
+	assign _1000_ = _0704_ & ~_0999_;
+	assign _1001_ = _1000_ | _0998_;
+	assign _1002_ = ~\mchip.design.inter.mempage_reg [10];
+	assign _1003_ = _0729_ & ~_1002_;
+	assign _1004_ = io_in[13] | ~_0168_;
+	assign _1005_ = _0693_ & ~_1004_;
+	assign _1006_ = _1005_ | _1003_;
+	assign _1007_ = _1006_ | _1001_;
+	assign _1008_ = _0996_ & ~_1007_;
+	assign _1009_ = _1008_ | _0663_;
+	assign _1010_ = _1009_ | _0676_;
+	assign _1011_ = ~\mchip.design.inter.data_out_reg [2];
+	assign _1012_ = io_in[13] | ~_0476_;
+	assign _1013_ = _1012_ | ~_0686_;
+	assign _1014_ = ~\mchip.design.inter.data_out_reg [58];
+	assign _1015_ = _0754_ & ~_1014_;
+	assign _1016_ = _1013_ & ~_1015_;
+	assign _1017_ = ~\mchip.design.inter.data_out_reg [50];
+	assign _1018_ = _0759_ & ~_1017_;
+	assign _1019_ = ~\mchip.design.inter.data_out_reg [54];
+	assign _1020_ = _0762_ & ~_1019_;
+	assign _1021_ = _1020_ | _1018_;
+	assign _1022_ = _1016_ & ~_1021_;
+	assign _1023_ = ~\mchip.design.inter.data_out_reg [34];
+	assign _1024_ = _0768_ & ~_1023_;
+	assign _1025_ = ~\mchip.design.inter.data_out_reg [38];
+	assign _1026_ = _0771_ & ~_1025_;
+	assign _1027_ = _1026_ | _1024_;
+	assign _1028_ = ~\mchip.design.inter.data_out_reg [42];
+	assign _1029_ = _0775_ & ~_1028_;
+	assign _1030_ = ~\mchip.design.inter.data_out_reg [46];
+	assign _1031_ = _0778_ & ~_1030_;
+	assign _1032_ = _1031_ | _1029_;
+	assign _1033_ = _1032_ | _1027_;
+	assign _1034_ = _1022_ & ~_1033_;
+	assign _1035_ = ~\mchip.design.inter.data_out_reg [6];
+	assign _1036_ = _0704_ & ~_1035_;
+	assign _1037_ = ~\mchip.design.inter.data_out_reg [10];
+	assign _1038_ = _0729_ & ~_1037_;
+	assign _1039_ = ~\mchip.design.inter.data_out_reg [14];
+	assign _1040_ = _0693_ & ~_1039_;
+	assign _1041_ = _1040_ | _1038_;
+	assign _1042_ = _1041_ | _1036_;
+	assign _1043_ = ~\mchip.design.inter.data_out_reg [18];
+	assign _1044_ = _0738_ & ~_1043_;
+	assign _1045_ = ~\mchip.design.inter.data_out_reg [22];
+	assign _1046_ = _0741_ & ~_1045_;
+	assign _1047_ = _1046_ | _1044_;
+	assign _1048_ = ~\mchip.design.inter.data_out_reg [26];
+	assign _1049_ = _0744_ & ~_1048_;
+	assign _1050_ = ~\mchip.design.inter.data_out_reg [30];
+	assign _1051_ = _0679_ & ~_1050_;
+	assign _1052_ = _1051_ | _1049_;
+	assign _1053_ = _1052_ | _1047_;
+	assign _1054_ = _1053_ | _1042_;
+	assign _1055_ = _1034_ & ~_1054_;
+	assign _1056_ = (_0791_ ? _1011_ : _1055_);
+	assign _1057_ = _0668_ & ~_1056_;
+	assign _1058_ = _1010_ & ~_1057_;
+	assign _1059_ = _0080_ & ~io_in[13];
+	assign _1060_ = ~(_1059_ & _0704_);
+	assign _1061_ = io_in[13] | ~_0084_;
+	assign _1062_ = _0729_ & ~_1061_;
+	assign _1063_ = io_in[13] | ~_0088_;
+	assign _1064_ = _0693_ & ~_1063_;
+	assign _1065_ = _1064_ | _1062_;
+	assign _1066_ = _1060_ & ~_1065_;
+	assign _1067_ = io_in[13] | ~_0092_;
+	assign _1068_ = _0738_ & ~_1067_;
+	assign _1069_ = io_in[13] | ~_0096_;
+	assign _1070_ = _0741_ & ~_1069_;
+	assign _1071_ = _1070_ | _1068_;
+	assign _1072_ = io_in[13] | ~_0100_;
+	assign _1073_ = _0744_ & ~_1072_;
+	assign _1074_ = io_in[13] | ~_0104_;
+	assign _1075_ = _0679_ & ~_1074_;
+	assign _1076_ = _1075_ | _1073_;
+	assign _1077_ = _1076_ | _1071_;
+	assign _1078_ = _1066_ & ~_1077_;
+	assign _1079_ = io_in[13] | ~_0136_;
+	assign _1080_ = _0686_ & ~_1079_;
+	assign _1081_ = io_in[13] | ~_0132_;
+	assign _1082_ = _0754_ & ~_1081_;
+	assign _1083_ = _1082_ | _1080_;
+	assign _1084_ = io_in[13] | ~_0124_;
+	assign _1085_ = _0759_ & ~_1084_;
+	assign _1086_ = io_in[13] | ~_0128_;
+	assign _1087_ = _0762_ & ~_1086_;
+	assign _1088_ = _1087_ | _1085_;
+	assign _1089_ = _1088_ | _1083_;
+	assign _1090_ = io_in[13] | ~_0108_;
+	assign _1091_ = _0768_ & ~_1090_;
+	assign _1092_ = io_in[13] | ~_0112_;
+	assign _1093_ = _0771_ & ~_1092_;
+	assign _1094_ = _1093_ | _1091_;
+	assign _1095_ = io_in[13] | ~_0116_;
+	assign _1096_ = _0775_ & ~_1095_;
+	assign _1097_ = io_in[13] | ~_0120_;
+	assign _1098_ = _0778_ & ~_1097_;
+	assign _1099_ = _1098_ | _1096_;
+	assign _1100_ = _1099_ | _1094_;
+	assign _1101_ = _1100_ | _1089_;
+	assign _1102_ = _1078_ & ~_1101_;
+	assign _1103_ = io_in[13] | ~_0076_;
+	assign _1104_ = (_0791_ ? _1103_ : _1102_);
+	assign _1105_ = _0725_ & ~_1104_;
+	assign _1106_ = _1058_ & ~_1105_;
+	assign io_out[4] = _0726_ & ~_1106_;
+	assign \mchip.design.inter.Addr_reg [3] = _0149_ & ~io_in[13];
+	assign \mchip.design.inter.ENDP_reg [3] = _0141_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [11] = _0165_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [7] = _0161_ & ~io_in[13];
+	assign \mchip.design.inter.mempage_reg [3] = _0157_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [3] = _0417_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [59] = _0473_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [55] = _0469_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [51] = _0465_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [47] = _0461_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [43] = _0457_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [39] = _0453_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [35] = _0449_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [31] = _0445_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [27] = _0441_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [23] = _0437_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [19] = _0433_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [15] = _0429_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [11] = _0425_ & ~io_in[13];
+	assign \mchip.design.inter.data_out_reg [7] = _0421_ & ~io_in[13];
+	assign _1107_ = _0153_ & ~io_in[13];
+	assign _1108_ = ~(_1107_ & _0679_);
+	assign _1109_ = ~\mchip.design.inter.Addr_reg [3];
+	assign _1110_ = _0744_ & ~_1109_;
+	assign _1111_ = _1108_ & ~_1110_;
+	assign _1112_ = ~\mchip.design.inter.ENDP_reg [3];
+	assign _1113_ = _0738_ & ~_1112_;
+	assign _1114_ = io_in[13] | ~_0145_;
+	assign _1115_ = _0741_ & ~_1114_;
+	assign _1116_ = _1115_ | _1113_;
+	assign _1117_ = _1111_ & ~_1116_;
+	assign _1118_ = ~\mchip.design.inter.mempage_reg [3];
+	assign _1119_ = _0849_ & ~_1118_;
+	assign _1120_ = ~\mchip.design.inter.mempage_reg [7];
+	assign _1121_ = _0704_ & ~_1120_;
+	assign _1122_ = _1121_ | _1119_;
+	assign _1123_ = ~\mchip.design.inter.mempage_reg [11];
+	assign _1124_ = _0729_ & ~_1123_;
+	assign _1125_ = io_in[13] | ~_0169_;
+	assign _1126_ = _0693_ & ~_1125_;
+	assign _1127_ = _1126_ | _1124_;
+	assign _1128_ = _1127_ | _1122_;
+	assign _1129_ = _1117_ & ~_1128_;
+	assign _1130_ = _1129_ | _0663_;
+	assign _1131_ = _1130_ | _0676_;
+	assign _1132_ = ~\mchip.design.inter.data_out_reg [3];
+	assign _1133_ = io_in[13] | ~_0477_;
+	assign _1134_ = _1133_ | ~_0686_;
+	assign _1135_ = ~\mchip.design.inter.data_out_reg [59];
+	assign _1136_ = _0754_ & ~_1135_;
+	assign _1137_ = _1134_ & ~_1136_;
+	assign _1138_ = ~\mchip.design.inter.data_out_reg [51];
+	assign _1139_ = _0759_ & ~_1138_;
+	assign _1140_ = ~\mchip.design.inter.data_out_reg [55];
+	assign _1141_ = _0762_ & ~_1140_;
+	assign _1142_ = _1141_ | _1139_;
+	assign _1143_ = _1137_ & ~_1142_;
+	assign _1144_ = ~\mchip.design.inter.data_out_reg [35];
+	assign _1145_ = _0768_ & ~_1144_;
+	assign _1146_ = ~\mchip.design.inter.data_out_reg [39];
+	assign _1147_ = _0771_ & ~_1146_;
+	assign _1148_ = _1147_ | _1145_;
+	assign _1149_ = ~\mchip.design.inter.data_out_reg [43];
+	assign _1150_ = _0775_ & ~_1149_;
+	assign _1151_ = ~\mchip.design.inter.data_out_reg [47];
+	assign _1152_ = _0778_ & ~_1151_;
+	assign _1153_ = _1152_ | _1150_;
+	assign _1154_ = _1153_ | _1148_;
+	assign _1155_ = _1143_ & ~_1154_;
+	assign _1156_ = ~\mchip.design.inter.data_out_reg [7];
+	assign _1157_ = _0704_ & ~_1156_;
+	assign _1158_ = ~\mchip.design.inter.data_out_reg [11];
+	assign _1159_ = _0729_ & ~_1158_;
+	assign _1160_ = ~\mchip.design.inter.data_out_reg [15];
+	assign _1161_ = _0693_ & ~_1160_;
+	assign _1162_ = _1161_ | _1159_;
+	assign _1163_ = _1162_ | _1157_;
+	assign _1164_ = ~\mchip.design.inter.data_out_reg [19];
+	assign _1165_ = _0738_ & ~_1164_;
+	assign _1166_ = ~\mchip.design.inter.data_out_reg [23];
+	assign _1167_ = _0741_ & ~_1166_;
+	assign _1168_ = _1167_ | _1165_;
+	assign _1169_ = ~\mchip.design.inter.data_out_reg [27];
+	assign _1170_ = _0744_ & ~_1169_;
+	assign _1171_ = ~\mchip.design.inter.data_out_reg [31];
+	assign _1172_ = _0679_ & ~_1171_;
+	assign _1173_ = _1172_ | _1170_;
+	assign _1174_ = _1173_ | _1168_;
+	assign _1175_ = _1174_ | _1163_;
+	assign _1176_ = _1155_ & ~_1175_;
+	assign _1177_ = (_0791_ ? _1132_ : _1176_);
+	assign _1178_ = _0668_ & ~_1177_;
+	assign _1179_ = _1131_ & ~_1178_;
+	assign _1180_ = _0081_ & ~io_in[13];
+	assign _1181_ = ~(_1180_ & _0704_);
+	assign _1182_ = io_in[13] | ~_0085_;
+	assign _1183_ = _0729_ & ~_1182_;
+	assign _1184_ = io_in[13] | ~_0089_;
+	assign _1185_ = _0693_ & ~_1184_;
+	assign _1186_ = _1185_ | _1183_;
+	assign _1187_ = _1181_ & ~_1186_;
+	assign _1188_ = io_in[13] | ~_0093_;
+	assign _1189_ = _0738_ & ~_1188_;
+	assign _1190_ = io_in[13] | ~_0097_;
+	assign _1191_ = _0741_ & ~_1190_;
+	assign _1192_ = _1191_ | _1189_;
+	assign _1193_ = io_in[13] | ~_0101_;
+	assign _1194_ = _0744_ & ~_1193_;
+	assign _1195_ = io_in[13] | ~_0105_;
+	assign _1196_ = _0679_ & ~_1195_;
+	assign _1197_ = _1196_ | _1194_;
+	assign _1198_ = _1197_ | _1192_;
+	assign _1199_ = _1187_ & ~_1198_;
+	assign _1200_ = io_in[13] | ~_0137_;
+	assign _1201_ = _0686_ & ~_1200_;
+	assign _1202_ = io_in[13] | ~_0133_;
+	assign _1203_ = _0754_ & ~_1202_;
+	assign _1204_ = _1203_ | _1201_;
+	assign _1205_ = io_in[13] | ~_0125_;
+	assign _1206_ = _0759_ & ~_1205_;
+	assign _1207_ = io_in[13] | ~_0129_;
+	assign _1208_ = _0762_ & ~_1207_;
+	assign _1209_ = _1208_ | _1206_;
+	assign _1210_ = _1209_ | _1204_;
+	assign _1211_ = io_in[13] | ~_0109_;
+	assign _1212_ = _0768_ & ~_1211_;
+	assign _1213_ = io_in[13] | ~_0113_;
+	assign _1214_ = _0771_ & ~_1213_;
+	assign _1215_ = _1214_ | _1212_;
+	assign _1216_ = io_in[13] | ~_0117_;
+	assign _1217_ = _0775_ & ~_1216_;
+	assign _1218_ = io_in[13] | ~_0121_;
+	assign _1219_ = _0778_ & ~_1218_;
+	assign _1220_ = _1219_ | _1217_;
+	assign _1221_ = _1220_ | _1215_;
+	assign _1222_ = _1221_ | _1210_;
+	assign _1223_ = _1199_ & ~_1222_;
+	assign _1224_ = io_in[13] | ~_0077_;
+	assign _1225_ = (_0791_ ? _1224_ : _1223_);
+	assign _1226_ = _0725_ & ~_1225_;
+	assign _1227_ = _1179_ & ~_1226_;
+	assign io_out[5] = _0726_ & ~_1227_;
+	assign _1228_ = io_in[13] | ~_0483_;
+	assign _1229_ = _0659_ | _1228_;
+	assign _1230_ = io_in[9] | ~io_in[6];
+	assign _1231_ = _1230_ | _2815_;
+	assign _1232_ = _1231_ | _2821_;
+	assign _1233_ = _0066_ & ~_0704_;
+	assign _1234_ = _0067_ & ~_0693_;
+	assign _1235_ = _1234_ | _1233_;
+	assign _1236_ = _1232_ & ~_1235_;
+	assign _1237_ = _0725_ & ~_0686_;
+	assign _1238_ = _0672_ & ~_0679_;
+	assign _1239_ = _1238_ | _1237_;
+	assign _1240_ = _1236_ & ~_1239_;
+	assign \mchip.design.inter.next_state [0] = _1229_ & ~_1240_;
+	assign _1241_ = _0686_ | ~_0668_;
+	assign _1242_ = _1241_ & ~_1238_;
+	assign _1243_ = ~_2821_;
+	assign _1244_ = io_in[9] | ~io_in[7];
+	assign _1245_ = _1244_ | _2815_;
+	assign _1246_ = _1243_ & ~_1245_;
+	assign _1247_ = _0065_ & ~_0704_;
+	assign _1248_ = _1247_ | _1246_;
+	assign _1249_ = _1248_ | _1234_;
+	assign _1250_ = _1242_ & ~_1249_;
+	assign \mchip.design.inter.next_state [1] = _1229_ & ~_1250_;
+	assign _1251_ = _0068_ & ~_0686_;
+	assign _1252_ = _1251_ | _1237_;
+	assign _1253_ = _1242_ & ~_1252_;
+	assign _1254_ = io_in[9] | ~io_in[8];
+	assign _1255_ = _1254_ | _2815_;
+	assign _1256_ = _1243_ & ~_1255_;
+	assign _1257_ = _1253_ & ~_1256_;
+	assign \mchip.design.inter.next_state [2] = _1229_ & ~_1257_;
+	assign _1258_ = ~(_0505_ & _2828_);
+	assign _1259_ = _1258_ | ~_0522_;
+	assign _1260_ = _2828_ & ~_0646_;
+	assign _1261_ = _1260_ | ~_1259_;
+	assign _1262_ = _1261_ & ~_0650_;
+	assign _1263_ = \mchip.design.finished  & ~_1262_;
+	assign io_out[10] = _2822_ & ~_1263_;
+	assign _1264_ = _1262_ & \mchip.design.finished ;
+	assign io_out[11] = _2822_ & ~_1264_;
+	assign _1265_ = _1228_ | _0068_;
+	assign io_out[6] = _0661_ & ~_1265_;
+	assign io_out[7] = _0664_ & ~_1265_;
+	assign io_out[8] = _0662_ & ~_1265_;
+	assign io_out[9] = _0663_ & ~_1265_;
+	assign _1266_ = _2674_ & ~_0604_;
+	assign _1267_ = _2673_ & ~_0604_;
+	assign _1268_ = _1267_ ^ _1266_;
+	assign _1269_ = _0259_ | io_in[13];
+	assign _1270_ = _2240_ & ~_0604_;
+	assign _1271_ = _0258_ | io_in[13];
+	assign _1272_ = (_1270_ ? _1271_ : _1269_);
+	assign _1273_ = _2680_ & ~_0604_;
+	assign _1274_ = _0257_ | io_in[13];
+	assign _1275_ = _0256_ | io_in[13];
+	assign _1276_ = (_1270_ ? _1275_ : _1274_);
+	assign _1277_ = (_1273_ ? _1276_ : _1272_);
+	assign _1278_ = _2678_ & ~_0604_;
+	assign _1279_ = _0255_ | io_in[13];
+	assign _1280_ = _0254_ | io_in[13];
+	assign _1281_ = (_1270_ ? _1280_ : _1279_);
+	assign _1282_ = _0253_ | io_in[13];
+	assign _1283_ = _0252_ | io_in[13];
+	assign _1284_ = (_1270_ ? _1283_ : _1282_);
+	assign _1285_ = (_1273_ ? _1284_ : _1281_);
+	assign _1286_ = (_1278_ ? _1285_ : _1277_);
+	assign _1287_ = _2677_ & ~_0604_;
+	assign _1288_ = _0251_ | io_in[13];
+	assign _1289_ = _0250_ | io_in[13];
+	assign _1290_ = (_1270_ ? _1289_ : _1288_);
+	assign _1291_ = _0249_ | io_in[13];
+	assign _1292_ = _0248_ | io_in[13];
+	assign _1293_ = (_1270_ ? _1292_ : _1291_);
+	assign _1294_ = (_1273_ ? _1293_ : _1290_);
+	assign _1295_ = _0247_ | io_in[13];
+	assign _1296_ = _0246_ | io_in[13];
+	assign _1297_ = (_1270_ ? _1296_ : _1295_);
+	assign _1298_ = _0245_ | io_in[13];
+	assign _1299_ = _0244_ | io_in[13];
+	assign _1300_ = (_1270_ ? _1299_ : _1298_);
+	assign _1301_ = (_1273_ ? _1300_ : _1297_);
+	assign _1302_ = (_1278_ ? _1301_ : _1294_);
+	assign _1303_ = (_1287_ ? _1302_ : _1286_);
+	assign _1304_ = _1303_ | _1268_;
+	assign _1305_ = _1304_ | _1266_;
+	assign _1306_ = _2685_ & _2221_;
+	assign _1307_ = _0603_ | _1306_;
+	assign _1308_ = _2684_ & ~_0545_;
+	assign _1309_ = _1308_ | _0539_;
+	assign _1310_ = _1309_ | _0567_;
+	assign _1311_ = _1310_ | _1307_;
+	assign _1312_ = ~(_1273_ | _1270_);
+	assign _1313_ = _1278_ & ~_1312_;
+	assign _1314_ = _1313_ ^ _1287_;
+	assign _1315_ = _1287_ | _1278_;
+	assign _1316_ = _1287_ | ~_1278_;
+	assign _1317_ = _1312_ & ~_1316_;
+	assign _1318_ = _1315_ & ~_1317_;
+	assign _1319_ = _1318_ ^ _1266_;
+	assign _1320_ = _0274_ | io_in[13];
+	assign _1321_ = _1320_ | _1319_;
+	assign _1322_ = _1321_ | _1270_;
+	assign _1323_ = _1273_ ^ _1270_;
+	assign _1324_ = _1323_ | _1322_;
+	assign _1325_ = _1312_ ^ _1278_;
+	assign _1326_ = _0272_ | io_in[13];
+	assign _1327_ = _0273_ | io_in[13];
+	assign _1328_ = (_1270_ ? _1327_ : _1326_);
+	assign _1329_ = _0270_ | io_in[13];
+	assign _1330_ = _0271_ | io_in[13];
+	assign _1331_ = (_1270_ ? _1330_ : _1329_);
+	assign _1332_ = (_1323_ ? _1328_ : _1331_);
+	assign _1333_ = _1332_ | _1319_;
+	assign _1334_ = (_1325_ ? _1324_ : _1333_);
+	assign _1335_ = _1334_ | _1314_;
+	assign _1336_ = (_1311_ ? _1305_ : _1335_);
+	assign _1337_ = ~_2677_;
+	assign _1338_ = ~_2686_;
+	assign _1339_ = (_2685_ ? _2221_ : _1338_);
+	assign _1340_ = ~(_1339_ | _1337_);
+	assign _1341_ = _2674_ & ~_1339_;
+	assign _1342_ = _1341_ ^ _1340_;
+	assign _1343_ = ~_2776_;
+	assign _1344_ = _0651_ | _2800_;
+	assign _1345_ = ~(_1344_ | _2783_);
+	assign _1346_ = _1343_ & ~_1345_;
+	assign _1347_ = _0502_ | _0503_;
+	assign _1348_ = _1347_ | _2671_;
+	assign _1349_ = _1346_ & ~_1348_;
+	assign _1350_ = ~(_1349_ | _2799_);
+	assign _1351_ = _2240_ & ~_1339_;
+	assign _1352_ = ~_1351_;
+	assign _1353_ = ~_2781_;
+	assign _1354_ = _1345_ | ~_1353_;
+	assign _1355_ = _0571_ & ~_1354_;
+	assign _1356_ = \mchip.design.io_fsm.next_state [0] | ~\mchip.design.io_fsm.next_state [1];
+	assign _1357_ = _2800_ & ~_1356_;
+	assign _1358_ = _2671_ & ~_1357_;
+	assign _1359_ = _1356_ | _2800_;
+	assign _1360_ = \mchip.design.io_fsm.next_state [1] | ~\mchip.design.io_fsm.next_state [0];
+	assign _1361_ = \mchip.design.io_fsm.next_state [2] & ~_1360_;
+	assign _1362_ = _1359_ & ~_1361_;
+	assign _1363_ = _2692_ & ~_1362_;
+	assign _1364_ = _1363_ | _1358_;
+	assign _1365_ = _1355_ & ~_1364_;
+	assign _1366_ = ~(_1365_ | _2799_);
+	assign _1367_ = (_1351_ ? _1366_ : _1350_);
+	assign _1368_ = _1342_ | ~_1367_;
+	assign _1369_ = _2680_ & ~_1339_;
+	assign _1370_ = ~_1369_;
+	assign _1371_ = _1360_ | \mchip.design.io_fsm.next_state [2];
+	assign _1372_ = _0503_ & ~_1371_;
+	assign _1373_ = _1372_ | _0502_;
+	assign _1374_ = _1361_ | _1359_;
+	assign _1375_ = _2692_ & ~_1374_;
+	assign _1376_ = _1375_ | _1373_;
+	assign _1377_ = _1353_ & ~_1376_;
+	assign _1378_ = ~(_1377_ | _2799_);
+	assign _1379_ = _1342_ | ~_1378_;
+	assign _1380_ = _1379_ | _1352_;
+	assign _1381_ = (_1369_ ? _1380_ : _1368_);
+	assign _1382_ = ~_2678_;
+	assign _1383_ = ~(_1339_ | _1382_);
+	assign _1384_ = ~_1383_;
+	assign _1385_ = _1367_ | _1342_;
+	assign _1386_ = _1378_ | _1342_;
+	assign _1387_ = (_1351_ ? _1386_ : _1342_);
+	assign _1388_ = (_1369_ ? _1387_ : _1385_);
+	assign _1389_ = (_1383_ ? _1388_ : _1381_);
+	assign _1390_ = _1389_ | _1340_;
+	assign _1391_ = (_2221_ ? _0538_ : _1338_);
+	assign _1392_ = ~_1340_;
+	assign _1393_ = _1352_ | _1342_;
+	assign _1394_ = _1393_ | _1370_;
+	assign _1395_ = _1394_ | _1384_;
+	assign _1396_ = _1392_ & ~_1395_;
+	assign _1397_ = ~_1396_;
+	assign _1398_ = _2686_ & ~_2221_;
+	assign _1399_ = _1398_ & ~_0561_;
+	assign _1400_ = ~(_1399_ | _0553_);
+	assign _1401_ = _1400_ | _1398_;
+	assign _1402_ = ~(_1339_ | _2672_);
+	assign _1403_ = ~_1341_;
+	assign _1404_ = \mchip.design.inter.data_out_reg [32] & ~_0646_;
+	assign _1405_ = \mchip.design.inter.data_out_reg [32] & ~_2827_;
+	assign _1406_ = _1405_ & ~_0521_;
+	assign _1407_ = ~(_1406_ | _1404_);
+	assign _1408_ = _0650_ & ~_2816_;
+	assign _1409_ = ~(_1408_ | _1407_);
+	assign _1410_ = _1344_ | ~_1409_;
+	assign _1411_ = _1410_ | _2783_;
+	assign _1412_ = (_2667_ ? _2775_ : _2670_);
+	assign _1413_ = _1412_ & _1409_;
+	assign _1414_ = _1411_ & ~_1413_;
+	assign _1415_ = _0902_ | _0646_;
+	assign _1416_ = \mchip.design.inter.data_out_reg [33] & ~_2827_;
+	assign _1417_ = _1416_ & ~_0521_;
+	assign _1418_ = _1415_ & ~_1417_;
+	assign _1419_ = _1418_ | _1408_;
+	assign _1420_ = _1419_ | _1344_;
+	assign _1421_ = _1420_ | _2783_;
+	assign _1422_ = _1412_ & ~_1419_;
+	assign _1423_ = _1421_ & ~_1422_;
+	assign _1424_ = (_1351_ ? _1423_ : _1414_);
+	assign _1425_ = _1023_ | _0646_;
+	assign _1426_ = \mchip.design.inter.data_out_reg [34] & ~_2827_;
+	assign _1427_ = _1426_ & ~_0521_;
+	assign _1428_ = _1425_ & ~_1427_;
+	assign _1429_ = _1428_ | _1408_;
+	assign _1430_ = _1429_ | _1344_;
+	assign _1431_ = _1430_ | _2783_;
+	assign _1432_ = _1412_ & ~_1429_;
+	assign _1433_ = _1431_ & ~_1432_;
+	assign _1434_ = _1144_ | _0646_;
+	assign _1435_ = \mchip.design.inter.data_out_reg [35] & ~_2827_;
+	assign _1436_ = _1435_ & ~_0521_;
+	assign _1437_ = _1434_ & ~_1436_;
+	assign _1438_ = _1437_ | _1408_;
+	assign _1439_ = _1438_ | _1344_;
+	assign _1440_ = _1439_ | _2783_;
+	assign _1441_ = _1412_ & ~_1438_;
+	assign _1442_ = _1440_ & ~_1441_;
+	assign _1443_ = (_1351_ ? _1442_ : _1433_);
+	assign _1444_ = (_1369_ ? _1443_ : _1424_);
+	assign _1445_ = _0826_ | _0646_;
+	assign _1446_ = \mchip.design.inter.data_out_reg [36] & ~_2827_;
+	assign _1447_ = _1446_ & ~_0521_;
+	assign _1448_ = _1445_ & ~_1447_;
+	assign _1449_ = _1448_ | _1408_;
+	assign _1450_ = _1449_ | _1344_;
+	assign _1451_ = _1450_ | _2783_;
+	assign _1452_ = _1412_ & ~_1449_;
+	assign _1453_ = _1451_ & ~_1452_;
+	assign _1454_ = _0904_ | _0646_;
+	assign _1455_ = \mchip.design.inter.data_out_reg [37] & ~_2827_;
+	assign _1456_ = _1455_ & ~_0521_;
+	assign _1457_ = _1454_ & ~_1456_;
+	assign _1458_ = _1457_ | _1408_;
+	assign _1459_ = _1458_ | _1344_;
+	assign _1460_ = _1459_ | _2783_;
+	assign _1461_ = _1412_ & ~_1458_;
+	assign _1462_ = _1460_ & ~_1461_;
+	assign _1463_ = (_1351_ ? _1462_ : _1453_);
+	assign _1464_ = _1025_ | _0646_;
+	assign _1465_ = \mchip.design.inter.data_out_reg [38] & ~_2827_;
+	assign _1466_ = _1465_ & ~_0521_;
+	assign _1467_ = _1464_ & ~_1466_;
+	assign _1468_ = _1467_ | _1408_;
+	assign _1469_ = _1468_ | _1344_;
+	assign _1470_ = _1469_ | _2783_;
+	assign _1471_ = _1412_ & ~_1468_;
+	assign _1472_ = _1470_ & ~_1471_;
+	assign _1473_ = _1146_ | _0646_;
+	assign _1474_ = \mchip.design.inter.data_out_reg [39] & ~_2827_;
+	assign _1475_ = _1474_ & ~_0521_;
+	assign _1476_ = _1473_ & ~_1475_;
+	assign _1477_ = _1476_ | _1408_;
+	assign _1478_ = _1477_ | _1344_;
+	assign _1479_ = _1478_ | _2783_;
+	assign _1480_ = _1412_ & ~_1477_;
+	assign _1481_ = _1479_ & ~_1480_;
+	assign _1482_ = (_1351_ ? _1481_ : _1472_);
+	assign _1483_ = (_1369_ ? _1482_ : _1463_);
+	assign _1484_ = (_1383_ ? _1483_ : _1444_);
+	assign _1485_ = _0829_ | _0646_;
+	assign _1486_ = \mchip.design.inter.data_out_reg [40] & ~_2827_;
+	assign _1487_ = _1486_ & ~_0521_;
+	assign _1488_ = _1485_ & ~_1487_;
+	assign _1489_ = _1488_ | _1408_;
+	assign _1490_ = _1489_ | _1344_;
+	assign _1491_ = _1490_ | _2783_;
+	assign _1492_ = _1412_ & ~_1489_;
+	assign _1493_ = _1491_ & ~_1492_;
+	assign _1494_ = _0907_ | _0646_;
+	assign _1495_ = \mchip.design.inter.data_out_reg [41] & ~_2827_;
+	assign _1496_ = _1495_ & ~_0521_;
+	assign _1497_ = _1494_ & ~_1496_;
+	assign _1498_ = _1497_ | _1408_;
+	assign _1499_ = _1498_ | _1344_;
+	assign _1500_ = _1499_ | _2783_;
+	assign _1501_ = _1412_ & ~_1498_;
+	assign _1502_ = _1500_ & ~_1501_;
+	assign _1503_ = (_1351_ ? _1502_ : _1493_);
+	assign _1504_ = _1028_ | _0646_;
+	assign _1505_ = \mchip.design.inter.data_out_reg [42] & ~_2827_;
+	assign _1506_ = _1505_ & ~_0521_;
+	assign _1507_ = _1504_ & ~_1506_;
+	assign _1508_ = _1507_ | _1408_;
+	assign _1509_ = _1508_ | _1344_;
+	assign _1510_ = _1509_ | _2783_;
+	assign _1511_ = _1412_ & ~_1508_;
+	assign _1512_ = _1510_ & ~_1511_;
+	assign _1513_ = _1149_ | _0646_;
+	assign _1514_ = \mchip.design.inter.data_out_reg [43] & ~_2827_;
+	assign _1515_ = _1514_ & ~_0521_;
+	assign _1516_ = _1513_ & ~_1515_;
+	assign _1517_ = _1516_ | _1408_;
+	assign _1518_ = _1517_ | _1344_;
+	assign _1519_ = _1518_ | _2783_;
+	assign _1520_ = _1412_ & ~_1517_;
+	assign _1521_ = _1519_ & ~_1520_;
+	assign _1522_ = (_1351_ ? _1521_ : _1512_);
+	assign _1523_ = (_1369_ ? _1522_ : _1503_);
+	assign _1524_ = _0831_ | _0646_;
+	assign _1525_ = \mchip.design.inter.data_out_reg [44] & ~_2827_;
+	assign _1526_ = _1525_ & ~_0521_;
+	assign _1527_ = _1524_ & ~_1526_;
+	assign _1528_ = _1527_ | _1408_;
+	assign _1529_ = _1528_ | _1344_;
+	assign _1530_ = _1529_ | _2783_;
+	assign _1531_ = _1412_ & ~_1528_;
+	assign _1532_ = _1530_ & ~_1531_;
+	assign _1533_ = _0909_ | _0646_;
+	assign _1534_ = \mchip.design.inter.data_out_reg [45] & ~_2827_;
+	assign _1535_ = _1534_ & ~_0521_;
+	assign _1536_ = _1533_ & ~_1535_;
+	assign _1537_ = _1536_ | _1408_;
+	assign _1538_ = _1537_ | _1344_;
+	assign _1539_ = _1538_ | _2783_;
+	assign _1540_ = _1412_ & ~_1537_;
+	assign _1541_ = _1539_ & ~_1540_;
+	assign _1542_ = (_1351_ ? _1541_ : _1532_);
+	assign _1543_ = _1030_ | _0646_;
+	assign _1544_ = \mchip.design.inter.data_out_reg [46] & ~_2827_;
+	assign _1545_ = _1544_ & ~_0521_;
+	assign _1546_ = _1543_ & ~_1545_;
+	assign _1547_ = _1546_ | _1408_;
+	assign _1548_ = _1547_ | _1344_;
+	assign _1549_ = _1548_ | _2783_;
+	assign _1550_ = _1412_ & ~_1547_;
+	assign _1551_ = _1549_ & ~_1550_;
+	assign _1552_ = _1151_ | _0646_;
+	assign _1553_ = \mchip.design.inter.data_out_reg [47] & ~_2827_;
+	assign _1554_ = _1553_ & ~_0521_;
+	assign _1555_ = _1552_ & ~_1554_;
+	assign _1556_ = _1555_ | _1408_;
+	assign _1557_ = _1556_ | _1344_;
+	assign _1558_ = _1557_ | _2783_;
+	assign _1559_ = _1412_ & ~_1556_;
+	assign _1560_ = _1558_ & ~_1559_;
+	assign _1561_ = (_1351_ ? _1560_ : _1551_);
+	assign _1562_ = (_1369_ ? _1561_ : _1542_);
+	assign _1563_ = (_1383_ ? _1562_ : _1523_);
+	assign _1564_ = (_1340_ ? _1563_ : _1484_);
+	assign _1565_ = (_2827_ ? _0848_ : _0819_);
+	assign _1566_ = _1565_ | _0521_;
+	assign _1567_ = \mchip.design.inter.data_out_reg [48] & ~_0646_;
+	assign _1568_ = _1566_ & ~_1567_;
+	assign _1569_ = _0848_ | _0505_;
+	assign _1570_ = _2816_ & ~_1569_;
+	assign _1571_ = _1568_ & ~_1570_;
+	assign _1572_ = _1571_ | _1408_;
+	assign _1573_ = _1572_ | _1344_;
+	assign _1574_ = _1573_ | _2783_;
+	assign _1575_ = _1412_ & ~_1572_;
+	assign _1576_ = _1574_ & ~_1575_;
+	assign _1577_ = (_2827_ ? _0876_ : _0896_);
+	assign _1578_ = _1577_ | _0521_;
+	assign _1579_ = \mchip.design.inter.data_out_reg [49] & ~_0646_;
+	assign _1580_ = _1578_ & ~_1579_;
+	assign _1581_ = _0876_ | _0505_;
+	assign _1582_ = _2816_ & ~_1581_;
+	assign _1583_ = _1580_ & ~_1582_;
+	assign _1584_ = _1583_ | _1408_;
+	assign _1585_ = _1584_ | _1344_;
+	assign _1586_ = _1585_ | _2783_;
+	assign _1587_ = _1412_ & ~_1584_;
+	assign _1588_ = _1586_ & ~_1587_;
+	assign _1589_ = (_1351_ ? _1588_ : _1576_);
+	assign _1590_ = (_2827_ ? _0997_ : _1017_);
+	assign _1591_ = _1590_ | _0521_;
+	assign _1592_ = \mchip.design.inter.data_out_reg [50] & ~_0646_;
+	assign _1593_ = _1591_ & ~_1592_;
+	assign _1594_ = _0997_ | _0505_;
+	assign _1595_ = _2816_ & ~_1594_;
+	assign _1596_ = _1593_ & ~_1595_;
+	assign _1597_ = _1596_ | _1408_;
+	assign _1598_ = _1597_ | _1344_;
+	assign _1599_ = _1598_ | _2783_;
+	assign _1600_ = _1412_ & ~_1597_;
+	assign _1601_ = _1599_ & ~_1600_;
+	assign _1602_ = (_2827_ ? _1118_ : _1138_);
+	assign _1603_ = _1602_ | _0521_;
+	assign _1604_ = \mchip.design.inter.data_out_reg [51] & ~_0646_;
+	assign _1605_ = _1603_ & ~_1604_;
+	assign _1606_ = _1118_ | _0505_;
+	assign _1607_ = _2816_ & ~_1606_;
+	assign _1608_ = _1605_ & ~_1607_;
+	assign _1609_ = _1608_ | _1408_;
+	assign _1610_ = _1609_ | _1344_;
+	assign _1611_ = _1610_ | _2783_;
+	assign _1612_ = _1412_ & ~_1609_;
+	assign _1613_ = _1611_ & ~_1612_;
+	assign _1614_ = (_1351_ ? _1613_ : _1601_);
+	assign _1615_ = (_1369_ ? _1614_ : _1589_);
+	assign _1616_ = (_2827_ ? _0851_ : _0821_);
+	assign _1617_ = _1616_ | _0521_;
+	assign _1618_ = \mchip.design.inter.data_out_reg [52] & ~_0646_;
+	assign _1619_ = _1617_ & ~_1618_;
+	assign _1620_ = _0851_ | _0505_;
+	assign _1621_ = _2816_ & ~_1620_;
+	assign _1622_ = _1619_ & ~_1621_;
+	assign _1623_ = _1622_ | _1408_;
+	assign _1624_ = _1623_ | _1344_;
+	assign _1625_ = _1624_ | _2783_;
+	assign _1626_ = _1412_ & ~_1623_;
+	assign _1627_ = _1625_ & ~_1626_;
+	assign _1628_ = (_2827_ ? _0878_ : _0898_);
+	assign _1629_ = _1628_ | _0521_;
+	assign _1630_ = \mchip.design.inter.data_out_reg [53] & ~_0646_;
+	assign _1631_ = _1629_ & ~_1630_;
+	assign _1632_ = _0878_ | _0505_;
+	assign _1633_ = _2816_ & ~_1632_;
+	assign _1634_ = _1631_ & ~_1633_;
+	assign _1635_ = _1634_ | _1408_;
+	assign _1636_ = _1635_ | _1344_;
+	assign _1637_ = _1636_ | _2783_;
+	assign _1638_ = _1412_ & ~_1635_;
+	assign _1639_ = _1637_ & ~_1638_;
+	assign _1640_ = (_1351_ ? _1639_ : _1627_);
+	assign _1641_ = (_2827_ ? _0999_ : _1019_);
+	assign _1642_ = _1641_ | _0521_;
+	assign _1643_ = \mchip.design.inter.data_out_reg [54] & ~_0646_;
+	assign _1644_ = _1642_ & ~_1643_;
+	assign _1645_ = _0999_ | _0505_;
+	assign _1646_ = _2816_ & ~_1645_;
+	assign _1647_ = _1644_ & ~_1646_;
+	assign _1648_ = _1647_ | _1408_;
+	assign _1649_ = _1648_ | _1344_;
+	assign _1650_ = _1649_ | _2783_;
+	assign _1651_ = _1412_ & ~_1648_;
+	assign _1652_ = _1650_ & ~_1651_;
+	assign _1653_ = (_2827_ ? _1120_ : _1140_);
+	assign _1654_ = _1653_ | _0521_;
+	assign _1655_ = \mchip.design.inter.data_out_reg [55] & ~_0646_;
+	assign _1656_ = _1654_ & ~_1655_;
+	assign _1657_ = _1120_ | _0505_;
+	assign _1658_ = _2816_ & ~_1657_;
+	assign _1659_ = _1656_ & ~_1658_;
+	assign _1660_ = _1659_ | _1408_;
+	assign _1661_ = _1660_ | _1344_;
+	assign _1662_ = _1661_ | _2783_;
+	assign _1663_ = _1412_ & ~_1660_;
+	assign _1664_ = _1662_ & ~_1663_;
+	assign _1665_ = (_1351_ ? _1664_ : _1652_);
+	assign _1666_ = (_1369_ ? _1665_ : _1640_);
+	assign _1667_ = (_1383_ ? _1666_ : _1615_);
+	assign _1668_ = _0816_ | _0646_;
+	assign _1669_ = (_2827_ ? \mchip.design.inter.mempage_reg [8] : \mchip.design.inter.data_out_reg [56]);
+	assign _1670_ = _1669_ & ~_0521_;
+	assign _1671_ = _1668_ & ~_1670_;
+	assign _1672_ = _0854_ | _0505_;
+	assign _1673_ = _2816_ & ~_1672_;
+	assign _1674_ = _1671_ & ~_1673_;
+	assign _1675_ = _1674_ | _1408_;
+	assign _1676_ = _1675_ | _1344_;
+	assign _1677_ = _1676_ | _2783_;
+	assign _1678_ = _1412_ & ~_1675_;
+	assign _1679_ = _1677_ & ~_1678_;
+	assign _1680_ = _0893_ | _0646_;
+	assign _1681_ = (_2827_ ? \mchip.design.inter.mempage_reg [9] : \mchip.design.inter.data_out_reg [57]);
+	assign _1682_ = _1681_ & ~_0521_;
+	assign _1683_ = _1680_ & ~_1682_;
+	assign _1684_ = _0881_ | _0505_;
+	assign _1685_ = _2816_ & ~_1684_;
+	assign _1686_ = _1683_ & ~_1685_;
+	assign _1687_ = _1686_ | _1408_;
+	assign _1688_ = _1687_ | _1344_;
+	assign _1689_ = _1688_ | _2783_;
+	assign _1690_ = _1412_ & ~_1687_;
+	assign _1691_ = _1689_ & ~_1690_;
+	assign _1692_ = (_1351_ ? _1691_ : _1679_);
+	assign _1693_ = _1014_ | _0646_;
+	assign _1694_ = (_2827_ ? \mchip.design.inter.mempage_reg [10] : \mchip.design.inter.data_out_reg [58]);
+	assign _1695_ = _1694_ & ~_0521_;
+	assign _1696_ = _1693_ & ~_1695_;
+	assign _1697_ = _1002_ | _0505_;
+	assign _1698_ = _2816_ & ~_1697_;
+	assign _1699_ = _1696_ & ~_1698_;
+	assign _1700_ = _1699_ | _1408_;
+	assign _1701_ = _1700_ | _1344_;
+	assign _1702_ = _1701_ | _2783_;
+	assign _1703_ = _1412_ & ~_1700_;
+	assign _1704_ = _1702_ & ~_1703_;
+	assign _1705_ = _1135_ | _0646_;
+	assign _1706_ = (_2827_ ? \mchip.design.inter.mempage_reg [11] : \mchip.design.inter.data_out_reg [59]);
+	assign _1707_ = _1706_ & ~_0521_;
+	assign _1708_ = _1705_ & ~_1707_;
+	assign _1709_ = _1123_ | _0505_;
+	assign _1710_ = _2816_ & ~_1709_;
+	assign _1711_ = _1708_ & ~_1710_;
+	assign _1712_ = _1711_ | _1408_;
+	assign _1713_ = _1712_ | _1344_;
+	assign _1714_ = _1713_ | _2783_;
+	assign _1715_ = _1412_ & ~_1712_;
+	assign _1716_ = _1714_ & ~_1715_;
+	assign _1717_ = (_1351_ ? _1716_ : _1704_);
+	assign _1718_ = (_1369_ ? _1717_ : _1692_);
+	assign _1719_ = (_2827_ ? _0856_ : _0814_);
+	assign _1720_ = _1719_ | _0521_;
+	assign _1721_ = ~(_0814_ | _0646_);
+	assign _1722_ = _1720_ & ~_1721_;
+	assign _1723_ = _0856_ | _0505_;
+	assign _1724_ = _2816_ & ~_1723_;
+	assign _1725_ = _1722_ & ~_1724_;
+	assign _1726_ = _1725_ | _1408_;
+	assign _1727_ = _1726_ | _1344_;
+	assign _1728_ = _1727_ | _2783_;
+	assign _1729_ = _1412_ & ~_1726_;
+	assign _1730_ = _1728_ & ~_1729_;
+	assign _1731_ = (_2827_ ? _0883_ : _0891_);
+	assign _1732_ = _1731_ | _0521_;
+	assign _1733_ = ~(_0891_ | _0646_);
+	assign _1734_ = _1732_ & ~_1733_;
+	assign _1735_ = _0883_ | _0505_;
+	assign _1736_ = _2816_ & ~_1735_;
+	assign _1737_ = _1734_ & ~_1736_;
+	assign _1738_ = _1737_ | _1408_;
+	assign _1739_ = _1738_ | _1344_;
+	assign _1740_ = _1739_ | _2783_;
+	assign _1741_ = _1412_ & ~_1738_;
+	assign _1742_ = _1740_ & ~_1741_;
+	assign _1743_ = (_1351_ ? _1742_ : _1730_);
+	assign _1744_ = (_2827_ ? _1004_ : _1012_);
+	assign _1745_ = _1744_ | _0521_;
+	assign _1746_ = ~(_1012_ | _0646_);
+	assign _1747_ = _1745_ & ~_1746_;
+	assign _1748_ = _1004_ | _0505_;
+	assign _1749_ = _2816_ & ~_1748_;
+	assign _1750_ = _1747_ & ~_1749_;
+	assign _1751_ = _1750_ | _1408_;
+	assign _1752_ = _1751_ | _1344_;
+	assign _1753_ = _1752_ | _2783_;
+	assign _1754_ = _1412_ & ~_1751_;
+	assign _1755_ = _1753_ & ~_1754_;
+	assign _1756_ = (_2827_ ? _1125_ : _1133_);
+	assign _1757_ = _1756_ | _0521_;
+	assign _1758_ = ~(_1133_ | _0646_);
+	assign _1759_ = _1757_ & ~_1758_;
+	assign _1760_ = _1125_ | _0505_;
+	assign _1761_ = _2816_ & ~_1760_;
+	assign _1762_ = _1759_ & ~_1761_;
+	assign _1763_ = _1762_ | _1408_;
+	assign _1764_ = _1763_ | _1344_;
+	assign _1765_ = _1764_ | _2783_;
+	assign _1766_ = _1412_ & ~_1763_;
+	assign _1767_ = _1765_ & ~_1766_;
+	assign _1768_ = (_1351_ ? _1767_ : _1755_);
+	assign _1769_ = (_1369_ ? _1768_ : _1743_);
+	assign _1770_ = (_1383_ ? _1769_ : _1718_);
+	assign _1771_ = (_1340_ ? _1770_ : _1667_);
+	assign _1772_ = (_1341_ ? _1771_ : _1564_);
+	assign _1773_ = _2673_ & ~_1339_;
+	assign _1774_ = _2827_ | ~\mchip.design.inter.data_out_reg [0];
+	assign _1775_ = _1774_ | _0521_;
+	assign _1776_ = \mchip.design.inter.data_out_reg [0] & ~_0646_;
+	assign _1777_ = _1775_ & ~_1776_;
+	assign _1778_ = _1777_ | _1408_;
+	assign _1779_ = _1778_ | _1344_;
+	assign _1780_ = _1779_ | _2783_;
+	assign _1781_ = _1412_ & ~_1778_;
+	assign _1782_ = _1780_ & ~_1781_;
+	assign _1783_ = _0890_ | _0646_;
+	assign _1784_ = \mchip.design.inter.data_out_reg [1] & ~_2827_;
+	assign _1785_ = _1784_ & ~_0521_;
+	assign _1786_ = _1783_ & ~_1785_;
+	assign _1787_ = _1786_ | _1408_;
+	assign _1788_ = _1787_ | _1344_;
+	assign _1789_ = _1788_ | _2783_;
+	assign _1790_ = _1412_ & ~_1787_;
+	assign _1791_ = _1789_ & ~_1790_;
+	assign _1792_ = (_1351_ ? _1791_ : _1782_);
+	assign _1793_ = _1011_ | _0646_;
+	assign _1794_ = \mchip.design.inter.data_out_reg [2] & ~_2827_;
+	assign _1795_ = _1794_ & ~_0521_;
+	assign _1796_ = _1793_ & ~_1795_;
+	assign _1797_ = _1796_ | _1408_;
+	assign _1798_ = _1797_ | _1344_;
+	assign _1799_ = _1798_ | _2783_;
+	assign _1800_ = _1412_ & ~_1797_;
+	assign _1801_ = _1799_ & ~_1800_;
+	assign _1802_ = _1132_ | _0646_;
+	assign _1803_ = \mchip.design.inter.data_out_reg [3] & ~_2827_;
+	assign _1804_ = _1803_ & ~_0521_;
+	assign _1805_ = _1802_ & ~_1804_;
+	assign _1806_ = _1805_ | _1408_;
+	assign _1807_ = _1806_ | _1344_;
+	assign _1808_ = _1807_ | _2783_;
+	assign _1809_ = _1412_ & ~_1806_;
+	assign _1810_ = _1808_ & ~_1809_;
+	assign _1811_ = (_1351_ ? _1810_ : _1801_);
+	assign _1812_ = (_1369_ ? _1811_ : _1792_);
+	assign _1813_ = \mchip.design.inter.data_out_reg [4] & ~_0646_;
+	assign _1814_ = _2827_ | ~\mchip.design.inter.data_out_reg [4];
+	assign _1815_ = _1814_ | _0521_;
+	assign _1816_ = _1815_ & ~_1813_;
+	assign _1817_ = _1816_ | _1408_;
+	assign _1818_ = _1817_ | _1344_;
+	assign _1819_ = _1818_ | _2783_;
+	assign _1820_ = _1412_ & ~_1817_;
+	assign _1821_ = _1819_ & ~_1820_;
+	assign _1822_ = _0914_ | _0646_;
+	assign _1823_ = \mchip.design.inter.data_out_reg [5] & ~_2827_;
+	assign _1824_ = _1823_ & ~_0521_;
+	assign _1825_ = _1822_ & ~_1824_;
+	assign _1826_ = _1825_ | _1408_;
+	assign _1827_ = _1826_ | _1344_;
+	assign _1828_ = _1827_ | _2783_;
+	assign _1829_ = _1412_ & ~_1826_;
+	assign _1830_ = _1828_ & ~_1829_;
+	assign _1831_ = (_1351_ ? _1830_ : _1821_);
+	assign _1832_ = _1035_ | _0646_;
+	assign _1833_ = \mchip.design.inter.data_out_reg [6] & ~_2827_;
+	assign _1834_ = _1833_ & ~_0521_;
+	assign _1835_ = _1832_ & ~_1834_;
+	assign _1836_ = _1835_ | _1408_;
+	assign _1837_ = _1836_ | _1344_;
+	assign _1838_ = _1837_ | _2783_;
+	assign _1839_ = _1412_ & ~_1836_;
+	assign _1840_ = _1838_ & ~_1839_;
+	assign _1841_ = _1156_ | _0646_;
+	assign _1842_ = \mchip.design.inter.data_out_reg [7] & ~_2827_;
+	assign _1843_ = _1842_ & ~_0521_;
+	assign _1844_ = _1841_ & ~_1843_;
+	assign _1845_ = _1844_ | _1408_;
+	assign _1846_ = _1845_ | _1344_;
+	assign _1847_ = _1846_ | _2783_;
+	assign _1848_ = _1412_ & ~_1845_;
+	assign _1849_ = _1847_ & ~_1848_;
+	assign _1850_ = (_1351_ ? _1849_ : _1840_);
+	assign _1851_ = (_1369_ ? _1850_ : _1831_);
+	assign _1852_ = (_1383_ ? _1851_ : _1812_);
+	assign _1853_ = _0796_ | _0646_;
+	assign _1854_ = \mchip.design.inter.data_out_reg [8] & ~_2827_;
+	assign _1855_ = _1854_ & ~_0521_;
+	assign _1856_ = _1853_ & ~_1855_;
+	assign _1857_ = _1856_ | _1408_;
+	assign _1858_ = _1857_ | _1344_;
+	assign _1859_ = _1858_ | _2783_;
+	assign _1860_ = _1412_ & ~_1857_;
+	assign _1861_ = _1859_ & ~_1860_;
+	assign _1862_ = _0916_ | _0646_;
+	assign _1863_ = \mchip.design.inter.data_out_reg [9] & ~_2827_;
+	assign _1864_ = _1863_ & ~_0521_;
+	assign _1865_ = _1862_ & ~_1864_;
+	assign _1866_ = _1865_ | _1408_;
+	assign _1867_ = _1866_ | _1344_;
+	assign _1868_ = _1867_ | _2783_;
+	assign _1869_ = _1412_ & ~_1866_;
+	assign _1870_ = _1868_ & ~_1869_;
+	assign _1871_ = (_1351_ ? _1870_ : _1861_);
+	assign _1872_ = _1037_ | _0646_;
+	assign _1873_ = \mchip.design.inter.data_out_reg [10] & ~_2827_;
+	assign _1874_ = _1873_ & ~_0521_;
+	assign _1875_ = _1872_ & ~_1874_;
+	assign _1876_ = _1875_ | _1408_;
+	assign _1877_ = _1876_ | _1344_;
+	assign _1878_ = _1877_ | _2783_;
+	assign _1879_ = _1412_ & ~_1876_;
+	assign _1880_ = _1878_ & ~_1879_;
+	assign _1881_ = _1158_ | _0646_;
+	assign _1882_ = \mchip.design.inter.data_out_reg [11] & ~_2827_;
+	assign _1883_ = _1882_ & ~_0521_;
+	assign _1884_ = _1881_ & ~_1883_;
+	assign _1885_ = _1884_ | _1408_;
+	assign _1886_ = _1885_ | _1344_;
+	assign _1887_ = _1886_ | _2783_;
+	assign _1888_ = _1412_ & ~_1885_;
+	assign _1889_ = _1887_ & ~_1888_;
+	assign _1890_ = (_1351_ ? _1889_ : _1880_);
+	assign _1891_ = (_1369_ ? _1890_ : _1871_);
+	assign _1892_ = _0798_ | _0646_;
+	assign _1893_ = \mchip.design.inter.data_out_reg [12] & ~_2827_;
+	assign _1894_ = _1893_ & ~_0521_;
+	assign _1895_ = _1892_ & ~_1894_;
+	assign _1896_ = _1895_ | _1408_;
+	assign _1897_ = _1896_ | _1344_;
+	assign _1898_ = _1897_ | _2783_;
+	assign _1899_ = _1412_ & ~_1896_;
+	assign _1900_ = _1898_ & ~_1899_;
+	assign _1901_ = _0918_ | _0646_;
+	assign _1902_ = \mchip.design.inter.data_out_reg [13] & ~_2827_;
+	assign _1903_ = _1902_ & ~_0521_;
+	assign _1904_ = _1901_ & ~_1903_;
+	assign _1905_ = _1904_ | _1408_;
+	assign _1906_ = _1905_ | _1344_;
+	assign _1907_ = _1906_ | _2783_;
+	assign _1908_ = _1412_ & ~_1905_;
+	assign _1909_ = _1907_ & ~_1908_;
+	assign _1910_ = (_1351_ ? _1909_ : _1900_);
+	assign _1911_ = _1039_ | _0646_;
+	assign _1912_ = \mchip.design.inter.data_out_reg [14] & ~_2827_;
+	assign _1913_ = _1912_ & ~_0521_;
+	assign _1914_ = _1911_ & ~_1913_;
+	assign _1915_ = _1914_ | _1408_;
+	assign _1916_ = _1915_ | _1344_;
+	assign _1917_ = _1916_ | _2783_;
+	assign _1918_ = _1412_ & ~_1915_;
+	assign _1919_ = _1917_ & ~_1918_;
+	assign _1920_ = _1160_ | _0646_;
+	assign _1921_ = \mchip.design.inter.data_out_reg [15] & ~_2827_;
+	assign _1922_ = _1921_ & ~_0521_;
+	assign _1923_ = _1920_ & ~_1922_;
+	assign _1924_ = _1923_ | _1408_;
+	assign _1925_ = _1924_ | _1344_;
+	assign _1926_ = _1925_ | _2783_;
+	assign _1927_ = _1412_ & ~_1924_;
+	assign _1928_ = _1926_ & ~_1927_;
+	assign _1929_ = (_1351_ ? _1928_ : _1919_);
+	assign _1930_ = (_1369_ ? _1929_ : _1910_);
+	assign _1931_ = (_1383_ ? _1930_ : _1891_);
+	assign _1932_ = (_1340_ ? _1931_ : _1852_);
+	assign _1933_ = _0802_ | _0646_;
+	assign _1934_ = \mchip.design.inter.data_out_reg [16] & ~_2827_;
+	assign _1935_ = _1934_ & ~_0521_;
+	assign _1936_ = _1933_ & ~_1935_;
+	assign _1937_ = _1936_ | _1408_;
+	assign _1938_ = _1937_ | _1344_;
+	assign _1939_ = _1938_ | _2783_;
+	assign _1940_ = _1412_ & ~_1937_;
+	assign _1941_ = _1939_ & ~_1940_;
+	assign _1942_ = _0922_ | _0646_;
+	assign _1943_ = \mchip.design.inter.data_out_reg [17] & ~_2827_;
+	assign _1944_ = _1943_ & ~_0521_;
+	assign _1945_ = _1942_ & ~_1944_;
+	assign _1946_ = _1945_ | _1408_;
+	assign _1947_ = _1946_ | _1344_;
+	assign _1948_ = _1947_ | _2783_;
+	assign _1949_ = _1412_ & ~_1946_;
+	assign _1950_ = _1948_ & ~_1949_;
+	assign _1951_ = (_1351_ ? _1950_ : _1941_);
+	assign _1952_ = _1043_ | _0646_;
+	assign _1953_ = \mchip.design.inter.data_out_reg [18] & ~_2827_;
+	assign _1954_ = _1953_ & ~_0521_;
+	assign _1955_ = _1952_ & ~_1954_;
+	assign _1956_ = _1955_ | _1408_;
+	assign _1957_ = _1956_ | _1344_;
+	assign _1958_ = _1957_ | _2783_;
+	assign _1959_ = _1412_ & ~_1956_;
+	assign _1960_ = _1958_ & ~_1959_;
+	assign _1961_ = _1164_ | _0646_;
+	assign _1962_ = \mchip.design.inter.data_out_reg [19] & ~_2827_;
+	assign _1963_ = _1962_ & ~_0521_;
+	assign _1964_ = _1961_ & ~_1963_;
+	assign _1965_ = _1964_ | _1408_;
+	assign _1966_ = _1965_ | _1344_;
+	assign _1967_ = _1966_ | _2783_;
+	assign _1968_ = _1412_ & ~_1965_;
+	assign _1969_ = _1967_ & ~_1968_;
+	assign _1970_ = (_1351_ ? _1969_ : _1960_);
+	assign _1971_ = (_1369_ ? _1970_ : _1951_);
+	assign _1972_ = _0804_ | _0646_;
+	assign _1973_ = \mchip.design.inter.data_out_reg [20] & ~_2827_;
+	assign _1974_ = _1973_ & ~_0521_;
+	assign _1975_ = _1972_ & ~_1974_;
+	assign _1976_ = _1975_ | _1408_;
+	assign _1977_ = _1976_ | _1344_;
+	assign _1978_ = _1977_ | _2783_;
+	assign _1979_ = _1412_ & ~_1976_;
+	assign _1980_ = _1978_ & ~_1979_;
+	assign _1981_ = _0924_ | _0646_;
+	assign _1982_ = \mchip.design.inter.data_out_reg [21] & ~_2827_;
+	assign _1983_ = _1982_ & ~_0521_;
+	assign _1984_ = _1981_ & ~_1983_;
+	assign _1985_ = _1984_ | _1408_;
+	assign _1986_ = _1985_ | _1344_;
+	assign _1987_ = _1986_ | _2783_;
+	assign _1988_ = _1412_ & ~_1985_;
+	assign _1989_ = _1987_ & ~_1988_;
+	assign _1990_ = (_1351_ ? _1989_ : _1980_);
+	assign _1991_ = _1045_ | _0646_;
+	assign _1992_ = \mchip.design.inter.data_out_reg [22] & ~_2827_;
+	assign _1993_ = _1992_ & ~_0521_;
+	assign _1994_ = _1991_ & ~_1993_;
+	assign _1995_ = _1994_ | _1408_;
+	assign _1996_ = _1995_ | _1344_;
+	assign _1997_ = _1996_ | _2783_;
+	assign _1998_ = _1412_ & ~_1995_;
+	assign _1999_ = _1997_ & ~_1998_;
+	assign _2000_ = _1166_ | _0646_;
+	assign _2001_ = \mchip.design.inter.data_out_reg [23] & ~_2827_;
+	assign _2002_ = _2001_ & ~_0521_;
+	assign _2003_ = _2000_ & ~_2002_;
+	assign _2004_ = _2003_ | _1408_;
+	assign _2005_ = _2004_ | _1344_;
+	assign _2006_ = _2005_ | _2783_;
+	assign _2007_ = _1412_ & ~_2004_;
+	assign _2008_ = _2006_ & ~_2007_;
+	assign _2009_ = (_1351_ ? _2008_ : _1999_);
+	assign _2010_ = (_1369_ ? _2009_ : _1990_);
+	assign _2011_ = (_1383_ ? _2010_ : _1971_);
+	assign _2012_ = _0807_ | _0646_;
+	assign _2013_ = \mchip.design.inter.data_out_reg [24] & ~_2827_;
+	assign _2014_ = _2013_ & ~_0521_;
+	assign _2015_ = _2012_ & ~_2014_;
+	assign _2016_ = _2015_ | _1408_;
+	assign _2017_ = _2016_ | _1344_;
+	assign _2018_ = _2017_ | _2783_;
+	assign _2019_ = _1412_ & ~_2016_;
+	assign _2020_ = _2018_ & ~_2019_;
+	assign _2021_ = _0927_ | _0646_;
+	assign _2022_ = \mchip.design.inter.data_out_reg [25] & ~_2827_;
+	assign _2023_ = _2022_ & ~_0521_;
+	assign _2024_ = _2021_ & ~_2023_;
+	assign _2025_ = _2024_ | _1408_;
+	assign _2026_ = _2025_ | _1344_;
+	assign _2027_ = _2026_ | _2783_;
+	assign _2028_ = _1412_ & ~_2025_;
+	assign _2029_ = _2027_ & ~_2028_;
+	assign _2030_ = (_1351_ ? _2029_ : _2020_);
+	assign _2031_ = _1048_ | _0646_;
+	assign _2032_ = \mchip.design.inter.data_out_reg [26] & ~_2827_;
+	assign _2033_ = _2032_ & ~_0521_;
+	assign _2034_ = _2031_ & ~_2033_;
+	assign _2035_ = _2034_ | _1408_;
+	assign _2036_ = _2035_ | _1344_;
+	assign _2037_ = _2036_ | _2783_;
+	assign _2038_ = _1412_ & ~_2035_;
+	assign _2039_ = _2037_ & ~_2038_;
+	assign _2040_ = _1169_ | _0646_;
+	assign _2041_ = \mchip.design.inter.data_out_reg [27] & ~_2827_;
+	assign _2042_ = _2041_ & ~_0521_;
+	assign _2043_ = _2040_ & ~_2042_;
+	assign _2044_ = _2043_ | _1408_;
+	assign _2045_ = _2044_ | _1344_;
+	assign _2046_ = _2045_ | _2783_;
+	assign _2047_ = _1412_ & ~_2044_;
+	assign _2048_ = _2046_ & ~_2047_;
+	assign _2049_ = (_1351_ ? _2048_ : _2039_);
+	assign _2050_ = (_1369_ ? _2049_ : _2030_);
+	assign _2051_ = _0809_ | _0646_;
+	assign _2052_ = \mchip.design.inter.data_out_reg [28] & ~_2827_;
+	assign _2053_ = _2052_ & ~_0521_;
+	assign _2054_ = _2051_ & ~_2053_;
+	assign _2055_ = _2054_ | _1408_;
+	assign _2056_ = _2055_ | _1344_;
+	assign _2057_ = _2056_ | _2783_;
+	assign _2058_ = _1412_ & ~_2055_;
+	assign _2059_ = _2057_ & ~_2058_;
+	assign _2060_ = _0929_ | _0646_;
+	assign _2061_ = \mchip.design.inter.data_out_reg [29] & ~_2827_;
+	assign _2062_ = _2061_ & ~_0521_;
+	assign _2063_ = _2060_ & ~_2062_;
+	assign _2064_ = _2063_ | _1408_;
+	assign _2065_ = _2064_ | _1344_;
+	assign _2066_ = _2065_ | _2783_;
+	assign _2067_ = _1412_ & ~_2064_;
+	assign _2068_ = _2066_ & ~_2067_;
+	assign _2069_ = (_1351_ ? _2068_ : _2059_);
+	assign _2070_ = _1050_ | _0646_;
+	assign _2071_ = \mchip.design.inter.data_out_reg [30] & ~_2827_;
+	assign _2072_ = _2071_ & ~_0521_;
+	assign _2073_ = _2070_ & ~_2072_;
+	assign _2074_ = _2073_ | _1408_;
+	assign _2075_ = _2074_ | _1344_;
+	assign _2076_ = _2075_ | _2783_;
+	assign _2077_ = _1412_ & ~_2074_;
+	assign _2078_ = _2076_ & ~_2077_;
+	assign _2079_ = _1171_ | _0646_;
+	assign _2080_ = \mchip.design.inter.data_out_reg [31] & ~_2827_;
+	assign _2081_ = _2080_ & ~_0521_;
+	assign _2082_ = _2079_ & ~_2081_;
+	assign _2083_ = _2082_ | _1408_;
+	assign _2084_ = _2083_ | _1344_;
+	assign _2085_ = _2084_ | _2783_;
+	assign _2086_ = _1412_ & ~_2083_;
+	assign _2087_ = _2085_ & ~_2086_;
+	assign _2088_ = (_1351_ ? _2087_ : _2078_);
+	assign _2089_ = (_1369_ ? _2088_ : _2069_);
+	assign _2090_ = (_1383_ ? _2089_ : _2050_);
+	assign _2091_ = (_1340_ ? _2090_ : _2011_);
+	assign _2092_ = (_1341_ ? _2091_ : _1932_);
+	assign _2093_ = (_1773_ ? _1772_ : _2092_);
+	assign _2094_ = _2783_ & ~_1412_;
+	assign _2095_ = _2094_ | _2093_;
+	assign _2096_ = _2095_ | _1402_;
+	assign _2097_ = (_1401_ ? _1397_ : _2096_);
+	assign _2098_ = _0553_ | ~_0561_;
+	assign _2099_ = _1340_ & ~_1383_;
+	assign _2100_ = _1369_ & _1351_;
+	assign _2101_ = _2099_ & ~_2100_;
+	assign _2102_ = _1340_ & ~_2101_;
+	assign _2103_ = _2102_ ^ _1403_;
+	assign _2104_ = _2102_ | _1341_;
+	assign _2105_ = _2104_ ^ _1773_;
+	assign _2106_ = _2105_ | ~\mchip.design.inter.Addr_reg [0];
+	assign _2107_ = _2106_ | _1351_;
+	assign _2108_ = ~(_1369_ ^ _1351_);
+	assign _2109_ = (_1351_ ? _0867_ : _0988_);
+	assign _2110_ = _2109_ | _2105_;
+	assign _2111_ = (_2108_ ? _2107_ : _2110_);
+	assign _2112_ = _2100_ ^ _1383_;
+	assign _2113_ = _2112_ | _2111_;
+	assign _2114_ = _1384_ & ~_2100_;
+	assign _2115_ = _2114_ ^ _1340_;
+	assign _2116_ = _2105_ | _0839_;
+	assign _2117_ = _2105_ | _1109_;
+	assign _2118_ = (_1351_ ? _2117_ : _2116_);
+	assign _2119_ = (_1351_ ? _0865_ : _0986_);
+	assign _2120_ = _2119_ | _2105_;
+	assign _2121_ = (_2108_ ? _2118_ : _2120_);
+	assign _2122_ = _0521_ & ~_2816_;
+	assign _2123_ = _0521_ | _0492_;
+	assign _2124_ = _2816_ & ~_0505_;
+	assign _2125_ = _2123_ & ~_2124_;
+	assign _2126_ = _2125_ | _2122_;
+	assign _2127_ = (_2126_ ? _0870_ : _0872_);
+	assign _2128_ = ~\mchip.design.inter.ENDP_reg [0];
+	assign _2129_ = (_2126_ ? _2128_ : _0844_);
+	assign _2130_ = (_1351_ ? _2129_ : _2127_);
+	assign _2131_ = (_2126_ ? _1112_ : _1114_);
+	assign _2132_ = (_2126_ ? _0991_ : _0993_);
+	assign _2133_ = (_1351_ ? _2132_ : _2131_);
+	assign _2134_ = (_2108_ ? _2130_ : _2133_);
+	assign _2135_ = _2134_ | _2105_;
+	assign _2136_ = (_2112_ ? _2121_ : _2135_);
+	assign _2137_ = (_2115_ ? _2113_ : _2136_);
+	assign _2138_ = _2103_ & ~_2137_;
+	assign _2139_ = ~_2138_;
+	assign _2140_ = (_2098_ ? _2097_ : _2139_);
+	assign _2141_ = (_1391_ ? _1390_ : _2140_);
+	assign _2142_ = (_0604_ ? _2141_ : _1336_);
+	assign _2143_ = _2142_ | _0551_;
+	assign _2144_ = ~(io_in[13] | _0069_);
+	assign _2145_ = ~(_2144_ ^ _2143_);
+	assign _0064_ = _2145_ | _0542_;
+	assign _2146_ = _2142_ | _0548_;
+	assign _2147_ = _2146_ | _0551_;
+	assign _0040_ = _0544_ & ~_2147_;
+	assign _2148_ = ~(_0549_ ^ _0548_);
+	assign _2149_ = _2148_ | _2142_;
+	assign _2150_ = _2149_ | _0551_;
+	assign _0041_ = _0544_ & ~_2150_;
+	assign _2151_ = _0549_ & _0548_;
+	assign _2152_ = _2151_ ^ _0547_;
+	assign _2153_ = _2152_ | _2142_;
+	assign _2154_ = _2153_ | _0551_;
+	assign _0042_ = _0544_ & ~_2154_;
+	assign _2155_ = _2145_ & ~_0616_;
+	assign _2156_ = _0626_ | ~_0619_;
+	assign _2157_ = _2156_ | _0644_;
+	assign _2158_ = (_2157_ ? _0644_ : _2155_);
+	assign io_out[1] = _2158_ | _0542_;
+	assign _2159_ = ~(_0302_ | io_in[13]);
+	assign _2160_ = _2159_ ^ _0633_;
+	assign \mchip.design.receiver.crc.crc16.bit_in  = ~(_2160_ | _0589_);
+	assign _2161_ = ~(\mchip.design.receiver.crc.crc16.bit_in  ^ _2724_);
+	assign _0034_ = _2161_ | _0584_;
+	assign _0035_ = _0584_ | _2729_;
+	assign _2162_ = _2161_ ^ _2728_;
+	assign _0036_ = _2162_ | _0584_;
+	assign _0037_ = _0584_ | ~_2726_;
+	assign _0038_ = _0584_ | ~_2725_;
+	assign _2163_ = ~(\mchip.design.receiver.crc.crc16.bit_in  ^ _2709_);
+	assign _0018_ = _2163_ | _0584_;
+	assign _0025_ = _0584_ | _2693_;
+	assign _2164_ = _2163_ ^ _2694_;
+	assign _0026_ = _2164_ | _0584_;
+	assign _0027_ = _0584_ | ~_2697_;
+	assign _0028_ = _0584_ | ~_2696_;
+	assign _0029_ = _0584_ | _2704_;
+	assign _0030_ = _0584_ | _2703_;
+	assign _0031_ = _0584_ | _2701_;
+	assign _0032_ = _0584_ | _2700_;
+	assign _0033_ = _0584_ | _2719_;
+	assign _0019_ = _0584_ | _2718_;
+	assign _0020_ = _0584_ | _2716_;
+	assign _0021_ = _0584_ | _2715_;
+	assign _0022_ = _0584_ | _2712_;
+	assign _0023_ = _0584_ | _2711_;
+	assign _2165_ = _2163_ ^ _2708_;
+	assign _0024_ = _2165_ | _0584_;
+	assign _2166_ = _2160_ | _0586_;
+	assign _2167_ = _2166_ | _0589_;
+	assign _0015_ = _0583_ & ~_2167_;
+	assign _2168_ = ~(_0587_ ^ _0586_);
+	assign _2169_ = _2168_ | _2160_;
+	assign _2170_ = _2169_ | _0589_;
+	assign _0016_ = _0583_ & ~_2170_;
+	assign _2171_ = _0587_ & _0586_;
+	assign _2172_ = _2171_ ^ _0585_;
+	assign _2173_ = _2172_ | _2160_;
+	assign _2174_ = _2173_ | _0589_;
+	assign _0017_ = _0583_ & ~_2174_;
+	assign \mchip.design.receiver.find_sync.log [0] = _0382_ & ~io_in[13];
+	assign \mchip.design.receiver.find_sync.log [1] = _0383_ & ~io_in[13];
+	assign \mchip.design.receiver.find_sync.log [2] = _0384_ & ~io_in[13];
+	assign \mchip.design.receiver.find_sync.log [3] = _0385_ & ~io_in[13];
+	assign \mchip.design.receiver.find_sync.log [4] = _0386_ & ~io_in[13];
+	assign \mchip.design.receiver.find_sync.log [5] = _0387_ & ~io_in[13];
+	assign _2175_ = _0580_ | _0576_;
+	assign _2176_ = _2175_ | _0637_;
+	assign _2177_ = \mchip.design.receiver.find_sync.log [4] | ~\mchip.design.receiver.find_sync.log [5];
+	assign _2178_ = _0388_ & ~io_in[13];
+	assign _2179_ = _2178_ | _2177_;
+	assign _2180_ = \mchip.design.receiver.find_sync.log [2] | ~\mchip.design.receiver.find_sync.log [3];
+	assign _2181_ = \mchip.design.receiver.find_sync.log [0] | ~\mchip.design.receiver.find_sync.log [1];
+	assign _2182_ = _2181_ | _2180_;
+	assign _2183_ = ~(_2182_ | _2179_);
+	assign _2184_ = (_2667_ ? _2670_ : _2691_);
+	assign _2185_ = _2783_ & ~_2184_;
+	assign _2186_ = (_2667_ ? _2775_ : _2777_);
+	assign _2187_ = _2185_ & ~_2186_;
+	assign _2188_ = _2800_ ^ _2783_;
+	assign _2189_ = ~(\mchip.design.io_fsm.next_state [1] & \mchip.design.io_fsm.next_state [0]);
+	assign _2190_ = _2189_ | _2188_;
+	assign _2191_ = _2190_ | _2185_;
+	assign _2192_ = _2800_ ^ _2776_;
+	assign _2193_ = \mchip.design.io_fsm.next_state [0] ^ _1343_;
+	assign _2194_ = _2193_ | \mchip.design.io_fsm.next_state [1];
+	assign _2195_ = _2192_ & ~_2194_;
+	assign _2196_ = _2186_ & ~_2195_;
+	assign _2197_ = _2191_ & ~_2196_;
+	assign _0039_ = _2176_ & ~_0633_;
+	assign \mchip.design.io_fsm.error_counter_nxt [0] = _2691_ & ~_2738_;
+	assign _2198_ = ~(_2739_ ^ _2738_);
+	assign \mchip.design.io_fsm.error_counter_nxt [1] = _2691_ & ~_2198_;
+	assign _2199_ = _2739_ & _2738_;
+	assign _2200_ = ~(_2199_ ^ _2736_);
+	assign \mchip.design.io_fsm.error_counter_nxt [2] = _2691_ & ~_2200_;
+	assign _2201_ = ~(_2199_ & _2736_);
+	assign _2202_ = _2201_ ^ _2735_;
+	assign \mchip.design.io_fsm.error_counter_nxt [3] = _2691_ & ~_2202_;
+	assign \mchip.design.io_fsm.timeout_counter_nxt [0] = _2691_ & ~_2763_;
+	assign _2203_ = ~(_2764_ ^ _2763_);
+	assign \mchip.design.io_fsm.timeout_counter_nxt [1] = _2691_ & ~_2203_;
+	assign _2204_ = _2764_ & _2763_;
+	assign _2205_ = ~(_2204_ ^ _2761_);
+	assign \mchip.design.io_fsm.timeout_counter_nxt [2] = _2691_ & ~_2205_;
+	assign _2206_ = ~(_2204_ & _2761_);
+	assign _2207_ = _2206_ ^ _2760_;
+	assign \mchip.design.io_fsm.timeout_counter_nxt [3] = _2691_ & ~_2207_;
+	assign \mchip.design.io_fsm.timer_nxt [0] = _2691_ & ~_2751_;
+	assign _2208_ = ~(_2751_ ^ _2750_);
+	assign \mchip.design.io_fsm.timer_nxt [1] = _2691_ & ~_2208_;
+	assign _2209_ = ~(_2754_ ^ _2752_);
+	assign \mchip.design.io_fsm.timer_nxt [2] = _2691_ & ~_2209_;
+	assign _2210_ = _2754_ & _2752_;
+	assign _2211_ = _2210_ ^ _2753_;
+	assign \mchip.design.io_fsm.timer_nxt [3] = _2691_ & ~_2211_;
+	assign _2212_ = ~(_2756_ ^ _2747_);
+	assign \mchip.design.io_fsm.timer_nxt [4] = _2691_ & ~_2212_;
+	assign _2213_ = ~(_2756_ | _2747_);
+	assign _2214_ = _2213_ ^ _2746_;
+	assign \mchip.design.io_fsm.timer_nxt [5] = _2691_ & ~_2214_;
+	assign _2215_ = ~(_2756_ | _2748_);
+	assign _2216_ = ~(_2215_ ^ _2744_);
+	assign \mchip.design.io_fsm.timer_nxt [6] = _2691_ & ~_2216_;
+	assign _2217_ = ~(_2215_ & _2744_);
+	assign _2218_ = _2217_ ^ _2743_;
+	assign \mchip.design.io_fsm.timer_nxt [7] = _2691_ & ~_2218_;
+	assign _2219_ = ~(_2758_ ^ _2757_);
+	assign \mchip.design.io_fsm.timer_nxt [8] = _2691_ & ~_2219_;
+	assign _2220_ = _1309_ | _0561_;
+	assign _2222_ = _2221_ | _2220_;
+	assign _2223_ = _2677_ | ~_2678_;
+	assign _2224_ = _2680_ & _2240_;
+	assign _2225_ = _2223_ | ~_2224_;
+	assign _2226_ = _2676_ & ~_2225_;
+	assign _2227_ = _2226_ | _2240_;
+	assign _2228_ = _2227_ | ~_1309_;
+	assign _2229_ = _2678_ | ~_2677_;
+	assign _2230_ = _2229_ | _2681_;
+	assign _2231_ = _2676_ & ~_2230_;
+	assign _2232_ = _2231_ | _2240_;
+	assign _2233_ = _0561_ & ~_2232_;
+	assign _2234_ = _2228_ & ~_2233_;
+	assign _2235_ = _2223_ | _0606_;
+	assign _2236_ = _2676_ & ~_2235_;
+	assign _2237_ = _2236_ | _2240_;
+	assign _2238_ = _0556_ & ~_2237_;
+	assign _2239_ = _2678_ & _2677_;
+	assign _2241_ = _0546_ & ~_2240_;
+	assign _2242_ = _2241_ | _2238_;
+	assign _2243_ = ~(_2674_ & _2673_);
+	assign _2244_ = _2672_ & ~_2243_;
+	assign _2245_ = _0553_ & ~_2240_;
+	assign _2246_ = _2683_ | _2240_;
+	assign _2247_ = ~(_2246_ | _2688_);
+	assign _2248_ = _2247_ | _2245_;
+	assign _2249_ = _2248_ | _2242_;
+	assign _2250_ = _2234_ & ~_2249_;
+	assign \mchip.design.transmitter.fsm.count_next [0] = _2222_ & ~_2250_;
+	assign _2251_ = _2224_ | ~_0606_;
+	assign _2252_ = _2251_ | _2683_;
+	assign _2253_ = _2252_ | _2688_;
+	assign _2254_ = _0553_ & ~_2251_;
+	assign _2255_ = _2253_ & ~_2254_;
+	assign _2256_ = _2251_ | _2236_;
+	assign _2257_ = _0556_ & ~_2256_;
+	assign _2258_ = ~(_2239_ & _2224_);
+	assign _2259_ = _2676_ & ~_2258_;
+	assign _2260_ = _2251_ | _2259_;
+	assign _2261_ = _0546_ & ~_2260_;
+	assign _2262_ = _2261_ | _2257_;
+	assign _2263_ = _2255_ & ~_2262_;
+	assign _2264_ = _2251_ | _2226_;
+	assign _2265_ = _1309_ & ~_2264_;
+	assign _2266_ = _2251_ | _2231_;
+	assign _2267_ = _0561_ & ~_2266_;
+	assign _2268_ = _2267_ | _2265_;
+	assign _2269_ = _2263_ & ~_2268_;
+	assign \mchip.design.transmitter.fsm.count_next [1] = _2222_ & ~_2269_;
+	assign _2270_ = _2224_ ^ _1382_;
+	assign _2271_ = _2270_ | _2683_;
+	assign _2272_ = _2271_ | _2688_;
+	assign _2273_ = _2244_ & ~_2258_;
+	assign _2274_ = _2270_ | _2273_;
+	assign _2275_ = _0553_ & ~_2274_;
+	assign _2276_ = _2272_ & ~_2275_;
+	assign _2277_ = _2270_ | _2236_;
+	assign _2278_ = _0556_ & ~_2277_;
+	assign _2279_ = _2270_ | _2259_;
+	assign _2280_ = _0546_ & ~_2279_;
+	assign _2281_ = _2280_ | _2278_;
+	assign _2282_ = _2276_ & ~_2281_;
+	assign _2283_ = _2270_ | _2226_;
+	assign _2284_ = _1309_ & ~_2283_;
+	assign _2285_ = _2270_ | _2231_;
+	assign _2286_ = _0561_ & ~_2285_;
+	assign _2287_ = _2286_ | _2284_;
+	assign _2288_ = _2282_ & ~_2287_;
+	assign \mchip.design.transmitter.fsm.count_next [2] = _2222_ & ~_2288_;
+	assign _2289_ = _2224_ & ~_1382_;
+	assign _2290_ = _2289_ ^ _1337_;
+	assign _2291_ = _2290_ | _2683_;
+	assign _2292_ = _2291_ | _2688_;
+	assign _2293_ = _2290_ | _2273_;
+	assign _2294_ = _0553_ & ~_2293_;
+	assign _2295_ = _2292_ & ~_2294_;
+	assign _2296_ = _2290_ | _2236_;
+	assign _2297_ = _0556_ & ~_2296_;
+	assign _2298_ = _2290_ | _2259_;
+	assign _2299_ = _0546_ & ~_2298_;
+	assign _2300_ = _2299_ | _2297_;
+	assign _2301_ = _2295_ & ~_2300_;
+	assign _2302_ = _2290_ | _2226_;
+	assign _2303_ = _1309_ & ~_2302_;
+	assign _2304_ = _2290_ | _2231_;
+	assign _2305_ = _0561_ & ~_2304_;
+	assign _2306_ = _2305_ | _2303_;
+	assign _2307_ = _2301_ & ~_2306_;
+	assign \mchip.design.transmitter.fsm.count_next [3] = _2222_ & ~_2307_;
+	assign _2308_ = _2258_ ^ _2674_;
+	assign _2309_ = _2308_ | _2683_;
+	assign _2310_ = _2309_ | _2688_;
+	assign _2311_ = _2308_ | _2273_;
+	assign _2312_ = _0553_ & ~_2311_;
+	assign _2313_ = _2310_ & ~_2312_;
+	assign _2314_ = _2308_ | _2236_;
+	assign _2315_ = _0556_ & ~_2314_;
+	assign _2316_ = _2308_ | _2259_;
+	assign _2317_ = _0546_ & ~_2316_;
+	assign _2318_ = _2317_ | _2315_;
+	assign _2319_ = _2313_ & ~_2318_;
+	assign _2320_ = _2308_ | _2226_;
+	assign _2321_ = _1309_ & ~_2320_;
+	assign _2322_ = _2308_ | _2231_;
+	assign _2323_ = _0561_ & ~_2322_;
+	assign _2324_ = _2323_ | _2321_;
+	assign _2325_ = _2319_ & ~_2324_;
+	assign \mchip.design.transmitter.fsm.count_next [4] = _2222_ & ~_2325_;
+	assign _2326_ = _2258_ | ~_2674_;
+	assign _2327_ = _2326_ ^ _2673_;
+	assign _2328_ = _2327_ | _2683_;
+	assign _2329_ = _2328_ | _2688_;
+	assign _2330_ = _2327_ | _2273_;
+	assign _2331_ = _0553_ & ~_2330_;
+	assign _2332_ = _2329_ & ~_2331_;
+	assign _2333_ = _2327_ | _2236_;
+	assign _2334_ = _0556_ & ~_2333_;
+	assign _2335_ = _2327_ | _2259_;
+	assign _2336_ = _0546_ & ~_2335_;
+	assign _2337_ = _2336_ | _2334_;
+	assign _2338_ = _2332_ & ~_2337_;
+	assign _2339_ = _2327_ | _2226_;
+	assign _2340_ = _1309_ & ~_2339_;
+	assign _2341_ = _2327_ | _2231_;
+	assign _2342_ = _0561_ & ~_2341_;
+	assign _2343_ = _2342_ | _2340_;
+	assign _2344_ = _2338_ & ~_2343_;
+	assign \mchip.design.transmitter.fsm.count_next [5] = _2222_ & ~_2344_;
+	assign _2345_ = ~(_2243_ | _2258_);
+	assign _2346_ = _2345_ ^ _2672_;
+	assign _2347_ = _2346_ | _2683_;
+	assign _2348_ = _2347_ | _2688_;
+	assign _2349_ = _2346_ | _2273_;
+	assign _2350_ = _0553_ & ~_2349_;
+	assign _2351_ = _2348_ & ~_2350_;
+	assign _2352_ = _2346_ | _2236_;
+	assign _2353_ = _0556_ & ~_2352_;
+	assign _2354_ = _2346_ | _2259_;
+	assign _2355_ = _0546_ & ~_2354_;
+	assign _2356_ = _2355_ | _2353_;
+	assign _2357_ = _2351_ & ~_2356_;
+	assign _2358_ = _2346_ | _2226_;
+	assign _2359_ = _1309_ & ~_2358_;
+	assign _2360_ = _2346_ | _2231_;
+	assign _2361_ = _0561_ & ~_2360_;
+	assign _2362_ = _2361_ | _2359_;
+	assign _2363_ = _2357_ & ~_2362_;
+	assign \mchip.design.transmitter.fsm.count_next [6] = _2222_ & ~_2363_;
+	assign _2364_ = _0503_ & ~_0652_;
+	assign _2365_ = ~(_1344_ | _1343_);
+	assign _2366_ = _2365_ | _2671_;
+	assign _2367_ = _1361_ & _2778_;
+	assign _2368_ = ~(_1359_ | _1353_);
+	assign _2369_ = _2368_ | _2367_;
+	assign _2370_ = _2369_ | _2366_;
+	assign _2371_ = _2370_ | _2364_;
+	assign _2372_ = (_2669_ ? _2668_ : _2774_);
+	assign _2373_ = _2372_ & ~_0503_;
+	assign _2374_ = _2371_ & ~_2373_;
+	assign _2375_ = _2221_ | _0541_;
+	assign _2376_ = _0539_ & ~_2226_;
+	assign _2377_ = _2226_ & _1308_;
+	assign _2378_ = _2231_ & ~_0551_;
+	assign _2379_ = _0561_ & ~_2378_;
+	assign _2380_ = _2379_ | _2377_;
+	assign _2381_ = _2380_ | _2376_;
+	assign _2382_ = _0551_ | ~_2236_;
+	assign _2383_ = _0556_ & ~_2382_;
+	assign _2384_ = _0551_ | ~_2259_;
+	assign _2385_ = _0546_ & ~_2384_;
+	assign _2386_ = _2385_ | _2383_;
+	assign _2387_ = _2273_ & ~_0551_;
+	assign _2388_ = _0553_ & ~_2387_;
+	assign _2389_ = ~(_2688_ | _2683_);
+	assign _2390_ = _2389_ | _2388_;
+	assign _2391_ = _2390_ | _2386_;
+	assign _2392_ = _2391_ | _2381_;
+	assign \mchip.design.transmitter.fsm.next_state [0] = (_2375_ ? _2392_ : _2374_);
+	assign _2393_ = ~(_2387_ & _0553_);
+	assign _2394_ = _2393_ & ~_2389_;
+	assign _2395_ = _2383_ | _0546_;
+	assign _2396_ = _2394_ & ~_2395_;
+	assign _2397_ = _2226_ & _0539_;
+	assign _2398_ = ~(_1366_ & _1350_);
+	assign _2399_ = _2398_ | _1378_;
+	assign _2400_ = _1350_ & ~_1366_;
+	assign _2401_ = _2400_ | _2399_;
+	assign _2402_ = _2226_ & ~_2401_;
+	assign _2403_ = _1308_ & ~_2402_;
+	assign _2404_ = _2403_ | _2379_;
+	assign _2405_ = _2404_ | _2397_;
+	assign _2406_ = _2396_ & ~_2405_;
+	assign \mchip.design.transmitter.fsm.next_state [1] = _2375_ & ~_2406_;
+	assign _2407_ = _2389_ | _0553_;
+	assign _2408_ = _0604_ & ~_2407_;
+	assign _2409_ = _2400_ | ~_2226_;
+	assign _2410_ = _1308_ & ~_2409_;
+	assign _2411_ = _2378_ & _0561_;
+	assign _2412_ = _2411_ | _2410_;
+	assign _2413_ = _2408_ & ~_2412_;
+	assign \mchip.design.transmitter.fsm.next_state [2] = _2375_ & ~_2413_;
+	assign _2414_ = _2426_ | _2648_;
+	assign _2415_ = _2414_ | _2641_;
+	assign _2416_ = _2663_ | _2426_;
+	assign _2417_ = _2651_ & ~_2416_;
+	assign _2418_ = _2415_ & ~_2417_;
+	assign _2419_ = _2657_ | ~_2658_;
+	assign _2420_ = _2426_ | ~_2660_;
+	assign _2421_ = _2420_ | _2419_;
+	assign _2422_ = _2656_ & ~_2421_;
+	assign _2423_ = _2422_ | _2426_;
+	assign _2424_ = _0598_ & ~_2423_;
+	assign _2425_ = _2658_ & _2657_;
+	assign _2427_ = _0595_ & ~_2426_;
+	assign _2428_ = _2427_ | _2424_;
+	assign _2429_ = _2418_ & ~_2428_;
+	assign _2430_ = _2426_ & ~_2660_;
+	assign _2431_ = _2419_ | ~_2430_;
+	assign _2432_ = _2656_ & ~_2431_;
+	assign _2433_ = _2432_ | _2426_;
+	assign _2434_ = _0580_ & ~_2433_;
+	assign _2435_ = _2658_ | ~_2657_;
+	assign _2436_ = _2435_ | _2661_;
+	assign _2437_ = _2656_ & ~_2436_;
+	assign _2438_ = _2437_ | _2426_;
+	assign _2439_ = _0578_ & ~_2438_;
+	assign _2440_ = ~(_2654_ & _2653_);
+	assign _2441_ = _2652_ & ~_2440_;
+	assign _2442_ = _0592_ & ~_2426_;
+	assign _2443_ = _2442_ | _2439_;
+	assign _2444_ = _2443_ | _2434_;
+	assign _2445_ = _2429_ & ~_2444_;
+	assign \mchip.design.receiver.fsm.count_next [0] = _2176_ & ~_2445_;
+	assign _2446_ = _2430_ | ~_2420_;
+	assign _2447_ = _2446_ | _2648_;
+	assign _2448_ = _2447_ | _2641_;
+	assign _2449_ = _2446_ | _2663_;
+	assign _2450_ = _2651_ & ~_2449_;
+	assign _2451_ = _2448_ & ~_2450_;
+	assign _2452_ = _2446_ | _2422_;
+	assign _2453_ = _0598_ & ~_2452_;
+	assign _2454_ = ~(_2430_ & _2425_);
+	assign _2455_ = _2656_ & ~_2454_;
+	assign _2456_ = _2446_ | _2455_;
+	assign _2457_ = _0595_ & ~_2456_;
+	assign _2458_ = _2457_ | _2453_;
+	assign _2459_ = _2451_ & ~_2458_;
+	assign _2460_ = _2446_ | _2432_;
+	assign _2461_ = _0580_ & ~_2460_;
+	assign _2462_ = _2446_ | _2437_;
+	assign _2463_ = _0578_ & ~_2462_;
+	assign _2464_ = _2441_ & ~_2454_;
+	assign _2465_ = _2446_ | _2464_;
+	assign _2466_ = _0592_ & ~_2465_;
+	assign _2467_ = _2466_ | _2463_;
+	assign _2468_ = _2467_ | _2461_;
+	assign _2469_ = _2459_ & ~_2468_;
+	assign \mchip.design.receiver.fsm.count_next [1] = _2176_ & ~_2469_;
+	assign _2470_ = ~(_2430_ ^ _2658_);
+	assign _2471_ = _2470_ | _2648_;
+	assign _2472_ = _2471_ | _2641_;
+	assign _2473_ = _2470_ | _2663_;
+	assign _2474_ = _2651_ & ~_2473_;
+	assign _2475_ = _2472_ & ~_2474_;
+	assign _2476_ = _2470_ | _2422_;
+	assign _2477_ = _0598_ & ~_2476_;
+	assign _2478_ = _2470_ | _2455_;
+	assign _2479_ = _0595_ & ~_2478_;
+	assign _2480_ = _2479_ | _2477_;
+	assign _2481_ = _2475_ & ~_2480_;
+	assign _2482_ = _2470_ | _2432_;
+	assign _2483_ = _0580_ & ~_2482_;
+	assign _2484_ = _2470_ | _2437_;
+	assign _2485_ = _0578_ & ~_2484_;
+	assign _2486_ = _2470_ | _2464_;
+	assign _2487_ = _0592_ & ~_2486_;
+	assign _2488_ = _2487_ | _2485_;
+	assign _2489_ = _2488_ | _2483_;
+	assign _2490_ = _2481_ & ~_2489_;
+	assign \mchip.design.receiver.fsm.count_next [2] = _2176_ & ~_2490_;
+	assign _2491_ = ~(_2430_ & _2658_);
+	assign _2492_ = _2491_ ^ _2657_;
+	assign _2493_ = _2492_ | _2648_;
+	assign _2494_ = _2493_ | _2641_;
+	assign _2495_ = _2492_ | _2663_;
+	assign _2496_ = _2651_ & ~_2495_;
+	assign _2497_ = _2494_ & ~_2496_;
+	assign _2498_ = _2492_ | _2422_;
+	assign _2499_ = _0598_ & ~_2498_;
+	assign _2500_ = _2492_ | _2455_;
+	assign _2501_ = _0595_ & ~_2500_;
+	assign _2502_ = _2501_ | _2499_;
+	assign _2503_ = _2497_ & ~_2502_;
+	assign _2504_ = _2492_ | _2432_;
+	assign _2505_ = _0580_ & ~_2504_;
+	assign _2506_ = _2492_ | _2437_;
+	assign _2507_ = _0578_ & ~_2506_;
+	assign _2508_ = _2492_ | _2464_;
+	assign _2509_ = _0592_ & ~_2508_;
+	assign _2510_ = _2509_ | _2507_;
+	assign _2511_ = _2510_ | _2505_;
+	assign _2512_ = _2503_ & ~_2511_;
+	assign \mchip.design.receiver.fsm.count_next [3] = _2176_ & ~_2512_;
+	assign _2513_ = _2454_ ^ _2654_;
+	assign _2514_ = _2513_ | _2648_;
+	assign _2515_ = _2514_ | _2641_;
+	assign _2516_ = _2513_ | _2663_;
+	assign _2517_ = _2651_ & ~_2516_;
+	assign _2518_ = _2515_ & ~_2517_;
+	assign _2519_ = _2513_ | _2422_;
+	assign _2520_ = _0598_ & ~_2519_;
+	assign _2521_ = _2513_ | _2455_;
+	assign _2522_ = _0595_ & ~_2521_;
+	assign _2523_ = _2522_ | _2520_;
+	assign _2524_ = _2518_ & ~_2523_;
+	assign _2525_ = _2513_ | _2432_;
+	assign _2526_ = _0580_ & ~_2525_;
+	assign _2527_ = _2513_ | _2437_;
+	assign _2528_ = _0578_ & ~_2527_;
+	assign _2529_ = _2513_ | _2464_;
+	assign _2530_ = _0592_ & ~_2529_;
+	assign _2531_ = _2530_ | _2528_;
+	assign _2532_ = _2531_ | _2526_;
+	assign _2533_ = _2524_ & ~_2532_;
+	assign \mchip.design.receiver.fsm.count_next [4] = _2176_ & ~_2533_;
+	assign _2534_ = _2454_ | ~_2654_;
+	assign _2535_ = _2534_ ^ _2653_;
+	assign _2536_ = _2535_ | _2648_;
+	assign _2537_ = _2536_ | _2641_;
+	assign _2538_ = _2535_ | _2663_;
+	assign _2539_ = _2651_ & ~_2538_;
+	assign _2540_ = _2537_ & ~_2539_;
+	assign _2541_ = _2535_ | _2422_;
+	assign _2542_ = _0598_ & ~_2541_;
+	assign _2543_ = _2535_ | _2455_;
+	assign _2544_ = _0595_ & ~_2543_;
+	assign _2545_ = _2544_ | _2542_;
+	assign _2546_ = _2540_ & ~_2545_;
+	assign _2547_ = _2535_ | _2432_;
+	assign _2548_ = _0580_ & ~_2547_;
+	assign _2549_ = _2535_ | _2437_;
+	assign _2550_ = _0578_ & ~_2549_;
+	assign _2551_ = _2535_ | _2464_;
+	assign _2552_ = _0592_ & ~_2551_;
+	assign _2553_ = _2552_ | _2550_;
+	assign _2554_ = _2553_ | _2548_;
+	assign _2555_ = _2546_ & ~_2554_;
+	assign \mchip.design.receiver.fsm.count_next [5] = _2176_ & ~_2555_;
+	assign _2556_ = ~(_2440_ | _2454_);
+	assign _2557_ = _2556_ ^ _2652_;
+	assign _2558_ = _2557_ | _2648_;
+	assign _2559_ = _2558_ | _2641_;
+	assign _2560_ = _2557_ | _2663_;
+	assign _2561_ = _2651_ & ~_2560_;
+	assign _2562_ = _2559_ & ~_2561_;
+	assign _2563_ = _2557_ | _2422_;
+	assign _2564_ = _0598_ & ~_2563_;
+	assign _2565_ = _2557_ | _2455_;
+	assign _2566_ = _0595_ & ~_2565_;
+	assign _2567_ = _2566_ | _2564_;
+	assign _2568_ = _2562_ & ~_2567_;
+	assign _2569_ = _2557_ | _2432_;
+	assign _2570_ = _0580_ & ~_2569_;
+	assign _2571_ = _2557_ | _2437_;
+	assign _2572_ = _0578_ & ~_2571_;
+	assign _2573_ = _2557_ | _2464_;
+	assign _2574_ = _0592_ & ~_2573_;
+	assign _2575_ = _2574_ | _2572_;
+	assign _2576_ = _2575_ | _2570_;
+	assign _2577_ = _2568_ & ~_2576_;
+	assign \mchip.design.receiver.fsm.count_next [6] = _2176_ & ~_2577_;
+	assign \mchip.design.receiver.packet_decode.PID_accum [4] = _0307_ & ~io_in[13];
+	assign _2578_ = _2183_ & ~\mchip.design.receiver.find_sync.bit_in ;
+	assign _2579_ = _2197_ | _2187_;
+	assign _2580_ = _2578_ & ~_2579_;
+	assign _2581_ = \mchip.design.receiver.packet_decode.PID_accum [2] & ~\mchip.design.receiver.packet_decode.PID_accum [1];
+	assign _2582_ = \mchip.design.receiver.packet_decode.PID_accum [4] & ~\mchip.design.receiver.packet_decode.PID_accum [3];
+	assign _2583_ = ~(_2582_ & _2581_);
+	assign _2584_ = ~(\mchip.design.receiver.packet_decode.PID_accum [4] | \mchip.design.receiver.packet_decode.PID_accum [3]);
+	assign _2585_ = _2584_ & _2581_;
+	assign _2586_ = _2583_ & ~_2585_;
+	assign _2587_ = ~(\mchip.design.receiver.packet_decode.PID_accum [2] & \mchip.design.receiver.packet_decode.PID_accum [1]);
+	assign _2588_ = _2584_ & ~_2587_;
+	assign _2589_ = _2588_ | _2586_;
+	assign _2590_ = \mchip.design.receiver.packet_decode.PID_accum [2] | ~\mchip.design.receiver.packet_decode.PID_accum [1];
+	assign _2591_ = _2584_ & ~_2590_;
+	assign _2592_ = _2582_ & ~_2590_;
+	assign _2593_ = _2592_ | _2591_;
+	assign _2594_ = _2589_ & ~_2593_;
+	assign _2595_ = _2432_ & ~_2594_;
+	assign _2596_ = _0580_ & ~_2595_;
+	assign _2597_ = _2596_ | _0592_;
+	assign _2598_ = _2455_ & ~_0589_;
+	assign _2599_ = _0595_ & ~_2598_;
+	assign _2600_ = ~(_2648_ | _2641_);
+	assign _2601_ = _2600_ | _2599_;
+	assign _2602_ = _2601_ | _2597_;
+	assign \mchip.design.receiver.fsm.next_state [0] = (_2176_ ? _2602_ : _2580_);
+	assign _2603_ = _2651_ & ~_2663_;
+	assign _2604_ = ~(_2603_ | _2600_);
+	assign _2605_ = _0589_ | ~_2422_;
+	assign _2606_ = _0598_ & ~_2605_;
+	assign _2607_ = _2598_ & _0595_;
+	assign _2608_ = _2607_ | _2606_;
+	assign _2609_ = _2604_ & ~_2608_;
+	assign _2610_ = _2432_ & _0580_;
+	assign _2611_ = _2437_ & ~_0589_;
+	assign _2612_ = _0578_ & ~_2611_;
+	assign _2613_ = _2464_ & ~_0589_;
+	assign _2614_ = _0592_ & ~_2613_;
+	assign _2615_ = _2614_ | _2612_;
+	assign _2616_ = _2615_ | _2610_;
+	assign _2617_ = _2609_ & ~_2616_;
+	assign \mchip.design.receiver.fsm.next_state [1] = _2176_ & ~_2617_;
+	assign _2618_ = _2604_ & _0575_;
+	assign _2619_ = _2593_ | _2588_;
+	assign _2620_ = _2619_ | ~_2432_;
+	assign _2621_ = _0580_ & ~_2620_;
+	assign _2622_ = _2611_ & _0578_;
+	assign _2623_ = _2613_ & _0592_;
+	assign _2624_ = _2623_ | _2622_;
+	assign _2625_ = _2624_ | _2621_;
+	assign _2626_ = _2618_ & ~_2625_;
+	assign \mchip.design.receiver.fsm.next_state [2] = _2176_ & ~_2626_;
+	assign _2627_ = ~(_0644_ | _0626_);
+	assign _2628_ = _0623_ & ~_2145_;
+	assign _2629_ = (_0613_ ? _2628_ : _2627_);
+	assign io_out[0] = _2629_ & ~_0542_;
+	assign _2630_ = ~(_2141_ ^ _1320_);
+	assign _0059_ = _2630_ | _0565_;
+	assign _0060_ = _1329_ | _0565_;
+	assign _2631_ = _2630_ ^ _1330_;
+	assign _0061_ = _2631_ | _0565_;
+	assign _0062_ = _1326_ | _0565_;
+	assign _0063_ = _1327_ | _0565_;
+	assign _2632_ = ~(_2141_ ^ _1269_);
+	assign _0043_ = _2632_ | _0565_;
+	assign _0050_ = _1299_ | _0565_;
+	assign _2633_ = _2632_ ^ _1298_;
+	assign _0051_ = _2633_ | _0565_;
+	assign _0052_ = _1296_ | _0565_;
+	assign _0053_ = _1295_ | _0565_;
+	assign _0054_ = _1292_ | _0565_;
+	assign _0055_ = _1291_ | _0565_;
+	assign _0056_ = _1289_ | _0565_;
+	assign _0057_ = _1288_ | _0565_;
+	assign _0058_ = _1283_ | _0565_;
+	assign _0044_ = _1282_ | _0565_;
+	assign _0045_ = _1280_ | _0565_;
+	assign _0046_ = _1279_ | _0565_;
+	assign _0047_ = _1275_ | _0565_;
+	assign _0048_ = _1274_ | _0565_;
+	assign _2634_ = _2632_ ^ _1271_;
+	assign _0049_ = _2634_ | _0565_;
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [0] = _0180_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [1] = _0181_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [2] = _0182_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [3] = _0183_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [4] = _0184_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [5] = _0185_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [6] = _0186_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [7] = _0187_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [8] = _0188_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [9] = _0189_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [10] = _0190_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [11] = _0191_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [12] = _0192_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [13] = _0193_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [14] = _0194_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [15] = _0195_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [16] = _0196_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [17] = _0197_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [18] = _0198_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [19] = _0199_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [20] = _0200_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [21] = _0201_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [22] = _0202_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [23] = _0203_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [24] = _0204_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [25] = _0205_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [26] = _0206_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [27] = _0207_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [28] = _0208_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [29] = _0209_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [30] = _0210_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [31] = _0211_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [32] = _0212_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [33] = _0213_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [34] = _0214_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [35] = _0215_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [36] = _0216_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [37] = _0217_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [38] = _0218_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [39] = _0219_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [40] = _0220_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [41] = _0221_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [42] = _0222_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [43] = _0223_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [44] = _0224_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [45] = _0225_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [46] = _0226_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [47] = _0227_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [48] = _0228_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [49] = _0229_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [50] = _0230_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [51] = _0231_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [52] = _0232_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [53] = _0233_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [54] = _0234_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [55] = _0235_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [56] = _0236_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [57] = _0237_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [58] = _0238_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [59] = _0239_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [60] = _0240_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [61] = _0241_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [62] = _0242_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PAYLOAD_accum [63] = _0243_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PID_accum [5] = _0308_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PID_accum [6] = _0309_ & ~io_in[13];
+	assign \mchip.design.receiver.packet_decode.PID_accum [7] = _0310_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [0] = _0311_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [1] = _0312_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [2] = _0313_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [3] = _0314_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [4] = _0315_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [5] = _0316_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [6] = _0317_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [7] = _0318_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [8] = _0319_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [9] = _0320_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [10] = _0321_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [11] = _0322_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [12] = _0323_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [13] = _0324_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [14] = _0325_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [15] = _0326_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [16] = _0327_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [17] = _0328_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [18] = _0329_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [19] = _0330_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [20] = _0331_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [21] = _0332_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [22] = _0333_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [23] = _0334_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [24] = _0335_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [25] = _0336_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [26] = _0337_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [27] = _0338_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [28] = _0339_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [29] = _0340_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [30] = _0341_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [31] = _0342_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [32] = _0343_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [33] = _0344_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [34] = _0345_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [35] = _0346_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [36] = _0347_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [37] = _0348_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [38] = _0349_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [39] = _0350_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [40] = _0351_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [41] = _0352_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [42] = _0353_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [43] = _0354_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [44] = _0355_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [45] = _0356_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [46] = _0357_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [47] = _0358_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [48] = _0359_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [49] = _0360_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [50] = _0361_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [51] = _0362_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [52] = _0363_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [53] = _0364_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [54] = _0365_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [55] = _0366_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [56] = _0367_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [57] = _0368_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [58] = _0369_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [59] = _0370_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [60] = _0371_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [61] = _0372_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [62] = _0373_ & ~io_in[13];
+	assign \mchip.design.io_fsm.final_data [63] = _0374_ & ~io_in[13];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0069_ <= 1'h1;
+		else if (_0004_)
+			_0069_ <= _0064_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0070_ <= 1'h0;
+		else
+			_0070_ <= \mchip.design.inter.count_next [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0071_ <= 1'h0;
+		else
+			_0071_ <= \mchip.design.inter.count_next [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0072_ <= 1'h0;
+		else
+			_0072_ <= \mchip.design.inter.count_next [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0073_ <= 1'h0;
+		else
+			_0073_ <= \mchip.design.inter.count_next [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0074_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0074_ <= \mchip.design.io_fsm.final_data [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0075_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0075_ <= \mchip.design.io_fsm.final_data [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0076_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0076_ <= \mchip.design.io_fsm.final_data [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0077_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0077_ <= \mchip.design.io_fsm.final_data [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0078_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0078_ <= \mchip.design.io_fsm.final_data [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0079_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0079_ <= \mchip.design.io_fsm.final_data [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0080_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0080_ <= \mchip.design.io_fsm.final_data [6];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0081_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0081_ <= \mchip.design.io_fsm.final_data [7];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0082_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0082_ <= \mchip.design.io_fsm.final_data [8];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0083_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0083_ <= \mchip.design.io_fsm.final_data [9];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0084_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0084_ <= \mchip.design.io_fsm.final_data [10];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0085_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0085_ <= \mchip.design.io_fsm.final_data [11];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0086_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0086_ <= \mchip.design.io_fsm.final_data [12];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0087_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0087_ <= \mchip.design.io_fsm.final_data [13];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0088_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0088_ <= \mchip.design.io_fsm.final_data [14];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0089_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0089_ <= \mchip.design.io_fsm.final_data [15];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0090_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0090_ <= \mchip.design.io_fsm.final_data [16];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0091_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0091_ <= \mchip.design.io_fsm.final_data [17];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0092_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0092_ <= \mchip.design.io_fsm.final_data [18];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0093_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0093_ <= \mchip.design.io_fsm.final_data [19];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0094_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0094_ <= \mchip.design.io_fsm.final_data [20];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0095_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0095_ <= \mchip.design.io_fsm.final_data [21];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0096_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0096_ <= \mchip.design.io_fsm.final_data [22];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0097_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0097_ <= \mchip.design.io_fsm.final_data [23];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0098_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0098_ <= \mchip.design.io_fsm.final_data [24];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0099_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0099_ <= \mchip.design.io_fsm.final_data [25];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0100_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0100_ <= \mchip.design.io_fsm.final_data [26];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0101_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0101_ <= \mchip.design.io_fsm.final_data [27];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0102_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0102_ <= \mchip.design.io_fsm.final_data [28];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0103_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0103_ <= \mchip.design.io_fsm.final_data [29];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0104_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0104_ <= \mchip.design.io_fsm.final_data [30];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0105_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0105_ <= \mchip.design.io_fsm.final_data [31];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0106_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0106_ <= \mchip.design.io_fsm.final_data [32];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0107_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0107_ <= \mchip.design.io_fsm.final_data [33];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0108_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0108_ <= \mchip.design.io_fsm.final_data [34];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0109_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0109_ <= \mchip.design.io_fsm.final_data [35];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0110_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0110_ <= \mchip.design.io_fsm.final_data [36];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0111_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0111_ <= \mchip.design.io_fsm.final_data [37];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0112_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0112_ <= \mchip.design.io_fsm.final_data [38];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0113_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0113_ <= \mchip.design.io_fsm.final_data [39];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0114_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0114_ <= \mchip.design.io_fsm.final_data [40];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0115_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0115_ <= \mchip.design.io_fsm.final_data [41];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0116_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0116_ <= \mchip.design.io_fsm.final_data [42];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0117_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0117_ <= \mchip.design.io_fsm.final_data [43];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0118_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0118_ <= \mchip.design.io_fsm.final_data [44];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0119_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0119_ <= \mchip.design.io_fsm.final_data [45];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0120_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0120_ <= \mchip.design.io_fsm.final_data [46];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0121_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0121_ <= \mchip.design.io_fsm.final_data [47];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0122_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0122_ <= \mchip.design.io_fsm.final_data [48];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0123_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0123_ <= \mchip.design.io_fsm.final_data [49];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0124_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0124_ <= \mchip.design.io_fsm.final_data [50];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0125_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0125_ <= \mchip.design.io_fsm.final_data [51];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0126_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0126_ <= \mchip.design.io_fsm.final_data [52];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0127_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0127_ <= \mchip.design.io_fsm.final_data [53];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0128_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0128_ <= \mchip.design.io_fsm.final_data [54];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0129_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0129_ <= \mchip.design.io_fsm.final_data [55];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0130_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0130_ <= \mchip.design.io_fsm.final_data [56];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0131_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0131_ <= \mchip.design.io_fsm.final_data [57];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0132_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0132_ <= \mchip.design.io_fsm.final_data [58];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0133_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0133_ <= \mchip.design.io_fsm.final_data [59];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0134_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0134_ <= \mchip.design.io_fsm.final_data [60];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0135_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0135_ <= \mchip.design.io_fsm.final_data [61];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0136_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0136_ <= \mchip.design.io_fsm.final_data [62];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0137_ <= 1'h0;
+		else if (\mchip.design.finished )
+			_0137_ <= \mchip.design.io_fsm.final_data [63];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0138_ <= 1'h0;
+		else if (_0065_)
+			_0138_ <= io_in[2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0139_ <= 1'h0;
+		else if (_0065_)
+			_0139_ <= io_in[3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0140_ <= 1'h0;
+		else if (_0065_)
+			_0140_ <= io_in[4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0141_ <= 1'h0;
+		else if (_0065_)
+			_0141_ <= io_in[5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0142_ <= 1'h0;
+		else if (_0065_)
+			_0142_ <= \mchip.design.inter.ENDP_reg [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0143_ <= 1'h0;
+		else if (_0065_)
+			_0143_ <= \mchip.design.inter.ENDP_reg [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0144_ <= 1'h0;
+		else if (_0065_)
+			_0144_ <= \mchip.design.inter.ENDP_reg [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0145_ <= 1'h0;
+		else if (_0065_)
+			_0145_ <= \mchip.design.inter.ENDP_reg [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0146_ <= 1'h0;
+		else if (_0066_)
+			_0146_ <= io_in[2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0147_ <= 1'h0;
+		else if (_0066_)
+			_0147_ <= io_in[3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0148_ <= 1'h0;
+		else if (_0066_)
+			_0148_ <= io_in[4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0149_ <= 1'h0;
+		else if (_0066_)
+			_0149_ <= io_in[5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0150_ <= 1'h0;
+		else if (_0066_)
+			_0150_ <= \mchip.design.inter.Addr_reg [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0151_ <= 1'h0;
+		else if (_0066_)
+			_0151_ <= \mchip.design.inter.Addr_reg [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0152_ <= 1'h0;
+		else if (_0066_)
+			_0152_ <= \mchip.design.inter.Addr_reg [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0153_ <= 1'h0;
+		else if (_0066_)
+			_0153_ <= \mchip.design.inter.Addr_reg [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0154_ <= 1'h0;
+		else if (_0067_)
+			_0154_ <= io_in[2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0155_ <= 1'h0;
+		else if (_0067_)
+			_0155_ <= io_in[3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0156_ <= 1'h0;
+		else if (_0067_)
+			_0156_ <= io_in[4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0157_ <= 1'h0;
+		else if (_0067_)
+			_0157_ <= io_in[5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0158_ <= 1'h0;
+		else if (_0067_)
+			_0158_ <= \mchip.design.inter.mempage_reg [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0159_ <= 1'h0;
+		else if (_0067_)
+			_0159_ <= \mchip.design.inter.mempage_reg [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0160_ <= 1'h0;
+		else if (_0067_)
+			_0160_ <= \mchip.design.inter.mempage_reg [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0161_ <= 1'h0;
+		else if (_0067_)
+			_0161_ <= \mchip.design.inter.mempage_reg [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0162_ <= 1'h0;
+		else if (_0067_)
+			_0162_ <= \mchip.design.inter.mempage_reg [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0163_ <= 1'h0;
+		else if (_0067_)
+			_0163_ <= \mchip.design.inter.mempage_reg [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0164_ <= 1'h0;
+		else if (_0067_)
+			_0164_ <= \mchip.design.inter.mempage_reg [6];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0165_ <= 1'h0;
+		else if (_0067_)
+			_0165_ <= \mchip.design.inter.mempage_reg [7];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0166_ <= 1'h0;
+		else if (_0067_)
+			_0166_ <= \mchip.design.inter.mempage_reg [8];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0167_ <= 1'h0;
+		else if (_0067_)
+			_0167_ <= \mchip.design.inter.mempage_reg [9];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0168_ <= 1'h0;
+		else if (_0067_)
+			_0168_ <= \mchip.design.inter.mempage_reg [10];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0169_ <= 1'h0;
+		else if (_0067_)
+			_0169_ <= \mchip.design.inter.mempage_reg [11];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0170_ <= 1'h0;
+		else
+			_0170_ <= \mchip.design.io_fsm.next_state [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0171_ <= 1'h0;
+		else
+			_0171_ <= \mchip.design.io_fsm.next_state [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0172_ <= 1'h0;
+		else
+			_0172_ <= \mchip.design.io_fsm.next_state [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0173_ <= 1'h0;
+		else if (_0009_)
+			_0173_ <= \mchip.design.transmitter.fsm.count_next [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0174_ <= 1'h0;
+		else if (_0009_)
+			_0174_ <= \mchip.design.transmitter.fsm.count_next [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0175_ <= 1'h0;
+		else if (_0009_)
+			_0175_ <= \mchip.design.transmitter.fsm.count_next [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0176_ <= 1'h0;
+		else if (_0009_)
+			_0176_ <= \mchip.design.transmitter.fsm.count_next [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0177_ <= 1'h0;
+		else if (_0009_)
+			_0177_ <= \mchip.design.transmitter.fsm.count_next [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0178_ <= 1'h0;
+		else if (_0009_)
+			_0178_ <= \mchip.design.transmitter.fsm.count_next [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0179_ <= 1'h0;
+		else if (_0009_)
+			_0179_ <= \mchip.design.transmitter.fsm.count_next [6];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0180_ <= 1'h0;
+		else if (!_0013_)
+			_0180_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0181_ <= 1'h0;
+		else if (!_0013_)
+			_0181_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0182_ <= 1'h0;
+		else if (!_0013_)
+			_0182_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0183_ <= 1'h0;
+		else if (!_0013_)
+			_0183_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0184_ <= 1'h0;
+		else if (!_0013_)
+			_0184_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0185_ <= 1'h0;
+		else if (!_0013_)
+			_0185_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [6];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0186_ <= 1'h0;
+		else if (!_0013_)
+			_0186_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [7];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0187_ <= 1'h0;
+		else if (!_0013_)
+			_0187_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [8];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0188_ <= 1'h0;
+		else if (!_0013_)
+			_0188_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [9];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0189_ <= 1'h0;
+		else if (!_0013_)
+			_0189_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [10];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0190_ <= 1'h0;
+		else if (!_0013_)
+			_0190_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [11];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0191_ <= 1'h0;
+		else if (!_0013_)
+			_0191_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [12];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0192_ <= 1'h0;
+		else if (!_0013_)
+			_0192_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [13];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0193_ <= 1'h0;
+		else if (!_0013_)
+			_0193_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [14];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0194_ <= 1'h0;
+		else if (!_0013_)
+			_0194_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [15];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0195_ <= 1'h0;
+		else if (!_0013_)
+			_0195_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [16];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0196_ <= 1'h0;
+		else if (!_0013_)
+			_0196_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [17];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0197_ <= 1'h0;
+		else if (!_0013_)
+			_0197_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [18];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0198_ <= 1'h0;
+		else if (!_0013_)
+			_0198_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [19];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0199_ <= 1'h0;
+		else if (!_0013_)
+			_0199_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [20];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0200_ <= 1'h0;
+		else if (!_0013_)
+			_0200_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [21];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0201_ <= 1'h0;
+		else if (!_0013_)
+			_0201_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [22];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0202_ <= 1'h0;
+		else if (!_0013_)
+			_0202_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [23];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0203_ <= 1'h0;
+		else if (!_0013_)
+			_0203_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [24];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0204_ <= 1'h0;
+		else if (!_0013_)
+			_0204_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [25];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0205_ <= 1'h0;
+		else if (!_0013_)
+			_0205_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [26];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0206_ <= 1'h0;
+		else if (!_0013_)
+			_0206_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [27];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0207_ <= 1'h0;
+		else if (!_0013_)
+			_0207_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [28];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0208_ <= 1'h0;
+		else if (!_0013_)
+			_0208_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [29];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0209_ <= 1'h0;
+		else if (!_0013_)
+			_0209_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [30];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0210_ <= 1'h0;
+		else if (!_0013_)
+			_0210_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [31];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0211_ <= 1'h0;
+		else if (!_0013_)
+			_0211_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [32];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0212_ <= 1'h0;
+		else if (!_0013_)
+			_0212_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [33];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0213_ <= 1'h0;
+		else if (!_0013_)
+			_0213_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [34];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0214_ <= 1'h0;
+		else if (!_0013_)
+			_0214_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [35];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0215_ <= 1'h0;
+		else if (!_0013_)
+			_0215_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [36];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0216_ <= 1'h0;
+		else if (!_0013_)
+			_0216_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [37];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0217_ <= 1'h0;
+		else if (!_0013_)
+			_0217_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [38];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0218_ <= 1'h0;
+		else if (!_0013_)
+			_0218_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [39];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0219_ <= 1'h0;
+		else if (!_0013_)
+			_0219_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [40];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0220_ <= 1'h0;
+		else if (!_0013_)
+			_0220_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [41];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0221_ <= 1'h0;
+		else if (!_0013_)
+			_0221_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [42];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0222_ <= 1'h0;
+		else if (!_0013_)
+			_0222_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [43];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0223_ <= 1'h0;
+		else if (!_0013_)
+			_0223_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [44];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0224_ <= 1'h0;
+		else if (!_0013_)
+			_0224_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [45];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0225_ <= 1'h0;
+		else if (!_0013_)
+			_0225_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [46];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0226_ <= 1'h0;
+		else if (!_0013_)
+			_0226_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [47];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0227_ <= 1'h0;
+		else if (!_0013_)
+			_0227_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [48];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0228_ <= 1'h0;
+		else if (!_0013_)
+			_0228_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [49];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0229_ <= 1'h0;
+		else if (!_0013_)
+			_0229_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [50];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0230_ <= 1'h0;
+		else if (!_0013_)
+			_0230_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [51];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0231_ <= 1'h0;
+		else if (!_0013_)
+			_0231_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [52];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0232_ <= 1'h0;
+		else if (!_0013_)
+			_0232_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [53];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0233_ <= 1'h0;
+		else if (!_0013_)
+			_0233_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [54];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0234_ <= 1'h0;
+		else if (!_0013_)
+			_0234_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [55];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0235_ <= 1'h0;
+		else if (!_0013_)
+			_0235_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [56];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0236_ <= 1'h0;
+		else if (!_0013_)
+			_0236_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [57];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0237_ <= 1'h0;
+		else if (!_0013_)
+			_0237_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [58];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0238_ <= 1'h0;
+		else if (!_0013_)
+			_0238_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [59];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0239_ <= 1'h0;
+		else if (!_0013_)
+			_0239_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [60];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0240_ <= 1'h0;
+		else if (!_0013_)
+			_0240_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [61];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0241_ <= 1'h0;
+		else if (!_0013_)
+			_0241_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [62];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0242_ <= 1'h0;
+		else if (!_0013_)
+			_0242_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [63];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0243_ <= 1'h0;
+		else if (!_0013_)
+			_0243_ <= \mchip.design.receiver.crc.crc16.bit_in ;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0244_ <= 1'h1;
+		else if (_0005_)
+			_0244_ <= _0043_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0245_ <= 1'h1;
+		else if (_0005_)
+			_0245_ <= _0050_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0246_ <= 1'h1;
+		else if (_0005_)
+			_0246_ <= _0051_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0247_ <= 1'h1;
+		else if (_0005_)
+			_0247_ <= _0052_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0248_ <= 1'h1;
+		else if (_0005_)
+			_0248_ <= _0053_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0249_ <= 1'h1;
+		else if (_0005_)
+			_0249_ <= _0054_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0250_ <= 1'h1;
+		else if (_0005_)
+			_0250_ <= _0055_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0251_ <= 1'h1;
+		else if (_0005_)
+			_0251_ <= _0056_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0252_ <= 1'h1;
+		else if (_0005_)
+			_0252_ <= _0057_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0253_ <= 1'h1;
+		else if (_0005_)
+			_0253_ <= _0058_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0254_ <= 1'h1;
+		else if (_0005_)
+			_0254_ <= _0044_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0255_ <= 1'h1;
+		else if (_0005_)
+			_0255_ <= _0045_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0256_ <= 1'h1;
+		else if (_0005_)
+			_0256_ <= _0046_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0257_ <= 1'h1;
+		else if (_0005_)
+			_0257_ <= _0047_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0258_ <= 1'h1;
+		else if (_0005_)
+			_0258_ <= _0048_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0259_ <= 1'h1;
+		else if (_0005_)
+			_0259_ <= _0049_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0260_ <= 1'h0;
+		else if (_0006_)
+			_0260_ <= _0040_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0261_ <= 1'h0;
+		else if (_0006_)
+			_0261_ <= _0041_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0262_ <= 1'h0;
+		else if (_0006_)
+			_0262_ <= _0042_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0263_ <= 1'h1;
+		else
+			_0263_ <= _0000_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0264_ <= 1'h0;
+		else
+			_0264_ <= _0001_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0265_ <= 1'h0;
+		else
+			_0265_ <= _0002_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0266_ <= 1'h0;
+		else
+			_0266_ <= _0003_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0267_ <= 1'h0;
+		else
+			_0267_ <= \mchip.design.transmitter.fsm.next_state [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0268_ <= 1'h0;
+		else
+			_0268_ <= \mchip.design.transmitter.fsm.next_state [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0269_ <= 1'h0;
+		else
+			_0269_ <= \mchip.design.transmitter.fsm.next_state [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0270_ <= 1'h1;
+		else if (_0005_)
+			_0270_ <= _0059_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0271_ <= 1'h1;
+		else if (_0005_)
+			_0271_ <= _0060_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0272_ <= 1'h1;
+		else if (_0005_)
+			_0272_ <= _0061_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0273_ <= 1'h1;
+		else if (_0005_)
+			_0273_ <= _0062_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0274_ <= 1'h1;
+		else if (_0005_)
+			_0274_ <= _0063_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0275_ <= 1'h0;
+		else
+			_0275_ <= \mchip.design.receiver.fsm.next_state [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0276_ <= 1'h0;
+		else
+			_0276_ <= \mchip.design.receiver.fsm.next_state [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0277_ <= 1'h0;
+		else
+			_0277_ <= \mchip.design.receiver.fsm.next_state [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0278_ <= 1'h1;
+		else if (_0007_)
+			_0278_ <= _0034_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0279_ <= 1'h1;
+		else if (_0007_)
+			_0279_ <= _0035_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0280_ <= 1'h1;
+		else if (_0007_)
+			_0280_ <= _0036_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0281_ <= 1'h1;
+		else if (_0007_)
+			_0281_ <= _0037_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0282_ <= 1'h1;
+		else if (_0007_)
+			_0282_ <= _0038_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0283_ <= 1'h1;
+		else if (_0007_)
+			_0283_ <= _0018_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0284_ <= 1'h1;
+		else if (_0007_)
+			_0284_ <= _0025_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0285_ <= 1'h1;
+		else if (_0007_)
+			_0285_ <= _0026_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0286_ <= 1'h1;
+		else if (_0007_)
+			_0286_ <= _0027_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0287_ <= 1'h1;
+		else if (_0007_)
+			_0287_ <= _0028_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0288_ <= 1'h1;
+		else if (_0007_)
+			_0288_ <= _0029_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0289_ <= 1'h1;
+		else if (_0007_)
+			_0289_ <= _0030_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0290_ <= 1'h1;
+		else if (_0007_)
+			_0290_ <= _0031_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0291_ <= 1'h1;
+		else if (_0007_)
+			_0291_ <= _0032_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0292_ <= 1'h1;
+		else if (_0007_)
+			_0292_ <= _0033_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0293_ <= 1'h1;
+		else if (_0007_)
+			_0293_ <= _0019_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0294_ <= 1'h1;
+		else if (_0007_)
+			_0294_ <= _0020_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0295_ <= 1'h1;
+		else if (_0007_)
+			_0295_ <= _0021_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0296_ <= 1'h1;
+		else if (_0007_)
+			_0296_ <= _0022_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0297_ <= 1'h1;
+		else if (_0007_)
+			_0297_ <= _0023_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0298_ <= 1'h1;
+		else if (_0007_)
+			_0298_ <= _0024_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0299_ <= 1'h0;
+		else if (_0008_)
+			_0299_ <= _0015_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0300_ <= 1'h0;
+		else if (_0008_)
+			_0300_ <= _0016_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0301_ <= 1'h0;
+		else if (_0008_)
+			_0301_ <= _0017_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0302_ <= 1'h1;
+		else
+			_0302_ <= _0039_;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0303_ <= 1'h0;
+		else if (!_0014_)
+			_0303_ <= \mchip.design.receiver.packet_decode.PID_accum [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0304_ <= 1'h0;
+		else if (!_0014_)
+			_0304_ <= \mchip.design.receiver.packet_decode.PID_accum [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0305_ <= 1'h0;
+		else if (!_0014_)
+			_0305_ <= \mchip.design.receiver.packet_decode.PID_accum [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0306_ <= 1'h0;
+		else if (!_0014_)
+			_0306_ <= \mchip.design.receiver.packet_decode.PID_accum [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0307_ <= 1'h0;
+		else if (!_0014_)
+			_0307_ <= \mchip.design.receiver.packet_decode.PID_accum [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0308_ <= 1'h0;
+		else if (!_0014_)
+			_0308_ <= \mchip.design.receiver.packet_decode.PID_accum [6];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0309_ <= 1'h0;
+		else if (!_0014_)
+			_0309_ <= \mchip.design.receiver.packet_decode.PID_accum [7];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0310_ <= 1'h0;
+		else if (!_0014_)
+			_0310_ <= \mchip.design.receiver.crc.crc16.bit_in ;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0311_ <= 1'h0;
+		else if (_2666_)
+			_0311_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0312_ <= 1'h0;
+		else if (_2666_)
+			_0312_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0313_ <= 1'h0;
+		else if (_2666_)
+			_0313_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0314_ <= 1'h0;
+		else if (_2666_)
+			_0314_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0315_ <= 1'h0;
+		else if (_2666_)
+			_0315_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0316_ <= 1'h0;
+		else if (_2666_)
+			_0316_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0317_ <= 1'h0;
+		else if (_2666_)
+			_0317_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [6];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0318_ <= 1'h0;
+		else if (_2666_)
+			_0318_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [7];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0319_ <= 1'h0;
+		else if (_2666_)
+			_0319_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [8];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0320_ <= 1'h0;
+		else if (_2666_)
+			_0320_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [9];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0321_ <= 1'h0;
+		else if (_2666_)
+			_0321_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [10];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0322_ <= 1'h0;
+		else if (_2666_)
+			_0322_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [11];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0323_ <= 1'h0;
+		else if (_2666_)
+			_0323_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [12];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0324_ <= 1'h0;
+		else if (_2666_)
+			_0324_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [13];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0325_ <= 1'h0;
+		else if (_2666_)
+			_0325_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [14];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0326_ <= 1'h0;
+		else if (_2666_)
+			_0326_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [15];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0327_ <= 1'h0;
+		else if (_2666_)
+			_0327_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [16];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0328_ <= 1'h0;
+		else if (_2666_)
+			_0328_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [17];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0329_ <= 1'h0;
+		else if (_2666_)
+			_0329_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [18];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0330_ <= 1'h0;
+		else if (_2666_)
+			_0330_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [19];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0331_ <= 1'h0;
+		else if (_2666_)
+			_0331_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [20];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0332_ <= 1'h0;
+		else if (_2666_)
+			_0332_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [21];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0333_ <= 1'h0;
+		else if (_2666_)
+			_0333_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [22];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0334_ <= 1'h0;
+		else if (_2666_)
+			_0334_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [23];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0335_ <= 1'h0;
+		else if (_2666_)
+			_0335_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [24];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0336_ <= 1'h0;
+		else if (_2666_)
+			_0336_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [25];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0337_ <= 1'h0;
+		else if (_2666_)
+			_0337_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [26];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0338_ <= 1'h0;
+		else if (_2666_)
+			_0338_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [27];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0339_ <= 1'h0;
+		else if (_2666_)
+			_0339_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [28];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0340_ <= 1'h0;
+		else if (_2666_)
+			_0340_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [29];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0341_ <= 1'h0;
+		else if (_2666_)
+			_0341_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [30];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0342_ <= 1'h0;
+		else if (_2666_)
+			_0342_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [31];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0343_ <= 1'h0;
+		else if (_2666_)
+			_0343_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [32];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0344_ <= 1'h0;
+		else if (_2666_)
+			_0344_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [33];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0345_ <= 1'h0;
+		else if (_2666_)
+			_0345_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [34];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0346_ <= 1'h0;
+		else if (_2666_)
+			_0346_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [35];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0347_ <= 1'h0;
+		else if (_2666_)
+			_0347_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [36];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0348_ <= 1'h0;
+		else if (_2666_)
+			_0348_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [37];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0349_ <= 1'h0;
+		else if (_2666_)
+			_0349_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [38];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0350_ <= 1'h0;
+		else if (_2666_)
+			_0350_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [39];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0351_ <= 1'h0;
+		else if (_2666_)
+			_0351_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [40];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0352_ <= 1'h0;
+		else if (_2666_)
+			_0352_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [41];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0353_ <= 1'h0;
+		else if (_2666_)
+			_0353_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [42];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0354_ <= 1'h0;
+		else if (_2666_)
+			_0354_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [43];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0355_ <= 1'h0;
+		else if (_2666_)
+			_0355_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [44];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0356_ <= 1'h0;
+		else if (_2666_)
+			_0356_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [45];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0357_ <= 1'h0;
+		else if (_2666_)
+			_0357_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [46];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0358_ <= 1'h0;
+		else if (_2666_)
+			_0358_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [47];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0359_ <= 1'h0;
+		else if (_2666_)
+			_0359_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [48];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0360_ <= 1'h0;
+		else if (_2666_)
+			_0360_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [49];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0361_ <= 1'h0;
+		else if (_2666_)
+			_0361_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [50];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0362_ <= 1'h0;
+		else if (_2666_)
+			_0362_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [51];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0363_ <= 1'h0;
+		else if (_2666_)
+			_0363_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [52];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0364_ <= 1'h0;
+		else if (_2666_)
+			_0364_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [53];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0365_ <= 1'h0;
+		else if (_2666_)
+			_0365_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [54];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0366_ <= 1'h0;
+		else if (_2666_)
+			_0366_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [55];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0367_ <= 1'h0;
+		else if (_2666_)
+			_0367_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [56];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0368_ <= 1'h0;
+		else if (_2666_)
+			_0368_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [57];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0369_ <= 1'h0;
+		else if (_2666_)
+			_0369_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [58];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0370_ <= 1'h0;
+		else if (_2666_)
+			_0370_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [59];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0371_ <= 1'h0;
+		else if (_2666_)
+			_0371_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [60];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0372_ <= 1'h0;
+		else if (_2666_)
+			_0372_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [61];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0373_ <= 1'h0;
+		else if (_2666_)
+			_0373_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [62];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0374_ <= 1'h0;
+		else if (_2666_)
+			_0374_ <= \mchip.design.receiver.packet_decode.PAYLOAD_accum [63];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0375_ <= 1'h0;
+		else if (_0010_)
+			_0375_ <= \mchip.design.receiver.fsm.count_next [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0376_ <= 1'h0;
+		else if (_0010_)
+			_0376_ <= \mchip.design.receiver.fsm.count_next [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0377_ <= 1'h0;
+		else if (_0010_)
+			_0377_ <= \mchip.design.receiver.fsm.count_next [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0378_ <= 1'h0;
+		else if (_0010_)
+			_0378_ <= \mchip.design.receiver.fsm.count_next [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0379_ <= 1'h0;
+		else if (_0010_)
+			_0379_ <= \mchip.design.receiver.fsm.count_next [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0380_ <= 1'h0;
+		else if (_0010_)
+			_0380_ <= \mchip.design.receiver.fsm.count_next [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0381_ <= 1'h0;
+		else if (_0010_)
+			_0381_ <= \mchip.design.receiver.fsm.count_next [6];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0382_ <= 1'h0;
+		else
+			_0382_ <= \mchip.design.receiver.find_sync.bit_in ;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0383_ <= 1'h0;
+		else
+			_0383_ <= \mchip.design.receiver.find_sync.log [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0384_ <= 1'h0;
+		else
+			_0384_ <= \mchip.design.receiver.find_sync.log [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0385_ <= 1'h0;
+		else
+			_0385_ <= \mchip.design.receiver.find_sync.log [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0386_ <= 1'h0;
+		else
+			_0386_ <= \mchip.design.receiver.find_sync.log [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0387_ <= 1'h0;
+		else
+			_0387_ <= \mchip.design.receiver.find_sync.log [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0388_ <= 1'h0;
+		else
+			_0388_ <= \mchip.design.receiver.find_sync.log [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0389_ <= 1'h0;
+		else
+			_0389_ <= io_in[0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0390_ <= 1'h0;
+		else
+			_0390_ <= \mchip.design.receiver.wire_in.dm_log [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0391_ <= 1'h0;
+		else
+			_0391_ <= \mchip.design.receiver.wire_in.dm_log [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0392_ <= 1'h0;
+		else
+			_0392_ <= io_in[1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0393_ <= 1'h0;
+		else
+			_0393_ <= \mchip.design.receiver.wire_in.dp_log [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0394_ <= 1'h0;
+		else
+			_0394_ <= \mchip.design.receiver.wire_in.dp_log [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0395_ <= 1'h0;
+		else
+			_0395_ <= \mchip.design.io_fsm.ended_with_errors_log ;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0396_ <= 1'h0;
+		else
+			_0396_ <= \mchip.design.io_fsm.completed_transaction_log ;
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0397_ <= 1'h0;
+		else if (_0011_)
+			_0397_ <= \mchip.design.io_fsm.timeout_counter_nxt [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0398_ <= 1'h0;
+		else if (_0011_)
+			_0398_ <= \mchip.design.io_fsm.timeout_counter_nxt [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0399_ <= 1'h0;
+		else if (_0011_)
+			_0399_ <= \mchip.design.io_fsm.timeout_counter_nxt [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0400_ <= 1'h0;
+		else if (_0011_)
+			_0400_ <= \mchip.design.io_fsm.timeout_counter_nxt [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0401_ <= 1'h0;
+		else
+			_0401_ <= \mchip.design.io_fsm.timer_nxt [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0402_ <= 1'h0;
+		else
+			_0402_ <= \mchip.design.io_fsm.timer_nxt [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0403_ <= 1'h0;
+		else
+			_0403_ <= \mchip.design.io_fsm.timer_nxt [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0404_ <= 1'h0;
+		else
+			_0404_ <= \mchip.design.io_fsm.timer_nxt [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0405_ <= 1'h0;
+		else
+			_0405_ <= \mchip.design.io_fsm.timer_nxt [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0406_ <= 1'h0;
+		else
+			_0406_ <= \mchip.design.io_fsm.timer_nxt [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0407_ <= 1'h0;
+		else
+			_0407_ <= \mchip.design.io_fsm.timer_nxt [6];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0408_ <= 1'h0;
+		else
+			_0408_ <= \mchip.design.io_fsm.timer_nxt [7];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0409_ <= 1'h0;
+		else
+			_0409_ <= \mchip.design.io_fsm.timer_nxt [8];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0410_ <= 1'h0;
+		else if (_0012_)
+			_0410_ <= \mchip.design.io_fsm.error_counter_nxt [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0411_ <= 1'h0;
+		else if (_0012_)
+			_0411_ <= \mchip.design.io_fsm.error_counter_nxt [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0412_ <= 1'h0;
+		else if (_0012_)
+			_0412_ <= \mchip.design.io_fsm.error_counter_nxt [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0413_ <= 1'h0;
+		else if (_0012_)
+			_0413_ <= \mchip.design.io_fsm.error_counter_nxt [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0414_ <= 1'h0;
+		else if (_0068_)
+			_0414_ <= io_in[2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0415_ <= 1'h0;
+		else if (_0068_)
+			_0415_ <= io_in[3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0416_ <= 1'h0;
+		else if (_0068_)
+			_0416_ <= io_in[4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0417_ <= 1'h0;
+		else if (_0068_)
+			_0417_ <= io_in[5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0418_ <= 1'h0;
+		else if (_0068_)
+			_0418_ <= \mchip.design.inter.data_out_reg [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0419_ <= 1'h0;
+		else if (_0068_)
+			_0419_ <= \mchip.design.inter.data_out_reg [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0420_ <= 1'h0;
+		else if (_0068_)
+			_0420_ <= \mchip.design.inter.data_out_reg [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0421_ <= 1'h0;
+		else if (_0068_)
+			_0421_ <= \mchip.design.inter.data_out_reg [3];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0422_ <= 1'h0;
+		else if (_0068_)
+			_0422_ <= \mchip.design.inter.data_out_reg [4];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0423_ <= 1'h0;
+		else if (_0068_)
+			_0423_ <= \mchip.design.inter.data_out_reg [5];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0424_ <= 1'h0;
+		else if (_0068_)
+			_0424_ <= \mchip.design.inter.data_out_reg [6];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0425_ <= 1'h0;
+		else if (_0068_)
+			_0425_ <= \mchip.design.inter.data_out_reg [7];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0426_ <= 1'h0;
+		else if (_0068_)
+			_0426_ <= \mchip.design.inter.data_out_reg [8];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0427_ <= 1'h0;
+		else if (_0068_)
+			_0427_ <= \mchip.design.inter.data_out_reg [9];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0428_ <= 1'h0;
+		else if (_0068_)
+			_0428_ <= \mchip.design.inter.data_out_reg [10];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0429_ <= 1'h0;
+		else if (_0068_)
+			_0429_ <= \mchip.design.inter.data_out_reg [11];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0430_ <= 1'h0;
+		else if (_0068_)
+			_0430_ <= \mchip.design.inter.data_out_reg [12];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0431_ <= 1'h0;
+		else if (_0068_)
+			_0431_ <= \mchip.design.inter.data_out_reg [13];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0432_ <= 1'h0;
+		else if (_0068_)
+			_0432_ <= \mchip.design.inter.data_out_reg [14];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0433_ <= 1'h0;
+		else if (_0068_)
+			_0433_ <= \mchip.design.inter.data_out_reg [15];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0434_ <= 1'h0;
+		else if (_0068_)
+			_0434_ <= \mchip.design.inter.data_out_reg [16];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0435_ <= 1'h0;
+		else if (_0068_)
+			_0435_ <= \mchip.design.inter.data_out_reg [17];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0436_ <= 1'h0;
+		else if (_0068_)
+			_0436_ <= \mchip.design.inter.data_out_reg [18];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0437_ <= 1'h0;
+		else if (_0068_)
+			_0437_ <= \mchip.design.inter.data_out_reg [19];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0438_ <= 1'h0;
+		else if (_0068_)
+			_0438_ <= \mchip.design.inter.data_out_reg [20];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0439_ <= 1'h0;
+		else if (_0068_)
+			_0439_ <= \mchip.design.inter.data_out_reg [21];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0440_ <= 1'h0;
+		else if (_0068_)
+			_0440_ <= \mchip.design.inter.data_out_reg [22];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0441_ <= 1'h0;
+		else if (_0068_)
+			_0441_ <= \mchip.design.inter.data_out_reg [23];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0442_ <= 1'h0;
+		else if (_0068_)
+			_0442_ <= \mchip.design.inter.data_out_reg [24];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0443_ <= 1'h0;
+		else if (_0068_)
+			_0443_ <= \mchip.design.inter.data_out_reg [25];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0444_ <= 1'h0;
+		else if (_0068_)
+			_0444_ <= \mchip.design.inter.data_out_reg [26];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0445_ <= 1'h0;
+		else if (_0068_)
+			_0445_ <= \mchip.design.inter.data_out_reg [27];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0446_ <= 1'h0;
+		else if (_0068_)
+			_0446_ <= \mchip.design.inter.data_out_reg [28];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0447_ <= 1'h0;
+		else if (_0068_)
+			_0447_ <= \mchip.design.inter.data_out_reg [29];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0448_ <= 1'h0;
+		else if (_0068_)
+			_0448_ <= \mchip.design.inter.data_out_reg [30];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0449_ <= 1'h0;
+		else if (_0068_)
+			_0449_ <= \mchip.design.inter.data_out_reg [31];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0450_ <= 1'h0;
+		else if (_0068_)
+			_0450_ <= \mchip.design.inter.data_out_reg [32];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0451_ <= 1'h0;
+		else if (_0068_)
+			_0451_ <= \mchip.design.inter.data_out_reg [33];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0452_ <= 1'h0;
+		else if (_0068_)
+			_0452_ <= \mchip.design.inter.data_out_reg [34];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0453_ <= 1'h0;
+		else if (_0068_)
+			_0453_ <= \mchip.design.inter.data_out_reg [35];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0454_ <= 1'h0;
+		else if (_0068_)
+			_0454_ <= \mchip.design.inter.data_out_reg [36];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0455_ <= 1'h0;
+		else if (_0068_)
+			_0455_ <= \mchip.design.inter.data_out_reg [37];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0456_ <= 1'h0;
+		else if (_0068_)
+			_0456_ <= \mchip.design.inter.data_out_reg [38];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0457_ <= 1'h0;
+		else if (_0068_)
+			_0457_ <= \mchip.design.inter.data_out_reg [39];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0458_ <= 1'h0;
+		else if (_0068_)
+			_0458_ <= \mchip.design.inter.data_out_reg [40];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0459_ <= 1'h0;
+		else if (_0068_)
+			_0459_ <= \mchip.design.inter.data_out_reg [41];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0460_ <= 1'h0;
+		else if (_0068_)
+			_0460_ <= \mchip.design.inter.data_out_reg [42];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0461_ <= 1'h0;
+		else if (_0068_)
+			_0461_ <= \mchip.design.inter.data_out_reg [43];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0462_ <= 1'h0;
+		else if (_0068_)
+			_0462_ <= \mchip.design.inter.data_out_reg [44];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0463_ <= 1'h0;
+		else if (_0068_)
+			_0463_ <= \mchip.design.inter.data_out_reg [45];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0464_ <= 1'h0;
+		else if (_0068_)
+			_0464_ <= \mchip.design.inter.data_out_reg [46];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0465_ <= 1'h0;
+		else if (_0068_)
+			_0465_ <= \mchip.design.inter.data_out_reg [47];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0466_ <= 1'h0;
+		else if (_0068_)
+			_0466_ <= \mchip.design.inter.data_out_reg [48];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0467_ <= 1'h0;
+		else if (_0068_)
+			_0467_ <= \mchip.design.inter.data_out_reg [49];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0468_ <= 1'h0;
+		else if (_0068_)
+			_0468_ <= \mchip.design.inter.data_out_reg [50];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0469_ <= 1'h0;
+		else if (_0068_)
+			_0469_ <= \mchip.design.inter.data_out_reg [51];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0470_ <= 1'h0;
+		else if (_0068_)
+			_0470_ <= \mchip.design.inter.data_out_reg [52];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0471_ <= 1'h0;
+		else if (_0068_)
+			_0471_ <= \mchip.design.inter.data_out_reg [53];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0472_ <= 1'h0;
+		else if (_0068_)
+			_0472_ <= \mchip.design.inter.data_out_reg [54];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0473_ <= 1'h0;
+		else if (_0068_)
+			_0473_ <= \mchip.design.inter.data_out_reg [55];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0474_ <= 1'h0;
+		else if (_0068_)
+			_0474_ <= \mchip.design.inter.data_out_reg [56];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0475_ <= 1'h0;
+		else if (_0068_)
+			_0475_ <= \mchip.design.inter.data_out_reg [57];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0476_ <= 1'h0;
+		else if (_0068_)
+			_0476_ <= \mchip.design.inter.data_out_reg [58];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0477_ <= 1'h0;
+		else if (_0068_)
+			_0477_ <= \mchip.design.inter.data_out_reg [59];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0478_ <= 1'h0;
+		else
+			_0478_ <= \mchip.design.rw_fsm.next_state [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0479_ <= 1'h0;
+		else
+			_0479_ <= \mchip.design.rw_fsm.next_state [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0480_ <= 1'h0;
+		else
+			_0480_ <= \mchip.design.rw_fsm.next_state [2];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0481_ <= 1'h0;
+		else
+			_0481_ <= \mchip.design.inter.next_state [0];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0482_ <= 1'h0;
+		else
+			_0482_ <= \mchip.design.inter.next_state [1];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0483_ <= 1'h0;
+		else
+			_0483_ <= \mchip.design.inter.next_state [2];
+	assign io_out[13:12] = 2'h0;
+	assign \mchip.clock  = io_in[12];
+	assign \mchip.design.clock  = io_in[12];
+	assign \mchip.design.data_ENDP  = \mchip.design.inter.ENDP_reg [3:0];
+	assign \mchip.design.data_in  = io_in[5:2];
+	assign \mchip.design.data_indx  = io_out[9:6];
+	assign \mchip.design.data_out  = io_out[5:2];
+	assign \mchip.design.data_received  = \mchip.design.finished ;
+	assign \mchip.design.final_data  = \mchip.design.io_fsm.final_data ;
+	assign \mchip.design.in_data  = \mchip.design.io_fsm.final_data ;
+	assign \mchip.design.inter.clock  = io_in[12];
+	assign \mchip.design.inter.cur_state [3] = 1'h0;
+	assign \mchip.design.inter.data_ENDP  = \mchip.design.inter.ENDP_reg [3:0];
+	assign \mchip.design.inter.data_in  = io_in[5:2];
+	assign \mchip.design.inter.data_indx  = io_out[9:6];
+	assign \mchip.design.inter.data_out  = io_out[5:2];
+	assign \mchip.design.inter.data_received  = \mchip.design.finished ;
+	assign \mchip.design.inter.final_data  = \mchip.design.io_fsm.final_data ;
+	assign \mchip.design.inter.memdata  = \mchip.design.inter.data_out_reg ;
+	assign \mchip.design.inter.mempage [11:0] = \mchip.design.inter.mempage_reg [11:0];
+	assign \mchip.design.inter.mempage_reg [15:12] = \mchip.design.inter.mempage [15:12];
+	assign \mchip.design.inter.mode  = io_in[9:6];
+	assign {\mchip.design.inter.msc_hb.in_reg [31:24], \mchip.design.inter.msc_hb.in_reg [19:0]} = {\mchip.design.inter.Addr_reg , \mchip.design.inter.ENDP_reg [3:0], \mchip.design.inter.mempage [15:12], \mchip.design.inter.mempage_reg [11:0]};
+	assign \mchip.design.inter.next_state [3] = 1'h0;
+	assign \mchip.design.inter.out_hb.in_reg  = \mchip.design.inter.data_out_reg ;
+	assign \mchip.design.inter.send_Addr  = \mchip.design.inter.Addr_reg [6:0];
+	assign \mchip.design.io_fsm.PID_to_sender  = 4'h0;
+	assign \mchip.design.io_fsm.clock  = io_in[12];
+	assign \mchip.design.io_fsm.cur_state [3] = 1'h0;
+	assign \mchip.design.io_fsm.data_ENDP  = \mchip.design.inter.ENDP_reg [3:0];
+	assign \mchip.design.io_fsm.next_state [3] = 1'h0;
+	assign \mchip.design.io_fsm.received_PID [3:1] = \mchip.design.receiver.packet_decode.PID_accum [3:1];
+	assign \mchip.design.io_fsm.received_data  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
+	assign \mchip.design.memory_address  = {\mchip.design.inter.mempage [15:12], \mchip.design.inter.mempage_reg [11:0]};
+	assign \mchip.design.memory_data  = \mchip.design.inter.data_out_reg ;
+	assign \mchip.design.mode  = io_in[9:6];
+	assign \mchip.design.read  = io_in[11];
+	assign \mchip.design.received_PID  = {\mchip.design.receiver.packet_decode.PID_accum [3:1], \mchip.design.io_fsm.received_PID [0]};
+	assign \mchip.design.received_payload  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
+	assign \mchip.design.receiver.PID  = {\mchip.design.receiver.packet_decode.PID_accum [3:1], \mchip.design.io_fsm.received_PID [0]};
+	assign \mchip.design.receiver.Payload  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
+	assign \mchip.design.receiver.bit_unstuff.bit_out  = \mchip.design.receiver.crc.crc16.bit_in ;
+	assign \mchip.design.receiver.bit_unstuff.clock  = io_in[12];
+	assign \mchip.design.receiver.clock  = io_in[12];
+	assign \mchip.design.receiver.crc.bit_in  = \mchip.design.receiver.crc.crc16.bit_in ;
+	assign \mchip.design.receiver.crc.clock  = io_in[12];
+	assign \mchip.design.receiver.crc.crc16.clock  = io_in[12];
+	assign \mchip.design.receiver.crc.crc5.bit_in  = \mchip.design.receiver.crc.crc16.bit_in ;
+	assign \mchip.design.receiver.crc.crc5.clock  = io_in[12];
+	assign \mchip.design.receiver.crc.index  = 7'h00;
+	assign \mchip.design.receiver.crc.sv2v_autoblock_1.i  = 32'd5;
+	assign \mchip.design.receiver.crc.sv2v_autoblock_2.j  = 32'd16;
+	assign \mchip.design.receiver.find_sync.clock  = io_in[12];
+	assign \mchip.design.receiver.find_sync.log [7] = 1'h0;
+	assign \mchip.design.receiver.fsm.PID  = \mchip.design.receiver.packet_decode.PID_accum [4:1];
+	assign \mchip.design.receiver.fsm.clock  = io_in[12];
+	assign \mchip.design.receiver.fsm.nrzi_en  = 1'h1;
+	assign \mchip.design.receiver.nrzi.bit_in  = \mchip.design.receiver.find_sync.bit_in ;
+	assign \mchip.design.receiver.nrzi.clock  = io_in[12];
+	assign \mchip.design.receiver.nrzi.cur_value_next  = \mchip.design.receiver.find_sync.bit_in ;
+	assign \mchip.design.receiver.nrzi.en  = 1'h1;
+	assign \mchip.design.receiver.nrzi_en  = 1'h1;
+	assign \mchip.design.receiver.packet_decode.PID_accum [0] = \mchip.design.io_fsm.received_PID [0];
+	assign \mchip.design.receiver.packet_decode.bit_in  = \mchip.design.receiver.crc.crc16.bit_in ;
+	assign \mchip.design.receiver.packet_decode.clock  = io_in[12];
+	assign \mchip.design.receiver.packet_decode.payload  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
+	assign \mchip.design.receiver.packet_decode.pid  = {\mchip.design.receiver.packet_decode.PID_accum [3:1], \mchip.design.io_fsm.received_PID [0]};
+	assign \mchip.design.receiver.packet_decode.pid_inv  = \mchip.design.receiver.packet_decode.PID_accum [7:4];
+	assign \mchip.design.receiver.packet_decode.pid_to_fsm  = \mchip.design.receiver.packet_decode.PID_accum [4:1];
+	assign \mchip.design.receiver.payload  = \mchip.design.receiver.packet_decode.PAYLOAD_accum ;
+	assign \mchip.design.receiver.pid  = {\mchip.design.receiver.packet_decode.PID_accum [3:1], \mchip.design.io_fsm.received_PID [0]};
+	assign \mchip.design.receiver.pid_to_fsm  = \mchip.design.receiver.packet_decode.PID_accum [4:1];
+	assign \mchip.design.receiver.stuff_out  = \mchip.design.receiver.crc.crc16.bit_in ;
+	assign \mchip.design.receiver.wire_in.bit_out  = \mchip.design.receiver.find_sync.bit_in ;
+	assign \mchip.design.receiver.wire_in.clock  = io_in[12];
+	assign \mchip.design.receiver.wire_in.dm  = io_in[0];
+	assign \mchip.design.receiver.wire_in.dp  = io_in[1];
+	assign \mchip.design.receiver.wire_in.wires_in  = io_in[1:0];
+	assign \mchip.design.receiver.wire_out  = \mchip.design.receiver.find_sync.bit_in ;
+	assign \mchip.design.receiver.wires_in  = io_in[1:0];
+	assign \mchip.design.rw_fsm.clock  = io_in[12];
+	assign \mchip.design.rw_fsm.final_data  = \mchip.design.io_fsm.final_data ;
+	assign \mchip.design.rw_fsm.finished  = \mchip.design.finished ;
+	assign \mchip.design.rw_fsm.in_data  = \mchip.design.io_fsm.final_data ;
+	assign \mchip.design.rw_fsm.memdata  = \mchip.design.inter.data_out_reg ;
+	assign \mchip.design.rw_fsm.mempage  = {\mchip.design.inter.mempage [15:12], \mchip.design.inter.mempage_reg [11:0]};
+	assign \mchip.design.rw_fsm.page_data  = {\mchip.design.inter.mempage [15:12], \mchip.design.inter.mempage_reg [11:0], 48'h000000000000};
+	assign \mchip.design.send_Addr  = \mchip.design.inter.Addr_reg [6:0];
+	assign \mchip.design.send_PID  = 4'h0;
+	assign \mchip.design.status  = io_out[11:10];
+	assign \mchip.design.transmitter.Addr  = \mchip.design.inter.Addr_reg [6:0];
+	assign \mchip.design.transmitter.PID  = 4'h0;
+	assign \mchip.design.transmitter.bit_stuff.clock  = io_in[12];
+	assign \mchip.design.transmitter.clock  = io_in[12];
+	assign \mchip.design.transmitter.crc.clock  = io_in[12];
+	assign \mchip.design.transmitter.crc.crc16.clock  = io_in[12];
+	assign \mchip.design.transmitter.crc.crc5.clock  = io_in[12];
+	assign \mchip.design.transmitter.crc.sv2v_autoblock_1.i  = 32'd5;
+	assign \mchip.design.transmitter.crc.sv2v_autoblock_2.j  = 32'd16;
+	assign \mchip.design.transmitter.encoder.Addr  = \mchip.design.inter.Addr_reg [6:0];
+	assign \mchip.design.transmitter.encoder.Addr_Endp_register  = {\mchip.design.inter.Addr_reg [0], \mchip.design.inter.Addr_reg [1], \mchip.design.inter.Addr_reg [2], \mchip.design.inter.Addr_reg [3], \mchip.design.inter.Addr_reg [4], \mchip.design.inter.Addr_reg [5], \mchip.design.inter.Addr_reg [6], 4'h0};
+	assign \mchip.design.transmitter.encoder.Addr_lsb  = {\mchip.design.inter.Addr_reg [0], \mchip.design.inter.Addr_reg [1], \mchip.design.inter.Addr_reg [2], \mchip.design.inter.Addr_reg [3], \mchip.design.inter.Addr_reg [4], \mchip.design.inter.Addr_reg [5], \mchip.design.inter.Addr_reg [6]};
+	assign \mchip.design.transmitter.encoder.PID  = 4'h0;
+	assign \mchip.design.transmitter.encoder.PID_full  = 8'h02;
+	assign \mchip.design.transmitter.encoder.PID_lsb  = 4'h0;
+	assign \mchip.design.transmitter.encoder.PID_lsb_inv  = 4'h2;
+	assign \mchip.design.transmitter.encoder.SYNC  = 8'h01;
+	assign \mchip.design.transmitter.encoder.clock  = io_in[12];
+	assign \mchip.design.transmitter.encoder.sv2v_autoblock_1.i  = 32'd4;
+	assign \mchip.design.transmitter.encoder.sv2v_autoblock_2.j  = 32'd7;
+	assign \mchip.design.transmitter.encoder.sv2v_autoblock_3.k  = 32'd64;
+	assign \mchip.design.transmitter.fsm.PID  = 4'h0;
+	assign \mchip.design.transmitter.fsm.clock  = io_in[12];
+	assign \mchip.design.transmitter.nrzi.clock  = io_in[12];
+	assign \mchip.design.transmitter.out_wire.clock  = io_in[12];
+	assign \mchip.design.transmitter.out_wire.wires_out  = io_out[1:0];
+	assign \mchip.design.transmitter.wires_out  = io_out[1:0];
+	assign \mchip.design.wires_in  = io_in[1:0];
+	assign \mchip.design.wires_out  = io_out[1:0];
+	assign \mchip.design.write  = io_in[10];
+	assign \mchip.io_in  = io_in[11:0];
+	assign \mchip.io_out  = io_out[11:0];
+	assign \mchip.reset  = io_in[13];
+endmodule
+module d22_wnace_vga_resolution (
+	io_in,
+	io_out
+);
+	wire _0000_;
+	wire _0001_;
+	reg _0002_;
+	wire _0003_;
+	wire _0004_;
+	wire _0005_;
+	wire _0006_;
+	wire _0007_;
+	wire _0008_;
+	wire _0009_;
+	wire _0010_;
+	wire _0011_;
+	wire _0012_;
+	wire _0013_;
+	wire _0014_;
+	wire _0015_;
+	wire _0016_;
+	wire _0017_;
+	wire _0018_;
+	wire _0019_;
+	wire _0020_;
+	wire _0021_;
+	wire _0022_;
+	wire _0023_;
+	wire _0024_;
+	wire _0025_;
+	wire _0026_;
+	wire _0027_;
+	wire _0028_;
+	wire _0029_;
+	wire _0030_;
+	wire _0031_;
+	wire _0032_;
+	wire _0033_;
+	wire _0034_;
+	wire _0035_;
+	wire _0036_;
+	wire _0037_;
+	wire _0038_;
+	wire _0039_;
+	wire _0040_;
+	wire _0041_;
+	wire _0042_;
+	wire _0043_;
+	wire _0044_;
+	wire _0045_;
+	wire _0046_;
+	wire _0047_;
+	wire _0048_;
+	wire _0049_;
+	wire _0050_;
+	wire _0051_;
+	wire _0052_;
+	wire _0053_;
+	wire _0054_;
+	wire _0055_;
+	wire _0056_;
+	wire _0057_;
+	wire _0058_;
+	wire _0059_;
+	wire _0060_;
+	wire _0061_;
+	wire _0062_;
+	wire _0063_;
+	wire _0064_;
+	wire _0065_;
+	wire _0066_;
+	wire _0067_;
+	wire _0068_;
+	wire _0069_;
+	wire _0070_;
+	wire _0071_;
+	wire _0072_;
+	wire _0073_;
+	wire _0074_;
+	wire _0075_;
+	wire _0076_;
+	wire _0077_;
+	wire _0078_;
+	wire _0079_;
+	wire _0080_;
+	wire _0081_;
+	wire _0082_;
+	wire _0083_;
+	wire _0084_;
+	wire _0085_;
+	wire _0086_;
+	wire _0087_;
+	wire _0088_;
+	wire _0089_;
+	wire _0090_;
+	wire _0091_;
+	wire _0092_;
+	wire _0093_;
+	wire _0094_;
+	wire _0095_;
+	wire _0096_;
+	wire _0097_;
+	wire _0098_;
+	wire _0099_;
+	wire _0100_;
+	wire _0101_;
+	wire _0102_;
+	wire _0103_;
+	wire _0104_;
+	wire _0105_;
+	wire _0106_;
+	wire _0107_;
+	wire _0108_;
+	wire _0109_;
+	wire _0110_;
+	wire _0111_;
+	wire _0112_;
+	wire _0113_;
+	wire _0114_;
+	wire _0115_;
+	wire _0116_;
+	wire _0117_;
+	wire _0118_;
+	wire _0119_;
+	wire _0120_;
+	wire _0121_;
+	wire _0122_;
+	wire _0123_;
+	wire _0124_;
+	wire _0125_;
+	wire _0126_;
+	wire _0127_;
+	wire _0128_;
+	wire _0129_;
+	wire _0130_;
+	wire _0131_;
+	wire _0132_;
+	wire _0133_;
+	wire _0134_;
+	wire _0135_;
+	wire _0136_;
+	wire _0137_;
+	wire _0138_;
+	wire _0139_;
+	wire _0140_;
+	wire _0141_;
+	wire _0142_;
+	wire _0143_;
+	wire _0144_;
+	wire _0145_;
+	wire _0146_;
+	wire _0147_;
+	wire _0148_;
+	wire _0149_;
+	wire _0150_;
+	wire _0151_;
+	wire _0152_;
+	wire _0153_;
+	wire _0154_;
+	wire _0155_;
+	wire _0156_;
+	wire _0157_;
+	wire _0158_;
+	wire _0159_;
+	wire _0160_;
+	wire _0161_;
+	wire _0162_;
+	wire _0163_;
+	wire _0164_;
+	wire _0165_;
+	wire _0166_;
+	wire _0167_;
+	wire _0168_;
+	wire _0169_;
+	wire _0170_;
+	wire _0171_;
+	wire _0172_;
+	wire _0173_;
+	wire _0174_;
+	wire _0175_;
+	wire _0176_;
+	wire _0177_;
+	wire _0178_;
+	wire _0179_;
+	wire _0180_;
+	wire _0181_;
+	wire _0182_;
+	wire _0183_;
+	wire _0184_;
+	wire _0185_;
+	wire _0186_;
+	wire _0187_;
+	wire _0188_;
+	wire _0189_;
+	wire _0190_;
+	wire _0191_;
+	wire _0192_;
+	wire _0193_;
+	wire _0194_;
+	wire _0195_;
+	wire _0196_;
+	wire _0197_;
+	wire _0198_;
+	wire _0199_;
+	wire _0200_;
+	wire _0201_;
+	wire _0202_;
+	wire _0203_;
+	wire _0204_;
+	wire _0205_;
+	wire _0206_;
+	wire _0207_;
+	wire _0208_;
+	wire _0209_;
+	wire _0210_;
+	wire _0211_;
+	wire _0212_;
+	wire _0213_;
+	wire _0214_;
+	wire _0215_;
+	wire _0216_;
+	wire _0217_;
+	wire _0218_;
+	wire _0219_;
+	wire _0220_;
+	wire _0221_;
+	wire _0222_;
+	wire _0223_;
+	wire _0224_;
+	wire _0225_;
+	wire _0226_;
+	wire _0227_;
+	wire _0228_;
+	wire _0229_;
+	wire _0230_;
+	wire _0231_;
+	wire _0232_;
+	wire _0233_;
+	wire _0234_;
+	wire _0235_;
+	wire _0236_;
+	wire _0237_;
+	wire _0238_;
+	wire _0239_;
+	wire _0240_;
+	wire _0241_;
+	wire _0242_;
+	wire _0243_;
+	wire _0244_;
+	wire _0245_;
+	wire _0246_;
+	wire _0247_;
+	wire _0248_;
+	wire _0249_;
+	wire _0250_;
+	wire _0251_;
+	wire _0252_;
+	wire _0253_;
+	wire _0254_;
+	wire _0255_;
+	wire _0256_;
+	wire _0257_;
+	wire _0258_;
+	wire _0259_;
+	wire _0260_;
+	wire _0261_;
+	wire _0262_;
+	wire _0263_;
+	wire _0264_;
+	wire _0265_;
+	wire _0266_;
+	wire _0267_;
+	wire _0268_;
+	wire _0269_;
+	wire _0270_;
+	wire _0271_;
+	wire _0272_;
+	wire _0273_;
+	wire _0274_;
+	wire _0275_;
+	wire _0276_;
+	wire _0277_;
+	wire _0278_;
+	wire _0279_;
+	wire _0280_;
+	wire _0281_;
+	wire _0282_;
+	wire _0283_;
+	wire _0284_;
+	wire _0285_;
+	wire _0286_;
+	wire _0287_;
+	wire _0288_;
+	wire _0289_;
+	wire _0290_;
+	wire _0291_;
+	wire _0292_;
+	wire _0293_;
+	wire _0294_;
+	wire _0295_;
+	wire _0296_;
+	wire _0297_;
+	wire _0298_;
+	wire _0299_;
+	wire _0300_;
+	wire _0301_;
+	wire _0302_;
+	wire _0303_;
+	wire _0304_;
+	wire _0305_;
+	wire _0306_;
+	wire _0307_;
+	wire _0308_;
+	wire _0309_;
+	wire _0310_;
+	wire _0311_;
+	wire _0312_;
+	wire _0313_;
+	wire _0314_;
+	wire _0315_;
+	wire _0316_;
+	wire _0317_;
+	wire _0318_;
+	wire _0319_;
+	wire _0320_;
+	wire _0321_;
+	wire _0322_;
+	wire _0323_;
+	wire _0324_;
+	wire _0325_;
+	wire _0326_;
+	wire _0327_;
+	wire _0328_;
+	wire _0329_;
+	wire _0330_;
+	wire _0331_;
+	wire _0332_;
+	wire _0333_;
+	wire _0334_;
+	wire _0335_;
+	wire _0336_;
+	wire _0337_;
+	wire _0338_;
+	wire _0339_;
+	wire _0340_;
+	wire _0341_;
+	wire _0342_;
+	wire _0343_;
+	wire _0344_;
+	wire _0345_;
+	wire _0346_;
+	wire _0347_;
+	wire _0348_;
+	wire _0349_;
+	wire _0350_;
+	wire _0351_;
+	wire _0352_;
+	wire _0353_;
+	wire _0354_;
+	wire _0355_;
+	wire _0356_;
+	wire _0357_;
+	wire _0358_;
+	wire _0359_;
+	wire _0360_;
+	wire _0361_;
+	wire _0362_;
+	wire _0363_;
+	wire _0364_;
+	wire _0365_;
+	wire _0366_;
+	wire _0367_;
+	wire _0368_;
+	wire _0369_;
+	wire _0370_;
+	wire _0371_;
+	wire _0372_;
+	wire _0373_;
+	wire _0374_;
+	wire _0375_;
+	wire _0376_;
+	wire _0377_;
+	wire _0378_;
+	wire _0379_;
+	wire _0380_;
+	wire _0381_;
+	wire _0382_;
+	wire _0383_;
+	wire _0384_;
+	wire _0385_;
+	wire _0386_;
+	wire _0387_;
+	wire _0388_;
+	wire _0389_;
+	wire _0390_;
+	wire _0391_;
+	wire _0392_;
+	wire _0393_;
+	wire _0394_;
+	wire _0395_;
+	wire _0396_;
+	wire _0397_;
+	wire _0398_;
+	wire _0399_;
+	wire _0400_;
+	wire _0401_;
+	wire _0402_;
+	wire _0403_;
+	wire _0404_;
+	wire _0405_;
+	wire _0406_;
+	wire _0407_;
+	wire _0408_;
+	wire _0409_;
+	wire _0410_;
+	wire _0411_;
+	wire _0412_;
+	wire _0413_;
+	wire _0414_;
+	wire _0415_;
+	wire _0416_;
+	wire _0417_;
+	wire _0418_;
+	wire _0419_;
+	wire _0420_;
+	wire _0421_;
+	wire _0422_;
+	wire _0423_;
+	wire _0424_;
+	wire _0425_;
+	wire _0426_;
+	wire _0427_;
+	wire _0428_;
+	wire _0429_;
+	wire _0430_;
+	wire _0431_;
+	wire _0432_;
+	wire _0433_;
+	wire _0434_;
+	wire _0435_;
+	wire _0436_;
+	wire _0437_;
+	wire _0438_;
+	wire _0439_;
+	wire _0440_;
+	wire _0441_;
+	wire _0442_;
+	wire _0443_;
+	wire _0444_;
+	wire _0445_;
+	wire _0446_;
+	wire _0447_;
+	wire _0448_;
+	wire _0449_;
+	wire _0450_;
+	wire _0451_;
+	wire _0452_;
+	wire _0453_;
+	wire _0454_;
+	wire _0455_;
+	wire _0456_;
+	wire _0457_;
+	wire _0458_;
+	wire _0459_;
+	wire _0460_;
+	wire _0461_;
+	wire _0462_;
+	wire _0463_;
+	wire _0464_;
+	wire _0465_;
+	wire [9:0] _0466_;
+	wire [9:0] _0467_;
+	wire [9:0] _0468_;
+	wire [9:0] _0469_;
+	wire [26:0] _0470_;
+	wire [26:0] _0471_;
+	wire [9:0] _0472_;
+	wire [9:0] _0473_;
+	wire [9:0] _0474_;
+	wire [9:0] _0475_;
+	input wire [13:0] io_in;
+	output wire [13:0] io_out;
+	wire \mchip.clock ;
+	wire [11:0] \mchip.io_in ;
+	wire [11:0] \mchip.io_out ;
+	wire \mchip.livecheck.CLK_25 ;
+	wire [7:0] \mchip.livecheck.led ;
+	wire [26:0] \mchip.livecheck.led_count ;
+	wire [26:0] \mchip.livecheck.ledcounter.D ;
+	reg [26:0] \mchip.livecheck.ledcounter.Q ;
+	wire \mchip.livecheck.ledcounter.clear ;
+	wire \mchip.livecheck.ledcounter.clock ;
+	wire \mchip.livecheck.ledcounter.en ;
+	wire \mchip.livecheck.ledcounter.load ;
+	wire \mchip.livecheck.ledcounter.up ;
+	wire \mchip.reset ;
+	wire \mchip.vgad.CLOCK_25 ;
+	wire \mchip.vgad.CLOCK_29_5 ;
+	wire \mchip.vgad.HS ;
+	wire [2:0] \mchip.vgad.VGA_BLUE ;
+	wire [7:0] \mchip.vgad.VGA_BLUE_640 ;
+	wire [7:0] \mchip.vgad.VGA_BLUE_800 ;
+	wire [2:0] \mchip.vgad.VGA_GREEN ;
+	wire [7:0] \mchip.vgad.VGA_GREEN_640 ;
+	wire [7:0] \mchip.vgad.VGA_GREEN_800 ;
+	wire [2:0] \mchip.vgad.VGA_RED ;
+	wire [7:0] \mchip.vgad.VGA_RED_640 ;
+	wire [7:0] \mchip.vgad.VGA_RED_800 ;
+	wire \mchip.vgad.VS ;
+	wire \mchip.vgad.choose_vga_mode ;
+	wire [9:0] \mchip.vgad.col_640 ;
+	wire [9:0] \mchip.vgad.col_800 ;
+	wire [7:0] \mchip.vgad.g0.VGA_BLUE ;
+	wire [7:0] \mchip.vgad.g0.VGA_GREEN ;
+	wire [7:0] \mchip.vgad.g0.VGA_RED ;
+	wire \mchip.vgad.g0.clock ;
+	wire [9:0] \mchip.vgad.g0.col ;
+	wire [9:0] \mchip.vgad.g0.r0.col ;
+	wire [8:0] \mchip.vgad.g0.r0.row ;
+	wire [9:0] \mchip.vgad.g0.r0.x.delta ;
+	wire [9:0] \mchip.vgad.g0.r0.x.high ;
+	wire [9:0] \mchip.vgad.g0.r0.x.low ;
+	wire [9:0] \mchip.vgad.g0.r0.x.rc.high ;
+	wire [9:0] \mchip.vgad.g0.r0.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g0.r0.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g0.r0.x.rc.low ;
+	wire [9:0] \mchip.vgad.g0.r0.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g0.r0.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g0.r0.x.rc.val ;
+	wire [9:0] \mchip.vgad.g0.r0.x.val ;
+	wire [8:0] \mchip.vgad.g0.r0.y.delta ;
+	wire [8:0] \mchip.vgad.g0.r0.y.high ;
+	wire [8:0] \mchip.vgad.g0.r0.y.low ;
+	wire [8:0] \mchip.vgad.g0.r0.y.rc.high ;
+	wire [8:0] \mchip.vgad.g0.r0.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g0.r0.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g0.r0.y.rc.low ;
+	wire [8:0] \mchip.vgad.g0.r0.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g0.r0.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g0.r0.y.rc.val ;
+	wire [8:0] \mchip.vgad.g0.r0.y.val ;
+	wire [9:0] \mchip.vgad.g0.r1.col ;
+	wire [8:0] \mchip.vgad.g0.r1.row ;
+	wire [9:0] \mchip.vgad.g0.r1.x.delta ;
+	wire [9:0] \mchip.vgad.g0.r1.x.high ;
+	wire [9:0] \mchip.vgad.g0.r1.x.low ;
+	wire [9:0] \mchip.vgad.g0.r1.x.rc.high ;
+	wire [9:0] \mchip.vgad.g0.r1.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g0.r1.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g0.r1.x.rc.low ;
+	wire [9:0] \mchip.vgad.g0.r1.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g0.r1.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g0.r1.x.rc.val ;
+	wire [9:0] \mchip.vgad.g0.r1.x.val ;
+	wire [8:0] \mchip.vgad.g0.r1.y.delta ;
+	wire [8:0] \mchip.vgad.g0.r1.y.high ;
+	wire [8:0] \mchip.vgad.g0.r1.y.low ;
+	wire [8:0] \mchip.vgad.g0.r1.y.rc.high ;
+	wire [8:0] \mchip.vgad.g0.r1.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g0.r1.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g0.r1.y.rc.low ;
+	wire [8:0] \mchip.vgad.g0.r1.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g0.r1.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g0.r1.y.rc.val ;
+	wire [8:0] \mchip.vgad.g0.r1.y.val ;
+	wire [9:0] \mchip.vgad.g0.r2.col ;
+	wire [8:0] \mchip.vgad.g0.r2.row ;
+	wire [9:0] \mchip.vgad.g0.r2.x.delta ;
+	wire [9:0] \mchip.vgad.g0.r2.x.high ;
+	wire [9:0] \mchip.vgad.g0.r2.x.low ;
+	wire [9:0] \mchip.vgad.g0.r2.x.rc.high ;
+	wire [9:0] \mchip.vgad.g0.r2.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g0.r2.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g0.r2.x.rc.low ;
+	wire [9:0] \mchip.vgad.g0.r2.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g0.r2.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g0.r2.x.rc.val ;
+	wire [9:0] \mchip.vgad.g0.r2.x.val ;
+	wire [8:0] \mchip.vgad.g0.r2.y.delta ;
+	wire [8:0] \mchip.vgad.g0.r2.y.high ;
+	wire [8:0] \mchip.vgad.g0.r2.y.low ;
+	wire [8:0] \mchip.vgad.g0.r2.y.rc.high ;
+	wire [8:0] \mchip.vgad.g0.r2.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g0.r2.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g0.r2.y.rc.low ;
+	wire [8:0] \mchip.vgad.g0.r2.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g0.r2.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g0.r2.y.rc.val ;
+	wire [8:0] \mchip.vgad.g0.r2.y.val ;
+	wire [9:0] \mchip.vgad.g0.r3.col ;
+	wire [8:0] \mchip.vgad.g0.r3.row ;
+	wire [9:0] \mchip.vgad.g0.r3.x.delta ;
+	wire [9:0] \mchip.vgad.g0.r3.x.high ;
+	wire [9:0] \mchip.vgad.g0.r3.x.low ;
+	wire [9:0] \mchip.vgad.g0.r3.x.rc.high ;
+	wire [9:0] \mchip.vgad.g0.r3.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g0.r3.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g0.r3.x.rc.low ;
+	wire [9:0] \mchip.vgad.g0.r3.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g0.r3.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g0.r3.x.rc.val ;
+	wire [9:0] \mchip.vgad.g0.r3.x.val ;
+	wire [8:0] \mchip.vgad.g0.r3.y.delta ;
+	wire [8:0] \mchip.vgad.g0.r3.y.high ;
+	wire [8:0] \mchip.vgad.g0.r3.y.low ;
+	wire [8:0] \mchip.vgad.g0.r3.y.rc.high ;
+	wire [8:0] \mchip.vgad.g0.r3.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g0.r3.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g0.r3.y.rc.low ;
+	wire [8:0] \mchip.vgad.g0.r3.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g0.r3.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g0.r3.y.rc.val ;
+	wire [8:0] \mchip.vgad.g0.r3.y.val ;
+	wire [9:0] \mchip.vgad.g0.r4.col ;
+	wire [8:0] \mchip.vgad.g0.r4.row ;
+	wire [9:0] \mchip.vgad.g0.r4.x.delta ;
+	wire [9:0] \mchip.vgad.g0.r4.x.high ;
+	wire [9:0] \mchip.vgad.g0.r4.x.low ;
+	wire [9:0] \mchip.vgad.g0.r4.x.rc.high ;
+	wire [9:0] \mchip.vgad.g0.r4.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g0.r4.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g0.r4.x.rc.low ;
+	wire [9:0] \mchip.vgad.g0.r4.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g0.r4.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g0.r4.x.rc.val ;
+	wire [9:0] \mchip.vgad.g0.r4.x.val ;
+	wire [8:0] \mchip.vgad.g0.r4.y.delta ;
+	wire [8:0] \mchip.vgad.g0.r4.y.high ;
+	wire [8:0] \mchip.vgad.g0.r4.y.low ;
+	wire [8:0] \mchip.vgad.g0.r4.y.rc.high ;
+	wire [8:0] \mchip.vgad.g0.r4.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g0.r4.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g0.r4.y.rc.low ;
+	wire [8:0] \mchip.vgad.g0.r4.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g0.r4.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g0.r4.y.rc.val ;
+	wire [8:0] \mchip.vgad.g0.r4.y.val ;
+	wire [9:0] \mchip.vgad.g0.r5.col ;
+	wire [8:0] \mchip.vgad.g0.r5.row ;
+	wire [9:0] \mchip.vgad.g0.r5.x.delta ;
+	wire [9:0] \mchip.vgad.g0.r5.x.high ;
+	wire [9:0] \mchip.vgad.g0.r5.x.low ;
+	wire [9:0] \mchip.vgad.g0.r5.x.rc.high ;
+	wire [9:0] \mchip.vgad.g0.r5.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g0.r5.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g0.r5.x.rc.low ;
+	wire [9:0] \mchip.vgad.g0.r5.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g0.r5.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g0.r5.x.rc.val ;
+	wire [9:0] \mchip.vgad.g0.r5.x.val ;
+	wire [8:0] \mchip.vgad.g0.r5.y.delta ;
+	wire [8:0] \mchip.vgad.g0.r5.y.high ;
+	wire [8:0] \mchip.vgad.g0.r5.y.low ;
+	wire [8:0] \mchip.vgad.g0.r5.y.rc.high ;
+	wire [8:0] \mchip.vgad.g0.r5.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g0.r5.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g0.r5.y.rc.low ;
+	wire [8:0] \mchip.vgad.g0.r5.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g0.r5.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g0.r5.y.rc.val ;
+	wire [8:0] \mchip.vgad.g0.r5.y.val ;
+	wire [9:0] \mchip.vgad.g0.r6.col ;
+	wire [8:0] \mchip.vgad.g0.r6.row ;
+	wire [9:0] \mchip.vgad.g0.r6.x.delta ;
+	wire [9:0] \mchip.vgad.g0.r6.x.high ;
+	wire [9:0] \mchip.vgad.g0.r6.x.low ;
+	wire [9:0] \mchip.vgad.g0.r6.x.rc.high ;
+	wire [9:0] \mchip.vgad.g0.r6.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g0.r6.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g0.r6.x.rc.low ;
+	wire [9:0] \mchip.vgad.g0.r6.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g0.r6.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g0.r6.x.rc.val ;
+	wire [9:0] \mchip.vgad.g0.r6.x.val ;
+	wire [8:0] \mchip.vgad.g0.r6.y.delta ;
+	wire [8:0] \mchip.vgad.g0.r6.y.high ;
+	wire [8:0] \mchip.vgad.g0.r6.y.low ;
+	wire [8:0] \mchip.vgad.g0.r6.y.rc.high ;
+	wire [8:0] \mchip.vgad.g0.r6.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g0.r6.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g0.r6.y.rc.low ;
+	wire [8:0] \mchip.vgad.g0.r6.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g0.r6.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g0.r6.y.rc.val ;
+	wire [8:0] \mchip.vgad.g0.r6.y.val ;
+	wire \mchip.vgad.g0.reset ;
+	wire [8:0] \mchip.vgad.g0.row ;
+	wire [7:0] \mchip.vgad.g1.VGA_BLUE ;
+	wire [7:0] \mchip.vgad.g1.VGA_GREEN ;
+	wire [7:0] \mchip.vgad.g1.VGA_RED ;
+	wire \mchip.vgad.g1.clock ;
+	wire [9:0] \mchip.vgad.g1.col ;
+	wire [9:0] \mchip.vgad.g1.r0.col ;
+	wire [8:0] \mchip.vgad.g1.r0.row ;
+	wire [9:0] \mchip.vgad.g1.r0.x.delta ;
+	wire [9:0] \mchip.vgad.g1.r0.x.high ;
+	wire [9:0] \mchip.vgad.g1.r0.x.low ;
+	wire [9:0] \mchip.vgad.g1.r0.x.rc.high ;
+	wire [9:0] \mchip.vgad.g1.r0.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g1.r0.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g1.r0.x.rc.low ;
+	wire [9:0] \mchip.vgad.g1.r0.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g1.r0.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g1.r0.x.rc.val ;
+	wire [9:0] \mchip.vgad.g1.r0.x.val ;
+	wire [8:0] \mchip.vgad.g1.r0.y.delta ;
+	wire [8:0] \mchip.vgad.g1.r0.y.high ;
+	wire [8:0] \mchip.vgad.g1.r0.y.low ;
+	wire [8:0] \mchip.vgad.g1.r0.y.rc.high ;
+	wire [8:0] \mchip.vgad.g1.r0.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g1.r0.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g1.r0.y.rc.low ;
+	wire [8:0] \mchip.vgad.g1.r0.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g1.r0.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g1.r0.y.rc.val ;
+	wire [8:0] \mchip.vgad.g1.r0.y.val ;
+	wire [9:0] \mchip.vgad.g1.r1.col ;
+	wire [8:0] \mchip.vgad.g1.r1.row ;
+	wire [9:0] \mchip.vgad.g1.r1.x.delta ;
+	wire [9:0] \mchip.vgad.g1.r1.x.high ;
+	wire [9:0] \mchip.vgad.g1.r1.x.low ;
+	wire [9:0] \mchip.vgad.g1.r1.x.rc.high ;
+	wire [9:0] \mchip.vgad.g1.r1.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g1.r1.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g1.r1.x.rc.low ;
+	wire [9:0] \mchip.vgad.g1.r1.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g1.r1.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g1.r1.x.rc.val ;
+	wire [9:0] \mchip.vgad.g1.r1.x.val ;
+	wire [8:0] \mchip.vgad.g1.r1.y.delta ;
+	wire [8:0] \mchip.vgad.g1.r1.y.high ;
+	wire [8:0] \mchip.vgad.g1.r1.y.low ;
+	wire [8:0] \mchip.vgad.g1.r1.y.rc.high ;
+	wire [8:0] \mchip.vgad.g1.r1.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g1.r1.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g1.r1.y.rc.low ;
+	wire [8:0] \mchip.vgad.g1.r1.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g1.r1.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g1.r1.y.rc.val ;
+	wire [8:0] \mchip.vgad.g1.r1.y.val ;
+	wire [9:0] \mchip.vgad.g1.r2.col ;
+	wire [8:0] \mchip.vgad.g1.r2.row ;
+	wire [9:0] \mchip.vgad.g1.r2.x.delta ;
+	wire [9:0] \mchip.vgad.g1.r2.x.high ;
+	wire [9:0] \mchip.vgad.g1.r2.x.low ;
+	wire [9:0] \mchip.vgad.g1.r2.x.rc.high ;
+	wire [9:0] \mchip.vgad.g1.r2.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g1.r2.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g1.r2.x.rc.low ;
+	wire [9:0] \mchip.vgad.g1.r2.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g1.r2.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g1.r2.x.rc.val ;
+	wire [9:0] \mchip.vgad.g1.r2.x.val ;
+	wire [8:0] \mchip.vgad.g1.r2.y.delta ;
+	wire [8:0] \mchip.vgad.g1.r2.y.high ;
+	wire [8:0] \mchip.vgad.g1.r2.y.low ;
+	wire [8:0] \mchip.vgad.g1.r2.y.rc.high ;
+	wire [8:0] \mchip.vgad.g1.r2.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g1.r2.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g1.r2.y.rc.low ;
+	wire [8:0] \mchip.vgad.g1.r2.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g1.r2.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g1.r2.y.rc.val ;
+	wire [8:0] \mchip.vgad.g1.r2.y.val ;
+	wire [9:0] \mchip.vgad.g1.r3.col ;
+	wire [8:0] \mchip.vgad.g1.r3.row ;
+	wire [9:0] \mchip.vgad.g1.r3.x.delta ;
+	wire [9:0] \mchip.vgad.g1.r3.x.high ;
+	wire [9:0] \mchip.vgad.g1.r3.x.low ;
+	wire [9:0] \mchip.vgad.g1.r3.x.rc.high ;
+	wire [9:0] \mchip.vgad.g1.r3.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g1.r3.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g1.r3.x.rc.low ;
+	wire [9:0] \mchip.vgad.g1.r3.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g1.r3.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g1.r3.x.rc.val ;
+	wire [9:0] \mchip.vgad.g1.r3.x.val ;
+	wire [8:0] \mchip.vgad.g1.r3.y.delta ;
+	wire [8:0] \mchip.vgad.g1.r3.y.high ;
+	wire [8:0] \mchip.vgad.g1.r3.y.low ;
+	wire [8:0] \mchip.vgad.g1.r3.y.rc.high ;
+	wire [8:0] \mchip.vgad.g1.r3.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g1.r3.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g1.r3.y.rc.low ;
+	wire [8:0] \mchip.vgad.g1.r3.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g1.r3.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g1.r3.y.rc.val ;
+	wire [8:0] \mchip.vgad.g1.r3.y.val ;
+	wire [9:0] \mchip.vgad.g1.r4.col ;
+	wire [8:0] \mchip.vgad.g1.r4.row ;
+	wire [9:0] \mchip.vgad.g1.r4.x.delta ;
+	wire [9:0] \mchip.vgad.g1.r4.x.high ;
+	wire [9:0] \mchip.vgad.g1.r4.x.low ;
+	wire [9:0] \mchip.vgad.g1.r4.x.rc.high ;
+	wire [9:0] \mchip.vgad.g1.r4.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g1.r4.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g1.r4.x.rc.low ;
+	wire [9:0] \mchip.vgad.g1.r4.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g1.r4.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g1.r4.x.rc.val ;
+	wire [9:0] \mchip.vgad.g1.r4.x.val ;
+	wire [8:0] \mchip.vgad.g1.r4.y.delta ;
+	wire [8:0] \mchip.vgad.g1.r4.y.high ;
+	wire [8:0] \mchip.vgad.g1.r4.y.low ;
+	wire [8:0] \mchip.vgad.g1.r4.y.rc.high ;
+	wire [8:0] \mchip.vgad.g1.r4.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g1.r4.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g1.r4.y.rc.low ;
+	wire [8:0] \mchip.vgad.g1.r4.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g1.r4.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g1.r4.y.rc.val ;
+	wire [8:0] \mchip.vgad.g1.r4.y.val ;
+	wire [9:0] \mchip.vgad.g1.r5.col ;
+	wire [8:0] \mchip.vgad.g1.r5.row ;
+	wire [9:0] \mchip.vgad.g1.r5.x.delta ;
+	wire [9:0] \mchip.vgad.g1.r5.x.high ;
+	wire [9:0] \mchip.vgad.g1.r5.x.low ;
+	wire [9:0] \mchip.vgad.g1.r5.x.rc.high ;
+	wire [9:0] \mchip.vgad.g1.r5.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g1.r5.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g1.r5.x.rc.low ;
+	wire [9:0] \mchip.vgad.g1.r5.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g1.r5.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g1.r5.x.rc.val ;
+	wire [9:0] \mchip.vgad.g1.r5.x.val ;
+	wire [8:0] \mchip.vgad.g1.r5.y.delta ;
+	wire [8:0] \mchip.vgad.g1.r5.y.high ;
+	wire [8:0] \mchip.vgad.g1.r5.y.low ;
+	wire [8:0] \mchip.vgad.g1.r5.y.rc.high ;
+	wire [8:0] \mchip.vgad.g1.r5.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g1.r5.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g1.r5.y.rc.low ;
+	wire [8:0] \mchip.vgad.g1.r5.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g1.r5.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g1.r5.y.rc.val ;
+	wire [8:0] \mchip.vgad.g1.r5.y.val ;
+	wire [9:0] \mchip.vgad.g1.r6.col ;
+	wire [8:0] \mchip.vgad.g1.r6.row ;
+	wire [9:0] \mchip.vgad.g1.r6.x.delta ;
+	wire [9:0] \mchip.vgad.g1.r6.x.high ;
+	wire [9:0] \mchip.vgad.g1.r6.x.low ;
+	wire [9:0] \mchip.vgad.g1.r6.x.rc.high ;
+	wire [9:0] \mchip.vgad.g1.r6.x.rc.higher.A ;
+	wire [9:0] \mchip.vgad.g1.r6.x.rc.higher.B ;
+	wire [9:0] \mchip.vgad.g1.r6.x.rc.low ;
+	wire [9:0] \mchip.vgad.g1.r6.x.rc.lower.A ;
+	wire [9:0] \mchip.vgad.g1.r6.x.rc.lower.B ;
+	wire [9:0] \mchip.vgad.g1.r6.x.rc.val ;
+	wire [9:0] \mchip.vgad.g1.r6.x.val ;
+	wire [8:0] \mchip.vgad.g1.r6.y.delta ;
+	wire [8:0] \mchip.vgad.g1.r6.y.high ;
+	wire [8:0] \mchip.vgad.g1.r6.y.low ;
+	wire [8:0] \mchip.vgad.g1.r6.y.rc.high ;
+	wire [8:0] \mchip.vgad.g1.r6.y.rc.higher.A ;
+	wire [8:0] \mchip.vgad.g1.r6.y.rc.higher.B ;
+	wire [8:0] \mchip.vgad.g1.r6.y.rc.low ;
+	wire [8:0] \mchip.vgad.g1.r6.y.rc.lower.A ;
+	wire [8:0] \mchip.vgad.g1.r6.y.rc.lower.B ;
+	wire [8:0] \mchip.vgad.g1.r6.y.rc.val ;
+	wire [8:0] \mchip.vgad.g1.r6.y.val ;
+	wire \mchip.vgad.g1.reset ;
+	wire [8:0] \mchip.vgad.g1.row ;
+	wire \mchip.vgad.reset ;
+	wire [8:0] \mchip.vgad.row_640 ;
+	wire [8:0] \mchip.vgad.row_800 ;
+	wire \mchip.vgad.v0.CLOCK_25 ;
+	wire \mchip.vgad.v0.clock ;
+	wire [9:0] \mchip.vgad.v0.col ;
+	wire \mchip.vgad.v0.h_clear ;
+	wire [9:0] \mchip.vgad.v0.hcounter.D ;
+	reg [9:0] \mchip.vgad.v0.hcounter.Q ;
+	wire \mchip.vgad.v0.hcounter.clear ;
+	wire \mchip.vgad.v0.hcounter.clock ;
+	wire \mchip.vgad.v0.hcounter.en ;
+	wire \mchip.vgad.v0.hcounter.load ;
+	wire \mchip.vgad.v0.hcounter.up ;
+	wire [9:0] \mchip.vgad.v0.horiz_clock_counter ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.delta ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.high ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.low ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.rc.high ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.rc.higher.A ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.rc.higher.B ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.rc.low ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.rc.lower.A ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.rc.lower.B ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.rc.val ;
+	wire [9:0] \mchip.vgad.v0.hpulse_oc.val ;
+	wire \mchip.vgad.v0.reset ;
+	wire [8:0] \mchip.vgad.v0.row ;
+	wire [31:0] \mchip.vgad.v0.state ;
+	wire \mchip.vgad.v0.v_clear ;
+	wire [9:0] \mchip.vgad.v0.vcounter.D ;
+	reg [9:0] \mchip.vgad.v0.vcounter.Q ;
+	wire \mchip.vgad.v0.vcounter.clear ;
+	wire \mchip.vgad.v0.vcounter.clock ;
+	wire \mchip.vgad.v0.vcounter.load ;
+	wire \mchip.vgad.v0.vcounter.up ;
+	wire [9:0] \mchip.vgad.v0.vert_row_counter ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.delta ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.high ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.low ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.rc.high ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.rc.higher.A ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.rc.higher.B ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.rc.low ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.rc.lower.A ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.rc.lower.B ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.rc.val ;
+	wire [9:0] \mchip.vgad.v0.vpulse_oc.val ;
+	wire \mchip.vgad.v1.CLOCK_29_5 ;
+	wire \mchip.vgad.v1.clock ;
+	wire [9:0] \mchip.vgad.v1.col ;
+	wire \mchip.vgad.v1.h_clear ;
+	wire [9:0] \mchip.vgad.v1.hcounter.D ;
+	reg [9:0] \mchip.vgad.v1.hcounter.Q ;
+	wire \mchip.vgad.v1.hcounter.clear ;
+	wire \mchip.vgad.v1.hcounter.clock ;
+	wire \mchip.vgad.v1.hcounter.en ;
+	wire \mchip.vgad.v1.hcounter.load ;
+	wire \mchip.vgad.v1.hcounter.up ;
+	wire [9:0] \mchip.vgad.v1.horiz_clock_counter ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.delta ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.high ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.low ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.rc.high ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.rc.higher.A ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.rc.higher.B ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.rc.low ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.rc.lower.A ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.rc.lower.B ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.rc.val ;
+	wire [9:0] \mchip.vgad.v1.hpulse_oc.val ;
+	wire \mchip.vgad.v1.reset ;
+	wire [8:0] \mchip.vgad.v1.row ;
+	wire [31:0] \mchip.vgad.v1.state ;
+	wire \mchip.vgad.v1.v_clear ;
+	wire [9:0] \mchip.vgad.v1.vcounter.D ;
+	reg [9:0] \mchip.vgad.v1.vcounter.Q ;
+	wire \mchip.vgad.v1.vcounter.clear ;
+	wire \mchip.vgad.v1.vcounter.clock ;
+	wire \mchip.vgad.v1.vcounter.load ;
+	wire \mchip.vgad.v1.vcounter.up ;
+	wire [9:0] \mchip.vgad.v1.vert_row_counter ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.delta ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.high ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.low ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.rc.high ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.rc.higher.A ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.rc.higher.B ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.rc.low ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.rc.lower.A ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.rc.lower.B ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.rc.val ;
+	wire [9:0] \mchip.vgad.v1.vpulse_oc.val ;
+	wire [7:0] \mchip.virtual_leds ;
+	assign _0468_[0] = ~\mchip.vgad.v1.hcounter.Q [0];
+	assign _0003_ = \mchip.vgad.v1.hcounter.Q [1] & \mchip.vgad.v1.hcounter.Q [0];
+	assign _0004_ = ~(\mchip.vgad.v1.hcounter.Q [3] & \mchip.vgad.v1.hcounter.Q [2]);
+	assign _0005_ = _0003_ & ~_0004_;
+	assign _0006_ = ~(\mchip.vgad.v1.hcounter.Q [6] & \mchip.vgad.v1.hcounter.Q [7]);
+	assign _0007_ = \mchip.vgad.v1.hcounter.Q [5] | ~\mchip.vgad.v1.hcounter.Q [4];
+	assign _0008_ = _0007_ | _0006_;
+	assign _0009_ = _0005_ & ~_0008_;
+	assign _0010_ = ~(\mchip.vgad.v1.hcounter.Q [9] & \mchip.vgad.v1.hcounter.Q [8]);
+	assign _0000_ = _0009_ & ~_0010_;
+	assign _0469_[0] = ~\mchip.vgad.v0.hcounter.Q [0];
+	assign _0011_ = \mchip.vgad.v0.hcounter.Q [9] & \mchip.vgad.v0.hcounter.Q [8];
+	assign _0012_ = \mchip.vgad.v0.hcounter.Q [1] & \mchip.vgad.v0.hcounter.Q [0];
+	assign _0013_ = ~(\mchip.vgad.v0.hcounter.Q [2] & \mchip.vgad.v0.hcounter.Q [3]);
+	assign _0014_ = _0012_ & ~_0013_;
+	assign _0015_ = ~(\mchip.vgad.v0.hcounter.Q [6] | \mchip.vgad.v0.hcounter.Q [7]);
+	assign _0016_ = \mchip.vgad.v0.hcounter.Q [5] | ~\mchip.vgad.v0.hcounter.Q [4];
+	assign _0017_ = _0015_ & ~_0016_;
+	assign _0018_ = ~(_0017_ & _0014_);
+	assign _0001_ = _0011_ & ~_0018_;
+	assign _0019_ = ~(\mchip.vgad.v1.hcounter.Q [8] & \mchip.vgad.v1.hcounter.Q [7]);
+	assign _0020_ = \mchip.vgad.v1.hcounter.Q [9] & ~_0019_;
+	assign _0021_ = \mchip.vgad.v1.hcounter.Q [6] | \mchip.vgad.v1.hcounter.Q [7];
+	assign _0022_ = ~(\mchip.vgad.v1.hcounter.Q [4] & \mchip.vgad.v1.hcounter.Q [5]);
+	assign _0023_ = _0022_ | _0021_;
+	assign _0024_ = \mchip.vgad.v1.hcounter.Q [3] & ~\mchip.vgad.v1.hcounter.Q [2];
+	assign _0025_ = \mchip.vgad.v1.hcounter.Q [1] | \mchip.vgad.v1.hcounter.Q [0];
+	assign _0026_ = _0025_ | ~_0024_;
+	assign _0027_ = _0026_ | _0023_;
+	assign _0028_ = _0027_ | _0010_;
+	assign _0029_ = \mchip.vgad.v1.hcounter.Q [8] & ~\mchip.vgad.v1.hcounter.Q [7];
+	assign _0030_ = \mchip.vgad.v1.hcounter.Q [4] & \mchip.vgad.v1.hcounter.Q [3];
+	assign _0031_ = \mchip.vgad.v1.hcounter.Q [6] | ~\mchip.vgad.v1.hcounter.Q [5];
+	assign _0032_ = _0031_ | ~_0030_;
+	assign _0033_ = _0032_ & ~\mchip.vgad.v1.hcounter.Q [6];
+	assign _0034_ = _0029_ & ~_0033_;
+	assign _0035_ = _0019_ & ~_0034_;
+	assign _0036_ = \mchip.vgad.v1.hcounter.Q [9] & ~_0035_;
+	assign _0037_ = _0028_ & ~_0036_;
+	assign _0038_ = _0037_ | _0020_;
+	assign _0039_ = \mchip.vgad.v0.hcounter.Q [9] & ~\mchip.vgad.v0.hcounter.Q [8];
+	assign _0040_ = ~(\mchip.vgad.v0.hcounter.Q [4] & \mchip.vgad.v0.hcounter.Q [5]);
+	assign _0041_ = ~(\mchip.vgad.v0.hcounter.Q [6] & \mchip.vgad.v0.hcounter.Q [7]);
+	assign _0042_ = _0041_ | _0040_;
+	assign _0043_ = _0039_ & ~_0042_;
+	assign _0044_ = _0043_ | _0011_;
+	assign _0045_ = \mchip.vgad.v0.hcounter.Q [1] | \mchip.vgad.v0.hcounter.Q [0];
+	assign _0046_ = \mchip.vgad.v0.hcounter.Q [2] | \mchip.vgad.v0.hcounter.Q [3];
+	assign _0047_ = _0046_ | _0045_;
+	assign _0048_ = \mchip.vgad.v0.hcounter.Q [6] | ~\mchip.vgad.v0.hcounter.Q [7];
+	assign _0049_ = _0048_ | _0016_;
+	assign _0050_ = _0049_ | _0047_;
+	assign _0051_ = _0050_ | ~_0039_;
+	assign _0052_ = \mchip.vgad.v0.hcounter.Q [4] | \mchip.vgad.v0.hcounter.Q [5];
+	assign _0053_ = _0052_ & ~_0048_;
+	assign _0054_ = _0041_ & ~_0053_;
+	assign _0055_ = _0039_ & ~_0054_;
+	assign _0056_ = _0055_ | _0011_;
+	assign _0057_ = _0051_ & ~_0056_;
+	assign _0058_ = _0057_ | _0044_;
+	assign \mchip.vgad.HS  = (io_in[0] ? _0058_ : _0038_);
+	assign _0059_ = \mchip.vgad.v1.vcounter.Q [9] | \mchip.vgad.v1.vcounter.Q [8];
+	assign _0060_ = \mchip.vgad.v1.vcounter.Q [8] & ~\mchip.vgad.v1.vcounter.Q [9];
+	assign _0061_ = ~(\mchip.vgad.v1.vcounter.Q [6] & \mchip.vgad.v1.vcounter.Q [7]);
+	assign _0062_ = _0061_ & _0060_;
+	assign _0063_ = _0059_ & ~_0062_;
+	assign _0064_ = _0060_ & ~_0061_;
+	assign _0065_ = \mchip.vgad.v1.vcounter.Q [5] & ~\mchip.vgad.v1.vcounter.Q [4];
+	assign _0066_ = \mchip.vgad.v1.vcounter.Q [2] | \mchip.vgad.v1.vcounter.Q [3];
+	assign _0067_ = _0065_ & ~_0066_;
+	assign _0068_ = \mchip.vgad.v1.vcounter.Q [5] & ~_0067_;
+	assign _0069_ = _0064_ & ~_0068_;
+	assign _0070_ = _0063_ & ~_0069_;
+	assign _0071_ = _0065_ & ~_0061_;
+	assign _0072_ = ~(\mchip.vgad.v1.vcounter.Q [0] & \mchip.vgad.v1.vcounter.Q [1]);
+	assign _0073_ = ~(_0072_ | _0066_);
+	assign _0074_ = ~(_0073_ & _0071_);
+	assign _0075_ = _0060_ & ~_0074_;
+	assign _0076_ = _0075_ | _0070_;
+	assign _0077_ = \mchip.vgad.v1.vcounter.Q [2] | ~\mchip.vgad.v1.vcounter.Q [3];
+	assign _0078_ = \mchip.vgad.v1.vcounter.Q [0] | ~\mchip.vgad.v1.vcounter.Q [1];
+	assign _0079_ = ~(_0078_ | _0077_);
+	assign _0080_ = ~(_0079_ & _0071_);
+	assign _0081_ = _0060_ & ~_0080_;
+	assign _0082_ = \mchip.vgad.v1.vcounter.Q [5] & ~_0061_;
+	assign _0083_ = _0072_ & ~_0077_;
+	assign _0084_ = \mchip.vgad.v1.vcounter.Q [3] & ~_0083_;
+	assign _0085_ = _0071_ & ~_0084_;
+	assign _0086_ = _0082_ & ~_0085_;
+	assign _0087_ = _0060_ & ~_0086_;
+	assign _0088_ = _0059_ & ~_0087_;
+	assign _0089_ = _0088_ | _0081_;
+	assign _0090_ = _0076_ & ~_0089_;
+	assign _0091_ = \mchip.vgad.v0.vcounter.Q [8] & ~\mchip.vgad.v0.vcounter.Q [9];
+	assign _0092_ = \mchip.vgad.v0.vcounter.Q [2] & \mchip.vgad.v0.vcounter.Q [3];
+	assign _0093_ = \mchip.vgad.v0.vcounter.Q [0] | \mchip.vgad.v0.vcounter.Q [1];
+	assign _0094_ = _0092_ & ~_0093_;
+	assign _0095_ = ~(\mchip.vgad.v0.vcounter.Q [6] & \mchip.vgad.v0.vcounter.Q [7]);
+	assign _0096_ = \mchip.vgad.v0.vcounter.Q [4] | ~\mchip.vgad.v0.vcounter.Q [5];
+	assign _0097_ = ~(_0096_ | _0095_);
+	assign _0098_ = ~(_0097_ & _0094_);
+	assign _0099_ = _0091_ & ~_0098_;
+	assign _0100_ = \mchip.vgad.v0.vcounter.Q [9] | \mchip.vgad.v0.vcounter.Q [8];
+	assign _0101_ = \mchip.vgad.v0.vcounter.Q [5] & ~_0095_;
+	assign _0102_ = _0093_ & _0092_;
+	assign _0103_ = _0097_ & ~_0102_;
+	assign _0104_ = _0101_ & ~_0103_;
+	assign _0105_ = _0091_ & ~_0104_;
+	assign _0106_ = _0100_ & ~_0105_;
+	assign _0107_ = _0106_ | _0099_;
+	assign _0108_ = \mchip.vgad.v0.vcounter.Q [3] & ~\mchip.vgad.v0.vcounter.Q [2];
+	assign _0109_ = \mchip.vgad.v0.vcounter.Q [1] & ~\mchip.vgad.v0.vcounter.Q [0];
+	assign _0110_ = _0109_ & _0108_;
+	assign _0111_ = _0110_ & _0097_;
+	assign _0112_ = ~(_0111_ & _0091_);
+	assign _0113_ = \mchip.vgad.v0.vcounter.Q [0] & \mchip.vgad.v0.vcounter.Q [1];
+	assign _0114_ = _0108_ & ~_0113_;
+	assign _0115_ = \mchip.vgad.v0.vcounter.Q [3] & ~_0114_;
+	assign _0116_ = _0097_ & ~_0115_;
+	assign _0117_ = _0101_ & ~_0116_;
+	assign _0118_ = _0091_ & ~_0117_;
+	assign _0119_ = _0100_ & ~_0118_;
+	assign _0120_ = _0112_ & ~_0119_;
+	assign _0121_ = _0120_ | _0107_;
+	assign \mchip.vgad.VS  = (io_in[0] ? _0121_ : _0090_);
+	assign _0122_ = \mchip.vgad.v1.hcounter.Q [9] & ~\mchip.vgad.v1.hcounter.Q [8];
+	assign _0123_ = _0122_ & ~_0006_;
+	assign _0124_ = _0010_ & ~_0123_;
+	assign _0125_ = \mchip.vgad.v1.hcounter.Q [6] | ~\mchip.vgad.v1.hcounter.Q [7];
+	assign _0126_ = _0122_ & ~_0125_;
+	assign _0127_ = _0022_ | _0004_;
+	assign _0128_ = _0126_ & ~_0127_;
+	assign _0129_ = _0124_ & ~_0128_;
+	assign _0130_ = _0125_ | _0022_;
+	assign _0131_ = _0025_ | _0004_;
+	assign _0132_ = _0131_ | _0130_;
+	assign _0133_ = _0132_ | ~_0122_;
+	assign _0134_ = ~(_0133_ & _0129_);
+	assign _0135_ = ~(\mchip.vgad.v1.hcounter.Q [6] | \mchip.vgad.v1.hcounter.Q [5]);
+	assign _0136_ = _0029_ & ~_0135_;
+	assign _0137_ = _0019_ & ~_0136_;
+	assign _0138_ = \mchip.vgad.v1.hcounter.Q [9] & ~_0137_;
+	assign _0139_ = _0134_ & ~_0138_;
+	assign _0140_ = \mchip.vgad.v1.vcounter.Q [7] & ~\mchip.vgad.v1.vcounter.Q [6];
+	assign _0141_ = \mchip.vgad.v1.vcounter.Q [5] & \mchip.vgad.v1.vcounter.Q [4];
+	assign _0142_ = ~_0141_;
+	assign _0143_ = _0066_ & _0065_;
+	assign _0144_ = _0142_ & ~_0143_;
+	assign _0145_ = _0140_ & ~_0144_;
+	assign _0146_ = _0061_ & ~_0145_;
+	assign _0147_ = \mchip.vgad.v1.vcounter.Q [8] & ~_0146_;
+	assign _0148_ = _0139_ & ~_0147_;
+	assign _0149_ = ~(\mchip.vgad.v1.hcounter.Q [8] | \mchip.vgad.v1.hcounter.Q [7]);
+	assign _0150_ = \mchip.vgad.v1.hcounter.Q [6] & \mchip.vgad.v1.hcounter.Q [5];
+	assign _0151_ = \mchip.vgad.v1.hcounter.Q [5] | ~\mchip.vgad.v1.hcounter.Q [6];
+	assign _0152_ = _0030_ & ~_0151_;
+	assign _0153_ = _0152_ | _0150_;
+	assign _0154_ = _0153_ | ~_0149_;
+	assign _0155_ = ~(_0154_ & \mchip.vgad.v1.hcounter.Q [9]);
+	assign _0156_ = ~(\mchip.vgad.v1.hcounter.Q [9] | \mchip.vgad.v1.hcounter.Q [8]);
+	assign _0157_ = \mchip.vgad.v1.hcounter.Q [8] & ~\mchip.vgad.v1.hcounter.Q [9];
+	assign _0158_ = ~(_0022_ | _0006_);
+	assign _0159_ = \mchip.vgad.v1.hcounter.Q [3] | \mchip.vgad.v1.hcounter.Q [2];
+	assign _0160_ = \mchip.vgad.v1.hcounter.Q [3] | ~\mchip.vgad.v1.hcounter.Q [2];
+	assign _0161_ = _0160_ | _0025_;
+	assign _0162_ = ~(_0161_ & _0159_);
+	assign _0163_ = _0022_ | _0006_;
+	assign _0164_ = _0162_ & ~_0163_;
+	assign _0165_ = _0158_ & ~_0164_;
+	assign _0166_ = _0157_ & ~_0165_;
+	assign _0167_ = _0166_ | _0156_;
+	assign _0168_ = _0163_ | _0161_;
+	assign _0169_ = _0157_ & ~_0168_;
+	assign _0170_ = _0167_ & ~_0169_;
+	assign _0171_ = _0155_ & ~_0170_;
+	assign _0172_ = \mchip.vgad.v1.vcounter.Q [6] | \mchip.vgad.v1.vcounter.Q [7];
+	assign _0173_ = ~(\mchip.vgad.v1.vcounter.Q [2] & \mchip.vgad.v1.vcounter.Q [3]);
+	assign _0174_ = _0065_ & ~_0173_;
+	assign _0175_ = _0142_ & ~_0174_;
+	assign _0176_ = _0175_ & ~_0172_;
+	assign _0177_ = \mchip.vgad.v1.vcounter.Q [8] & ~_0176_;
+	assign _0178_ = _0171_ & ~_0177_;
+	assign _0179_ = _0021_ | \mchip.vgad.v1.hcounter.Q [5];
+	assign _0180_ = \mchip.vgad.v1.hcounter.Q [4] | ~\mchip.vgad.v1.hcounter.Q [5];
+	assign _0181_ = _0180_ | _0021_;
+	assign _0182_ = _0004_ | ~_0025_;
+	assign _0183_ = _0182_ & ~_0181_;
+	assign _0184_ = _0179_ & ~_0183_;
+	assign _0185_ = _0157_ & ~_0184_;
+	assign _0186_ = _0185_ | _0156_;
+	assign _0187_ = _0181_ | _0131_;
+	assign _0188_ = _0157_ & ~_0187_;
+	assign _0189_ = _0186_ & ~_0188_;
+	assign _0190_ = _0159_ | _0025_;
+	assign _0191_ = _0125_ | _0007_;
+	assign _0192_ = _0191_ | _0190_;
+	assign _0193_ = \mchip.vgad.v1.hcounter.Q [4] | \mchip.vgad.v1.hcounter.Q [5];
+	assign _0194_ = _0193_ | _0125_;
+	assign _0195_ = ~(_0194_ & \mchip.vgad.v1.hcounter.Q [7]);
+	assign _0196_ = _0192_ & ~_0195_;
+	assign _0197_ = _0157_ & ~_0196_;
+	assign _0198_ = _0197_ | _0156_;
+	assign _0199_ = _0157_ & ~_0192_;
+	assign _0200_ = _0198_ & ~_0199_;
+	assign _0201_ = _0200_ & ~_0189_;
+	assign _0202_ = ~\mchip.vgad.v1.vcounter.Q [8];
+	assign _0203_ = \mchip.vgad.v1.vcounter.Q [2] & ~\mchip.vgad.v1.vcounter.Q [3];
+	assign _0204_ = \mchip.vgad.v1.vcounter.Q [0] | \mchip.vgad.v1.vcounter.Q [1];
+	assign _0205_ = _0203_ & ~_0204_;
+	assign _0206_ = _0141_ & _0140_;
+	assign _0207_ = ~(_0206_ & _0205_);
+	assign _0208_ = _0202_ & ~_0207_;
+	assign _0209_ = _0140_ & ~_0141_;
+	assign _0210_ = \mchip.vgad.v1.vcounter.Q [7] & ~_0209_;
+	assign _0211_ = _0066_ & ~_0205_;
+	assign _0212_ = _0206_ & ~_0211_;
+	assign _0213_ = _0210_ & ~_0212_;
+	assign _0214_ = _0213_ | \mchip.vgad.v1.vcounter.Q [8];
+	assign _0215_ = _0214_ | _0208_;
+	assign _0216_ = _0201_ & ~_0215_;
+	assign _0217_ = \mchip.vgad.v1.hcounter.Q [7] | ~\mchip.vgad.v1.hcounter.Q [6];
+	assign _0218_ = ~(_0217_ | \mchip.vgad.v1.hcounter.Q [5]);
+	assign _0219_ = _0021_ & ~_0218_;
+	assign _0220_ = _0217_ | _0180_;
+	assign _0221_ = _0162_ & ~_0220_;
+	assign _0222_ = _0219_ & ~_0221_;
+	assign _0223_ = _0222_ | ~_0156_;
+	assign _0224_ = _0220_ | _0161_;
+	assign _0225_ = _0156_ & ~_0224_;
+	assign _0226_ = ~(_0225_ | _0223_);
+	assign _0227_ = _0193_ | _0006_;
+	assign _0228_ = ~(_0026_ & \mchip.vgad.v1.hcounter.Q [3]);
+	assign _0229_ = _0227_ | ~_0228_;
+	assign _0230_ = _0229_ & ~_0006_;
+	assign _0231_ = _0156_ & ~_0230_;
+	assign _0232_ = _0227_ | _0026_;
+	assign _0233_ = _0156_ & ~_0232_;
+	assign _0234_ = _0231_ & ~_0233_;
+	assign _0235_ = _0234_ & ~_0226_;
+	assign _0236_ = ~(_0204_ | _0173_);
+	assign _0237_ = _0141_ & ~_0172_;
+	assign _0238_ = ~(_0237_ & _0236_);
+	assign _0239_ = _0202_ & ~_0238_;
+	assign _0240_ = _0172_ | _0141_;
+	assign _0241_ = _0204_ & ~_0173_;
+	assign _0242_ = _0237_ & ~_0241_;
+	assign _0243_ = _0240_ & ~_0242_;
+	assign _0244_ = _0243_ | \mchip.vgad.v1.vcounter.Q [8];
+	assign _0245_ = _0244_ | _0239_;
+	assign _0246_ = _0235_ & ~_0245_;
+	assign _0247_ = _0246_ | _0216_;
+	assign _0248_ = _0247_ | _0178_;
+	assign _0249_ = _0248_ | _0148_;
+	assign _0250_ = ~(\mchip.vgad.v0.vcounter.Q [5] & \mchip.vgad.v0.vcounter.Q [4]);
+	assign _0251_ = _0250_ | _0095_;
+	assign _0252_ = \mchip.vgad.v0.vcounter.Q [2] | \mchip.vgad.v0.vcounter.Q [3];
+	assign _0253_ = _0252_ | _0093_;
+	assign _0254_ = _0253_ | _0251_;
+	assign _0255_ = _0254_ | \mchip.vgad.v0.vcounter.Q [8];
+	assign _0256_ = _0254_ & ~_0251_;
+	assign _0257_ = _0256_ | \mchip.vgad.v0.vcounter.Q [8];
+	assign _0258_ = _0255_ & ~_0257_;
+	assign _0259_ = ~(\mchip.vgad.v0.hcounter.Q [8] | \mchip.vgad.v0.hcounter.Q [7]);
+	assign _0260_ = \mchip.vgad.v0.hcounter.Q [9] & ~_0259_;
+	assign _0261_ = _0045_ | ~_0039_;
+	assign _0262_ = _0040_ | ~_0015_;
+	assign _0263_ = _0262_ | _0261_;
+	assign _0264_ = _0263_ | _0046_;
+	assign _0265_ = _0040_ & _0015_;
+	assign _0266_ = _0039_ & ~_0265_;
+	assign _0267_ = _0266_ | _0011_;
+	assign _0268_ = _0264_ & ~_0267_;
+	assign _0269_ = _0268_ | _0260_;
+	assign _0270_ = _0258_ & ~_0269_;
+	assign _0271_ = \mchip.vgad.v0.hcounter.Q [4] | ~\mchip.vgad.v0.hcounter.Q [5];
+	assign _0272_ = _0271_ | _0041_;
+	assign _0273_ = _0272_ | _0047_;
+	assign _0274_ = \mchip.vgad.v0.hcounter.Q [8] & ~\mchip.vgad.v0.hcounter.Q [9];
+	assign _0275_ = ~_0274_;
+	assign _0276_ = _0275_ | _0273_;
+	assign _0277_ = ~(\mchip.vgad.v0.hcounter.Q [9] | \mchip.vgad.v0.hcounter.Q [8]);
+	assign _0278_ = ~_0277_;
+	assign _0279_ = ~\mchip.vgad.v0.hcounter.Q [5];
+	assign _0280_ = _0041_ | _0279_;
+	assign _0281_ = _0273_ & ~_0280_;
+	assign _0282_ = _0274_ & ~_0281_;
+	assign _0283_ = _0278_ & ~_0282_;
+	assign _0284_ = _0276_ & ~_0283_;
+	assign _0285_ = ~\mchip.vgad.v0.hcounter.Q [7];
+	assign _0286_ = ~(_0052_ | _0048_);
+	assign _0287_ = _0286_ | _0285_;
+	assign _0288_ = _0050_ & ~_0287_;
+	assign _0289_ = _0274_ & ~_0288_;
+	assign _0290_ = _0289_ | _0277_;
+	assign _0291_ = _0274_ & ~_0050_;
+	assign _0292_ = _0291_ | ~_0290_;
+	assign _0293_ = ~(_0292_ & _0284_);
+	assign _0294_ = _0258_ & ~_0293_;
+	assign _0295_ = \mchip.vgad.v0.hcounter.Q [7] | ~\mchip.vgad.v0.hcounter.Q [6];
+	assign _0296_ = _0295_ | _0052_;
+	assign _0297_ = _0296_ | _0047_;
+	assign _0298_ = _0297_ | _0275_;
+	assign _0299_ = _0297_ & ~_0015_;
+	assign _0300_ = _0274_ & ~_0299_;
+	assign _0301_ = _0278_ & ~_0300_;
+	assign _0302_ = _0298_ & ~_0301_;
+	assign _0303_ = _0047_ | _0042_;
+	assign _0304_ = _0303_ & ~_0042_;
+	assign _0305_ = _0277_ & ~_0304_;
+	assign _0306_ = _0277_ & ~_0303_;
+	assign _0307_ = _0306_ | ~_0305_;
+	assign _0308_ = ~(_0307_ & _0302_);
+	assign _0309_ = _0258_ & ~_0308_;
+	assign _0310_ = _0271_ | _0048_;
+	assign _0311_ = _0310_ | _0047_;
+	assign _0312_ = _0311_ | _0278_;
+	assign _0313_ = _0279_ & ~_0048_;
+	assign _0314_ = _0313_ | _0285_;
+	assign _0315_ = _0311_ & ~_0314_;
+	assign _0316_ = _0315_ | _0278_;
+	assign _0317_ = _0312_ & ~_0316_;
+	assign _0318_ = _0295_ | _0016_;
+	assign _0319_ = _0318_ | _0047_;
+	assign _0320_ = _0015_ | ~_0296_;
+	assign _0321_ = _0319_ & ~_0320_;
+	assign _0322_ = _0277_ & ~_0321_;
+	assign _0323_ = _0277_ & ~_0319_;
+	assign _0324_ = _0323_ | ~_0322_;
+	assign _0325_ = ~(_0324_ & _0317_);
+	assign _0326_ = _0258_ & ~_0325_;
+	assign _0327_ = _0326_ | _0309_;
+	assign _0328_ = _0327_ | _0294_;
+	assign _0329_ = _0328_ | _0270_;
+	assign io_out[8] = (io_in[0] ? _0329_ : _0249_);
+	assign _0330_ = _0217_ | _0007_;
+	assign _0331_ = _0330_ | _0026_;
+	assign _0332_ = _0122_ & ~_0331_;
+	assign _0333_ = _0155_ & ~_0332_;
+	assign _0334_ = _0129_ & ~_0333_;
+	assign _0335_ = \mchip.vgad.v1.vcounter.Q [8] & ~\mchip.vgad.v1.vcounter.Q [7];
+	assign _0336_ = ~(\mchip.vgad.v1.vcounter.Q [4] | \mchip.vgad.v1.vcounter.Q [3]);
+	assign _0337_ = ~(\mchip.vgad.v1.vcounter.Q [5] & \mchip.vgad.v1.vcounter.Q [6]);
+	assign _0338_ = _0337_ | _0336_;
+	assign _0339_ = _0335_ & ~_0338_;
+	assign _0340_ = \mchip.vgad.v1.vcounter.Q [8] & \mchip.vgad.v1.vcounter.Q [7];
+	assign _0341_ = _0340_ | _0339_;
+	assign _0342_ = _0334_ & ~_0341_;
+	assign _0343_ = _0189_ & ~_0234_;
+	assign _0344_ = ~(_0204_ | _0077_);
+	assign _0345_ = \mchip.vgad.v1.vcounter.Q [7] | ~\mchip.vgad.v1.vcounter.Q [6];
+	assign _0346_ = _0141_ & ~_0345_;
+	assign _0347_ = ~(_0346_ & _0344_);
+	assign _0348_ = _0202_ & ~_0347_;
+	assign _0349_ = ~(_0345_ | _0141_);
+	assign _0350_ = _0172_ & ~_0349_;
+	assign _0351_ = \mchip.vgad.v1.vcounter.Q [3] & ~_0344_;
+	assign _0352_ = _0346_ & ~_0351_;
+	assign _0353_ = _0350_ & ~_0352_;
+	assign _0354_ = _0353_ | \mchip.vgad.v1.vcounter.Q [8];
+	assign _0355_ = _0354_ | _0348_;
+	assign _0356_ = _0343_ & ~_0355_;
+	assign _0357_ = _0356_ | _0216_;
+	assign _0358_ = _0357_ | _0342_;
+	assign _0359_ = _0358_ | _0148_;
+	assign _0360_ = _0284_ | _0267_;
+	assign _0361_ = _0258_ & ~_0360_;
+	assign _0362_ = _0317_ | _0307_;
+	assign _0363_ = _0258_ & ~_0362_;
+	assign _0364_ = _0363_ | _0309_;
+	assign _0365_ = _0364_ | _0361_;
+	assign _0366_ = _0365_ | _0270_;
+	assign io_out[5] = (io_in[0] ? _0366_ : _0359_);
+	assign _0367_ = _0170_ & ~_0200_;
+	assign _0368_ = _0061_ | ~_0141_;
+	assign _0369_ = _0204_ | _0066_;
+	assign _0370_ = _0369_ | _0368_;
+	assign _0371_ = _0202_ & ~_0370_;
+	assign _0372_ = _0370_ & ~_0368_;
+	assign _0373_ = _0372_ | \mchip.vgad.v1.vcounter.Q [8];
+	assign _0374_ = _0373_ | _0371_;
+	assign _0375_ = _0367_ & ~_0374_;
+	assign _0376_ = _0375_ | _0178_;
+	assign _0377_ = _0376_ | _0342_;
+	assign _0378_ = _0377_ | _0148_;
+	assign _0379_ = _0302_ | _0292_;
+	assign _0380_ = _0258_ & ~_0379_;
+	assign _0381_ = _0380_ | _0294_;
+	assign _0382_ = _0381_ | _0361_;
+	assign _0383_ = _0382_ | _0270_;
+	assign io_out[2] = (io_in[0] ? _0383_ : _0378_);
+	assign _0470_[0] = ~\mchip.livecheck.ledcounter.Q [0];
+	assign _0467_[0] = ~\mchip.vgad.v0.vcounter.Q [0];
+	assign _0466_[0] = ~\mchip.vgad.v1.vcounter.Q [0];
+	assign _0384_ = \mchip.vgad.v0.vcounter.Q [8] | ~\mchip.vgad.v0.vcounter.Q [9];
+	assign _0385_ = _0093_ | ~_0108_;
+	assign _0386_ = \mchip.vgad.v0.vcounter.Q [6] | \mchip.vgad.v0.vcounter.Q [7];
+	assign _0387_ = \mchip.vgad.v0.vcounter.Q [5] | \mchip.vgad.v0.vcounter.Q [4];
+	assign _0388_ = _0387_ | _0386_;
+	assign _0389_ = _0388_ | _0385_;
+	assign _0390_ = _0389_ | _0384_;
+	assign _0391_ = _0001_ & ~_0390_;
+	assign _0392_ = io_in[13] | ~_0002_;
+	assign \mchip.vgad.v0.v_clear  = _0392_ | _0391_;
+	assign \mchip.vgad.v0.h_clear  = _0392_ | _0001_;
+	assign _0393_ = _0071_ & ~_0369_;
+	assign _0394_ = ~(_0393_ & _0060_);
+	assign _0395_ = _0000_ & ~_0394_;
+	assign \mchip.vgad.v1.v_clear  = _0395_ | _0392_;
+	assign \mchip.vgad.v1.h_clear  = _0392_ | _0000_;
+	assign _0473_[1] = \mchip.vgad.v0.vcounter.Q [0] ^ \mchip.vgad.v0.vcounter.Q [1];
+	assign _0473_[2] = _0113_ ^ \mchip.vgad.v0.vcounter.Q [2];
+	assign _0396_ = _0113_ & \mchip.vgad.v0.vcounter.Q [2];
+	assign _0473_[3] = _0396_ ^ \mchip.vgad.v0.vcounter.Q [3];
+	assign _0397_ = _0113_ & _0092_;
+	assign _0473_[4] = _0397_ ^ \mchip.vgad.v0.vcounter.Q [4];
+	assign _0398_ = _0397_ & \mchip.vgad.v0.vcounter.Q [4];
+	assign _0473_[5] = _0398_ ^ \mchip.vgad.v0.vcounter.Q [5];
+	assign _0399_ = _0397_ & ~_0250_;
+	assign _0473_[6] = _0399_ ^ \mchip.vgad.v0.vcounter.Q [6];
+	assign _0400_ = _0399_ & \mchip.vgad.v0.vcounter.Q [6];
+	assign _0473_[7] = _0400_ ^ \mchip.vgad.v0.vcounter.Q [7];
+	assign _0401_ = _0397_ & ~_0251_;
+	assign _0473_[8] = _0401_ ^ \mchip.vgad.v0.vcounter.Q [8];
+	assign _0402_ = _0401_ & \mchip.vgad.v0.vcounter.Q [8];
+	assign _0473_[9] = _0402_ ^ \mchip.vgad.v0.vcounter.Q [9];
+	assign _0471_[1] = \mchip.livecheck.ledcounter.Q [1] ^ \mchip.livecheck.ledcounter.Q [0];
+	assign _0403_ = \mchip.livecheck.ledcounter.Q [1] & \mchip.livecheck.ledcounter.Q [0];
+	assign _0471_[2] = _0403_ ^ \mchip.livecheck.ledcounter.Q [2];
+	assign _0404_ = _0403_ & \mchip.livecheck.ledcounter.Q [2];
+	assign _0471_[3] = _0404_ ^ \mchip.livecheck.ledcounter.Q [3];
+	assign _0405_ = ~(\mchip.livecheck.ledcounter.Q [3] & \mchip.livecheck.ledcounter.Q [2]);
+	assign _0406_ = _0403_ & ~_0405_;
+	assign _0471_[4] = _0406_ ^ \mchip.livecheck.ledcounter.Q [4];
+	assign _0407_ = _0406_ & \mchip.livecheck.ledcounter.Q [4];
+	assign _0471_[5] = _0407_ ^ \mchip.livecheck.ledcounter.Q [5];
+	assign _0408_ = ~(\mchip.livecheck.ledcounter.Q [5] & \mchip.livecheck.ledcounter.Q [4]);
+	assign _0409_ = _0406_ & ~_0408_;
+	assign _0471_[6] = _0409_ ^ \mchip.livecheck.ledcounter.Q [6];
+	assign _0410_ = _0409_ & \mchip.livecheck.ledcounter.Q [6];
+	assign _0471_[7] = _0410_ ^ \mchip.livecheck.ledcounter.Q [7];
+	assign _0411_ = ~(\mchip.livecheck.ledcounter.Q [7] & \mchip.livecheck.ledcounter.Q [6]);
+	assign _0412_ = _0411_ | _0408_;
+	assign _0413_ = _0406_ & ~_0412_;
+	assign _0471_[8] = _0413_ ^ \mchip.livecheck.ledcounter.Q [8];
+	assign _0414_ = _0413_ & \mchip.livecheck.ledcounter.Q [8];
+	assign _0471_[9] = _0414_ ^ \mchip.livecheck.ledcounter.Q [9];
+	assign _0415_ = ~(\mchip.livecheck.ledcounter.Q [9] & \mchip.livecheck.ledcounter.Q [8]);
+	assign _0416_ = _0413_ & ~_0415_;
+	assign _0471_[10] = _0416_ ^ \mchip.livecheck.ledcounter.Q [10];
+	assign _0417_ = _0416_ & \mchip.livecheck.ledcounter.Q [10];
+	assign _0471_[11] = _0417_ ^ \mchip.livecheck.ledcounter.Q [11];
+	assign _0418_ = ~(\mchip.livecheck.ledcounter.Q [11] & \mchip.livecheck.ledcounter.Q [10]);
+	assign _0419_ = _0418_ | _0415_;
+	assign _0420_ = _0413_ & ~_0419_;
+	assign _0471_[12] = _0420_ ^ \mchip.livecheck.ledcounter.Q [12];
+	assign _0421_ = _0420_ & \mchip.livecheck.ledcounter.Q [12];
+	assign _0471_[13] = _0421_ ^ \mchip.livecheck.ledcounter.Q [13];
+	assign _0422_ = ~(\mchip.livecheck.ledcounter.Q [13] & \mchip.livecheck.ledcounter.Q [12]);
+	assign _0423_ = _0420_ & ~_0422_;
+	assign _0471_[14] = _0423_ ^ \mchip.livecheck.ledcounter.Q [14];
+	assign _0424_ = _0423_ & \mchip.livecheck.ledcounter.Q [14];
+	assign _0471_[15] = _0424_ ^ \mchip.livecheck.ledcounter.Q [15];
+	assign _0425_ = ~(\mchip.livecheck.ledcounter.Q [15] & \mchip.livecheck.ledcounter.Q [14]);
+	assign _0426_ = _0425_ | _0422_;
+	assign _0427_ = _0426_ | _0419_;
+	assign _0428_ = _0413_ & ~_0427_;
+	assign _0471_[16] = _0428_ ^ \mchip.livecheck.ledcounter.Q [16];
+	assign _0429_ = _0428_ & \mchip.livecheck.ledcounter.Q [16];
+	assign _0471_[17] = _0429_ ^ \mchip.livecheck.ledcounter.Q [17];
+	assign _0430_ = ~(\mchip.livecheck.ledcounter.Q [17] & \mchip.livecheck.ledcounter.Q [16]);
+	assign _0431_ = _0428_ & ~_0430_;
+	assign _0471_[18] = _0431_ ^ \mchip.livecheck.ledcounter.Q [18];
+	assign _0432_ = _0431_ & \mchip.livecheck.ledcounter.Q [18];
+	assign _0471_[19] = _0432_ ^ \mchip.livecheck.ledcounter.Q [19];
+	assign _0433_ = ~(\mchip.livecheck.ledcounter.Q [19] & \mchip.livecheck.ledcounter.Q [18]);
+	assign _0434_ = _0433_ | _0430_;
+	assign _0435_ = _0428_ & ~_0434_;
+	assign _0471_[20] = _0435_ ^ \mchip.livecheck.ledcounter.Q [20];
+	assign _0436_ = _0435_ & \mchip.livecheck.ledcounter.Q [20];
+	assign _0471_[21] = _0436_ ^ \mchip.livecheck.ledcounter.Q [21];
+	assign _0437_ = ~(\mchip.livecheck.ledcounter.Q [21] & \mchip.livecheck.ledcounter.Q [20]);
+	assign _0438_ = _0435_ & ~_0437_;
+	assign _0471_[22] = _0438_ ^ \mchip.livecheck.ledcounter.Q [22];
+	assign _0439_ = _0438_ & \mchip.livecheck.ledcounter.Q [22];
+	assign _0471_[23] = _0439_ ^ \mchip.livecheck.ledcounter.Q [23];
+	assign _0440_ = ~(\mchip.livecheck.ledcounter.Q [23] & \mchip.livecheck.ledcounter.Q [22]);
+	assign _0441_ = _0440_ | _0437_;
+	assign _0442_ = _0441_ | _0434_;
+	assign _0443_ = _0428_ & ~_0442_;
+	assign _0471_[24] = _0443_ ^ \mchip.livecheck.ledcounter.Q [24];
+	assign _0444_ = _0443_ & \mchip.livecheck.ledcounter.Q [24];
+	assign _0471_[25] = _0444_ ^ \mchip.livecheck.ledcounter.Q [25];
+	assign _0445_ = ~(\mchip.livecheck.ledcounter.Q [25] & \mchip.livecheck.ledcounter.Q [24]);
+	assign _0446_ = _0443_ & ~_0445_;
+	assign _0471_[26] = _0446_ ^ \mchip.livecheck.ledcounter.Q [26];
+	assign _0475_[1] = \mchip.vgad.v1.vcounter.Q [0] ^ \mchip.vgad.v1.vcounter.Q [1];
+	assign _0475_[2] = ~(_0072_ ^ \mchip.vgad.v1.vcounter.Q [2]);
+	assign _0447_ = \mchip.vgad.v1.vcounter.Q [2] & ~_0072_;
+	assign _0475_[3] = _0447_ ^ \mchip.vgad.v1.vcounter.Q [3];
+	assign _0448_ = ~(_0173_ | _0072_);
+	assign _0475_[4] = _0448_ ^ \mchip.vgad.v1.vcounter.Q [4];
+	assign _0449_ = _0448_ & \mchip.vgad.v1.vcounter.Q [4];
+	assign _0475_[5] = _0449_ ^ \mchip.vgad.v1.vcounter.Q [5];
+	assign _0450_ = _0448_ & ~_0142_;
+	assign _0475_[6] = _0450_ ^ \mchip.vgad.v1.vcounter.Q [6];
+	assign _0451_ = _0450_ & \mchip.vgad.v1.vcounter.Q [6];
+	assign _0475_[7] = _0451_ ^ \mchip.vgad.v1.vcounter.Q [7];
+	assign _0452_ = _0448_ & ~_0368_;
+	assign _0475_[8] = _0452_ ^ \mchip.vgad.v1.vcounter.Q [8];
+	assign _0453_ = _0452_ & ~_0202_;
+	assign _0475_[9] = _0453_ ^ \mchip.vgad.v1.vcounter.Q [9];
+	assign _0472_[1] = \mchip.vgad.v0.hcounter.Q [1] ^ \mchip.vgad.v0.hcounter.Q [0];
+	assign _0472_[2] = _0012_ ^ \mchip.vgad.v0.hcounter.Q [2];
+	assign _0454_ = _0012_ & \mchip.vgad.v0.hcounter.Q [2];
+	assign _0472_[3] = _0454_ ^ \mchip.vgad.v0.hcounter.Q [3];
+	assign _0472_[4] = _0014_ ^ \mchip.vgad.v0.hcounter.Q [4];
+	assign _0455_ = _0014_ & \mchip.vgad.v0.hcounter.Q [4];
+	assign _0472_[5] = _0455_ ^ \mchip.vgad.v0.hcounter.Q [5];
+	assign _0456_ = _0014_ & ~_0040_;
+	assign _0472_[6] = _0456_ ^ \mchip.vgad.v0.hcounter.Q [6];
+	assign _0457_ = _0456_ & \mchip.vgad.v0.hcounter.Q [6];
+	assign _0472_[7] = _0457_ ^ \mchip.vgad.v0.hcounter.Q [7];
+	assign _0458_ = _0014_ & ~_0042_;
+	assign _0472_[8] = _0458_ ^ \mchip.vgad.v0.hcounter.Q [8];
+	assign _0459_ = _0458_ & \mchip.vgad.v0.hcounter.Q [8];
+	assign _0472_[9] = _0459_ ^ \mchip.vgad.v0.hcounter.Q [9];
+	assign _0474_[1] = \mchip.vgad.v1.hcounter.Q [1] ^ \mchip.vgad.v1.hcounter.Q [0];
+	assign _0474_[2] = _0003_ ^ \mchip.vgad.v1.hcounter.Q [2];
+	assign _0460_ = _0003_ & \mchip.vgad.v1.hcounter.Q [2];
+	assign _0474_[3] = _0460_ ^ \mchip.vgad.v1.hcounter.Q [3];
+	assign _0474_[4] = _0005_ ^ \mchip.vgad.v1.hcounter.Q [4];
+	assign _0461_ = _0005_ & \mchip.vgad.v1.hcounter.Q [4];
+	assign _0474_[5] = _0461_ ^ \mchip.vgad.v1.hcounter.Q [5];
+	assign _0462_ = _0005_ & ~_0022_;
+	assign _0474_[6] = _0462_ ^ \mchip.vgad.v1.hcounter.Q [6];
+	assign _0463_ = _0462_ & \mchip.vgad.v1.hcounter.Q [6];
+	assign _0474_[7] = _0463_ ^ \mchip.vgad.v1.hcounter.Q [7];
+	assign _0464_ = _0005_ & ~_0163_;
+	assign _0474_[8] = _0464_ ^ \mchip.vgad.v1.hcounter.Q [8];
+	assign _0465_ = _0464_ & \mchip.vgad.v1.hcounter.Q [8];
+	assign _0474_[9] = _0465_ ^ \mchip.vgad.v1.hcounter.Q [9];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [0] <= _0470_[0];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [1] <= _0471_[1];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [2] <= _0471_[2];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [3] <= _0471_[3];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [4] <= _0471_[4];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [5] <= _0471_[5];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [6] <= _0471_[6];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [7] <= _0471_[7];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [8] <= _0471_[8];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [9] <= _0471_[9];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [10] <= _0471_[10];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [11] <= _0471_[11];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [12] <= _0471_[12];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [13] <= _0471_[13];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [14] <= _0471_[14];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [15] <= _0471_[15];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [16] <= _0471_[16];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [17] <= _0471_[17];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [18] <= _0471_[18];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [19] <= _0471_[19];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [20] <= _0471_[20];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [21] <= _0471_[21];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [22] <= _0471_[22];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [23] <= _0471_[23];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [24] <= _0471_[24];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [25] <= _0471_[25];
+	always @(posedge io_in[12]) \mchip.livecheck.ledcounter.Q [26] <= _0471_[26];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [0] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [0] <= _0467_[0];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [1] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [1] <= _0473_[1];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [2] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [2] <= _0473_[2];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [3] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [3] <= _0473_[3];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [4] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [4] <= _0473_[4];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [5] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [5] <= _0473_[5];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [6] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [6] <= _0473_[6];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [7] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [7] <= _0473_[7];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [8] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [8] <= _0473_[8];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.v_clear )
+			\mchip.vgad.v0.vcounter.Q [9] <= 1'h0;
+		else if (_0001_)
+			\mchip.vgad.v0.vcounter.Q [9] <= _0473_[9];
+	always @(posedge io_in[12])
+		if (io_in[13])
+			_0002_ <= 1'h0;
+		else
+			_0002_ <= 1'h1;
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [0] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [0] <= _0466_[0];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [1] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [1] <= _0475_[1];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [2] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [2] <= _0475_[2];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [3] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [3] <= _0475_[3];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [4] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [4] <= _0475_[4];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [5] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [5] <= _0475_[5];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [6] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [6] <= _0475_[6];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [7] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [7] <= _0475_[7];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [8] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [8] <= _0475_[8];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.v_clear )
+			\mchip.vgad.v1.vcounter.Q [9] <= 1'h0;
+		else if (_0000_)
+			\mchip.vgad.v1.vcounter.Q [9] <= _0475_[9];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [0] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [0] <= _0469_[0];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [1] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [1] <= _0472_[1];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [2] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [2] <= _0472_[2];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [3] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [3] <= _0472_[3];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [4] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [4] <= _0472_[4];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [5] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [5] <= _0472_[5];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [6] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [6] <= _0472_[6];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [7] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [7] <= _0472_[7];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [8] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [8] <= _0472_[8];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v0.h_clear )
+			\mchip.vgad.v0.hcounter.Q [9] <= 1'h0;
+		else
+			\mchip.vgad.v0.hcounter.Q [9] <= _0472_[9];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [0] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [0] <= _0468_[0];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [1] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [1] <= _0474_[1];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [2] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [2] <= _0474_[2];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [3] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [3] <= _0474_[3];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [4] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [4] <= _0474_[4];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [5] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [5] <= _0474_[5];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [6] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [6] <= _0474_[6];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [7] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [7] <= _0474_[7];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [8] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [8] <= _0474_[8];
+	always @(posedge io_in[12])
+		if (\mchip.vgad.v1.h_clear )
+			\mchip.vgad.v1.hcounter.Q [9] <= 1'h0;
+		else
+			\mchip.vgad.v1.hcounter.Q [9] <= _0474_[9];
+	assign _0466_[9:1] = 9'h000;
+	assign _0467_[9:1] = 9'h000;
+	assign _0468_[9:1] = 9'h000;
+	assign _0469_[9:1] = 9'h000;
+	assign _0470_[26:1] = \mchip.livecheck.ledcounter.Q [26:1];
+	assign _0471_[0] = _0470_[0];
+	assign _0472_[0] = _0469_[0];
+	assign _0473_[0] = _0467_[0];
+	assign _0474_[0] = _0468_[0];
+	assign _0475_[0] = _0466_[0];
+	assign {io_out[13:9], io_out[7:6], io_out[4:3], io_out[1:0]} = {2'h0, \mchip.livecheck.ledcounter.Q [26], \mchip.vgad.VS , \mchip.vgad.HS , io_out[8], io_out[8], io_out[5], io_out[5], io_out[2], io_out[2]};
+	assign \mchip.clock  = io_in[12];
+	assign \mchip.io_in  = io_in[11:0];
+	assign \mchip.io_out  = {\mchip.livecheck.ledcounter.Q [26], \mchip.vgad.VS , \mchip.vgad.HS , io_out[8], io_out[8], io_out[8], io_out[5], io_out[5], io_out[5], io_out[2], io_out[2], io_out[2]};
+	assign \mchip.livecheck.CLK_25  = io_in[12];
+	assign \mchip.livecheck.led  = \mchip.livecheck.ledcounter.Q [26:19];
+	assign \mchip.livecheck.led_count  = \mchip.livecheck.ledcounter.Q ;
+	assign \mchip.livecheck.ledcounter.D  = 27'h0000000;
+	assign \mchip.livecheck.ledcounter.clear  = 1'h0;
+	assign \mchip.livecheck.ledcounter.clock  = io_in[12];
+	assign \mchip.livecheck.ledcounter.en  = 1'h1;
+	assign \mchip.livecheck.ledcounter.load  = 1'h0;
+	assign \mchip.livecheck.ledcounter.up  = 1'h1;
+	assign \mchip.reset  = io_in[13];
+	assign \mchip.vgad.CLOCK_25  = io_in[12];
+	assign \mchip.vgad.CLOCK_29_5  = io_in[12];
+	assign \mchip.vgad.VGA_BLUE  = {io_out[8], io_out[8], io_out[8]};
+	assign \mchip.vgad.VGA_BLUE_640  = 8'h00;
+	assign \mchip.vgad.VGA_BLUE_800  = 8'h00;
+	assign \mchip.vgad.VGA_GREEN  = {io_out[5], io_out[5], io_out[5]};
+	assign \mchip.vgad.VGA_GREEN_640  = 8'h00;
+	assign \mchip.vgad.VGA_GREEN_800  = 8'h00;
+	assign \mchip.vgad.VGA_RED  = {io_out[2], io_out[2], io_out[2]};
+	assign \mchip.vgad.VGA_RED_640  = 8'h00;
+	assign \mchip.vgad.VGA_RED_800  = 8'h00;
+	assign \mchip.vgad.choose_vga_mode  = io_in[0];
+	assign \mchip.vgad.col_640  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.col_800  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g0.VGA_BLUE  = 8'h00;
+	assign \mchip.vgad.g0.VGA_GREEN  = 8'h00;
+	assign \mchip.vgad.g0.VGA_RED  = 8'h00;
+	assign \mchip.vgad.g0.clock  = io_in[12];
+	assign \mchip.vgad.g0.col  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r0.col  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r0.row  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r0.x.delta  = 10'h050;
+	assign \mchip.vgad.g0.r0.x.high  = 10'h0a0;
+	assign \mchip.vgad.g0.r0.x.low  = 10'h050;
+	assign \mchip.vgad.g0.r0.x.rc.high  = 10'h0a0;
+	assign \mchip.vgad.g0.r0.x.rc.higher.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r0.x.rc.higher.B  = 10'h0a0;
+	assign \mchip.vgad.g0.r0.x.rc.low  = 10'h050;
+	assign \mchip.vgad.g0.r0.x.rc.lower.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r0.x.rc.lower.B  = 10'h050;
+	assign \mchip.vgad.g0.r0.x.rc.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r0.x.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r0.y.delta  = 9'h0f0;
+	assign \mchip.vgad.g0.r0.y.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r0.y.low  = 9'h000;
+	assign \mchip.vgad.g0.r0.y.rc.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r0.y.rc.higher.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r0.y.rc.higher.B  = 9'h0f0;
+	assign \mchip.vgad.g0.r0.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g0.r0.y.rc.lower.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r0.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g0.r0.y.rc.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r0.y.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r1.col  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r1.row  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r1.x.delta  = 10'h050;
+	assign \mchip.vgad.g0.r1.x.high  = 10'h0f0;
+	assign \mchip.vgad.g0.r1.x.low  = 10'h0a0;
+	assign \mchip.vgad.g0.r1.x.rc.high  = 10'h0f0;
+	assign \mchip.vgad.g0.r1.x.rc.higher.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r1.x.rc.higher.B  = 10'h0f0;
+	assign \mchip.vgad.g0.r1.x.rc.low  = 10'h0a0;
+	assign \mchip.vgad.g0.r1.x.rc.lower.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r1.x.rc.lower.B  = 10'h0a0;
+	assign \mchip.vgad.g0.r1.x.rc.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r1.x.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r1.y.delta  = 9'h0f0;
+	assign \mchip.vgad.g0.r1.y.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r1.y.low  = 9'h000;
+	assign \mchip.vgad.g0.r1.y.rc.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r1.y.rc.higher.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r1.y.rc.higher.B  = 9'h0f0;
+	assign \mchip.vgad.g0.r1.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g0.r1.y.rc.lower.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r1.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g0.r1.y.rc.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r1.y.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r2.col  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r2.row  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r2.x.delta  = 10'h050;
+	assign \mchip.vgad.g0.r2.x.high  = 10'h140;
+	assign \mchip.vgad.g0.r2.x.low  = 10'h0f0;
+	assign \mchip.vgad.g0.r2.x.rc.high  = 10'h140;
+	assign \mchip.vgad.g0.r2.x.rc.higher.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r2.x.rc.higher.B  = 10'h140;
+	assign \mchip.vgad.g0.r2.x.rc.low  = 10'h0f0;
+	assign \mchip.vgad.g0.r2.x.rc.lower.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r2.x.rc.lower.B  = 10'h0f0;
+	assign \mchip.vgad.g0.r2.x.rc.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r2.x.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r2.y.delta  = 9'h0f0;
+	assign \mchip.vgad.g0.r2.y.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r2.y.low  = 9'h000;
+	assign \mchip.vgad.g0.r2.y.rc.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r2.y.rc.higher.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r2.y.rc.higher.B  = 9'h0f0;
+	assign \mchip.vgad.g0.r2.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g0.r2.y.rc.lower.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r2.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g0.r2.y.rc.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r2.y.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r3.col  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r3.row  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r3.x.delta  = 10'h050;
+	assign \mchip.vgad.g0.r3.x.high  = 10'h190;
+	assign \mchip.vgad.g0.r3.x.low  = 10'h140;
+	assign \mchip.vgad.g0.r3.x.rc.high  = 10'h190;
+	assign \mchip.vgad.g0.r3.x.rc.higher.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r3.x.rc.higher.B  = 10'h190;
+	assign \mchip.vgad.g0.r3.x.rc.low  = 10'h140;
+	assign \mchip.vgad.g0.r3.x.rc.lower.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r3.x.rc.lower.B  = 10'h140;
+	assign \mchip.vgad.g0.r3.x.rc.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r3.x.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r3.y.delta  = 9'h0f0;
+	assign \mchip.vgad.g0.r3.y.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r3.y.low  = 9'h000;
+	assign \mchip.vgad.g0.r3.y.rc.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r3.y.rc.higher.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r3.y.rc.higher.B  = 9'h0f0;
+	assign \mchip.vgad.g0.r3.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g0.r3.y.rc.lower.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r3.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g0.r3.y.rc.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r3.y.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r4.col  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r4.row  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r4.x.delta  = 10'h050;
+	assign \mchip.vgad.g0.r4.x.high  = 10'h1e0;
+	assign \mchip.vgad.g0.r4.x.low  = 10'h190;
+	assign \mchip.vgad.g0.r4.x.rc.high  = 10'h1e0;
+	assign \mchip.vgad.g0.r4.x.rc.higher.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r4.x.rc.higher.B  = 10'h1e0;
+	assign \mchip.vgad.g0.r4.x.rc.low  = 10'h190;
+	assign \mchip.vgad.g0.r4.x.rc.lower.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r4.x.rc.lower.B  = 10'h190;
+	assign \mchip.vgad.g0.r4.x.rc.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r4.x.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r4.y.delta  = 9'h0f0;
+	assign \mchip.vgad.g0.r4.y.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r4.y.low  = 9'h000;
+	assign \mchip.vgad.g0.r4.y.rc.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r4.y.rc.higher.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r4.y.rc.higher.B  = 9'h0f0;
+	assign \mchip.vgad.g0.r4.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g0.r4.y.rc.lower.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r4.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g0.r4.y.rc.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r4.y.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r5.col  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r5.row  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r5.x.delta  = 10'h050;
+	assign \mchip.vgad.g0.r5.x.high  = 10'h230;
+	assign \mchip.vgad.g0.r5.x.low  = 10'h1e0;
+	assign \mchip.vgad.g0.r5.x.rc.high  = 10'h230;
+	assign \mchip.vgad.g0.r5.x.rc.higher.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r5.x.rc.higher.B  = 10'h230;
+	assign \mchip.vgad.g0.r5.x.rc.low  = 10'h1e0;
+	assign \mchip.vgad.g0.r5.x.rc.lower.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r5.x.rc.lower.B  = 10'h1e0;
+	assign \mchip.vgad.g0.r5.x.rc.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r5.x.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r5.y.delta  = 9'h0f0;
+	assign \mchip.vgad.g0.r5.y.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r5.y.low  = 9'h000;
+	assign \mchip.vgad.g0.r5.y.rc.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r5.y.rc.higher.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r5.y.rc.higher.B  = 9'h0f0;
+	assign \mchip.vgad.g0.r5.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g0.r5.y.rc.lower.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r5.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g0.r5.y.rc.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r5.y.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r6.col  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r6.row  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r6.x.delta  = 10'h050;
+	assign \mchip.vgad.g0.r6.x.high  = 10'h280;
+	assign \mchip.vgad.g0.r6.x.low  = 10'h230;
+	assign \mchip.vgad.g0.r6.x.rc.high  = 10'h280;
+	assign \mchip.vgad.g0.r6.x.rc.higher.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r6.x.rc.higher.B  = 10'h280;
+	assign \mchip.vgad.g0.r6.x.rc.low  = 10'h230;
+	assign \mchip.vgad.g0.r6.x.rc.lower.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r6.x.rc.lower.B  = 10'h230;
+	assign \mchip.vgad.g0.r6.x.rc.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r6.x.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.g0.r6.y.delta  = 9'h0f0;
+	assign \mchip.vgad.g0.r6.y.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r6.y.low  = 9'h000;
+	assign \mchip.vgad.g0.r6.y.rc.high  = 9'h0f0;
+	assign \mchip.vgad.g0.r6.y.rc.higher.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r6.y.rc.higher.B  = 9'h0f0;
+	assign \mchip.vgad.g0.r6.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g0.r6.y.rc.lower.A  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r6.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g0.r6.y.rc.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.r6.y.val  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g0.reset  = io_in[13];
+	assign \mchip.vgad.g0.row  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.VGA_BLUE  = 8'h00;
+	assign \mchip.vgad.g1.VGA_GREEN  = 8'h00;
+	assign \mchip.vgad.g1.VGA_RED  = 8'h00;
+	assign \mchip.vgad.g1.clock  = io_in[12];
+	assign \mchip.vgad.g1.col  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r0.col  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r0.row  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r0.x.delta  = 10'h064;
+	assign \mchip.vgad.g1.r0.x.high  = 10'h0c8;
+	assign \mchip.vgad.g1.r0.x.low  = 10'h064;
+	assign \mchip.vgad.g1.r0.x.rc.high  = 10'h0c8;
+	assign \mchip.vgad.g1.r0.x.rc.higher.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r0.x.rc.higher.B  = 10'h0c8;
+	assign \mchip.vgad.g1.r0.x.rc.low  = 10'h064;
+	assign \mchip.vgad.g1.r0.x.rc.lower.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r0.x.rc.lower.B  = 10'h064;
+	assign \mchip.vgad.g1.r0.x.rc.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r0.x.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r0.y.delta  = 9'h03c;
+	assign \mchip.vgad.g1.r0.y.high  = 9'h03c;
+	assign \mchip.vgad.g1.r0.y.low  = 9'h000;
+	assign \mchip.vgad.g1.r0.y.rc.high  = 9'h03c;
+	assign \mchip.vgad.g1.r0.y.rc.higher.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r0.y.rc.higher.B  = 9'h03c;
+	assign \mchip.vgad.g1.r0.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g1.r0.y.rc.lower.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r0.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g1.r0.y.rc.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r0.y.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r1.col  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r1.row  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r1.x.delta  = 10'h064;
+	assign \mchip.vgad.g1.r1.x.high  = 10'h12c;
+	assign \mchip.vgad.g1.r1.x.low  = 10'h0c8;
+	assign \mchip.vgad.g1.r1.x.rc.high  = 10'h12c;
+	assign \mchip.vgad.g1.r1.x.rc.higher.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r1.x.rc.higher.B  = 10'h12c;
+	assign \mchip.vgad.g1.r1.x.rc.low  = 10'h0c8;
+	assign \mchip.vgad.g1.r1.x.rc.lower.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r1.x.rc.lower.B  = 10'h0c8;
+	assign \mchip.vgad.g1.r1.x.rc.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r1.x.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r1.y.delta  = 9'h078;
+	assign \mchip.vgad.g1.r1.y.high  = 9'h078;
+	assign \mchip.vgad.g1.r1.y.low  = 9'h000;
+	assign \mchip.vgad.g1.r1.y.rc.high  = 9'h078;
+	assign \mchip.vgad.g1.r1.y.rc.higher.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r1.y.rc.higher.B  = 9'h078;
+	assign \mchip.vgad.g1.r1.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g1.r1.y.rc.lower.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r1.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g1.r1.y.rc.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r1.y.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r2.col  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r2.row  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r2.x.delta  = 10'h064;
+	assign \mchip.vgad.g1.r2.x.high  = 10'h190;
+	assign \mchip.vgad.g1.r2.x.low  = 10'h12c;
+	assign \mchip.vgad.g1.r2.x.rc.high  = 10'h190;
+	assign \mchip.vgad.g1.r2.x.rc.higher.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r2.x.rc.higher.B  = 10'h190;
+	assign \mchip.vgad.g1.r2.x.rc.low  = 10'h12c;
+	assign \mchip.vgad.g1.r2.x.rc.lower.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r2.x.rc.lower.B  = 10'h12c;
+	assign \mchip.vgad.g1.r2.x.rc.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r2.x.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r2.y.delta  = 9'h0b4;
+	assign \mchip.vgad.g1.r2.y.high  = 9'h0b4;
+	assign \mchip.vgad.g1.r2.y.low  = 9'h000;
+	assign \mchip.vgad.g1.r2.y.rc.high  = 9'h0b4;
+	assign \mchip.vgad.g1.r2.y.rc.higher.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r2.y.rc.higher.B  = 9'h0b4;
+	assign \mchip.vgad.g1.r2.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g1.r2.y.rc.lower.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r2.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g1.r2.y.rc.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r2.y.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r3.col  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r3.row  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r3.x.delta  = 10'h064;
+	assign \mchip.vgad.g1.r3.x.high  = 10'h1f4;
+	assign \mchip.vgad.g1.r3.x.low  = 10'h190;
+	assign \mchip.vgad.g1.r3.x.rc.high  = 10'h1f4;
+	assign \mchip.vgad.g1.r3.x.rc.higher.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r3.x.rc.higher.B  = 10'h1f4;
+	assign \mchip.vgad.g1.r3.x.rc.low  = 10'h190;
+	assign \mchip.vgad.g1.r3.x.rc.lower.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r3.x.rc.lower.B  = 10'h190;
+	assign \mchip.vgad.g1.r3.x.rc.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r3.x.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r3.y.delta  = 9'h0f0;
+	assign \mchip.vgad.g1.r3.y.high  = 9'h0f0;
+	assign \mchip.vgad.g1.r3.y.low  = 9'h000;
+	assign \mchip.vgad.g1.r3.y.rc.high  = 9'h0f0;
+	assign \mchip.vgad.g1.r3.y.rc.higher.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r3.y.rc.higher.B  = 9'h0f0;
+	assign \mchip.vgad.g1.r3.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g1.r3.y.rc.lower.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r3.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g1.r3.y.rc.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r3.y.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r4.col  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r4.row  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r4.x.delta  = 10'h064;
+	assign \mchip.vgad.g1.r4.x.high  = 10'h258;
+	assign \mchip.vgad.g1.r4.x.low  = 10'h1f4;
+	assign \mchip.vgad.g1.r4.x.rc.high  = 10'h258;
+	assign \mchip.vgad.g1.r4.x.rc.higher.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r4.x.rc.higher.B  = 10'h258;
+	assign \mchip.vgad.g1.r4.x.rc.low  = 10'h1f4;
+	assign \mchip.vgad.g1.r4.x.rc.lower.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r4.x.rc.lower.B  = 10'h1f4;
+	assign \mchip.vgad.g1.r4.x.rc.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r4.x.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r4.y.delta  = 9'h12c;
+	assign \mchip.vgad.g1.r4.y.high  = 9'h12c;
+	assign \mchip.vgad.g1.r4.y.low  = 9'h000;
+	assign \mchip.vgad.g1.r4.y.rc.high  = 9'h12c;
+	assign \mchip.vgad.g1.r4.y.rc.higher.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r4.y.rc.higher.B  = 9'h12c;
+	assign \mchip.vgad.g1.r4.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g1.r4.y.rc.lower.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r4.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g1.r4.y.rc.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r4.y.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r5.col  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r5.row  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r5.x.delta  = 10'h064;
+	assign \mchip.vgad.g1.r5.x.high  = 10'h2bc;
+	assign \mchip.vgad.g1.r5.x.low  = 10'h258;
+	assign \mchip.vgad.g1.r5.x.rc.high  = 10'h2bc;
+	assign \mchip.vgad.g1.r5.x.rc.higher.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r5.x.rc.higher.B  = 10'h2bc;
+	assign \mchip.vgad.g1.r5.x.rc.low  = 10'h258;
+	assign \mchip.vgad.g1.r5.x.rc.lower.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r5.x.rc.lower.B  = 10'h258;
+	assign \mchip.vgad.g1.r5.x.rc.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r5.x.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r5.y.delta  = 9'h168;
+	assign \mchip.vgad.g1.r5.y.high  = 9'h168;
+	assign \mchip.vgad.g1.r5.y.low  = 9'h000;
+	assign \mchip.vgad.g1.r5.y.rc.high  = 9'h168;
+	assign \mchip.vgad.g1.r5.y.rc.higher.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r5.y.rc.higher.B  = 9'h168;
+	assign \mchip.vgad.g1.r5.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g1.r5.y.rc.lower.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r5.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g1.r5.y.rc.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r5.y.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r6.col  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r6.row  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r6.x.delta  = 10'h064;
+	assign \mchip.vgad.g1.r6.x.high  = 10'h320;
+	assign \mchip.vgad.g1.r6.x.low  = 10'h2bc;
+	assign \mchip.vgad.g1.r6.x.rc.high  = 10'h320;
+	assign \mchip.vgad.g1.r6.x.rc.higher.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r6.x.rc.higher.B  = 10'h320;
+	assign \mchip.vgad.g1.r6.x.rc.low  = 10'h2bc;
+	assign \mchip.vgad.g1.r6.x.rc.lower.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r6.x.rc.lower.B  = 10'h2bc;
+	assign \mchip.vgad.g1.r6.x.rc.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r6.x.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.g1.r6.y.delta  = 9'h1a4;
+	assign \mchip.vgad.g1.r6.y.high  = 9'h1a4;
+	assign \mchip.vgad.g1.r6.y.low  = 9'h000;
+	assign \mchip.vgad.g1.r6.y.rc.high  = 9'h1a4;
+	assign \mchip.vgad.g1.r6.y.rc.higher.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r6.y.rc.higher.B  = 9'h1a4;
+	assign \mchip.vgad.g1.r6.y.rc.low  = 9'h000;
+	assign \mchip.vgad.g1.r6.y.rc.lower.A  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r6.y.rc.lower.B  = 9'h000;
+	assign \mchip.vgad.g1.r6.y.rc.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.r6.y.val  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.g1.reset  = io_in[13];
+	assign \mchip.vgad.g1.row  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.reset  = io_in[13];
+	assign \mchip.vgad.row_640  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.row_800  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.v0.CLOCK_25  = io_in[12];
+	assign \mchip.vgad.v0.clock  = io_in[12];
+	assign \mchip.vgad.v0.col  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.v0.hcounter.D  = 10'h000;
+	assign \mchip.vgad.v0.hcounter.clear  = \mchip.vgad.v0.h_clear ;
+	assign \mchip.vgad.v0.hcounter.clock  = io_in[12];
+	assign \mchip.vgad.v0.hcounter.en  = 1'h1;
+	assign \mchip.vgad.v0.hcounter.load  = 1'h0;
+	assign \mchip.vgad.v0.hcounter.up  = 1'h1;
+	assign \mchip.vgad.v0.horiz_clock_counter  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.v0.hpulse_oc.delta  = 10'h060;
+	assign \mchip.vgad.v0.hpulse_oc.high  = 10'h2f0;
+	assign \mchip.vgad.v0.hpulse_oc.low  = 10'h290;
+	assign \mchip.vgad.v0.hpulse_oc.rc.high  = 10'h2f0;
+	assign \mchip.vgad.v0.hpulse_oc.rc.higher.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.v0.hpulse_oc.rc.higher.B  = 10'h2f0;
+	assign \mchip.vgad.v0.hpulse_oc.rc.low  = 10'h290;
+	assign \mchip.vgad.v0.hpulse_oc.rc.lower.A  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.v0.hpulse_oc.rc.lower.B  = 10'h290;
+	assign \mchip.vgad.v0.hpulse_oc.rc.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.v0.hpulse_oc.val  = \mchip.vgad.v0.hcounter.Q ;
+	assign \mchip.vgad.v0.reset  = io_in[13];
+	assign \mchip.vgad.v0.row  = \mchip.vgad.v0.vcounter.Q [8:0];
+	assign \mchip.vgad.v0.state [31:1] = 31'h00000000;
+	assign \mchip.vgad.v0.vcounter.D  = 10'h000;
+	assign \mchip.vgad.v0.vcounter.clear  = \mchip.vgad.v0.v_clear ;
+	assign \mchip.vgad.v0.vcounter.clock  = io_in[12];
+	assign \mchip.vgad.v0.vcounter.load  = 1'h0;
+	assign \mchip.vgad.v0.vcounter.up  = 1'h1;
+	assign \mchip.vgad.v0.vert_row_counter  = \mchip.vgad.v0.vcounter.Q ;
+	assign \mchip.vgad.v0.vpulse_oc.delta  = 10'h002;
+	assign \mchip.vgad.v0.vpulse_oc.high  = 10'h1ec;
+	assign \mchip.vgad.v0.vpulse_oc.low  = 10'h1ea;
+	assign \mchip.vgad.v0.vpulse_oc.rc.high  = 10'h1ec;
+	assign \mchip.vgad.v0.vpulse_oc.rc.higher.A  = \mchip.vgad.v0.vcounter.Q ;
+	assign \mchip.vgad.v0.vpulse_oc.rc.higher.B  = 10'h1ec;
+	assign \mchip.vgad.v0.vpulse_oc.rc.low  = 10'h1ea;
+	assign \mchip.vgad.v0.vpulse_oc.rc.lower.A  = \mchip.vgad.v0.vcounter.Q ;
+	assign \mchip.vgad.v0.vpulse_oc.rc.lower.B  = 10'h1ea;
+	assign \mchip.vgad.v0.vpulse_oc.rc.val  = \mchip.vgad.v0.vcounter.Q ;
+	assign \mchip.vgad.v0.vpulse_oc.val  = \mchip.vgad.v0.vcounter.Q ;
+	assign \mchip.vgad.v1.CLOCK_29_5  = io_in[12];
+	assign \mchip.vgad.v1.clock  = io_in[12];
+	assign \mchip.vgad.v1.col  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.v1.hcounter.D  = 10'h000;
+	assign \mchip.vgad.v1.hcounter.clear  = \mchip.vgad.v1.h_clear ;
+	assign \mchip.vgad.v1.hcounter.clock  = io_in[12];
+	assign \mchip.vgad.v1.hcounter.en  = 1'h1;
+	assign \mchip.vgad.v1.hcounter.load  = 1'h0;
+	assign \mchip.vgad.v1.hcounter.up  = 1'h1;
+	assign \mchip.vgad.v1.horiz_clock_counter  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.v1.hpulse_oc.delta  = 10'h048;
+	assign \mchip.vgad.v1.hpulse_oc.high  = 10'h380;
+	assign \mchip.vgad.v1.hpulse_oc.low  = 10'h338;
+	assign \mchip.vgad.v1.hpulse_oc.rc.high  = 10'h380;
+	assign \mchip.vgad.v1.hpulse_oc.rc.higher.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.v1.hpulse_oc.rc.higher.B  = 10'h380;
+	assign \mchip.vgad.v1.hpulse_oc.rc.low  = 10'h338;
+	assign \mchip.vgad.v1.hpulse_oc.rc.lower.A  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.v1.hpulse_oc.rc.lower.B  = 10'h338;
+	assign \mchip.vgad.v1.hpulse_oc.rc.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.v1.hpulse_oc.val  = \mchip.vgad.v1.hcounter.Q ;
+	assign \mchip.vgad.v1.reset  = io_in[13];
+	assign \mchip.vgad.v1.row  = \mchip.vgad.v1.vcounter.Q [8:0];
+	assign \mchip.vgad.v1.state  = {31'h00000000, \mchip.vgad.v0.state [0]};
+	assign \mchip.vgad.v1.vcounter.D  = 10'h000;
+	assign \mchip.vgad.v1.vcounter.clear  = \mchip.vgad.v1.v_clear ;
+	assign \mchip.vgad.v1.vcounter.clock  = io_in[12];
+	assign \mchip.vgad.v1.vcounter.load  = 1'h0;
+	assign \mchip.vgad.v1.vcounter.up  = 1'h1;
+	assign \mchip.vgad.v1.vert_row_counter  = \mchip.vgad.v1.vcounter.Q ;
+	assign \mchip.vgad.v1.vpulse_oc.delta  = 10'h007;
+	assign \mchip.vgad.v1.vpulse_oc.high  = 10'h1ea;
+	assign \mchip.vgad.v1.vpulse_oc.low  = 10'h1e3;
+	assign \mchip.vgad.v1.vpulse_oc.rc.high  = 10'h1ea;
+	assign \mchip.vgad.v1.vpulse_oc.rc.higher.A  = \mchip.vgad.v1.vcounter.Q ;
+	assign \mchip.vgad.v1.vpulse_oc.rc.higher.B  = 10'h1ea;
+	assign \mchip.vgad.v1.vpulse_oc.rc.low  = 10'h1e3;
+	assign \mchip.vgad.v1.vpulse_oc.rc.lower.A  = \mchip.vgad.v1.vcounter.Q ;
+	assign \mchip.vgad.v1.vpulse_oc.rc.lower.B  = 10'h1e3;
+	assign \mchip.vgad.v1.vpulse_oc.rc.val  = \mchip.vgad.v1.vcounter.Q ;
+	assign \mchip.vgad.v1.vpulse_oc.val  = \mchip.vgad.v1.vcounter.Q ;
+	assign \mchip.virtual_leds  = \mchip.livecheck.ledcounter.Q [26:19];
+endmodule
 `default_nettype none
 module multiplexer (
 	io_in,
@@ -82925,8 +93020,14 @@ module design_instantiations (
 		.io_in({des_reset[20], clock, des_io_in[516+:12]}),
 		.io_out(des_io_out[516+:12])
 	);
-	assign des_io_out[504+:12] = 12'h000;
-	assign des_io_out[492+:12] = 12'h000;
+	d21_pemmanou_usb inst21(
+		.io_in({des_reset[21], clock, des_io_in[504+:12]}),
+		.io_out(des_io_out[504+:12])
+	);
+	d22_wnace_vga_resolution inst22(
+		.io_in({des_reset[22], clock, des_io_in[492+:12]}),
+		.io_out(des_io_out[492+:12])
+	);
 	assign des_io_out[480+:12] = 12'h000;
 	assign des_io_out[468+:12] = 12'h000;
 	assign des_io_out[456+:12] = 12'h000;

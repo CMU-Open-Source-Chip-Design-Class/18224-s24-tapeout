@@ -1,0 +1,23 @@
+=== d22_wnace_vga_resolution ===
+
+   Number of wires:                952
+   Number of wire bits:           4830
+   Number of public wires:         476
+   Number of public wire bits:    4230
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                609
+     $_ANDNOT_                     195
+     $_AND_                         44
+     $_DFF_P_                       27
+     $_MUX_                          5
+     $_NAND_                        43
+     $_NOR_                         18
+     $_NOT_                         11
+     $_ORNOT_                       33
+     $_OR_                         130
+     $_SDFFE_PP0P_                  20
+     $_SDFF_PP0_                    21
+     $_XNOR_                         1
+     $_XOR_                         61

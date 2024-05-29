@@ -174,13 +174,19 @@ d20_zhehuax_16bit_fpu inst20 (
 
 
 // Design #21
-// Unpopulated design slot
-assign des_io_out[21] = 12'h000;
+// Design name d21_pemmanou_usb
+d21_pemmanou_usb inst21 (
+    .io_in({des_reset[21], clock, des_io_in[21]}),
+    .io_out(des_io_out[21])
+);
 
 
 // Design #22
-// Unpopulated design slot
-assign des_io_out[22] = 12'h000;
+// Design name d22_wnace_vga_resolution
+d22_wnace_vga_resolution inst22 (
+    .io_in({des_reset[22], clock, des_io_in[22]}),
+    .io_out(des_io_out[22])
+);
 
 
 // Design #23
